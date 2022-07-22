@@ -1,9 +1,5 @@
 import React from 'react';
 
-const index: React.FC = () => (
-  <main>
-    character-tag-searcher
-  </main>
-)
+const index: React.FC = () => <main>character-tag-searcher</main>;
 
-export default index
+export default index;
