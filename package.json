@@ -1,0 +1,9 @@
+{
+  "name": "character-tag-searcher",
+  "version": "0.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Roadagain/character-tag-searcher.git",
+  "author": "Roadagain <ringoh72@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
