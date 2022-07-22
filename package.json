@@ -6,6 +6,14 @@
   "author": "Roadagain <ringoh72@gmail.com>",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export",
+    "lint": "next lint",
+    "format": "prettier --write .eslintrc.js .prettierrc.json pages/"
+  },
   "dependencies": {
     "next": "^12.2.3",
     "react": "^18.2.0",
