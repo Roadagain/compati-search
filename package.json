@@ -11,12 +11,16 @@
     "build": "next build",
     "start": "next start",
     "export": "next export",
-    "lint": "next lint",
-    "format": "prettier --write .eslintrc.js .prettierrc.json pages/ lib/",
-    "test": "yarn jest"
+    "lint": "run-s lint:*",
+    "lint:eslint": "next lint",
+    "lint:format": "prettier .eslintrc.js .prettierrc.json pages/ lib/",
+    "test": "run-s test:*",
+    "test:tsc": "tsc -d",
+    "test:jest": "jest"
   },
   "dependencies": {
     "next": "^12.2.3",
+    "npm-run-all": "^4.1.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
