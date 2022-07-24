@@ -12,8 +12,8 @@
     "start": "next start",
     "export": "next export",
     "lint": "run-s lint:*",
-    "lint:eslint": "next lint",
-    "lint:format": "prettier .eslintrc.js .prettierrc.json pages/ lib/",
+    "lint:eslint": "next lint --max-warnings=0",
+    "lint:format": "prettier --write .eslintrc.js .prettierrc.json pages/ lib/",
     "test": "run-s test:*",
     "test:tsc": "tsc -d",
     "test:jest": "jest"
