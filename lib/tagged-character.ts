@@ -5,29 +5,25 @@ export interface TaggedCharacter {
   tags: Set<Tag>;
 }
 
-export const searchCharactersByTag = (
+export const filterCharactersByTags = (
   characters: TaggedCharacter[],
-  tag: Tag
+  tags: Tag[]
 ): TaggedCharacter[] => {
   return characters.filter((character) => {
-    return character.tags.has(tag);
+    return tags.every((tag) => character.tags.has(tag));
   });
 };
 
-// 複数タグ検索
-// 一致数が多い順に返す
-export const searchCharactersByMultipleTags = (
+export const sortCharactersByTags = (
   characters: TaggedCharacter[],
   tags: Tag[]
 ): TaggedCharacter[] => {
   const matchedTagsCounts = characters.flatMap((character) => {
     const matchedCount = tags.filter((tag) => character.tags.has(tag)).length;
-    return matchedCount > 0
-      ? {
-          character,
-          count: matchedCount,
-        }
-      : [];
+    return {
+      character,
+      count: matchedCount,
+    };
   });
   matchedTagsCounts.sort((a, b) => b.count - a.count);
   return matchedTagsCounts.map(({ character }) => character);
