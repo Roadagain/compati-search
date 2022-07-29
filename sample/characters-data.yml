@@ -1,64 +1,65 @@
+---
 - name: '0'
+  tags: []
+- name: 'イチ'
   tags:
-- name: イチ
+    - 'Usa'
+- name: 'に'
   tags:
-    - Usa
-- name: に
+    - 'コザ'
+- name: '三'
   tags:
-    - コザ
-- name: 三
+    - 'さいたま'
+- name: 'ヨン'
   tags:
-    - さいたま
-- name: ヨン
+    - '津'
+- name: 'ご'
   tags:
-    - 津
-- name: ご
+    - 'Usa'
+    - 'コザ'
+- name: '六'
   tags:
-    - Usa
-    - コザ
-- name: 六
+    - 'Usa'
+    - 'さいたま'
+- name: 'ナナ'
   tags:
-    - Usa
-    - さいたま
-- name: ナナ
+    - 'Usa'
+    - '津'
+- name: 'はち'
   tags:
-    - Usa
-    - 津
-- name: はち
+    - 'コザ'
+    - 'さいたま'
+- name: '九'
   tags:
-    - コザ
-    - さいたま
-- name: 九
+    - 'コザ'
+    - '津'
+- name: '拾'
   tags:
-    - コザ
-    - 津
-- name: 拾
+    - 'さいたま'
+    - '津'
+- name: '拾イチ'
   tags:
-    - さいたま
-    - 津
-- name: 拾イチ
+    - 'Usa'
+    - 'コザ'
+    - 'さいたま'
+- name: '拾に'
   tags:
-    - Usa
-    - コザ
-    - さいたま
-- name: 拾に
+    - 'Usa'
+    - 'コザ'
+    - '津'
+- name: '拾三'
   tags:
-    - Usa
-    - コザ
-    - 津
-- name: 拾三
+    - 'Usa'
+    - 'さいたま'
+    - '津'
+- name: '拾ヨン'
   tags:
-    - Usa
-    - さいたま
-    - 津
-- name: 拾ヨン
+    - 'コザ'
+    - 'さいたま'
+    - '津'
+- name: '拾ご'
   tags:
-    - コザ
-    - さいたま
-    - 津
-- name: 拾ご
-  tags:
-    - Usa
-    - コザ
-    - さいたま
-    - 津
+    - 'Usa'
+    - 'コザ'
+    - 'さいたま'
+    - '津'
