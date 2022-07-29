@@ -1,5 +1,5 @@
 import {
-  searchCharactersByMultipleTags,
+  sortCharactersByTags,
   searchCharactersByTag,
   TaggedCharacter,
 } from './tagged-character';
@@ -38,7 +38,7 @@ describe('searchCharactersByTag', () => {
   });
 });
 
-describe('searchCharactersByMultipleTags', () => {
+describe('sortCharactersByTags', () => {
   const testTag1 = 'x-ray';
   const testTag2 = 'yankee';
   const testTag3 = 'zulu';
@@ -60,37 +60,27 @@ describe('searchCharactersByMultipleTags', () => {
   };
   const characters = [alpha, beta, gamma, delta];
 
-  describe('複数タグがヒットする場合', () => {
+  describe('タグがヒットする場合', () => {
     it('ヒットしたタグが多い順にキャラクターの配列が返る', () => {
       expect(
-        searchCharactersByMultipleTags(characters, [
-          testTag1,
-          testTag2,
-          testTag3,
-        ])
-      ).toStrictEqual([gamma, alpha, beta]);
-    });
-  });
-
-  describe('指定タグが1つの場合', () => {
-    it('searchCharactersByTagと結果が一致する', () => {
-      expect(
-        searchCharactersByMultipleTags(characters, [testTag1])
-      ).toStrictEqual(searchCharactersByTag(characters, testTag1));
+        sortCharactersByTags(characters, [testTag1, testTag2, testTag3])
+      ).toStrictEqual([gamma, alpha, beta, delta]);
     });
   });
 
   describe('指定したタグを持つキャラクターがいない場合', () => {
-    it('空配列が返る', () => {
+    it('元の配列が返る', () => {
       expect(
-        searchCharactersByMultipleTags(characters, ['not-set-tag'])
-      ).toStrictEqual([]);
+        sortCharactersByTags(characters, ['not-set-tag'])
+      ).toStrictEqual(characters);
     });
   });
 
   describe('タグが指定されない場合', () => {
-    it('空配列が返る', () => {
-      expect(searchCharactersByMultipleTags(characters, [])).toStrictEqual([]);
+    it('元の配列が返る', () => {
+      expect(sortCharactersByTags(characters, [])).toStrictEqual(
+        characters
+      );
     });
   });
 });
