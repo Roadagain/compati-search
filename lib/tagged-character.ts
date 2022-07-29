@@ -5,12 +5,12 @@ export interface TaggedCharacter {
   tags: Set<Tag>;
 }
 
-export const searchCharactersByTag = (
+export const filterCharactersByTags = (
   characters: TaggedCharacter[],
-  tag: Tag
+  tags: Tag[]
 ): TaggedCharacter[] => {
   return characters.filter((character) => {
-    return character.tags.has(tag);
+    return tags.every((tag) => character.tags.has(tag));
   });
 };
 

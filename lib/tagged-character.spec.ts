@@ -1,39 +1,58 @@
 import {
   sortCharactersByTags,
-  searchCharactersByTag,
+  filterCharactersByTags,
   TaggedCharacter,
 } from './tagged-character';
 
-describe('searchCharactersByTag', () => {
-  const testTag = 'test-tag';
+describe('filterCharactersByTag', () => {
+  const testTag1 = 'aurum';
+  const testTag2 = 'borium';
   const alpha: TaggedCharacter = {
     name: 'alpha',
-    tags: new Set([testTag, 'other-tag']),
+    tags: new Set([testTag1, 'other-tag', testTag2]),
   };
   const beta: TaggedCharacter = {
     name: 'beta',
-    tags: new Set(['other-tag']),
+    tags: new Set(['other-tag', testTag2]),
   };
   const gamma: TaggedCharacter = {
     name: 'gamma',
-    tags: new Set([testTag]),
+    tags: new Set([testTag1]),
   };
-  const characters = [alpha, beta, gamma];
+  const delta: TaggedCharacter = {
+    name: 'delta',
+    tags: new Set(['other-tag']),
+  };
+  const characters = [alpha, beta, gamma, delta];
 
-  describe('対象が存在する場合', () => {
-    it('指定したタグを持つキャラクターの配列が返る', () => {
-      expect(searchCharactersByTag(characters, testTag)).toStrictEqual([
+  describe('指定タグが1つの場合', () => {
+    it('指定タグを全て持つキャラクターの配列が返る', () => {
+      expect(filterCharactersByTags(characters, [testTag1])).toStrictEqual([
         alpha,
         gamma,
       ]);
     });
   });
 
+  describe('指定タグが複数の場合', () => {
+    it('指定タグを全て持つキャラクターの配列が返る', () => {
+      expect(
+        filterCharactersByTags(characters, [testTag1, testTag2])
+      ).toStrictEqual([alpha]);
+    });
+  });
+
   describe('指定したタグを持つキャラクターがいない場合', () => {
     it('空配列が返る', () => {
-      expect(searchCharactersByTag(characters, 'not-set-tag')).toStrictEqual(
+      expect(filterCharactersByTags(characters, ['not-set-tag'])).toStrictEqual(
         []
       );
+    });
+  });
+
+  describe('タグ指定がない場合', () => {
+    it('元の配列が返る', () => {
+      expect(filterCharactersByTags(characters, [])).toStrictEqual(characters);
     });
   });
 });
@@ -70,17 +89,15 @@ describe('sortCharactersByTags', () => {
 
   describe('指定したタグを持つキャラクターがいない場合', () => {
     it('元の配列が返る', () => {
-      expect(
-        sortCharactersByTags(characters, ['not-set-tag'])
-      ).toStrictEqual(characters);
+      expect(sortCharactersByTags(characters, ['not-set-tag'])).toStrictEqual(
+        characters
+      );
     });
   });
 
   describe('タグが指定されない場合', () => {
     it('元の配列が返る', () => {
-      expect(sortCharactersByTags(characters, [])).toStrictEqual(
-        characters
-      );
+      expect(sortCharactersByTags(characters, [])).toStrictEqual(characters);
     });
   });
 });
