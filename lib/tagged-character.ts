@@ -14,8 +14,6 @@ export const filterCharactersByTags = (
   });
 };
 
-// タグによるソート
-// 一致数が多い順に返す
 export const sortCharactersByTags = (
   characters: TaggedCharacter[],
   tags: Tag[]
