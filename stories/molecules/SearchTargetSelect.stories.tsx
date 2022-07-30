@@ -1,7 +1,10 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { SearchTarget, SearchTargetSelect } from '../../components/molecules/SearchTargetSelect';
+import {
+  SearchTarget,
+  SearchTargetSelect,
+} from '../../components/molecules/SearchTargetSelect';
 
 const componentMeta: ComponentMeta<typeof SearchTargetSelect> = {
   title: 'Molecules/SearchTargetSelect',
@@ -18,8 +21,8 @@ const componentMeta: ComponentMeta<typeof SearchTargetSelect> = {
       },
     },
     onChange: {
-      action: 'changed'
-    }
+      action: 'changed',
+    },
   },
 };
 export default componentMeta;
