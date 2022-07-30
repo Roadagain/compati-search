@@ -1,9 +1,10 @@
+import { Grid } from '@mui/material';
 import React from 'react';
 import {
   filterCharactersByTags,
   TaggedCharacter,
 } from '../../lib/tagged-character';
-import { CharacterName } from '../atoms/CharacterName';
+import { CharacterCard } from '../molecules/CharacterCard';
 import { SearchForm } from '../molecules/SearchForm';
 
 interface Props {
@@ -25,13 +26,13 @@ export const CharactersSearcher: React.FC<Props> = ({ characters }) => {
   return (
     <>
       <SearchForm onSearch={search} />
-      <ul>
-        {searchResults.map(({ name }) => (
-          <li key={name}>
-            <CharacterName>{name}</CharacterName>
-          </li>
+      <Grid container spacing={2} sx={{ mt: 1 }}>
+        {searchResults.map(({ name, tags }) => (
+          <Grid item key={name} xs={12} sm={6} md={4}>
+            <CharacterCard name={name} tags={tags} />
+          </Grid>
         ))}
-      </ul>
+      </Grid>
     </>
   );
 };

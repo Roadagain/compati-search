@@ -31,9 +31,11 @@ export const SearchForm: React.FC<Props> = ({ onSearch }) => {
         onChange={onTextChange}
         endAdornment={
           <IconButton type="submit">
-            <SearchIcon />
+            <SearchIcon fontSize="large" />
           </IconButton>
         }
+        fullWidth
+        sx={{ fontSize: 32 }}
       />
     </form>
   );
