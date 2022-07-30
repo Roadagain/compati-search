@@ -7,7 +7,7 @@ const componentMeta: ComponentMeta<typeof CharactersSearcher> = {
   title: 'Organisms/CharactersSearcher',
   component: CharactersSearcher,
   argTypes: {
-    characters: { control: 'object' }
+    characters: { control: 'object' },
   },
 };
 export default componentMeta;
@@ -21,15 +21,15 @@ Search.args = {
   characters: [
     {
       name: 'Alpha',
-      tags: new Set(['あいうえお', 'かきくけこ'])
+      tags: new Set(['あいうえお', 'かきくけこ']),
     },
     {
       name: 'Beta',
-      tags: new Set(['かきくけこ'])
+      tags: new Set(['かきくけこ']),
     },
     {
       name: 'Gamma',
-      tags: new Set(['さしすせそ'])
-    }
-  ]
-}
+      tags: new Set(['さしすせそ']),
+    },
+  ],
+};
