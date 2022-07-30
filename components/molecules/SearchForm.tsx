@@ -5,15 +5,24 @@ import Box from '@mui/material/Box';
 import SearchIcon from '@mui/icons-material/Search';
 import { useTheme } from '@mui/material/styles';
 
+export enum SearchTarget {
+  TAG,
+  NAME,
+}
+
 interface Props {
   /**
    * 検索イベントのハンドラー
    * @param text - 検索文字列
    */
   onSearch: (text: string) => void;
+  /**
+   * 検索対象 (タグ or 名前)
+   */
+  target: SearchTarget
 }
 
-export const SearchForm: React.FC<Props> = ({ onSearch }) => {
+export const SearchForm: React.FC<Props> = ({ onSearch, target }) => {
   const [text, setText] = React.useState('');
   const onTextChange: ChangeEventHandler<HTMLInputElement> = (event) =>
     setText(event.target.value);
@@ -24,12 +33,13 @@ export const SearchForm: React.FC<Props> = ({ onSearch }) => {
     }
   };
   const theme = useTheme();
+  const placeholder = `${target === SearchTarget.TAG ? 'タグ' : 'キャラクター'}名を入力`;
 
   return (
     <Box component="form" onSubmit={startSearch}>
       <OutlinedInput
         type="search"
-        placeholder="タグ名を入力"
+        placeholder={placeholder}
         value={text}
         onChange={onTextChange}
         endAdornment={

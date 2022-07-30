@@ -5,7 +5,7 @@ import {
   TaggedCharacter,
 } from '../../lib/tagged-character';
 import { CharacterCard } from '../molecules/CharacterCard';
-import { SearchForm } from '../molecules/SearchForm';
+import { SearchForm, SearchTarget } from '../molecules/SearchForm';
 import Box from '@mui/material/Box';
 
 interface Props {
@@ -26,7 +26,7 @@ export const CharactersSearcher: React.FC<Props> = ({ characters }) => {
 
   return (
     <Box>
-      <SearchForm onSearch={search} />
+      <SearchForm onSearch={search} target={SearchTarget.TAG} />
       <Grid container spacing={2} sx={{ mt: 1 }}>
         {searchResults.map(({ name, tags }) => (
           <Grid item key={name} xs={12} sm={6} md={4}>
