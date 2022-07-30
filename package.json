@@ -13,7 +13,7 @@
     "export": "next export",
     "lint": "run-s lint:*",
     "lint:eslint": "next lint --max-warnings=0",
-    "lint:format": "prettier --check .eslintrc.js .prettierrc.json pages/ lib/",
+    "lint:format": "prettier --check .",
     "test": "run-s test:*",
     "test:tsc": "tsc -d",
     "test:jest": "jest",
