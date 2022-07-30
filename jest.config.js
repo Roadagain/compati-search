@@ -2,8 +2,8 @@
 const config = {
   verbose: true,
   transform: {
-    '^.+\\.(t|j)sx?$': '@swc/jest'
-  }
+    '^.+\\.(t|j)sx?$': '@swc/jest',
+  },
 };
 
 module.exports = config;

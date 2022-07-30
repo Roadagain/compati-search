@@ -1,5 +1,5 @@
 import React from 'react';
-import { ComponentStory , ComponentMeta} from '@storybook/react';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { SampleButton } from '../../components/atoms/SampleButton';
 
@@ -12,9 +12,11 @@ const componentMeta: ComponentMeta<typeof SampleButton> = {
 };
 export default componentMeta;
 
-const Template: ComponentStory<typeof SampleButton> = (args) => <SampleButton {...args} />;
+const Template: ComponentStory<typeof SampleButton> = (args) => (
+  <SampleButton {...args} />
+);
 
 export const Button = Template.bind({});
 Button.args = {
-  children: 'ボタン'
-}
+  children: 'ボタン',
+};
