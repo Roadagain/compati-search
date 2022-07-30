@@ -4,6 +4,10 @@ import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
 
 interface Props {
+  /**
+   * 検索イベントのハンドラー
+   * @param text - 検索文字列
+   */
   onSearch: (text: string) => void;
 }
 
