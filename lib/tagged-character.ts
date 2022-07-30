@@ -2,7 +2,7 @@ export type Tag = string;
 
 export interface TaggedCharacter {
   name: string;
-  tags: Set<Tag>;
+  tags: Tag[];
 }
 
 export const filterCharactersByTags = (
@@ -10,7 +10,7 @@ export const filterCharactersByTags = (
   tags: Tag[]
 ): TaggedCharacter[] => {
   return characters.filter((character) => {
-    return tags.every((tag) => character.tags.has(tag));
+    return tags.every((tag) => character.tags.includes(tag));
   });
 };
 
@@ -19,7 +19,9 @@ export const sortCharactersByTags = (
   tags: Tag[]
 ): TaggedCharacter[] => {
   const matchedTagsCounts = characters.flatMap((character) => {
-    const matchedCount = tags.filter((tag) => character.tags.has(tag)).length;
+    const matchedCount = tags.filter((tag) =>
+      character.tags.includes(tag)
+    ).length;
     return {
       character,
       count: matchedCount,

@@ -10,19 +10,19 @@ describe('filterCharactersByTag', () => {
   const testTag2 = 'borium';
   const alpha: TaggedCharacter = {
     name: 'alpha',
-    tags: new Set([testTag1, 'other-tag', testTag2]),
+    tags: [testTag1, 'other-tag', testTag2],
   };
   const beta: TaggedCharacter = {
     name: 'beta',
-    tags: new Set(['other-tag', testTag2]),
+    tags: ['other-tag', testTag2],
   };
   const gamma: TaggedCharacter = {
     name: 'gamma',
-    tags: new Set([testTag1]),
+    tags: [testTag1],
   };
   const delta: TaggedCharacter = {
     name: 'delta',
-    tags: new Set(['other-tag']),
+    tags: ['other-tag'],
   };
   const characters = [alpha, beta, gamma, delta];
 
@@ -64,19 +64,19 @@ describe('sortCharactersByTags', () => {
   const testTag3 = 'zulu';
   const alpha: TaggedCharacter = {
     name: 'alpha',
-    tags: new Set([testTag1, 'other-tag', testTag2]),
+    tags: [testTag1, 'other-tag', testTag2],
   };
   const beta: TaggedCharacter = {
     name: 'beta',
-    tags: new Set(['other-tag', testTag1]),
+    tags: ['other-tag', testTag1],
   };
   const gamma: TaggedCharacter = {
     name: 'gamma',
-    tags: new Set([testTag3, testTag2, testTag1]),
+    tags: [testTag3, testTag2, testTag1],
   };
   const delta: TaggedCharacter = {
     name: 'delta',
-    tags: new Set(['other-tag']),
+    tags: ['other-tag'],
   };
   const characters = [alpha, beta, gamma, delta];
 
@@ -106,19 +106,19 @@ describe('sortCharactersByTags', () => {
 describe('searchCharactersByCharacterNameWords', () => {
   const alpha: TaggedCharacter = {
     name: 'X-rayYankee',
-    tags: new Set(),
+    tags: [],
   };
   const beta: TaggedCharacter = {
     name: 'Zulu',
-    tags: new Set(),
+    tags: [],
   };
   const gamma: TaggedCharacter = {
     name: 'X-rayOther',
-    tags: new Set(),
+    tags: [],
   };
   const delta: TaggedCharacter = {
     name: 'Other',
-    tags: new Set(),
+    tags: [],
   };
   const characters = [alpha, beta, gamma, delta];
 
