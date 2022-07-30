@@ -28,3 +28,12 @@ export const sortCharactersByTags = (
   matchedTagsCounts.sort((a, b) => b.count - a.count);
   return matchedTagsCounts.map(({ character }) => character);
 };
+
+export const filterCharactersByNameWords = (
+  characters: TaggedCharacter[],
+  nameWords: string[]
+): TaggedCharacter[] => {
+  return characters.filter(({ name }) =>
+    nameWords.every((word) => name.includes(word))
+  );
+};

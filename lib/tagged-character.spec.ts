@@ -2,6 +2,7 @@ import {
   sortCharactersByTags,
   filterCharactersByTags,
   TaggedCharacter,
+  filterCharactersByNameWords,
 } from './tagged-character';
 
 describe('filterCharactersByTag', () => {
@@ -98,6 +99,59 @@ describe('sortCharactersByTags', () => {
   describe('タグが指定されない場合', () => {
     it('元の配列が返る', () => {
       expect(sortCharactersByTags(characters, [])).toStrictEqual(characters);
+    });
+  });
+});
+
+describe('searchCharactersByCharacterNameWords', () => {
+  const alpha: TaggedCharacter = {
+    name: 'X-rayYankee',
+    tags: new Set(),
+  };
+  const beta: TaggedCharacter = {
+    name: 'Zulu',
+    tags: new Set(),
+  };
+  const gamma: TaggedCharacter = {
+    name: 'X-rayOther',
+    tags: new Set(),
+  };
+  const delta: TaggedCharacter = {
+    name: 'Other',
+    tags: new Set(),
+  };
+  const characters = [alpha, beta, gamma, delta];
+
+  describe('キーワードが1つの場合', () => {
+    it('キーワードを名前に含むキャラクターの配列が返る', () => {
+      expect(filterCharactersByNameWords(characters, ['X-ray'])).toStrictEqual([
+        alpha,
+        gamma,
+      ]);
+    });
+  });
+
+  describe('キーワードが複数の場合', () => {
+    it('キーワードを全て名前に含むキャラクターの配列が返る', () => {
+      expect(
+        filterCharactersByNameWords(characters, ['X-ray', 'Yankee'])
+      ).toStrictEqual([alpha]);
+    });
+  });
+
+  describe('キーワードがヒットしない場合', () => {
+    it('空配列が返る', () => {
+      expect(
+        filterCharactersByNameWords(characters, ['not-included-word'])
+      ).toStrictEqual([]);
+    });
+  });
+
+  describe('キーワード指定がない場合', () => {
+    it('元の配列が返る', () => {
+      expect(filterCharactersByNameWords(characters, [])).toStrictEqual(
+        characters
+      );
     });
   });
 });
