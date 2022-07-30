@@ -40,8 +40,8 @@ export const SearchTargetSelect: React.FC<Props> = ({ target, onChange }) => {
       onChange={onSelect}
       sx={{ fontSize: theme.typography.h5 }}
     >
-      <MenuItem value={SearchTarget.TAG}>タグ</MenuItem>
-      <MenuItem value={SearchTarget.NAME}>名前</MenuItem>
+      <MenuItem value={SearchTarget.TAG}>タグで検索する</MenuItem>
+      <MenuItem value={SearchTarget.NAME}>名前で検索する</MenuItem>
     </Select>
   );
 };
