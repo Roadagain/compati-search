@@ -16,7 +16,7 @@ export const CharacterCard: React.FC<Props> = ({ name, tags }) => (
         sx={{ display: 'inline-block', whiteSpace: 'nowrap' }}
       >
         {tags.map((tag) => (
-          <TagBadge>{tag}</TagBadge>
+          <TagBadge key={tag}>{tag}</TagBadge>
         ))}
       </Stack>
     </CardContent>
