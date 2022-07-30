@@ -10,4 +10,4 @@ interface Props {
 
 export const CharacterName: React.FC<Props> = ({ children }) => (
   <Typography>{children}</Typography>
-)
+);
