@@ -26,9 +26,7 @@ export const SearchForm: React.FC<Props> = ({ onSearch }) => {
     }
   };
   const theme = useTheme();
-  const placeholder = `${
-    target === SearchTarget.TAG ? 'タグ' : 'キャラクター'
-  }名を入力`;
+  const placeholder = `${target === SearchTarget.TAG ? 'タグ' : '名前'}を入力`;
 
   return (
     <Box
