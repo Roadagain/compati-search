@@ -1,6 +1,7 @@
 node_modules/
 .next/
 out/
+storybook-static/
 package.json
 next-env.d.ts
 README.md
