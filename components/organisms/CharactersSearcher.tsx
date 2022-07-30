@@ -1,12 +1,14 @@
 import { Grid } from '@mui/material';
 import React from 'react';
 import {
+  filterCharactersByNameWords,
   filterCharactersByTags,
   TaggedCharacter,
 } from '../../lib/tagged-character';
 import { CharacterCard } from '../molecules/CharacterCard';
 import { SearchForm } from '../molecules/SearchForm';
 import Box from '@mui/material/Box';
+import { SearchTarget } from '../molecules/SearchTargetSelect';
 
 interface Props {
   /**
@@ -19,9 +21,13 @@ export const CharactersSearcher: React.FC<Props> = ({ characters }) => {
   const [searchResults, setSearchResults] = React.useState<TaggedCharacter[]>(
     []
   );
-  const search = (text: string) => {
-    const tags = text.split(/\s/);
-    setSearchResults(filterCharactersByTags(characters, tags));
+  const search = (text: string, target: SearchTarget) => {
+    const words = text.split(/\s/);
+    const searchResults =
+      target === SearchTarget.TAG
+        ? filterCharactersByTags(characters, words)
+        : filterCharactersByNameWords(characters, words);
+    setSearchResults(searchResults);
   };
 
   return (
