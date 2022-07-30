@@ -1,6 +1,6 @@
 import React from 'react';
 import { loadSampleCharactersData } from '../lib/load-data';
-import { Container } from '@mui/material';
+import { Container, Typography } from '@mui/material';
 import { CharactersSearcher } from '../components/organisms/CharactersSearcher';
 import { TaggedCharacter } from '../lib/tagged-character';
 
@@ -10,12 +10,10 @@ const Index: React.FC = () => {
     setCharacters(loadSampleCharactersData());
   }, []);
   return (
-    <main>
-      <Container>
-        <p>character-tag-searcher</p>
-        <CharactersSearcher characters={characters} />
-      </Container>
-    </main>
+    <Container>
+      <Typography variant="h6">character-tag-searcher</Typography>
+      <CharactersSearcher characters={characters} />
+    </Container>
   );
 };
 
