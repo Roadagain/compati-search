@@ -1,6 +1,7 @@
 import React, { ChangeEventHandler, FormEventHandler } from 'react';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import IconButton from '@mui/material/IconButton';
+import Box from '@mui/material/Box';
 import SearchIcon from '@mui/icons-material/Search';
 
 interface Props {
@@ -23,7 +24,7 @@ export const SearchForm: React.FC<Props> = ({ onSearch }) => {
   };
 
   return (
-    <form onSubmit={startSearch}>
+    <Box component="form" onSubmit={startSearch}>
       <OutlinedInput
         type="search"
         placeholder="タグ名を入力"
@@ -37,6 +38,6 @@ export const SearchForm: React.FC<Props> = ({ onSearch }) => {
         fullWidth
         sx={{ fontSize: 32 }}
       />
-    </form>
+    </Box>
   );
 };
