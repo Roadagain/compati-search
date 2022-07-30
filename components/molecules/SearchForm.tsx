@@ -26,7 +26,7 @@ export const SearchForm: React.FC<Props> = ({ onSearch }) => {
     <form onSubmit={startSearch}>
       <OutlinedInput
         type="search"
-        placeholder="けんさく"
+        placeholder="タグ名を入力"
         value={text}
         onChange={onTextChange}
         endAdornment={
