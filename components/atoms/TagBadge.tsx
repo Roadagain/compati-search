@@ -12,7 +12,7 @@ export const TagBadge: React.FC<Props> = ({ children }) => (
   <Button
     size="small"
     variant="outlined"
-    sx={{ display: 'inline-block', textTransform: 'none' }}
+    sx={{ textTransform: 'none' }}
   >
     {children}
   </Button>
