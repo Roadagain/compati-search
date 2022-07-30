@@ -8,11 +8,14 @@ interface Props {
 }
 
 export const SearchCondition: React.FC<Props> = ({ target, text }) => {
-  const targetStr = target === SearchTarget.TAG ? "タグ": "名前";
+  const targetStr = target === SearchTarget.TAG ? 'タグ' : '名前';
 
   return (
-    <Typography>
-      {text}の{targetStr}検索結果
+    <Typography variant="h5">
+      <Typography component="span" variant="h5" fontWeight="bold">
+        {text}
+      </Typography>
+      の{targetStr}検索結果
     </Typography>
   );
-}
+};
