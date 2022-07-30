@@ -9,11 +9,7 @@ interface Props {
 }
 
 export const TagBadge: React.FC<Props> = ({ children }) => (
-  <Button
-    size="small"
-    variant="outlined"
-    sx={{ textTransform: 'none' }}
-  >
+  <Button size="small" variant="outlined" sx={{ textTransform: 'none' }}>
     {children}
   </Button>
 );
