@@ -7,7 +7,7 @@ interface Props {
   onSearch: (text: string) => void;
 }
 
-export const SearchInput: React.FC<Props> = ({ onSearch }) => {
+export const SearchForm: React.FC<Props> = ({ onSearch }) => {
   const [text, setText] = React.useState('');
   const onTextChange: ChangeEventHandler<HTMLInputElement> = (event) =>
     setText(event.target.value);
