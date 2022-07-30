@@ -1,15 +1,20 @@
 import React from 'react';
 import { loadSampleCharactersData } from '../lib/load-data';
-import { SampleButton } from '../components/atoms/SampleButton';
+import { Container } from '@mui/material';
+import { CharactersSearcher } from '../components/organisms/CharactersSearcher';
+import { TaggedCharacter } from '../lib/tagged-character';
 
 const Index: React.FC = () => {
+  const [characters, setCharacters] = React.useState<TaggedCharacter[]>([]);
   React.useEffect(() => {
-    console.log('characters data', loadSampleCharactersData());
-  });
+    setCharacters(loadSampleCharactersData());
+  }, []);
   return (
     <main>
-      <p>character-tag-searcher</p>
-      <SampleButton>ボタン</SampleButton>
+      <Container>
+        <p>character-tag-searcher</p>
+        <CharactersSearcher characters={characters} />
+      </Container>
     </main>
   );
 };
