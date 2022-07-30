@@ -4,6 +4,6 @@ import { TaggedCharacter } from './tagged-character';
 export const loadSampleCharactersData = (): TaggedCharacter[] => {
   return sampleCharacterData.map(({ name, tags }) => ({
     name,
-    tags: new Set(tags),
+    tags,
   }));
 };

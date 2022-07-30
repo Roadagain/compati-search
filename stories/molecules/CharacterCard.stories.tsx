@@ -20,5 +20,5 @@ const Template: ComponentStory<typeof CharacterCard> = (args) => (
 export const Card = Template.bind({});
 Card.args = {
   name: 'なまえ',
-  tags: new Set(['タグ1', 'タグ2']),
+  tags: ['タグ1', 'タグ2'],
 };

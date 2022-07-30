@@ -21,15 +21,15 @@ Search.args = {
   characters: [
     {
       name: 'Alpha',
-      tags: new Set(['あいうえお', 'かきくけこ']),
+      tags: ['あいうえお', 'かきくけこ'],
     },
     {
       name: 'Beta',
-      tags: new Set(['かきくけこ']),
+      tags: ['かきくけこ'],
     },
     {
       name: 'Gamma',
-      tags: new Set(['さしすせそ']),
+      tags: ['さしすせそ'],
     },
   ],
 };
