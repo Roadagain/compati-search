@@ -13,7 +13,9 @@ export const SearchInput: React.FC<Props> = ({ onSearch }) => {
     setText(event.target.value);
   const startSearch: FormEventHandler<HTMLFormElement> = (event) => {
     event.preventDefault();
-    onSearch(text);
+    if (text) {
+      onSearch(text);
+    }
   };
 
   return (
