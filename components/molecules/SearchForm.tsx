@@ -3,6 +3,7 @@ import OutlinedInput from '@mui/material/OutlinedInput';
 import IconButton from '@mui/material/IconButton';
 import Box from '@mui/material/Box';
 import SearchIcon from '@mui/icons-material/Search';
+import { useTheme } from '@mui/material/styles';
 
 interface Props {
   /**
@@ -22,6 +23,7 @@ export const SearchForm: React.FC<Props> = ({ onSearch }) => {
       onSearch(text);
     }
   };
+  const theme = useTheme();
 
   return (
     <Box component="form" onSubmit={startSearch}>
@@ -36,7 +38,7 @@ export const SearchForm: React.FC<Props> = ({ onSearch }) => {
           </IconButton>
         }
         fullWidth
-        sx={{ fontSize: 32 }}
+        sx={{ fontSize: theme.typography.h5 }}
       />
     </Box>
   );
