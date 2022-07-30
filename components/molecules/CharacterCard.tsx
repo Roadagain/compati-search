@@ -8,4 +8,4 @@ export const CharacterCard: React.FC<Props> = ({ name }) => (
   <Card elevation={2}>
     <CardHeader title={name} />
   </Card>
-)
+);

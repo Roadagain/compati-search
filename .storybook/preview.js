@@ -13,8 +13,8 @@ export const decorators = [
       <CssBaseline />
       <Story />
     </ThemeProvider>
-  )
-]
+  ),
+];
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },

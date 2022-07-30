@@ -11,7 +11,7 @@ const Index: React.FC = () => {
   }, []);
   return (
     <Container>
-      <Box sx={{p: 1}}>
+      <Box sx={{ p: 1 }}>
         <Typography variant="h5">互換キャラサーチ</Typography>
       </Box>
       <CharactersSearcher characters={characters} />
