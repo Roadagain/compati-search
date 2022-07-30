@@ -1,6 +1,6 @@
 import React from 'react';
 import { loadSampleCharactersData } from '../lib/load-data';
-import { Container, Typography } from '@mui/material';
+import { Box, Container, Typography } from '@mui/material';
 import { CharactersSearcher } from '../components/organisms/CharactersSearcher';
 import { TaggedCharacter } from '../lib/tagged-character';
 
@@ -11,7 +11,9 @@ const Index: React.FC = () => {
   }, []);
   return (
     <Container>
-      <Typography variant="h6">character-tag-searcher</Typography>
+      <Box sx={{p: 1}}>
+        <Typography variant="h5">互換キャラサーチ</Typography>
+      </Box>
       <CharactersSearcher characters={characters} />
     </Container>
   );
