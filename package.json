@@ -13,18 +13,33 @@
     "export": "next export",
     "lint": "run-s lint:*",
     "lint:eslint": "next lint --max-warnings=0",
-    "lint:format": "prettier --check .eslintrc.js .prettierrc.json pages/ lib/",
+    "lint:format": "prettier --check .",
     "test": "run-s test:*",
     "test:tsc": "tsc -d",
-    "test:jest": "jest"
+    "test:jest": "jest",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "@mui/icons-material": "^5.8.4",
+    "@mui/material": "^5.9.2",
     "next": "^12.2.3",
     "npm-run-all": "^4.1.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.18.9",
+    "@storybook/addon-actions": "^6.5.9",
+    "@storybook/addon-essentials": "^6.5.9",
+    "@storybook/addon-interactions": "^6.5.9",
+    "@storybook/addon-links": "^6.5.9",
+    "@storybook/builder-webpack5": "^6.5.9",
+    "@storybook/manager-webpack5": "^6.5.9",
+    "@storybook/react": "^6.5.9",
+    "@storybook/testing-library": "^0.0.13",
     "@swc/core": "^1.2.218",
     "@swc/jest": "^0.2.22",
     "@types/jest": "^28.1.6",
@@ -32,12 +47,15 @@
     "@types/react": "^18.0.15",
     "@typescript-eslint/eslint-plugin": "^5.30.7",
     "@typescript-eslint/parser": "^5.30.7",
+    "babel-loader": "^8.2.5",
     "eslint": "^8.20.0",
     "eslint-config-next": "12.2.3",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-storybook": "^0.6.1",
     "jest": "^28.1.3",
     "prettier": "^2.7.1",
+    "storybook": "^6.5.9",
     "typescript": "^4.7.4"
   }
 }
