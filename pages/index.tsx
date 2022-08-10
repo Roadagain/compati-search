@@ -34,10 +34,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async (
   }
 
   const result = await fetch(
-    `${process.env.CHARACTERS_DATA_STORAGE_URL}/${dataName}.json?alt=media`,
-    {
-      method: 'GET'
-    }
+    `${process.env.CHARACTERS_DATA_STORAGE_URL}/${dataName}.json?alt=media`
   );
   const json = await result.json();
   return {
