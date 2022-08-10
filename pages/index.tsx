@@ -15,7 +15,7 @@ interface Props {
 const Index: NextPage<Props> = ({ characters }) => (
   <Container>
     <Box sx={{ p: 1 }}>
-      <Typography variant="h5">互換キャラサーチ</Typography>
+      <Typography variant="h5">コンパチサーチ</Typography>
     </Box>
     <CharactersSearcher characters={characters} />
   </Container>
