@@ -1,2 +1,2 @@
-# character-tag-searcher
-タグから類似キャラクターを探す
+# compati-search
+タグからコンパチキャラを探す
