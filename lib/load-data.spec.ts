@@ -65,7 +65,7 @@ describe('loadCharactersDataFromJson', () => {
     });
   });
 
-  describe('nameが文字列でないデータを含む場合', () => {
+  describe('データ形式が不正な場合', () => {
     const json = [
       {
         name: 1,
