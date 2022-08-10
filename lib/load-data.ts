@@ -1,4 +1,4 @@
-import sampleCharacterData from '../sample/characters-data.json';
+import sampleCharacterData from '../sample/characters-data/sample.json';
 import { TaggedCharacter } from './tagged-character';
 
 type WouldBeTaggedCharacter = { [K in keyof TaggedCharacter]?: unknown };
