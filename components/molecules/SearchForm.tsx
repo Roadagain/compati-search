@@ -5,7 +5,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import { useTheme } from '@mui/material/styles';
 import { SearchTargetSelect } from './SearchTargetSelect';
 import Autocomplete from '@mui/material/Autocomplete';
-import { TextField } from '@mui/material';
+import { Chip, TextField } from '@mui/material';
 import { SearchTarget } from '../../lib/search-target';
 
 interface Props {
@@ -84,6 +84,18 @@ export const SearchForm: React.FC<Props> = ({
             }}
           />
         )}
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore valueの要求型が明らかにおかしいから一時的にignoreする
+        renderTags={(value: string[], getTagProps) =>
+          value.map((option: string, index: number) => (
+            <Chip
+              key={option}
+              label={option}
+              {...getTagProps({ index })}
+              sx={{ fontSize: theme.typography.h6 }}
+            />
+          ))
+        }
         sx={{ ml: 2 }}
       />
       <IconButton type="submit" sx={{ ml: 1 }}>
