@@ -62,7 +62,7 @@ export const CharactersSearcher: React.FC<Props> = ({ characters }) => {
           <SearchCondition {...searchCondition} />
         </Box>
       ) : null}
-      <Grid container spacing={2} sx={{ mt: 1, pb: 2 }}>
+      <Grid container spacing={2} sx={{ mt: 1 }}>
         {searchResults.map(({ name, tags }) => (
           <Grid item key={name} xs={12} sm={6} md={4}>
             <CharacterCard name={name} tags={tags} onClickTag={onClickTag} />
