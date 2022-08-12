@@ -6,10 +6,20 @@ interface Props {
    * タグ
    */
   children: string;
+  /**
+   * クリック時の挙動
+   * @param tag - クリックされたタグ
+   */
+  onClick: (tag: string) => void;
 }
 
-export const TagBadge: React.FC<Props> = ({ children }) => (
-  <Button size="small" variant="outlined" sx={{ textTransform: 'none' }}>
+export const TagBadge: React.FC<Props> = ({ children, onClick }) => (
+  <Button
+    size="small"
+    variant="outlined"
+    onClick={() => onClick(children)}
+    sx={{ textTransform: 'none' }}
+  >
     {children}
   </Button>
 );
