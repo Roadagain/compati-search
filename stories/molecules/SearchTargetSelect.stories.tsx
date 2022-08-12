@@ -20,9 +20,6 @@ const componentMeta: ComponentMeta<typeof SearchTargetSelect> = {
         },
       },
     },
-    onChange: {
-      action: 'changed',
-    },
   },
 };
 export default componentMeta;

@@ -9,7 +9,6 @@ const componentMeta: ComponentMeta<typeof SearchForm> = {
   component: SearchForm,
   argTypes: {
     text: { control: 'text' },
-    onChangeText: { action: 'changedText' },
     target: {
       options: [SearchTarget.TAG, SearchTarget.NAME],
       control: {
@@ -19,10 +18,6 @@ const componentMeta: ComponentMeta<typeof SearchForm> = {
           [SearchTarget.NAME]: '名前',
         },
       },
-    },
-    onChangeTarget: { action: 'changedTarget' },
-    onSearch: {
-      action: 'searched',
     },
   },
 };

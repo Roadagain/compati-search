@@ -8,9 +8,6 @@ const componentMeta: ComponentMeta<typeof TagBadge> = {
   component: TagBadge,
   argTypes: {
     children: { control: 'text' },
-    onClick: {
-      action: 'clicked',
-    },
   },
 };
 export default componentMeta;
