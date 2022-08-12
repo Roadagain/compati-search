@@ -1,6 +1,6 @@
 import { Typography } from '@mui/material';
 import React from 'react';
-import { SearchTarget } from './SearchTargetSelect';
+import { SearchTarget } from '../../lib/search-target';
 
 interface Props {
   target: SearchTarget;
