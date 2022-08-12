@@ -69,8 +69,8 @@ export const SearchForm: React.FC<Props> = ({
         filterSelectedOptions
         value={texts}
         onChange={onTextChange}
-        /* eslint-disable-next-line @typescript-eslint/ban-ts-comment */
-        /* @ts-ignore optionsの要求型が明らかにおかしいから一時的にignoreする */
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore optionsの要求型が明らかにおかしいから一時的にignoreする
         options={options}
         fullWidth
         renderInput={(params) => (
