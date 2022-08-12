@@ -2,7 +2,7 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { SearchCondition } from '../../components/molecules/SearchCondition';
-import { SearchTarget } from '../../components/molecules/SearchTargetSelect';
+import { SearchTarget } from '../../lib/search-target';
 
 const componentMeta: ComponentMeta<typeof SearchCondition> = {
   title: 'Molecules/SearchCondition',

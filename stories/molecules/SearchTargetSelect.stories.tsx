@@ -1,10 +1,8 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import {
-  SearchTarget,
-  SearchTargetSelect,
-} from '../../components/molecules/SearchTargetSelect';
+import { SearchTargetSelect } from '../../components/molecules/SearchTargetSelect';
+import { SearchTarget } from '../../lib/search-target';
 
 const componentMeta: ComponentMeta<typeof SearchTargetSelect> = {
   title: 'Molecules/SearchTargetSelect',
