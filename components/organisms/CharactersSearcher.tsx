@@ -24,6 +24,8 @@ interface SearchCondition {
 }
 
 export const CharactersSearcher: React.FC<Props> = ({ characters }) => {
+  const [searchText, setSearchText] = React.useState('');
+  const [searchTarget, setSearchTarget] = React.useState(SearchTarget.TAG);
   const [searchResults, setSearchResults] = React.useState<TaggedCharacter[]>(
     []
   );
@@ -41,10 +43,21 @@ export const CharactersSearcher: React.FC<Props> = ({ characters }) => {
       text,
     });
   };
+  const onClickTag = (tag: string) => {
+    setSearchText(tag);
+    setSearchTarget(SearchTarget.TAG);
+    search(tag, SearchTarget.TAG);
+  };
 
   return (
     <Box>
-      <SearchForm onSearch={search} />
+      <SearchForm
+        text={searchText}
+        onChangeText={setSearchText}
+        target={searchTarget}
+        onChangeTarget={setSearchTarget}
+        onSearch={search}
+      />
       {searchCondition ? (
         <Box mt={2}>
           <SearchCondition {...searchCondition} />
@@ -53,7 +66,7 @@ export const CharactersSearcher: React.FC<Props> = ({ characters }) => {
       <Grid container spacing={2} sx={{ mt: 1 }}>
         {searchResults.map(({ name, tags }) => (
           <Grid item key={name} xs={12} sm={6} md={4}>
-            <CharacterCard name={name} tags={tags} />
+            <CharacterCard name={name} tags={tags} onClickTag={onClickTag} />
           </Grid>
         ))}
       </Grid>

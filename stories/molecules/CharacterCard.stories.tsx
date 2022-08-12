@@ -9,6 +9,7 @@ const componentMeta: ComponentMeta<typeof CharacterCard> = {
   argTypes: {
     name: { control: 'text' },
     tags: { control: 'object' },
+    onClickTag: { action: 'clickedTag' },
   },
 };
 export default componentMeta;

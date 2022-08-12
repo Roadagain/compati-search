@@ -4,9 +4,15 @@ import { TaggedCharacter } from '../../lib/tagged-character';
 import { TagBadge } from '../atoms/TagBadge';
 import Stack from '@mui/material/Stack';
 
-type Props = TaggedCharacter;
+interface Props extends TaggedCharacter {
+  /**
+   * タグクリック時のハンドラ
+   * @param tag - タグ
+   */
+  onClickTag: (tag: string) => void;
+}
 
-export const CharacterCard: React.FC<Props> = ({ name, tags }) => (
+export const CharacterCard: React.FC<Props> = ({ name, tags, onClickTag }) => (
   <Card elevation={2}>
     <CardHeader title={name} />
     <CardContent sx={{ overflowX: 'scroll' }}>
@@ -16,7 +22,9 @@ export const CharacterCard: React.FC<Props> = ({ name, tags }) => (
         sx={{ display: 'inline-block', whiteSpace: 'nowrap' }}
       >
         {tags.map((tag) => (
-          <TagBadge key={tag}>{tag}</TagBadge>
+          <TagBadge key={tag} onClick={onClickTag}>
+            {tag}
+          </TagBadge>
         ))}
       </Stack>
     </CardContent>
