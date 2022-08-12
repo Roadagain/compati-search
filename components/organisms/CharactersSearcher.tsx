@@ -26,9 +26,8 @@ interface SearchCondition {
 export const CharactersSearcher: React.FC<Props> = ({ characters }) => {
   const [searchText, setSearchText] = React.useState('');
   const [searchTarget, setSearchTarget] = React.useState(SearchTarget.TAG);
-  const [searchResults, setSearchResults] = React.useState<TaggedCharacter[]>(
-    characters
-  );
+  const [searchResults, setSearchResults] =
+    React.useState<TaggedCharacter[]>(characters);
   const [searchCondition, setSearchCondition] =
     React.useState<SearchCondition | null>(null);
   const search = (text: string, target: SearchTarget) => {
