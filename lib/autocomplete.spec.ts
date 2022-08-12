@@ -1,5 +1,5 @@
-import { SearchTarget } from '../components/molecules/SearchTargetSelect';
 import { generateAutoCompleteOptions } from './autocomplete';
+import { SearchTarget } from './search-target';
 import { TaggedCharacter } from './tagged-character';
 
 describe('generateAutoCompleteOptions', () => {

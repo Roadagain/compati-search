@@ -2,11 +2,7 @@ import React from 'react';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import { useTheme } from '@mui/material';
-
-export enum SearchTarget {
-  TAG,
-  NAME,
-}
+import { SearchTarget } from '../../lib/search-target';
 
 interface Props {
   /**

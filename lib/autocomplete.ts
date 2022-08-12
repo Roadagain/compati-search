@@ -1,5 +1,5 @@
-import { SearchTarget } from '../components/molecules/SearchTargetSelect';
 import { TaggedCharacter } from './tagged-character';
+import { SearchTarget } from './search-target';
 
 export const generateAutoCompleteOptions = (
   characters: TaggedCharacter[],
