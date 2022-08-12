@@ -86,7 +86,7 @@ export const SearchForm: React.FC<Props> = ({
         )}
         sx={{ ml: 2 }}
       />
-      <IconButton type="submit">
+      <IconButton type="submit" sx={{ ml: 1 }}>
         <SearchIcon fontSize="large" />
       </IconButton>
     </Box>
