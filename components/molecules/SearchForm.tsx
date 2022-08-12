@@ -8,17 +8,39 @@ import { SearchTarget, SearchTargetSelect } from './SearchTargetSelect';
 
 interface Props {
   /**
+   * 検索文字列
+   */
+  text: string;
+  /**
+   * 検索文字列の変更ハンドラ
+   * @param text - 変更後の検索文字列
+   */
+  onChangeText: (text: string) => void;
+  /**
+   * 検索対象
+   */
+  target: SearchTarget;
+  /**
+   * 検索対象の変更ハンドラ
+   * @param target - 変更後の検索対象
+   */
+  onChangeTarget: (target: SearchTarget) => void;
+  /**
    * 検索イベントのハンドラー
    * @param text - 検索文字列
    */
   onSearch: (text: string, target: SearchTarget) => void;
 }
 
-export const SearchForm: React.FC<Props> = ({ onSearch }) => {
-  const [text, setText] = React.useState('');
-  const [target, setTarget] = React.useState(SearchTarget.TAG);
+export const SearchForm: React.FC<Props> = ({
+  text,
+  onChangeText,
+  target,
+  onChangeTarget,
+  onSearch,
+}) => {
   const onTextChange: ChangeEventHandler<HTMLInputElement> = (event) =>
-    setText(event.target.value);
+    onChangeText(event.target.value);
   const startSearch: FormEventHandler<HTMLFormElement> = (event) => {
     event.preventDefault();
     if (text) {
@@ -34,7 +56,7 @@ export const SearchForm: React.FC<Props> = ({ onSearch }) => {
       onSubmit={startSearch}
       sx={{ display: 'flex', alignItems: 'center' }}
     >
-      <SearchTargetSelect target={target} onChange={setTarget} />
+      <SearchTargetSelect target={target} onChange={onChangeTarget} />
       <OutlinedInput
         type="search"
         placeholder={placeholder}

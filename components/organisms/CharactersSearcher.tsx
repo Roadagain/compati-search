@@ -24,6 +24,8 @@ interface SearchCondition {
 }
 
 export const CharactersSearcher: React.FC<Props> = ({ characters }) => {
+  const [searchText, setSearchText] = React.useState('');
+  const [searchTarget, setSearchTarget] = React.useState(SearchTarget.TAG);
   const [searchResults, setSearchResults] = React.useState<TaggedCharacter[]>(
     []
   );
@@ -41,11 +43,21 @@ export const CharactersSearcher: React.FC<Props> = ({ characters }) => {
       text,
     });
   };
-  const onClickTag = (tag: string) => search(tag, SearchTarget.TAG);
+  const onClickTag = (tag: string) => {
+    setSearchText(tag);
+    setSearchTarget(SearchTarget.TAG);
+    search(tag, SearchTarget.TAG);
+  };
 
   return (
     <Box>
-      <SearchForm onSearch={search} />
+      <SearchForm
+        text={searchText}
+        onChangeText={setSearchText}
+        target={searchTarget}
+        onChangeTarget={setSearchTarget}
+        onSearch={search}
+      />
       {searchCondition ? (
         <Box mt={2}>
           <SearchCondition {...searchCondition} />
