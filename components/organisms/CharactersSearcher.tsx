@@ -41,6 +41,7 @@ export const CharactersSearcher: React.FC<Props> = ({ characters }) => {
       text,
     });
   };
+  const onClickTag = (tag: string) => search(tag, SearchTarget.TAG);
 
   return (
     <Box>
@@ -53,7 +54,7 @@ export const CharactersSearcher: React.FC<Props> = ({ characters }) => {
       <Grid container spacing={2} sx={{ mt: 1 }}>
         {searchResults.map(({ name, tags }) => (
           <Grid item key={name} xs={12} sm={6} md={4}>
-            <CharacterCard name={name} tags={tags} />
+            <CharacterCard name={name} tags={tags} onClickTag={onClickTag} />
           </Grid>
         ))}
       </Grid>
