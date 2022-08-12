@@ -2,13 +2,13 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { SearchForm } from '../../components/molecules/SearchForm';
-import { SearchTarget } from '../../components/molecules/SearchTargetSelect';
+import { SearchTarget } from '../../lib/search-target';
 
 const componentMeta: ComponentMeta<typeof SearchForm> = {
   title: 'Molecules/SearchForm',
   component: SearchForm,
   argTypes: {
-    text: { control: 'text' },
+    texts: { control: 'object' },
     target: {
       options: [SearchTarget.TAG, SearchTarget.NAME],
       control: {
@@ -19,6 +19,7 @@ const componentMeta: ComponentMeta<typeof SearchForm> = {
         },
       },
     },
+    options: { control: 'object' },
   },
 };
 export default componentMeta;
@@ -29,6 +30,7 @@ const Template: ComponentStory<typeof SearchForm> = (args) => (
 
 export const Search = Template.bind({});
 Search.args = {
-  text: '',
+  texts: [],
   target: SearchTarget.TAG,
+  options: ['あいうえお', 'かきくけこ'],
 };

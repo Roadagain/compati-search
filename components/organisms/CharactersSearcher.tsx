@@ -8,8 +8,9 @@ import {
 import { CharacterCard } from '../molecules/CharacterCard';
 import { SearchForm } from '../molecules/SearchForm';
 import Box from '@mui/material/Box';
-import { SearchTarget } from '../molecules/SearchTargetSelect';
 import { SearchCondition } from '../molecules/SearchCondition';
+import { generateAutoCompleteOptions } from '../../lib/autocomplete';
+import { SearchTarget } from '../../lib/search-target';
 
 interface Props {
   /**
@@ -24,37 +25,41 @@ interface SearchCondition {
 }
 
 export const CharactersSearcher: React.FC<Props> = ({ characters }) => {
-  const [searchText, setSearchText] = React.useState('');
+  const [searchTexts, setSearchTexts] = React.useState<string[]>([]);
   const [searchTarget, setSearchTarget] = React.useState(SearchTarget.TAG);
   const [searchResults, setSearchResults] =
     React.useState<TaggedCharacter[]>(characters);
   const [searchCondition, setSearchCondition] =
     React.useState<SearchCondition | null>(null);
-  const search = (text: string, target: SearchTarget) => {
-    const words = text.split(/\s/);
+  const search = (texts: string[], target: SearchTarget) => {
     const searchResults =
       target === SearchTarget.TAG
-        ? filterCharactersByTags(characters, words)
-        : filterCharactersByNameWords(characters, words);
+        ? filterCharactersByTags(characters, texts)
+        : filterCharactersByNameWords(characters, texts);
     setSearchResults(searchResults);
     setSearchCondition({
       target,
-      text,
+      text: texts.join(' '),
     });
   };
   const onClickTag = (tag: string) => {
-    setSearchText(tag);
+    setSearchTexts([tag]);
     setSearchTarget(SearchTarget.TAG);
-    search(tag, SearchTarget.TAG);
+    search([tag], SearchTarget.TAG);
   };
+  const autoCompleteOptions = generateAutoCompleteOptions(
+    characters,
+    searchTarget
+  );
 
   return (
     <Box>
       <SearchForm
-        text={searchText}
-        onChangeText={setSearchText}
+        texts={searchTexts}
+        onChangeTexts={setSearchTexts}
         target={searchTarget}
         onChangeTarget={setSearchTarget}
+        options={autoCompleteOptions}
         onSearch={search}
       />
       {searchCondition ? (
