@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { TagBadge } from '../../components/atoms/TagBadge';
+import { TagBadge } from './TagBadge';
 
 const componentMeta: ComponentMeta<typeof TagBadge> = {
   title: 'Atoms/TagBadge',

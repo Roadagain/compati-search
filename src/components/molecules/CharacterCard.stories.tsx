@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { CharacterCard } from '../../components/molecules/CharacterCard';
+import { CharacterCard } from './CharacterCard';
 
 const componentMeta: ComponentMeta<typeof CharacterCard> = {
   title: 'Molecules/CharacterCard',

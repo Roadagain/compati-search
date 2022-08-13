@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { CharactersSearcher } from '../../components/organisms/CharactersSearcher';
+import { CharactersSearcher } from './CharactersSearcher';
 
 const componentMeta: ComponentMeta<typeof CharactersSearcher> = {
   title: 'Organisms/CharactersSearcher',
