@@ -5,7 +5,7 @@ import '@fontsource/noto-sans-jp/500.css';
 import '@fontsource/noto-sans-jp/700.css';
 import '@fontsource/noto-sans-jp/900.css';
 import { CssBaseline, ThemeProvider } from '@mui/material';
-import { theme } from '../styles/theme';
+import { theme } from '../src/styles/theme';
 
 export const decorators = [
   (Story) => (
