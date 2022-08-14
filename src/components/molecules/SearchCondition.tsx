@@ -31,10 +31,16 @@ export const SearchCondition: React.FC<Props> = ({
   return (
     <Stack direction="row" alignItems="center" justifyContent="space-between">
       <Typography variant="h5">
-        <Typography component="span" variant="h5" fontWeight="bold">
-          {text}
-        </Typography>
-        の{targetStr}検索結果
+        {text ? (
+          <>
+            <Typography component="span" variant="h5" fontWeight="bold">
+              {text}
+            </Typography>
+            の{targetStr}検索結果
+          </>
+        ) : (
+          '検索条件なし'
+        )}
       </Typography>
       <FormGroup>
         <FormControlLabel
