@@ -22,14 +22,17 @@ Search.args = {
     {
       name: 'Alpha',
       tags: ['あいうえお', 'かきくけこ'],
+      showDefault: true,
     },
     {
       name: 'Beta',
       tags: ['かきくけこ'],
+      showDefault: true,
     },
     {
       name: 'Gamma',
       tags: ['さしすせそ'],
+      showDefault: false,
     },
   ],
 };

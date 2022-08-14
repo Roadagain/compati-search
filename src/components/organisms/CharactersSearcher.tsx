@@ -27,16 +27,17 @@ interface SearchCondition {
 export const CharactersSearcher: React.FC<Props> = ({ characters }) => {
   const [searchTexts, setSearchTexts] = React.useState<string[]>([]);
   const [searchTarget, setSearchTarget] = React.useState(SearchTarget.TAG);
-  const [searchResults, setSearchResults] =
-    React.useState<TaggedCharacter[]>(characters);
+  const [searchResults, setSearchResults] = React.useState<TaggedCharacter[]>(
+    characters.filter(({ showDefault }) => showDefault)
+  );
   const [searchCondition, setSearchCondition] =
     React.useState<SearchCondition | null>(null);
   const [showAll, setShowAll] = React.useState(false);
-  const search = (texts: string[], target: SearchTarget) => {
+  const search = (texts: string[], target: SearchTarget, showAll: boolean) => {
     const searchResults =
       target === SearchTarget.TAG
-        ? filterCharactersByTags(characters, texts)
-        : filterCharactersByNameWords(characters, texts);
+        ? filterCharactersByTags(characters, texts, showAll)
+        : filterCharactersByNameWords(characters, texts, showAll);
     setSearchResults(searchResults);
     setSearchCondition({
       target,
@@ -46,7 +47,11 @@ export const CharactersSearcher: React.FC<Props> = ({ characters }) => {
   const onClickTag = (tag: string) => {
     setSearchTexts([tag]);
     setSearchTarget(SearchTarget.TAG);
-    search([tag], SearchTarget.TAG);
+    search([tag], SearchTarget.TAG, showAll);
+  };
+  const onChangeShowAll = (showAll: boolean) => {
+    setShowAll(showAll);
+    search(searchTexts, searchTarget, showAll);
   };
   const autoCompleteOptions = generateAutoCompleteOptions(
     characters,
@@ -61,14 +66,14 @@ export const CharactersSearcher: React.FC<Props> = ({ characters }) => {
         target={searchTarget}
         onChangeTarget={setSearchTarget}
         options={autoCompleteOptions}
-        onSearch={search}
+        onSearch={(texts, target) => search(texts, target, showAll)}
       />
       {searchCondition ? (
         <Box mt={2}>
           <SearchCondition
             {...searchCondition}
             showAll={showAll}
-            onChangeShowAll={setShowAll}
+            onChangeShowAll={onChangeShowAll}
           />
         </Box>
       ) : null}
