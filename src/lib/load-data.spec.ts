@@ -11,6 +11,7 @@ describe('isTaggedCharacter', () => {
       const obj = {
         name: 'Name',
         tags: ['test1', 'test2'],
+        showDefault: false,
       };
       expect(isTaggedCharacter(obj)).toBeTruthy();
     });
@@ -21,6 +22,7 @@ describe('isTaggedCharacter', () => {
       const obj = {
         name: 1,
         tags: ['test1', 'test2'],
+        showDefault: true,
       };
       expect(isTaggedCharacter(obj)).toBeFalsy();
     });
@@ -31,6 +33,7 @@ describe('isTaggedCharacter', () => {
       const obj = {
         name: 'Name',
         tags: 'aaa',
+        showDefault: true,
       };
       expect(isTaggedCharacter(obj)).toBeFalsy();
     });
@@ -41,6 +44,18 @@ describe('isTaggedCharacter', () => {
       const obj = {
         name: 'Name',
         tags: ['test1', 2],
+        showDefault: false,
+      };
+      expect(isTaggedCharacter(obj)).toBeFalsy();
+    });
+  });
+
+  describe('showDefaultがbooleanでない場合', () => {
+    it('falseが返る', () => {
+      const obj = {
+        name: 'Name',
+        tags: ['test1', 'test2'],
+        showDefault: 1,
       };
       expect(isTaggedCharacter(obj)).toBeFalsy();
     });
@@ -53,10 +68,12 @@ describe('loadCharactersDataFromJson', () => {
       {
         name: 'Alpha',
         tags: ['one', 'two'],
+        showDefault: true,
       },
       {
         name: 'Beta',
         tags: [],
+        showDefault: false,
       },
     ];
 
@@ -70,10 +87,12 @@ describe('loadCharactersDataFromJson', () => {
       {
         name: 1,
         tags: ['one, two'],
+        showDefault: true,
       },
       {
         name: 'Beta',
         tags: ['three'],
+        showDefault: true,
       },
     ];
 

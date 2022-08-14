@@ -27,15 +27,18 @@ interface SearchCondition {
 export const CharactersSearcher: React.FC<Props> = ({ characters }) => {
   const [searchTexts, setSearchTexts] = React.useState<string[]>([]);
   const [searchTarget, setSearchTarget] = React.useState(SearchTarget.TAG);
-  const [searchResults, setSearchResults] =
-    React.useState<TaggedCharacter[]>(characters);
-  const [searchCondition, setSearchCondition] =
-    React.useState<SearchCondition | null>(null);
-  const search = (texts: string[], target: SearchTarget) => {
+  const [searchResults, setSearchResults] = React.useState<TaggedCharacter[]>(
+    characters.filter(({ showDefault }) => showDefault)
+  );
+  const [searchCondition, setSearchCondition] = React.useState<SearchCondition>(
+    { text: '', target: SearchTarget.TAG }
+  );
+  const [showAll, setShowAll] = React.useState(false);
+  const search = (texts: string[], target: SearchTarget, showAll: boolean) => {
     const searchResults =
       target === SearchTarget.TAG
-        ? filterCharactersByTags(characters, texts)
-        : filterCharactersByNameWords(characters, texts);
+        ? filterCharactersByTags(characters, texts, showAll)
+        : filterCharactersByNameWords(characters, texts, showAll);
     setSearchResults(searchResults);
     setSearchCondition({
       target,
@@ -45,11 +48,17 @@ export const CharactersSearcher: React.FC<Props> = ({ characters }) => {
   const onClickTag = (tag: string) => {
     setSearchTexts([tag]);
     setSearchTarget(SearchTarget.TAG);
-    search([tag], SearchTarget.TAG);
+    search([tag], SearchTarget.TAG, showAll);
+  };
+  const onChangeShowAll = (showAll: boolean) => {
+    setShowAll(showAll);
+    const texts = searchCondition.text ? searchCondition.text.split(' ') : [];
+    search(texts, searchCondition.target, showAll);
   };
   const autoCompleteOptions = generateAutoCompleteOptions(
     characters,
-    searchTarget
+    searchTarget,
+    showAll
   );
 
   return (
@@ -60,13 +69,15 @@ export const CharactersSearcher: React.FC<Props> = ({ characters }) => {
         target={searchTarget}
         onChangeTarget={setSearchTarget}
         options={autoCompleteOptions}
-        onSearch={search}
+        onSearch={(texts, target) => search(texts, target, showAll)}
       />
-      {searchCondition ? (
-        <Box mt={2}>
-          <SearchCondition {...searchCondition} />
-        </Box>
-      ) : null}
+      <Box mt={2}>
+        <SearchCondition
+          {...searchCondition}
+          showAll={showAll}
+          onChangeShowAll={onChangeShowAll}
+        />
+      </Box>
       <Grid container spacing={2} sx={{ mt: 1 }}>
         {searchResults.map(({ name, tags }) => (
           <Grid item key={name} xs={12} sm={6} md={4}>

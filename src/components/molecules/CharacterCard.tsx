@@ -1,10 +1,17 @@
 import { Card, CardContent, CardHeader } from '@mui/material';
 import React from 'react';
-import { TaggedCharacter } from '../../lib/tagged-character';
 import { TagBadge } from '../atoms/TagBadge';
 import Stack from '@mui/material/Stack';
 
-interface Props extends TaggedCharacter {
+interface Props {
+  /**
+   * キャラ名
+   */
+  name: string;
+  /**
+   * タグ一覧
+   */
+  tags: string[];
   /**
    * タグクリック時のハンドラ
    * @param tag - タグ

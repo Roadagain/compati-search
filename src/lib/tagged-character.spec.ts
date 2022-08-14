@@ -1,5 +1,4 @@
 import {
-  sortCharactersByTags,
   filterCharactersByTags,
   TaggedCharacter,
   filterCharactersByNameWords,
@@ -11,94 +10,92 @@ describe('filterCharactersByTag', () => {
   const alpha: TaggedCharacter = {
     name: 'alpha',
     tags: [testTag1, 'other-tag', testTag2],
-  };
-  const beta: TaggedCharacter = {
-    name: 'beta',
-    tags: ['other-tag', testTag2],
-  };
-  const gamma: TaggedCharacter = {
-    name: 'gamma',
-    tags: [testTag1],
-  };
-  const delta: TaggedCharacter = {
-    name: 'delta',
-    tags: ['other-tag'],
-  };
-  const characters = [alpha, beta, gamma, delta];
-
-  describe('指定タグが1つの場合', () => {
-    it('指定タグを全て持つキャラクターの配列が返る', () => {
-      expect(filterCharactersByTags(characters, [testTag1])).toStrictEqual([
-        alpha,
-        gamma,
-      ]);
-    });
-  });
-
-  describe('指定タグが複数の場合', () => {
-    it('指定タグを全て持つキャラクターの配列が返る', () => {
-      expect(
-        filterCharactersByTags(characters, [testTag1, testTag2])
-      ).toStrictEqual([alpha]);
-    });
-  });
-
-  describe('指定したタグを持つキャラクターがいない場合', () => {
-    it('空配列が返る', () => {
-      expect(filterCharactersByTags(characters, ['not-set-tag'])).toStrictEqual(
-        []
-      );
-    });
-  });
-
-  describe('タグ指定がない場合', () => {
-    it('元の配列が返る', () => {
-      expect(filterCharactersByTags(characters, [])).toStrictEqual(characters);
-    });
-  });
-});
-
-describe('sortCharactersByTags', () => {
-  const testTag1 = 'x-ray';
-  const testTag2 = 'yankee';
-  const testTag3 = 'zulu';
-  const alpha: TaggedCharacter = {
-    name: 'alpha',
-    tags: [testTag1, 'other-tag', testTag2],
+    showDefault: true,
   };
   const beta: TaggedCharacter = {
     name: 'beta',
     tags: ['other-tag', testTag1],
+    showDefault: true,
   };
   const gamma: TaggedCharacter = {
     name: 'gamma',
-    tags: [testTag3, testTag2, testTag1],
+    tags: [testTag1, testTag2],
+    showDefault: false,
   };
   const delta: TaggedCharacter = {
     name: 'delta',
     tags: ['other-tag'],
+    showDefault: true,
   };
   const characters = [alpha, beta, gamma, delta];
 
-  describe('タグがヒットする場合', () => {
-    it('ヒットしたタグが多い順にキャラクターの配列が返る', () => {
-      expect(
-        sortCharactersByTags(characters, [testTag1, testTag2, testTag3])
-      ).toStrictEqual([gamma, alpha, beta, delta]);
+  describe('全キャラ表示フラグがtrueの場合', () => {
+    describe('指定タグが1つの場合', () => {
+      it('指定タグを持つキャラクターの配列が返る', () => {
+        expect(
+          filterCharactersByTags(characters, [testTag1], true)
+        ).toStrictEqual([alpha, beta, gamma]);
+      });
+    });
+
+    describe('指定タグが複数の場合', () => {
+      it('指定タグを全て持つキャラクターの配列が返る', () => {
+        expect(
+          filterCharactersByTags(characters, [testTag1, testTag2], true)
+        ).toStrictEqual([alpha, gamma]);
+      });
+    });
+
+    describe('指定したタグを持つキャラクターがいない場合', () => {
+      it('空配列が返る', () => {
+        expect(
+          filterCharactersByTags(characters, ['not-set-tag'], true)
+        ).toStrictEqual([]);
+      });
+    });
+
+    describe('タグ指定がない場合', () => {
+      it('元の配列が返る', () => {
+        expect(filterCharactersByTags(characters, [], true)).toStrictEqual(
+          characters
+        );
+      });
     });
   });
 
-  describe('指定したタグを持つキャラクターがいない場合', () => {
-    it('元の配列が返る', () => {
-      expect(sortCharactersByTags(characters, ['not-set-tag'])).toStrictEqual(
-        characters
-      );
+  describe('全キャラ表示フラグがfalseの場合', () => {
+    describe('指定タグが1つの場合', () => {
+      it('デフォルト表示され指定タグを全て持つキャラクターの配列が返る', () => {
+        expect(
+          filterCharactersByTags(characters, [testTag1], false)
+        ).toStrictEqual([alpha, beta]);
+      });
     });
-  });
 
-  describe('タグが指定されない場合', () => {
-    it('元の配列が返る', () => {
-      expect(sortCharactersByTags(characters, [])).toStrictEqual(characters);
+    describe('指定タグが複数の場合', () => {
+      it('デフォルト表示され指定タグを全て持つキャラクターの配列が返る', () => {
+        expect(
+          filterCharactersByTags(characters, [testTag1, testTag2], false)
+        ).toStrictEqual([alpha]);
+      });
+    });
+
+    describe('指定したタグを持つキャラクターがいない場合', () => {
+      it('空配列が返る', () => {
+        expect(
+          filterCharactersByTags(characters, ['not-set-tag'], true)
+        ).toStrictEqual([]);
+      });
+    });
+
+    describe('タグ指定がない場合', () => {
+      it('デフォルト表示されるキャラクターの配列が返る', () => {
+        expect(filterCharactersByTags(characters, [], false)).toStrictEqual([
+          alpha,
+          beta,
+          delta,
+        ]);
+      });
     });
   });
 });
@@ -107,51 +104,90 @@ describe('searchCharactersByCharacterNameWords', () => {
   const alpha: TaggedCharacter = {
     name: 'X-rayYankee',
     tags: [],
+    showDefault: true,
   };
   const beta: TaggedCharacter = {
-    name: 'Zulu',
+    name: 'ZuluX-ray',
     tags: [],
+    showDefault: true,
   };
   const gamma: TaggedCharacter = {
-    name: 'X-rayOther',
+    name: 'X-rayOtherYankee',
     tags: [],
+    showDefault: false,
   };
   const delta: TaggedCharacter = {
     name: 'Other',
     tags: [],
+    showDefault: true,
   };
   const characters = [alpha, beta, gamma, delta];
 
-  describe('キーワードが1つの場合', () => {
-    it('キーワードを名前に含むキャラクターの配列が返る', () => {
-      expect(filterCharactersByNameWords(characters, ['X-ray'])).toStrictEqual([
-        alpha,
-        gamma,
-      ]);
+  describe('全キャラ表示フラグがtrueの場合', () => {
+    describe('キーワードが1つの場合', () => {
+      it('キーワードを名前に含むキャラクターの配列が返る', () => {
+        expect(
+          filterCharactersByNameWords(characters, ['X-ray'], true)
+        ).toStrictEqual([alpha, beta, gamma]);
+      });
+    });
+
+    describe('キーワードが複数の場合', () => {
+      it('キーワードを全て名前に含むキャラクターの配列が返る', () => {
+        expect(
+          filterCharactersByNameWords(characters, ['X-ray', 'Yankee'], true)
+        ).toStrictEqual([alpha, gamma]);
+      });
+    });
+
+    describe('キーワードがヒットしない場合', () => {
+      it('空配列が返る', () => {
+        expect(
+          filterCharactersByNameWords(characters, ['not-included-word'], true)
+        ).toStrictEqual([]);
+      });
+    });
+
+    describe('キーワード指定がない場合', () => {
+      it('元の配列が返る', () => {
+        expect(filterCharactersByNameWords(characters, [], true)).toStrictEqual(
+          characters
+        );
+      });
     });
   });
 
-  describe('キーワードが複数の場合', () => {
-    it('キーワードを全て名前に含むキャラクターの配列が返る', () => {
-      expect(
-        filterCharactersByNameWords(characters, ['X-ray', 'Yankee'])
-      ).toStrictEqual([alpha]);
+  describe('全キャラ表示フラグがfalseの場合', () => {
+    describe('キーワードが1つの場合', () => {
+      it('キーワードを名前に含むキャラクターの配列が返る', () => {
+        expect(
+          filterCharactersByNameWords(characters, ['X-ray'], false)
+        ).toStrictEqual([alpha, beta]);
+      });
     });
-  });
 
-  describe('キーワードがヒットしない場合', () => {
-    it('空配列が返る', () => {
-      expect(
-        filterCharactersByNameWords(characters, ['not-included-word'])
-      ).toStrictEqual([]);
+    describe('キーワードが複数の場合', () => {
+      it('キーワードを全て名前に含むキャラクターの配列が返る', () => {
+        expect(
+          filterCharactersByNameWords(characters, ['X-ray', 'Yankee'], false)
+        ).toStrictEqual([alpha]);
+      });
     });
-  });
 
-  describe('キーワード指定がない場合', () => {
-    it('元の配列が返る', () => {
-      expect(filterCharactersByNameWords(characters, [])).toStrictEqual(
-        characters
-      );
+    describe('キーワードがヒットしない場合', () => {
+      it('空配列が返る', () => {
+        expect(
+          filterCharactersByNameWords(characters, ['not-included-word'], false)
+        ).toStrictEqual([]);
+      });
+    });
+
+    describe('キーワード指定がない場合', () => {
+      it('デフォルト表示されるキャラクターの配列が返る', () => {
+        expect(
+          filterCharactersByNameWords(characters, [], false)
+        ).toStrictEqual([alpha, beta, delta]);
+      });
     });
   });
 });

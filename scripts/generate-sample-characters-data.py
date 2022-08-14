@@ -18,6 +18,12 @@ for len_count in range(len(SET_TAGS) + 1):
         characters.append({
             'name': character_name_from_count(count),
             'tags': tags,
+            'showDefault': True,
+        })
+        characters.append({
+            'name': f'隠し{character_name_from_count(count)}',
+            'tags': tags,
+            'showDefault': False,
         })
         count += 1
 
