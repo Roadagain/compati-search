@@ -5,7 +5,7 @@ module.exports = {
         source: '/sample',
         destination: '/',
         permanent: true,
-      }
-    ]
-  }
-}
+      },
+    ];
+  },
+};
