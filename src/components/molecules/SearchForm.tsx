@@ -65,6 +65,7 @@ export const SearchForm: React.FC<Props> = ({
       <SearchTargetSelect target={target} onChange={onChangeTarget} />
       <Autocomplete
         autoComplete
+        freeSolo
         multiple
         filterSelectedOptions
         value={texts}
