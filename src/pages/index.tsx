@@ -1,25 +1,11 @@
-import React from 'react';
 import {
   loadCharactersDataFromJson,
   loadSampleCharactersData,
 } from '../lib/load-data';
-import { Box, Container, Typography } from '@mui/material';
-import { CharactersSearcher } from '../components/organisms/CharactersSearcher';
-import { TaggedCharacter } from '../lib/tagged-character';
-import { GetServerSideProps, NextPage } from 'next';
+import { GetServerSideProps } from 'next';
+import { Props, SearchTemplate } from '../components/templates/SearchTemplate';
 
-interface Props {
-  characters: TaggedCharacter[];
-}
-
-const Index: NextPage<Props> = ({ characters }) => (
-  <Container sx={{ py: 2 }}>
-    <Typography variant="h5">コンパチサーチ</Typography>
-    <Box sx={{ mt: 2 }}>
-      <CharactersSearcher characters={characters} />
-    </Box>
-  </Container>
-);
+export default SearchTemplate;
 
 export const getServerSideProps: GetServerSideProps<Props> = async (
   context
@@ -43,5 +29,3 @@ export const getServerSideProps: GetServerSideProps<Props> = async (
     },
   };
 };
-
-export default Index;
