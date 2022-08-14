@@ -8,10 +8,14 @@ export interface TaggedCharacter {
 
 export const filterCharactersByTags = (
   characters: TaggedCharacter[],
-  tags: Tag[]
+  tags: Tag[],
+  showAll: boolean
 ): TaggedCharacter[] => {
   return characters.filter((character) => {
-    return tags.every((tag) => character.tags.includes(tag));
+    return (
+      (showAll || character.showDefault) &&
+      tags.every((tag) => character.tags.includes(tag))
+    );
   });
 };
 
@@ -34,9 +38,12 @@ export const sortCharactersByTags = (
 
 export const filterCharactersByNameWords = (
   characters: TaggedCharacter[],
-  nameWords: string[]
+  nameWords: string[],
+  showAll: boolean
 ): TaggedCharacter[] => {
-  return characters.filter(({ name }) =>
-    nameWords.every((word) => name.includes(word))
-  );
+  return characters.filter(({ name, showDefault }) => {
+    return (
+      (showAll || showDefault) && nameWords.every((word) => name.includes(word))
+    );
+  });
 };
