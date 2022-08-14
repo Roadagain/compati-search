@@ -11,6 +11,11 @@ export const getServerSideProps: GetServerSideProps<Props> = async (
   const result = await fetch(
     `${process.env.CHARACTERS_DATA_STORAGE_URL}/${name}.json?alt=media`
   );
+  if (result.status === 404) {
+    return {
+      notFound: true,
+    };
+  }
   const json = await result.json();
   return {
     props: {
