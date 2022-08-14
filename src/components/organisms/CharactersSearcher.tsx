@@ -57,7 +57,8 @@ export const CharactersSearcher: React.FC<Props> = ({ characters }) => {
   };
   const autoCompleteOptions = generateAutoCompleteOptions(
     characters,
-    searchTarget
+    searchTarget,
+    showAll
   );
 
   return (
