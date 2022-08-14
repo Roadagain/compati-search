@@ -31,6 +31,7 @@ export const CharactersSearcher: React.FC<Props> = ({ characters }) => {
     React.useState<TaggedCharacter[]>(characters);
   const [searchCondition, setSearchCondition] =
     React.useState<SearchCondition | null>(null);
+  const [showAll, setShowAll] = React.useState(false);
   const search = (texts: string[], target: SearchTarget) => {
     const searchResults =
       target === SearchTarget.TAG
@@ -64,7 +65,11 @@ export const CharactersSearcher: React.FC<Props> = ({ characters }) => {
       />
       {searchCondition ? (
         <Box mt={2}>
-          <SearchCondition {...searchCondition} />
+          <SearchCondition
+            {...searchCondition}
+            showAll={showAll}
+            onChangeShowAll={setShowAll}
+          />
         </Box>
       ) : null}
       <Grid container spacing={2} sx={{ mt: 1 }}>
