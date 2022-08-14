@@ -7,14 +7,17 @@ describe('generateAutoCompleteOptions', () => {
     {
       name: 'Alpha',
       tags: ['x-ray', 'yankee'],
+      showDefault: true,
     },
     {
       name: 'Beta',
       tags: ['x-ray', 'zulu'],
+      showDefault: true,
     },
     {
       name: 'Gamma',
       tags: ['yankee'],
+      showDefault: true,
     },
   ];
 

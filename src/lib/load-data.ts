@@ -9,7 +9,8 @@ export const isTaggedCharacter = (
   return (
     typeof obj.name === 'string' &&
     Array.isArray(obj.tags) &&
-    obj.tags.every((tag) => typeof tag === 'string')
+    obj.tags.every((tag) => typeof tag === 'string') &&
+    typeof obj.showDefault === 'boolean'
   );
 };
 
@@ -20,9 +21,10 @@ export const loadCharactersDataFromJson = (
   if (!json.every(isTaggedCharacter)) {
     throw new Error('Invalid characters data');
   }
-  return json.map(({ name, tags }) => ({
+  return json.map(({ name, tags, showDefault }) => ({
     name,
     tags,
+    showDefault,
   }));
 };
 

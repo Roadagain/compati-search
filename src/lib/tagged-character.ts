@@ -3,6 +3,7 @@ export type Tag = string;
 export interface TaggedCharacter {
   name: string;
   tags: Tag[];
+  showDefault: boolean;
 }
 
 export const filterCharactersByTags = (
