@@ -19,23 +19,6 @@ export const filterCharactersByTags = (
   });
 };
 
-export const sortCharactersByTags = (
-  characters: TaggedCharacter[],
-  tags: Tag[]
-): TaggedCharacter[] => {
-  const matchedTagsCounts = characters.flatMap((character) => {
-    const matchedCount = tags.filter((tag) =>
-      character.tags.includes(tag)
-    ).length;
-    return {
-      character,
-      count: matchedCount,
-    };
-  });
-  matchedTagsCounts.sort((a, b) => b.count - a.count);
-  return matchedTagsCounts.map(({ character }) => character);
-};
-
 export const filterCharactersByNameWords = (
   characters: TaggedCharacter[],
   nameWords: string[],

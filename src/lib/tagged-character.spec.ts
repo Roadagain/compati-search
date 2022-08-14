@@ -1,5 +1,4 @@
 import {
-  sortCharactersByTags,
   filterCharactersByTags,
   TaggedCharacter,
   filterCharactersByNameWords,
@@ -97,55 +96,6 @@ describe('filterCharactersByTag', () => {
           delta,
         ]);
       });
-    });
-  });
-});
-
-describe('sortCharactersByTags', () => {
-  const testTag1 = 'x-ray';
-  const testTag2 = 'yankee';
-  const testTag3 = 'zulu';
-  const alpha: TaggedCharacter = {
-    name: 'alpha',
-    tags: [testTag1, 'other-tag', testTag2],
-    showDefault: true,
-  };
-  const beta: TaggedCharacter = {
-    name: 'beta',
-    tags: ['other-tag', testTag1],
-    showDefault: true,
-  };
-  const gamma: TaggedCharacter = {
-    name: 'gamma',
-    tags: [testTag3, testTag2, testTag1],
-    showDefault: true,
-  };
-  const delta: TaggedCharacter = {
-    name: 'delta',
-    tags: ['other-tag'],
-    showDefault: true,
-  };
-  const characters = [alpha, beta, gamma, delta];
-
-  describe('タグがヒットする場合', () => {
-    it('ヒットしたタグが多い順にキャラクターの配列が返る', () => {
-      expect(
-        sortCharactersByTags(characters, [testTag1, testTag2, testTag3])
-      ).toStrictEqual([gamma, alpha, beta, delta]);
-    });
-  });
-
-  describe('指定したタグを持つキャラクターがいない場合', () => {
-    it('元の配列が返る', () => {
-      expect(sortCharactersByTags(characters, ['not-set-tag'])).toStrictEqual(
-        characters
-      );
-    });
-  });
-
-  describe('タグが指定されない場合', () => {
-    it('元の配列が返る', () => {
-      expect(sortCharactersByTags(characters, [])).toStrictEqual(characters);
     });
   });
 });
