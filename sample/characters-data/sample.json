@@ -1,66 +1,162 @@
 [
   {
     "name": "0",
-    "tags": []
+    "tags": [],
+    "showDefault": true
+  },
+  {
+    "name": "隠し0",
+    "tags": [],
+    "showDefault": false
   },
   {
     "name": "イチ",
-    "tags": ["Usa"]
+    "tags": ["Usa"],
+    "showDefault": true
+  },
+  {
+    "name": "隠しイチ",
+    "tags": ["Usa"],
+    "showDefault": false
   },
   {
     "name": "に",
-    "tags": ["コザ"]
+    "tags": ["コザ"],
+    "showDefault": true
+  },
+  {
+    "name": "隠しに",
+    "tags": ["コザ"],
+    "showDefault": false
   },
   {
     "name": "三",
-    "tags": ["さいたま"]
+    "tags": ["さいたま"],
+    "showDefault": true
+  },
+  {
+    "name": "隠し三",
+    "tags": ["さいたま"],
+    "showDefault": false
   },
   {
     "name": "ヨン",
-    "tags": ["津"]
+    "tags": ["津"],
+    "showDefault": true
+  },
+  {
+    "name": "隠しヨン",
+    "tags": ["津"],
+    "showDefault": false
   },
   {
     "name": "ご",
-    "tags": ["Usa", "コザ"]
+    "tags": ["Usa", "コザ"],
+    "showDefault": true
+  },
+  {
+    "name": "隠しご",
+    "tags": ["Usa", "コザ"],
+    "showDefault": false
   },
   {
     "name": "六",
-    "tags": ["Usa", "さいたま"]
+    "tags": ["Usa", "さいたま"],
+    "showDefault": true
+  },
+  {
+    "name": "隠し六",
+    "tags": ["Usa", "さいたま"],
+    "showDefault": false
   },
   {
     "name": "ナナ",
-    "tags": ["Usa", "津"]
+    "tags": ["Usa", "津"],
+    "showDefault": true
+  },
+  {
+    "name": "隠しナナ",
+    "tags": ["Usa", "津"],
+    "showDefault": false
   },
   {
     "name": "はち",
-    "tags": ["コザ", "さいたま"]
+    "tags": ["コザ", "さいたま"],
+    "showDefault": true
+  },
+  {
+    "name": "隠しはち",
+    "tags": ["コザ", "さいたま"],
+    "showDefault": false
   },
   {
     "name": "九",
-    "tags": ["コザ", "津"]
+    "tags": ["コザ", "津"],
+    "showDefault": true
+  },
+  {
+    "name": "隠し九",
+    "tags": ["コザ", "津"],
+    "showDefault": false
   },
   {
     "name": "拾",
-    "tags": ["さいたま", "津"]
+    "tags": ["さいたま", "津"],
+    "showDefault": true
+  },
+  {
+    "name": "隠し拾",
+    "tags": ["さいたま", "津"],
+    "showDefault": false
   },
   {
     "name": "拾イチ",
-    "tags": ["Usa", "コザ", "さいたま"]
+    "tags": ["Usa", "コザ", "さいたま"],
+    "showDefault": true
+  },
+  {
+    "name": "隠し拾イチ",
+    "tags": ["Usa", "コザ", "さいたま"],
+    "showDefault": false
   },
   {
     "name": "拾に",
-    "tags": ["Usa", "コザ", "津"]
+    "tags": ["Usa", "コザ", "津"],
+    "showDefault": true
+  },
+  {
+    "name": "隠し拾に",
+    "tags": ["Usa", "コザ", "津"],
+    "showDefault": false
   },
   {
     "name": "拾三",
-    "tags": ["Usa", "さいたま", "津"]
+    "tags": ["Usa", "さいたま", "津"],
+    "showDefault": true
+  },
+  {
+    "name": "隠し拾三",
+    "tags": ["Usa", "さいたま", "津"],
+    "showDefault": false
   },
   {
     "name": "拾ヨン",
-    "tags": ["コザ", "さいたま", "津"]
+    "tags": ["コザ", "さいたま", "津"],
+    "showDefault": true
+  },
+  {
+    "name": "隠し拾ヨン",
+    "tags": ["コザ", "さいたま", "津"],
+    "showDefault": false
   },
   {
     "name": "拾ご",
-    "tags": ["Usa", "コザ", "さいたま", "津"]
+    "tags": ["Usa", "コザ", "さいたま", "津"],
+    "showDefault": true
+  },
+  {
+    "name": "隠し拾ご",
+    "tags": ["Usa", "コザ", "さいたま", "津"],
+    "showDefault": false
   }
 ]
