@@ -37,7 +37,7 @@ interface Props {
    */
   onSearch: (texts: string[], target: SearchTarget) => void;
   /**
-   * テーマ関係のスタイルしてい
+   * テーマ関係のスタイル指定
    */
   sx?: SxProps<Theme>;
 }

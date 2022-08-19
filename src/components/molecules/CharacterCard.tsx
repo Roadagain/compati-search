@@ -18,7 +18,7 @@ interface Props {
    */
   onClickTag: (tag: string) => void;
   /**
-   * テーマ関係のスタイルしてい
+   * テーマ関係のスタイル指定
    */
   sx?: SxProps<Theme>;
 }
