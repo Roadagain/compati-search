@@ -3,6 +3,8 @@ import {
   FormGroup,
   Stack,
   Switch,
+  SxProps,
+  Theme,
   Typography,
 } from '@mui/material';
 import React from 'react';
@@ -13,6 +15,7 @@ interface Props {
   text: string;
   showAll: boolean;
   onChangeShowAll: (showAll: boolean) => void;
+  sx?: SxProps<Theme>;
 }
 
 export const SearchCondition: React.FC<Props> = ({
@@ -20,6 +23,7 @@ export const SearchCondition: React.FC<Props> = ({
   text,
   showAll,
   onChangeShowAll,
+  sx,
 }) => {
   const targetStr = target === SearchTarget.TAG ? 'タグ' : '名前';
   const onChangeCheckbox: React.ChangeEventHandler<HTMLInputElement> = (
@@ -29,7 +33,12 @@ export const SearchCondition: React.FC<Props> = ({
   };
 
   return (
-    <Stack direction="row" alignItems="center" justifyContent="space-between">
+    <Stack
+      direction="row"
+      alignItems="center"
+      justifyContent="space-between"
+      sx={sx}
+    >
       <Typography variant="h5">
         {text ? (
           <>

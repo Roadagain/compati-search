@@ -1,4 +1,4 @@
-import { Grid } from '@mui/material';
+import { Grid, SxProps, Theme } from '@mui/material';
 import React from 'react';
 import {
   filterCharactersByNameWords,
@@ -17,6 +17,10 @@ interface Props {
    * 検索対象のキャラクター一覧
    */
   characters: TaggedCharacter[];
+  /**
+   * テーマ関係のスタイル指定
+   */
+  sx?: SxProps<Theme>;
 }
 
 interface SearchCondition {
@@ -24,7 +28,7 @@ interface SearchCondition {
   text: string;
 }
 
-export const CharactersSearcher: React.FC<Props> = ({ characters }) => {
+export const CharactersSearcher: React.FC<Props> = ({ characters, sx }) => {
   const [searchTexts, setSearchTexts] = React.useState<string[]>([]);
   const [searchTarget, setSearchTarget] = React.useState(SearchTarget.TAG);
   const [searchResults, setSearchResults] = React.useState<TaggedCharacter[]>(
@@ -62,7 +66,7 @@ export const CharactersSearcher: React.FC<Props> = ({ characters }) => {
   );
 
   return (
-    <Box>
+    <Box sx={sx}>
       <SearchForm
         texts={searchTexts}
         onChangeTexts={setSearchTexts}

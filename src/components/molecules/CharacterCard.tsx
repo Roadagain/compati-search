@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader } from '@mui/material';
+import { Card, CardContent, CardHeader, SxProps, Theme } from '@mui/material';
 import React from 'react';
 import { TagBadge } from '../atoms/TagBadge';
 import Stack from '@mui/material/Stack';
@@ -17,10 +17,19 @@ interface Props {
    * @param tag - タグ
    */
   onClickTag: (tag: string) => void;
+  /**
+   * テーマ関係のスタイルしてい
+   */
+  sx?: SxProps<Theme>;
 }
 
-export const CharacterCard: React.FC<Props> = ({ name, tags, onClickTag }) => (
-  <Card elevation={2}>
+export const CharacterCard: React.FC<Props> = ({
+  name,
+  tags,
+  onClickTag,
+  sx,
+}) => (
+  <Card elevation={2} sx={sx}>
     <CardHeader title={name} />
     <CardContent sx={{ overflowX: 'scroll' }}>
       <Stack

@@ -20,6 +20,7 @@ const componentMeta: ComponentMeta<typeof SearchCondition> = {
     },
     text: { control: 'text' },
     showAll: { control: 'boolean' },
+    sx: { control: 'object' },
   },
 };
 export default componentMeta;
@@ -33,4 +34,5 @@ Condition.args = {
   target: SearchTarget.TAG,
   text: 'あいうえお',
   showAll: false,
+  sx: {},
 };

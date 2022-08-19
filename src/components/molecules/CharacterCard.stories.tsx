@@ -9,6 +9,7 @@ const componentMeta: ComponentMeta<typeof CharacterCard> = {
   argTypes: {
     name: { control: 'text' },
     tags: { control: 'object' },
+    sx: { control: 'object' },
   },
 };
 export default componentMeta;
@@ -21,4 +22,5 @@ export const Card = Template.bind({});
 Card.args = {
   name: 'なまえ',
   tags: ['タグ1', 'タグ2'],
+  sx: {},
 };

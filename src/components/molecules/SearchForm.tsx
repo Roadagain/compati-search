@@ -2,7 +2,7 @@ import React, { FormEventHandler } from 'react';
 import IconButton from '@mui/material/IconButton';
 import Box from '@mui/material/Box';
 import SearchIcon from '@mui/icons-material/Search';
-import { useTheme } from '@mui/material/styles';
+import { SxProps, Theme, useTheme } from '@mui/material/styles';
 import { SearchTargetSelect } from './SearchTargetSelect';
 import Autocomplete from '@mui/material/Autocomplete';
 import { Chip, TextField } from '@mui/material';
@@ -36,6 +36,10 @@ interface Props {
    * @param text - 検索文字列
    */
   onSearch: (texts: string[], target: SearchTarget) => void;
+  /**
+   * テーマ関係のスタイルしてい
+   */
+  sx?: SxProps<Theme>;
 }
 
 export const SearchForm: React.FC<Props> = ({
@@ -45,6 +49,7 @@ export const SearchForm: React.FC<Props> = ({
   onChangeTarget,
   options,
   onSearch,
+  sx,
 }) => {
   const onTextChange = (_, texts: string[]) => onChangeTexts(texts);
   const startSearch: FormEventHandler<HTMLFormElement> = (event) => {
@@ -60,7 +65,7 @@ export const SearchForm: React.FC<Props> = ({
     <Box
       component="form"
       onSubmit={startSearch}
-      sx={{ display: 'flex', alignItems: 'center' }}
+      sx={{ display: 'flex', alignItems: 'center', ...sx }}
     >
       <SearchTargetSelect target={target} onChange={onChangeTarget} />
       <Autocomplete
