@@ -4,6 +4,9 @@ import { CharactersSearcher } from '../../components/organisms/CharactersSearche
 import { TaggedCharacter } from '../../lib/tagged-character';
 
 export interface Props {
+  /**
+   * キャラクターデータ
+   */
   characters: TaggedCharacter[];
 }
 

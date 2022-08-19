@@ -11,10 +11,25 @@ import React from 'react';
 import { SearchTarget } from '../../lib/search-target';
 
 interface Props {
+  /**
+   * 検索対象
+   */
   target: SearchTarget;
+  /**
+   * 検索文字列
+   */
   text: string;
+  /**
+   * 全キャラ表示フラグ
+   */
   showAll: boolean;
+  /**
+   * 全キャラ表示フラグの変更ハンドラ
+   */
   onChangeShowAll: (showAll: boolean) => void;
+  /**
+   * テーマ関係のスタイル指定
+   */
   sx?: SxProps<Theme>;
 }
 
