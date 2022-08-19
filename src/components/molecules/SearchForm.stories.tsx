@@ -20,6 +20,7 @@ const componentMeta: ComponentMeta<typeof SearchForm> = {
       },
     },
     options: { control: 'object' },
+    sx: { control: 'object' },
   },
 };
 export default componentMeta;
@@ -33,4 +34,5 @@ Search.args = {
   texts: [],
   target: SearchTarget.TAG,
   options: ['あいうえお', 'かきくけこ'],
+  sx: {},
 };

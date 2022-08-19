@@ -8,6 +8,7 @@ const componentMeta: ComponentMeta<typeof CharactersSearcher> = {
   component: CharactersSearcher,
   argTypes: {
     characters: { control: 'object' },
+    sx: { control: 'object' },
   },
 };
 export default componentMeta;
@@ -35,4 +36,5 @@ Search.args = {
       showDefault: false,
     },
   ],
+  sx: {},
 };

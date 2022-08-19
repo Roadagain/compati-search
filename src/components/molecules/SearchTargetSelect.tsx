@@ -1,7 +1,7 @@
 import React from 'react';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
-import { useTheme } from '@mui/material';
+import { SxProps, Theme, useTheme } from '@mui/material';
 import { SearchTarget } from '../../lib/search-target';
 
 interface Props {
@@ -14,9 +14,17 @@ interface Props {
    * @param value - 新しい検索対象
    */
   onChange: (value: SearchTarget) => void;
+  /**
+   * テーマ関係のスタイル指定
+   */
+  sx?: SxProps<Theme>;
 }
 
-export const SearchTargetSelect: React.FC<Props> = ({ target, onChange }) => {
+export const SearchTargetSelect: React.FC<Props> = ({
+  target,
+  onChange,
+  sx,
+}) => {
   const onSelect = (event: SelectChangeEvent<number>) => {
     const { value } = event.target;
     switch (value) {
@@ -34,7 +42,7 @@ export const SearchTargetSelect: React.FC<Props> = ({ target, onChange }) => {
     <Select
       value={target}
       onChange={onSelect}
-      sx={{ fontSize: theme.typography.h5 }}
+      sx={{ fontSize: theme.typography.h5, ...sx }}
     >
       <MenuItem value={SearchTarget.TAG}>タグで検索する</MenuItem>
       <MenuItem value={SearchTarget.NAME}>名前で検索する</MenuItem>

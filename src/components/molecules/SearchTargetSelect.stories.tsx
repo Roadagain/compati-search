@@ -18,6 +18,7 @@ const componentMeta: ComponentMeta<typeof SearchTargetSelect> = {
         },
       },
     },
+    sx: { control: 'object' },
   },
 };
 export default componentMeta;
@@ -29,4 +30,5 @@ const Template: ComponentStory<typeof SearchTargetSelect> = (args) => (
 export const Select = Template.bind({});
 Select.args = {
   target: SearchTarget.TAG,
+  sx: {},
 };
