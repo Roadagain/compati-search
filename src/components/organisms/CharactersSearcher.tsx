@@ -75,13 +75,12 @@ export const CharactersSearcher: React.FC<Props> = ({ characters, sx }) => {
         options={autoCompleteOptions}
         onSearch={(texts, target) => search(texts, target, showAll)}
       />
-      <Box mt={2}>
-        <SearchCondition
-          {...searchCondition}
-          showAll={showAll}
-          onChangeShowAll={onChangeShowAll}
-        />
-      </Box>
+      <SearchCondition
+        {...searchCondition}
+        showAll={showAll}
+        onChangeShowAll={onChangeShowAll}
+        sx={{ mt: 2 }}
+      />
       <Grid container spacing={2} sx={{ mt: 1 }}>
         {searchResults.map(({ name, tags }) => (
           <Grid item key={name} xs={12} sm={6} md={4}>
