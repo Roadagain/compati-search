@@ -27,7 +27,12 @@ describe('filterCharactersByTag', () => {
     tags: ['other-tag'],
     showDefault: true,
   };
-  const characters = [alpha, beta, gamma, delta];
+  const epsilon: TaggedCharacter = {
+    name: 'epsilon',
+    tags: [testTag2],
+    showDefault: false,
+  };
+  const characters = [alpha, beta, gamma, delta, epsilon];
 
   describe('全キャラ表示フラグがtrueの場合', () => {
     describe('指定タグが1つの場合', () => {
@@ -43,6 +48,14 @@ describe('filterCharactersByTag', () => {
         expect(
           filterCharactersByTags(characters, [testTag1, testTag2], true)
         ).toStrictEqual([alpha, gamma]);
+      });
+    });
+
+    describe('マイナス指定がある場合', () => {
+      it('そのタグを含まないキャラクターの配列が返る', () => {
+        expect(
+          filterCharactersByTags(characters, [`-${testTag1}`], true)
+        ).toEqual([delta, epsilon]);
       });
     });
 
@@ -77,6 +90,14 @@ describe('filterCharactersByTag', () => {
         expect(
           filterCharactersByTags(characters, [testTag1, testTag2], false)
         ).toStrictEqual([alpha]);
+      });
+    });
+
+    describe('マイナス指定がある場合', () => {
+      it('そのタグを含まないキャラクターの配列が返る', () => {
+        expect(
+          filterCharactersByTags(characters, [`-${testTag1}`], false)
+        ).toEqual([delta]);
       });
     });
 
