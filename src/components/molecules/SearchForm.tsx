@@ -5,7 +5,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import { SxProps, Theme, useTheme } from '@mui/material/styles';
 import { SearchTargetSelect } from './SearchTargetSelect';
 import Autocomplete from '@mui/material/Autocomplete';
-import { Chip, TextField } from '@mui/material';
+import { Chip, FilterOptionsState, TextField } from '@mui/material';
 import { SearchTarget } from '../../lib/search-target';
 
 interface Props {
@@ -41,6 +41,16 @@ interface Props {
    */
   sx?: SxProps<Theme>;
 }
+
+const filterOptions = (
+  options: string[],
+  state: FilterOptionsState<string>
+): string[] => {
+  // マイナス検索している分も補完対象から除く
+  const isMinus = state.inputValue.startsWith('-');
+  const word = state.inputValue.slice(isMinus ? 1 : 0);
+  return options.filter((option) => option.includes(word));
+};
 
 export const SearchForm: React.FC<Props> = ({
   texts,
@@ -102,6 +112,8 @@ export const SearchForm: React.FC<Props> = ({
             />
           ))
         }
+        // 補完候補はいい感じに出せるけど対象選択すると"-"が消えちゃう
+        filterOptions={filterOptions}
         sx={{ ml: 2 }}
       />
       <IconButton type="submit" sx={{ ml: 1 }}>
