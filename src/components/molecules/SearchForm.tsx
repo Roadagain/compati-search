@@ -44,7 +44,9 @@ export const SearchForm: React.FC<Props> = ({
   autocompleteOptions,
   sx,
 }) => {
-  const onTextChange = (_, texts: string[]) => onChangeTexts(texts);
+  const onTextChange = (_, texts: (string | Tag)[]) => {
+    onChangeTexts(texts.map((text) => typeof text === 'string' ? text : text.label));
+  }
   const theme = useTheme();
   const placeholder = `${target === SearchTarget.TAG ? 'タグ' : '名前'}を入力`;
 
