@@ -61,7 +61,11 @@ export const SearchForm: React.FC<Props> = ({
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore optionsの要求型が明らかにおかしいから一時的にignoreする
         options={autocompleteOptions}
-        groupBy={target === SearchTarget.TAG ? (option: Tag) => option.category : undefined}
+        groupBy={
+          target === SearchTarget.TAG
+            ? (option: Tag) => option.category
+            : undefined
+        }
         fullWidth
         renderInput={(params) => (
           <TextField

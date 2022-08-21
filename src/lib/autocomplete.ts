@@ -2,13 +2,15 @@ import { Tag, TaggedCharacter } from './tagged-character';
 import { SearchTarget } from './search-target';
 
 export const uniqueAndSortTags = (tags: Tag[]): Tag[] => {
-  return tags.filter(
-    (tag, index) =>
-      tags.findIndex(
-        ({ category, label }) =>
-          tag.category === category && tag.label === label
-      ) === index
-  ).sort((a, b) => a.category.localeCompare(b.category));
+  return tags
+    .filter(
+      (tag, index) =>
+        tags.findIndex(
+          ({ category, label }) =>
+            tag.category === category && tag.label === label
+        ) === index
+    )
+    .sort((a, b) => a.category.localeCompare(b.category));
 };
 
 export const generateAutocompleteOptions = (
