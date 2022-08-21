@@ -1,7 +1,12 @@
 import sampleCharacterData from '../../sample/characters-data/sample.json';
-import { TaggedCharacter } from './tagged-character';
+import { Tag, TaggedCharacter } from './tagged-character';
 
 type WouldBeTaggedCharacter = { [K in keyof TaggedCharacter]?: unknown };
+type WouldBeTag = { [K in keyof Tag]?: unknown };
+
+export const isTag = (obj: WouldBeTag): obj is Tag => {
+  return typeof obj.category === 'string' && typeof obj.name === 'string';
+};
 
 export const isTaggedCharacter = (
   obj: WouldBeTaggedCharacter
@@ -9,7 +14,7 @@ export const isTaggedCharacter = (
   return (
     typeof obj.name === 'string' &&
     Array.isArray(obj.tags) &&
-    obj.tags.every((tag) => typeof tag === 'string') &&
+    obj.tags.every(isTag) &&
     typeof obj.showDefault === 'boolean'
   );
 };
