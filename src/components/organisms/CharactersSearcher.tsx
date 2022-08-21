@@ -9,7 +9,7 @@ import { CharacterCard } from '../molecules/CharacterCard';
 import { SearchForm } from '../molecules/SearchForm';
 import Box from '@mui/material/Box';
 import { SearchCondition } from '../molecules/SearchCondition';
-import { generateAutoCompleteOptions } from '../../lib/autocomplete';
+import { generateAutocompleteOptions } from '../../lib/autocomplete';
 import { SearchTarget } from '../../lib/search-target';
 
 interface Props {
@@ -67,7 +67,7 @@ export const CharactersSearcher: React.FC<Props> = ({ characters, sx }) => {
     setSearchTarget(newTarget);
     search(searchTexts, newTarget, showAll);
   }
-  const autocompleteOptions = generateAutoCompleteOptions(
+  const autocompleteOptions = generateAutocompleteOptions(
     characters,
     searchTarget,
     showAll
