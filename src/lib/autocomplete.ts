@@ -1,6 +1,16 @@
 import { Tag, TaggedCharacter } from './tagged-character';
 import { SearchTarget } from './search-target';
 
+export const uniqueTags = (tags: Tag[]): Tag[] => {
+  return tags.filter(
+    (tag, index) =>
+      tags.findIndex(
+        ({ category, label }) =>
+          tag.category === category && tag.label === label
+      ) === index
+  );
+};
+
 export const generateAutocompleteOptions = (
   characters: TaggedCharacter[],
   target: SearchTarget,
@@ -11,7 +21,7 @@ export const generateAutocompleteOptions = (
   );
   switch (target) {
     case SearchTarget.TAG:
-      return Array.from(new Set(charactersShown.flatMap(({ tags }) => tags)));
+      return uniqueTags(charactersShown.flatMap(({ tags }) => tags));
     case SearchTarget.NAME:
       return charactersShown.map(({ name }) => name);
   }

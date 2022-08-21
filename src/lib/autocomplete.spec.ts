@@ -1,22 +1,63 @@
-import { generateAutocompleteOptions } from './autocomplete';
+import { generateAutocompleteOptions, uniqueTags } from './autocomplete';
 import { SearchTarget } from './search-target';
-import { TaggedCharacter } from './tagged-character';
+import { Tag, TaggedCharacter } from './tagged-character';
+
+describe('uniqueTags', () => {
+  const tags: Tag[] = [
+    {
+      category: 'alpha',
+      label: 'あるは',
+    },
+    {
+      category: 'alpha',
+      label: 'あるふあ',
+    },
+    {
+      category: 'alpha',
+      label: 'あるは',
+    },
+    {
+      category: 'beta',
+      label: 'べた',
+    },
+  ];
+
+  it('重複を除いたタグの一覧が返る', () => {
+    expect(uniqueTags(tags)).toEqual([
+      {
+        category: 'alpha',
+        label: 'あるは',
+      },
+      {
+        category: 'alpha',
+        label: 'あるふあ',
+      },
+      {
+        category: 'beta',
+        label: 'べた',
+      },
+    ]);
+  });
+});
 
 describe('generateAutocompleteOptions', () => {
   const characters: TaggedCharacter[] = [
     {
       name: 'Alpha',
-      tags: ['x-ray', 'yankee'],
+      tags: [
+        { category: 'X', label: 'x-ray' },
+        { category: 'Y', label: 'yankee' },
+      ],
       showDefault: true,
     },
     {
       name: 'Beta',
-      tags: ['x-ray'],
+      tags: [{ category: 'X', label: 'x-ray' }],
       showDefault: true,
     },
     {
       name: 'Gamma',
-      tags: ['zulu'],
+      tags: [{ category: 'Z', label: 'zulu' }],
       showDefault: false,
     },
   ];
@@ -26,7 +67,11 @@ describe('generateAutocompleteOptions', () => {
       it('タグの一覧を重複なく返す', () => {
         expect(
           generateAutocompleteOptions(characters, SearchTarget.TAG, true)
-        ).toEqual(['x-ray', 'yankee', 'zulu']);
+        ).toEqual([
+          { category: 'X', label: 'x-ray' },
+          { category: 'Y', label: 'yankee' },
+          { category: 'Z', label: 'zulu' },
+        ]);
       });
     });
 
@@ -44,7 +89,10 @@ describe('generateAutocompleteOptions', () => {
       it('デフォルト表示キャラのタグの一覧を重複なく返す', () => {
         expect(
           generateAutocompleteOptions(characters, SearchTarget.TAG, false)
-        ).toEqual(['x-ray', 'yankee']);
+        ).toEqual([
+          { category: 'X', label: 'x-ray' },
+          { category: 'Y', label: 'yankee' },
+        ]);
       });
     });
 
