@@ -8,15 +8,6 @@ import { SearchTarget } from '../../lib/search-target';
 
 interface Props {
   /**
-   * 検索文字列
-   */
-  texts: string[];
-  /**
-   * 検索文字列の変更ハンドラ
-   * @param texts - 変更後の検索文字列
-   */
-  onChangeTexts: (texts: string[]) => void;
-  /**
    * 検索対象
    */
   target: SearchTarget;
@@ -25,6 +16,15 @@ interface Props {
    * @param target - 変更後の検索対象
    */
   onChangeTarget: (target: SearchTarget) => void;
+  /**
+   * 検索文字列
+   */
+  texts: string[];
+  /**
+   * 検索文字列の変更ハンドラ
+   * @param texts - 変更後の検索文字列
+   */
+  onChangeTexts: (texts: string[]) => void;
   /**
    * 検索ワードの補完候補
    */
@@ -36,10 +36,10 @@ interface Props {
 }
 
 export const SearchForm: React.FC<Props> = ({
-  texts,
-  onChangeTexts,
   target,
   onChangeTarget,
+  texts,
+  onChangeTexts,
   autocompleteOptions,
   sx,
 }) => {

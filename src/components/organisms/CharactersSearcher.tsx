@@ -24,37 +24,40 @@ interface Props {
 }
 
 export const CharactersSearcher: React.FC<Props> = ({ characters, sx }) => {
-  const [searchTexts, setSearchTexts] = React.useState<string[]>([]);
-  const [searchTarget, setSearchTarget] = React.useState(SearchTarget.TAG);
   const [searchResults, setSearchResults] = React.useState<TaggedCharacter[]>(
     characters.filter(({ showDefault }) => showDefault)
   );
-  const [showAll, setShowAll] = React.useState(false);
-  const search = (texts: string[], target: SearchTarget, showAll: boolean) => {
+  const search = (target: SearchTarget, texts: string[], showAll: boolean) => {
     const searchResults =
       target === SearchTarget.TAG
         ? filterCharactersByTags(characters, texts, showAll)
         : filterCharactersByNameWords(characters, texts, showAll);
     setSearchResults(searchResults);
   };
-  const onClickTag = (tag: string) => {
-    setSearchTexts([tag]);
-    setSearchTarget(SearchTarget.TAG);
-    search([tag], SearchTarget.TAG, showAll);
-  };
-  const onChangeShowAll = (showAll: boolean) => {
-    setShowAll(showAll);
-    search(searchTexts, searchTarget, showAll);
-  };
-  const onChangeSearchTexts = (newTexts: string[]) => {
-    setSearchTexts(newTexts);
-    search(newTexts, searchTarget, showAll);
-  };
+
+  const [searchTarget, setSearchTarget] = React.useState(SearchTarget.TAG);
+  const [searchTexts, setSearchTexts] = React.useState<string[]>([]);
+  const [showAll, setShowAll] = React.useState(false);
+
   const onChangeSearchTarget = (newTarget: SearchTarget) => {
     setSearchTarget(newTarget);
     setSearchTexts([]);
-    search([], newTarget, showAll);
+    search(newTarget, [], showAll);
   };
+  const onChangeSearchTexts = (newTexts: string[]) => {
+    setSearchTexts(newTexts);
+    search(searchTarget, newTexts, showAll);
+  };
+  const onChangeShowAll = (showAll: boolean) => {
+    setShowAll(showAll);
+    search(searchTarget, searchTexts, showAll);
+  };
+  const onClickTag = (tag: string) => {
+    setSearchTexts([tag]);
+    setSearchTarget(SearchTarget.TAG);
+    search(SearchTarget.TAG, [tag], showAll);
+  };
+
   const autocompleteOptions = generateAutocompleteOptions(
     characters,
     searchTarget,
@@ -64,15 +67,15 @@ export const CharactersSearcher: React.FC<Props> = ({ characters, sx }) => {
   return (
     <Box sx={sx}>
       <SearchForm
-        texts={searchTexts}
-        onChangeTexts={onChangeSearchTexts}
         target={searchTarget}
         onChangeTarget={onChangeSearchTarget}
+        texts={searchTexts}
+        onChangeTexts={onChangeSearchTexts}
         autocompleteOptions={autocompleteOptions}
       />
       <SearchCondition
-        texts={searchTexts}
         target={searchTarget}
+        texts={searchTexts}
         showAll={showAll}
         onChangeShowAll={onChangeShowAll}
         sx={{ mt: 2 }}

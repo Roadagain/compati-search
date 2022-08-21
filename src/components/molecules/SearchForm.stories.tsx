@@ -8,7 +8,6 @@ const componentMeta: ComponentMeta<typeof SearchForm> = {
   title: 'Molecules/SearchForm',
   component: SearchForm,
   argTypes: {
-    texts: { control: 'object' },
     target: {
       options: [SearchTarget.TAG, SearchTarget.NAME],
       control: {
@@ -19,6 +18,7 @@ const componentMeta: ComponentMeta<typeof SearchForm> = {
         },
       },
     },
+    texts: { control: 'object' },
     autocompleteOptions: { control: 'object' },
     sx: { control: 'object' },
   },
@@ -31,8 +31,8 @@ const Template: ComponentStory<typeof SearchForm> = (args) => (
 
 export const Search = Template.bind({});
 Search.args = {
-  texts: [],
   target: SearchTarget.TAG,
+  texts: [],
   autocompleteOptions: ['あいうえお', 'かきくけこ'],
   sx: {},
 };
