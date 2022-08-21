@@ -66,6 +66,13 @@ export const SearchForm: React.FC<Props> = ({
             ? (option: Tag) => option.category
             : undefined
         }
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore valueの要求型が明らかにおかしいから一時的にignoreする
+        isOptionEqualToValue={
+          target === SearchTarget.TAG
+            ? (option: Tag, value: string) => option.label === value
+            : undefined
+        }
         fullWidth
         renderInput={(params) => (
           <TextField
