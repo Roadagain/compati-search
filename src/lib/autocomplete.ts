@@ -1,23 +1,18 @@
-import { TaggedCharacter } from './tagged-character';
+import { Tag, TaggedCharacter } from './tagged-character';
 import { SearchTarget } from './search-target';
 
 export const generateAutocompleteOptions = (
   characters: TaggedCharacter[],
   target: SearchTarget,
   showAll: boolean
-): string[] => {
+): Tag[] | string[] => {
+  const charactersShown = characters.filter(
+    ({ showDefault }) => showAll || showDefault
+  );
   switch (target) {
     case SearchTarget.TAG:
-      return Array.from(
-        new Set(
-          characters.flatMap(({ tags, showDefault }) =>
-            showAll || showDefault ? tags : []
-          )
-        )
-      );
+      return Array.from(new Set(charactersShown.flatMap(({ tags }) => tags)));
     case SearchTarget.NAME:
-      return characters.flatMap(({ name, showDefault }) =>
-        showAll || showDefault ? name : []
-      );
+      return charactersShown.map(({ name }) => name);
   }
 };
