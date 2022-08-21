@@ -19,7 +19,7 @@ const componentMeta: ComponentMeta<typeof SearchForm> = {
         },
       },
     },
-    options: { control: 'object' },
+    autocompleteOptions: { control: 'object' },
     sx: { control: 'object' },
   },
 };
@@ -33,6 +33,6 @@ export const Search = Template.bind({});
 Search.args = {
   texts: [],
   target: SearchTarget.TAG,
-  options: ['あいうえお', 'かきくけこ'],
+  autocompleteOptions: ['あいうえお', 'かきくけこ'],
   sx: {},
 };

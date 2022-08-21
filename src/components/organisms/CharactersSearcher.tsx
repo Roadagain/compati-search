@@ -67,7 +67,7 @@ export const CharactersSearcher: React.FC<Props> = ({ characters, sx }) => {
     setSearchTarget(newTarget);
     search(searchTexts, newTarget, showAll);
   }
-  const autoCompleteOptions = generateAutoCompleteOptions(
+  const autocompleteOptions = generateAutoCompleteOptions(
     characters,
     searchTarget,
     showAll
@@ -80,7 +80,7 @@ export const CharactersSearcher: React.FC<Props> = ({ characters, sx }) => {
         onChangeTexts={onChangeSearchTexts}
         target={searchTarget}
         onChangeTarget={onChangeSearchTarget}
-        options={autoCompleteOptions}
+        autocompleteOptions={autocompleteOptions}
       />
       <SearchCondition
         {...searchCondition}

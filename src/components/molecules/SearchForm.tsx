@@ -28,7 +28,7 @@ interface Props {
   /**
    * 検索ワードの補完候補
    */
-  options: string[];
+  autocompleteOptions: string[];
   /**
    * テーマ関係のスタイル指定
    */
@@ -40,7 +40,7 @@ export const SearchForm: React.FC<Props> = ({
   onChangeTexts,
   target,
   onChangeTarget,
-  options,
+  autocompleteOptions,
   sx,
 }) => {
   const onTextChange = (_, texts: string[]) => onChangeTexts(texts);
@@ -62,7 +62,7 @@ export const SearchForm: React.FC<Props> = ({
         onChange={onTextChange}
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore optionsの要求型が明らかにおかしいから一時的にignoreする
-        options={options}
+        options={autocompleteOptions}
         fullWidth
         renderInput={(params) => (
           <TextField
