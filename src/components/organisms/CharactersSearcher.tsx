@@ -62,11 +62,11 @@ export const CharactersSearcher: React.FC<Props> = ({ characters, sx }) => {
   const onChangeSearchTexts = (newTexts: string[]) => {
     setSearchTexts(newTexts);
     search(newTexts, searchTarget, showAll);
-  }
+  };
   const onChangeSearchTarget = (newTarget: SearchTarget) => {
     setSearchTarget(newTarget);
     search(searchTexts, newTarget, showAll);
-  }
+  };
   const autocompleteOptions = generateAutocompleteOptions(
     characters,
     searchTarget,

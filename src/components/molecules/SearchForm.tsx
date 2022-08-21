@@ -48,10 +48,7 @@ export const SearchForm: React.FC<Props> = ({
   const placeholder = `${target === SearchTarget.TAG ? 'タグ' : '名前'}を入力`;
 
   return (
-    <Box
-      component="form"
-      sx={{ display: 'flex', alignItems: 'center', ...sx }}
-    >
+    <Box component="form" sx={{ display: 'flex', alignItems: 'center', ...sx }}>
       <SearchTargetSelect target={target} onChange={onChangeTarget} />
       <Autocomplete
         autoComplete
