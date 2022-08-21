@@ -1,12 +1,16 @@
-import { generateAutocompleteOptions, uniqueTags } from './autocomplete';
+import { generateAutocompleteOptions, uniqueAndSortTags } from './autocomplete';
 import { SearchTarget } from './search-target';
 import { Tag, TaggedCharacter } from './tagged-character';
 
-describe('uniqueTags', () => {
+describe('uniqueAndSortTags', () => {
   const tags: Tag[] = [
     {
       category: 'alpha',
       label: 'あるは',
+    },
+    {
+      category: 'beta',
+      label: 'べた',
     },
     {
       category: 'alpha',
@@ -16,14 +20,10 @@ describe('uniqueTags', () => {
       category: 'alpha',
       label: 'あるは',
     },
-    {
-      category: 'beta',
-      label: 'べた',
-    },
   ];
 
-  it('重複を除いたタグの一覧が返る', () => {
-    expect(uniqueTags(tags)).toEqual([
+  it('重複を除き文字コード順にソートしたタグの一覧が返る', () => {
+    expect(uniqueAndSortTags(tags)).toEqual([
       {
         category: 'alpha',
         label: 'あるは',
