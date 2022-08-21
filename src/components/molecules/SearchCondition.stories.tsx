@@ -18,7 +18,7 @@ const componentMeta: ComponentMeta<typeof SearchCondition> = {
         },
       },
     },
-    text: { control: 'text' },
+    texts: { control: 'object' },
     showAll: { control: 'boolean' },
     sx: { control: 'object' },
   },
@@ -32,7 +32,7 @@ const Template: ComponentStory<typeof SearchCondition> = (args) => (
 export const Condition = Template.bind({});
 Condition.args = {
   target: SearchTarget.TAG,
-  text: 'あいうえお',
+  texts: ['あいうえお'],
   showAll: false,
   sx: {},
 };

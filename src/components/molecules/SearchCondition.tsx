@@ -18,7 +18,7 @@ interface Props {
   /**
    * 検索文字列
    */
-  text: string;
+  texts: string[];
   /**
    * 全キャラ表示フラグ
    */
@@ -35,7 +35,7 @@ interface Props {
 
 export const SearchCondition: React.FC<Props> = ({
   target,
-  text,
+  texts,
   showAll,
   onChangeShowAll,
   sx,
@@ -46,6 +46,7 @@ export const SearchCondition: React.FC<Props> = ({
   ) => {
     onChangeShowAll(event.target.checked);
   };
+  const joinedText = texts.join(' ');
 
   return (
     <Stack
@@ -55,10 +56,10 @@ export const SearchCondition: React.FC<Props> = ({
       sx={sx}
     >
       <Typography variant="h5">
-        {text ? (
+        {joinedText ? (
           <>
             <Typography component="span" variant="h5" fontWeight="bold">
-              {text}
+              {joinedText}
             </Typography>
             の{targetStr}検索結果
           </>
