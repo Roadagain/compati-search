@@ -1,7 +1,7 @@
 import { TaggedCharacter } from './tagged-character';
 import { SearchTarget } from './search-target';
 
-export const generateAutoCompleteOptions = (
+export const generateAutocompleteOptions = (
   characters: TaggedCharacter[],
   target: SearchTarget,
   showAll: boolean
