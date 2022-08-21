@@ -5,7 +5,7 @@ type WouldBeTaggedCharacter = { [K in keyof TaggedCharacter]?: unknown };
 type WouldBeTag = { [K in keyof Tag]?: unknown };
 
 export const isTag = (obj: WouldBeTag): obj is Tag => {
-  return typeof obj.category === 'string' && typeof obj.name === 'string';
+  return typeof obj.category === 'string' && typeof obj.label === 'string';
 };
 
 export const isTaggedCharacter = (

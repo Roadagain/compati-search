@@ -14,7 +14,7 @@
     "tags": [
       {
         "category": "西日本",
-        "name": "Usa"
+        "label": "Usa"
       }
     ],
     "showDefault": true
@@ -24,7 +24,7 @@
     "tags": [
       {
         "category": "西日本",
-        "name": "Usa"
+        "label": "Usa"
       }
     ],
     "showDefault": false
@@ -34,7 +34,7 @@
     "tags": [
       {
         "category": "西日本",
-        "name": "コザ"
+        "label": "コザ"
       }
     ],
     "showDefault": true
@@ -44,7 +44,7 @@
     "tags": [
       {
         "category": "西日本",
-        "name": "コザ"
+        "label": "コザ"
       }
     ],
     "showDefault": false
@@ -54,7 +54,7 @@
     "tags": [
       {
         "category": "東日本",
-        "name": "さいたま"
+        "label": "さいたま"
       }
     ],
     "showDefault": true
@@ -64,7 +64,7 @@
     "tags": [
       {
         "category": "東日本",
-        "name": "さいたま"
+        "label": "さいたま"
       }
     ],
     "showDefault": false
@@ -74,7 +74,7 @@
     "tags": [
       {
         "category": "西日本",
-        "name": "津"
+        "label": "津"
       }
     ],
     "showDefault": true
@@ -84,7 +84,7 @@
     "tags": [
       {
         "category": "西日本",
-        "name": "津"
+        "label": "津"
       }
     ],
     "showDefault": false
@@ -94,11 +94,11 @@
     "tags": [
       {
         "category": "西日本",
-        "name": "Usa"
+        "label": "Usa"
       },
       {
         "category": "西日本",
-        "name": "コザ"
+        "label": "コザ"
       }
     ],
     "showDefault": true
@@ -108,11 +108,11 @@
     "tags": [
       {
         "category": "西日本",
-        "name": "Usa"
+        "label": "Usa"
       },
       {
         "category": "西日本",
-        "name": "コザ"
+        "label": "コザ"
       }
     ],
     "showDefault": false
@@ -122,11 +122,11 @@
     "tags": [
       {
         "category": "西日本",
-        "name": "Usa"
+        "label": "Usa"
       },
       {
         "category": "東日本",
-        "name": "さいたま"
+        "label": "さいたま"
       }
     ],
     "showDefault": true
@@ -136,11 +136,11 @@
     "tags": [
       {
         "category": "西日本",
-        "name": "Usa"
+        "label": "Usa"
       },
       {
         "category": "東日本",
-        "name": "さいたま"
+        "label": "さいたま"
       }
     ],
     "showDefault": false
@@ -150,11 +150,11 @@
     "tags": [
       {
         "category": "西日本",
-        "name": "Usa"
+        "label": "Usa"
       },
       {
         "category": "西日本",
-        "name": "津"
+        "label": "津"
       }
     ],
     "showDefault": true
@@ -164,11 +164,11 @@
     "tags": [
       {
         "category": "西日本",
-        "name": "Usa"
+        "label": "Usa"
       },
       {
         "category": "西日本",
-        "name": "津"
+        "label": "津"
       }
     ],
     "showDefault": false
@@ -178,11 +178,11 @@
     "tags": [
       {
         "category": "西日本",
-        "name": "コザ"
+        "label": "コザ"
       },
       {
         "category": "東日本",
-        "name": "さいたま"
+        "label": "さいたま"
       }
     ],
     "showDefault": true
@@ -192,11 +192,11 @@
     "tags": [
       {
         "category": "西日本",
-        "name": "コザ"
+        "label": "コザ"
       },
       {
         "category": "東日本",
-        "name": "さいたま"
+        "label": "さいたま"
       }
     ],
     "showDefault": false
@@ -206,11 +206,11 @@
     "tags": [
       {
         "category": "西日本",
-        "name": "コザ"
+        "label": "コザ"
       },
       {
         "category": "西日本",
-        "name": "津"
+        "label": "津"
       }
     ],
     "showDefault": true
@@ -220,11 +220,11 @@
     "tags": [
       {
         "category": "西日本",
-        "name": "コザ"
+        "label": "コザ"
       },
       {
         "category": "西日本",
-        "name": "津"
+        "label": "津"
       }
     ],
     "showDefault": false
@@ -234,11 +234,11 @@
     "tags": [
       {
         "category": "東日本",
-        "name": "さいたま"
+        "label": "さいたま"
       },
       {
         "category": "西日本",
-        "name": "津"
+        "label": "津"
       }
     ],
     "showDefault": true
@@ -248,11 +248,11 @@
     "tags": [
       {
         "category": "東日本",
-        "name": "さいたま"
+        "label": "さいたま"
       },
       {
         "category": "西日本",
-        "name": "津"
+        "label": "津"
       }
     ],
     "showDefault": false
@@ -262,15 +262,15 @@
     "tags": [
       {
         "category": "西日本",
-        "name": "Usa"
+        "label": "Usa"
       },
       {
         "category": "西日本",
-        "name": "コザ"
+        "label": "コザ"
       },
       {
         "category": "東日本",
-        "name": "さいたま"
+        "label": "さいたま"
       }
     ],
     "showDefault": true
@@ -280,15 +280,15 @@
     "tags": [
       {
         "category": "西日本",
-        "name": "Usa"
+        "label": "Usa"
       },
       {
         "category": "西日本",
-        "name": "コザ"
+        "label": "コザ"
       },
       {
         "category": "東日本",
-        "name": "さいたま"
+        "label": "さいたま"
       }
     ],
     "showDefault": false
@@ -298,15 +298,15 @@
     "tags": [
       {
         "category": "西日本",
-        "name": "Usa"
+        "label": "Usa"
       },
       {
         "category": "西日本",
-        "name": "コザ"
+        "label": "コザ"
       },
       {
         "category": "西日本",
-        "name": "津"
+        "label": "津"
       }
     ],
     "showDefault": true
@@ -316,15 +316,15 @@
     "tags": [
       {
         "category": "西日本",
-        "name": "Usa"
+        "label": "Usa"
       },
       {
         "category": "西日本",
-        "name": "コザ"
+        "label": "コザ"
       },
       {
         "category": "西日本",
-        "name": "津"
+        "label": "津"
       }
     ],
     "showDefault": false
@@ -334,15 +334,15 @@
     "tags": [
       {
         "category": "西日本",
-        "name": "Usa"
+        "label": "Usa"
       },
       {
         "category": "東日本",
-        "name": "さいたま"
+        "label": "さいたま"
       },
       {
         "category": "西日本",
-        "name": "津"
+        "label": "津"
       }
     ],
     "showDefault": true
@@ -352,15 +352,15 @@
     "tags": [
       {
         "category": "西日本",
-        "name": "Usa"
+        "label": "Usa"
       },
       {
         "category": "東日本",
-        "name": "さいたま"
+        "label": "さいたま"
       },
       {
         "category": "西日本",
-        "name": "津"
+        "label": "津"
       }
     ],
     "showDefault": false
@@ -370,15 +370,15 @@
     "tags": [
       {
         "category": "西日本",
-        "name": "コザ"
+        "label": "コザ"
       },
       {
         "category": "東日本",
-        "name": "さいたま"
+        "label": "さいたま"
       },
       {
         "category": "西日本",
-        "name": "津"
+        "label": "津"
       }
     ],
     "showDefault": true
@@ -388,15 +388,15 @@
     "tags": [
       {
         "category": "西日本",
-        "name": "コザ"
+        "label": "コザ"
       },
       {
         "category": "東日本",
-        "name": "さいたま"
+        "label": "さいたま"
       },
       {
         "category": "西日本",
-        "name": "津"
+        "label": "津"
       }
     ],
     "showDefault": false
@@ -406,19 +406,19 @@
     "tags": [
       {
         "category": "西日本",
-        "name": "Usa"
+        "label": "Usa"
       },
       {
         "category": "西日本",
-        "name": "コザ"
+        "label": "コザ"
       },
       {
         "category": "東日本",
-        "name": "さいたま"
+        "label": "さいたま"
       },
       {
         "category": "西日本",
-        "name": "津"
+        "label": "津"
       }
     ],
     "showDefault": true
@@ -428,19 +428,19 @@
     "tags": [
       {
         "category": "西日本",
-        "name": "Usa"
+        "label": "Usa"
       },
       {
         "category": "西日本",
-        "name": "コザ"
+        "label": "コザ"
       },
       {
         "category": "東日本",
-        "name": "さいたま"
+        "label": "さいたま"
       },
       {
         "category": "西日本",
-        "name": "津"
+        "label": "津"
       }
     ],
     "showDefault": false

@@ -10,10 +10,10 @@ def character_name_from_count(count):
 
 
 SET_TAGS = [
-    {'category': '西日本', 'name': 'Usa'},
-    {'category': '西日本', 'name': 'コザ'},
-    {'category': '東日本', 'name': 'さいたま'},
-    {'category': '西日本', 'name': '津'},
+    {'category': '西日本', 'label': 'Usa'},
+    {'category': '西日本', 'label': 'コザ'},
+    {'category': '東日本', 'label': 'さいたま'},
+    {'category': '西日本', 'label': '津'},
 ]
 count = 0
 # タグの組み合わせを全パターン出す

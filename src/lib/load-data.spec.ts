@@ -11,7 +11,7 @@ describe('isTag', () => {
     it('trueが返る', () => {
       const obj = {
         category: 'category',
-        name: 'name',
+        label: 'label',
       };
       expect(isTag(obj)).toBeTruthy();
     });
@@ -21,17 +21,17 @@ describe('isTag', () => {
     it('falseが返る', () => {
       const obj = {
         category: 5,
-        name: 'name',
+        label: 'label',
       };
       expect(isTag(obj)).toBeFalsy();
     });
   });
 
-  describe('nameが文字列でない場合', () => {
+  describe('labelが文字列でない場合', () => {
     it('falseが返る', () => {
       const obj = {
         category: 'category',
-        name: null,
+        label: null,
       };
       expect(isTag(obj)).toBeFalsy();
     });
@@ -44,8 +44,8 @@ describe('isTaggedCharacter', () => {
       const obj = {
         name: 'Name',
         tags: [
-          { category: 'alpha', name: 'test1' },
-          { category: 'beta', name: 'test2' },
+          { category: 'alpha', label: 'test1' },
+          { category: 'beta', label: 'test2' },
         ],
         showDefault: false,
       };
@@ -58,8 +58,8 @@ describe('isTaggedCharacter', () => {
       const obj = {
         name: 1,
         tags: [
-          { category: 'alpha', name: 'test1' },
-          { category: 'beta', name: 'test2' },
+          { category: 'alpha', label: 'test1' },
+          { category: 'beta', label: 'test2' },
         ],
         showDefault: true,
       };
@@ -82,7 +82,7 @@ describe('isTaggedCharacter', () => {
     it('falseが返る', () => {
       const obj = {
         name: 'Name',
-        tags: [{ category: 'alpha', name: 'test1' }, {}],
+        tags: [{ category: 'alpha', label: 'test1' }, {}],
         showDefault: false,
       };
       expect(isTaggedCharacter(obj)).toBeFalsy();
@@ -94,8 +94,8 @@ describe('isTaggedCharacter', () => {
       const obj = {
         name: 'Name',
         tags: [
-          { category: 'alpha', name: 'test1' },
-          { category: 'beta', name: 'test2' },
+          { category: 'alpha', label: 'test1' },
+          { category: 'beta', label: 'test2' },
         ],
         showDefault: 1,
       };
@@ -110,8 +110,8 @@ describe('loadCharactersDataFromJson', () => {
       {
         name: 'Alpha',
         tags: [
-          { category: 'number', name: 'one' },
-          { category: 'count', name: 'two' },
+          { category: 'number', label: 'one' },
+          { category: 'count', label: 'two' },
         ],
         showDefault: true,
       },
@@ -132,14 +132,14 @@ describe('loadCharactersDataFromJson', () => {
       {
         name: 1,
         tags: [
-          { category: 'number', name: 'one' },
-          { category: 'count', name: 'two' },
+          { category: 'number', label: 'one' },
+          { category: 'count', label: 'two' },
         ],
         showDefault: true,
       },
       {
         name: 'Beta',
-        tags: [{ category: 'number', name: 'three' }],
+        tags: [{ category: 'number', label: 'three' }],
         showDefault: true,
       },
     ];
