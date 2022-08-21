@@ -59,6 +59,14 @@ export const CharactersSearcher: React.FC<Props> = ({ characters, sx }) => {
     const texts = searchCondition.text ? searchCondition.text.split(' ') : [];
     search(texts, searchCondition.target, showAll);
   };
+  const onChangeSearchTexts = (newTexts: string[]) => {
+    setSearchTexts(newTexts);
+    search(newTexts, searchTarget, showAll);
+  }
+  const onChangeSearchTarget = (newTarget: SearchTarget) => {
+    setSearchTarget(newTarget);
+    search(searchTexts, newTarget, showAll);
+  }
   const autoCompleteOptions = generateAutoCompleteOptions(
     characters,
     searchTarget,
@@ -69,9 +77,9 @@ export const CharactersSearcher: React.FC<Props> = ({ characters, sx }) => {
     <Box sx={sx}>
       <SearchForm
         texts={searchTexts}
-        onChangeTexts={setSearchTexts}
+        onChangeTexts={onChangeSearchTexts}
         target={searchTarget}
-        onChangeTarget={setSearchTarget}
+        onChangeTarget={onChangeSearchTarget}
         options={autoCompleteOptions}
         onSearch={(texts, target) => search(texts, target, showAll)}
       />
