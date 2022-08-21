@@ -8,7 +8,7 @@ describe('filterCharactersByTagNames', () => {
   const testTag1 = 'aurum';
   const testTag2 = 'borium';
   const alpha: TaggedCharacter = {
-    name: 'alpha',
+    name: '',
     tags: [
       { category: '', name: testTag1 },
       { category: '', name: 'other-tag' },
@@ -17,7 +17,7 @@ describe('filterCharactersByTagNames', () => {
     showDefault: true,
   };
   const beta: TaggedCharacter = {
-    name: 'beta',
+    name: '',
     tags: [
       { category: '', name: 'other-tag' },
       { category: '', name: testTag1 },
@@ -25,7 +25,7 @@ describe('filterCharactersByTagNames', () => {
     showDefault: true,
   };
   const gamma: TaggedCharacter = {
-    name: 'gamma',
+    name: '',
     tags: [
       { category: '', name: testTag1 },
       { category: '', name: testTag2 },
@@ -33,7 +33,7 @@ describe('filterCharactersByTagNames', () => {
     showDefault: false,
   };
   const delta: TaggedCharacter = {
-    name: 'delta',
+    name: '',
     tags: [{ category: '', name: 'other-tag' }],
     showDefault: true,
   };
