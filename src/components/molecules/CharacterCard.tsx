@@ -11,12 +11,12 @@ interface Props {
   /**
    * タグ一覧
    */
-  tags: string[];
+  tagLabels: string[];
   /**
    * タグクリック時のハンドラ
-   * @param tag - タグ
+   * @param tagLabel - タグ
    */
-  onClickTag: (tag: string) => void;
+  onClickTag: (tagLabel: string) => void;
   /**
    * テーマ関係のスタイル指定
    */
@@ -25,7 +25,7 @@ interface Props {
 
 export const CharacterCard: React.FC<Props> = ({
   name,
-  tags,
+  tagLabels,
   onClickTag,
   sx,
 }) => (
@@ -37,9 +37,9 @@ export const CharacterCard: React.FC<Props> = ({
         spacing={1}
         sx={{ display: 'inline-block', whiteSpace: 'nowrap' }}
       >
-        {tags.map((tag) => (
-          <TagBadge key={tag} onClick={onClickTag}>
-            {tag}
+        {tagLabels.map((tagLabel) => (
+          <TagBadge key={tagLabel} onClick={onClickTag}>
+            {tagLabel}
           </TagBadge>
         ))}
       </Stack>

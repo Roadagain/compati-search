@@ -5,6 +5,7 @@ import { SearchTargetSelect } from './SearchTargetSelect';
 import Autocomplete from '@mui/material/Autocomplete';
 import { Chip, TextField } from '@mui/material';
 import { SearchTarget } from '../../lib/search-target';
+import { Tag } from '../../lib/tagged-character';
 
 interface Props {
   /**
@@ -28,7 +29,7 @@ interface Props {
   /**
    * 検索ワードの補完候補
    */
-  autocompleteOptions: string[];
+  autocompleteOptions: Tag[] | string[];
   /**
    * テーマ関係のスタイル指定
    */
