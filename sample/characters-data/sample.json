@@ -11,152 +11,438 @@
   },
   {
     "name": "イチ",
-    "tags": ["Usa"],
+    "tags": [
+      {
+        "category": "西日本",
+        "name": "Usa"
+      }
+    ],
     "showDefault": true
   },
   {
     "name": "隠しイチ",
-    "tags": ["Usa"],
+    "tags": [
+      {
+        "category": "西日本",
+        "name": "Usa"
+      }
+    ],
     "showDefault": false
   },
   {
     "name": "に",
-    "tags": ["コザ"],
+    "tags": [
+      {
+        "category": "西日本",
+        "name": "コザ"
+      }
+    ],
     "showDefault": true
   },
   {
     "name": "隠しに",
-    "tags": ["コザ"],
+    "tags": [
+      {
+        "category": "西日本",
+        "name": "コザ"
+      }
+    ],
     "showDefault": false
   },
   {
     "name": "三",
-    "tags": ["さいたま"],
+    "tags": [
+      {
+        "category": "東日本",
+        "name": "さいたま"
+      }
+    ],
     "showDefault": true
   },
   {
     "name": "隠し三",
-    "tags": ["さいたま"],
+    "tags": [
+      {
+        "category": "東日本",
+        "name": "さいたま"
+      }
+    ],
     "showDefault": false
   },
   {
     "name": "ヨン",
-    "tags": ["津"],
+    "tags": [
+      {
+        "category": "西日本",
+        "name": "津"
+      }
+    ],
     "showDefault": true
   },
   {
     "name": "隠しヨン",
-    "tags": ["津"],
+    "tags": [
+      {
+        "category": "西日本",
+        "name": "津"
+      }
+    ],
     "showDefault": false
   },
   {
     "name": "ご",
-    "tags": ["Usa", "コザ"],
+    "tags": [
+      {
+        "category": "西日本",
+        "name": "Usa"
+      },
+      {
+        "category": "西日本",
+        "name": "コザ"
+      }
+    ],
     "showDefault": true
   },
   {
     "name": "隠しご",
-    "tags": ["Usa", "コザ"],
+    "tags": [
+      {
+        "category": "西日本",
+        "name": "Usa"
+      },
+      {
+        "category": "西日本",
+        "name": "コザ"
+      }
+    ],
     "showDefault": false
   },
   {
     "name": "六",
-    "tags": ["Usa", "さいたま"],
+    "tags": [
+      {
+        "category": "西日本",
+        "name": "Usa"
+      },
+      {
+        "category": "東日本",
+        "name": "さいたま"
+      }
+    ],
     "showDefault": true
   },
   {
     "name": "隠し六",
-    "tags": ["Usa", "さいたま"],
+    "tags": [
+      {
+        "category": "西日本",
+        "name": "Usa"
+      },
+      {
+        "category": "東日本",
+        "name": "さいたま"
+      }
+    ],
     "showDefault": false
   },
   {
     "name": "ナナ",
-    "tags": ["Usa", "津"],
+    "tags": [
+      {
+        "category": "西日本",
+        "name": "Usa"
+      },
+      {
+        "category": "西日本",
+        "name": "津"
+      }
+    ],
     "showDefault": true
   },
   {
     "name": "隠しナナ",
-    "tags": ["Usa", "津"],
+    "tags": [
+      {
+        "category": "西日本",
+        "name": "Usa"
+      },
+      {
+        "category": "西日本",
+        "name": "津"
+      }
+    ],
     "showDefault": false
   },
   {
     "name": "はち",
-    "tags": ["コザ", "さいたま"],
+    "tags": [
+      {
+        "category": "西日本",
+        "name": "コザ"
+      },
+      {
+        "category": "東日本",
+        "name": "さいたま"
+      }
+    ],
     "showDefault": true
   },
   {
     "name": "隠しはち",
-    "tags": ["コザ", "さいたま"],
+    "tags": [
+      {
+        "category": "西日本",
+        "name": "コザ"
+      },
+      {
+        "category": "東日本",
+        "name": "さいたま"
+      }
+    ],
     "showDefault": false
   },
   {
     "name": "九",
-    "tags": ["コザ", "津"],
+    "tags": [
+      {
+        "category": "西日本",
+        "name": "コザ"
+      },
+      {
+        "category": "西日本",
+        "name": "津"
+      }
+    ],
     "showDefault": true
   },
   {
     "name": "隠し九",
-    "tags": ["コザ", "津"],
+    "tags": [
+      {
+        "category": "西日本",
+        "name": "コザ"
+      },
+      {
+        "category": "西日本",
+        "name": "津"
+      }
+    ],
     "showDefault": false
   },
   {
     "name": "拾",
-    "tags": ["さいたま", "津"],
+    "tags": [
+      {
+        "category": "東日本",
+        "name": "さいたま"
+      },
+      {
+        "category": "西日本",
+        "name": "津"
+      }
+    ],
     "showDefault": true
   },
   {
     "name": "隠し拾",
-    "tags": ["さいたま", "津"],
+    "tags": [
+      {
+        "category": "東日本",
+        "name": "さいたま"
+      },
+      {
+        "category": "西日本",
+        "name": "津"
+      }
+    ],
     "showDefault": false
   },
   {
     "name": "拾イチ",
-    "tags": ["Usa", "コザ", "さいたま"],
+    "tags": [
+      {
+        "category": "西日本",
+        "name": "Usa"
+      },
+      {
+        "category": "西日本",
+        "name": "コザ"
+      },
+      {
+        "category": "東日本",
+        "name": "さいたま"
+      }
+    ],
     "showDefault": true
   },
   {
     "name": "隠し拾イチ",
-    "tags": ["Usa", "コザ", "さいたま"],
+    "tags": [
+      {
+        "category": "西日本",
+        "name": "Usa"
+      },
+      {
+        "category": "西日本",
+        "name": "コザ"
+      },
+      {
+        "category": "東日本",
+        "name": "さいたま"
+      }
+    ],
     "showDefault": false
   },
   {
     "name": "拾に",
-    "tags": ["Usa", "コザ", "津"],
+    "tags": [
+      {
+        "category": "西日本",
+        "name": "Usa"
+      },
+      {
+        "category": "西日本",
+        "name": "コザ"
+      },
+      {
+        "category": "西日本",
+        "name": "津"
+      }
+    ],
     "showDefault": true
   },
   {
     "name": "隠し拾に",
-    "tags": ["Usa", "コザ", "津"],
+    "tags": [
+      {
+        "category": "西日本",
+        "name": "Usa"
+      },
+      {
+        "category": "西日本",
+        "name": "コザ"
+      },
+      {
+        "category": "西日本",
+        "name": "津"
+      }
+    ],
     "showDefault": false
   },
   {
     "name": "拾三",
-    "tags": ["Usa", "さいたま", "津"],
+    "tags": [
+      {
+        "category": "西日本",
+        "name": "Usa"
+      },
+      {
+        "category": "東日本",
+        "name": "さいたま"
+      },
+      {
+        "category": "西日本",
+        "name": "津"
+      }
+    ],
     "showDefault": true
   },
   {
     "name": "隠し拾三",
-    "tags": ["Usa", "さいたま", "津"],
+    "tags": [
+      {
+        "category": "西日本",
+        "name": "Usa"
+      },
+      {
+        "category": "東日本",
+        "name": "さいたま"
+      },
+      {
+        "category": "西日本",
+        "name": "津"
+      }
+    ],
     "showDefault": false
   },
   {
     "name": "拾ヨン",
-    "tags": ["コザ", "さいたま", "津"],
+    "tags": [
+      {
+        "category": "西日本",
+        "name": "コザ"
+      },
+      {
+        "category": "東日本",
+        "name": "さいたま"
+      },
+      {
+        "category": "西日本",
+        "name": "津"
+      }
+    ],
     "showDefault": true
   },
   {
     "name": "隠し拾ヨン",
-    "tags": ["コザ", "さいたま", "津"],
+    "tags": [
+      {
+        "category": "西日本",
+        "name": "コザ"
+      },
+      {
+        "category": "東日本",
+        "name": "さいたま"
+      },
+      {
+        "category": "西日本",
+        "name": "津"
+      }
+    ],
     "showDefault": false
   },
   {
     "name": "拾ご",
-    "tags": ["Usa", "コザ", "さいたま", "津"],
+    "tags": [
+      {
+        "category": "西日本",
+        "name": "Usa"
+      },
+      {
+        "category": "西日本",
+        "name": "コザ"
+      },
+      {
+        "category": "東日本",
+        "name": "さいたま"
+      },
+      {
+        "category": "西日本",
+        "name": "津"
+      }
+    ],
     "showDefault": true
   },
   {
     "name": "隠し拾ご",
-    "tags": ["Usa", "コザ", "さいたま", "津"],
+    "tags": [
+      {
+        "category": "西日本",
+        "name": "Usa"
+      },
+      {
+        "category": "西日本",
+        "name": "コザ"
+      },
+      {
+        "category": "東日本",
+        "name": "さいたま"
+      },
+      {
+        "category": "西日本",
+        "name": "津"
+      }
+    ],
     "showDefault": false
   }
 ]
