@@ -33,6 +33,9 @@ export const Search = Template.bind({});
 Search.args = {
   target: SearchTarget.TAG,
   texts: [],
-  autocompleteOptions: ['あいうえお', 'かきくけこ'],
+  autocompleteOptions: [
+    { category: 'あ行', label: 'あいうえお' },
+    { category: 'か行', label: 'かきくけこ' },
+  ],
   sx: {},
 };

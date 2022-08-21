@@ -22,17 +22,20 @@ Search.args = {
   characters: [
     {
       name: 'Alpha',
-      tags: ['あいうえお', 'かきくけこ'],
+      tags: [
+        { category: 'あ行', label: 'あいうえお' },
+        { category: 'か行', label: 'かきくけこ' },
+      ],
       showDefault: true,
     },
     {
       name: 'Beta',
-      tags: ['かきくけこ'],
+      tags: [{ category: 'か行', label: 'かきくけこ' }],
       showDefault: true,
     },
     {
       name: 'Gamma',
-      tags: ['さしすせそ'],
+      tags: [{ category: 'さ行', label: 'さしすせそ' }],
       showDefault: false,
     },
   ],
