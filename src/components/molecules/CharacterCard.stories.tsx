@@ -8,7 +8,7 @@ const componentMeta: ComponentMeta<typeof CharacterCard> = {
   component: CharacterCard,
   argTypes: {
     name: { control: 'text' },
-    tags: { control: 'object' },
+    tagLabels: { control: 'object' },
     sx: { control: 'object' },
   },
 };
@@ -21,6 +21,6 @@ const Template: ComponentStory<typeof CharacterCard> = (args) => (
 export const Card = Template.bind({});
 Card.args = {
   name: 'なまえ',
-  tags: ['タグ1', 'タグ2'],
+  tagLabels: ['タグ1', 'タグ2'],
   sx: {},
 };

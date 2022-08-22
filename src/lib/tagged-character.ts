@@ -1,4 +1,7 @@
-export type Tag = string;
+export interface Tag {
+  category: string;
+  label: string;
+}
 
 export interface TaggedCharacter {
   name: string;
@@ -6,15 +9,16 @@ export interface TaggedCharacter {
   showDefault: boolean;
 }
 
-export const filterCharactersByTags = (
+export const filterCharactersByTagLabels = (
   characters: TaggedCharacter[],
-  tags: Tag[],
+  tagLabels: string[],
   showAll: boolean
 ): TaggedCharacter[] => {
   return characters.filter((character) => {
+    const characterTagLabels = character.tags.map(({ label }) => label);
     return (
       (showAll || character.showDefault) &&
-      tags.every((tag) => character.tags.includes(tag))
+      tagLabels.every((tagLabel) => characterTagLabels.includes(tagLabel))
     );
   });
 };

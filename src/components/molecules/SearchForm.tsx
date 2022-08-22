@@ -5,6 +5,8 @@ import { SearchTargetSelect } from './SearchTargetSelect';
 import Autocomplete from '@mui/material/Autocomplete';
 import { Chip, TextField } from '@mui/material';
 import { SearchTarget } from '../../lib/search-target';
+import { Tag } from '../../lib/tagged-character';
+import { AutocompleteOption } from '../../lib/autocomplete';
 
 interface Props {
   /**
@@ -28,7 +30,7 @@ interface Props {
   /**
    * 検索ワードの補完候補
    */
-  autocompleteOptions: string[];
+  autocompleteOptions: AutocompleteOption[];
   /**
    * テーマ関係のスタイル指定
    */
@@ -43,7 +45,11 @@ export const SearchForm: React.FC<Props> = ({
   autocompleteOptions,
   sx,
 }) => {
-  const onTextChange = (_, texts: string[]) => onChangeTexts(texts);
+  const onTextChange = (_, texts: (string | AutocompleteOption)[]) => {
+    onChangeTexts(
+      texts.map((text) => (typeof text === 'string' ? text : text.label))
+    );
+  };
   const theme = useTheme();
   const placeholder = `${target === SearchTarget.TAG ? 'タグ' : '名前'}を入力`;
 
@@ -57,9 +63,15 @@ export const SearchForm: React.FC<Props> = ({
         filterSelectedOptions
         value={texts}
         onChange={onTextChange}
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-ignore optionsの要求型が明らかにおかしいから一時的にignoreする
         options={autocompleteOptions}
+        groupBy={
+          target === SearchTarget.TAG
+            ? (option: Tag) => option.category
+            : undefined
+        }
+        isOptionEqualToValue={(option: AutocompleteOption, value: string) =>
+          option.label === value
+        }
         fullWidth
         renderInput={(params) => (
           <TextField
@@ -72,13 +84,11 @@ export const SearchForm: React.FC<Props> = ({
             }}
           />
         )}
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-ignore valueの要求型が明らかにおかしいから一時的にignoreする
-        renderTags={(value: string[], getTagProps) =>
-          value.map((option: string, index: number) => (
+        renderTags={(values: string[], getTagProps) =>
+          values.map((value, index) => (
             <Chip
-              key={option}
-              label={option}
+              key={value}
+              label={value}
               {...getTagProps({ index })}
               sx={{ fontSize: theme.typography.h6 }}
             />
