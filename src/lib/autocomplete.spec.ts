@@ -79,7 +79,7 @@ describe('generateAutocompleteOptions', () => {
       it('名前の一覧を返す', () => {
         expect(
           generateAutocompleteOptions(characters, SearchTarget.NAME, true)
-        ).toEqual(['Alpha', 'Beta', 'Gamma']);
+        ).toEqual([{ label: 'Alpha' }, { label: 'Beta' }, { label: 'Gamma' }]);
       });
     });
   });
@@ -100,7 +100,7 @@ describe('generateAutocompleteOptions', () => {
       it('デフォルト表示キャラの名前の一覧を返す', () => {
         expect(
           generateAutocompleteOptions(characters, SearchTarget.NAME, false)
-        ).toEqual(['Alpha', 'Beta']);
+        ).toEqual([{ label: 'Alpha' }, { label: 'Beta' }]);
       });
     });
   });

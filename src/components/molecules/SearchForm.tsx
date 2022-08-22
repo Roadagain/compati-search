@@ -6,6 +6,7 @@ import Autocomplete from '@mui/material/Autocomplete';
 import { Chip, TextField } from '@mui/material';
 import { SearchTarget } from '../../lib/search-target';
 import { Tag } from '../../lib/tagged-character';
+import { AutocompleteOption } from '../../lib/autocomplete';
 
 interface Props {
   /**
@@ -29,7 +30,7 @@ interface Props {
   /**
    * 検索ワードの補完候補
    */
-  autocompleteOptions: Tag[] | string[];
+  autocompleteOptions: AutocompleteOption[];
   /**
    * テーマ関係のスタイル指定
    */
@@ -44,9 +45,11 @@ export const SearchForm: React.FC<Props> = ({
   autocompleteOptions,
   sx,
 }) => {
-  const onTextChange = (_, texts: (string | Tag)[]) => {
-    onChangeTexts(texts.map((text) => typeof text === 'string' ? text : text.label));
-  }
+  const onTextChange = (_, texts: (string | AutocompleteOption)[]) => {
+    onChangeTexts(
+      texts.map((text) => (typeof text === 'string' ? text : text.label))
+    );
+  };
   const theme = useTheme();
   const placeholder = `${target === SearchTarget.TAG ? 'タグ' : '名前'}を入力`;
 
@@ -68,12 +71,8 @@ export const SearchForm: React.FC<Props> = ({
             ? (option: Tag) => option.category
             : undefined
         }
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-ignore valueの要求型が明らかにおかしいから一時的にignoreする
-        isOptionEqualToValue={
-          target === SearchTarget.TAG
-            ? (option: Tag, value: string) => option.label === value
-            : undefined
+        isOptionEqualToValue={(option: AutocompleteOption, value: string) =>
+          option.label === value
         }
         fullWidth
         renderInput={(params) => (
