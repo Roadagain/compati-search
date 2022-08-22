@@ -63,8 +63,6 @@ export const SearchForm: React.FC<Props> = ({
         filterSelectedOptions
         value={texts}
         onChange={onTextChange}
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-ignore optionsの要求型が明らかにおかしいから一時的にignoreする
         options={autocompleteOptions}
         groupBy={
           target === SearchTarget.TAG
@@ -86,13 +84,11 @@ export const SearchForm: React.FC<Props> = ({
             }}
           />
         )}
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-ignore valueの要求型が明らかにおかしいから一時的にignoreする
-        renderTags={(value: string[], getTagProps) =>
-          value.map((option: string, index: number) => (
+        renderTags={(values: string[], getTagProps) =>
+          values.map((value, index) => (
             <Chip
-              key={option}
-              label={option}
+              key={value}
+              label={value}
               {...getTagProps({ index })}
               sx={{ fontSize: theme.typography.h6 }}
             />
