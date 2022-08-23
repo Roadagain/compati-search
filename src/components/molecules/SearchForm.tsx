@@ -1,23 +1,14 @@
-import React, { FormEventHandler } from 'react';
-import IconButton from '@mui/material/IconButton';
+import React from 'react';
 import Box from '@mui/material/Box';
-import SearchIcon from '@mui/icons-material/Search';
 import { SxProps, Theme, useTheme } from '@mui/material/styles';
 import { SearchTargetSelect } from './SearchTargetSelect';
 import Autocomplete from '@mui/material/Autocomplete';
 import { Chip, FilterOptionsState, TextField } from '@mui/material';
 import { SearchTarget } from '../../lib/search-target';
+import { Tag } from '../../lib/tagged-character';
+import { AutocompleteOption } from '../../lib/autocomplete';
 
 interface Props {
-  /**
-   * 検索文字列
-   */
-  texts: string[];
-  /**
-   * 検索文字列の変更ハンドラ
-   * @param texts - 変更後の検索文字列
-   */
-  onChangeTexts: (texts: string[]) => void;
   /**
    * 検索対象
    */
@@ -28,14 +19,18 @@ interface Props {
    */
   onChangeTarget: (target: SearchTarget) => void;
   /**
+   * 検索文字列
+   */
+  texts: string[];
+  /**
+   * 検索文字列の変更ハンドラ
+   * @param texts - 変更後の検索文字列
+   */
+  onChangeTexts: (texts: string[]) => void;
+  /**
    * 検索ワードの補完候補
    */
-  options: string[];
-  /**
-   * 検索イベントのハンドラー
-   * @param text - 検索文字列
-   */
-  onSearch: (texts: string[], target: SearchTarget) => void;
+  autocompleteOptions: AutocompleteOption[];
   /**
    * テーマ関係のスタイル指定
    */
@@ -53,30 +48,23 @@ const filterOptions = (
 };
 
 export const SearchForm: React.FC<Props> = ({
-  texts,
-  onChangeTexts,
   target,
   onChangeTarget,
-  options,
-  onSearch,
+  texts,
+  onChangeTexts,
+  autocompleteOptions,
   sx,
 }) => {
-  const onTextChange = (_, texts: string[]) => onChangeTexts(texts);
-  const startSearch: FormEventHandler<HTMLFormElement> = (event) => {
-    event.preventDefault();
-    if (texts.length > 0) {
-      onSearch(texts, target);
-    }
+  const onTextChange = (_, texts: (string | AutocompleteOption)[]) => {
+    onChangeTexts(
+      texts.map((text) => (typeof text === 'string' ? text : text.label))
+    );
   };
   const theme = useTheme();
   const placeholder = `${target === SearchTarget.TAG ? 'タグ' : '名前'}を入力`;
 
   return (
-    <Box
-      component="form"
-      onSubmit={startSearch}
-      sx={{ display: 'flex', alignItems: 'center', ...sx }}
-    >
+    <Box component="form" sx={{ display: 'flex', alignItems: 'center', ...sx }}>
       <SearchTargetSelect target={target} onChange={onChangeTarget} />
       <Autocomplete
         autoComplete
@@ -85,9 +73,15 @@ export const SearchForm: React.FC<Props> = ({
         filterSelectedOptions
         value={texts}
         onChange={onTextChange}
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-ignore optionsの要求型が明らかにおかしいから一時的にignoreする
-        options={options}
+        options={autocompleteOptions}
+        groupBy={
+          target === SearchTarget.TAG
+            ? (option: Tag) => option.category
+            : undefined
+        }
+        isOptionEqualToValue={(option: AutocompleteOption, value: string) =>
+          option.label === value
+        }
         fullWidth
         renderInput={(params) => (
           <TextField
@@ -100,13 +94,11 @@ export const SearchForm: React.FC<Props> = ({
             }}
           />
         )}
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-ignore valueの要求型が明らかにおかしいから一時的にignoreする
-        renderTags={(value: string[], getTagProps) =>
-          value.map((option: string, index: number) => (
+        renderTags={(values: string[], getTagProps) =>
+          values.map((value, index) => (
             <Chip
-              key={option}
-              label={option}
+              key={value}
+              label={value}
               {...getTagProps({ index })}
               sx={{ fontSize: theme.typography.h6 }}
             />
@@ -116,9 +108,6 @@ export const SearchForm: React.FC<Props> = ({
         filterOptions={filterOptions}
         sx={{ ml: 2 }}
       />
-      <IconButton type="submit" sx={{ ml: 1 }}>
-        <SearchIcon fontSize="large" />
-      </IconButton>
     </Box>
   );
 };

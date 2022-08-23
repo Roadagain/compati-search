@@ -1,16 +1,52 @@
 import {
+  isTag,
   isTaggedCharacter,
   loadCharactersDataFromJson,
   loadSampleCharactersData,
 } from './load-data';
 import charactersData from '../../sample/characters-data/sample.json';
 
+describe('isTag', () => {
+  describe('データ形式が正しい場合', () => {
+    it('trueが返る', () => {
+      const obj = {
+        category: 'category',
+        label: 'label',
+      };
+      expect(isTag(obj)).toBeTruthy();
+    });
+  });
+
+  describe('categoryが文字列でない場合', () => {
+    it('falseが返る', () => {
+      const obj = {
+        category: 5,
+        label: 'label',
+      };
+      expect(isTag(obj)).toBeFalsy();
+    });
+  });
+
+  describe('labelが文字列でない場合', () => {
+    it('falseが返る', () => {
+      const obj = {
+        category: 'category',
+        label: null,
+      };
+      expect(isTag(obj)).toBeFalsy();
+    });
+  });
+});
+
 describe('isTaggedCharacter', () => {
   describe('データ形式が正しい場合', () => {
     it('trueが返る', () => {
       const obj = {
         name: 'Name',
-        tags: ['test1', 'test2'],
+        tags: [
+          { category: 'alpha', label: 'test1' },
+          { category: 'beta', label: 'test2' },
+        ],
         showDefault: false,
       };
       expect(isTaggedCharacter(obj)).toBeTruthy();
@@ -21,7 +57,10 @@ describe('isTaggedCharacter', () => {
     it('falseが返る', () => {
       const obj = {
         name: 1,
-        tags: ['test1', 'test2'],
+        tags: [
+          { category: 'alpha', label: 'test1' },
+          { category: 'beta', label: 'test2' },
+        ],
         showDefault: true,
       };
       expect(isTaggedCharacter(obj)).toBeFalsy();
@@ -39,11 +78,11 @@ describe('isTaggedCharacter', () => {
     });
   });
 
-  describe('tagsが配列かつ文字列でない要素を含む場合', () => {
+  describe('tagsが配列かつTagでないオブジェクトを含む場合', () => {
     it('falseが返る', () => {
       const obj = {
         name: 'Name',
-        tags: ['test1', 2],
+        tags: [{ category: 'alpha', label: 'test1' }, {}],
         showDefault: false,
       };
       expect(isTaggedCharacter(obj)).toBeFalsy();
@@ -54,7 +93,10 @@ describe('isTaggedCharacter', () => {
     it('falseが返る', () => {
       const obj = {
         name: 'Name',
-        tags: ['test1', 'test2'],
+        tags: [
+          { category: 'alpha', label: 'test1' },
+          { category: 'beta', label: 'test2' },
+        ],
         showDefault: 1,
       };
       expect(isTaggedCharacter(obj)).toBeFalsy();
@@ -67,7 +109,10 @@ describe('loadCharactersDataFromJson', () => {
     const json = [
       {
         name: 'Alpha',
-        tags: ['one', 'two'],
+        tags: [
+          { category: 'number', label: 'one' },
+          { category: 'count', label: 'two' },
+        ],
         showDefault: true,
       },
       {
@@ -86,12 +131,15 @@ describe('loadCharactersDataFromJson', () => {
     const json = [
       {
         name: 1,
-        tags: ['one, two'],
+        tags: [
+          { category: 'number', label: 'one' },
+          { category: 'count', label: 'two' },
+        ],
         showDefault: true,
       },
       {
         name: 'Beta',
-        tags: ['three'],
+        tags: [{ category: 'number', label: 'three' }],
         showDefault: true,
       },
     ];

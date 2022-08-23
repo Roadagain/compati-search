@@ -1,35 +1,45 @@
 import {
-  filterCharactersByTags,
+  filterCharactersByTagLabels,
   TaggedCharacter,
   filterCharactersByNameWords,
 } from './tagged-character';
 
-describe('filterCharactersByTag', () => {
+describe('filterCharactersByTagLabels', () => {
   const testTag1 = 'aurum';
   const testTag2 = 'borium';
   const alpha: TaggedCharacter = {
-    name: 'alpha',
-    tags: [testTag1, 'other-tag', testTag2],
+    name: '',
+    tags: [
+      { category: '', label: testTag1 },
+      { category: '', label: 'other-tag' },
+      { category: '', label: testTag2 },
+    ],
     showDefault: true,
   };
   const beta: TaggedCharacter = {
-    name: 'beta',
-    tags: ['other-tag', testTag1],
+    name: '',
+    tags: [
+      { category: '', label: 'other-tag' },
+      { category: '', label: testTag1 },
+    ],
     showDefault: true,
   };
   const gamma: TaggedCharacter = {
-    name: 'gamma',
-    tags: [testTag1, testTag2],
+    name: '',
+    tags: [
+      { category: '', label: testTag1 },
+      { category: '', label: testTag2 },
+    ],
     showDefault: false,
   };
   const delta: TaggedCharacter = {
-    name: 'delta',
-    tags: ['other-tag'],
+    name: '',
+    tags: [{ category: '', label: 'other-tag' }],
     showDefault: true,
   };
   const epsilon: TaggedCharacter = {
     name: 'epsilon',
-    tags: [testTag2],
+    tags: [{ category: '', label: testTag2 }],
     showDefault: false,
   };
   const characters = [alpha, beta, gamma, delta, epsilon];
@@ -38,7 +48,7 @@ describe('filterCharactersByTag', () => {
     describe('指定タグが1つの場合', () => {
       it('指定タグを持つキャラクターの配列が返る', () => {
         expect(
-          filterCharactersByTags(characters, [testTag1], true)
+          filterCharactersByTagLabels(characters, [testTag1], true)
         ).toStrictEqual([alpha, beta, gamma]);
       });
     });
@@ -46,7 +56,7 @@ describe('filterCharactersByTag', () => {
     describe('指定タグが複数の場合', () => {
       it('指定タグを全て持つキャラクターの配列が返る', () => {
         expect(
-          filterCharactersByTags(characters, [testTag1, testTag2], true)
+          filterCharactersByTagLabels(characters, [testTag1, testTag2], true)
         ).toStrictEqual([alpha, gamma]);
       });
     });
@@ -54,7 +64,7 @@ describe('filterCharactersByTag', () => {
     describe('マイナス指定がある場合', () => {
       it('そのタグを含まないキャラクターの配列が返る', () => {
         expect(
-          filterCharactersByTags(characters, [`-${testTag1}`], true)
+          filterCharactersByTagLabels(characters, [`-${testTag1}`], true)
         ).toEqual([delta, epsilon]);
       });
     });
@@ -62,14 +72,14 @@ describe('filterCharactersByTag', () => {
     describe('指定したタグを持つキャラクターがいない場合', () => {
       it('空配列が返る', () => {
         expect(
-          filterCharactersByTags(characters, ['not-set-tag'], true)
+          filterCharactersByTagLabels(characters, ['not-set-tag'], true)
         ).toStrictEqual([]);
       });
     });
 
     describe('タグ指定がない場合', () => {
       it('元の配列が返る', () => {
-        expect(filterCharactersByTags(characters, [], true)).toStrictEqual(
+        expect(filterCharactersByTagLabels(characters, [], true)).toStrictEqual(
           characters
         );
       });
@@ -80,7 +90,7 @@ describe('filterCharactersByTag', () => {
     describe('指定タグが1つの場合', () => {
       it('デフォルト表示され指定タグを全て持つキャラクターの配列が返る', () => {
         expect(
-          filterCharactersByTags(characters, [testTag1], false)
+          filterCharactersByTagLabels(characters, [testTag1], false)
         ).toStrictEqual([alpha, beta]);
       });
     });
@@ -88,7 +98,7 @@ describe('filterCharactersByTag', () => {
     describe('指定タグが複数の場合', () => {
       it('デフォルト表示され指定タグを全て持つキャラクターの配列が返る', () => {
         expect(
-          filterCharactersByTags(characters, [testTag1, testTag2], false)
+          filterCharactersByTagLabels(characters, [testTag1, testTag2], false)
         ).toStrictEqual([alpha]);
       });
     });
@@ -96,7 +106,7 @@ describe('filterCharactersByTag', () => {
     describe('マイナス指定がある場合', () => {
       it('そのタグを含まないキャラクターの配列が返る', () => {
         expect(
-          filterCharactersByTags(characters, [`-${testTag1}`], false)
+          filterCharactersByTagLabels(characters, [`-${testTag1}`], false)
         ).toEqual([delta]);
       });
     });
@@ -104,18 +114,16 @@ describe('filterCharactersByTag', () => {
     describe('指定したタグを持つキャラクターがいない場合', () => {
       it('空配列が返る', () => {
         expect(
-          filterCharactersByTags(characters, ['not-set-tag'], true)
+          filterCharactersByTagLabels(characters, ['not-set-tag'], true)
         ).toStrictEqual([]);
       });
     });
 
     describe('タグ指定がない場合', () => {
       it('デフォルト表示されるキャラクターの配列が返る', () => {
-        expect(filterCharactersByTags(characters, [], false)).toStrictEqual([
-          alpha,
-          beta,
-          delta,
-        ]);
+        expect(
+          filterCharactersByTagLabels(characters, [], false)
+        ).toStrictEqual([alpha, beta, delta]);
       });
     });
   });

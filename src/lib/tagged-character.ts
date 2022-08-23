@@ -1,4 +1,7 @@
-export type Tag = string;
+export interface Tag {
+  category: string;
+  label: string;
+}
 
 export interface TaggedCharacter {
   name: string;
@@ -6,17 +9,20 @@ export interface TaggedCharacter {
   showDefault: boolean;
 }
 
-export const filterCharactersByTags = (
+export const filterCharactersByTagLabels = (
   characters: TaggedCharacter[],
-  tags: Tag[],
+  tagLabels: string[],
   showAll: boolean
 ): TaggedCharacter[] => {
   return characters.filter((character) => {
+    const characterTagLabels = character.tags.map(({ label }) => label);
     return (
       (showAll || character.showDefault) &&
-      tags.every((tag) => {
-        const isMinus = tag.startsWith('-');
-        const hasTag = character.tags.includes(tag.slice(isMinus ? 1 : 0));
+      tagLabels.every((tagLabel) => {
+        const isMinus = tagLabel.startsWith('-');
+        const hasTag = characterTagLabels.includes(
+          tagLabel.slice(isMinus ? 1 : 0)
+        );
         return isMinus ? !hasTag : hasTag;
       })
     );
