@@ -1,7 +1,7 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import { SxProps, Theme, useTheme } from '@mui/material/styles';
-import { SearchTargetSelect } from './SearchTargetSelect';
+import { SearchTargetSelect } from '../atoms/SearchTargetSelect';
 import Autocomplete from '@mui/material/Autocomplete';
 import { Chip, TextField } from '@mui/material';
 import { SearchTarget } from '../../lib/search-target';
