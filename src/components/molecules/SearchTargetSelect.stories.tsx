@@ -27,8 +27,14 @@ const Template: ComponentStory<typeof SearchTargetSelect> = (args) => (
   <SearchTargetSelect {...args} />
 );
 
-export const Select = Template.bind({});
-Select.args = {
+export const SelectTag = Template.bind({});
+SelectTag.args = {
   target: SearchTarget.TAG,
+  sx: {},
+};
+
+export const SelectName = Template.bind({});
+SelectName.args = {
+  target: SearchTarget.NAME,
   sx: {},
 };
