@@ -29,13 +29,35 @@ const Template: ComponentStory<typeof SearchForm> = (args) => (
   <SearchForm {...args} />
 );
 
-export const Search = Template.bind({});
-Search.args = {
+export const SearchByTag = Template.bind({});
+SearchByTag.args = {
   target: SearchTarget.TAG,
   texts: [],
   autocompleteOptions: [
     { category: 'あ行', label: 'あいうえお' },
     { category: 'か行', label: 'かきくけこ' },
+  ],
+  sx: {},
+};
+
+export const SearchByName = Template.bind({});
+SearchByName.args = {
+  target: SearchTarget.NAME,
+  texts: [],
+  autocompleteOptions: [
+    { category: 'さ行', label: 'さしすせそ' },
+    { category: 'た行', label: 'たちつてと' },
+  ],
+  sx: {},
+};
+
+export const InputtedWords = Template.bind({});
+InputtedWords.args = {
+  target: SearchTarget.TAG,
+  texts: ['あいうえお', 'なにぬねの'],
+  autocompleteOptions: [
+    { category: 'な行', label: 'なにぬねの' },
+    { category: 'は行', label: 'はひふへほ' },
   ],
   sx: {},
 };

@@ -29,10 +29,34 @@ const Template: ComponentStory<typeof SearchCondition> = (args) => (
   <SearchCondition {...args} />
 );
 
-export const Condition = Template.bind({});
-Condition.args = {
+export const SearchByTag = Template.bind({});
+SearchByTag.args = {
   target: SearchTarget.TAG,
   texts: ['あいうえお'],
+  showAll: false,
+  sx: {},
+};
+
+export const SearchByName = Template.bind({});
+SearchByName.args = {
+  target: SearchTarget.NAME,
+  texts: ['かきくけこ'],
+  showAll: false,
+  sx: {},
+};
+
+export const ShowAll = Template.bind({});
+ShowAll.args = {
+  target: SearchTarget.TAG,
+  texts: ['さしすせそ'],
+  showAll: true,
+  sx: {},
+};
+
+export const NotSearched = Template.bind({});
+NotSearched.args = {
+  target: SearchTarget.TAG,
+  texts: [],
   showAll: false,
   sx: {},
 };
