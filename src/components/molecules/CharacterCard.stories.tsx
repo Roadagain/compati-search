@@ -25,9 +25,9 @@ Card.args = {
   sx: {},
 };
 
-export const OverflowTags = Template.bind({})
+export const OverflowTags = Template.bind({});
 OverflowTags.args = {
   name: 'なまえ',
-  tagLabels: Array.from({length: 32}, (_, index) => `タグ${index + 1}`),
+  tagLabels: Array.from({ length: 32 }, (_, index) => `タグ${index + 1}`),
   sx: {},
-}
+};
