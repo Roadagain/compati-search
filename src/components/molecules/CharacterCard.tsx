@@ -1,4 +1,11 @@
-import { Card, CardContent, CardHeader, SxProps, Theme } from '@mui/material';
+import {
+  Box,
+  Card,
+  CardContent,
+  CardHeader,
+  SxProps,
+  Theme,
+} from '@mui/material';
 import React from 'react';
 import { TagBadge } from '../atoms/TagBadge';
 import Stack from '@mui/material/Stack';
@@ -31,18 +38,21 @@ export const CharacterCard: React.FC<Props> = ({
 }) => (
   <Card elevation={2} sx={sx}>
     <CardHeader title={name} />
-    <CardContent sx={{ overflowX: 'scroll' }}>
-      <Stack
-        direction="row"
-        spacing={1}
-        sx={{ display: 'inline-block', whiteSpace: 'nowrap' }}
-      >
-        {tagLabels.map((tagLabel) => (
-          <TagBadge key={tagLabel} onClick={onClickTag}>
-            {tagLabel}
-          </TagBadge>
-        ))}
-      </Stack>
+    <CardContent>
+      {/* スクロールバーがタグと被らないように下部余白を確保する */}
+      <Box pb={1} sx={{ overflowX: 'scroll' }}>
+        <Stack
+          direction="row"
+          spacing={1}
+          sx={{ display: 'inline-block', whiteSpace: 'nowrap' }}
+        >
+          {tagLabels.map((tagLabel) => (
+            <TagBadge key={tagLabel} onClick={onClickTag}>
+              {tagLabel}
+            </TagBadge>
+          ))}
+        </Stack>
+      </Box>
     </CardContent>
   </Card>
 );
