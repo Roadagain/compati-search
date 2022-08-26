@@ -80,7 +80,6 @@ export const CharactersSearcher: React.FC<Props> = ({ characters, sx }) => {
         onChangeShowAll={onChangeShowAll}
         sx={{ mt: 2 }}
       />
-      {/* ここを別コンポーネントに分離する organisms/characters-list とか */}
       <CharactersList
         characters={searchResults}
         onClickTag={onClickTag}
