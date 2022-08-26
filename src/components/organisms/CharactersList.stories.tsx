@@ -39,7 +39,10 @@ List.args = {
     },
     {
       name: 'Delta',
-      tags: [{ category: 'さ行', label: 'さしすせそ' }, {category:'た行', label:'たちつてと'}],
+      tags: [
+        { category: 'さ行', label: 'さしすせそ' },
+        { category: 'た行', label: 'たちつてと' },
+      ],
       showDefault: false,
     },
   ],
