@@ -1,16 +1,16 @@
-import { Grid, SxProps, Theme } from '@mui/material';
+import { SxProps, Theme } from '@mui/material';
 import React from 'react';
 import {
   filterCharactersByNameWords,
   filterCharactersByTagLabels,
   TaggedCharacter,
 } from '../../lib/tagged-character';
-import { CharacterCard } from '../molecules/CharacterCard';
 import { SearchForm } from '../molecules/SearchForm';
 import Box from '@mui/material/Box';
 import { SearchCondition } from '../molecules/SearchCondition';
 import { generateAutocompleteOptions } from '../../lib/autocomplete';
 import { SearchTarget } from '../../lib/search-target';
+import { CharactersList } from './CharactersList';
 
 interface Props {
   /**
@@ -80,17 +80,11 @@ export const CharactersSearcher: React.FC<Props> = ({ characters, sx }) => {
         onChangeShowAll={onChangeShowAll}
         sx={{ mt: 2 }}
       />
-      <Grid container spacing={2} sx={{ mt: 1 }}>
-        {searchResults.map(({ name, tags }) => (
-          <Grid item key={name} xs={12} sm={6} md={4}>
-            <CharacterCard
-              name={name}
-              tagLabels={tags.map(({ label }) => label)}
-              onClickTag={onClickTag}
-            />
-          </Grid>
-        ))}
-      </Grid>
+      <CharactersList
+        characters={searchResults}
+        onClickTag={onClickTag}
+        sx={{ mt: 1 }}
+      />
     </Box>
   );
 };
