@@ -24,3 +24,10 @@ Card.args = {
   tagLabels: ['タグ1', 'タグ2'],
   sx: {},
 };
+
+export const OverflowTags = Template.bind({});
+OverflowTags.args = {
+  name: 'なまえ',
+  tagLabels: Array.from({ length: 32 }, (_, index) => `タグ${index + 1}`),
+  sx: {},
+};
