@@ -9,6 +9,7 @@ import {
 import React from 'react';
 import { TagBadge } from '../atoms/TagBadge';
 import Stack from '@mui/material/Stack';
+import { Tag } from '../../lib/tagged-character';
 
 interface Props {
   /**
@@ -18,7 +19,7 @@ interface Props {
   /**
    * タグ一覧
    */
-  tagLabels: string[];
+  tags: Tag[];
   /**
    * タグクリック時のハンドラ
    * @param tagLabel - タグ
@@ -32,7 +33,7 @@ interface Props {
 
 export const CharacterCard: React.FC<Props> = ({
   name,
-  tagLabels,
+  tags,
   onClickTag,
   sx,
 }) => (
@@ -46,9 +47,9 @@ export const CharacterCard: React.FC<Props> = ({
           spacing={1}
           sx={{ display: 'inline-block', whiteSpace: 'nowrap' }}
         >
-          {tagLabels.map((tagLabel) => (
-            <TagBadge key={tagLabel} onClick={onClickTag}>
-              {tagLabel}
+          {tags.map(({ label }) => (
+            <TagBadge key={label} onClick={onClickTag}>
+              {label}
             </TagBadge>
           ))}
         </Stack>
