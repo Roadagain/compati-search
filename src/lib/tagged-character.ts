@@ -34,3 +34,16 @@ export const filterCharactersByNameWords = (
     );
   });
 };
+
+interface CategoryGroupedTag {
+  category: string;
+  tags: Tag[];
+}
+
+export const groupTagsByCategory = (tags: Tag[]): CategoryGroupedTag[] => {
+  const categories = Array.from(new Set(tags.map(({ category }) => category)));
+  return categories.map((category) => ({
+    category,
+    tags: tags.filter((tag) => tag.category === category),
+  }));
+};

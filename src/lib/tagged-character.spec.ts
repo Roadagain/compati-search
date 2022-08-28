@@ -2,6 +2,8 @@ import {
   filterCharactersByTagLabels,
   TaggedCharacter,
   filterCharactersByNameWords,
+  Tag,
+  groupTagsByCategory,
 } from './tagged-character';
 
 describe('filterCharactersByTagLabels', () => {
@@ -197,5 +199,30 @@ describe('searchCharactersByCharacterNameWords', () => {
         ).toStrictEqual([alpha, beta, delta]);
       });
     });
+  });
+});
+
+describe('groupTagsByCategory', () => {
+  const beetle: Tag = { category: 'カテゴリーA', label: 'カブトムシ' };
+  const stagBeetle: Tag = { category: 'カテゴリーA', label: 'クワガタムシ' };
+  const peacock: Tag = { category: 'カテゴリーJ', label: 'クジャク' };
+  const tiger: Tag = { category: 'カテゴリーQ', label: 'トラ' };
+  const tags = [beetle, stagBeetle, peacock, tiger];
+
+  it('カテゴリーごとにグルーピングされたタグの一覧が返る', () => {
+    expect(groupTagsByCategory(tags)).toEqual([
+      {
+        category: 'カテゴリーA',
+        tags: [beetle, stagBeetle],
+      },
+      {
+        category: 'カテゴリーJ',
+        tags: [peacock],
+      },
+      {
+        category: 'カテゴリーQ',
+        tags: [tiger],
+      },
+    ]);
   });
 });
