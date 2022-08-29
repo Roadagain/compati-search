@@ -32,4 +32,4 @@ for len_count in range(len(SET_TAGS) + 1):
         })
         count += 1
 
-print(json.dumps(characters, ensure_ascii=False, indent=2))
+print(json.dumps(characters, ensure_ascii=False, separators=(',', ':')))
