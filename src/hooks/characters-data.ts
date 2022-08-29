@@ -13,14 +13,16 @@ export const useCharactersData = (dataName: string): CharactersDataState => {
   const [charactersDataState, setCharactersDataState] =
     useState<CharactersDataState>([[], true]);
   useEffect(() => {
-    new Promise<TaggedCharacter[]>((resolve) => {
-      fetch(`/api/characters-data/${dataName}`)
-        .then((res) => res.json())
-        .then(loadCharactersDataFromJson)
-        .then(resolve);
-    }).then((charactersData) =>
-      setCharactersDataState([charactersData, false])
-    );
+    fetch(`/api/characters-data/${dataName}`)
+      .then((res) => {
+        if (res.status === 404) {
+          throw new Error('Not Found');
+        }
+        return res.json();
+      })
+      .then(loadCharactersDataFromJson)
+      .then((charactersData) => setCharactersDataState([charactersData, false]))
+      .catch(console.error);
   }, [dataName]);
 
   return charactersDataState;
