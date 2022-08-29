@@ -1,6 +1,6 @@
-import { loadSampleCharactersData } from '../lib/load-data';
 import { SearchTemplate } from '../components/templates/SearchTemplate';
+import { NextPage } from 'next';
 
-const Index = () => <SearchTemplate characters={loadSampleCharactersData()} />;
+const Index: NextPage = () => <SearchTemplate dataName="sample" />;
 
 export default Index;
