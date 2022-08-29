@@ -1,8 +1,8 @@
 import { NextApiHandler } from 'next';
-import { loadSampleCharactersData } from '../../../lib/load-data';
+import sampleCharactersData from '../../../../sample/characters-data/sample.json';
 
 const handler: NextApiHandler = (_, response) => {
-  response.status(200).json(loadSampleCharactersData());
+  response.status(200).json(sampleCharactersData);
 };
 
 export default handler;

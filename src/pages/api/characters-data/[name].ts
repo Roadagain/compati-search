@@ -1,5 +1,4 @@
 import { NextApiHandler } from 'next';
-import { loadCharactersDataFromJson } from '../../../lib/load-data';
 
 const handler: NextApiHandler = async (request, response) => {
   const { name } = request.query;
@@ -13,8 +12,7 @@ const handler: NextApiHandler = async (request, response) => {
     return response.status(404).json({ error: 'Not Found' });
   }
   const json = await fetchResult.json();
-  const charactersData = loadCharactersDataFromJson(json);
-  response.status(200).json(charactersData);
+  response.status(200).json(json);
 };
 
 export default handler;
