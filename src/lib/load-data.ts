@@ -1,4 +1,3 @@
-import sampleCharacterData from '../../sample/characters-data/sample.json';
 import { Tag, TaggedCharacter } from './tagged-character';
 
 type WouldBeTaggedCharacter = { [K in keyof TaggedCharacter]?: unknown };
@@ -31,8 +30,4 @@ export const loadCharactersDataFromJson = (
     tags,
     showDefault,
   }));
-};
-
-export const loadSampleCharactersData = () => {
-  return loadCharactersDataFromJson(sampleCharacterData);
 };

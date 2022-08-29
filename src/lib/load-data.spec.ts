@@ -2,7 +2,6 @@ import {
   isTag,
   isTaggedCharacter,
   loadCharactersDataFromJson,
-  loadSampleCharactersData,
 } from './load-data';
 import charactersData from '../../sample/characters-data/sample.json';
 
@@ -149,11 +148,5 @@ describe('loadCharactersDataFromJson', () => {
         'Invalid characters data'
       );
     });
-  });
-});
-
-describe('loadSampleCharactersData', () => {
-  it('サンプルデータが返る', () => {
-    expect(loadSampleCharactersData()).toStrictEqual(charactersData);
   });
 });
