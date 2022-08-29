@@ -24,9 +24,11 @@ interface Props {
 }
 
 export const CharactersSearcher: React.FC<Props> = ({ characters, sx }) => {
-  const [searchResults, setSearchResults] = React.useState<TaggedCharacter[]>(
-    characters.filter(({ showDefault }) => showDefault)
-  );
+  const [searchResults, setSearchResults] = React.useState<TaggedCharacter[]>([]);
+  React.useEffect(() => {
+    const newSearchResults = characters.filter(({showDefault}) => showDefault);
+    setSearchResults(newSearchResults);
+  }, [characters])
   const search = (target: SearchTarget, texts: string[], showAll: boolean) => {
     const searchResults =
       target === SearchTarget.TAG
