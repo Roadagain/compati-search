@@ -16,9 +16,6 @@ export const useCharactersData = (dataName: string): CharactersDataState => {
     useState<CharactersDataState>([[], false]);
   useEffect(() => {
     new Promise<TaggedCharacter[]>((resolve) => {
-      if (dataName === 'sample') {
-        return resolve(loadSampleCharactersData());
-      }
       fetch(`/api/characters-data/${dataName}`)
         .then((res) => res.json())
         .then(loadCharactersDataFromJson)
