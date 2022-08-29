@@ -3,7 +3,6 @@ import {
   isTaggedCharacter,
   loadCharactersDataFromJson,
 } from './load-data';
-import charactersData from '../../sample/characters-data/sample.json';
 
 describe('isTag', () => {
   describe('データ形式が正しい場合', () => {
