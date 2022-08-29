@@ -16,7 +16,7 @@ export const SearchTemplate: React.FC<Props> = ({ dataName }) => {
     <Container sx={{ py: 2 }}>
       <Typography variant="h5">コンパチサーチ</Typography>
       {isLoading ? (
-        <CircularProgress sx={{ textAlign: 'center' }} />
+        <CircularProgress />
       ) : (
         <CharactersSearcher characters={characters} sx={{ mt: 2 }} />
       )}
