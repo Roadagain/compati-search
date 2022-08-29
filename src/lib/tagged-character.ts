@@ -35,7 +35,7 @@ export const filterCharactersByNameWords = (
   });
 };
 
-interface CategoryGroupedTag {
+export interface CategoryGroupedTag {
   category: string;
   tags: Tag[];
 }
