@@ -1,8 +1,5 @@
 import { useEffect, useState } from 'react';
-import {
-  loadCharactersDataFromJson,
-  loadSampleCharactersData,
-} from '../lib/load-data';
+import { loadCharactersDataFromJson } from '../lib/load-data';
 import { TaggedCharacter } from '../lib/tagged-character';
 
 type CharactersDataLoadingState = [[], false];
