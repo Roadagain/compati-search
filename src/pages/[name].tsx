@@ -1,15 +1,13 @@
 import { GetServerSideProps, NextPage } from 'next';
 import { SearchTemplate } from '../components/templates/SearchTemplate';
-import { useCharactersData } from '../hooks/characters-data';
 
 interface Props {
   name: string;
 }
 
-const NamedPage: NextPage<Props> = ({ name }) => {
-  const [characters] = useCharactersData(name);
-  return <SearchTemplate characters={characters} />;
-};
+const NamedPage: NextPage<Props> = ({ name }) => (
+  <SearchTemplate dataName={name} />
+);
 
 export default NamedPage;
 
