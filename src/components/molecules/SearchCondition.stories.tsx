@@ -20,6 +20,7 @@ const componentMeta: ComponentMeta<typeof SearchCondition> = {
     },
     texts: { control: 'object' },
     showAll: { control: 'boolean' },
+    character: { control: 'text' },
     sx: { control: 'object' },
   },
 };
@@ -34,6 +35,7 @@ SearchByTag.args = {
   target: SearchTarget.TAG,
   texts: ['あいうえお'],
   showAll: false,
+  character: 'キャラクター',
   sx: {},
 };
 
@@ -42,6 +44,7 @@ SearchByName.args = {
   target: SearchTarget.NAME,
   texts: ['かきくけこ'],
   showAll: false,
+  character: 'キャラクター',
   sx: {},
 };
 
@@ -50,6 +53,7 @@ ShowAll.args = {
   target: SearchTarget.TAG,
   texts: ['さしすせそ'],
   showAll: true,
+  character: 'キャラクター',
   sx: {},
 };
 
@@ -58,5 +62,6 @@ NotSearched.args = {
   target: SearchTarget.TAG,
   texts: [],
   showAll: false,
+  character: 'キャラクター',
   sx: {},
 };
