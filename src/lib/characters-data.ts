@@ -7,7 +7,7 @@ export interface CharactersData {
   metadata: Metadata;
 }
 
-type WouldBeCharactersData = { [K in keyof CharactersData]?: unknown };
+export type WouldBeCharactersData = { [K in keyof CharactersData]?: unknown };
 
 export const isCharactersData = (
   obj: WouldBeCharactersData

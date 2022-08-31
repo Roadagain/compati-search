@@ -1,6 +1,7 @@
 import {
   isTag,
   isTaggedCharacter,
+  loadCharactersDataFromJson,
   loadCharactersFromJson,
   loadMetadataFromJson,
 } from './load-data';
@@ -170,6 +171,61 @@ describe('loadMetadataFromJson', () => {
     };
     it('エラーが返る', () => {
       expect(() => loadMetadataFromJson(json)).toThrowError('Invalid metadata');
+    });
+  });
+});
+
+describe('loadCharactersData', () => {
+  describe('データ形式がCharactersDataに沿う場合', () => {
+    const json = {
+      characters: [
+        {
+          name: '名前',
+          tags: [
+            {
+              category: 'カテゴリー',
+              label: 'ラベル',
+            },
+          ],
+          showDefault: true,
+        },
+      ],
+      metadata: {
+        character: 'キャラクター',
+      },
+    };
+
+    it('読み込んだCharactersDataが返る', () => {
+      expect(loadCharactersDataFromJson(json)).toEqual({
+        characters: [
+          {
+            name: '名前',
+            tags: [
+              {
+                category: 'カテゴリー',
+                label: 'ラベル',
+              },
+            ],
+            showDefault: true,
+          },
+        ],
+        metadata: {
+          character: 'キャラクター',
+        },
+      });
+    });
+  });
+
+  describe('データ形式が不正な場合', () => {
+    const json = {
+      characters: 8,
+      metadata: undefined,
+    };
+
+    it('エラーが返る', () => {
+      expect(() => loadCharactersDataFromJson(json)).toThrowError(
+        'Invalid characters data'
+      );
     });
   });
 });
