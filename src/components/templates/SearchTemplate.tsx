@@ -11,14 +11,14 @@ export interface Props {
 }
 
 export const SearchTemplate: React.FC<Props> = ({ dataName }) => {
-  const [characters, isLoading] = useCharactersData(dataName);
+  const [charactersData, isLoading] = useCharactersData(dataName);
   if (isLoading) {
     return <LinearProgress />;
   }
   return (
     <Container sx={{ py: 2 }}>
       <Typography variant="h5">コンパチサーチ</Typography>
-      <CharactersSearcher characters={characters} sx={{ mt: 2 }} />
+      <CharactersSearcher charactersData={charactersData} sx={{ mt: 2 }} />
     </Container>
   );
 };
