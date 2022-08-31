@@ -18,13 +18,23 @@ interface Props {
   sx?: SxProps<Theme>;
 }
 
-export const TagBadge: React.FC<Props> = ({ children, onClick, sx }) => (
-  <Button
-    size="small"
-    variant="outlined"
-    onClick={() => onClick(children)}
-    sx={{ textTransform: 'none', ...sx }}
-  >
-    {children}
-  </Button>
-);
+export const TagBadge: React.FC<Props> = React.memo(function TagBadge({
+  children,
+  onClick,
+  sx,
+}) {
+  const onClickButton = React.useCallback(
+    () => onClick(children),
+    [onClick, children]
+  );
+  return (
+    <Button
+      size="small"
+      variant="outlined"
+      onClick={onClickButton}
+      sx={{ textTransform: 'none', ...sx }}
+    >
+      {children}
+    </Button>
+  );
+});

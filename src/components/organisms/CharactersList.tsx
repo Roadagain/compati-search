@@ -27,11 +27,7 @@ export const CharactersList: React.FC<Props> = ({
   <Grid container spacing={2} sx={sx}>
     {characters.map(({ name, tags }) => (
       <Grid item key={name} xs={12} sm={6} md={4}>
-        <CharacterCard
-          name={name}
-          tagLabels={tags.map(({ label }) => label)}
-          onClickTag={onClickTag}
-        />
+        <CharacterCard name={name} tags={tags} onClickTag={onClickTag} />
       </Grid>
     ))}
   </Grid>
