@@ -25,17 +25,20 @@ export const SearchTargetSelect: React.FC<Props> = ({
   onChange,
   sx,
 }) => {
-  const onSelect = (event: SelectChangeEvent<number>) => {
-    const { value } = event.target;
-    switch (value) {
-      case SearchTarget.TAG:
-      case SearchTarget.NAME:
-        onChange(value);
-        return;
-      default:
-        throw new Error('Invalid search target');
-    }
-  };
+  const onSelect = React.useCallback(
+    (event: SelectChangeEvent<number>) => {
+      const { value } = event.target;
+      switch (value) {
+        case SearchTarget.TAG:
+        case SearchTarget.NAME:
+          onChange(value);
+          return;
+        default:
+          throw new Error('Invalid search target');
+      }
+    },
+    [onChange]
+  );
   const theme = useTheme();
 
   return (

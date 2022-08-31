@@ -41,11 +41,13 @@ export const SearchCondition: React.FC<Props> = ({
   sx,
 }) => {
   const targetStr = target === SearchTarget.TAG ? 'タグ' : '名前';
-  const onChangeCheckbox: React.ChangeEventHandler<HTMLInputElement> = (
-    event
-  ) => {
-    onChangeShowAll(event.target.checked);
-  };
+  const onChangeCheckbox: React.ChangeEventHandler<HTMLInputElement> =
+    React.useCallback(
+      (event) => {
+        onChangeShowAll(event.target.checked);
+      },
+      [onChangeShowAll]
+    );
   const joinedText = texts.join(' ');
 
   return (
