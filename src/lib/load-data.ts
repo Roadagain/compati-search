@@ -1,3 +1,4 @@
+import { isMetadata, Metadata, WouldBeMetadata } from './metadata';
 import { Tag, TaggedCharacter } from './tagged-character';
 
 type WouldBeTaggedCharacter = { [K in keyof TaggedCharacter]?: unknown };
@@ -30,4 +31,13 @@ export const loadCharactersFromJson = (
     tags,
     showDefault,
   }));
+};
+
+export const loadMetadataFromJson = (json: WouldBeMetadata): Metadata => {
+  if (!isMetadata(json)) {
+    throw new Error('Invalid metadata');
+  }
+  return {
+    character: json.character,
+  };
 };

@@ -2,6 +2,7 @@ import {
   isTag,
   isTaggedCharacter,
   loadCharactersFromJson,
+  loadMetadataFromJson,
 } from './load-data';
 
 describe('isTag', () => {
@@ -146,6 +147,29 @@ describe('loadCharactersFromJson', () => {
       expect(() => loadCharactersFromJson(json)).toThrowError(
         'Invalid characters'
       );
+    });
+  });
+});
+
+describe('loadMetadataFromJson', () => {
+  describe('データ形式がMetadataに沿う場合', () => {
+    const json = {
+      character: 'キャラクター',
+    };
+
+    it('Metadataが返る', () => {
+      expect(loadMetadataFromJson(json)).toEqual({
+        character: 'キャラクター',
+      });
+    });
+  });
+
+  describe('データ形式がMetadataに沿わない場合', () => {
+    const json = {
+      character: 2,
+    };
+    it('エラーが返る', () => {
+      expect(() => loadMetadataFromJson(json)).toThrowError('Invalid metadata');
     });
   });
 });
