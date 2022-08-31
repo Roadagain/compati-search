@@ -1,7 +1,7 @@
 import {
   isTag,
   isTaggedCharacter,
-  loadCharactersDataFromJson,
+  loadCharactersFromJson,
 } from './load-data';
 
 describe('isTag', () => {
@@ -102,7 +102,7 @@ describe('isTaggedCharacter', () => {
   });
 });
 
-describe('loadCharactersDataFromJson', () => {
+describe('loadCharactersFromJson', () => {
   describe('データ形式が正しい場合', () => {
     const json = [
       {
@@ -121,7 +121,7 @@ describe('loadCharactersDataFromJson', () => {
     ];
 
     it('読み込んだキャラクターデータが返る', () => {
-      expect(loadCharactersDataFromJson(json)).toEqual(json);
+      expect(loadCharactersFromJson(json)).toEqual(json);
     });
   });
 
@@ -143,8 +143,8 @@ describe('loadCharactersDataFromJson', () => {
     ];
 
     it('エラーが返る', () => {
-      expect(() => loadCharactersDataFromJson(json)).toThrowError(
-        'Invalid characters data'
+      expect(() => loadCharactersFromJson(json)).toThrowError(
+        'Invalid characters'
       );
     });
   });

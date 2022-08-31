@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { loadCharactersDataFromJson } from '../lib/load-data';
+import { loadCharactersFromJson } from '../lib/load-data';
 import { TaggedCharacter } from '../lib/tagged-character';
 
 // [characters, isLoading]
@@ -20,7 +20,7 @@ export const useCharactersData = (dataName: string): CharactersDataState => {
         }
         return res.json();
       })
-      .then(loadCharactersDataFromJson)
+      .then(loadCharactersFromJson)
       .then((charactersData) => setCharactersDataState([charactersData, false]))
       .catch(console.error);
   }, [dataName]);

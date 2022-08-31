@@ -18,12 +18,12 @@ export const isTaggedCharacter = (
   );
 };
 
-export const loadCharactersDataFromJson = (
+export const loadCharactersFromJson = (
   json: WouldBeTaggedCharacter[]
 ): TaggedCharacter[] => {
   // 外部データを読み込むためランタイムで型を確認する
   if (!json.every(isTaggedCharacter)) {
-    throw new Error('Invalid characters data');
+    throw new Error('Invalid characters');
   }
   return json.map(({ name, tags, showDefault }) => ({
     name,
