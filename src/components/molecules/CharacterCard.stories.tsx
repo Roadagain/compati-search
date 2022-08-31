@@ -8,7 +8,7 @@ const componentMeta: ComponentMeta<typeof CharacterCard> = {
   component: CharacterCard,
   argTypes: {
     name: { control: 'text' },
-    tagLabels: { control: 'object' },
+    tags: { control: 'object' },
     sx: { control: 'object' },
   },
 };
@@ -21,13 +21,19 @@ const Template: ComponentStory<typeof CharacterCard> = (args) => (
 export const Card = Template.bind({});
 Card.args = {
   name: 'なまえ',
-  tagLabels: ['タグ1', 'タグ2'],
+  tags: [
+    { category: 'あいうえお', label: 'タグ1' },
+    { category: 'かきくけこ', label: 'タグ2' },
+  ],
   sx: {},
 };
 
 export const OverflowTags = Template.bind({});
 OverflowTags.args = {
   name: 'なまえ',
-  tagLabels: Array.from({ length: 32 }, (_, index) => `タグ${index + 1}`),
+  tags: Array.from({ length: 32 }, (_, index) => ({
+    category: `カテゴリー${index + 1}`,
+    label: `タグ${index + 1}`,
+  })),
   sx: {},
 };
