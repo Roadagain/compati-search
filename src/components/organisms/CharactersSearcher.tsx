@@ -11,19 +11,21 @@ import { SearchCondition } from '../molecules/SearchCondition';
 import { generateAutocompleteOptions } from '../../lib/autocomplete';
 import { SearchTarget } from '../../lib/search-target';
 import { CharactersList } from './CharactersList';
+import { CharactersData } from '../../lib/characters-data';
 
 interface Props {
   /**
    * 検索対象のキャラクター一覧
    */
-  characters: TaggedCharacter[];
+  charactersData: CharactersData;
   /**
    * テーマ関係のスタイル指定
    */
   sx?: SxProps<Theme>;
 }
 
-export const CharactersSearcher: React.FC<Props> = ({ characters, sx }) => {
+export const CharactersSearcher: React.FC<Props> = ({ charactersData, sx }) => {
+  const { characters, metadata } = charactersData;
   const [searchResults, setSearchResults] = React.useState<TaggedCharacter[]>(
     []
   );
@@ -33,36 +35,51 @@ export const CharactersSearcher: React.FC<Props> = ({ characters, sx }) => {
     );
     setSearchResults(newSearchResults);
   }, [characters]);
-  const search = (target: SearchTarget, texts: string[], showAll: boolean) => {
-    const searchResults =
-      target === SearchTarget.TAG
-        ? filterCharactersByTagLabels(characters, texts, showAll)
-        : filterCharactersByNameWords(characters, texts, showAll);
-    setSearchResults(searchResults);
-  };
+  const search = React.useCallback(
+    (target: SearchTarget, texts: string[], showAll: boolean) => {
+      const searchResults =
+        target === SearchTarget.TAG
+          ? filterCharactersByTagLabels(characters, texts, showAll)
+          : filterCharactersByNameWords(characters, texts, showAll);
+      setSearchResults(searchResults);
+    },
+    [characters, setSearchResults]
+  );
 
   const [searchTarget, setSearchTarget] = React.useState(SearchTarget.TAG);
   const [searchTexts, setSearchTexts] = React.useState<string[]>([]);
   const [showAll, setShowAll] = React.useState(false);
 
-  const onChangeSearchTarget = (newTarget: SearchTarget) => {
-    setSearchTarget(newTarget);
-    setSearchTexts([]);
-    search(newTarget, [], showAll);
-  };
-  const onChangeSearchTexts = (newTexts: string[]) => {
-    setSearchTexts(newTexts);
-    search(searchTarget, newTexts, showAll);
-  };
-  const onChangeShowAll = (showAll: boolean) => {
-    setShowAll(showAll);
-    search(searchTarget, searchTexts, showAll);
-  };
-  const onClickTag = (tagLabel: string) => {
-    setSearchTexts([tagLabel]);
-    setSearchTarget(SearchTarget.TAG);
-    search(SearchTarget.TAG, [tagLabel], showAll);
-  };
+  const onChangeSearchTarget = React.useCallback(
+    (newTarget: SearchTarget) => {
+      setSearchTarget(newTarget);
+      setSearchTexts([]);
+      search(newTarget, [], showAll);
+    },
+    [setSearchTarget, setSearchTexts, showAll, search]
+  );
+  const onChangeSearchTexts = React.useCallback(
+    (newTexts: string[]) => {
+      setSearchTexts(newTexts);
+      search(searchTarget, newTexts, showAll);
+    },
+    [setSearchTexts, searchTarget, showAll, search]
+  );
+  const onChangeShowAll = React.useCallback(
+    (showAll: boolean) => {
+      setShowAll(showAll);
+      search(searchTarget, searchTexts, showAll);
+    },
+    [setShowAll, searchTarget, searchTexts, search]
+  );
+  const onClickTag = React.useCallback(
+    (tagLabel: string) => {
+      setSearchTexts([tagLabel]);
+      setSearchTarget(SearchTarget.TAG);
+      search(SearchTarget.TAG, [tagLabel], showAll);
+    },
+    [setSearchTarget, setSearchTexts, showAll, search]
+  );
 
   const autocompleteOptions = generateAutocompleteOptions(
     characters,
@@ -84,6 +101,7 @@ export const CharactersSearcher: React.FC<Props> = ({ characters, sx }) => {
         texts={searchTexts}
         showAll={showAll}
         onChangeShowAll={onChangeShowAll}
+        character={metadata.character}
         sx={{ mt: 2 }}
       />
       <CharactersList

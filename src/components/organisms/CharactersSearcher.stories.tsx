@@ -7,7 +7,7 @@ const componentMeta: ComponentMeta<typeof CharactersSearcher> = {
   title: 'Organisms/CharactersSearcher',
   component: CharactersSearcher,
   argTypes: {
-    characters: { control: 'object' },
+    charactersData: { control: 'object' },
     sx: { control: 'object' },
   },
 };
@@ -19,25 +19,30 @@ const Template: ComponentStory<typeof CharactersSearcher> = (args) => (
 
 export const Search = Template.bind({});
 Search.args = {
-  characters: [
-    {
-      name: 'Alpha',
-      tags: [
-        { category: 'あ行', label: 'あいうえお' },
-        { category: 'か行', label: 'かきくけこ' },
-      ],
-      showDefault: true,
+  charactersData: {
+    characters: [
+      {
+        name: 'Alpha',
+        tags: [
+          { category: 'あ行', label: 'あいうえお' },
+          { category: 'か行', label: 'かきくけこ' },
+        ],
+        showDefault: true,
+      },
+      {
+        name: 'Beta',
+        tags: [{ category: 'か行', label: 'かきくけこ' }],
+        showDefault: true,
+      },
+      {
+        name: 'Gamma',
+        tags: [{ category: 'さ行', label: 'さしすせそ' }],
+        showDefault: false,
+      },
+    ],
+    metadata: {
+      character: 'テストキャラクター',
     },
-    {
-      name: 'Beta',
-      tags: [{ category: 'か行', label: 'かきくけこ' }],
-      showDefault: true,
-    },
-    {
-      name: 'Gamma',
-      tags: [{ category: 'さ行', label: 'さしすせそ' }],
-      showDefault: false,
-    },
-  ],
+  },
   sx: {},
 };

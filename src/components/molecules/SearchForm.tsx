@@ -55,11 +55,14 @@ export const SearchForm: React.FC<Props> = ({
   autocompleteOptions,
   sx,
 }) => {
-  const onTextChange = (_, texts: (string | AutocompleteOption)[]) => {
-    onChangeTexts(
-      texts.map((text) => (typeof text === 'string' ? text : text.label))
-    );
-  };
+  const onTextChange = React.useCallback(
+    (_, texts: (string | AutocompleteOption)[]) => {
+      onChangeTexts(
+        texts.map((text) => (typeof text === 'string' ? text : text.label))
+      );
+    },
+    [onChangeTexts]
+  );
   const theme = useTheme();
   const placeholder = `${target === SearchTarget.TAG ? 'タグ' : '名前'}を入力`;
 
