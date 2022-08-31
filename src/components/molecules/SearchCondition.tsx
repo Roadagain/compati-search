@@ -28,6 +28,10 @@ interface Props {
    */
   onChangeShowAll: (showAll: boolean) => void;
   /**
+   * キャラクターの呼称
+   */
+  character: string;
+  /**
    * テーマ関係のスタイル指定
    */
   sx?: SxProps<Theme>;
@@ -38,6 +42,7 @@ export const SearchCondition: React.FC<Props> = ({
   texts,
   showAll,
   onChangeShowAll,
+  character,
   sx,
 }) => {
   const targetStr = target === SearchTarget.TAG ? 'タグ' : '名前';
@@ -72,7 +77,7 @@ export const SearchCondition: React.FC<Props> = ({
       <FormGroup>
         <FormControlLabel
           control={<Switch checked={showAll} onChange={onChangeCheckbox} />}
-          label="全キャラクターを表示"
+          label={`全${character}を表示`}
         />
       </FormGroup>
     </Stack>

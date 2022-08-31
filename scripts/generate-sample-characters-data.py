@@ -32,4 +32,13 @@ for len_count in range(len(SET_TAGS) + 1):
         })
         count += 1
 
-print(json.dumps(characters, ensure_ascii=False, separators=(',', ':')))
+metadata = {
+    'character': 'サンプルキャラ'
+}
+
+characters_data = {
+    'characters': characters,
+    'metadata': metadata
+}
+
+print(json.dumps(characters_data, ensure_ascii=False, separators=(',', ':')))

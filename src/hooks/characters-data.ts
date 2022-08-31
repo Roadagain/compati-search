@@ -1,17 +1,17 @@
 import { useEffect, useState } from 'react';
+import { CharactersData } from '../lib/characters-data';
 import { loadCharactersDataFromJson } from '../lib/load-data';
-import { TaggedCharacter } from '../lib/tagged-character';
 
 // [characters, isLoading]
-type CharactersDataLoadingState = [[], true];
-type CharactersDataLoadedState = [TaggedCharacter[], false];
+type CharactersDataLoadingState = [null, true];
+type CharactersDataLoadedState = [CharactersData, false];
 type CharactersDataState =
   | CharactersDataLoadingState
   | CharactersDataLoadedState;
 
 export const useCharactersData = (dataName: string): CharactersDataState => {
   const [charactersDataState, setCharactersDataState] =
-    useState<CharactersDataState>([[], true]);
+    useState<CharactersDataState>([null, true]);
   useEffect(() => {
     fetch(`/api/characters-data/${dataName}`)
       .then((res) => {
