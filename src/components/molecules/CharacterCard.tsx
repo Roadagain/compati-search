@@ -9,6 +9,7 @@ import {
 import React from 'react';
 import { TagBadge } from '../atoms/TagBadge';
 import Stack from '@mui/material/Stack';
+import { Tag } from '../../lib/tagged-character';
 
 interface Props {
   /**
@@ -18,7 +19,7 @@ interface Props {
   /**
    * タグ一覧
    */
-  tagLabels: string[];
+  tags: Tag[];
   /**
    * タグクリック時のハンドラ
    * @param tagLabel - タグ
@@ -32,27 +33,30 @@ interface Props {
 
 export const CharacterCard: React.FC<Props> = ({
   name,
-  tagLabels,
+  tags,
   onClickTag,
   sx,
-}) => (
-  <Card elevation={2} sx={sx}>
-    <CardHeader title={name} />
-    <CardContent>
-      {/* スクロールバーがタグと被らないように下部余白を確保する */}
-      <Box pb={1} sx={{ overflowX: 'scroll' }}>
-        <Stack
-          direction="row"
-          spacing={1}
-          sx={{ display: 'inline-block', whiteSpace: 'nowrap' }}
-        >
-          {tagLabels.map((tagLabel) => (
-            <TagBadge key={tagLabel} onClick={onClickTag}>
-              {tagLabel}
-            </TagBadge>
-          ))}
-        </Stack>
-      </Box>
-    </CardContent>
-  </Card>
-);
+}) => {
+  const tagLabels = React.useMemo(() => tags.map(({ label }) => label), [tags]);
+  return (
+    <Card elevation={2} sx={sx}>
+      <CardHeader title={name} />
+      <CardContent>
+        {/* スクロールバーがタグと被らないように下部余白を確保する */}
+        <Box pb={1} sx={{ overflowX: 'scroll' }}>
+          <Stack
+            direction="row"
+            spacing={1}
+            sx={{ display: 'inline-block', whiteSpace: 'nowrap' }}
+          >
+            {tagLabels.map((tagLabel, index) => (
+              <TagBadge key={index} onClick={onClickTag}>
+                {tagLabel}
+              </TagBadge>
+            ))}
+          </Stack>
+        </Box>
+      </CardContent>
+    </Card>
+  );
+};
