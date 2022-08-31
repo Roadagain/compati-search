@@ -11,19 +11,21 @@ import { SearchCondition } from '../molecules/SearchCondition';
 import { generateAutocompleteOptions } from '../../lib/autocomplete';
 import { SearchTarget } from '../../lib/search-target';
 import { CharactersList } from './CharactersList';
+import { CharactersData } from '../../lib/characters-data';
 
 interface Props {
   /**
    * 検索対象のキャラクター一覧
    */
-  characters: TaggedCharacter[];
+  charactersData: CharactersData;
   /**
    * テーマ関係のスタイル指定
    */
   sx?: SxProps<Theme>;
 }
 
-export const CharactersSearcher: React.FC<Props> = ({ characters, sx }) => {
+export const CharactersSearcher: React.FC<Props> = ({ charactersData, sx }) => {
+  const { characters, metadata } = charactersData;
   const [searchResults, setSearchResults] = React.useState<TaggedCharacter[]>(
     []
   );
@@ -99,6 +101,7 @@ export const CharactersSearcher: React.FC<Props> = ({ characters, sx }) => {
         texts={searchTexts}
         showAll={showAll}
         onChangeShowAll={onChangeShowAll}
+        character={metadata.character}
         sx={{ mt: 2 }}
       />
       <CharactersList
