@@ -31,32 +31,29 @@ interface Props {
   sx?: SxProps<Theme>;
 }
 
-export const CharacterCard: React.FC<Props> = ({
-  name,
-  tags,
-  onClickTag,
-  sx,
-}) => {
-  const tagLabels = React.useMemo(() => tags.map(({ label }) => label), [tags]);
-  return (
-    <Card elevation={2} sx={sx}>
-      <CardHeader title={name} />
-      <CardContent>
-        {/* スクロールバーがタグと被らないように下部余白を確保する */}
-        <Box pb={1} sx={{ overflowX: 'scroll' }}>
-          <Stack
-            direction="row"
-            spacing={1}
-            sx={{ display: 'inline-block', whiteSpace: 'nowrap' }}
-          >
-            {tagLabels.map((tagLabel, index) => (
-              <TagBadge key={index} onClick={onClickTag}>
-                {tagLabel}
-              </TagBadge>
-            ))}
-          </Stack>
-        </Box>
-      </CardContent>
-    </Card>
-  );
-};
+export const CharacterCard: React.FC<Props> = React.memo(
+  function CharacterCard({ name, tags, onClickTag, sx }) {
+    const tagLabels = tags.map(({ label }) => label);
+    return (
+      <Card elevation={2} sx={sx}>
+        <CardHeader title={name} />
+        <CardContent>
+          {/* スクロールバーがタグと被らないように下部余白を確保する */}
+          <Box pb={1} sx={{ overflowX: 'scroll' }}>
+            <Stack
+              direction="row"
+              spacing={1}
+              sx={{ display: 'inline-block', whiteSpace: 'nowrap' }}
+            >
+              {tagLabels.map((tagLabel, index) => (
+                <TagBadge key={index} onClick={onClickTag}>
+                  {tagLabel}
+                </TagBadge>
+              ))}
+            </Stack>
+          </Box>
+        </CardContent>
+      </Card>
+    );
+  }
+);
