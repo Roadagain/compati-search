@@ -1,3 +1,5 @@
+import { SearchTarget } from './search-target';
+
 export interface Tag {
   category: string;
   label: string;
@@ -33,4 +35,18 @@ export const filterCharactersByNameWords = (
       (showAll || showDefault) && nameWords.every((word) => name.includes(word))
     );
   });
+};
+
+export const filterCharacters = (
+  characters: TaggedCharacter[],
+  target: SearchTarget,
+  words: string[],
+  showAll: boolean
+): TaggedCharacter[] => {
+  switch (target) {
+    case SearchTarget.TAG:
+      return filterCharactersByTagLabels(characters, words, showAll);
+    case SearchTarget.NAME:
+      return filterCharactersByNameWords(characters, words, showAll);
+  }
 };
