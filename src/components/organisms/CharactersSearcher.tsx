@@ -1,9 +1,5 @@
 import { SxProps, Theme } from '@mui/material';
 import React from 'react';
-import {
-  filterCharacters,
-  TaggedCharacter,
-} from '../../lib/tagged-character';
 import { SearchForm } from '../molecules/SearchForm';
 import Box from '@mui/material/Box';
 import { SearchCondition } from '../molecules/SearchCondition';
@@ -11,6 +7,7 @@ import { generateAutocompleteOptions } from '../../lib/autocomplete';
 import { SearchTarget } from '../../lib/search-target';
 import { CharactersList } from './CharactersList';
 import { CharactersData } from '../../lib/characters-data';
+import { useFlux } from '../../flux';
 
 interface Props {
   /**
@@ -25,56 +22,43 @@ interface Props {
 
 export const CharactersSearcher: React.FC<Props> = ({ charactersData, sx }) => {
   const { characters, metadata } = charactersData;
-  const [searchResults, setSearchResults] = React.useState<TaggedCharacter[]>(
-    []
-  );
+  const { state, dispatch } = useFlux();
   React.useEffect(() => {
-    const newSearchResults = characters.filter(
-      ({ showDefault }) => showDefault
-    );
-    setSearchResults(newSearchResults);
-  }, [characters]);
-  const search = React.useCallback(
-    (target: SearchTarget, texts: string[], showAll: boolean) => {
-      const searchResults = filterCharacters(characters, target, texts, showAll);
-      setSearchResults(searchResults);
-    },
-    [characters, setSearchResults]
-  );
-
-  const [searchTarget, setSearchTarget] = React.useState(SearchTarget.TAG);
-  const [searchTexts, setSearchTexts] = React.useState<string[]>([]);
-  const [showAll, setShowAll] = React.useState(false);
+    dispatch({
+      type: 'load-characters',
+      characters,
+    });
+  }, [dispatch, characters]);
+  const {
+    target: searchTarget,
+    words: searchTexts,
+    showAll,
+    results: searchResults,
+  } = state.search;
 
   const onChangeSearchTarget = React.useCallback(
-    (newTarget: SearchTarget) => {
-      setSearchTarget(newTarget);
-      setSearchTexts([]);
-      search(newTarget, [], showAll);
+    (target: SearchTarget) => {
+      dispatch({ type: 'change-search-target', target });
     },
-    [setSearchTarget, setSearchTexts, showAll, search]
+    [dispatch]
   );
   const onChangeSearchTexts = React.useCallback(
-    (newTexts: string[]) => {
-      setSearchTexts(newTexts);
-      search(searchTarget, newTexts, showAll);
+    (words: string[]) => {
+      dispatch({ type: 'change-search-words', words });
     },
-    [setSearchTexts, searchTarget, showAll, search]
+    [dispatch]
   );
   const onChangeShowAll = React.useCallback(
     (showAll: boolean) => {
-      setShowAll(showAll);
-      search(searchTarget, searchTexts, showAll);
+      dispatch({ type: 'change-show-all', showAll });
     },
-    [setShowAll, searchTarget, searchTexts, search]
+    [dispatch]
   );
   const onClickTag = React.useCallback(
-    (tagLabel: string) => {
-      setSearchTexts([tagLabel]);
-      setSearchTarget(SearchTarget.TAG);
-      search(SearchTarget.TAG, [tagLabel], showAll);
+    (label: string) => {
+      dispatch({ type: 'click-tag', label });
     },
-    [setSearchTarget, setSearchTexts, showAll, search]
+    [dispatch]
   );
 
   const autocompleteOptions = generateAutocompleteOptions(
