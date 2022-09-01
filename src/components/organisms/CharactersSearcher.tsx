@@ -1,8 +1,7 @@
 import { SxProps, Theme } from '@mui/material';
 import React from 'react';
 import {
-  filterCharactersByNameWords,
-  filterCharactersByTagLabels,
+  filterCharacters,
   TaggedCharacter,
 } from '../../lib/tagged-character';
 import { SearchForm } from '../molecules/SearchForm';
@@ -37,10 +36,7 @@ export const CharactersSearcher: React.FC<Props> = ({ charactersData, sx }) => {
   }, [characters]);
   const search = React.useCallback(
     (target: SearchTarget, texts: string[], showAll: boolean) => {
-      const searchResults =
-        target === SearchTarget.TAG
-          ? filterCharactersByTagLabels(characters, texts, showAll)
-          : filterCharactersByNameWords(characters, texts, showAll);
+      const searchResults = filterCharacters(characters, target, texts, showAll);
       setSearchResults(searchResults);
     },
     [characters, setSearchResults]
