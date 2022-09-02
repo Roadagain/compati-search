@@ -20,7 +20,7 @@ export const initialState: State = {
   isReady: false,
   characters: [],
   metadata: {
-    character: 'キャラクター',
+    character: '',
   },
   search: {
     target: SearchTarget.TAG,
