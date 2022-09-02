@@ -1,7 +1,10 @@
 import React from 'react';
 import { Container, LinearProgress, Typography } from '@mui/material';
-import { CharactersSearcher } from '../../components/organisms/CharactersSearcher';
-import { useCharactersData } from '../../hooks/characters-data';
+import { FluxContext } from '../../flux/context';
+import { SearchForm } from '../organisms/SearchForm';
+import { SearchCondition } from '../organisms/SearchCondition';
+import { SearchResults } from '../organisms/SearchResults';
+import { fetchCharactersData } from '../../lib/fetch-data';
 
 export interface Props {
   /**
@@ -11,14 +14,27 @@ export interface Props {
 }
 
 export const SearchTemplate: React.FC<Props> = ({ dataName }) => {
-  const [charactersData, isLoading] = useCharactersData(dataName);
-  if (isLoading) {
+  const { state, dispatch } = React.useContext(FluxContext);
+  React.useEffect(() => {
+    fetchCharactersData(dataName)
+      .then((charactersData) => {
+        dispatch({
+          type: 'load-characters-data',
+          charactersData,
+        });
+      })
+      .catch(console.error);
+  }, [dataName, dispatch]);
+
+  if (!state.isReady) {
     return <LinearProgress />;
   }
   return (
     <Container sx={{ py: 2 }}>
       <Typography variant="h5">コンパチサーチ</Typography>
-      <CharactersSearcher charactersData={charactersData} sx={{ mt: 2 }} />
+      <SearchForm sx={{ mt: 2 }} />
+      <SearchCondition sx={{ mt: 2 }} />
+      <SearchResults sx={{ mt: 1 }} />
     </Container>
   );
 };

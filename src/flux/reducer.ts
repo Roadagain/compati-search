@@ -5,14 +5,14 @@ import {
   onChangeSearchWords,
   onChangeShowAll,
   onClickTag,
-  onLoadCharacters,
+  onLoadCharactersData,
 } from './dispatch';
 import { State } from './state';
 
 export const reducer: Reducer<State, Action> = (state, action) => {
   switch (action.type) {
-    case 'load-characters':
-      return onLoadCharacters(state, action.characters);
+    case 'load-characters-data':
+      return onLoadCharactersData(state, action.charactersData);
     case 'change-search-target':
       return onChangeSearchTarget(state, action.target);
     case 'change-search-words':

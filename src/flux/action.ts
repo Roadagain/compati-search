@@ -1,9 +1,9 @@
+import { CharactersData } from '../lib/characters-data';
 import { SearchTarget } from '../lib/search-target';
-import { TaggedCharacter } from '../lib/tagged-character';
 
-interface LoadCharacters {
-  type: 'load-characters';
-  characters: TaggedCharacter[];
+interface LoadCharactersData {
+  type: 'load-characters-data';
+  charactersData: CharactersData;
 }
 
 interface ChangeSearchTargetAction {
@@ -27,7 +27,7 @@ interface ClickTag {
 }
 
 export type Action =
-  | LoadCharacters
+  | LoadCharactersData
   | ChangeSearchTargetAction
   | ChangeSearchWordsAction
   | ChangeShowAllAction

@@ -4,7 +4,7 @@ import {
   onChangeSearchWords,
   onChangeShowAll,
   onClickTag,
-  onLoadCharacters,
+  onLoadCharactersData,
 } from './dispatch';
 import { reducer } from './reducer';
 import { initialState } from './state';
@@ -16,7 +16,7 @@ describe('reducer', () => {
 
   describe.each`
     type                      | method
-    ${'load-characters'}      | ${onLoadCharacters}
+    ${'load-characters-data'} | ${onLoadCharactersData}
     ${'change-search-target'} | ${onChangeSearchTarget}
     ${'change-search-words'}  | ${onChangeSearchWords}
     ${'change-show-all'}      | ${onChangeShowAll}

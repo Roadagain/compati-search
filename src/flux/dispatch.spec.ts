@@ -1,3 +1,5 @@
+import { CharactersData } from '../lib/characters-data';
+import { Metadata } from '../lib/metadata';
 import { SearchTarget } from '../lib/search-target';
 import { filterCharacters, TaggedCharacter } from '../lib/tagged-character';
 import {
@@ -5,7 +7,7 @@ import {
   onChangeSearchWords,
   onChangeShowAll,
   onClickTag,
-  onLoadCharacters,
+  onLoadCharactersData,
 } from './dispatch';
 import { State } from './state';
 
@@ -13,7 +15,11 @@ jest.mock('../lib/tagged-character');
 
 describe('各dispatchの対応', () => {
   const state: Readonly<State> = {
+    isReady: false,
     characters: [],
+    metadata: {
+      character: '',
+    },
     search: {
       target: SearchTarget.TAG,
       words: [],
@@ -52,13 +58,28 @@ describe('各dispatchの対応', () => {
       characterShowDefault,
       characterHiddenDefault,
     ];
+    const metadata: Metadata = {
+      character: 'きゃらくた',
+    };
+    const charactersData: CharactersData = {
+      characters,
+      metadata,
+    };
 
     beforeEach(() => {
-      nextState = onLoadCharacters(state, characters);
+      nextState = onLoadCharactersData(state, charactersData);
     });
 
-    it('キャラクターが追加される', () => {
+    it('準備完了フラグが変更されている', () => {
+      expect(nextState.isReady).toBeTruthy();
+    });
+
+    it('キャラクターが変更されている', () => {
       expect(nextState.characters).toEqual(characters);
+    });
+
+    it('メタデータが変更されている', () => {
+      expect(nextState.metadata).toEqual(metadata);
     });
 
     it('フィルタ関数が呼び出されている', () => {
