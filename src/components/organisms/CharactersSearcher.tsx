@@ -23,10 +23,10 @@ export const CharactersSearcher: React.FC<Props> = ({ charactersData, sx }) => {
   const { dispatch } = React.useContext(FluxContext);
   React.useEffect(() => {
     dispatch({
-      type: 'load-characters',
-      characters,
+      type: 'load-characters-data',
+      charactersData,
     });
-  }, [dispatch, characters]);
+  }, [dispatch, charactersData]);
 
   return (
     <Box sx={sx}>

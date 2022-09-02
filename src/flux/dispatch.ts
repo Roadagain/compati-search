@@ -1,17 +1,20 @@
+import { CharactersData } from '../lib/characters-data';
 import { SearchTarget } from '../lib/search-target';
-import { filterCharacters, TaggedCharacter } from '../lib/tagged-character';
+import { filterCharacters } from '../lib/tagged-character';
 import { State } from './state';
 
-export const onLoadCharacters = (
+export const onLoadCharactersData = (
   state: State,
-  characters: TaggedCharacter[]
+  charactersData: CharactersData
 ): State => {
+  const { characters, metadata } = charactersData;
   const { search } = state;
   const { target, words, showAll } = search;
   const results = filterCharacters(characters, target, words, showAll);
   return {
     ...state,
     characters,
+    metadata,
     search: {
       ...search,
       results,
