@@ -1,10 +1,10 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { CharactersList } from './CharactersList';
+import { SearchResults } from './SearchResults';
 
-const componentMeta: ComponentMeta<typeof CharactersList> = {
-  title: 'Organisms/CharactersList',
-  component: CharactersList,
+const componentMeta: ComponentMeta<typeof SearchResults> = {
+  title: 'Organisms/SearchResult',
+  component: SearchResults,
   argTypes: {
     characters: { control: 'object' },
     sx: { control: 'object' },
@@ -12,8 +12,8 @@ const componentMeta: ComponentMeta<typeof CharactersList> = {
 };
 export default componentMeta;
 
-const Template: ComponentStory<typeof CharactersList> = (args) => (
-  <CharactersList {...args} />
+const Template: ComponentStory<typeof SearchResults> = (args) => (
+  <SearchResults {...args} />
 );
 
 export const List = Template.bind({});

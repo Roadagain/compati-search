@@ -3,7 +3,7 @@ import React from 'react';
 import { SearchForm } from './SearchForm';
 import Box from '@mui/material/Box';
 import { SearchCondition } from '../molecules/SearchCondition';
-import { CharactersList } from './CharactersList';
+import { SearchResults } from './SearchResults';
 import { CharactersData } from '../../lib/characters-data';
 import { FluxContext } from '../../flux/context';
 
@@ -47,7 +47,7 @@ export const CharactersSearcher: React.FC<Props> = ({ charactersData, sx }) => {
         character={metadata.character}
         sx={{ mt: 2 }}
       />
-      <CharactersList sx={{ mt: 1 }} />
+      <SearchResults sx={{ mt: 1 }} />
     </Box>
   );
 };

@@ -10,7 +10,7 @@ interface Props {
   sx: SxProps<Theme>;
 }
 
-export const CharactersList: React.FC<Props> = ({ sx }) => {
+export const SearchResults: React.FC<Props> = ({ sx }) => {
   const { state, dispatch } = React.useContext(FluxContext);
   const characters = state.search.results;
   const onClickTag = React.useCallback(
