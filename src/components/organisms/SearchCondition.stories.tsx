@@ -7,7 +7,6 @@ const componentMeta: ComponentMeta<typeof SearchCondition> = {
   title: 'Organisms/SearchCondition',
   component: SearchCondition,
   argTypes: {
-    character: { control: 'text' },
     sx: { control: 'object' },
   },
 };
