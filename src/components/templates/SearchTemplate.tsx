@@ -5,7 +5,6 @@ import { SearchForm } from '../organisms/SearchForm';
 import { SearchCondition } from '../organisms/SearchCondition';
 import { SearchResults } from '../organisms/SearchResults';
 import { loadCharactersDataFromJson } from '../../lib/load-data';
-import { useCharactersData } from '../../hooks/characters-data';
 
 export interface Props {
   /**
@@ -15,8 +14,26 @@ export interface Props {
 }
 
 export const SearchTemplate: React.FC<Props> = ({ dataName }) => {
-  const { charactersData, isLoading } = useCharactersData(dataName);
-  if (isLoading) {
+  const { state, dispatch } = React.useContext(FluxContext);
+  React.useEffect(() => {
+    fetch(`/api/characters-data/${dataName}`)
+      .then((res) => {
+        if (res.status === 404) {
+          throw new Error('Not Found');
+        }
+        return res.json();
+      })
+      .then(loadCharactersDataFromJson)
+      .then((charactersData) => {
+        dispatch({
+          type: 'load-characters-data',
+          charactersData,
+        });
+      })
+      .catch(console.error);
+  }, [dataName, dispatch]);
+
+  if (!state.isReady) {
     return <LinearProgress />;
   }
   return (
