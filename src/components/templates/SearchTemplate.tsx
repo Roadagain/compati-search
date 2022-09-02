@@ -1,8 +1,11 @@
 import React from 'react';
 import { Container, LinearProgress, Typography } from '@mui/material';
-import { CharactersSearcher } from '../../components/organisms/CharactersSearcher';
+import { FluxContext } from '../../flux/context';
+import { SearchForm } from '../organisms/SearchForm';
+import { SearchCondition } from '../organisms/SearchCondition';
+import { SearchResults } from '../organisms/SearchResults';
+import { loadCharactersDataFromJson } from '../../lib/load-data';
 import { useCharactersData } from '../../hooks/characters-data';
-import { FluxProvider } from '../../flux/context';
 
 export interface Props {
   /**
@@ -17,11 +20,11 @@ export const SearchTemplate: React.FC<Props> = ({ dataName }) => {
     return <LinearProgress />;
   }
   return (
-    <FluxProvider>
-      <Container sx={{ py: 2 }}>
-        <Typography variant="h5">コンパチサーチ</Typography>
-        <CharactersSearcher charactersData={charactersData} sx={{ mt: 2 }} />
-      </Container>
-    </FluxProvider>
+    <Container sx={{ py: 2 }}>
+      <Typography variant="h5">コンパチサーチ</Typography>
+      <SearchForm sx={{ mt: 2 }} />
+      <SearchCondition sx={{ mt: 2 }} />
+      <SearchResults sx={{ mt: 1 }} />
+    </Container>
   );
 };
