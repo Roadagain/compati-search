@@ -9,6 +9,7 @@ import '@fontsource/noto-sans-jp/900.css';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import { theme } from '../styles/theme';
 import Head from 'next/head';
+import { FluxProvider } from '../flux/context';
 
 const AppLayout = ({ Component, pageProps }: AppProps) => (
   <main>
@@ -17,7 +18,9 @@ const AppLayout = ({ Component, pageProps }: AppProps) => (
     </Head>
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Component {...pageProps} />
+      <FluxProvider>
+        <Component {...pageProps} />
+      </FluxProvider>
     </ThemeProvider>
   </main>
 );
