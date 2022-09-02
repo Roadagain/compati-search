@@ -1,14 +1,7 @@
-import {
-  FormControlLabel,
-  FormGroup,
-  Stack,
-  Switch,
-  SxProps,
-  Theme,
-  Typography,
-} from '@mui/material';
+import { Stack, SxProps, Theme, Typography } from '@mui/material';
 import React from 'react';
 import { SearchTarget } from '../../lib/search-target';
+import { ShowAllCharactersSwitch } from './ShowAllCharactersSwitch';
 
 interface Props {
   /**
@@ -46,13 +39,12 @@ export const SearchCondition: React.FC<Props> = ({
   sx,
 }) => {
   const targetStr = target === SearchTarget.TAG ? 'タグ' : '名前';
-  const onChangeCheckbox: React.ChangeEventHandler<HTMLInputElement> =
-    React.useCallback(
-      (event) => {
-        onChangeShowAll(event.target.checked);
-      },
-      [onChangeShowAll]
-    );
+  const onChangeSwitch = React.useCallback(
+    (showAll: boolean) => {
+      onChangeShowAll(showAll);
+    },
+    [onChangeShowAll]
+  );
   const joinedText = texts.join(' ');
 
   return (
@@ -74,12 +66,11 @@ export const SearchCondition: React.FC<Props> = ({
           '検索条件なし'
         )}
       </Typography>
-      <FormGroup>
-        <FormControlLabel
-          control={<Switch checked={showAll} onChange={onChangeCheckbox} />}
-          label={`全${character}を表示`}
-        />
-      </FormGroup>
+      <ShowAllCharactersSwitch
+        checked={showAll}
+        character={character}
+        onChange={onChangeSwitch}
+      />
     </Stack>
   );
 };
