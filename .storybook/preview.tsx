@@ -6,8 +6,8 @@ import '@fontsource/noto-sans-jp/700.css';
 import '@fontsource/noto-sans-jp/900.css';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import { theme } from '../src/styles/theme';
-import React from 'react'
-import { TestFluxProvider } from '../src/test-utils/flux'
+import React from 'react';
+import { TestFluxProvider } from '../src/test-utils/flux';
 
 export const decorators = [
   (Story) => (
