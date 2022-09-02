@@ -29,12 +29,7 @@ export const CharactersSearcher: React.FC<Props> = ({ charactersData, sx }) => {
       characters,
     });
   }, [dispatch, characters]);
-  const {
-    target: searchTarget,
-    words: searchTexts,
-    showAll,
-    results: searchResults,
-  } = state.search;
+  const { target: searchTarget, words: searchTexts, showAll } = state.search;
 
   const onChangeSearchTarget = React.useCallback(
     (target: SearchTarget) => {
@@ -51,12 +46,6 @@ export const CharactersSearcher: React.FC<Props> = ({ charactersData, sx }) => {
   const onChangeShowAll = React.useCallback(
     (showAll: boolean) => {
       dispatch({ type: 'change-show-all', showAll });
-    },
-    [dispatch]
-  );
-  const onClickTag = React.useCallback(
-    (label: string) => {
-      dispatch({ type: 'click-tag', label });
     },
     [dispatch]
   );
@@ -84,11 +73,7 @@ export const CharactersSearcher: React.FC<Props> = ({ charactersData, sx }) => {
         character={metadata.character}
         sx={{ mt: 2 }}
       />
-      <CharactersList
-        characters={searchResults}
-        onClickTag={onClickTag}
-        sx={{ mt: 1 }}
-      />
+      <CharactersList sx={{ mt: 1 }} />
     </Box>
   );
 };
