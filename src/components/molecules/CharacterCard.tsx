@@ -33,7 +33,7 @@ interface Props {
 
 export const CharacterCard: React.FC<Props> = React.memo(
   function CharacterCard({ name, tags, onClickTag, sx }) {
-    const tagLabels = tags.map(({ label }) => label);
+    const tagLabels = Array.from(new Set(tags.map(({ label }) => label)));
     return (
       <Card elevation={2} sx={sx}>
         <CardHeader title={name} />
