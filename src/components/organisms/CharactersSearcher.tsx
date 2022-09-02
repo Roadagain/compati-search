@@ -19,7 +19,6 @@ interface Props {
 }
 
 export const CharactersSearcher: React.FC<Props> = ({ charactersData, sx }) => {
-  const { characters, metadata } = charactersData;
   const { dispatch } = React.useContext(FluxContext);
   React.useEffect(() => {
     dispatch({
@@ -31,7 +30,7 @@ export const CharactersSearcher: React.FC<Props> = ({ charactersData, sx }) => {
   return (
     <Box sx={sx}>
       <SearchForm />
-      <SearchCondition character={metadata.character} sx={{ mt: 2 }} />
+      <SearchCondition sx={{ mt: 2 }} />
       <SearchResults sx={{ mt: 1 }} />
     </Box>
   );

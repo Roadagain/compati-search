@@ -6,18 +6,15 @@ import { ShowAllCharactersSwitch } from '../molecules/ShowAllCharactersSwitch';
 
 interface Props {
   /**
-   * キャラクターの呼称
-   */
-  character: string;
-  /**
    * テーマ関係のスタイル指定
    */
   sx?: SxProps<Theme>;
 }
 
-export const SearchCondition: React.FC<Props> = ({ character, sx }) => {
+export const SearchCondition: React.FC<Props> = ({ sx }) => {
   const { state, dispatch } = React.useContext(FluxContext);
   const { target, words, showAll } = state.search;
+  const { character } = state.metadata;
   const onChangeSwitch = React.useCallback(
     (showAll: boolean) => {
       dispatch({ type: 'change-show-all', showAll });
