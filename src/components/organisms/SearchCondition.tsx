@@ -1,25 +1,10 @@
 import { Stack, SxProps, Theme, Typography } from '@mui/material';
 import React from 'react';
+import { FluxContext } from '../../flux/context';
 import { SearchTarget } from '../../lib/search-target';
 import { ShowAllCharactersSwitch } from '../molecules/ShowAllCharactersSwitch';
 
 interface Props {
-  /**
-   * 検索対象
-   */
-  target: SearchTarget;
-  /**
-   * 検索文字列
-   */
-  texts: string[];
-  /**
-   * 全キャラ表示フラグ
-   */
-  showAll: boolean;
-  /**
-   * 全キャラ表示フラグの変更ハンドラ
-   */
-  onChangeShowAll: (showAll: boolean) => void;
   /**
    * キャラクターの呼称
    */
@@ -30,20 +15,15 @@ interface Props {
   sx?: SxProps<Theme>;
 }
 
-export const SearchCondition: React.FC<Props> = ({
-  target,
-  texts,
-  showAll,
-  onChangeShowAll,
-  character,
-  sx,
-}) => {
+export const SearchCondition: React.FC<Props> = ({ character, sx }) => {
+  const { state, dispatch } = React.useContext(FluxContext);
+  const { target, words, showAll } = state.search;
   const targetStr = target === SearchTarget.TAG ? 'タグ' : '名前';
   const onChangeSwitch = React.useCallback(
     (showAll: boolean) => {
-      onChangeShowAll(showAll);
+      dispatch({ type: 'change-show-all', showAll });
     },
-    [onChangeShowAll]
+    [dispatch]
   );
   const joinedText = texts.join(' ');
 

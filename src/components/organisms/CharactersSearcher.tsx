@@ -20,33 +20,18 @@ interface Props {
 
 export const CharactersSearcher: React.FC<Props> = ({ charactersData, sx }) => {
   const { characters, metadata } = charactersData;
-  const { state, dispatch } = React.useContext(FluxContext);
+  const { dispatch } = React.useContext(FluxContext);
   React.useEffect(() => {
     dispatch({
       type: 'load-characters',
       characters,
     });
   }, [dispatch, characters]);
-  const { target: searchTarget, words: searchTexts, showAll } = state.search;
-
-  const onChangeShowAll = React.useCallback(
-    (showAll: boolean) => {
-      dispatch({ type: 'change-show-all', showAll });
-    },
-    [dispatch]
-  );
 
   return (
     <Box sx={sx}>
       <SearchForm />
-      <SearchCondition
-        target={searchTarget}
-        texts={searchTexts}
-        showAll={showAll}
-        onChangeShowAll={onChangeShowAll}
-        character={metadata.character}
-        sx={{ mt: 2 }}
-      />
+      <SearchCondition character={metadata.character} sx={{ mt: 2 }} />
       <SearchResults sx={{ mt: 1 }} />
     </Box>
   );
