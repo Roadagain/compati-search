@@ -6,52 +6,41 @@ import Autocomplete from '@mui/material/Autocomplete';
 import { Chip, TextField } from '@mui/material';
 import { SearchTarget } from '../../lib/search-target';
 import { Tag } from '../../lib/tagged-character';
-import { AutocompleteOption } from '../../lib/autocomplete';
+import {
+  AutocompleteOption,
+  generateAutocompleteOptions,
+} from '../../lib/autocomplete';
+import { FluxContext } from '../../flux/context';
 
 interface Props {
-  /**
-   * 検索対象
-   */
-  target: SearchTarget;
-  /**
-   * 検索対象の変更ハンドラ
-   * @param target - 変更後の検索対象
-   */
-  onChangeTarget: (target: SearchTarget) => void;
-  /**
-   * 検索文字列
-   */
-  texts: string[];
-  /**
-   * 検索文字列の変更ハンドラ
-   * @param texts - 変更後の検索文字列
-   */
-  onChangeTexts: (texts: string[]) => void;
-  /**
-   * 検索ワードの補完候補
-   */
-  autocompleteOptions: AutocompleteOption[];
   /**
    * テーマ関係のスタイル指定
    */
   sx?: SxProps<Theme>;
 }
 
-export const SearchForm: React.FC<Props> = ({
-  target,
-  onChangeTarget,
-  texts,
-  onChangeTexts,
-  autocompleteOptions,
-  sx,
-}) => {
-  const onTextChange = React.useCallback(
-    (_, texts: (string | AutocompleteOption)[]) => {
-      onChangeTexts(
-        texts.map((text) => (typeof text === 'string' ? text : text.label))
-      );
+export const SearchForm: React.FC<Props> = ({ sx }) => {
+  const { state, dispatch } = React.useContext(FluxContext);
+  const { target, words, showAll } = state.search;
+  const onChangeTarget = React.useCallback(
+    (target: SearchTarget) => {
+      dispatch({ type: 'change-search-target', target });
     },
-    [onChangeTexts]
+    [dispatch]
+  );
+  const onChangeWords = React.useCallback(
+    (_, values: (string | AutocompleteOption)[]) => {
+      const words = values.map((value) => {
+        return typeof value === 'string' ? value : value.label;
+      });
+      dispatch({ type: 'change-search-words', words });
+    },
+    [dispatch]
+  );
+  const autocompleteOptions = generateAutocompleteOptions(
+    state.characters,
+    target,
+    showAll
   );
   const theme = useTheme();
   const placeholder = `${target === SearchTarget.TAG ? 'タグ' : '名前'}を入力`;
@@ -64,8 +53,8 @@ export const SearchForm: React.FC<Props> = ({
         freeSolo
         multiple
         filterSelectedOptions
-        value={texts}
-        onChange={onTextChange}
+        value={words}
+        onChange={onChangeWords}
         options={autocompleteOptions}
         groupBy={
           target === SearchTarget.TAG

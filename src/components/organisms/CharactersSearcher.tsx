@@ -3,8 +3,6 @@ import React from 'react';
 import { SearchForm } from './SearchForm';
 import Box from '@mui/material/Box';
 import { SearchCondition } from '../molecules/SearchCondition';
-import { generateAutocompleteOptions } from '../../lib/autocomplete';
-import { SearchTarget } from '../../lib/search-target';
 import { CharactersList } from './CharactersList';
 import { CharactersData } from '../../lib/characters-data';
 import { FluxContext } from '../../flux/context';
@@ -31,18 +29,6 @@ export const CharactersSearcher: React.FC<Props> = ({ charactersData, sx }) => {
   }, [dispatch, characters]);
   const { target: searchTarget, words: searchTexts, showAll } = state.search;
 
-  const onChangeSearchTarget = React.useCallback(
-    (target: SearchTarget) => {
-      dispatch({ type: 'change-search-target', target });
-    },
-    [dispatch]
-  );
-  const onChangeSearchTexts = React.useCallback(
-    (words: string[]) => {
-      dispatch({ type: 'change-search-words', words });
-    },
-    [dispatch]
-  );
   const onChangeShowAll = React.useCallback(
     (showAll: boolean) => {
       dispatch({ type: 'change-show-all', showAll });
@@ -50,21 +36,9 @@ export const CharactersSearcher: React.FC<Props> = ({ charactersData, sx }) => {
     [dispatch]
   );
 
-  const autocompleteOptions = generateAutocompleteOptions(
-    characters,
-    searchTarget,
-    showAll
-  );
-
   return (
     <Box sx={sx}>
-      <SearchForm
-        target={searchTarget}
-        onChangeTarget={onChangeSearchTarget}
-        texts={searchTexts}
-        onChangeTexts={onChangeSearchTexts}
-        autocompleteOptions={autocompleteOptions}
-      />
+      <SearchForm />
       <SearchCondition
         target={searchTarget}
         texts={searchTexts}
