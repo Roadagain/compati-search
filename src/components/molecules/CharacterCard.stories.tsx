@@ -37,3 +37,14 @@ OverflowTags.args = {
   })),
   sx: {},
 };
+
+export const DuplicateTagLabels = Template.bind({});
+DuplicateTagLabels.args = {
+  name: 'なまえ',
+  tags: [
+    { category: 'あいうえお', label: 'タグ1' },
+    { category: 'かきくけこ', label: 'タグ2' },
+    { category: 'さしすせそ', label: 'タグ2' },
+  ],
+  sx: {},
+};
