@@ -45,8 +45,8 @@ export const CharacterCard: React.FC<Props> = React.memo(
               spacing={1}
               sx={{ display: 'inline-block', whiteSpace: 'nowrap' }}
             >
-              {tagLabels.map((tagLabel, index) => (
-                <TagBadge key={index} onClick={onClickTag}>
+              {tagLabels.map((tagLabel) => (
+                <TagBadge key={tagLabel} onClick={onClickTag}>
                   {tagLabel}
                 </TagBadge>
               ))}
