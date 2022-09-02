@@ -7,7 +7,7 @@ import { generateAutocompleteOptions } from '../../lib/autocomplete';
 import { SearchTarget } from '../../lib/search-target';
 import { CharactersList } from './CharactersList';
 import { CharactersData } from '../../lib/characters-data';
-import { useFlux } from '../../flux';
+import { FluxContext } from '../../flux/context';
 
 interface Props {
   /**
@@ -22,7 +22,7 @@ interface Props {
 
 export const CharactersSearcher: React.FC<Props> = ({ charactersData, sx }) => {
   const { characters, metadata } = charactersData;
-  const { state, dispatch } = useFlux();
+  const { state, dispatch } = React.useContext(FluxContext);
   React.useEffect(() => {
     dispatch({
       type: 'load-characters',
