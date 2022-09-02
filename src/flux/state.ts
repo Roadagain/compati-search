@@ -10,12 +10,14 @@ interface SearchState {
 }
 
 export interface State {
+  isReady: boolean;
   characters: TaggedCharacter[];
   metadata: Metadata;
   search: SearchState;
 }
 
 export const initialState: State = {
+  isReady: false,
   characters: [],
   metadata: {
     character: 'キャラクター',

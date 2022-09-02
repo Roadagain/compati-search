@@ -7,6 +7,8 @@ import { SearchTarget } from '../lib/search-target';
 
 export const initialTestState: State = {
   ...initialState,
+  isReady: true,
+  characters,
   search: {
     ...initialState.search,
     target: SearchTarget.TAG,
@@ -14,7 +16,6 @@ export const initialTestState: State = {
     showAll: false,
     results: characters,
   },
-  characters,
 };
 
 interface Props {
