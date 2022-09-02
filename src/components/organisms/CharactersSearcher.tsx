@@ -2,7 +2,7 @@ import { SxProps, Theme } from '@mui/material';
 import React from 'react';
 import { SearchForm } from './SearchForm';
 import Box from '@mui/material/Box';
-import { SearchCondition } from '../molecules/SearchCondition';
+import { SearchCondition } from './SearchCondition';
 import { SearchResults } from './SearchResults';
 import { CharactersData } from '../../lib/characters-data';
 import { FluxContext } from '../../flux/context';

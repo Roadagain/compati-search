@@ -1,11 +1,11 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { SearchCondition } from '../../components/molecules/SearchCondition';
+import { SearchCondition } from './SearchCondition';
 import { SearchTarget } from '../../lib/search-target';
 
 const componentMeta: ComponentMeta<typeof SearchCondition> = {
-  title: 'Molecules/SearchCondition',
+  title: 'Organisms/SearchCondition',
   component: SearchCondition,
   argTypes: {
     target: {

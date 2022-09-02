@@ -1,7 +1,7 @@
 import { Stack, SxProps, Theme, Typography } from '@mui/material';
 import React from 'react';
 import { SearchTarget } from '../../lib/search-target';
-import { ShowAllCharactersSwitch } from './ShowAllCharactersSwitch';
+import { ShowAllCharactersSwitch } from '../molecules/ShowAllCharactersSwitch';
 
 interface Props {
   /**
