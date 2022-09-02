@@ -16,7 +16,7 @@ describe('reducer', () => {
 
   describe.each`
     type                      | method
-    ${'load-characters'}      | ${onLoadCharactersData}
+    ${'load-characters-data'} | ${onLoadCharactersData}
     ${'change-search-target'} | ${onChangeSearchTarget}
     ${'change-search-words'}  | ${onChangeSearchWords}
     ${'change-show-all'}      | ${onChangeShowAll}
