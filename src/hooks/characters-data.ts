@@ -3,15 +3,24 @@ import { CharactersData } from '../lib/characters-data';
 import { loadCharactersDataFromJson } from '../lib/load-data';
 
 // [characters, isLoading]
-type CharactersDataLoadingState = [null, true];
-type CharactersDataLoadedState = [CharactersData, false];
+interface CharactersDataLoadingState {
+  charactersData: null;
+  isLoading: true;
+}
+interface CharactersDataLoadedState {
+  charactersData: CharactersData;
+  isLoading: false;
+}
 type CharactersDataState =
   | CharactersDataLoadingState
   | CharactersDataLoadedState;
 
 export const useCharactersData = (dataName: string): CharactersDataState => {
   const [charactersDataState, setCharactersDataState] =
-    useState<CharactersDataState>([null, true]);
+    useState<CharactersDataState>({
+      charactersData: null,
+      isLoading: true,
+    });
   useEffect(() => {
     fetch(`/api/characters-data/${dataName}`)
       .then((res) => {
@@ -21,7 +30,9 @@ export const useCharactersData = (dataName: string): CharactersDataState => {
         return res.json();
       })
       .then(loadCharactersDataFromJson)
-      .then((charactersData) => setCharactersDataState([charactersData, false]))
+      .then((charactersData) =>
+        setCharactersDataState({ charactersData, isLoading: false })
+      )
       .catch(console.error);
   }, [dataName]);
 

@@ -12,7 +12,7 @@ export interface Props {
 }
 
 export const SearchTemplate: React.FC<Props> = ({ dataName }) => {
-  const [charactersData, isLoading] = useCharactersData(dataName);
+  const { charactersData, isLoading } = useCharactersData(dataName);
   if (isLoading) {
     return <LinearProgress />;
   }
