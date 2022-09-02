@@ -1,6 +1,6 @@
 import { SxProps, Theme } from '@mui/material';
 import React from 'react';
-import { SearchForm } from '../molecules/SearchForm';
+import { SearchForm } from './SearchForm';
 import Box from '@mui/material/Box';
 import { SearchCondition } from '../molecules/SearchCondition';
 import { generateAutocompleteOptions } from '../../lib/autocomplete';

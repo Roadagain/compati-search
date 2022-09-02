@@ -1,11 +1,11 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { SearchForm } from '../../components/molecules/SearchForm';
+import { SearchForm } from './SearchForm';
 import { SearchTarget } from '../../lib/search-target';
 
 const componentMeta: ComponentMeta<typeof SearchForm> = {
-  title: 'Molecules/SearchForm',
+  title: 'Organisms/SearchForm',
   component: SearchForm,
   argTypes: {
     target: {
