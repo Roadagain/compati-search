@@ -15,6 +15,7 @@ jest.mock('../lib/tagged-character');
 
 describe('各dispatchの対応', () => {
   const state: Readonly<State> = {
+    isReady: false,
     characters: [],
     metadata: {
       character: '',
@@ -58,15 +59,19 @@ describe('各dispatchの対応', () => {
       characterHiddenDefault,
     ];
     const metadata: Metadata = {
-      character: 'きゃらくた'
-    }
+      character: 'きゃらくた',
+    };
     const charactersData: CharactersData = {
       characters,
       metadata,
-    }
+    };
 
     beforeEach(() => {
       nextState = onLoadCharactersData(state, charactersData);
+    });
+
+    it('準備完了フラグが変更されている', () => {
+      expect(nextState.isReady).toBeTruthy();
     });
 
     it('キャラクターが変更されている', () => {
@@ -75,7 +80,7 @@ describe('各dispatchの対応', () => {
 
     it('メタデータが変更されている', () => {
       expect(nextState.metadata).toEqual(metadata);
-    })
+    });
 
     it('フィルタ関数が呼び出されている', () => {
       expect(filterCharacters).toBeCalled();

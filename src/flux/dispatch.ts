@@ -13,6 +13,7 @@ export const onLoadCharactersData = (
   const results = filterCharacters(characters, target, words, showAll);
   return {
     ...state,
+    isReady: true,
     characters,
     metadata,
     search: {
