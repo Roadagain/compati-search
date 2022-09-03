@@ -10,6 +10,7 @@ import React from 'react';
 import { TagBadge } from '../atoms/TagBadge';
 import Stack from '@mui/material/Stack';
 import { Tag } from '../../lib/tagged-character';
+import { memoizedComponent } from '../../lib/memoized';
 
 interface Props {
   /**
@@ -31,8 +32,8 @@ interface Props {
   sx?: SxProps<Theme>;
 }
 
-export const CharacterCard: React.FC<Props> = React.memo(
-  function CharacterCard({ name, tags, onClickTag, sx }) {
+export const CharacterCard = memoizedComponent<React.FC<Props>>(
+  ({ name, tags, onClickTag, sx }) => {
     const tagLabels = Array.from(new Set(tags.map(({ label }) => label)));
     return (
       <Card elevation={2} sx={sx}>
