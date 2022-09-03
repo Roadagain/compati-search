@@ -1,11 +1,11 @@
 import React from 'react';
-import Box from '@mui/material/Box';
-import { SxProps, Theme } from '@mui/material/styles';
+import { SxProps, Theme, useTheme } from '@mui/material/styles';
 import { SearchTargetSelect } from '../atoms/SearchTargetSelect';
 import { SearchTarget } from '../../lib/search-target';
 import { generateAutocompleteOptions } from '../../lib/autocomplete';
 import { FluxContext } from '../../flux/context';
 import { AutocompleteForm } from '../molecules/AutocompleteForm';
+import { Stack, useMediaQuery } from '@mui/material';
 
 interface Props {
   /**
@@ -34,17 +34,24 @@ export const SearchForm: React.FC<Props> = ({ sx }) => {
     target,
     showAll
   );
+  const theme = useTheme();
+  const isTabletOrDesktop = useMediaQuery(theme.breakpoints.up('sm'));
 
   return (
-    <Box component="form" sx={{ display: 'flex', alignItems: 'center', ...sx }}>
+    <Stack
+      component="form"
+      direction={isTabletOrDesktop ? 'row' : 'column'}
+      alignItems={isTabletOrDesktop ? 'center' : 'stretch'}
+      spacing={2}
+      sx={sx}
+    >
       <SearchTargetSelect target={target} onChange={onChangeTarget} />
       <AutocompleteForm
         target={target}
         words={words}
         autocompleteOptions={autocompleteOptions}
         onChange={onChangeWords}
-        sx={{ ml: 2 }}
       />
-    </Box>
+    </Stack>
   );
 };
