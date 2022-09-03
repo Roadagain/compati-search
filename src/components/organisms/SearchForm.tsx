@@ -1,11 +1,19 @@
 import React from 'react';
-import Box from '@mui/material/Box';
-import { SxProps, Theme } from '@mui/material/styles';
+import { SxProps, Theme, useTheme } from '@mui/material/styles';
 import { SearchTargetSelect } from '../atoms/SearchTargetSelect';
 import { SearchTarget } from '../../lib/search-target';
 import { generateAutocompleteOptions } from '../../lib/autocomplete';
 import { FluxContext } from '../../flux/context';
 import { AutocompleteForm } from '../molecules/AutocompleteForm';
+import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  Stack,
+  Typography,
+  useMediaQuery,
+} from '@mui/material';
+import { ExpandMore } from '@mui/icons-material';
 
 interface Props {
   /**
@@ -34,17 +42,37 @@ export const SearchForm: React.FC<Props> = ({ sx }) => {
     target,
     showAll
   );
+  const theme = useTheme();
+  const isTabletOrDesktop = useMediaQuery(theme.breakpoints.up('sm'));
 
-  return (
-    <Box component="form" sx={{ display: 'flex', alignItems: 'center', ...sx }}>
+  const form = (
+    <Stack
+      component="form"
+      direction={isTabletOrDesktop ? 'row' : 'column'}
+      alignItems={isTabletOrDesktop ? 'center' : 'stretch'}
+      spacing={2}
+      sx={isTabletOrDesktop ? sx : undefined}
+    >
       <SearchTargetSelect target={target} onChange={onChangeTarget} />
       <AutocompleteForm
         target={target}
         words={words}
         autocompleteOptions={autocompleteOptions}
         onChange={onChangeWords}
-        sx={{ ml: 2 }}
       />
-    </Box>
+    </Stack>
+  );
+
+  return isTabletOrDesktop ? (
+    form
+  ) : (
+    <Accordion elevation={2} sx={sx}>
+      <AccordionSummary expandIcon={<ExpandMore />}>
+        <Typography component="p" variant="h6">
+          検索フォーム
+        </Typography>
+      </AccordionSummary>
+      <AccordionDetails>{form}</AccordionDetails>
+    </Accordion>
   );
 };

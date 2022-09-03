@@ -18,6 +18,5 @@ const Template: ComponentStory<typeof SearchCondition> = (args) => (
 
 export const Condition = Template.bind({});
 Condition.args = {
-  character: 'キャラクター',
   sx: {},
 };
