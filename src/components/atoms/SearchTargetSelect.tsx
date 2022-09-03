@@ -40,13 +40,16 @@ export const SearchTargetSelect: React.FC<Props> = ({
     [onChange]
   );
   const theme = useTheme();
-  const isTabletOrDesktop = useMediaQuery(theme.breakpoints.up('sm'))
+  const isTabletOrDesktop = useMediaQuery(theme.breakpoints.up('sm'));
 
   return (
     <Select
       value={target}
       onChange={onSelect}
-      sx={{ fontSize: isTabletOrDesktop ? theme.typography.h5 : theme.typography.h6, ...sx }}
+      sx={{
+        fontSize: isTabletOrDesktop ? theme.typography.h5 : theme.typography.h6,
+        ...sx,
+      }}
     >
       <MenuItem value={SearchTarget.TAG}>タグで検索する</MenuItem>
       <MenuItem value={SearchTarget.NAME}>名前で検索する</MenuItem>

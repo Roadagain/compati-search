@@ -68,7 +68,9 @@ export const SearchForm: React.FC<Props> = ({ sx }) => {
   ) : (
     <Accordion elevation={2} sx={sx}>
       <AccordionSummary expandIcon={<ExpandMore />}>
-        <Typography component="p" variant="h6">検索フォーム</Typography>
+        <Typography component="p" variant="h6">
+          検索フォーム
+        </Typography>
       </AccordionSummary>
       <AccordionDetails>{form}</AccordionDetails>
     </Accordion>

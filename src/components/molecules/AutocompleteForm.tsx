@@ -54,7 +54,7 @@ export const AutocompleteForm: React.FC<Props> = ({
     [onChange]
   );
   const theme = useTheme();
-  const isTabletOrDesktop = useMediaQuery(theme.breakpoints.up('sm'))
+  const isTabletOrDesktop = useMediaQuery(theme.breakpoints.up('sm'));
 
   return (
     <Autocomplete
@@ -81,7 +81,11 @@ export const AutocompleteForm: React.FC<Props> = ({
           placeholder={placeholder}
           inputProps={{
             ...params.inputProps,
-            sx: { fontSize: isTabletOrDesktop ? theme.typography.h5 : theme.typography.h6 },
+            sx: {
+              fontSize: isTabletOrDesktop
+                ? theme.typography.h5
+                : theme.typography.h6,
+            },
           }}
         />
       )}

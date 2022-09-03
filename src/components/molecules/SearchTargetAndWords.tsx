@@ -1,4 +1,10 @@
-import { SxProps, Theme, Typography, useMediaQuery, useTheme } from '@mui/material';
+import {
+  SxProps,
+  Theme,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from '@mui/material';
 import React from 'react';
 import { SearchTarget } from '../../lib/search-target';
 
@@ -25,8 +31,8 @@ export const SearchTargetAndWords: React.FC<Props> = ({
   const targetStr = target === SearchTarget.TAG ? 'タグ' : '名前';
   const joinedText = words.join(' ');
   const theme = useTheme();
-  const isTabletOrDesktop = useMediaQuery(theme.breakpoints.up('sm'))
-  const variant = isTabletOrDesktop ? "h5" : "h6"
+  const isTabletOrDesktop = useMediaQuery(theme.breakpoints.up('sm'));
+  const variant = isTabletOrDesktop ? 'h5' : 'h6';
 
   return (
     <Typography component="h5" variant={variant} sx={sx}>
