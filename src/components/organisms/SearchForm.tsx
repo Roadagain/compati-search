@@ -5,7 +5,15 @@ import { SearchTarget } from '../../lib/search-target';
 import { generateAutocompleteOptions } from '../../lib/autocomplete';
 import { FluxContext } from '../../flux/context';
 import { AutocompleteForm } from '../molecules/AutocompleteForm';
-import { Stack, useMediaQuery } from '@mui/material';
+import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  Stack,
+  Typography,
+  useMediaQuery,
+} from '@mui/material';
+import { ExpandMore } from '@mui/icons-material';
 
 interface Props {
   /**
@@ -37,13 +45,13 @@ export const SearchForm: React.FC<Props> = ({ sx }) => {
   const theme = useTheme();
   const isTabletOrDesktop = useMediaQuery(theme.breakpoints.up('sm'));
 
-  return (
+  const form = (
     <Stack
       component="form"
       direction={isTabletOrDesktop ? 'row' : 'column'}
       alignItems={isTabletOrDesktop ? 'center' : 'stretch'}
       spacing={2}
-      sx={sx}
+      sx={isTabletOrDesktop ? sx : undefined}
     >
       <SearchTargetSelect target={target} onChange={onChangeTarget} />
       <AutocompleteForm
@@ -53,5 +61,16 @@ export const SearchForm: React.FC<Props> = ({ sx }) => {
         onChange={onChangeWords}
       />
     </Stack>
+  );
+
+  return isTabletOrDesktop ? (
+    form
+  ) : (
+    <Accordion elevation={2} sx={sx}>
+      <AccordionSummary expandIcon={<ExpandMore />}>
+        <Typography variant="h5">検索フォーム</Typography>
+      </AccordionSummary>
+      <AccordionDetails>{form}</AccordionDetails>
+    </Accordion>
   );
 };
