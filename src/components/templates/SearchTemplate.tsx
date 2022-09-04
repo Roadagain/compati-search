@@ -32,7 +32,9 @@ export const SearchTemplate: React.FC<Props> = ({ dataName }) => {
       .catch(console.error);
   }, [dataName, dispatch]);
   const theme = useTheme();
-  const isTabletOrDesktop = useMediaQuery(theme.breakpoints.up('sm'));
+  const isTabletOrDesktop = useMediaQuery(theme.breakpoints.up('sm'), {
+    noSsr: true,
+  });
 
   if (!state.isReady) {
     return <LinearProgress />;

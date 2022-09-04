@@ -38,7 +38,9 @@ export const CharacterCard = memoizedComponent<React.FC<Props>>(
   ({ name, tags, onClickTag, sx }) => {
     const tagLabels = Array.from(new Set(tags.map(({ label }) => label)));
     const theme = useTheme();
-    const isTabletOrDesktop = useMediaQuery(theme.breakpoints.up('sm'));
+    const isTabletOrDesktop = useMediaQuery(theme.breakpoints.up('sm'), {
+      noSsr: true,
+    });
 
     return (
       <Card elevation={2} sx={sx}>

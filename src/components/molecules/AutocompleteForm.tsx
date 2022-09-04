@@ -54,7 +54,9 @@ export const AutocompleteForm: React.FC<Props> = ({
     [onChange]
   );
   const theme = useTheme();
-  const isTabletOrDesktop = useMediaQuery(theme.breakpoints.up('sm'));
+  const isTabletOrDesktop = useMediaQuery(theme.breakpoints.up('sm'), {
+    noSsr: true,
+  });
 
   return (
     <Autocomplete

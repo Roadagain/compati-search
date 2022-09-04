@@ -31,7 +31,9 @@ export const SearchTargetAndWords: React.FC<Props> = ({
   const targetStr = target === SearchTarget.TAG ? 'タグ' : '名前';
   const joinedText = words.join(' ');
   const theme = useTheme();
-  const isTabletOrDesktop = useMediaQuery(theme.breakpoints.up('sm'));
+  const isTabletOrDesktop = useMediaQuery(theme.breakpoints.up('sm'), {
+    noSsr: true,
+  });
   const variant = isTabletOrDesktop ? 'h5' : 'h6';
 
   return (
