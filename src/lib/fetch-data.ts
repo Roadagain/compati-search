@@ -6,8 +6,8 @@ export const fetchCharactersData = async (
 ): Promise<CharactersData> => {
   const res = await fetch(`/api/characters-data/${dataName}`, {
     headers: {
-      mode: 'cors'
-    }
+      mode: 'cors',
+    },
   });
   if (400 <= res.status && res.status < 500) {
     throw new Error('Not Found');
