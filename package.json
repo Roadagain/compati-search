@@ -19,7 +19,7 @@
     "test:jest": "jest",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "local-data-server": "http-server sample/characters-data -p 3001"
+    "local-data-server": "http-server sample/characters-data -p 3001 --cors"
   },
   "dependencies": {
     "@emotion/react": "^11.9.3",
