@@ -4,7 +4,11 @@ import { loadCharactersDataFromJson } from './load-data';
 export const fetchCharactersData = async (
   dataName: string
 ): Promise<CharactersData> => {
-  const res = await fetch(`/api/characters-data/${dataName}`);
+  const res = await fetch(`/api/characters-data/${dataName}`, {
+    headers: {
+      mode: 'cors'
+    }
+  });
   if (400 <= res.status && res.status < 500) {
     throw new Error('Not Found');
   }
