@@ -1,4 +1,4 @@
-import { Stack, SxProps, Theme, useMediaQuery, useTheme } from '@mui/material';
+import { Stack, SxProps, Theme } from '@mui/material';
 import React from 'react';
 import { FluxContext } from '../../flux/context';
 import { SearchTargetAndWords } from '../molecules/SearchTargetAndWords';
@@ -21,14 +21,12 @@ export const SearchCondition: React.FC<Props> = ({ sx }) => {
     },
     [dispatch]
   );
-  const theme = useTheme();
-  const isTabletOrDesktop = useMediaQuery(theme.breakpoints.up('sm'));
 
   return (
     <Stack
-      direction={isTabletOrDesktop ? 'row' : 'column'}
-      alignItems={isTabletOrDesktop ? 'center' : 'stretch'}
-      justifyContent={isTabletOrDesktop ? 'space-between' : 'flex-start'}
+      direction="row"
+      alignItems="center"
+      justifyContent="space-between"
       sx={sx}
     >
       <SearchTargetAndWords target={target} words={words} />

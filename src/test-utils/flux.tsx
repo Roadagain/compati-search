@@ -9,9 +9,6 @@ export const initialTestState: State = {
   ...initialState,
   isReady: true,
   characters,
-  metadata: {
-    character: 'テストキャラクター',
-  },
   search: {
     ...initialState.search,
     target: SearchTarget.TAG,

@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  Container,
-  LinearProgress,
-  Typography,
-  useMediaQuery,
-  useTheme,
-} from '@mui/material';
+import { Container, LinearProgress, Typography } from '@mui/material';
 import { FluxContext } from '../../flux/context';
 import { SearchForm } from '../organisms/SearchForm';
 import { SearchCondition } from '../organisms/SearchCondition';
@@ -31,17 +25,13 @@ export const SearchTemplate: React.FC<Props> = ({ dataName }) => {
       })
       .catch(console.error);
   }, [dataName, dispatch]);
-  const theme = useTheme();
-  const isTabletOrDesktop = useMediaQuery(theme.breakpoints.up('sm'));
 
   if (!state.isReady) {
     return <LinearProgress />;
   }
   return (
     <Container sx={{ py: 2 }}>
-      <Typography component="h1" variant={isTabletOrDesktop ? 'h5' : 'h6'}>
-        コンパチサーチ
-      </Typography>
+      <Typography variant="h5">コンパチサーチ</Typography>
       <SearchForm sx={{ mt: 2 }} />
       <SearchCondition sx={{ mt: 2 }} />
       <SearchResults sx={{ mt: 1 }} />
