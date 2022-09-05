@@ -45,7 +45,10 @@ export const SearchTargetSelect: React.FC<Props> = ({
     <Select
       value={target}
       onChange={onSelect}
-      sx={{ fontSize: theme.typography.h5, ...sx }}
+      sx={{
+        fontSize: theme.typography.h6,
+        ...sx,
+      }}
     >
       <MenuItem value={SearchTarget.TAG}>タグで検索する</MenuItem>
       <MenuItem value={SearchTarget.NAME}>名前で検索する</MenuItem>

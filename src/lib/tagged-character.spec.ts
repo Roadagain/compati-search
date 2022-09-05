@@ -1,7 +1,9 @@
+import { SearchTarget } from './search-target';
 import {
   filterCharactersByTagLabels,
   TaggedCharacter,
   filterCharactersByNameWords,
+  filterCharacters,
 } from './tagged-character';
 
 describe('filterCharactersByTagLabels', () => {
@@ -217,6 +219,45 @@ describe('searchCharactersByCharacterNameWords', () => {
           filterCharactersByNameWords(characters, [], false)
         ).toStrictEqual([alpha, beta, delta]);
       });
+    });
+  });
+});
+
+describe('filterCharacters', () => {
+  const characterWithTag = {
+    name: '',
+    tags: [
+      {
+        category: 'category',
+        label: 'label',
+      },
+    ],
+    showDefault: true,
+  };
+  const characterWithName = {
+    name: 'name',
+    tags: [],
+    showDefault: true,
+  };
+  const characters = [characterWithTag, characterWithName];
+
+  describe('検索対象がタグの場合', () => {
+    const searchTarget = SearchTarget.TAG;
+
+    it('タグ検索の結果が返る', () => {
+      expect(
+        filterCharacters(characters, searchTarget, ['label'], false)
+      ).toEqual([characterWithTag]);
+    });
+  });
+
+  describe('検索対象が名前の場合', () => {
+    const searchTarget = SearchTarget.NAME;
+
+    it('名前検索の結果が返る', () => {
+      expect(
+        filterCharacters(characters, searchTarget, ['name'], false)
+      ).toEqual([characterWithName]);
     });
   });
 });
