@@ -3,8 +3,6 @@ import {
   Container,
   LinearProgress,
   Typography,
-  useMediaQuery,
-  useTheme,
 } from '@mui/material';
 import { FluxContext } from '../../flux/context';
 import { SearchForm } from '../organisms/SearchForm';
@@ -31,17 +29,13 @@ export const SearchTemplate: React.FC<Props> = ({ dataName }) => {
       })
       .catch(console.error);
   }, [dataName, dispatch]);
-  const theme = useTheme();
-  const isTabletOrDesktop = useMediaQuery(theme.breakpoints.up('sm'), {
-    noSsr: true,
-  });
 
   if (!state.isReady) {
     return <LinearProgress />;
   }
   return (
     <Container sx={{ py: 2 }}>
-      <Typography component="h1" variant={isTabletOrDesktop ? 'h5' : 'h6'}>
+      <Typography component="h1" variant="h6">
         コンパチサーチ
       </Typography>
       <SearchForm sx={{ mt: 2 }} />

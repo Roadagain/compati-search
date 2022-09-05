@@ -4,7 +4,6 @@ import {
   SxProps,
   TextField,
   Theme,
-  useMediaQuery,
   useTheme,
 } from '@mui/material';
 import React from 'react';
@@ -54,9 +53,6 @@ export const AutocompleteForm: React.FC<Props> = ({
     [onChange]
   );
   const theme = useTheme();
-  const isTabletOrDesktop = useMediaQuery(theme.breakpoints.up('sm'), {
-    noSsr: true,
-  });
 
   return (
     <Autocomplete
@@ -84,9 +80,7 @@ export const AutocompleteForm: React.FC<Props> = ({
           inputProps={{
             ...params.inputProps,
             sx: {
-              fontSize: isTabletOrDesktop
-                ? theme.typography.h5
-                : theme.typography.h6,
+              fontSize: theme.typography.h6,
             },
           }}
         />

@@ -22,9 +22,7 @@ export const SearchCondition: React.FC<Props> = ({ sx }) => {
     [dispatch]
   );
   const theme = useTheme();
-  const isTabletOrDesktop = useMediaQuery(theme.breakpoints.up('sm'), {
-    noSsr: true,
-  });
+  const isTabletOrDesktop = useMediaQuery(theme.breakpoints.up('sm'));
 
   return (
     <Stack

@@ -43,9 +43,7 @@ export const SearchForm: React.FC<Props> = ({ sx }) => {
     showAll
   );
   const theme = useTheme();
-  const isTabletOrDesktop = useMediaQuery(theme.breakpoints.up('sm'), {
-    noSsr: true,
-  });
+  const isTabletOrDesktop = useMediaQuery(theme.breakpoints.up('sm'));
 
   const form = (
     <Stack
