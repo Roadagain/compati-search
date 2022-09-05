@@ -1,8 +1,9 @@
 import React from 'react';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
-import { SxProps, Theme, useMediaQuery, useTheme } from '@mui/material';
+import { SxProps, Theme, useTheme } from '@mui/material';
 import { SearchTarget } from '../../lib/search-target';
+import { useIsTabletOrDesktop } from '../../hooks/media-query';
 
 interface Props {
   /**
@@ -40,7 +41,7 @@ export const SearchTargetSelect: React.FC<Props> = ({
     [onChange]
   );
   const theme = useTheme();
-  const isTabletOrDesktop = useMediaQuery(theme.breakpoints.up('sm'));
+  const isTabletOrDesktop = useIsTabletOrDesktop();
 
   return (
     <Select

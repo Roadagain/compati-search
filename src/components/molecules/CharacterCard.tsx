@@ -5,14 +5,13 @@ import {
   CardHeader,
   SxProps,
   Theme,
-  useMediaQuery,
-  useTheme,
 } from '@mui/material';
 import React from 'react';
 import { TagBadge } from '../atoms/TagBadge';
 import Stack from '@mui/material/Stack';
 import { Tag } from '../../lib/tagged-character';
 import { memoizedComponent } from '../../lib/memoized';
+import { useIsTabletOrDesktop } from '../../hooks/media-query';
 
 interface Props {
   /**
@@ -37,8 +36,7 @@ interface Props {
 export const CharacterCard = memoizedComponent<React.FC<Props>>(
   ({ name, tags, onClickTag, sx }) => {
     const tagLabels = Array.from(new Set(tags.map(({ label }) => label)));
-    const theme = useTheme();
-    const isTabletOrDesktop = useMediaQuery(theme.breakpoints.up('sm'));
+    const isTabletOrDesktop = useIsTabletOrDesktop();
 
     return (
       <Card elevation={2} sx={sx}>

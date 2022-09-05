@@ -2,10 +2,9 @@ import {
   SxProps,
   Theme,
   Typography,
-  useMediaQuery,
-  useTheme,
 } from '@mui/material';
 import React from 'react';
+import { useIsTabletOrDesktop } from '../../hooks/media-query';
 import { SearchTarget } from '../../lib/search-target';
 
 interface Props {
@@ -30,8 +29,7 @@ export const SearchTargetAndWords: React.FC<Props> = ({
 }) => {
   const targetStr = target === SearchTarget.TAG ? 'タグ' : '名前';
   const joinedText = words.join(' ');
-  const theme = useTheme();
-  const isTabletOrDesktop = useMediaQuery(theme.breakpoints.up('sm'));
+  const isTabletOrDesktop = useIsTabletOrDesktop();
   const variant = isTabletOrDesktop ? 'h5' : 'h6';
 
   return (

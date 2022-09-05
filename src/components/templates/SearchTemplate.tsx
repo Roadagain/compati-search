@@ -3,14 +3,13 @@ import {
   Container,
   LinearProgress,
   Typography,
-  useMediaQuery,
-  useTheme,
 } from '@mui/material';
 import { FluxContext } from '../../flux/context';
 import { SearchForm } from '../organisms/SearchForm';
 import { SearchCondition } from '../organisms/SearchCondition';
 import { SearchResults } from '../organisms/SearchResults';
 import { fetchCharactersData } from '../../lib/fetch-data';
+import { useIsTabletOrDesktop } from '../../hooks/media-query';
 
 export interface Props {
   /**
@@ -31,8 +30,7 @@ export const SearchTemplate: React.FC<Props> = ({ dataName }) => {
       })
       .catch(console.error);
   }, [dataName, dispatch]);
-  const theme = useTheme();
-  const isTabletOrDesktop = useMediaQuery(theme.breakpoints.up('sm'));
+  const isTabletOrDesktop = useIsTabletOrDesktop();
 
   if (!state.isReady) {
     return <LinearProgress />;

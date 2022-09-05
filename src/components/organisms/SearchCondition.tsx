@@ -1,6 +1,7 @@
-import { Stack, SxProps, Theme, useMediaQuery, useTheme } from '@mui/material';
+import { Stack, SxProps, Theme } from '@mui/material';
 import React from 'react';
 import { FluxContext } from '../../flux/context';
+import { useIsTabletOrDesktop } from '../../hooks/media-query';
 import { SearchTargetAndWords } from '../molecules/SearchTargetAndWords';
 import { ShowAllCharactersSwitch } from '../molecules/ShowAllCharactersSwitch';
 
@@ -21,8 +22,7 @@ export const SearchCondition: React.FC<Props> = ({ sx }) => {
     },
     [dispatch]
   );
-  const theme = useTheme();
-  const isTabletOrDesktop = useMediaQuery(theme.breakpoints.up('sm'));
+  const isTabletOrDesktop = useIsTabletOrDesktop();
 
   return (
     <Stack

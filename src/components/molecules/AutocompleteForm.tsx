@@ -4,10 +4,10 @@ import {
   SxProps,
   TextField,
   Theme,
-  useMediaQuery,
   useTheme,
 } from '@mui/material';
 import React from 'react';
+import { useIsTabletOrDesktop } from '../../hooks/media-query';
 import { AutocompleteOption } from '../../lib/autocomplete';
 import { SearchTarget } from '../../lib/search-target';
 import { Tag } from '../../lib/tagged-character';
@@ -54,7 +54,7 @@ export const AutocompleteForm: React.FC<Props> = ({
     [onChange]
   );
   const theme = useTheme();
-  const isTabletOrDesktop = useMediaQuery(theme.breakpoints.up('sm'));
+  const isTabletOrDesktop = useIsTabletOrDesktop();
 
   return (
     <Autocomplete
