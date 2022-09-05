@@ -1,6 +1,6 @@
-import { useMediaQuery, useTheme } from "@mui/material"
+import { Theme } from "@mui/material/styles"
+import useMediaQuery from "@mui/material/useMediaQuery"
 
 export const useIsTabletOrDesktop = () => {
-  const theme = useTheme();
-  return useMediaQuery(theme.breakpoints.up('sm'))
+  return useMediaQuery((theme: Theme) => theme.breakpoints.up('sm'))
 }
