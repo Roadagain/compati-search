@@ -8,7 +8,11 @@ import {
   useTheme,
 } from '@mui/material';
 import React from 'react';
-import { AutocompleteOption } from '../../lib/autocomplete';
+import {
+  AutocompleteOption,
+  filterOptionsByWord,
+  isOptionEqualToWord,
+} from '../../lib/autocomplete';
 import { SearchTarget } from '../../lib/search-target';
 import { Tag } from '../../lib/tagged-character';
 
@@ -35,30 +39,6 @@ interface Props {
    */
   sx?: SxProps<Theme>;
 }
-
-const isOptionEqualToValue = (
-  option: AutocompleteOption,
-  value: string
-): boolean => {
-  // マイナス検索しているラベルやマイナス検索中のプラスラベルを除外する
-  const minusableWord = /-?(.*)/;
-  const wordWithoutMinus = value.match(minusableWord)[1];
-  const labelWithoutMinus = option.label.match(minusableWord)[1];
-  return wordWithoutMinus === labelWithoutMinus;
-};
-
-const filterOptions = (
-  options: AutocompleteOption[],
-  state: FilterOptionsState<string>
-): AutocompleteOption[] => {
-  // マイナス検索しているラベルやマイナス検索中のプラスラベルを除外する
-  const minusableWord = /-?(.*)/;
-  const wordWithoutMinus = state.inputValue.match(minusableWord)[1];
-  return options.filter((option) => {
-    const labelWithoutMinus = option.label.match(minusableWord)[1];
-    return labelWithoutMinus.includes(wordWithoutMinus);
-  });
-};
 
 export const AutocompleteForm: React.FC<Props> = ({
   target,
@@ -90,6 +70,15 @@ export const AutocompleteForm: React.FC<Props> = ({
         label: `-${option.label}`,
       }))
     : autocompleteOptions;
+  const filterOptions = React.useCallback(
+    (
+      options: AutocompleteOption[],
+      state: FilterOptionsState<string>
+    ): AutocompleteOption[] => {
+      return filterOptionsByWord(options, state.inputValue);
+    },
+    []
+  );
   const theme = useTheme();
 
   return (
@@ -107,7 +96,7 @@ export const AutocompleteForm: React.FC<Props> = ({
           ? (option: Tag) => option.category
           : undefined
       }
-      isOptionEqualToValue={isOptionEqualToValue}
+      isOptionEqualToValue={isOptionEqualToWord}
       fullWidth
       renderInput={(params) => (
         <TextField
