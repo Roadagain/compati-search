@@ -20,7 +20,13 @@ export const filterCharactersByTagLabels = (
     const characterTagLabels = character.tags.map(({ label }) => label);
     return (
       (showAll || character.showDefault) &&
-      tagLabels.every((tagLabel) => characterTagLabels.includes(tagLabel))
+      tagLabels.every((tagLabel) => {
+        const isMinus = tagLabel.startsWith('-');
+        const hasTag = characterTagLabels.includes(
+          tagLabel.slice(isMinus ? 1 : 0)
+        );
+        return isMinus ? !hasTag : hasTag;
+      })
     );
   });
 };
@@ -32,7 +38,12 @@ export const filterCharactersByNameWords = (
 ): TaggedCharacter[] => {
   return characters.filter(({ name, showDefault }) => {
     return (
-      (showAll || showDefault) && nameWords.every((word) => name.includes(word))
+      (showAll || showDefault) &&
+      nameWords.every((word) => {
+        const isMinus = word.startsWith('-');
+        const hasWord = name.includes(word.slice(isMinus ? 1 : 0));
+        return isMinus ? !hasWord : hasWord;
+      })
     );
   });
 };

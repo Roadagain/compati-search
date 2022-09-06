@@ -1,13 +1,18 @@
 import {
   Autocomplete,
   Chip,
+  FilterOptionsState,
   SxProps,
   TextField,
   Theme,
   useTheme,
 } from '@mui/material';
 import React from 'react';
-import { AutocompleteOption } from '../../lib/autocomplete';
+import {
+  AutocompleteOption,
+  filterOptionsByWord,
+  isOptionEqualToWord,
+} from '../../lib/autocomplete';
 import { SearchTarget } from '../../lib/search-target';
 import { Tag } from '../../lib/tagged-character';
 
@@ -52,6 +57,28 @@ export const AutocompleteForm: React.FC<Props> = ({
     },
     [onChange]
   );
+  const [isMinus, setIsMinus] = React.useState(false);
+  const onInputChange = React.useCallback(
+    (_, value: string) => {
+      setIsMinus(value.startsWith('-'));
+    },
+    [setIsMinus]
+  );
+  const options = isMinus
+    ? autocompleteOptions.map((option) => ({
+        ...option,
+        label: `-${option.label}`,
+      }))
+    : autocompleteOptions;
+  const filterOptions = React.useCallback(
+    (
+      options: AutocompleteOption[],
+      state: FilterOptionsState<string>
+    ): AutocompleteOption[] => {
+      return filterOptionsByWord(options, state.inputValue);
+    },
+    []
+  );
   const theme = useTheme();
 
   return (
@@ -61,16 +88,15 @@ export const AutocompleteForm: React.FC<Props> = ({
       multiple
       filterSelectedOptions
       value={words}
+      onInputChange={onInputChange}
       onChange={onChangeWords}
-      options={autocompleteOptions}
+      options={options}
       groupBy={
         target === SearchTarget.TAG
           ? (option: Tag) => option.category
           : undefined
       }
-      isOptionEqualToValue={(option: AutocompleteOption, value: string) =>
-        option.label === value
-      }
+      isOptionEqualToValue={isOptionEqualToWord}
       fullWidth
       renderInput={(params) => (
         <TextField
@@ -86,15 +112,20 @@ export const AutocompleteForm: React.FC<Props> = ({
         />
       )}
       renderTags={(values: string[], getTagProps) =>
-        values.map((value, index) => (
-          <Chip
-            key={value}
-            label={value}
-            {...getTagProps({ index })}
-            sx={{ fontSize: theme.typography.h6 }}
-          />
-        ))
+        values.map((value, index) => {
+          const color = value.startsWith('-') ? 'error' : 'default';
+          return (
+            <Chip
+              key={value}
+              label={value}
+              color={color}
+              {...getTagProps({ index })}
+              sx={{ fontSize: theme.typography.h6 }}
+            />
+          );
+        })
       }
+      filterOptions={filterOptions}
       sx={sx}
     />
   );

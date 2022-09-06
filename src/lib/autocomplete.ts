@@ -34,3 +34,32 @@ export const generateAutocompleteOptions = (
       return charactersShown.map(({ name }) => ({ label: name }));
   }
 };
+
+export const wordWithoutFirstMinus = (word: string): string => {
+  return word.match(/-?(.*)/)[1];
+};
+
+export const isOptionEqualToWord = (
+  // 補完対象から選択した場合AutocompleteOption、最後まで自分で入力した場合はstringになる
+  option: string | AutocompleteOption,
+  word: string
+): boolean => {
+  // マイナス検索しているラベルやマイナス検索中のプラスラベルを除外する
+  const pureWord = wordWithoutFirstMinus(word);
+  const pureLabel = wordWithoutFirstMinus(
+    typeof option === 'string' ? option : option.label
+  );
+  return pureWord === pureLabel;
+};
+
+export const filterOptionsByWord = (
+  options: AutocompleteOption[],
+  word: string
+): AutocompleteOption[] => {
+  // マイナス検索しているラベルやマイナス検索中のプラスラベルを除外する
+  const pureWord = wordWithoutFirstMinus(word);
+  return options.filter((option) => {
+    const pureLabel = wordWithoutFirstMinus(option.label);
+    return pureLabel.includes(pureWord);
+  });
+};
