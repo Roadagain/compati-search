@@ -23,16 +23,20 @@ export const SearchTargetAndWords: React.FC<Props> = ({
   sx,
 }) => {
   const targetStr = target === SearchTarget.TAG ? 'タグ' : '名前';
-  const joinedText = words.join(' ');
   const variant = 'h6';
 
   return (
     <Typography component="h5" variant={variant} sx={sx}>
-      {joinedText ? (
+      {words.length ? (
         <>
-          <Typography component="span" variant={variant} fontWeight="bold">
-            {joinedText}
-          </Typography>
+          {words.map((word) => {
+            const color = word.startsWith('-') ? "error" : "default";
+            return (
+              <Typography key={word} component="span" variant={variant} fontWeight="bold" color={color}>
+                {word}&nbsp;
+              </Typography>
+            )
+          })}
           の{targetStr}検索結果
         </>
       ) : (

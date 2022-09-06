@@ -102,14 +102,16 @@ export const AutocompleteForm: React.FC<Props> = ({
         />
       )}
       renderTags={(values: string[], getTagProps) =>
-        values.map((value, index) => (
-          <Chip
+        values.map((value, index) => {
+          const color = value.startsWith('-') ? "error" : "default";
+          return (<Chip
             key={value}
             label={value}
+            color={color}
             {...getTagProps({ index })}
             sx={{ fontSize: theme.typography.h6 }}
-          />
-        ))
+          />)
+        })
       }
       filterOptions={filterOptions}
       sx={sx}
