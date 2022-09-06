@@ -36,6 +36,13 @@ interface Props {
   sx?: SxProps<Theme>;
 }
 
+const isOptionEqualToValue = (option: AutocompleteOption, value: string): boolean => {
+  // マイナス検索している分も補完対象から除く
+  const isMinus = value.startsWith('-');
+  const word = value.slice(isMinus ? 1 : 0);
+  return option.label === word;
+}
+
 const filterOptions = (
   options: AutocompleteOption[],
   state: FilterOptionsState<string>
@@ -79,9 +86,7 @@ export const AutocompleteForm: React.FC<Props> = ({
           ? (option: Tag) => option.category
           : undefined
       }
-      isOptionEqualToValue={(option: AutocompleteOption, value: string) =>
-        option.label === value
-      }
+      isOptionEqualToValue={isOptionEqualToValue}
       fullWidth
       renderInput={(params) => (
         <TextField
