@@ -37,20 +37,24 @@ interface Props {
 }
 
 const isOptionEqualToValue = (option: AutocompleteOption, value: string): boolean => {
-  // マイナス検索している分も補完対象から除く
-  const isMinus = value.startsWith('-');
-  const word = value.slice(isMinus ? 1 : 0);
-  return option.label === word;
+  // マイナス検索しているラベルやマイナス検索中のプラスラベルを除外する
+  const minusableWord = /-?(.*)/;
+  const wordWithoutMinus = value.match(minusableWord)[1];
+  const labelWithoutMinus = option.label.match(minusableWord)[1];
+  return wordWithoutMinus === labelWithoutMinus;
 }
 
 const filterOptions = (
   options: AutocompleteOption[],
   state: FilterOptionsState<string>
 ): AutocompleteOption[] => {
-  // マイナス検索している分も補完対象から除く
-  const isMinus = state.inputValue.startsWith('-');
-  const word = state.inputValue.slice(isMinus ? 1 : 0);
-  return options.filter((option) => option.label.includes(word));
+  // マイナス検索しているラベルやマイナス検索中のプラスラベルを除外する
+  const minusableWord = /-?(.*)/;
+  const wordWithoutMinus = state.inputValue.match(minusableWord)[1];
+  return options.filter((option) => {
+    const labelWithoutMinus = option.label.match(minusableWord)[1];
+    return labelWithoutMinus.includes(wordWithoutMinus)
+  });
 };
 
 export const AutocompleteForm: React.FC<Props> = ({
@@ -70,6 +74,14 @@ export const AutocompleteForm: React.FC<Props> = ({
     },
     [onChange]
   );
+  const [isMinus, setIsMinus] = React.useState(false);
+  const onInputChange = React.useCallback((_, value: string) => {
+    setIsMinus(value.startsWith('-'))
+  }, [setIsMinus])
+  const options = isMinus ? autocompleteOptions.map((option) => ({
+    ...option,
+    label: `-${option.label}`
+  })) : autocompleteOptions;
   const theme = useTheme();
 
   return (
@@ -79,8 +91,9 @@ export const AutocompleteForm: React.FC<Props> = ({
       multiple
       filterSelectedOptions
       value={words}
+      onInputChange={onInputChange}
       onChange={onChangeWords}
-      options={autocompleteOptions}
+      options={options}
       groupBy={
         target === SearchTarget.TAG
           ? (option: Tag) => option.category
