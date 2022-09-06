@@ -171,6 +171,14 @@ describe('searchCharactersByCharacterNameWords', () => {
       });
     });
 
+    describe('マイナス指定がある場合', () => {
+      it('そのタグを含まないキャラクターの配列が返る', () => {
+        expect(
+          filterCharactersByNameWords(characters, ['-Zulu'], true)
+        ).toEqual([alpha, gamma, delta]);
+      });
+    });
+
     describe('キーワードがヒットしない場合', () => {
       it('空配列が返る', () => {
         expect(
@@ -202,6 +210,14 @@ describe('searchCharactersByCharacterNameWords', () => {
         expect(
           filterCharactersByNameWords(characters, ['X-ray', 'Yankee'], false)
         ).toStrictEqual([alpha]);
+      });
+    });
+
+    describe('マイナス指定がある場合', () => {
+      it('そのタグを含まないキャラクターの配列が返る', () => {
+        expect(
+          filterCharactersByNameWords(characters, ['-Zulu'], false)
+        ).toEqual([alpha, delta]);
       });
     });
 
