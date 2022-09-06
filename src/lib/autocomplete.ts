@@ -44,7 +44,6 @@ export const isOptionEqualToWord = (
   option: string | AutocompleteOption,
   word: string
 ): boolean => {
-  // console.log({option, word})
   // マイナス検索しているラベルやマイナス検索中のプラスラベルを除外する
   const pureWord = wordWithoutFirstMinus(word);
   const pureLabel = wordWithoutFirstMinus(
