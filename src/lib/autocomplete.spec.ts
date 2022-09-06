@@ -1,4 +1,11 @@
-import { generateAutocompleteOptions, uniqueAndSortTags } from './autocomplete';
+import {
+  AutocompleteOption,
+  filterOptionsByWord,
+  generateAutocompleteOptions,
+  isOptionEqualToWord,
+  uniqueAndSortTags,
+  wordWithoutFirstMinus,
+} from './autocomplete';
 import { SearchTarget } from './search-target';
 import { Tag, TaggedCharacter } from './tagged-character';
 
@@ -102,6 +109,96 @@ describe('generateAutocompleteOptions', () => {
           generateAutocompleteOptions(characters, SearchTarget.NAME, false)
         ).toEqual([{ label: 'Alpha' }, { label: 'Beta' }]);
       });
+    });
+  });
+});
+
+describe('wordWithoutFirstMins', () => {
+  describe('ワードがマイナス(-)から始まる場合', () => {
+    it('最初のマイナスを除いたワードを返す', () => {
+      const word = '-word';
+      expect(wordWithoutFirstMinus(word)).toBe('word');
+    });
+  });
+
+  describe('ワードがマイナス(-)以外から始まる場合', () => {
+    it('ワードをそのまま返す', () => {
+      const word = '+word';
+      expect(wordWithoutFirstMinus(word)).toBe(word);
+    });
+  });
+
+  describe('ワードが空文字列の場合', () => {
+    it('空文字列を返す', () => {
+      const word = '';
+      expect(wordWithoutFirstMinus(word)).toBe('');
+    });
+  });
+});
+
+describe('isOptionEqualToWord', () => {
+  describe('最初のマイナス(-)を除いてラベルとワードが一致する場合', () => {
+    describe.each`
+      label      | word
+      ${'test'}  | ${'test'}
+      ${'test'}  | ${'-test'}
+      ${'-test'} | ${'test'}
+      ${'-test'} | ${'-test'}
+    `('タグラベルが $label でワードが $word の場合', ({ label, word }) => {
+      it('同じと判定される', () => {
+        const option: AutocompleteOption = {
+          label,
+        };
+        expect(isOptionEqualToWord(option, word)).toBeTruthy();
+      });
+    });
+  });
+
+  describe('最初のマイナス(-)を除いてもラベルとワードが一致しない場合', () => {
+    describe.each`
+      label       | word
+      ${'label'}  | ${'word'}
+      ${'label'}  | ${'-word'}
+      ${'-label'} | ${'word'}
+      ${'-label'} | ${'-word'}
+    `('タグラベルが $label でワードが $word の場合', ({ label, word }) => {
+      it('違うと判定される', () => {
+        const option: AutocompleteOption = {
+          label,
+        };
+        expect(isOptionEqualToWord(option, word)).toBeFalsy();
+      });
+    });
+  });
+});
+
+describe('filterOptionsByWord', () => {
+  const labels = ['First', 'Second', 'Third'];
+  const plusOptions: AutocompleteOption[] = labels.map((label) => ({ label }));
+  const minusOptions: AutocompleteOption[] = labels.map((label) => ({
+    label: `-${label}`,
+  }));
+
+  describe.each`
+    optionsCase   | options         | word
+    ${'通常'}     | ${plusOptions}  | ${'ir'}
+    ${'通常'}     | ${plusOptions}  | ${'-ir'}
+    ${'マイナス'} | ${minusOptions} | ${'ir'}
+    ${'マイナス'} | ${minusOptions} | ${'-ir'}
+  `('補完候補が$optionsCaseでワードが $word の場合', ({ options, word }) => {
+    // FirstとThirdがヒットする
+    it('先頭のマイナス(-)を除いた状態でフィルタリングされる', () => {
+      expect(filterOptionsByWord(options, word)).toEqual([
+        options[0],
+        options[2],
+      ]);
+    });
+  });
+
+  describe('ワードが空文字列の場合', () => {
+    it('補完候補がそのまま返る', () => {
+      expect(filterOptionsByWord(plusOptions, '')).toEqual(plusOptions);
+      expect(filterOptionsByWord(minusOptions, '')).toEqual(minusOptions);
     });
   });
 });
