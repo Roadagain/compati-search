@@ -47,7 +47,9 @@ export const isOptionEqualToWord = (
   // console.log({option, word})
   // マイナス検索しているラベルやマイナス検索中のプラスラベルを除外する
   const pureWord = wordWithoutFirstMinus(word);
-  const pureLabel = wordWithoutFirstMinus(typeof option === "string" ? option : option.label);
+  const pureLabel = wordWithoutFirstMinus(
+    typeof option === 'string' ? option : option.label
+  );
   return pureWord === pureLabel;
 };
 
