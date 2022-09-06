@@ -36,13 +36,16 @@ interface Props {
   sx?: SxProps<Theme>;
 }
 
-const isOptionEqualToValue = (option: AutocompleteOption, value: string): boolean => {
+const isOptionEqualToValue = (
+  option: AutocompleteOption,
+  value: string
+): boolean => {
   // マイナス検索しているラベルやマイナス検索中のプラスラベルを除外する
   const minusableWord = /-?(.*)/;
   const wordWithoutMinus = value.match(minusableWord)[1];
   const labelWithoutMinus = option.label.match(minusableWord)[1];
   return wordWithoutMinus === labelWithoutMinus;
-}
+};
 
 const filterOptions = (
   options: AutocompleteOption[],
@@ -53,7 +56,7 @@ const filterOptions = (
   const wordWithoutMinus = state.inputValue.match(minusableWord)[1];
   return options.filter((option) => {
     const labelWithoutMinus = option.label.match(minusableWord)[1];
-    return labelWithoutMinus.includes(wordWithoutMinus)
+    return labelWithoutMinus.includes(wordWithoutMinus);
   });
 };
 
@@ -75,13 +78,18 @@ export const AutocompleteForm: React.FC<Props> = ({
     [onChange]
   );
   const [isMinus, setIsMinus] = React.useState(false);
-  const onInputChange = React.useCallback((_, value: string) => {
-    setIsMinus(value.startsWith('-'))
-  }, [setIsMinus])
-  const options = isMinus ? autocompleteOptions.map((option) => ({
-    ...option,
-    label: `-${option.label}`
-  })) : autocompleteOptions;
+  const onInputChange = React.useCallback(
+    (_, value: string) => {
+      setIsMinus(value.startsWith('-'));
+    },
+    [setIsMinus]
+  );
+  const options = isMinus
+    ? autocompleteOptions.map((option) => ({
+        ...option,
+        label: `-${option.label}`,
+      }))
+    : autocompleteOptions;
   const theme = useTheme();
 
   return (
@@ -116,14 +124,16 @@ export const AutocompleteForm: React.FC<Props> = ({
       )}
       renderTags={(values: string[], getTagProps) =>
         values.map((value, index) => {
-          const color = value.startsWith('-') ? "error" : "default";
-          return (<Chip
-            key={value}
-            label={value}
-            color={color}
-            {...getTagProps({ index })}
-            sx={{ fontSize: theme.typography.h6 }}
-          />)
+          const color = value.startsWith('-') ? 'error' : 'default';
+          return (
+            <Chip
+              key={value}
+              label={value}
+              color={color}
+              {...getTagProps({ index })}
+              sx={{ fontSize: theme.typography.h6 }}
+            />
+          );
         })
       }
       filterOptions={filterOptions}

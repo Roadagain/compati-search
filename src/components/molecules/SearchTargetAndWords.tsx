@@ -30,12 +30,18 @@ export const SearchTargetAndWords: React.FC<Props> = ({
       {words.length ? (
         <>
           {words.map((word) => {
-            const color = word.startsWith('-') ? "error" : "default";
+            const color = word.startsWith('-') ? 'error' : 'default';
             return (
-              <Typography key={word} component="span" variant={variant} fontWeight="bold" color={color}>
+              <Typography
+                key={word}
+                component="span"
+                variant={variant}
+                fontWeight="bold"
+                color={color}
+              >
                 {word}&nbsp;
               </Typography>
-            )
+            );
           })}
           の{targetStr}検索結果
         </>
