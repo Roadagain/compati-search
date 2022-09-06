@@ -139,16 +139,17 @@ describe('wordWithoutFirstMins', () => {
 describe('isOptionEqualToWord', () => {
   describe('最初のマイナス(-)を除いてラベルとワードが一致する場合', () => {
     describe.each`
-      label      | word
+      option      | word
       ${'test'}  | ${'test'}
       ${'test'}  | ${'-test'}
       ${'-test'} | ${'test'}
       ${'-test'} | ${'-test'}
-    `('タグラベルが $label でワードが $word の場合', ({ label, word }) => {
+      ${{label:'test'}}  | ${'test'}
+      ${{label:'test'}}  | ${'-test'}
+      ${{label:'-test'}} | ${'test'}
+      ${{label:'-test'}} | ${'-test'}
+    `('タグラベルが $label でワードが $word の場合', ({ option, word }) => {
       it('同じと判定される', () => {
-        const option: AutocompleteOption = {
-          label,
-        };
         expect(isOptionEqualToWord(option, word)).toBeTruthy();
       });
     });
@@ -156,16 +157,17 @@ describe('isOptionEqualToWord', () => {
 
   describe('最初のマイナス(-)を除いてもラベルとワードが一致しない場合', () => {
     describe.each`
-      label       | word
+      option       | word
       ${'label'}  | ${'word'}
       ${'label'}  | ${'-word'}
       ${'-label'} | ${'word'}
       ${'-label'} | ${'-word'}
-    `('タグラベルが $label でワードが $word の場合', ({ label, word }) => {
+      ${{label:'label'}}  | ${'word'}
+      ${{label:'label'}}  | ${'-word'}
+      ${{label:'-label'}} | ${'word'}
+      ${{label:'-label'}} | ${'-word'}
+    `('タグラベルが $label でワードが $word の場合', ({ option, word }) => {
       it('違うと判定される', () => {
-        const option: AutocompleteOption = {
-          label,
-        };
         expect(isOptionEqualToWord(option, word)).toBeFalsy();
       });
     });

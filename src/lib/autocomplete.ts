@@ -40,12 +40,14 @@ export const wordWithoutFirstMinus = (word: string): string => {
 };
 
 export const isOptionEqualToWord = (
-  option: AutocompleteOption,
+  // 補完対象から選択した場合AutocompleteOption、最後まで自分で入力した場合はstringになる
+  option: string | AutocompleteOption,
   word: string
 ): boolean => {
+  // console.log({option, word})
   // マイナス検索しているラベルやマイナス検索中のプラスラベルを除外する
   const pureWord = wordWithoutFirstMinus(word);
-  const pureLabel = wordWithoutFirstMinus(option.label);
+  const pureLabel = wordWithoutFirstMinus(typeof option === "string" ? option : option.label);
   return pureWord === pureLabel;
 };
 
