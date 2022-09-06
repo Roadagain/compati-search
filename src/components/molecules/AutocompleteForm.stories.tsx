@@ -51,10 +51,11 @@ SearchByName.args = {
 export const InputtedWords = Template.bind({});
 InputtedWords.args = {
   target: SearchTarget.TAG,
-  words: ['あいうえお', 'なにぬねの'],
+  words: ['あいうえお', 'なにぬねの', '-はひふへほ'],
   autocompleteOptions: [
     { category: 'な行', label: 'なにぬねの' },
     { category: 'は行', label: 'はひふへほ' },
+    { category: 'ま行', label: 'まみむめも' },
   ],
   sx: {},
 };

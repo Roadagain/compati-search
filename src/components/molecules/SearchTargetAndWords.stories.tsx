@@ -47,3 +47,10 @@ MultipleWords.args = {
   words: ['アキ', 'フユ'],
   sx: {},
 };
+
+export const MinusWord = Template.bind({});
+MinusWord.args = {
+  target: SearchTarget.TAG,
+  words: ['-梅雨'],
+  sx: {},
+};
