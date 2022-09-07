@@ -29,7 +29,7 @@ export const onChangeSearchTarget = (
 ): State => {
   const { characters, search } = state;
   const { showAll } = search;
-  const words = [];
+  const words = search.target === target ? search.words : [];
   const results = filterCharacters(characters, target, words, showAll);
   return {
     ...state,
