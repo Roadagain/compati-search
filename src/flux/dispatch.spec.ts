@@ -146,20 +146,61 @@ describe('各dispatchの対応', () => {
     let nextState: State;
     const label = 'label';
 
-    beforeEach(() => {
-      nextState = onClickTag(state, label);
+    describe('今のstateがタグ検索のとき', () => {
+      const currentState: State = {
+        ...state,
+        search: {
+          ...state.search,
+          target: SearchTarget.TAG,
+          words: ['imano', 'tag'],
+        },
+      };
+
+      beforeEach(() => {
+        nextState = onClickTag(currentState, label);
+      });
+
+      it('検索対象がタグになっている', () => {
+        expect(nextState.search.target).toBe(SearchTarget.TAG);
+      });
+
+      it('既存の検索ワードにクリックしたタグが追加されている', () => {
+        expect(nextState.search.words).toEqual([
+          ...currentState.search.words,
+          label,
+        ]);
+      });
+
+      it('フィルタ関数が呼び出されている', () => {
+        expect(filterCharacters).toBeCalled();
+      });
     });
 
-    it('検索対象がタグになっている', () => {
-      expect(nextState.search.target).toBe(SearchTarget.TAG);
-    });
+    describe('今のstateが名前検索のとき', () => {
+      const currentState: State = {
+        ...state,
+        search: {
+          ...state.search,
+          target: SearchTarget.NAME,
+          words: ['imano', 'name'],
+        },
+      };
 
-    it('検索ワードがクリックしたタグのみになっている', () => {
-      expect(nextState.search.words).toEqual([label]);
-    });
+      beforeEach(() => {
+        nextState = onClickTag(currentState, label);
+      });
 
-    it('フィルタ関数が呼び出されている', () => {
-      expect(filterCharacters).toBeCalled();
+      it('検索対象がタグになっている', () => {
+        expect(nextState.search.target).toBe(SearchTarget.TAG);
+      });
+
+      it('検索ワードがクリックしたタグのみになっている', () => {
+        expect(nextState.search.words).toEqual([label]);
+      });
+
+      it('フィルタ関数が呼び出されている', () => {
+        expect(filterCharacters).toBeCalled();
+      });
     });
   });
 });
