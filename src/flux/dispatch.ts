@@ -72,10 +72,10 @@ export const onChangeShowAll = (state: State, showAll: boolean): State => {
 
 export const onClickTag = (state: State, label: string): State => {
   const { characters, search } = state;
-  const { words: currentWords, target: currentTarget, showAll } = search;
+  const { showAll } = search;
   const target = SearchTarget.TAG;
   const words =
-    currentTarget === SearchTarget.TAG ? [...currentWords, label] : [label];
+    search.target === SearchTarget.TAG ? [...search.words, label] : [label];
   const results = filterCharacters(characters, target, words, showAll);
   return {
     ...state,
