@@ -29,7 +29,7 @@ export const onChangeSearchTarget = (
 ): State => {
   const { characters, search } = state;
   const { showAll } = search;
-  const words = [];
+  const words = search.target === target ? search.words : [];
   const results = filterCharacters(characters, target, words, showAll);
   return {
     ...state,
@@ -74,7 +74,8 @@ export const onClickTag = (state: State, label: string): State => {
   const { characters, search } = state;
   const { showAll } = search;
   const target = SearchTarget.TAG;
-  const words = [label];
+  const words =
+    search.target === SearchTarget.TAG ? [...search.words, label] : [label];
   const results = filterCharacters(characters, target, words, showAll);
   return {
     ...state,
