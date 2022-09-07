@@ -28,6 +28,13 @@ const state: Readonly<State> = {
 };
 
 describe('onLoadCharacters', () => {
+  const currentState: State = {
+    ...state,
+    characters: [],
+    metadata: {
+      character: ''
+    }
+  }
   let nextState: State;
   const characterShowDefault: TaggedCharacter = {
     name: 'name',
@@ -62,7 +69,7 @@ describe('onLoadCharacters', () => {
   };
 
   beforeEach(() => {
-    nextState = onLoadCharactersData(state, charactersData);
+    nextState = onLoadCharactersData(currentState, charactersData);
   });
 
   it('準備完了フラグが変更されている', () => {
@@ -84,31 +91,83 @@ describe('onLoadCharacters', () => {
 
 describe('onChangeSearchTarget', () => {
   let nextState: State;
-  const target = SearchTarget.NAME;
 
-  beforeEach(() => {
-    nextState = onChangeSearchTarget(state, target);
-  });
+  describe.each`
+  target
+  ${SearchTarget.TAG}
+  ${SearchTarget.NAME}
+  `("現在の検索対象と変更後の検索対象が一致する場合", ({target}) => {
+    const currentState: State = {
+      ...state,
+      search: {
+        ...state.search,
+        target,
+        words: ['imano', 'tango']
+      }
+    }
 
-  it('検索対象が変更されている', () => {
-    expect(nextState.search.target).toBe(target);
-  });
+    beforeEach(() => {
+      nextState = onChangeSearchTarget(currentState, target);
+    });
 
-  it('検索ワードがリセットされている', () => {
-    expect(nextState.search.words).toEqual([]);
-  });
+    it("検索対象が変更されていない", () => {
+      expect(nextState.search.target).toBe(target);
+    })
 
-  it('フィルタ関数が呼び出されている', () => {
-    expect(filterCharacters).toBeCalled();
-  });
+    it("検索ワードが変更されていない", () => {
+      expect(nextState.search.words).toEqual(currentState.search.words)
+    })
+
+    it('フィルタ関数が呼び出されている', () => {
+      expect(filterCharacters).toBeCalled();
+    });
+  })
+
+  describe.each`
+  currentTarget | newTarget
+  ${SearchTarget.TAG} | ${SearchTarget.NAME}
+  ${SearchTarget.NAME} | ${SearchTarget.TAG}
+  `("現在の検索対象と変更後の検索対象が一致しない場合", ({currentTarget, newTarget}) => {
+    const currentState: State = {
+      ...state,
+      search: {
+        ...state.search,
+        target: currentTarget,
+        words: ['imano', 'tango']
+      }
+    }
+
+    beforeEach(() => {
+      nextState = onChangeSearchTarget(currentState, newTarget);
+    });
+
+    it("検索対象が変更されている", () => {
+      expect(nextState.search.target).toBe(newTarget);
+    })
+
+    it("検索ワードがリセットされている", () => {
+      expect(nextState.search.words).toEqual([])
+    })
+
+    it('フィルタ関数が呼び出されている', () => {
+      expect(filterCharacters).toBeCalled();
+    });
+  })
 });
 
 describe('onChangeSearchWords', () => {
+  const currentState: State = {
+    ...state,
+    search: {
+      ...state.search,
+      words: ['imano', 'kotoba']
+    }
+  }
   let nextState: State;
   const words = ['word'];
 
   beforeEach(() => {
-    nextState = onChangeSearchWords(state, words);
+    nextState = onChangeSearchWords(currentState, words);
   });
 
   it('検索ワードが変更されている', () => {
@@ -122,19 +181,34 @@ describe('onChangeSearchWords', () => {
 
 describe('onChangeShowAll', () => {
   let nextState: State;
-  const showAll = true;
 
-  beforeEach(() => {
-    nextState = onChangeShowAll(state, showAll);
-  });
+  describe.each`
+  currentShowAll | newShowAll
+  ${true} | ${true}
+  ${true} | ${false}
+  ${false} | ${true}
+  ${false} | ${false}
+  `("現在の全キャラ表示フラグが $currentShowAll で変更後のフラグが $newShowAll の場合", ({currentShowAll, newShowAll}) => {
+    const currentState: State = {
+      ...state,
+      search: {
+        ...state.search,
+        showAll: currentShowAll,
+      }
+    }
 
-  it('全キャラ表示フラグが変更されている', () => {
-    expect(nextState.search.showAll).toBe(showAll);
-  });
+    beforeEach(() => {
+      nextState = onChangeShowAll(currentState, newShowAll);
+    });
 
-  it('フィルタ関数が呼び出されている', () => {
-    expect(filterCharacters).toBeCalled();
-  });
+    it('全キャラ表示フラグが変更後の値になっている', () => {
+      expect(nextState.search.showAll).toBe(newShowAll);
+    });
+
+    it('フィルタ関数が呼び出されている', () => {
+      expect(filterCharacters).toBeCalled();
+    });
+  })
 });
 
 describe('onClickTag', () => {
