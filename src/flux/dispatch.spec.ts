@@ -30,6 +30,7 @@ const state: Readonly<State> = {
 describe('onLoadCharacters', () => {
   const currentState: State = {
     ...state,
+    isReady: false,
     characters: [],
     metadata: {
       character: '',
