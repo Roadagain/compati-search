@@ -1,9 +1,8 @@
 import { isCharactersData } from './characters-data';
-import { isTaggedCharacter } from './load-data';
 import { isMetadata } from './metadata';
-import { TaggedCharacter } from './tagged-character';
+import { isTaggedCharacter, TaggedCharacter } from './tagged-character';
 
-jest.mock('./load-data');
+jest.mock('./tagged-character');
 jest.mock('./metadata');
 describe('isCharactersData', () => {
   describe('charactersが配列でmetadataがdefinedの場合', () => {

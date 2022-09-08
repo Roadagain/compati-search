@@ -4,25 +4,11 @@ import {
   WouldBeCharactersData,
 } from './characters-data';
 import { isMetadata, Metadata, WouldBeMetadata } from './metadata';
-import { Tag, TaggedCharacter } from './tagged-character';
-
-type WouldBeTaggedCharacter = { [K in keyof TaggedCharacter]?: unknown };
-type WouldBeTag = { [K in keyof Tag]?: unknown };
-
-export const isTag = (obj: WouldBeTag): obj is Tag => {
-  return typeof obj.category === 'string' && typeof obj.label === 'string';
-};
-
-export const isTaggedCharacter = (
-  obj: WouldBeTaggedCharacter
-): obj is TaggedCharacter => {
-  return (
-    typeof obj.name === 'string' &&
-    Array.isArray(obj.tags) &&
-    obj.tags.every(isTag) &&
-    typeof obj.showDefault === 'boolean'
-  );
-};
+import {
+  isTaggedCharacter,
+  TaggedCharacter,
+  WouldBeTaggedCharacter,
+} from './tagged-character';
 
 export const loadCharactersFromJson = (
   json: WouldBeTaggedCharacter[]
