@@ -22,10 +22,10 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint', 'simple-import-sort'],
   rules: {
-    "simple-import-sort/imports": "warn",
-    "simple-import-sort/exports": "warn",
-    "import/first": "warn",
-    "import/newline-after-import": "warn",
-    "import/no-duplicates": "warn"
+    'simple-import-sort/imports': 'warn',
+    'simple-import-sort/exports': 'warn',
+    'import/first': 'warn',
+    'import/newline-after-import': 'warn',
+    'import/no-duplicates': 'warn',
   },
 };
