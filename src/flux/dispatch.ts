@@ -1,6 +1,6 @@
 import { CharactersData } from '../lib/characters-data';
+import { filterCharacters } from '../lib/filter-characters';
 import { SearchTarget } from '../lib/search-target';
-import { filterCharacters } from '../lib/tagged-character';
 import { State } from './state';
 
 export const onLoadCharactersData = (

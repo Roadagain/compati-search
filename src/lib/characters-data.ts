@@ -1,6 +1,5 @@
-import { isTaggedCharacter } from './load-data';
 import { isMetadata, Metadata } from './metadata';
-import { TaggedCharacter } from './tagged-character';
+import { isTaggedCharacter, TaggedCharacter } from './tagged-character';
 
 export interface CharactersData {
   characters: TaggedCharacter[];

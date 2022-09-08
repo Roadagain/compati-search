@@ -1,7 +1,8 @@
 import { CharactersData } from '../lib/characters-data';
+import { filterCharacters } from '../lib/filter-characters';
 import { Metadata } from '../lib/metadata';
 import { SearchTarget } from '../lib/search-target';
-import { filterCharacters, TaggedCharacter } from '../lib/tagged-character';
+import { TaggedCharacter } from '../lib/tagged-character';
 import {
   onChangeSearchTarget,
   onChangeSearchWords,
@@ -11,7 +12,7 @@ import {
 } from './dispatch';
 import { State } from './state';
 
-jest.mock('../lib/tagged-character');
+jest.mock('../lib/filter-characters');
 
 const state: Readonly<State> = {
   isReady: false,
