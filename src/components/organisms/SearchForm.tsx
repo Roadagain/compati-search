@@ -1,19 +1,18 @@
-import React from 'react';
-import { SxProps, Theme, useTheme } from '@mui/material/styles';
-import { SearchTargetSelect } from '../atoms/SearchTargetSelect';
-import { SearchTarget } from '../../lib/search-target';
-import { generateAutocompleteOptions } from '../../lib/autocomplete';
-import { FluxContext } from '../../flux/context';
-import { AutocompleteForm } from '../molecules/AutocompleteForm';
-import {
-  Accordion,
-  AccordionDetails,
-  AccordionSummary,
-  Stack,
-  Typography,
-  useMediaQuery,
-} from '@mui/material';
 import ExpandMore from '@mui/icons-material/ExpandMore';
+import Accordion from '@mui/material/Accordion';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import Stack from '@mui/material/Stack';
+import { SxProps, Theme, useTheme } from '@mui/material/styles';
+import Typography from '@mui/material/Typography';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import React from 'react';
+
+import { FluxContext } from '../../flux/context';
+import { generateAutocompleteOptions } from '../../lib/autocomplete';
+import { SearchTarget } from '../../lib/search-target';
+import { SearchTargetSelect } from '../atoms/SearchTargetSelect';
+import { AutocompleteForm } from '../molecules/AutocompleteForm';
 
 interface Props {
   /**

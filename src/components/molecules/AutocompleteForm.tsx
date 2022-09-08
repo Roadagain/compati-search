@@ -1,13 +1,10 @@
-import {
-  Autocomplete,
-  Chip,
-  FilterOptionsState,
-  SxProps,
-  TextField,
-  Theme,
-  useTheme,
-} from '@mui/material';
+import Autocomplete from '@mui/material/Autocomplete';
+import Chip from '@mui/material/Chip';
+import { SxProps, Theme, useTheme } from '@mui/material/styles';
+import TextField from '@mui/material/TextField';
+import { FilterOptionsState } from '@mui/material/useAutocomplete';
 import React from 'react';
+
 import {
   AutocompleteOption,
   filterOptionsByWord,

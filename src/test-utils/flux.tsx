@@ -1,8 +1,9 @@
-import { initialState, State } from '../flux/state';
-import { characters } from '../../sample/characters-data/sample.json';
 import React, { useReducer } from 'react';
-import { reducer } from '../flux/reducer';
+
+import { characters } from '../../sample/characters-data/sample.json';
 import { FluxContext } from '../flux/context';
+import { reducer } from '../flux/reducer';
+import { initialState, State } from '../flux/state';
 import { SearchTarget } from '../lib/search-target';
 
 export const initialTestState: State = {

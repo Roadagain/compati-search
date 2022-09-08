@@ -1,7 +1,8 @@
 import '@fontsource/noto-sans-jp/400.css';
 import '@fontsource/noto-sans-jp/500.css';
 import '@fontsource/noto-sans-jp/700.css';
-import { CssBaseline, ThemeProvider } from '@mui/material';
+import { ThemeProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
 import { theme } from '../src/styles/theme';
 import React from 'react';
 import { TestFluxProvider } from '../src/test-utils/flux';

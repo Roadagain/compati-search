@@ -1,4 +1,5 @@
 import { NextApiHandler } from 'next';
+
 import sampleCharactersData from '../../../../sample/characters-data/sample.json';
 
 const handler: NextApiHandler = (_, response) => {

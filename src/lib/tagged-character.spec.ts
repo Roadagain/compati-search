@@ -1,9 +1,9 @@
 import { SearchTarget } from './search-target';
 import {
+  filterCharacters,
+  filterCharactersByNameWords,
   filterCharactersByTagLabels,
   TaggedCharacter,
-  filterCharactersByNameWords,
-  filterCharacters,
 } from './tagged-character';
 
 describe('filterCharactersByTagLabels', () => {

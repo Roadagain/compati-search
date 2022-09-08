@@ -1,5 +1,5 @@
-import { Tag, TaggedCharacter } from './tagged-character';
 import { SearchTarget } from './search-target';
+import { Tag, TaggedCharacter } from './tagged-character';
 
 export interface CharacterName {
   label: string;

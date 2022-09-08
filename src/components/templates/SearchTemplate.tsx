@@ -1,10 +1,13 @@
+import Container from '@mui/material/Container';
+import LinearProgress from '@mui/material/LinearProgress';
+import Typography from '@mui/material/Typography';
 import React from 'react';
-import { Container, LinearProgress, Typography } from '@mui/material';
+
 import { FluxContext } from '../../flux/context';
-import { SearchForm } from '../organisms/SearchForm';
-import { SearchCondition } from '../organisms/SearchCondition';
-import { SearchResults } from '../organisms/SearchResults';
 import { fetchCharactersData } from '../../lib/fetch-data';
+import { SearchCondition } from '../organisms/SearchCondition';
+import { SearchForm } from '../organisms/SearchForm';
+import { SearchResults } from '../organisms/SearchResults';
 
 export interface Props {
   /**

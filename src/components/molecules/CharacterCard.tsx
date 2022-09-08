@@ -1,16 +1,14 @@
-import {
-  Box,
-  Card,
-  CardContent,
-  CardHeader,
-  SxProps,
-  Theme,
-} from '@mui/material';
-import React from 'react';
-import { TagBadge } from '../atoms/TagBadge';
+import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardHeader from '@mui/material/CardHeader';
 import Stack from '@mui/material/Stack';
-import { Tag } from '../../lib/tagged-character';
+import { SxProps, Theme } from '@mui/material/styles';
+import React from 'react';
+
 import { memoizedComponent } from '../../lib/memoized';
+import { Tag } from '../../lib/tagged-character';
+import { TagBadge } from '../atoms/TagBadge';
 
 interface Props {
   /**
