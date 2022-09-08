@@ -1,10 +1,10 @@
-import { SearchTarget } from './search-target';
 import {
   filterCharacters,
   filterCharactersByNameWords,
   filterCharactersByTagLabels,
-  TaggedCharacter,
-} from './tagged-character';
+} from './filter-characters';
+import { SearchTarget } from './search-target';
+import { TaggedCharacter } from './tagged-character';
 
 describe('filterCharactersByTagLabels', () => {
   const testTag1 = 'aurum';
