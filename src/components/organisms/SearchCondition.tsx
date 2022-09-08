@@ -1,4 +1,6 @@
-import { Stack, SxProps, Theme, useMediaQuery, useTheme } from '@mui/material';
+import { SxProps, Theme, useTheme } from '@mui/material/styles';
+import Stack from '@mui/material/Stack';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import React from 'react';
 import { FluxContext } from '../../flux/context';
 import { SearchTargetAndWords } from '../molecules/SearchTargetAndWords';

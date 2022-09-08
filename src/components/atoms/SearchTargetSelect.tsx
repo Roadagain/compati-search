@@ -1,7 +1,7 @@
 import React from 'react';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
-import { SxProps, Theme, useTheme } from '@mui/material';
+import { SxProps, Theme, useTheme } from '@mui/material/styles';
 import { SearchTarget } from '../../lib/search-target';
 
 interface Props {

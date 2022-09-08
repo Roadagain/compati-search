@@ -1,11 +1,8 @@
-import {
-  Box,
-  Card,
-  CardContent,
-  CardHeader,
-  SxProps,
-  Theme,
-} from '@mui/material';
+import { SxProps, Theme } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardHeader from '@mui/material/CardHeader';
 import React from 'react';
 import { TagBadge } from '../atoms/TagBadge';
 import Stack from '@mui/material/Stack';

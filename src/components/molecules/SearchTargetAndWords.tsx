@@ -1,4 +1,5 @@
-import { SxProps, Theme, Typography } from '@mui/material';
+import { SxProps, Theme } from '@mui/material/styles';
+import Typography from '@mui/material/Typography';
 import React from 'react';
 import { SearchTarget } from '../../lib/search-target';
 

@@ -5,14 +5,12 @@ import { SearchTarget } from '../../lib/search-target';
 import { generateAutocompleteOptions } from '../../lib/autocomplete';
 import { FluxContext } from '../../flux/context';
 import { AutocompleteForm } from '../molecules/AutocompleteForm';
-import {
-  Accordion,
-  AccordionDetails,
-  AccordionSummary,
-  Stack,
-  Typography,
-  useMediaQuery,
-} from '@mui/material';
+import Accordion from '@mui/material/Accordion';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import Stack from '@mui/material/Stack';
+import Typography from '@mui/material/Typography';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 
 interface Props {

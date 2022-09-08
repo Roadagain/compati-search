@@ -1,5 +1,7 @@
 import React from 'react';
-import { Container, LinearProgress, Typography } from '@mui/material';
+import Container from '@mui/material/Container';
+import LinearProgress from '@mui/material/LinearProgress';
+import Typography from '@mui/material/Typography';
 import { FluxContext } from '../../flux/context';
 import { SearchForm } from '../organisms/SearchForm';
 import { SearchCondition } from '../organisms/SearchCondition';
