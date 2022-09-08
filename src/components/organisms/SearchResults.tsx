@@ -1,6 +1,7 @@
-import { SxProps, Theme } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
+import { SxProps, Theme } from '@mui/material/styles';
 import React from 'react';
+
 import { FluxContext } from '../../flux/context';
 import { CharacterCard } from '../molecules/CharacterCard';
 

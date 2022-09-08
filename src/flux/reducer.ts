@@ -1,4 +1,5 @@
 import { Reducer } from 'react';
+
 import { Action } from './action';
 import {
   onChangeSearchTarget,

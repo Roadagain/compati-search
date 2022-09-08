@@ -1,5 +1,5 @@
-import { SxProps, Theme } from '@mui/material/styles';
 import FormControlLabel from '@mui/material/FormControlLabel';
+import { SxProps, Theme } from '@mui/material/styles';
 import Switch from '@mui/material/Switch';
 import React from 'react';
 

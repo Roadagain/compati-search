@@ -1,4 +1,5 @@
 import { GetServerSideProps, NextPage } from 'next';
+
 import { SearchTemplate } from '../components/templates/SearchTemplate';
 
 interface Props {

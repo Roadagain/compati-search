@@ -1,8 +1,8 @@
+import { ComponentMeta,ComponentStory } from '@storybook/react';
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { AutocompleteForm } from './AutocompleteForm';
 import { SearchTarget } from '../../lib/search-target';
+import { AutocompleteForm } from './AutocompleteForm';
 
 const componentMeta: ComponentMeta<typeof AutocompleteForm> = {
   title: 'Molecules/AutocompleteForm',
