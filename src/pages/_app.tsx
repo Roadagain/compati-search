@@ -15,6 +15,10 @@ const AppLayout = ({ Component, pageProps }: AppProps) => (
   <main>
     <Head>
       <title>コンパチサーチ</title>
+      <meta
+        name="description"
+        content="キャラクターについたタグから代替キャラを探しましょう"
+      />
     </Head>
     <ThemeProvider theme={theme}>
       <CssBaseline />
