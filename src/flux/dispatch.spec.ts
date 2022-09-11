@@ -15,7 +15,7 @@ import { State } from './state';
 
 jest.mock('../lib/filter-characters');
 
-const state: Readonly<State> = {
+const baseState: Readonly<State> = {
   isReady: false,
   characters: [],
   metadata: {
@@ -32,7 +32,7 @@ const state: Readonly<State> = {
 
 describe('onLoadCharacters', () => {
   const currentState: State = {
-    ...state,
+    ...baseState,
     isReady: false,
     characters: [],
     metadata: {
@@ -102,9 +102,9 @@ describe('onChangeSearchTarget', () => {
     ${SearchTarget.NAME}
   `('現在の検索対象と変更後の検索対象が一致する場合', ({ target }) => {
     const currentState: State = {
-      ...state,
+      ...baseState,
       search: {
-        ...state.search,
+        ...baseState.search,
         target,
         words: ['imano', 'tango'],
         page: 5,
@@ -140,9 +140,9 @@ describe('onChangeSearchTarget', () => {
     '現在の検索対象と変更後の検索対象が一致しない場合',
     ({ currentTarget, newTarget }) => {
       const currentState: State = {
-        ...state,
+        ...baseState,
         search: {
-          ...state.search,
+          ...baseState.search,
           target: currentTarget,
           words: ['imano', 'tango'],
           page: 5,
@@ -174,9 +174,9 @@ describe('onChangeSearchTarget', () => {
 
 describe('onChangeSearchWords', () => {
   const currentState: State = {
-    ...state,
+    ...baseState,
     search: {
-      ...state.search,
+      ...baseState.search,
       words: ['imano', 'kotoba'],
       page: 4,
     },
@@ -214,9 +214,9 @@ describe('onChangeShowAll', () => {
     '現在の全キャラ表示フラグが $currentShowAll で変更後のフラグが $newShowAll の場合',
     ({ currentShowAll, newShowAll }) => {
       const currentState: State = {
-        ...state,
+        ...baseState,
         search: {
-          ...state.search,
+          ...baseState.search,
           showAll: currentShowAll,
           page: 3,
         },
@@ -247,9 +247,9 @@ describe('onClickTag', () => {
 
   describe('今のstateがタグ検索のとき', () => {
     const currentState: State = {
-      ...state,
+      ...baseState,
       search: {
-        ...state.search,
+        ...baseState.search,
         target: SearchTarget.TAG,
         words: ['imano', 'tag'],
         page: 2,
@@ -282,9 +282,9 @@ describe('onClickTag', () => {
 
   describe('今のstateが名前検索のとき', () => {
     const currentState: State = {
-      ...state,
+      ...baseState,
       search: {
-        ...state.search,
+        ...baseState.search,
         target: SearchTarget.NAME,
         words: ['imano', 'name'],
         page: 2,
@@ -316,9 +316,9 @@ describe('onClickTag', () => {
 describe('onShowNextPage', () => {
   let nextState: State;
   const currentState = {
-    ...state,
+    ...baseState,
     search: {
-      ...state.search,
+      ...baseState.search,
       page: 1,
     },
   };
