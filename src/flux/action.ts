@@ -26,7 +26,7 @@ interface ClickTag {
   label: string;
 }
 
-interface LoadMore {
+interface ShowNextPage {
   type: 'show-next-page';
 }
 
@@ -36,4 +36,4 @@ export type Action =
   | ChangeSearchWordsAction
   | ChangeShowAllAction
   | ClickTag
-  | LoadMore;
+  | ShowNextPage;
