@@ -28,7 +28,7 @@ export const SearchTargetAndWords: React.FC<Props> = ({
   const variant = 'h6';
 
   return (
-    <Typography component="h5" variant={variant} sx={sx}>
+    <Typography component="h2" variant={variant} sx={sx}>
       {words.length ? (
         <>
           {words.map((word) => {

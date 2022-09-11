@@ -2,8 +2,6 @@ import Button from '@mui/material/Button';
 import { SxProps, Theme } from '@mui/material/styles';
 import React from 'react';
 
-import { memoizedComponent } from '../../lib/memoized';
-
 interface Props {
   /**
    * タグ
@@ -20,21 +18,23 @@ interface Props {
   sx?: SxProps<Theme>;
 }
 
-export const TagBadge = memoizedComponent<React.FC<Props>>(
-  ({ children: children, onClick, sx }) => {
-    const onClickButton = React.useCallback(
-      () => onClick(children),
-      [onClick, children]
-    );
-    return (
-      <Button
-        size="small"
-        variant="outlined"
-        onClick={onClickButton}
-        sx={{ textTransform: 'none', ...sx }}
-      >
-        {children}
-      </Button>
-    );
-  }
-);
+export const TagBadge: React.FC<Props> = ({
+  children: children,
+  onClick,
+  sx,
+}) => {
+  const onClickButton = React.useCallback(
+    () => onClick(children),
+    [onClick, children]
+  );
+  return (
+    <Button
+      size="small"
+      variant="outlined"
+      onClick={onClickButton}
+      sx={{ textTransform: 'none', ...sx }}
+    >
+      {children}
+    </Button>
+  );
+};
