@@ -26,9 +26,14 @@ interface ClickTag {
   label: string;
 }
 
+interface LoadMore {
+  type: 'show-next-page';
+}
+
 export type Action =
   | LoadCharactersData
   | ChangeSearchTargetAction
   | ChangeSearchWordsAction
   | ChangeShowAllAction
-  | ClickTag;
+  | ClickTag
+  | LoadMore;

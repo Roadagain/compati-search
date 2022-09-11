@@ -9,6 +9,7 @@ import {
   onChangeShowAll,
   onClickTag,
   onLoadCharactersData,
+  onShowNextPage,
 } from './dispatch';
 import { State } from './state';
 
@@ -25,6 +26,7 @@ const state: Readonly<State> = {
     words: [],
     showAll: false,
     results: [],
+    page: 1,
   },
 };
 
@@ -105,6 +107,7 @@ describe('onChangeSearchTarget', () => {
         ...state.search,
         target,
         words: ['imano', 'tango'],
+        page: 5,
       },
     };
 
@@ -118,6 +121,10 @@ describe('onChangeSearchTarget', () => {
 
     it('検索ワードが変更されていない', () => {
       expect(nextState.search.words).toEqual(currentState.search.words);
+    });
+
+    it('ページがリセットされている', () => {
+      expect(nextState.search.page).toBe(1);
     });
 
     it('フィルタ関数が呼び出されている', () => {
@@ -138,6 +145,7 @@ describe('onChangeSearchTarget', () => {
           ...state.search,
           target: currentTarget,
           words: ['imano', 'tango'],
+          page: 5,
         },
       };
 
@@ -153,6 +161,10 @@ describe('onChangeSearchTarget', () => {
         expect(nextState.search.words).toEqual([]);
       });
 
+      it('ページがリセットされている', () => {
+        expect(nextState.search.page).toBe(1);
+      });
+
       it('フィルタ関数が呼び出されている', () => {
         expect(filterCharacters).toBeCalled();
       });
@@ -166,6 +178,7 @@ describe('onChangeSearchWords', () => {
     search: {
       ...state.search,
       words: ['imano', 'kotoba'],
+      page: 4,
     },
   };
   let nextState: State;
@@ -177,6 +190,10 @@ describe('onChangeSearchWords', () => {
 
   it('検索ワードが変更されている', () => {
     expect(nextState.search.words).toEqual(words);
+  });
+
+  it('ページがリセットされている', () => {
+    expect(nextState.search.page).toBe(1);
   });
 
   it('フィルタ関数が呼び出されている', () => {
@@ -201,6 +218,7 @@ describe('onChangeShowAll', () => {
         search: {
           ...state.search,
           showAll: currentShowAll,
+          page: 3,
         },
       };
 
@@ -210,6 +228,10 @@ describe('onChangeShowAll', () => {
 
       it('全キャラ表示フラグが変更後の値になっている', () => {
         expect(nextState.search.showAll).toBe(newShowAll);
+      });
+
+      it('ページがリセットされている', () => {
+        expect(nextState.search.page).toBe(1);
       });
 
       it('フィルタ関数が呼び出されている', () => {
@@ -230,6 +252,7 @@ describe('onClickTag', () => {
         ...state.search,
         target: SearchTarget.TAG,
         words: ['imano', 'tag'],
+        page: 2,
       },
     };
 
@@ -248,6 +271,10 @@ describe('onClickTag', () => {
       ]);
     });
 
+    it('ページがリセットされている', () => {
+      expect(nextState.search.page).toBe(1);
+    });
+
     it('フィルタ関数が呼び出されている', () => {
       expect(filterCharacters).toBeCalled();
     });
@@ -260,6 +287,7 @@ describe('onClickTag', () => {
         ...state.search,
         target: SearchTarget.NAME,
         words: ['imano', 'name'],
+        page: 2,
       },
     };
 
@@ -275,8 +303,31 @@ describe('onClickTag', () => {
       expect(nextState.search.words).toEqual([label]);
     });
 
+    it('ページがリセットされている', () => {
+      expect(nextState.search.page).toBe(1);
+    });
+
     it('フィルタ関数が呼び出されている', () => {
       expect(filterCharacters).toBeCalled();
     });
+  });
+});
+
+describe('onShowNextPage', () => {
+  let nextState: State;
+  const currentState = {
+    ...state,
+    search: {
+      ...state.search,
+      page: 1,
+    },
+  };
+
+  beforeEach(() => {
+    nextState = onShowNextPage(currentState);
+  });
+
+  it('pageが1つ増えている', () => {
+    expect(nextState.search.page).toBe(2);
   });
 });

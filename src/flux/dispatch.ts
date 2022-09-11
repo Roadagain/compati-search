@@ -19,6 +19,7 @@ export const onLoadCharactersData = (
     search: {
       ...search,
       results,
+      page: 1,
     },
   };
 };
@@ -38,6 +39,7 @@ export const onChangeSearchTarget = (
       target,
       words,
       results,
+      page: 1,
     },
   };
 };
@@ -52,6 +54,7 @@ export const onChangeSearchWords = (state: State, words: string[]): State => {
       ...search,
       words,
       results,
+      page: 1,
     },
   };
 };
@@ -66,6 +69,7 @@ export const onChangeShowAll = (state: State, showAll: boolean): State => {
       ...search,
       showAll,
       results,
+      page: 1,
     },
   };
 };
@@ -84,6 +88,18 @@ export const onClickTag = (state: State, label: string): State => {
       target,
       words,
       results,
+      page: 1,
+    },
+  };
+};
+
+export const onShowNextPage = (state: State): State => {
+  const { search } = state;
+  return {
+    ...state,
+    search: {
+      ...search,
+      page: search.page + 1,
     },
   };
 };
