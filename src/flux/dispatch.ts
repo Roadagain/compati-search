@@ -30,14 +30,13 @@ export const onChangeSearchTarget = (
 ): State => {
   const { characters, search } = state;
   const { showAll } = search;
-  const words = search.target === target ? search.words : [];
-  const results = filterCharacters(characters, target, words, showAll);
+  const results = filterCharacters(characters, target, [], showAll);
   return {
     ...state,
     search: {
       ...search,
       target,
-      words,
+      words: [],
       results,
       page: 1,
     },

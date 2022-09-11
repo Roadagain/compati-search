@@ -96,80 +96,35 @@ describe('onLoadCharacters', () => {
 describe('onChangeSearchTarget', () => {
   let nextState: State;
 
-  describe.each`
-    target
-    ${SearchTarget.TAG}
-    ${SearchTarget.NAME}
-  `('現在の検索対象と変更後の検索対象が一致する場合', ({ target }) => {
-    const currentState: State = {
-      ...baseState,
-      search: {
-        ...baseState.search,
-        target,
-        words: ['imano', 'tango'],
-        page: 5,
-      },
-    };
+  const currentState: State = {
+    ...baseState,
+    search: {
+      ...baseState.search,
+      target: SearchTarget.NAME,
+      words: ['imano', 'tango'],
+      page: 5,
+    },
+  };
 
-    beforeEach(() => {
-      nextState = onChangeSearchTarget(currentState, target);
-    });
-
-    it('検索対象が変更されていない', () => {
-      expect(nextState.search.target).toBe(target);
-    });
-
-    it('検索ワードが変更されていない', () => {
-      expect(nextState.search.words).toEqual(currentState.search.words);
-    });
-
-    it('ページがリセットされている', () => {
-      expect(nextState.search.page).toBe(1);
-    });
-
-    it('フィルタ関数が呼び出されている', () => {
-      expect(filterCharacters).toBeCalled();
-    });
+  beforeEach(() => {
+    nextState = onChangeSearchTarget(currentState, SearchTarget.TAG);
   });
 
-  describe.each`
-    currentTarget        | newTarget
-    ${SearchTarget.TAG}  | ${SearchTarget.NAME}
-    ${SearchTarget.NAME} | ${SearchTarget.TAG}
-  `(
-    '現在の検索対象と変更後の検索対象が一致しない場合',
-    ({ currentTarget, newTarget }) => {
-      const currentState: State = {
-        ...baseState,
-        search: {
-          ...baseState.search,
-          target: currentTarget,
-          words: ['imano', 'tango'],
-          page: 5,
-        },
-      };
+  it('検索対象が変更されている', () => {
+    expect(nextState.search.target).toBe(SearchTarget.TAG);
+  });
 
-      beforeEach(() => {
-        nextState = onChangeSearchTarget(currentState, newTarget);
-      });
+  it('検索ワードがリセットされている', () => {
+    expect(nextState.search.words).toEqual([]);
+  });
 
-      it('検索対象が変更されている', () => {
-        expect(nextState.search.target).toBe(newTarget);
-      });
+  it('ページがリセットされている', () => {
+    expect(nextState.search.page).toBe(1);
+  });
 
-      it('検索ワードがリセットされている', () => {
-        expect(nextState.search.words).toEqual([]);
-      });
-
-      it('ページがリセットされている', () => {
-        expect(nextState.search.page).toBe(1);
-      });
-
-      it('フィルタ関数が呼び出されている', () => {
-        expect(filterCharacters).toBeCalled();
-      });
-    }
-  );
+  it('フィルタ関数が呼び出されている', () => {
+    expect(filterCharacters).toBeCalled();
+  });
 });
 
 describe('onChangeSearchWords', () => {
