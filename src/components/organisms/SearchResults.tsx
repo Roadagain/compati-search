@@ -23,7 +23,7 @@ export const SearchResults: React.FC<Props> = ({ sx }) => {
     [dispatch]
   );
   const loadMore = React.useCallback(() => {
-    // loadMoreはpageをリセットしないのでsetPage側でいい感じに対応する
+    // react-infinite-scrollerはpageをリセットできないためflux側で管理する
     dispatch({
       type: 'show-next-page',
     });
