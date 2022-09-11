@@ -30,7 +30,7 @@ export const SearchResults: React.FC<Props> = ({ sx }) => {
   }, [dispatch]);
   // 追加は12個ずつ
   // PCやタブレットだとファーストビューで12+α見えるため、初回だけ2ページ分表示する
-  const shownCharacters = characters.slice(0, page * 12);
+  const shownCharacters = characters.slice(0, (page + 1) * 12);
   const hasMore = shownCharacters.length < characters.length;
 
   return (
