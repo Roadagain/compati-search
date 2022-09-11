@@ -5,6 +5,7 @@ import {
   onChangeShowAll,
   onClickTag,
   onLoadCharactersData,
+  onShowNextPage,
 } from './dispatch';
 import { reducer } from './reducer';
 import { initialState } from './state';
@@ -21,6 +22,7 @@ describe('reducer', () => {
     ${'change-search-words'}  | ${onChangeSearchWords}
     ${'change-show-all'}      | ${onChangeShowAll}
     ${'click-tag'}            | ${onClickTag}
+    ${'show-next-page'}       | ${onShowNextPage}
   `('action.typeが$typeのとき', ({ type, method }) => {
     beforeEach(() => {
       reducer(state, { type } as unknown as Action);
