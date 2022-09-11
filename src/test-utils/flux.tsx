@@ -3,22 +3,21 @@ import React, { useReducer } from 'react';
 import { characters } from '../../sample/characters-data/sample.json';
 import { FluxContext } from '../flux/context';
 import { reducer } from '../flux/reducer';
-import { initialState, State } from '../flux/state';
+import { State } from '../flux/state';
 import { SearchTarget } from '../lib/search-target';
 
 export const initialTestState: State = {
-  ...initialState,
   isReady: true,
   characters,
   metadata: {
     character: 'テストキャラクター',
   },
   search: {
-    ...initialState.search,
     target: SearchTarget.TAG,
     words: ['あいうえお'],
     showAll: false,
     results: characters,
+    page: 2,
   },
 };
 

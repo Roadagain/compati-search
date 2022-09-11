@@ -9,12 +9,13 @@ import {
   onChangeShowAll,
   onClickTag,
   onLoadCharactersData,
+  onShowNextPage,
 } from './dispatch';
 import { State } from './state';
 
 jest.mock('../lib/filter-characters');
 
-const state: Readonly<State> = {
+const baseState: Readonly<State> = {
   isReady: false,
   characters: [],
   metadata: {
@@ -25,12 +26,13 @@ const state: Readonly<State> = {
     words: [],
     showAll: false,
     results: [],
+    page: 1,
   },
 };
 
 describe('onLoadCharacters', () => {
   const currentState: State = {
-    ...state,
+    ...baseState,
     isReady: false,
     characters: [],
     metadata: {
@@ -94,78 +96,44 @@ describe('onLoadCharacters', () => {
 describe('onChangeSearchTarget', () => {
   let nextState: State;
 
-  describe.each`
-    target
-    ${SearchTarget.TAG}
-    ${SearchTarget.NAME}
-  `('現在の検索対象と変更後の検索対象が一致する場合', ({ target }) => {
-    const currentState: State = {
-      ...state,
-      search: {
-        ...state.search,
-        target,
-        words: ['imano', 'tango'],
-      },
-    };
+  const currentState: State = {
+    ...baseState,
+    search: {
+      ...baseState.search,
+      target: SearchTarget.NAME,
+      words: ['imano', 'tango'],
+      page: 5,
+    },
+  };
 
-    beforeEach(() => {
-      nextState = onChangeSearchTarget(currentState, target);
-    });
-
-    it('検索対象が変更されていない', () => {
-      expect(nextState.search.target).toBe(target);
-    });
-
-    it('検索ワードが変更されていない', () => {
-      expect(nextState.search.words).toEqual(currentState.search.words);
-    });
-
-    it('フィルタ関数が呼び出されている', () => {
-      expect(filterCharacters).toBeCalled();
-    });
+  beforeEach(() => {
+    nextState = onChangeSearchTarget(currentState, SearchTarget.TAG);
   });
 
-  describe.each`
-    currentTarget        | newTarget
-    ${SearchTarget.TAG}  | ${SearchTarget.NAME}
-    ${SearchTarget.NAME} | ${SearchTarget.TAG}
-  `(
-    '現在の検索対象と変更後の検索対象が一致しない場合',
-    ({ currentTarget, newTarget }) => {
-      const currentState: State = {
-        ...state,
-        search: {
-          ...state.search,
-          target: currentTarget,
-          words: ['imano', 'tango'],
-        },
-      };
+  it('検索対象が変更されている', () => {
+    expect(nextState.search.target).toBe(SearchTarget.TAG);
+  });
 
-      beforeEach(() => {
-        nextState = onChangeSearchTarget(currentState, newTarget);
-      });
+  it('検索ワードがリセットされている', () => {
+    expect(nextState.search.words).toEqual([]);
+  });
 
-      it('検索対象が変更されている', () => {
-        expect(nextState.search.target).toBe(newTarget);
-      });
+  it('ページがリセットされている', () => {
+    expect(nextState.search.page).toBe(1);
+  });
 
-      it('検索ワードがリセットされている', () => {
-        expect(nextState.search.words).toEqual([]);
-      });
-
-      it('フィルタ関数が呼び出されている', () => {
-        expect(filterCharacters).toBeCalled();
-      });
-    }
-  );
+  it('フィルタ関数が呼び出されている', () => {
+    expect(filterCharacters).toBeCalled();
+  });
 });
 
 describe('onChangeSearchWords', () => {
   const currentState: State = {
-    ...state,
+    ...baseState,
     search: {
-      ...state.search,
+      ...baseState.search,
       words: ['imano', 'kotoba'],
+      page: 4,
     },
   };
   let nextState: State;
@@ -177,6 +145,10 @@ describe('onChangeSearchWords', () => {
 
   it('検索ワードが変更されている', () => {
     expect(nextState.search.words).toEqual(words);
+  });
+
+  it('ページがリセットされている', () => {
+    expect(nextState.search.page).toBe(1);
   });
 
   it('フィルタ関数が呼び出されている', () => {
@@ -197,10 +169,11 @@ describe('onChangeShowAll', () => {
     '現在の全キャラ表示フラグが $currentShowAll で変更後のフラグが $newShowAll の場合',
     ({ currentShowAll, newShowAll }) => {
       const currentState: State = {
-        ...state,
+        ...baseState,
         search: {
-          ...state.search,
+          ...baseState.search,
           showAll: currentShowAll,
+          page: 3,
         },
       };
 
@@ -210,6 +183,10 @@ describe('onChangeShowAll', () => {
 
       it('全キャラ表示フラグが変更後の値になっている', () => {
         expect(nextState.search.showAll).toBe(newShowAll);
+      });
+
+      it('ページがリセットされている', () => {
+        expect(nextState.search.page).toBe(1);
       });
 
       it('フィルタ関数が呼び出されている', () => {
@@ -225,11 +202,12 @@ describe('onClickTag', () => {
 
   describe('今のstateがタグ検索のとき', () => {
     const currentState: State = {
-      ...state,
+      ...baseState,
       search: {
-        ...state.search,
+        ...baseState.search,
         target: SearchTarget.TAG,
         words: ['imano', 'tag'],
+        page: 2,
       },
     };
 
@@ -248,6 +226,10 @@ describe('onClickTag', () => {
       ]);
     });
 
+    it('ページがリセットされている', () => {
+      expect(nextState.search.page).toBe(1);
+    });
+
     it('フィルタ関数が呼び出されている', () => {
       expect(filterCharacters).toBeCalled();
     });
@@ -255,11 +237,12 @@ describe('onClickTag', () => {
 
   describe('今のstateが名前検索のとき', () => {
     const currentState: State = {
-      ...state,
+      ...baseState,
       search: {
-        ...state.search,
+        ...baseState.search,
         target: SearchTarget.NAME,
         words: ['imano', 'name'],
+        page: 2,
       },
     };
 
@@ -275,8 +258,31 @@ describe('onClickTag', () => {
       expect(nextState.search.words).toEqual([label]);
     });
 
+    it('ページがリセットされている', () => {
+      expect(nextState.search.page).toBe(1);
+    });
+
     it('フィルタ関数が呼び出されている', () => {
       expect(filterCharacters).toBeCalled();
     });
+  });
+});
+
+describe('onShowNextPage', () => {
+  let nextState: State;
+  const currentState = {
+    ...baseState,
+    search: {
+      ...baseState.search,
+      page: 1,
+    },
+  };
+
+  beforeEach(() => {
+    nextState = onShowNextPage(currentState);
+  });
+
+  it('pageが1つ増えている', () => {
+    expect(nextState.search.page).toBe(2);
   });
 });

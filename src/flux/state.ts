@@ -7,6 +7,7 @@ interface SearchState {
   words: string[];
   showAll: boolean;
   results: TaggedCharacter[];
+  page: number;
 }
 
 export interface State {
@@ -27,5 +28,6 @@ export const initialState: State = {
     words: [],
     showAll: false,
     results: [],
+    page: 1,
   },
 };
