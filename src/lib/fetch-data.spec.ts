@@ -1,5 +1,5 @@
 import { CharactersData } from './characters-data';
-import { fetchCharactersData } from './fetch-data';
+import { useCharactersData } from './fetch-data';
 import { loadCharactersDataFromJson } from './load-data';
 
 jest.mock('./load-data');
@@ -21,7 +21,7 @@ describe('fetch-characters-data', () => {
       (loadCharactersDataFromJson as unknown as jest.Mock).mockReturnValue(
         charactersData
       );
-      result = await fetchCharactersData('test');
+      result = await useCharactersData('test');
     });
 
     it('fetchが指定のURLで呼ばれている', () => {
@@ -42,7 +42,7 @@ describe('fetch-characters-data', () => {
       });
 
       it('エラーを投げる', () => {
-        expect(() => fetchCharactersData('test')).rejects.toThrowError(
+        expect(() => useCharactersData('test')).rejects.toThrowError(
           'Not Found'
         );
       });
@@ -56,7 +56,7 @@ describe('fetch-characters-data', () => {
       });
 
       it('エラーを投げる', () => {
-        expect(() => fetchCharactersData('test')).rejects.toThrowError(
+        expect(() => useCharactersData('test')).rejects.toThrowError(
           'Internal Server Error'
         );
       });

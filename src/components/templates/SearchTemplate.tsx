@@ -4,7 +4,7 @@ import Typography from '@mui/material/Typography';
 import React from 'react';
 
 import { FluxContext } from '../../flux/context';
-import { fetchCharactersData } from '../../lib/fetch-data';
+import { useCharactersData } from '../../lib/fetch-data';
 import { SearchCondition } from '../organisms/SearchCondition';
 import { SearchForm } from '../organisms/SearchForm';
 import { SearchResults } from '../organisms/SearchResults';
@@ -18,16 +18,15 @@ export interface Props {
 
 export const SearchTemplate: React.FC<Props> = ({ dataName }) => {
   const { state, dispatch } = React.useContext(FluxContext);
+  const charactersData = useCharactersData(dataName);
   React.useEffect(() => {
-    fetchCharactersData(dataName)
-      .then((charactersData) => {
-        dispatch({
-          type: 'load-characters-data',
-          charactersData,
-        });
-      })
-      .catch(console.error);
-  }, [dataName, dispatch]);
+    if (charactersData) {
+      dispatch({
+        type: 'load-characters-data',
+        charactersData,
+      });
+    }
+  }, [charactersData, dispatch]);
 
   if (!state.isReady) {
     return <LinearProgress />;
