@@ -1,16 +1,30 @@
+import { useState } from 'react';
+import useSWRImmutable from 'swr/immutable';
+
 import { CharactersData } from './characters-data';
 import { loadCharactersDataFromJson } from './load-data';
 
-export const fetchCharactersData = async (
-  dataName: string
-): Promise<CharactersData> => {
-  const res = await fetch(`/api/characters-data/${dataName}`);
-  if (400 <= res.status && res.status < 500) {
-    throw new Error('Not Found');
+const fetcher = async (url: string) => {
+  const res = await fetch(url);
+  return res.json();
+};
+
+export const useCharactersData = (dataName: string): CharactersData | null => {
+  const { data, error } = useSWRImmutable(
+    `/api/characters-data/${dataName}`,
+    fetcher,
+    {
+      shouldRetryOnError: false,
+    }
+  );
+  const [charactersData, setCharactersData] = useState<CharactersData | null>(
+    null
+  );
+  if (data && !charactersData) {
+    setCharactersData(loadCharactersDataFromJson(data));
   }
-  if (500 <= res.status && res.status < 600) {
-    throw new Error('Internal Server Error');
+  if (error) {
+    console.log('Not Found');
   }
-  const json = await res.json();
-  return loadCharactersDataFromJson(json);
+  return charactersData;
 };
