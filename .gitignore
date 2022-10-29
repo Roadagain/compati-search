@@ -106,3 +106,5 @@ dist
 
 # Storybook build output
 storybook-static
+
+.vscode

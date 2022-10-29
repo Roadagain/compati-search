@@ -1,3 +1,5 @@
+'use client';
+
 import Container from '@mui/material/Container';
 import LinearProgress from '@mui/material/LinearProgress';
 import Typography from '@mui/material/Typography';
