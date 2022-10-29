@@ -7,3 +7,4 @@ next-env.d.ts
 README.md
 coverage/
 sample/characters-data/
+.vscode/
