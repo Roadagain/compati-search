@@ -26,7 +26,7 @@ export const SearchTemplate: React.FC = () => {
   return (
     <Container sx={{ py: 2 }}>
       <Typography component="h1" variant="h6">
-        コンパチサーチ
+        互艦サーチ
       </Typography>
       <SearchForm sx={{ mt: 2 }} />
       <SearchCondition sx={{ mt: 2 }} />
