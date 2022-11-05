@@ -22,7 +22,7 @@ const baseState: Readonly<State> = {
     character: '',
   },
   search: {
-    type: SearchType.TAG,
+    target: { type: SearchType.TAG },
     words: [],
     showAll: false,
     results: [],
@@ -100,18 +100,18 @@ describe('onChangeSearchType', () => {
     ...baseState,
     search: {
       ...baseState.search,
-      type: SearchType.NAME,
+      target: { type: SearchType.NAME },
       words: ['imano', 'tango'],
       page: 5,
     },
   };
 
   beforeEach(() => {
-    nextState = onChangeSearchTarget(currentState, SearchType.TAG);
+    nextState = onChangeSearchTarget(currentState, { type: SearchType.TAG });
   });
 
   it('検索対象が変更されている', () => {
-    expect(nextState.search.type).toBe(SearchType.TAG);
+    expect(nextState.search.target.type).toBe(SearchType.TAG);
   });
 
   it('検索ワードがリセットされている', () => {
@@ -205,7 +205,7 @@ describe('onClickTag', () => {
       ...baseState,
       search: {
         ...baseState.search,
-        type: SearchType.TAG,
+        target: { type: SearchType.TAG },
         words: ['imano', 'tag'],
         page: 2,
       },
@@ -216,7 +216,7 @@ describe('onClickTag', () => {
     });
 
     it('検索対象がタグになっている', () => {
-      expect(nextState.search.type).toBe(SearchType.TAG);
+      expect(nextState.search.target.type).toBe(SearchType.TAG);
     });
 
     it('既存の検索ワードにクリックしたタグが追加されている', () => {
@@ -240,7 +240,7 @@ describe('onClickTag', () => {
       ...baseState,
       search: {
         ...baseState.search,
-        type: SearchType.NAME,
+        target: { type: SearchType.NAME },
         words: ['imano', 'name'],
         page: 2,
       },
@@ -251,7 +251,7 @@ describe('onClickTag', () => {
     });
 
     it('検索対象がタグになっている', () => {
-      expect(nextState.search.type).toBe(SearchType.TAG);
+      expect(nextState.search.target.type).toBe(SearchType.TAG);
     });
 
     it('検索ワードがクリックしたタグのみになっている', () => {

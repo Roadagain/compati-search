@@ -3,7 +3,7 @@ import Select, { SelectChangeEvent } from '@mui/material/Select';
 import { SxProps, Theme, useTheme } from '@mui/material/styles';
 import React from 'react';
 
-import { SearchType } from '../../lib/search-target';
+import { SearchTarget, SearchType } from '../../lib/search-target';
 
 interface Props {
   /**
@@ -14,7 +14,7 @@ interface Props {
    * 検索対象変更時のハンドラ
    * @param value - 新しい検索対象
    */
-  onChange: (value: SearchType) => void;
+  onChange: (value: SearchTarget) => void;
   /**
    * テーマ関係のスタイル指定
    */
@@ -28,7 +28,7 @@ export const SearchTypeSelect: React.FC<Props> = ({ type, onChange, sx }) => {
       switch (value) {
         case SearchType.TAG:
         case SearchType.NAME:
-          onChange(value);
+          onChange({ type: value });
           return;
         default:
           throw new Error('Invalid search target');
@@ -40,7 +40,7 @@ export const SearchTypeSelect: React.FC<Props> = ({ type, onChange, sx }) => {
 
   return (
     <Select
-      value={target}
+      value={type}
       onChange={onSelect}
       sx={{
         fontSize: theme.typography.h6,

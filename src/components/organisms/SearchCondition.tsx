@@ -16,7 +16,7 @@ interface Props {
 
 export const SearchCondition: React.FC<Props> = ({ sx }) => {
   const { state, dispatch } = React.useContext(FluxContext);
-  const { type, words, showAll } = state.search;
+  const { target, words, showAll } = state.search;
   const { character } = state.metadata;
   const onChangeSwitch = React.useCallback(
     (showAll: boolean) => {
@@ -34,7 +34,7 @@ export const SearchCondition: React.FC<Props> = ({ sx }) => {
       justifyContent={isTabletOrDesktop ? 'space-between' : 'flex-start'}
       sx={sx}
     >
-      <SearchTypeAndWords type={type} words={words} />
+      <SearchTypeAndWords type={target.type} words={words} />
       <ShowAllCharactersSwitch
         checked={showAll}
         character={character}

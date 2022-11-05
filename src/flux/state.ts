@@ -1,9 +1,9 @@
 import { Metadata } from '../lib/metadata';
-import { SearchType } from '../lib/search-target';
+import { SearchTarget, SearchType } from '../lib/search-target';
 import { TaggedCharacter } from '../lib/tagged-character';
 
 interface SearchState {
-  type: SearchType;
+  target: SearchTarget;
   words: string[];
   showAll: boolean;
   results: TaggedCharacter[];
@@ -24,7 +24,7 @@ export const initialState: State = {
     character: '',
   },
   search: {
-    type: SearchType.TAG,
+    target: { type: SearchType.TAG },
     words: [],
     showAll: false,
     results: [],

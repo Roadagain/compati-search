@@ -1,6 +1,6 @@
 import { CharactersData } from '../lib/characters-data';
 import { filterCharacters } from '../lib/filter-characters';
-import { SearchType } from '../lib/search-target';
+import { SearchTarget, SearchType } from '../lib/search-target';
 import { State } from './state';
 
 export const onLoadCharactersData = (
@@ -9,8 +9,8 @@ export const onLoadCharactersData = (
 ): State => {
   const { characters, metadata } = charactersData;
   const { search } = state;
-  const { type, words, showAll } = search;
-  const results = filterCharacters(characters, type, words, showAll);
+  const { target, words, showAll } = search;
+  const results = filterCharacters(characters, target.type, words, showAll);
   return {
     ...state,
     isReady: true,
@@ -24,15 +24,18 @@ export const onLoadCharactersData = (
   };
 };
 
-export const onChangeSearchTarget = (state: State, type: SearchType): State => {
+export const onChangeSearchTarget = (
+  state: State,
+  target: SearchTarget
+): State => {
   const { characters, search } = state;
   const { showAll } = search;
-  const results = filterCharacters(characters, type, [], showAll);
+  const results = filterCharacters(characters, target.type, [], showAll);
   return {
     ...state,
     search: {
       ...search,
-      type,
+      target,
       words: [],
       results,
       page: 1,
@@ -42,8 +45,8 @@ export const onChangeSearchTarget = (state: State, type: SearchType): State => {
 
 export const onChangeSearchWords = (state: State, words: string[]): State => {
   const { characters, search } = state;
-  const { type, showAll } = search;
-  const results = filterCharacters(characters, type, words, showAll);
+  const { target, showAll } = search;
+  const results = filterCharacters(characters, target.type, words, showAll);
   return {
     ...state,
     search: {
@@ -57,8 +60,8 @@ export const onChangeSearchWords = (state: State, words: string[]): State => {
 
 export const onChangeShowAll = (state: State, showAll: boolean): State => {
   const { characters, search } = state;
-  const { type, words } = search;
-  const results = filterCharacters(characters, type, words, showAll);
+  const { target, words } = search;
+  const results = filterCharacters(characters, target.type, words, showAll);
   return {
     ...state,
     search: {
@@ -75,13 +78,13 @@ export const onClickTag = (state: State, label: string): State => {
   const { showAll } = search;
   const type = SearchType.TAG;
   const words =
-    search.type === SearchType.TAG ? [...search.words, label] : [label];
+    search.target.type === SearchType.TAG ? [...search.words, label] : [label];
   const results = filterCharacters(characters, type, words, showAll);
   return {
     ...state,
     search: {
       ...search,
-      type,
+      target: { type },
       words,
       results,
       page: 1,

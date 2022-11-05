@@ -13,7 +13,7 @@ export const initialTestState: State = {
     character: 'テストキャラクター',
   },
   search: {
-    type: SearchType.TAG,
+    target: { type: SearchType.TAG },
     words: ['あいうえお'],
     showAll: false,
     results: characters,

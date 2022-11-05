@@ -1,5 +1,5 @@
 import { CharactersData } from '../lib/characters-data';
-import { SearchType } from '../lib/search-target';
+import { SearchTarget } from '../lib/search-target';
 
 interface LoadCharactersData {
   type: 'load-characters-data';
@@ -8,7 +8,7 @@ interface LoadCharactersData {
 
 interface ChangeSearchTargetAction {
   type: 'change-search-target';
-  target: SearchType;
+  target: SearchTarget;
 }
 
 interface ChangeSearchWordsAction {
