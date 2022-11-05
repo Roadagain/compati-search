@@ -27,7 +27,7 @@ export const generateAutocompleteOptions = (
   const charactersShown = characters.filter(
     ({ showDefault }) => showAll || showDefault
   );
-  switch (target) {
+  switch (type) {
     case SearchType.TAG:
       return uniqueAndSortTags(charactersShown.flatMap(({ tags }) => tags));
     case SearchType.NAME:

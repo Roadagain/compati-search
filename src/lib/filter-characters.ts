@@ -44,7 +44,7 @@ export const filterCharacters = (
   words: string[],
   showAll: boolean
 ): TaggedCharacter[] => {
-  switch (target) {
+  switch (type) {
     case SearchType.TAG:
       return filterCharactersByTagLabels(characters, words, showAll);
     case SearchType.NAME:
