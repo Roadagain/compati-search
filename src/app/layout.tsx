@@ -19,10 +19,10 @@ const RootLayout = ({ children }: Props) => (
   <html lang="ja">
     <head>
       <link rel="icon" href="/favicon.png" />
-      <title>コンパチサーチ</title>
+      <title>互艦サーチ</title>
       <meta
         name="description"
-        content="キャラクターについたタグから代替キャラを探しましょう"
+        content="タグを使って互換性のある艦を探しましょう"
       />
     </head>
     <body>

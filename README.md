@@ -1,2 +1,2 @@
-# compati-search
-タグからコンパチキャラを探す
+# gokan-search
+タグから互換性のある艦を探す

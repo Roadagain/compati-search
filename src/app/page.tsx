@@ -1,5 +1,5 @@
 import { SearchTemplate } from '../components/templates/SearchTemplate';
 
-const Page = () => <SearchTemplate dataName="sample" />;
+const Page = () => <SearchTemplate />;
 
 export default Page;
