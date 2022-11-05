@@ -1,4 +1,4 @@
-import { SearchTarget } from './search-target';
+import { SearchType } from './search-target';
 import { Tag, TaggedCharacter } from './tagged-character';
 
 export interface CharacterName {
@@ -21,16 +21,16 @@ export const uniqueAndSortTags = (tags: Tag[]): Tag[] => {
 
 export const generateAutocompleteOptions = (
   characters: TaggedCharacter[],
-  target: SearchTarget,
+  type: SearchType,
   showAll: boolean
 ): AutocompleteOption[] => {
   const charactersShown = characters.filter(
     ({ showDefault }) => showAll || showDefault
   );
   switch (target) {
-    case SearchTarget.TAG:
+    case SearchType.TAG:
       return uniqueAndSortTags(charactersShown.flatMap(({ tags }) => tags));
-    case SearchTarget.NAME:
+    case SearchType.NAME:
       return charactersShown.map(({ name }) => ({ label: name }));
   }
 };

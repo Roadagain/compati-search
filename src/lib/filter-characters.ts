@@ -1,4 +1,4 @@
-import { SearchTarget } from './search-target';
+import { SearchType } from './search-target';
 import { TaggedCharacter } from './tagged-character';
 
 export const filterCharactersByTagLabels = (
@@ -40,14 +40,14 @@ export const filterCharactersByNameWords = (
 
 export const filterCharacters = (
   characters: TaggedCharacter[],
-  target: SearchTarget,
+  type: SearchType,
   words: string[],
   showAll: boolean
 ): TaggedCharacter[] => {
   switch (target) {
-    case SearchTarget.TAG:
+    case SearchType.TAG:
       return filterCharactersByTagLabels(characters, words, showAll);
-    case SearchTarget.NAME:
+    case SearchType.NAME:
       return filterCharactersByNameWords(characters, words, showAll);
   }
 };

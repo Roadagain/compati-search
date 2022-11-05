@@ -1,20 +1,20 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React from 'react';
 
-import { SearchTarget } from '../../lib/search-target';
-import { SearchTargetAndWords } from './SearchTargetAndWords';
+import { SearchType } from '../../lib/search-target';
+import { SearchTypeAndWords } from './SearchTypeAndWords';
 
-const componentMeta: ComponentMeta<typeof SearchTargetAndWords> = {
-  title: 'Molecules/SearchTargetandWords',
-  component: SearchTargetAndWords,
+const componentMeta: ComponentMeta<typeof SearchTypeAndWords> = {
+  title: 'Molecules/SearchTypeandWords',
+  component: SearchTypeAndWords,
   argTypes: {
-    target: {
-      options: [SearchTarget.TAG, SearchTarget.NAME],
+    type: {
+      options: [SearchType.TAG, SearchType.NAME],
       control: {
         type: 'radio',
         labels: {
-          [SearchTarget.TAG]: 'タグ',
-          [SearchTarget.NAME]: '名前',
+          [SearchType.TAG]: 'タグ',
+          [SearchType.NAME]: '名前',
         },
       },
     },
@@ -24,33 +24,33 @@ const componentMeta: ComponentMeta<typeof SearchTargetAndWords> = {
 };
 export default componentMeta;
 
-const Template: ComponentStory<typeof SearchTargetAndWords> = (args) => (
-  <SearchTargetAndWords {...args} />
+const Template: ComponentStory<typeof SearchTypeAndWords> = (args) => (
+  <SearchTypeAndWords {...args} />
 );
 
 export const SearchByTag = Template.bind({});
 SearchByTag.args = {
-  target: SearchTarget.TAG,
+  type: SearchType.TAG,
   words: ['ハル'],
 };
 
 export const SearchByName = Template.bind({});
 SearchByName.args = {
-  target: SearchTarget.NAME,
+  type: SearchType.NAME,
   words: ['ナツ'],
   sx: {},
 };
 
 export const MultipleWords = Template.bind({});
 MultipleWords.args = {
-  target: SearchTarget.TAG,
+  type: SearchType.TAG,
   words: ['アキ', 'フユ'],
   sx: {},
 };
 
 export const MinusWord = Template.bind({});
 MinusWord.args = {
-  target: SearchTarget.TAG,
+  type: SearchType.TAG,
   words: ['-梅雨'],
   sx: {},
 };

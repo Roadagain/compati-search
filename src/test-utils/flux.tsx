@@ -4,7 +4,7 @@ import { characters } from '../../characters-data/ships.json';
 import { FluxContext } from '../flux/context';
 import { reducer } from '../flux/reducer';
 import { State } from '../flux/state';
-import { SearchTarget } from '../lib/search-target';
+import { SearchType } from '../lib/search-target';
 
 export const initialTestState: State = {
   isReady: true,
@@ -13,7 +13,7 @@ export const initialTestState: State = {
     character: 'テストキャラクター',
   },
   search: {
-    target: SearchTarget.TAG,
+    type: SearchType.TAG,
     words: ['あいうえお'],
     showAll: false,
     results: characters,

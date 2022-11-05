@@ -3,7 +3,7 @@ import {
   filterCharactersByNameWords,
   filterCharactersByTagLabels,
 } from './filter-characters';
-import { SearchTarget } from './search-target';
+import { SearchType } from './search-target';
 import { TaggedCharacter } from './tagged-character';
 
 describe('filterCharactersByTagLabels', () => {
@@ -258,22 +258,22 @@ describe('filterCharacters', () => {
   const characters = [characterWithTag, characterWithName];
 
   describe('検索対象がタグの場合', () => {
-    const searchTarget = SearchTarget.TAG;
+    const searchType = SearchType.TAG;
 
     it('タグ検索の結果が返る', () => {
       expect(
-        filterCharacters(characters, searchTarget, ['label'], false)
+        filterCharacters(characters, searchType, ['label'], false)
       ).toEqual([characterWithTag]);
     });
   });
 
   describe('検索対象が名前の場合', () => {
-    const searchTarget = SearchTarget.NAME;
+    const searchType = SearchType.NAME;
 
     it('名前検索の結果が返る', () => {
-      expect(
-        filterCharacters(characters, searchTarget, ['name'], false)
-      ).toEqual([characterWithName]);
+      expect(filterCharacters(characters, searchType, ['name'], false)).toEqual(
+        [characterWithName]
+      );
     });
   });
 });

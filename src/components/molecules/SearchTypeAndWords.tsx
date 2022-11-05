@@ -2,13 +2,13 @@ import { SxProps, Theme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import React from 'react';
 
-import { SearchTarget } from '../../lib/search-target';
+import { SearchType } from '../../lib/search-target';
 
 interface Props {
   /**
    * 検索対象
    */
-  target: SearchTarget;
+  type: SearchType;
   /**
    * 検索ワード
    */
@@ -19,12 +19,8 @@ interface Props {
   sx?: SxProps<Theme>;
 }
 
-export const SearchTargetAndWords: React.FC<Props> = ({
-  target,
-  words,
-  sx,
-}) => {
-  const targetStr = target === SearchTarget.TAG ? 'タグ' : '名前';
+export const SearchTypeAndWords: React.FC<Props> = ({ type, words, sx }) => {
+  const typeStr = type === SearchType.TAG ? 'タグ' : '名前';
   const variant = 'h6';
 
   return (
@@ -45,7 +41,7 @@ export const SearchTargetAndWords: React.FC<Props> = ({
               </Typography>
             );
           })}
-          の{targetStr}検索結果
+          の{typeStr}検索結果
         </>
       ) : (
         '検索条件なし'

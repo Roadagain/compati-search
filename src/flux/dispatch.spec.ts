@@ -1,7 +1,7 @@
 import { CharactersData } from '../lib/characters-data';
 import { filterCharacters } from '../lib/filter-characters';
 import { Metadata } from '../lib/metadata';
-import { SearchTarget } from '../lib/search-target';
+import { SearchType } from '../lib/search-target';
 import { TaggedCharacter } from '../lib/tagged-character';
 import {
   onChangeSearchTarget,
@@ -22,7 +22,7 @@ const baseState: Readonly<State> = {
     character: '',
   },
   search: {
-    target: SearchTarget.TAG,
+    type: SearchType.TAG,
     words: [],
     showAll: false,
     results: [],
@@ -93,25 +93,25 @@ describe('onLoadCharacters', () => {
   });
 });
 
-describe('onChangeSearchTarget', () => {
+describe('onChangeSearchType', () => {
   let nextState: State;
 
   const currentState: State = {
     ...baseState,
     search: {
       ...baseState.search,
-      target: SearchTarget.NAME,
+      type: SearchType.NAME,
       words: ['imano', 'tango'],
       page: 5,
     },
   };
 
   beforeEach(() => {
-    nextState = onChangeSearchTarget(currentState, SearchTarget.TAG);
+    nextState = onChangeSearchTarget(currentState, SearchType.TAG);
   });
 
   it('検索対象が変更されている', () => {
-    expect(nextState.search.target).toBe(SearchTarget.TAG);
+    expect(nextState.search.type).toBe(SearchType.TAG);
   });
 
   it('検索ワードがリセットされている', () => {
@@ -205,7 +205,7 @@ describe('onClickTag', () => {
       ...baseState,
       search: {
         ...baseState.search,
-        target: SearchTarget.TAG,
+        type: SearchType.TAG,
         words: ['imano', 'tag'],
         page: 2,
       },
@@ -216,7 +216,7 @@ describe('onClickTag', () => {
     });
 
     it('検索対象がタグになっている', () => {
-      expect(nextState.search.target).toBe(SearchTarget.TAG);
+      expect(nextState.search.type).toBe(SearchType.TAG);
     });
 
     it('既存の検索ワードにクリックしたタグが追加されている', () => {
@@ -240,7 +240,7 @@ describe('onClickTag', () => {
       ...baseState,
       search: {
         ...baseState.search,
-        target: SearchTarget.NAME,
+        type: SearchType.NAME,
         words: ['imano', 'name'],
         page: 2,
       },
@@ -251,7 +251,7 @@ describe('onClickTag', () => {
     });
 
     it('検索対象がタグになっている', () => {
-      expect(nextState.search.target).toBe(SearchTarget.TAG);
+      expect(nextState.search.type).toBe(SearchType.TAG);
     });
 
     it('検索ワードがクリックしたタグのみになっている', () => {

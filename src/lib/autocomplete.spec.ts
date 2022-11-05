@@ -6,7 +6,7 @@ import {
   uniqueAndSortTags,
   wordWithoutFirstMinus,
 } from './autocomplete';
-import { SearchTarget } from './search-target';
+import { SearchType } from './search-target';
 import { Tag, TaggedCharacter } from './tagged-character';
 
 describe('uniqueAndSortTags', () => {
@@ -73,7 +73,7 @@ describe('generateAutocompleteOptions', () => {
     describe('検索対象がタグの場合', () => {
       it('タグの一覧を重複なく返す', () => {
         expect(
-          generateAutocompleteOptions(characters, SearchTarget.TAG, true)
+          generateAutocompleteOptions(characters, SearchType.TAG, true)
         ).toEqual([
           { category: 'X', label: 'x-ray' },
           { category: 'Y', label: 'yankee' },
@@ -85,7 +85,7 @@ describe('generateAutocompleteOptions', () => {
     describe('検索対象がタグの場合', () => {
       it('名前の一覧を返す', () => {
         expect(
-          generateAutocompleteOptions(characters, SearchTarget.NAME, true)
+          generateAutocompleteOptions(characters, SearchType.NAME, true)
         ).toEqual([{ label: 'Alpha' }, { label: 'Beta' }, { label: 'Gamma' }]);
       });
     });
@@ -95,7 +95,7 @@ describe('generateAutocompleteOptions', () => {
     describe('検索対象がタグの場合', () => {
       it('デフォルト表示キャラのタグの一覧を重複なく返す', () => {
         expect(
-          generateAutocompleteOptions(characters, SearchTarget.TAG, false)
+          generateAutocompleteOptions(characters, SearchType.TAG, false)
         ).toEqual([
           { category: 'X', label: 'x-ray' },
           { category: 'Y', label: 'yankee' },
@@ -106,7 +106,7 @@ describe('generateAutocompleteOptions', () => {
     describe('検索対象が名前の場合', () => {
       it('デフォルト表示キャラの名前の一覧を返す', () => {
         expect(
-          generateAutocompleteOptions(characters, SearchTarget.NAME, false)
+          generateAutocompleteOptions(characters, SearchType.NAME, false)
         ).toEqual([{ label: 'Alpha' }, { label: 'Beta' }]);
       });
     });

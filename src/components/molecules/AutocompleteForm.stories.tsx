@@ -1,20 +1,20 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React from 'react';
 
-import { SearchTarget } from '../../lib/search-target';
+import { SearchType } from '../../lib/search-target';
 import { AutocompleteForm } from './AutocompleteForm';
 
 const componentMeta: ComponentMeta<typeof AutocompleteForm> = {
   title: 'Molecules/AutocompleteForm',
   component: AutocompleteForm,
   argTypes: {
-    target: {
-      options: [SearchTarget.TAG, SearchTarget.NAME],
+    type: {
+      options: [SearchType.TAG, SearchType.NAME],
       control: {
         type: 'radio',
         labels: {
-          [SearchTarget.TAG]: 'タグ',
-          [SearchTarget.NAME]: '名前',
+          [SearchType.TAG]: 'タグ',
+          [SearchType.NAME]: '名前',
         },
       },
     },
@@ -31,7 +31,7 @@ const Template: ComponentStory<typeof AutocompleteForm> = (args) => (
 
 export const SearchByTag = Template.bind({});
 SearchByTag.args = {
-  target: SearchTarget.TAG,
+  type: SearchType.TAG,
   words: [],
   autocompleteOptions: [
     { category: 'あ行', label: 'あいうえお' },
@@ -42,7 +42,7 @@ SearchByTag.args = {
 
 export const SearchByName = Template.bind({});
 SearchByName.args = {
-  target: SearchTarget.NAME,
+  type: SearchType.NAME,
   words: [],
   autocompleteOptions: [{ label: 'さしすせそ' }, { label: 'たちつてと' }],
   sx: {},
@@ -50,7 +50,7 @@ SearchByName.args = {
 
 export const InputtedWords = Template.bind({});
 InputtedWords.args = {
-  target: SearchTarget.TAG,
+  type: SearchType.TAG,
   words: ['あいうえお', 'なにぬねの', '-はひふへほ'],
   autocompleteOptions: [
     { category: 'な行', label: 'なにぬねの' },

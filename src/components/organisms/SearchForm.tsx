@@ -10,8 +10,8 @@ import React from 'react';
 
 import { FluxContext } from '../../flux/context';
 import { generateAutocompleteOptions } from '../../lib/autocomplete';
-import { SearchTarget } from '../../lib/search-target';
-import { SearchTargetSelect } from '../atoms/SearchTargetSelect';
+import { SearchType } from '../../lib/search-target';
+import { SearchTypeSelect } from '../atoms/SearchTypeSelect';
 import { AutocompleteForm } from '../molecules/AutocompleteForm';
 
 interface Props {
@@ -23,10 +23,10 @@ interface Props {
 
 export const SearchForm: React.FC<Props> = ({ sx }) => {
   const { state, dispatch } = React.useContext(FluxContext);
-  const { target, words, showAll } = state.search;
-  const onChangeTarget = React.useCallback(
-    (target: SearchTarget) => {
-      dispatch({ type: 'change-search-target', target });
+  const { type, words, showAll } = state.search;
+  const onChangeType = React.useCallback(
+    (type: SearchType) => {
+      dispatch({ type: 'change-search-target', target: type });
     },
     [dispatch]
   );
@@ -38,7 +38,7 @@ export const SearchForm: React.FC<Props> = ({ sx }) => {
   );
   const autocompleteOptions = generateAutocompleteOptions(
     state.characters,
-    target,
+    type,
     showAll
   );
   const theme = useTheme();
@@ -52,9 +52,9 @@ export const SearchForm: React.FC<Props> = ({ sx }) => {
       spacing={2}
       sx={isTabletOrDesktop ? sx : undefined}
     >
-      <SearchTargetSelect target={target} onChange={onChangeTarget} />
+      <SearchTypeSelect type={type} onChange={onChangeType} />
       <AutocompleteForm
-        target={target}
+        type={type}
         words={words}
         autocompleteOptions={autocompleteOptions}
         onChange={onChangeWords}

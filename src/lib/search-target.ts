@@ -1,4 +1,4 @@
-export enum SearchTarget {
+export enum SearchType {
   TAG,
   NAME,
 }

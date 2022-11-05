@@ -3,35 +3,31 @@ import Select, { SelectChangeEvent } from '@mui/material/Select';
 import { SxProps, Theme, useTheme } from '@mui/material/styles';
 import React from 'react';
 
-import { SearchTarget } from '../../lib/search-target';
+import { SearchType } from '../../lib/search-target';
 
 interface Props {
   /**
    * 検索対象
    */
-  target: SearchTarget;
+  type: SearchType;
   /**
    * 検索対象変更時のハンドラ
    * @param value - 新しい検索対象
    */
-  onChange: (value: SearchTarget) => void;
+  onChange: (value: SearchType) => void;
   /**
    * テーマ関係のスタイル指定
    */
   sx?: SxProps<Theme>;
 }
 
-export const SearchTargetSelect: React.FC<Props> = ({
-  target,
-  onChange,
-  sx,
-}) => {
+export const SearchTypeSelect: React.FC<Props> = ({ type, onChange, sx }) => {
   const onSelect = React.useCallback(
     (event: SelectChangeEvent<number>) => {
       const { value } = event.target;
       switch (value) {
-        case SearchTarget.TAG:
-        case SearchTarget.NAME:
+        case SearchType.TAG:
+        case SearchType.NAME:
           onChange(value);
           return;
         default:
@@ -51,8 +47,8 @@ export const SearchTargetSelect: React.FC<Props> = ({
         ...sx,
       }}
     >
-      <MenuItem value={SearchTarget.TAG}>タグで検索する</MenuItem>
-      <MenuItem value={SearchTarget.NAME}>名前で検索する</MenuItem>
+      <MenuItem value={SearchType.TAG}>タグで検索する</MenuItem>
+      <MenuItem value={SearchType.NAME}>名前で検索する</MenuItem>
     </Select>
   );
 };
