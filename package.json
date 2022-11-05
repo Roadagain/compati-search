@@ -1,8 +1,8 @@
 {
-  "name": "character-tag-searcher",
+  "name": "gokan-search",
   "version": "0.0.0",
   "main": "index.js",
-  "repository": "https://github.com/Roadagain/character-tag-searcher.git",
+  "repository": "https://github.com/Roadagain/gokan-search.git",
   "author": "Roadagain <ringoh72@gmail.com>",
   "license": "MIT",
   "private": true,
