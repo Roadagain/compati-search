@@ -5,30 +5,20 @@ import LinearProgress from '@mui/material/LinearProgress';
 import Typography from '@mui/material/Typography';
 import React from 'react';
 
+import shipsData from '../../../characters-data/ships.json';
 import { FluxContext } from '../../flux/context';
-import { useCharactersData } from '../../lib/fetch-data';
 import { SearchCondition } from '../organisms/SearchCondition';
 import { SearchForm } from '../organisms/SearchForm';
 import { SearchResults } from '../organisms/SearchResults';
 
-export interface Props {
-  /**
-   * データ名
-   */
-  dataName: string;
-}
-
-export const SearchTemplate: React.FC<Props> = ({ dataName }) => {
+export const SearchTemplate: React.FC = () => {
   const { state, dispatch } = React.useContext(FluxContext);
-  const charactersData = useCharactersData(dataName);
   React.useEffect(() => {
-    if (charactersData) {
-      dispatch({
-        type: 'load-characters-data',
-        charactersData,
-      });
-    }
-  }, [charactersData, dispatch]);
+    dispatch({
+      type: 'load-characters-data',
+      charactersData: shipsData,
+    });
+  }, [dispatch]);
 
   if (!state.isReady) {
     return <LinearProgress />;
