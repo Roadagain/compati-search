@@ -90,7 +90,7 @@ describe('generateAutocompleteOptions', () => {
       });
     });
 
-    describe('検索対象がタグの場合', () => {
+    describe('検索対象が名前の場合', () => {
       it('名前の一覧を返す', () => {
         expect(
           generateAutocompleteOptions(
