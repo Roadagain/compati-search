@@ -10,9 +10,9 @@ import React from 'react';
 
 import { FluxContext } from '../../flux/context';
 import { generateAutocompleteOptions } from '../../lib/autocomplete';
-import { SearchTarget } from '../../lib/search-target';
-import { SearchTypeSelect } from '../atoms/SearchTypeSelect';
+import { generateSearchTargets, SearchTarget } from '../../lib/search-target';
 import { AutocompleteForm } from '../molecules/AutocompleteForm';
+import { SearchTargetSelect } from '../molecules/SearchTargetSelect';
 
 interface Props {
   /**
@@ -36,6 +36,10 @@ export const SearchForm: React.FC<Props> = ({ sx }) => {
     },
     [dispatch]
   );
+  const searchTargets = React.useMemo(
+    () => generateSearchTargets(state.characters.flatMap(({ tags }) => tags)),
+    [state.characters]
+  );
   const autocompleteOptions = generateAutocompleteOptions(
     state.characters,
     target.type,
@@ -52,7 +56,11 @@ export const SearchForm: React.FC<Props> = ({ sx }) => {
       spacing={2}
       sx={isTabletOrDesktop ? sx : undefined}
     >
-      <SearchTypeSelect type={target.type} onChange={onChangeTarget} />
+      <SearchTargetSelect
+        value={target}
+        targets={searchTargets}
+        onChange={onChangeTarget}
+      />
       <AutocompleteForm
         type={target.type}
         words={words}
