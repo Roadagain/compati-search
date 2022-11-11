@@ -10,8 +10,7 @@ import {
   filterOptionsByWord,
   isOptionEqualToWord,
 } from '../../lib/autocomplete';
-import { SearchTarget, SearchType } from '../../lib/search-target';
-import { Tag } from '../../lib/tagged-character';
+import { SearchTarget } from '../../lib/search-target';
 
 interface Props {
   /**
@@ -90,11 +89,6 @@ export const AutocompleteForm: React.FC<Props> = ({
       onInputChange={onInputChange}
       onChange={onChangeWords}
       options={options}
-      groupBy={
-        target.type === SearchType.TAG
-          ? (option: Tag) => option.category
-          : undefined
-      }
       isOptionEqualToValue={isOptionEqualToWord}
       fullWidth
       renderInput={(params) => (
