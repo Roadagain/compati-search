@@ -52,6 +52,7 @@ export const SearchTargetSelect: React.FC<Props> = ({
     <Select
       value={'category' in value ? value.category : '名前'}
       onChange={onSelect}
+      fullWidth
       sx={{
         fontSize: theme.typography.h6,
         ...sx,

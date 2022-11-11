@@ -1,8 +1,10 @@
+'use client';
+
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
-import Stack from '@mui/material/Stack';
+import Grid from '@mui/material/Grid';
 import { SxProps, Theme, useTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -49,25 +51,30 @@ export const SearchForm: React.FC<Props> = ({ sx }) => {
   const isTabletOrDesktop = useMediaQuery(theme.breakpoints.up('sm'));
 
   const form = (
-    <Stack
+    <Grid
+      container
       component="form"
       direction={isTabletOrDesktop ? 'row' : 'column'}
       alignItems={isTabletOrDesktop ? 'center' : 'stretch'}
       spacing={2}
       sx={isTabletOrDesktop ? sx : undefined}
     >
-      <SearchTargetSelect
-        value={target}
-        targets={searchTargets}
-        onChange={onChangeTarget}
-      />
-      <AutocompleteForm
-        type={target.type}
-        words={words}
-        autocompleteOptions={autocompleteOptions}
-        onChange={onChangeWords}
-      />
-    </Stack>
+      <Grid item sm={12} md={2}>
+        <SearchTargetSelect
+          value={target}
+          targets={searchTargets}
+          onChange={onChangeTarget}
+        />
+      </Grid>
+      <Grid item sm={12} md={10}>
+        <AutocompleteForm
+          type={target.type}
+          words={words}
+          autocompleteOptions={autocompleteOptions}
+          onChange={onChangeWords}
+        />
+      </Grid>
+    </Grid>
   );
 
   return isTabletOrDesktop ? (
