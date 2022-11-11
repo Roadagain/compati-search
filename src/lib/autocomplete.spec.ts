@@ -1,48 +1,21 @@
 import {
-  AutocompleteOption,
   filterOptionsByWord,
   generateAutocompleteOptions,
   isOptionEqualToWord,
-  uniqueAndSortTags,
+  uniqueAndSortTagLabels,
   wordWithoutFirstMinus,
 } from './autocomplete';
 import { SearchType } from './search-target';
-import { Tag, TaggedCharacter } from './tagged-character';
+import { TaggedCharacter } from './tagged-character';
 
 describe('uniqueAndSortTags', () => {
-  const tags: Tag[] = [
-    {
-      category: 'alpha',
-      label: 'あるは',
-    },
-    {
-      category: 'beta',
-      label: 'べた',
-    },
-    {
-      category: 'alpha',
-      label: 'あるふあ',
-    },
-    {
-      category: 'alpha',
-      label: 'あるは',
-    },
-  ];
+  const tagLabels: string[] = ['あるは', 'べた', 'あるふあ', 'あるは'];
 
   it('重複を除き文字コード順にソートしたタグの一覧が返る', () => {
-    expect(uniqueAndSortTags(tags)).toEqual([
-      {
-        category: 'alpha',
-        label: 'あるは',
-      },
-      {
-        category: 'alpha',
-        label: 'あるふあ',
-      },
-      {
-        category: 'beta',
-        label: 'べた',
-      },
+    expect(uniqueAndSortTagLabels(tagLabels)).toEqual([
+      'あるは',
+      'あるふあ',
+      'べた',
     ]);
   });
 });
@@ -81,12 +54,7 @@ describe('generateAutocompleteOptions', () => {
             { type: SearchType.TAG },
             true
           )
-        ).toEqual([
-          { category: 'X', label: 'x-ray' },
-          { category: 'X', label: 'xanadu' },
-          { category: 'Y', label: 'yankee' },
-          { category: 'Z', label: 'zulu' },
-        ]);
+        ).toEqual(['x-ray', 'xanadu', 'yankee', 'zulu']);
       });
     });
 
@@ -98,7 +66,7 @@ describe('generateAutocompleteOptions', () => {
             { type: SearchType.NAME },
             true
           )
-        ).toEqual([{ label: 'Alpha' }, { label: 'Beta' }, { label: 'Gamma' }]);
+        ).toEqual(['Alpha', 'Beta', 'Gamma']);
       });
     });
 
@@ -110,10 +78,7 @@ describe('generateAutocompleteOptions', () => {
             { type: SearchType.TAG, category: 'X' },
             true
           )
-        ).toEqual([
-          { category: 'X', label: 'x-ray' },
-          { category: 'X', label: 'xanadu' },
-        ]);
+        ).toEqual(['x-ray', 'xanadu']);
       });
     });
   });
@@ -127,10 +92,7 @@ describe('generateAutocompleteOptions', () => {
             { type: SearchType.TAG },
             false
           )
-        ).toEqual([
-          { category: 'X', label: 'x-ray' },
-          { category: 'Y', label: 'yankee' },
-        ]);
+        ).toEqual(['x-ray', 'yankee']);
       });
     });
 
@@ -142,7 +104,7 @@ describe('generateAutocompleteOptions', () => {
             { type: SearchType.NAME },
             false
           )
-        ).toEqual([{ label: 'Alpha' }, { label: 'Beta' }]);
+        ).toEqual(['Alpha', 'Beta']);
       });
     });
 
@@ -154,7 +116,7 @@ describe('generateAutocompleteOptions', () => {
             { type: SearchType.TAG, category: 'X' },
             false
           )
-        ).toEqual([{ category: 'X', label: 'x-ray' }]);
+        ).toEqual(['x-ray']);
       });
     });
   });
@@ -186,15 +148,11 @@ describe('wordWithoutFirstMins', () => {
 describe('isOptionEqualToWord', () => {
   describe('最初のマイナス(-)を除いてラベルとワードが一致する場合', () => {
     describe.each`
-      option                | word
-      ${'test'}             | ${'test'}
-      ${'test'}             | ${'-test'}
-      ${'-test'}            | ${'test'}
-      ${'-test'}            | ${'-test'}
-      ${{ label: 'test' }}  | ${'test'}
-      ${{ label: 'test' }}  | ${'-test'}
-      ${{ label: '-test' }} | ${'test'}
-      ${{ label: '-test' }} | ${'-test'}
+      option     | word
+      ${'test'}  | ${'test'}
+      ${'test'}  | ${'-test'}
+      ${'-test'} | ${'test'}
+      ${'-test'} | ${'-test'}
     `('タグラベルが $label でワードが $word の場合', ({ option, word }) => {
       it('同じと判定される', () => {
         expect(isOptionEqualToWord(option, word)).toBeTruthy();
@@ -204,15 +162,11 @@ describe('isOptionEqualToWord', () => {
 
   describe('最初のマイナス(-)を除いてもラベルとワードが一致しない場合', () => {
     describe.each`
-      option                 | word
-      ${'label'}             | ${'word'}
-      ${'label'}             | ${'-word'}
-      ${'-label'}            | ${'word'}
-      ${'-label'}            | ${'-word'}
-      ${{ label: 'label' }}  | ${'word'}
-      ${{ label: 'label' }}  | ${'-word'}
-      ${{ label: '-label' }} | ${'word'}
-      ${{ label: '-label' }} | ${'-word'}
+      option      | word
+      ${'label'}  | ${'word'}
+      ${'label'}  | ${'-word'}
+      ${'-label'} | ${'word'}
+      ${'-label'} | ${'-word'}
     `('タグラベルが $label でワードが $word の場合', ({ option, word }) => {
       it('違うと判定される', () => {
         expect(isOptionEqualToWord(option, word)).toBeFalsy();
@@ -223,10 +177,8 @@ describe('isOptionEqualToWord', () => {
 
 describe('filterOptionsByWord', () => {
   const labels = ['First', 'Second', 'Third'];
-  const plusOptions: AutocompleteOption[] = labels.map((label) => ({ label }));
-  const minusOptions: AutocompleteOption[] = labels.map((label) => ({
-    label: `-${label}`,
-  }));
+  const plusOptions = labels;
+  const minusOptions = labels.map((label) => `-${label}`);
 
   describe.each`
     optionsCase   | options         | word
