@@ -10,14 +10,14 @@ import {
   filterOptionsByWord,
   isOptionEqualToWord,
 } from '../../lib/autocomplete';
-import { SearchType } from '../../lib/search-target';
+import { SearchTarget, SearchType } from '../../lib/search-target';
 import { Tag } from '../../lib/tagged-character';
 
 interface Props {
   /**
    * 検索対象
    */
-  type: SearchType;
+  target: SearchTarget;
   /**
    * 検索ワード
    */
@@ -38,13 +38,15 @@ interface Props {
 }
 
 export const AutocompleteForm: React.FC<Props> = ({
-  type,
+  target,
   words,
   autocompleteOptions,
   onChange,
   sx,
 }) => {
-  const placeholder = `${type === SearchType.TAG ? 'タグ' : '名前'}を入力`;
+  const placeholder = `${
+    'category' in target ? target.category : '名前'
+  }を入力`;
   const onChangeWords = React.useCallback(
     (_, values: (string | AutocompleteOption)[]) => {
       const words = values.map((value) => {
@@ -89,7 +91,9 @@ export const AutocompleteForm: React.FC<Props> = ({
       onChange={onChangeWords}
       options={options}
       groupBy={
-        type === SearchType.TAG ? (option: Tag) => option.category : undefined
+        target.type === SearchType.TAG
+          ? (option: Tag) => option.category
+          : undefined
       }
       isOptionEqualToValue={isOptionEqualToWord}
       fullWidth

@@ -8,16 +8,7 @@ const componentMeta: ComponentMeta<typeof AutocompleteForm> = {
   title: 'Molecules/AutocompleteForm',
   component: AutocompleteForm,
   argTypes: {
-    type: {
-      options: [SearchType.TAG, SearchType.NAME],
-      control: {
-        type: 'radio',
-        labels: {
-          [SearchType.TAG]: 'タグ',
-          [SearchType.NAME]: '名前',
-        },
-      },
-    },
+    target: { control: 'object' },
     words: { control: 'object' },
     autocompleteOptions: { control: 'object' },
     sx: { control: 'object' },
@@ -31,7 +22,7 @@ const Template: ComponentStory<typeof AutocompleteForm> = (args) => (
 
 export const SearchByTag = Template.bind({});
 SearchByTag.args = {
-  type: SearchType.TAG,
+  target: { type: SearchType.TAG },
   words: [],
   autocompleteOptions: [
     { category: 'あ行', label: 'あいうえお' },
@@ -42,7 +33,7 @@ SearchByTag.args = {
 
 export const SearchByName = Template.bind({});
 SearchByName.args = {
-  type: SearchType.NAME,
+  target: { type: SearchType.NAME },
   words: [],
   autocompleteOptions: [{ label: 'さしすせそ' }, { label: 'たちつてと' }],
   sx: {},
@@ -50,7 +41,7 @@ SearchByName.args = {
 
 export const InputtedWords = Template.bind({});
 InputtedWords.args = {
-  type: SearchType.TAG,
+  target: { type: SearchType.TAG },
   words: ['あいうえお', 'なにぬねの', '-はひふへほ'],
   autocompleteOptions: [
     { category: 'な行', label: 'なにぬねの' },

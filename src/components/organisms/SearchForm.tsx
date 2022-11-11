@@ -68,7 +68,7 @@ export const SearchForm: React.FC<Props> = ({ sx }) => {
       </Grid>
       <Grid item sm={12} md={10}>
         <AutocompleteForm
-          type={target.type}
+          target={target}
           words={words}
           autocompleteOptions={autocompleteOptions}
           onChange={onChangeWords}
