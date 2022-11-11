@@ -1,5 +1,4 @@
 import {
-  filterOptionsByWord,
   generateAutocompleteOptions,
   isOptionEqualToWord,
   uniqueAndSortTagLabels,
@@ -171,35 +170,6 @@ describe('isOptionEqualToWord', () => {
       it('違うと判定される', () => {
         expect(isOptionEqualToWord(option, word)).toBeFalsy();
       });
-    });
-  });
-});
-
-describe('filterOptionsByWord', () => {
-  const labels = ['First', 'Second', 'Third'];
-  const plusOptions = labels;
-  const minusOptions = labels.map((label) => `-${label}`);
-
-  describe.each`
-    optionsCase   | options         | word
-    ${'通常'}     | ${plusOptions}  | ${'ir'}
-    ${'通常'}     | ${plusOptions}  | ${'-ir'}
-    ${'マイナス'} | ${minusOptions} | ${'ir'}
-    ${'マイナス'} | ${minusOptions} | ${'-ir'}
-  `('補完候補が$optionsCaseでワードが $word の場合', ({ options, word }) => {
-    // FirstとThirdがヒットする
-    it('先頭のマイナス(-)を除いた状態でフィルタリングされる', () => {
-      expect(filterOptionsByWord(options, word)).toEqual([
-        options[0],
-        options[2],
-      ]);
-    });
-  });
-
-  describe('ワードが空文字列の場合', () => {
-    it('補完候補がそのまま返る', () => {
-      expect(filterOptionsByWord(plusOptions, '')).toEqual(plusOptions);
-      expect(filterOptionsByWord(minusOptions, '')).toEqual(minusOptions);
     });
   });
 });

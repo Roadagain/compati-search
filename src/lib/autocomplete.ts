@@ -45,15 +45,3 @@ export const isOptionEqualToWord = (
   const pureLabel = wordWithoutFirstMinus(option);
   return pureWord === pureLabel;
 };
-
-export const filterOptionsByWord = (
-  options: string[],
-  word: string
-): string[] => {
-  // マイナス検索しているラベルやマイナス検索中のプラスラベルを除外する
-  const pureWord = wordWithoutFirstMinus(word);
-  return options.filter((option) => {
-    const pureLabel = wordWithoutFirstMinus(option);
-    return pureLabel.includes(pureWord);
-  });
-};
