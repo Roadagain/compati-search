@@ -24,7 +24,7 @@ export const initialState: State = {
     character: '',
   },
   search: {
-    target: { type: SearchType.TAG },
+    target: { type: SearchType.NAME },
     words: [],
     showAll: false,
     results: [],
