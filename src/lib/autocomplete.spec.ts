@@ -73,7 +73,11 @@ describe('generateAutocompleteOptions', () => {
     describe('検索対象がタグの場合', () => {
       it('タグの一覧を重複なく返す', () => {
         expect(
-          generateAutocompleteOptions(characters, SearchType.TAG, true)
+          generateAutocompleteOptions(
+            characters,
+            { type: SearchType.TAG },
+            true
+          )
         ).toEqual([
           { category: 'X', label: 'x-ray' },
           { category: 'Y', label: 'yankee' },
@@ -85,7 +89,11 @@ describe('generateAutocompleteOptions', () => {
     describe('検索対象がタグの場合', () => {
       it('名前の一覧を返す', () => {
         expect(
-          generateAutocompleteOptions(characters, SearchType.NAME, true)
+          generateAutocompleteOptions(
+            characters,
+            { type: SearchType.NAME },
+            true
+          )
         ).toEqual([{ label: 'Alpha' }, { label: 'Beta' }, { label: 'Gamma' }]);
       });
     });
@@ -95,7 +103,11 @@ describe('generateAutocompleteOptions', () => {
     describe('検索対象がタグの場合', () => {
       it('デフォルト表示キャラのタグの一覧を重複なく返す', () => {
         expect(
-          generateAutocompleteOptions(characters, SearchType.TAG, false)
+          generateAutocompleteOptions(
+            characters,
+            { type: SearchType.TAG },
+            false
+          )
         ).toEqual([
           { category: 'X', label: 'x-ray' },
           { category: 'Y', label: 'yankee' },
@@ -106,7 +118,11 @@ describe('generateAutocompleteOptions', () => {
     describe('検索対象が名前の場合', () => {
       it('デフォルト表示キャラの名前の一覧を返す', () => {
         expect(
-          generateAutocompleteOptions(characters, SearchType.NAME, false)
+          generateAutocompleteOptions(
+            characters,
+            { type: SearchType.NAME },
+            false
+          )
         ).toEqual([{ label: 'Alpha' }, { label: 'Beta' }]);
       });
     });

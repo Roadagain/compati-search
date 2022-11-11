@@ -42,7 +42,7 @@ export const SearchForm: React.FC<Props> = ({ sx }) => {
   );
   const autocompleteOptions = generateAutocompleteOptions(
     state.characters,
-    target.type,
+    target,
     showAll
   );
   const theme = useTheme();
