@@ -64,7 +64,10 @@ describe('generateAutocompleteOptions', () => {
     },
     {
       name: 'Gamma',
-      tags: [{ category: 'Z', label: 'zulu' }],
+      tags: [
+        { category: 'Z', label: 'zulu' },
+        { category: 'X', label: 'xanadu' },
+      ],
       showDefault: false,
     },
   ];
@@ -80,6 +83,7 @@ describe('generateAutocompleteOptions', () => {
           )
         ).toEqual([
           { category: 'X', label: 'x-ray' },
+          { category: 'X', label: 'xanadu' },
           { category: 'Y', label: 'yankee' },
           { category: 'Z', label: 'zulu' },
         ]);
@@ -95,6 +99,21 @@ describe('generateAutocompleteOptions', () => {
             true
           )
         ).toEqual([{ label: 'Alpha' }, { label: 'Beta' }, { label: 'Gamma' }]);
+      });
+    });
+
+    describe('検索対象がタグカテゴリの場合', () => {
+      it('指定されたカテゴリのタグ一覧を重複なく返す', () => {
+        expect(
+          generateAutocompleteOptions(
+            characters,
+            { type: SearchType.TAG, category: 'X' },
+            true
+          )
+        ).toEqual([
+          { category: 'X', label: 'x-ray' },
+          { category: 'X', label: 'xanadu' },
+        ]);
       });
     });
   });
@@ -124,6 +143,18 @@ describe('generateAutocompleteOptions', () => {
             false
           )
         ).toEqual([{ label: 'Alpha' }, { label: 'Beta' }]);
+      });
+    });
+
+    describe('検索対象がタグカテゴリの場合', () => {
+      it('デフォルト表示キャラの指定されたカテゴリのタグ一覧を重複なく返す', () => {
+        expect(
+          generateAutocompleteOptions(
+            characters,
+            { type: SearchType.TAG, category: 'X' },
+            false
+          )
+        ).toEqual([{ category: 'X', label: 'x-ray' }]);
       });
     });
   });
