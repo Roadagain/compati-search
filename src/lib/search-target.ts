@@ -16,6 +16,14 @@ interface SearchTargetTagCategory {
 
 export type SearchTarget = SearchTargetName | SearchTargetTagCategory;
 
+export const getKeyOfSearchTarget = (target: SearchTarget) => {
+  return target.type === SearchType.NAME ? 'name' : target.category;
+};
+
+export const getLabelOfSearchTarget = (target: SearchTarget) => {
+  return target.type === SearchType.NAME ? '名前' : target.category;
+};
+
 export const generateSearchTargets = (tags: Tag[]): SearchTarget[] => {
   const categories = new Set<string>(tags.map(({ category }) => category));
   return [

@@ -1,5 +1,40 @@
-import { generateSearchTargets, SearchType } from './search-target';
+import {
+  generateSearchTargets,
+  getKeyOfSearchTarget,
+  getLabelOfSearchTarget,
+  SearchType,
+} from './search-target';
 import { Tag } from './tagged-character';
+
+describe('getKeyOfSearchTarget', () => {
+  describe('検索対象が名前のとき', () => {
+    it('「name」が返る', () => {
+      expect(getKeyOfSearchTarget({ type: SearchType.NAME })).toBe('name');
+    });
+  });
+  describe('検索対象がタグカテゴリのとき', () => {
+    it('カテゴリ名が返る', () => {
+      expect(
+        getKeyOfSearchTarget({ type: SearchType.TAG, category: 'category' })
+      ).toBe('category');
+    });
+  });
+});
+
+describe('getLabelOfSearchTarget', () => {
+  describe('検索対象が名前のとき', () => {
+    it('「名前」が返る', () => {
+      expect(getLabelOfSearchTarget({ type: SearchType.NAME })).toBe('名前');
+    });
+  });
+  describe('検索対象がタグカテゴリのとき', () => {
+    it('カテゴリ名が返る', () => {
+      expect(
+        getLabelOfSearchTarget({ type: SearchType.TAG, category: 'category' })
+      ).toBe('category');
+    });
+  });
+});
 
 describe('generateSearchTargets', () => {
   describe('タグが1つ以上ある場合', () => {

@@ -3,8 +3,8 @@ import { CharactersData } from '../lib/characters-data';
 import { filterCharacters, SearchWords } from '../lib/filter-characters';
 import {
   generateSearchTargets,
+  getKeyOfSearchTarget,
   SearchTarget,
-  SearchType,
 } from '../lib/search-target';
 import { InputedSearchWords, State } from './state';
 
@@ -29,13 +29,13 @@ export const onLoadCharactersData = (
   const searchTargets = generateSearchTargets(allTags);
   const autocompleteOptions = Object.fromEntries(
     searchTargets.map((target) => {
-      const key = target.type === SearchType.NAME ? 'name' : target.category;
+      const key = getKeyOfSearchTarget(target);
       return [key, generateAutocompleteOptions(characters, target, showAll)];
     })
   );
   const words: InputedSearchWords = Object.fromEntries(
     searchTargets.map((target) => {
-      const key = target.type === SearchType.NAME ? 'name' : target.category;
+      const key = getKeyOfSearchTarget(target);
       return [key, []];
     })
   );
@@ -70,7 +70,7 @@ export const onChangeSearchWords = (
 ): State => {
   const { characters, search } = state;
   const { showAll } = search;
-  const key = target.type === SearchType.NAME ? 'name' : target.category;
+  const key = getKeyOfSearchTarget(target);
   const words = {
     ...search.words,
     [key]: newWords,
@@ -102,7 +102,7 @@ export const onChangeShowAll = (state: State, showAll: boolean): State => {
   const searchTargets = info.targets;
   const autocompleteOptions = Object.fromEntries(
     searchTargets.map((target) => {
-      const key = target.type === SearchType.NAME ? 'name' : target.category;
+      const key = getKeyOfSearchTarget(target);
       return [key, generateAutocompleteOptions(characters, target, showAll)];
     })
   );

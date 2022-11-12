@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography';
 import React from 'react';
 
 import { FluxContext } from '../../flux/context';
-import { SearchTarget, SearchType } from '../../lib/search-target';
+import { getKeyOfSearchTarget, SearchTarget } from '../../lib/search-target';
 import { SimpleSearchForm } from '../molecules/SimpleSearchForm';
 
 interface Props {
@@ -37,8 +37,7 @@ export const FullSearchForm: React.FC<Props> = ({ sx }) => {
       </AccordionSummary>
       <AccordionDetails>
         {targets.map((target) => {
-          const key =
-            target.type === SearchType.NAME ? 'name' : target.category;
+          const key = getKeyOfSearchTarget(target);
           const onChange = onChangeCurried(target);
           return (
             <SimpleSearchForm

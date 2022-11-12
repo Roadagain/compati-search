@@ -5,7 +5,7 @@ import TextField from '@mui/material/TextField';
 import React from 'react';
 
 import { isOptionEqualToWord } from '../../lib/autocomplete';
-import { SearchTarget, SearchType } from '../../lib/search-target';
+import { getLabelOfSearchTarget, SearchTarget } from '../../lib/search-target';
 
 interface Props {
   /**
@@ -38,9 +38,7 @@ export const AutocompleteForm: React.FC<Props> = ({
   onChange,
   sx,
 }) => {
-  const placeholder = `${
-    target.type === SearchType.NAME ? '名前' : target.category
-  }を入力`;
+  const placeholder = `${getLabelOfSearchTarget(target)}を入力`;
   const onChangeWords = React.useCallback(
     (_, words: string[]) => {
       onChange(words);
