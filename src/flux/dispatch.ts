@@ -59,28 +59,6 @@ export const onLoadCharactersData = (
   };
 };
 
-export const onChangeSearchTarget = (
-  state: State,
-  target: SearchTarget
-): State => {
-  const { characters, search } = state;
-  const { showAll, words } = search;
-  const results = filterCharacters(
-    characters,
-    adjustToSearchWords(words),
-    showAll
-  );
-  return {
-    ...state,
-    search: {
-      ...search,
-      target,
-      results,
-      page: 1,
-    },
-  };
-};
-
 export const onChangeSearchWords = (
   state: State,
   target: SearchTarget,

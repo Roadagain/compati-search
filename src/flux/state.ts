@@ -12,7 +12,6 @@ interface SearchInfoState {
 
 interface SearchState {
   info: SearchInfoState;
-  target: SearchTarget;
   words: InputedSearchWords;
   showAll: boolean;
   results: TaggedCharacter[];
@@ -37,7 +36,6 @@ export const initialState: State = {
       targets: [{ type: SearchType.NAME }],
       autocompleteOptions: {},
     },
-    target: { type: SearchType.NAME },
     words: {
       name: [],
     },
