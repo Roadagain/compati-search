@@ -37,7 +37,7 @@ export const FullSearchForm: React.FC<Props> = ({ sx }) => {
       </AccordionSummary>
       <AccordionDetails>
         {targets.map((target) => {
-          const key = 'category' in target ? target.category : '名前';
+          const key = 'category' in target ? target.category : 'name';
           const onChange = onChangeCurried(target);
           return (
             <SimpleSearchForm

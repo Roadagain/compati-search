@@ -88,7 +88,7 @@ export const onChangeSearchWords = (
 ): State => {
   const { characters, search } = state;
   const { showAll } = search;
-  const key = 'category' in target ? target.category : '名前';
+  const key = 'category' in target ? target.category : 'name';
   const words = {
     ...search.words,
     [key]: newWords,
@@ -120,7 +120,7 @@ export const onChangeShowAll = (state: State, showAll: boolean): State => {
   const searchTargets = info.targets;
   const autocompleteOptions = Object.fromEntries(
     searchTargets.map((target) => {
-      const key = 'category' in target ? target.category : '名前';
+      const key = 'category' in target ? target.category : 'name';
       return [key, generateAutocompleteOptions(characters, target, showAll)];
     })
   );
@@ -144,7 +144,7 @@ export const onClickTag = (state: State, label: string): State => {
   const { words, showAll } = search;
   const { autocompleteOptions } = search.info;
   const categories = Object.entries(autocompleteOptions)
-    .filter(([key, options]) => key !== '名前' && options.includes(label))
+    .filter(([key, options]) => key !== 'name' && options.includes(label))
     .map(([key]) => key);
   const overrideWords = Object.fromEntries(
     categories.map((category) => {
