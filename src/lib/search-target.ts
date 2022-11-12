@@ -5,8 +5,8 @@ export enum SearchType {
   NAME,
 }
 
-interface SearchTargetSimple {
-  type: SearchType;
+interface SearchTargetName {
+  type: SearchType.NAME;
 }
 
 interface SearchTargetTagCategory {
@@ -14,7 +14,7 @@ interface SearchTargetTagCategory {
   category: string;
 }
 
-export type SearchTarget = SearchTargetSimple | SearchTargetTagCategory;
+export type SearchTarget = SearchTargetName | SearchTargetTagCategory;
 
 export const generateSearchTargets = (tags: Tag[]): SearchTarget[] => {
   const categories = new Set<string>(tags.map(({ category }) => category));

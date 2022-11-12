@@ -15,16 +15,11 @@ export const generateAutocompleteOptions = (
   );
   switch (target.type) {
     case SearchType.TAG:
-      if ('category' in target) {
-        return uniqueAndSortTagLabels(
-          charactersShown
-            .flatMap(({ tags }) => tags)
-            .filter(({ category }) => category === target.category)
-            .map(({ label }) => label)
-        );
-      }
       return uniqueAndSortTagLabels(
-        charactersShown.flatMap(({ tags }) => tags).map(({ label }) => label)
+        charactersShown
+          .flatMap(({ tags }) => tags)
+          .filter(({ category }) => category === target.category)
+          .map(({ label }) => label)
       );
     case SearchType.NAME:
       return charactersShown.map(({ name }) => name);

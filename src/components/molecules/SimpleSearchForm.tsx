@@ -2,7 +2,7 @@ import Grid from '@mui/material/Grid';
 import { SxProps, Theme } from '@mui/material/styles';
 import React from 'react';
 
-import { SearchTarget } from '../../lib/search-target';
+import { SearchTarget, SearchType } from '../../lib/search-target';
 import { SearchTargetLabel } from '../atoms/SearchTargetLabel';
 import { AutocompleteForm } from './AutocompleteForm';
 
@@ -36,7 +36,8 @@ export const SimpleSearchForm: React.FC<Props> = ({
   onChange,
   sx,
 }) => {
-  const targetLabel = 'category' in target ? target.category : '名前';
+  const targetLabel =
+    target.type === SearchType.NAME ? '名前' : target.category;
 
   return (
     <Grid

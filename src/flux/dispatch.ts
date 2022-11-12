@@ -1,7 +1,11 @@
 import { generateAutocompleteOptions } from '../lib/autocomplete';
 import { CharactersData } from '../lib/characters-data';
 import { filterCharacters, SearchWords } from '../lib/filter-characters';
-import { generateSearchTargets, SearchTarget } from '../lib/search-target';
+import {
+  generateSearchTargets,
+  SearchTarget,
+  SearchType,
+} from '../lib/search-target';
 import { InputedSearchWords, State } from './state';
 
 const adjustToSearchWords = (words: InputedSearchWords): SearchWords => {
@@ -25,13 +29,13 @@ export const onLoadCharactersData = (
   const searchTargets = generateSearchTargets(allTags);
   const autocompleteOptions = Object.fromEntries(
     searchTargets.map((target) => {
-      const key = 'category' in target ? target.category : 'name';
+      const key = target.type === SearchType.NAME ? 'name' : target.category;
       return [key, generateAutocompleteOptions(characters, target, showAll)];
     })
   );
   const words: InputedSearchWords = Object.fromEntries(
     searchTargets.map((target) => {
-      const key = 'category' in target ? target.category : 'name';
+      const key = target.type === SearchType.NAME ? 'name' : target.category;
       return [key, []];
     })
   );
@@ -66,7 +70,7 @@ export const onChangeSearchWords = (
 ): State => {
   const { characters, search } = state;
   const { showAll } = search;
-  const key = 'category' in target ? target.category : 'name';
+  const key = target.type === SearchType.NAME ? 'name' : target.category;
   const words = {
     ...search.words,
     [key]: newWords,
@@ -98,7 +102,7 @@ export const onChangeShowAll = (state: State, showAll: boolean): State => {
   const searchTargets = info.targets;
   const autocompleteOptions = Object.fromEntries(
     searchTargets.map((target) => {
-      const key = 'category' in target ? target.category : 'name';
+      const key = target.type === SearchType.NAME ? 'name' : target.category;
       return [key, generateAutocompleteOptions(characters, target, showAll)];
     })
   );
