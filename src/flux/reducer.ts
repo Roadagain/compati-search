@@ -21,8 +21,8 @@ export const reducer: Reducer<State, Action> = (state, action) => {
       return onChangeSearchWords(state, action.words);
     case 'change-show-all':
       return onChangeShowAll(state, action.showAll);
-    case 'click-tag':
-      return onClickTag(state, action.label);
+    // case 'click-tag':
+    //   return onClickTag(state, action.label);
     case 'show-next-page':
       return onShowNextPage(state);
     default:

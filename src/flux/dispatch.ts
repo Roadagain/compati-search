@@ -73,24 +73,24 @@ export const onChangeShowAll = (state: State, showAll: boolean): State => {
   };
 };
 
-export const onClickTag = (state: State, label: string): State => {
-  const { characters, search } = state;
-  const { showAll } = search;
-  const type = SearchType.TAG;
-  const words =
-    search.target.type === SearchType.TAG ? [...search.words, label] : [label];
-  const results = filterCharacters(characters, type, words, showAll);
-  return {
-    ...state,
-    search: {
-      ...search,
-      target: { type },
-      words,
-      results,
-      page: 1,
-    },
-  };
-};
+// export const onClickTag = (state: State, label: string): State => {
+//   const { characters, search } = state;
+//   const { showAll } = search;
+//   const type = SearchType.TAG;
+//   const words =
+//     search.target.type === SearchType.TAG ? [...search.words, label] : [label];
+//   const results = filterCharacters(characters, type, words, showAll);
+//   return {
+//     ...state,
+//     search: {
+//       ...search,
+//       target: { type },
+//       words,
+//       results,
+//       page: 1,
+//     },
+//   };
+// };
 
 export const onShowNextPage = (state: State): State => {
   const { search } = state;
