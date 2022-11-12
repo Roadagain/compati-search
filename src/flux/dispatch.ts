@@ -1,6 +1,7 @@
+import { generateAutocompleteOptions } from '../lib/autocomplete';
 import { CharactersData } from '../lib/characters-data';
 import { filterCharacters, SearchWords } from '../lib/filter-characters';
-import { SearchTarget } from '../lib/search-target';
+import { generateSearchTargets, SearchTarget } from '../lib/search-target';
 import { InputedSearchWords, State } from './state';
 
 const adjustToSearchWords = (words: InputedSearchWords): SearchWords => {
@@ -25,6 +26,14 @@ export const onLoadCharactersData = (
     adjustToSearchWords(words),
     showAll
   );
+  const allTags = characters.flatMap(({ tags }) => tags);
+  const searchTargets = generateSearchTargets(allTags);
+  const autocompleteOptions = Object.fromEntries(
+    searchTargets.map((target) => {
+      const key = 'category' in target ? target.category : '名前';
+      return [key, generateAutocompleteOptions(characters, target, showAll)];
+    })
+  );
   return {
     ...state,
     isReady: true,
@@ -32,6 +41,11 @@ export const onLoadCharactersData = (
     metadata,
     search: {
       ...search,
+      info: {
+        ...search.info,
+        targets: searchTargets,
+        autocompleteOptions,
+      },
       results,
       page: 1,
     },
@@ -90,16 +104,27 @@ export const onChangeSearchWords = (
 
 export const onChangeShowAll = (state: State, showAll: boolean): State => {
   const { characters, search } = state;
-  const { words } = search;
+  const { words, info } = search;
   const results = filterCharacters(
     characters,
     adjustToSearchWords(words),
     showAll
   );
+  const searchTargets = info.targets;
+  const autocompleteOptions = Object.fromEntries(
+    searchTargets.map((target) => {
+      const key = 'category' in target ? target.category : '名前';
+      return [key, generateAutocompleteOptions(characters, target, showAll)];
+    })
+  );
   return {
     ...state,
     search: {
       ...search,
+      info: {
+        ...info,
+        autocompleteOptions,
+      },
       showAll,
       results,
       page: 1,

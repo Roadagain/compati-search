@@ -3,8 +3,15 @@ import { SearchTarget, SearchType } from '../lib/search-target';
 import { TaggedCharacter } from '../lib/tagged-character';
 
 export type InputedSearchWords = Record<'name' | string, string[]>;
+export type AutocompleteOptions = Record<'name' | string, string[]>;
+
+interface SearchInfoState {
+  autocompleteOptions: AutocompleteOptions;
+  targets: SearchTarget[];
+}
 
 interface SearchState {
+  info: SearchInfoState;
   target: SearchTarget;
   words: InputedSearchWords;
   showAll: boolean;
@@ -26,6 +33,10 @@ export const initialState: State = {
     character: '',
   },
   search: {
+    info: {
+      targets: [{ type: SearchType.NAME }],
+      autocompleteOptions: {},
+    },
     target: { type: SearchType.NAME },
     words: {
       name: [],
