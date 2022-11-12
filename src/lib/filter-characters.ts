@@ -40,7 +40,8 @@ export const filterCharactersByNameWords = (
 export const matchesNameWords = (name: string, words: string[]): boolean => {
   return words.every((word) => {
     const isMinus = word.startsWith('-');
-    const hasWord = name.includes(word.slice(isMinus ? 1 : 0));
+    const actualWord = word.slice(isMinus ? 1 : 0);
+    const hasWord = name.includes(actualWord);
     return isMinus ? !hasWord : hasWord;
   });
 };
@@ -48,7 +49,8 @@ export const matchesNameWords = (name: string, words: string[]): boolean => {
 export const matchesTagWords = (tags: Tag[], words: string[]): boolean => {
   return words.every((word) => {
     const isMinus = word.startsWith('-');
-    const hasWord = tags.some(({ label }) => label === word);
+    const actualWord = word.slice(isMinus ? 1 : 0);
+    const hasWord = tags.some(({ label }) => label === actualWord);
     return isMinus ? !hasWord : hasWord;
   });
 };

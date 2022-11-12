@@ -242,26 +242,38 @@ describe('searchCharactersByCharacterNameWords', () => {
 
 describe('matchesNameWords', () => {
   describe('ワードが1つの場合', () => {
-    it('ワードを含むかどうか返る', () => {
+    it('プラスワードを含むかどうか返る', () => {
       const words = ['na'];
       expect(matchesNameWords('name', words)).toBeTruthy();
       expect(matchesNameWords('other', words)).toBeFalsy();
     });
+
+    it('マイナスワードを含まないかどうか返る', () => {
+      const words = ['-na'];
+      expect(matchesNameWords('name', words)).toBeFalsy();
+      expect(matchesNameWords('other', words)).toBeTruthy();
+    });
   });
 
   describe('ワードが複数の場合', () => {
-    it('全てのワードを含むかどうか返る', () => {
-      const words = ['name', 'second'];
+    it('全てのプラスワードを含みマイナスワードを含まないか返る', () => {
+      const words = ['name', 'second', '-first'];
       expect(matchesNameWords('name_second', words)).toBeTruthy();
-      expect(matchesNameWords('name', words)).toBeFalsy();
+      expect(matchesNameWords('name_first_second', words)).toBeFalsy();
       expect(matchesNameWords('second', words)).toBeFalsy();
+    });
+  });
+
+  describe('ワードがない場合', () => {
+    it('マッチする扱いになる', () => {
+      expect(matchesNameWords('', [])).toBeTruthy();
     });
   });
 });
 
 describe('matchesTagWords', () => {
   describe('ワードが1つの場合', () => {
-    it('ワードに完全一致するかどうか返る', () => {
+    it('プラスワードに完全一致するかどうか返る', () => {
       const words = ['tag'];
       expect(
         matchesTagWords([{ category: '', label: 'tag' }], words)
@@ -270,11 +282,21 @@ describe('matchesTagWords', () => {
         matchesTagWords([{ category: '', label: 'taga' }], words)
       ).toBeFalsy();
     });
+
+    it('マイナスワードに完全一致しないかどうか返る', () => {
+      const words = ['-tag'];
+      expect(
+        matchesTagWords([{ category: '', label: 'tag' }], words)
+      ).toBeFalsy();
+      expect(
+        matchesTagWords([{ category: '', label: 'taga' }], words)
+      ).toBeTruthy();
+    });
   });
 
   describe('ワードが複数の場合', () => {
-    it('全てのワードがタグ一覧に完全一致するかどうか返る', () => {
-      const words = ['tag', 'second'];
+    it('全てのプラスワードがタグ一覧に完全一致し全てのマイナスワードがタグ一覧に完全一致しないか返る', () => {
+      const words = ['tag', 'second', '-first'];
       expect(
         matchesTagWords(
           [
@@ -287,6 +309,7 @@ describe('matchesTagWords', () => {
       expect(
         matchesTagWords(
           [
+            { category: '', label: 'tag' },
             { category: '', label: 'second' },
             { category: '', label: 'first' },
           ],
@@ -296,6 +319,12 @@ describe('matchesTagWords', () => {
       expect(
         matchesTagWords([{ category: '', label: 'tag' }], words)
       ).toBeFalsy();
+    });
+  });
+
+  describe('ワードがない場合', () => {
+    it('マッチしたとして扱われる', () => {
+      expect(matchesTagWords([], [])).toBeTruthy();
     });
   });
 });
