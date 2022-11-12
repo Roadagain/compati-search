@@ -7,7 +7,7 @@ import React from 'react';
 
 import shipsData from '../../../characters-data/ships.json';
 import { FluxContext } from '../../flux/context';
-import { SearchCondition } from '../organisms/SearchCondition';
+import { SearchConditionSummary } from '../organisms/SearchConditionSummary';
 import { SearchForm } from '../organisms/SearchForm';
 import { SearchResults } from '../organisms/SearchResults';
 
@@ -29,7 +29,7 @@ export const SearchTemplate: React.FC = () => {
         互艦サーチ
       </Typography>
       <SearchForm sx={{ mt: 2 }} />
-      <SearchCondition sx={{ mt: 2 }} />
+      <SearchConditionSummary sx={{ mt: 2 }} />
       <SearchResults sx={{ mt: 1 }} />
     </Container>
   );

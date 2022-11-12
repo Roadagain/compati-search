@@ -14,7 +14,7 @@ interface Props {
   sx?: SxProps<Theme>;
 }
 
-export const SearchCondition: React.FC<Props> = ({ sx }) => {
+export const SearchConditionSummary: React.FC<Props> = ({ sx }) => {
   const { state, dispatch } = React.useContext(FluxContext);
   const { target, words, showAll } = state.search;
   const { character } = state.metadata;
