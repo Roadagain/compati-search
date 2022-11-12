@@ -7,8 +7,8 @@ import React from 'react';
 
 import shipsData from '../../../characters-data/ships.json';
 import { FluxContext } from '../../flux/context';
+import { FullSearchForm } from '../organisms/FullSearchForm';
 import { SearchConditionSummary } from '../organisms/SearchConditionSummary';
-import { SearchForm } from '../organisms/SearchForm';
 import { SearchResults } from '../organisms/SearchResults';
 
 export const SearchTemplate: React.FC = () => {
@@ -28,7 +28,7 @@ export const SearchTemplate: React.FC = () => {
       <Typography component="h1" variant="h6">
         互艦サーチ
       </Typography>
-      <SearchForm sx={{ mt: 2 }} />
+      <FullSearchForm sx={{ mt: 2 }} />
       <SearchConditionSummary sx={{ mt: 2 }} />
       <SearchResults sx={{ mt: 1 }} />
     </Container>

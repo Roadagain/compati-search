@@ -23,7 +23,7 @@ interface Props {
   sx?: SxProps<Theme>;
 }
 
-export const SearchForm: React.FC<Props> = ({ sx }) => {
+export const FullSearchForm: React.FC<Props> = ({ sx }) => {
   const { state, dispatch } = React.useContext(FluxContext);
   const { target, words, showAll } = state.search;
   const onChangeTarget = React.useCallback(
