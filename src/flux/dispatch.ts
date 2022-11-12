@@ -20,19 +20,25 @@ export const onLoadCharactersData = (
 ): State => {
   const { characters, metadata } = charactersData;
   const { search } = state;
-  const { words, showAll } = search;
-  const results = filterCharacters(
-    characters,
-    adjustToSearchWords(words),
-    showAll
-  );
+  const { showAll } = search;
   const allTags = characters.flatMap(({ tags }) => tags);
   const searchTargets = generateSearchTargets(allTags);
   const autocompleteOptions = Object.fromEntries(
     searchTargets.map((target) => {
-      const key = 'category' in target ? target.category : '名前';
+      const key = 'category' in target ? target.category : 'name';
       return [key, generateAutocompleteOptions(characters, target, showAll)];
     })
+  );
+  const words: InputedSearchWords = Object.fromEntries(
+    searchTargets.map((target) => {
+      const key = 'category' in target ? target.category : 'name';
+      return [key, []];
+    })
+  );
+  const results = filterCharacters(
+    characters,
+    adjustToSearchWords(words),
+    showAll
   );
   return {
     ...state,
@@ -46,6 +52,7 @@ export const onLoadCharactersData = (
         targets: searchTargets,
         autocompleteOptions,
       },
+      words,
       results,
       page: 1,
     },
@@ -132,24 +139,37 @@ export const onChangeShowAll = (state: State, showAll: boolean): State => {
   };
 };
 
-// export const onClickTag = (state: State, label: string): State => {
-//   const { characters, search } = state;
-//   const { showAll } = search;
-//   const type = SearchType.TAG;
-//   const words =
-//     search.target.type === SearchType.TAG ? [...search.words, label] : [label];
-//   const results = filterCharacters(characters, type, words, showAll);
-//   return {
-//     ...state,
-//     search: {
-//       ...search,
-//       target: { type },
-//       words,
-//       results,
-//       page: 1,
-//     },
-//   };
-// };
+export const onClickTag = (state: State, label: string): State => {
+  const { characters, search } = state;
+  const { words, showAll } = search;
+  const { autocompleteOptions } = search.info;
+  const categories = Object.entries(autocompleteOptions)
+    .filter(([key, options]) => key !== '名前' && options.includes(label))
+    .map(([key]) => key);
+  const overrideWords = Object.fromEntries(
+    categories.map((category) => {
+      return [category, Array.from(new Set([...words[category], label]))];
+    })
+  );
+  const newWords = {
+    ...words,
+    ...overrideWords,
+  };
+  const results = filterCharacters(
+    characters,
+    adjustToSearchWords(newWords),
+    showAll
+  );
+  return {
+    ...state,
+    search: {
+      ...search,
+      words: newWords,
+      results,
+      page: 1,
+    },
+  };
+};
 
 export const onShowNextPage = (state: State): State => {
   const { search } = state;
