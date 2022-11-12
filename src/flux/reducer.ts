@@ -5,7 +5,7 @@ import {
   onChangeSearchTarget,
   onChangeSearchWords,
   onChangeShowAll,
-  onClickTag,
+  // onClickTag,
   onLoadCharactersData,
   onShowNextPage,
 } from './dispatch';
@@ -18,7 +18,7 @@ export const reducer: Reducer<State, Action> = (state, action) => {
     case 'change-search-target':
       return onChangeSearchTarget(state, action.target);
     case 'change-search-words':
-      return onChangeSearchWords(state, action.words);
+      return onChangeSearchWords(state, action.target, action.words);
     case 'change-show-all':
       return onChangeShowAll(state, action.showAll);
     // case 'click-tag':

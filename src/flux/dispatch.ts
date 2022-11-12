@@ -1,7 +1,17 @@
 import { CharactersData } from '../lib/characters-data';
-import { filterCharacters } from '../lib/filter-characters';
-import { SearchTarget, SearchType } from '../lib/search-target';
-import { State } from './state';
+import { filterCharacters, SearchWords } from '../lib/filter-characters';
+import { SearchTarget } from '../lib/search-target';
+import { InputedSearchWords, State } from './state';
+
+const adjustToSearchWords = (words: InputedSearchWords): SearchWords => {
+  const tagCategories = Object.keys(words).filter((key) => key !== 'name');
+  return {
+    name: words.name,
+    tag: Array.from(
+      new Set(tagCategories.flatMap((category) => words[category]))
+    ),
+  };
+};
 
 export const onLoadCharactersData = (
   state: State,
@@ -9,8 +19,12 @@ export const onLoadCharactersData = (
 ): State => {
   const { characters, metadata } = charactersData;
   const { search } = state;
-  const { target, words, showAll } = search;
-  const results = filterCharacters(characters, target.type, words, showAll);
+  const { words, showAll } = search;
+  const results = filterCharacters(
+    characters,
+    adjustToSearchWords(words),
+    showAll
+  );
   return {
     ...state,
     isReady: true,
@@ -29,24 +43,40 @@ export const onChangeSearchTarget = (
   target: SearchTarget
 ): State => {
   const { characters, search } = state;
-  const { showAll } = search;
-  const results = filterCharacters(characters, target.type, [], showAll);
+  const { showAll, words } = search;
+  const results = filterCharacters(
+    characters,
+    adjustToSearchWords(words),
+    showAll
+  );
   return {
     ...state,
     search: {
       ...search,
       target,
-      words: [],
       results,
       page: 1,
     },
   };
 };
 
-export const onChangeSearchWords = (state: State, words: string[]): State => {
+export const onChangeSearchWords = (
+  state: State,
+  target: SearchTarget,
+  newWords: string[]
+): State => {
   const { characters, search } = state;
-  const { target, showAll } = search;
-  const results = filterCharacters(characters, target.type, words, showAll);
+  const { showAll } = search;
+  const key = 'category' in target ? target.category : '名前';
+  const words = {
+    ...search.words,
+    [key]: newWords,
+  };
+  const results = filterCharacters(
+    characters,
+    adjustToSearchWords(words),
+    showAll
+  );
   return {
     ...state,
     search: {
@@ -60,8 +90,12 @@ export const onChangeSearchWords = (state: State, words: string[]): State => {
 
 export const onChangeShowAll = (state: State, showAll: boolean): State => {
   const { characters, search } = state;
-  const { target, words } = search;
-  const results = filterCharacters(characters, target.type, words, showAll);
+  const { words } = search;
+  const results = filterCharacters(
+    characters,
+    adjustToSearchWords(words),
+    showAll
+  );
   return {
     ...state,
     search: {

@@ -13,6 +13,7 @@ interface ChangeSearchTargetAction {
 
 interface ChangeSearchWordsAction {
   type: 'change-search-words';
+  target: SearchTarget;
   words: string[];
 }
 
