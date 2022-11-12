@@ -2,9 +2,11 @@ import { Metadata } from '../lib/metadata';
 import { SearchTarget, SearchType } from '../lib/search-target';
 import { TaggedCharacter } from '../lib/tagged-character';
 
+export type InputedSearchWords = Record<'name' | string, string[]>;
+
 interface SearchState {
   target: SearchTarget;
-  words: string[];
+  words: InputedSearchWords;
   showAll: boolean;
   results: TaggedCharacter[];
   page: number;
@@ -25,7 +27,9 @@ export const initialState: State = {
   },
   search: {
     target: { type: SearchType.NAME },
-    words: [],
+    words: {
+      name: [],
+    },
     showAll: false,
     results: [],
     page: 1,
