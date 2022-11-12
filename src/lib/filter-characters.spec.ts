@@ -2,8 +2,9 @@ import {
   filterCharacters,
   filterCharactersByNameWords,
   filterCharactersByTagLabels,
+  matchesNameWords,
+  matchesTagWords,
 } from './filter-characters';
-import { SearchType } from './search-target';
 import { TaggedCharacter } from './tagged-character';
 
 describe('filterCharactersByTagLabels', () => {
@@ -239,6 +240,66 @@ describe('searchCharactersByCharacterNameWords', () => {
   });
 });
 
+describe('matchesNameWords', () => {
+  describe('ワードが1つの場合', () => {
+    it('ワードを含むかどうか返る', () => {
+      const words = ['na'];
+      expect(matchesNameWords('name', words)).toBeTruthy();
+      expect(matchesNameWords('other', words)).toBeFalsy();
+    });
+  });
+
+  describe('ワードが複数の場合', () => {
+    it('全てのワードを含むかどうか返る', () => {
+      const words = ['name', 'second'];
+      expect(matchesNameWords('name_second', words)).toBeTruthy();
+      expect(matchesNameWords('name', words)).toBeFalsy();
+      expect(matchesNameWords('second', words)).toBeFalsy();
+    });
+  });
+});
+
+describe('matchesTagWords', () => {
+  describe('ワードが1つの場合', () => {
+    it('ワードに完全一致するかどうか返る', () => {
+      const words = ['tag'];
+      expect(
+        matchesTagWords([{ category: '', label: 'tag' }], words)
+      ).toBeTruthy();
+      expect(
+        matchesTagWords([{ category: '', label: 'taga' }], words)
+      ).toBeFalsy();
+    });
+  });
+
+  describe('ワードが複数の場合', () => {
+    it('全てのワードがタグ一覧に完全一致するかどうか返る', () => {
+      const words = ['tag', 'second'];
+      expect(
+        matchesTagWords(
+          [
+            { category: '', label: 'tag' },
+            { category: '', label: 'second' },
+          ],
+          words
+        )
+      ).toBeTruthy();
+      expect(
+        matchesTagWords(
+          [
+            { category: '', label: 'second' },
+            { category: '', label: 'first' },
+          ],
+          words
+        )
+      ).toBeFalsy();
+      expect(
+        matchesTagWords([{ category: '', label: 'tag' }], words)
+      ).toBeFalsy();
+    });
+  });
+});
+
 describe('filterCharacters', () => {
   const characterWithTag = {
     name: '',
@@ -255,25 +316,94 @@ describe('filterCharacters', () => {
     tags: [],
     showDefault: true,
   };
-  const characters = [characterWithTag, characterWithName];
+  const characterWithNameAndTag = {
+    name: 'name2',
+    tags: [
+      {
+        category: 'category',
+        label: 'label',
+      },
+    ],
+    showDefault: true,
+  };
+  const hiddenCharacterWithNameAndTag = {
+    name: 'name_hidden',
+    tags: [
+      {
+        category: 'category',
+        label: 'label',
+      },
+    ],
+    showDefault: false,
+  };
+  const characters = [
+    characterWithTag,
+    characterWithName,
+    characterWithNameAndTag,
+    hiddenCharacterWithNameAndTag,
+  ];
 
-  describe('検索対象がタグの場合', () => {
-    const searchType = SearchType.TAG;
+  describe('デフォルト表示キャラのみが対象の場合', () => {
+    describe('検索対象がタグの場合', () => {
+      it('タグ検索の結果が返る', () => {
+        expect(
+          filterCharacters(characters, { name: [], tag: ['label'] }, false)
+        ).toEqual([characterWithTag, characterWithNameAndTag]);
+      });
+    });
 
-    it('タグ検索の結果が返る', () => {
-      expect(
-        filterCharacters(characters, searchType, ['label'], false)
-      ).toEqual([characterWithTag]);
+    describe('検索対象が名前の場合', () => {
+      it('名前検索の結果が返る', () => {
+        expect(
+          filterCharacters(characters, { name: ['name'], tag: [] }, false)
+        ).toEqual([characterWithName, characterWithNameAndTag]);
+      });
+    });
+
+    describe('検索対象が名前とタグ両方を含む場合', () => {
+      it('両方で検索した結果が返る', () => {
+        expect(
+          filterCharacters(
+            characters,
+            { name: ['name'], tag: ['label'] },
+            false
+          )
+        ).toEqual([characterWithNameAndTag]);
+      });
     });
   });
 
-  describe('検索対象が名前の場合', () => {
-    const searchType = SearchType.NAME;
+  describe('全キャラが対象の場合', () => {
+    describe('検索対象がタグの場合', () => {
+      it('タグ検索の結果が返る', () => {
+        expect(
+          filterCharacters(characters, { name: [], tag: ['label'] }, true)
+        ).toEqual([
+          characterWithTag,
+          characterWithNameAndTag,
+          hiddenCharacterWithNameAndTag,
+        ]);
+      });
+    });
 
-    it('名前検索の結果が返る', () => {
-      expect(filterCharacters(characters, searchType, ['name'], false)).toEqual(
-        [characterWithName]
-      );
+    describe('検索対象が名前の場合', () => {
+      it('名前検索の結果が返る', () => {
+        expect(
+          filterCharacters(characters, { name: ['name'], tag: [] }, true)
+        ).toEqual([
+          characterWithName,
+          characterWithNameAndTag,
+          hiddenCharacterWithNameAndTag,
+        ]);
+      });
+    });
+
+    describe('検索対象が名前とタグ両方を含む場合', () => {
+      it('両方で検索した結果が返る', () => {
+        expect(
+          filterCharacters(characters, { name: ['name'], tag: ['label'] }, true)
+        ).toEqual([characterWithNameAndTag, hiddenCharacterWithNameAndTag]);
+      });
     });
   });
 });
