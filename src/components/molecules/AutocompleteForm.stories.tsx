@@ -22,12 +22,9 @@ const Template: ComponentStory<typeof AutocompleteForm> = (args) => (
 
 export const SearchByTag = Template.bind({});
 SearchByTag.args = {
-  target: { type: SearchType.TAG },
+  target: { type: SearchType.TAG, category: '五十音' },
   words: [],
-  autocompleteOptions: [
-    { category: 'あ行', label: 'あいうえお' },
-    { category: 'か行', label: 'かきくけこ' },
-  ],
+  autocompleteOptions: ['あいうえお', 'かきくけこ'],
   sx: {},
 };
 
@@ -35,18 +32,14 @@ export const SearchByName = Template.bind({});
 SearchByName.args = {
   target: { type: SearchType.NAME },
   words: [],
-  autocompleteOptions: [{ label: 'さしすせそ' }, { label: 'たちつてと' }],
+  autocompleteOptions: ['さしすせそ', 'たちつてと'],
   sx: {},
 };
 
 export const InputtedWords = Template.bind({});
 InputtedWords.args = {
-  target: { type: SearchType.TAG },
+  target: { type: SearchType.TAG, category: '五十音' },
   words: ['あいうえお', 'なにぬねの', '-はひふへほ'],
-  autocompleteOptions: [
-    { category: 'な行', label: 'なにぬねの' },
-    { category: 'は行', label: 'はひふへほ' },
-    { category: 'ま行', label: 'まみむめも' },
-  ],
+  autocompleteOptions: ['なにぬねの', 'はひふへほ', 'まみむめも'],
   sx: {},
 };
