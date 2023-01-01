@@ -47,7 +47,7 @@ export const SimpleSearchForm: React.FC<Props> = ({
       spacing={2}
       sx={sx}
     >
-      <Grid item sm={12} md={2}>
+      <Grid item sm={12} md={2} textAlign="right">
         <SearchTargetLabel label={targetLabel} />
       </Grid>
       <Grid item sm={12} md={10}>
