@@ -74,10 +74,12 @@ export const AutocompleteForm: React.FC<Props> = ({
           {...params}
           type="search"
           placeholder={placeholder}
+          variant="standard"
           inputProps={{
             ...params.inputProps,
             sx: {
               fontSize: theme.typography.h6,
+              margin: 1,
             },
           }}
         />
