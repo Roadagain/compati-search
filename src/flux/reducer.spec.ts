@@ -1,6 +1,5 @@
 import { Action } from './action';
 import {
-  onChangeSearchTarget,
   onChangeSearchWords,
   onChangeShowAll,
   onClickTag,
@@ -18,7 +17,6 @@ describe('reducer', () => {
   describe.each`
     type                      | method
     ${'load-characters-data'} | ${onLoadCharactersData}
-    ${'change-search-target'} | ${onChangeSearchTarget}
     ${'change-search-words'}  | ${onChangeSearchWords}
     ${'change-show-all'}      | ${onChangeShowAll}
     ${'click-tag'}            | ${onClickTag}
