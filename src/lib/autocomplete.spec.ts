@@ -50,10 +50,10 @@ describe('generateAutocompleteOptions', () => {
         expect(
           generateAutocompleteOptions(
             characters,
-            { type: SearchType.TAG },
+            { type: SearchType.TAG, category: 'X' },
             true
           )
-        ).toEqual(['x-ray', 'xanadu', 'yankee', 'zulu']);
+        ).toEqual(['x-ray', 'xanadu']);
       });
     });
 
@@ -88,10 +88,10 @@ describe('generateAutocompleteOptions', () => {
         expect(
           generateAutocompleteOptions(
             characters,
-            { type: SearchType.TAG },
+            { type: SearchType.TAG, category: 'X' },
             false
           )
-        ).toEqual(['x-ray', 'yankee']);
+        ).toEqual(['x-ray']);
       });
     });
 
