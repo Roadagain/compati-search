@@ -1,37 +1,28 @@
-import { SearchTarget } from './search-target';
-import { Tag, TaggedCharacter } from './tagged-character';
+import { SearchTarget, SearchType } from './search-target';
+import { TaggedCharacter } from './tagged-character';
 
-export interface CharacterName {
-  label: string;
-}
-
-export type AutocompleteOption = Tag | CharacterName;
-
-export const uniqueAndSortTags = (tags: Tag[]): Tag[] => {
-  return tags
-    .filter(
-      (tag, index) =>
-        tags.findIndex(
-          ({ category, label }) =>
-            tag.category === category && tag.label === label
-        ) === index
-    )
-    .sort((a, b) => a.category.localeCompare(b.category));
+export const uniqueAndSortTagLabels = (tagLabels: string[]): string[] => {
+  return Array.from(new Set(tagLabels)).sort();
 };
 
 export const generateAutocompleteOptions = (
   characters: TaggedCharacter[],
   target: SearchTarget,
   showAll: boolean
-): AutocompleteOption[] => {
+): string[] => {
   const charactersShown = characters.filter(
     ({ showDefault }) => showAll || showDefault
   );
-  switch (target) {
-    case SearchTarget.TAG:
-      return uniqueAndSortTags(charactersShown.flatMap(({ tags }) => tags));
-    case SearchTarget.NAME:
-      return charactersShown.map(({ name }) => ({ label: name }));
+  switch (target.type) {
+    case SearchType.TAG:
+      return uniqueAndSortTagLabels(
+        charactersShown
+          .flatMap(({ tags }) => tags)
+          .filter(({ category }) => category === target.category)
+          .map(({ label }) => label)
+      );
+    case SearchType.NAME:
+      return charactersShown.map(({ name }) => name);
   }
 };
 
@@ -41,25 +32,11 @@ export const wordWithoutFirstMinus = (word: string): string => {
 
 export const isOptionEqualToWord = (
   // 補完対象から選択した場合AutocompleteOption、最後まで自分で入力した場合はstringになる
-  option: string | AutocompleteOption,
+  option: string,
   word: string
 ): boolean => {
   // マイナス検索しているラベルやマイナス検索中のプラスラベルを除外する
   const pureWord = wordWithoutFirstMinus(word);
-  const pureLabel = wordWithoutFirstMinus(
-    typeof option === 'string' ? option : option.label
-  );
+  const pureLabel = wordWithoutFirstMinus(option);
   return pureWord === pureLabel;
-};
-
-export const filterOptionsByWord = (
-  options: AutocompleteOption[],
-  word: string
-): AutocompleteOption[] => {
-  // マイナス検索しているラベルやマイナス検索中のプラスラベルを除外する
-  const pureWord = wordWithoutFirstMinus(word);
-  return options.filter((option) => {
-    const pureLabel = wordWithoutFirstMinus(option.label);
-    return pureLabel.includes(pureWord);
-  });
 };

@@ -4,7 +4,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import React from 'react';
 
 import { FluxContext } from '../../flux/context';
-import { SearchTargetAndWords } from '../molecules/SearchTargetAndWords';
+import { SearchTypeAndWords } from '../molecules/SearchTypeAndWords';
 import { ShowAllCharactersSwitch } from '../molecules/ShowAllCharactersSwitch';
 
 interface Props {
@@ -14,15 +14,23 @@ interface Props {
   sx?: SxProps<Theme>;
 }
 
-export const SearchCondition: React.FC<Props> = ({ sx }) => {
+export const SearchConditionSummary: React.FC<Props> = ({ sx }) => {
   const { state, dispatch } = React.useContext(FluxContext);
-  const { target, words, showAll } = state.search;
+  const { words, showAll } = state.search;
   const { character } = state.metadata;
   const onChangeSwitch = React.useCallback(
     (showAll: boolean) => {
       dispatch({ type: 'change-show-all', showAll });
     },
     [dispatch]
+  );
+  const nameWords = words.name;
+  const tagWords = Array.from(
+    new Set(
+      Object.entries(words)
+        .filter(([key]) => key !== 'name')
+        .flatMap(([, words]) => words)
+    )
   );
   const theme = useTheme();
   const isTabletOrDesktop = useMediaQuery(theme.breakpoints.up('sm'));
@@ -34,7 +42,7 @@ export const SearchCondition: React.FC<Props> = ({ sx }) => {
       justifyContent={isTabletOrDesktop ? 'space-between' : 'flex-start'}
       sx={sx}
     >
-      <SearchTargetAndWords target={target} words={words} />
+      <SearchTypeAndWords nameWords={nameWords} tagWords={tagWords} />
       <ShowAllCharactersSwitch
         checked={showAll}
         character={character}

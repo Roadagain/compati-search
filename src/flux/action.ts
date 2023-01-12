@@ -6,13 +6,9 @@ interface LoadCharactersData {
   charactersData: CharactersData;
 }
 
-interface ChangeSearchTargetAction {
-  type: 'change-search-target';
-  target: SearchTarget;
-}
-
 interface ChangeSearchWordsAction {
   type: 'change-search-words';
+  target: SearchTarget;
   words: string[];
 }
 
@@ -32,7 +28,6 @@ interface ShowNextPage {
 
 export type Action =
   | LoadCharactersData
-  | ChangeSearchTargetAction
   | ChangeSearchWordsAction
   | ChangeShowAllAction
   | ClickTag

@@ -2,16 +2,10 @@ import Autocomplete from '@mui/material/Autocomplete';
 import Chip from '@mui/material/Chip';
 import { SxProps, Theme, useTheme } from '@mui/material/styles';
 import TextField from '@mui/material/TextField';
-import { FilterOptionsState } from '@mui/material/useAutocomplete';
 import React from 'react';
 
-import {
-  AutocompleteOption,
-  filterOptionsByWord,
-  isOptionEqualToWord,
-} from '../../lib/autocomplete';
-import { SearchTarget } from '../../lib/search-target';
-import { Tag } from '../../lib/tagged-character';
+import { isOptionEqualToWord } from '../../lib/autocomplete';
+import { getLabelOfSearchTarget, SearchTarget } from '../../lib/search-target';
 
 interface Props {
   /**
@@ -25,7 +19,7 @@ interface Props {
   /**
    * 補完候補
    */
-  autocompleteOptions: AutocompleteOption[];
+  autocompleteOptions: string[];
   /**
    * ワード変更ハンドラ
    * @param words - 変更後のワード
@@ -44,12 +38,9 @@ export const AutocompleteForm: React.FC<Props> = ({
   onChange,
   sx,
 }) => {
-  const placeholder = `${target === SearchTarget.TAG ? 'タグ' : '名前'}を入力`;
+  const placeholder = `${getLabelOfSearchTarget(target)}を入力`;
   const onChangeWords = React.useCallback(
-    (_, values: (string | AutocompleteOption)[]) => {
-      const words = values.map((value) => {
-        return typeof value === 'string' ? value : value.label;
-      });
+    (_, words: string[]) => {
       onChange(words);
     },
     [onChange]
@@ -62,20 +53,8 @@ export const AutocompleteForm: React.FC<Props> = ({
     [setIsMinus]
   );
   const options = isMinus
-    ? autocompleteOptions.map((option) => ({
-        ...option,
-        label: `-${option.label}`,
-      }))
+    ? autocompleteOptions.map((option) => `-${option}`)
     : autocompleteOptions;
-  const filterOptions = React.useCallback(
-    (
-      options: AutocompleteOption[],
-      state: FilterOptionsState<string>
-    ): AutocompleteOption[] => {
-      return filterOptionsByWord(options, state.inputValue);
-    },
-    []
-  );
   const theme = useTheme();
 
   return (
@@ -88,11 +67,6 @@ export const AutocompleteForm: React.FC<Props> = ({
       onInputChange={onInputChange}
       onChange={onChangeWords}
       options={options}
-      groupBy={
-        target === SearchTarget.TAG
-          ? (option: Tag) => option.category
-          : undefined
-      }
       isOptionEqualToValue={isOptionEqualToWord}
       fullWidth
       renderInput={(params) => (
@@ -100,10 +74,12 @@ export const AutocompleteForm: React.FC<Props> = ({
           {...params}
           type="search"
           placeholder={placeholder}
+          variant="standard"
           inputProps={{
             ...params.inputProps,
             sx: {
               fontSize: theme.typography.h6,
+              margin: 1,
             },
           }}
         />
@@ -122,7 +98,6 @@ export const AutocompleteForm: React.FC<Props> = ({
           );
         })
       }
-      filterOptions={filterOptions}
       sx={sx}
     />
   );

@@ -3,8 +3,27 @@ import React, { useReducer } from 'react';
 import { characters } from '../../characters-data/ships.json';
 import { FluxContext } from '../flux/context';
 import { reducer } from '../flux/reducer';
-import { State } from '../flux/state';
-import { SearchTarget } from '../lib/search-target';
+import { InputedSearchWords, State } from '../flux/state';
+import { generateAutocompleteOptions } from '../lib/autocomplete';
+import {
+  generateSearchTargets,
+  getKeyOfSearchTarget,
+} from '../lib/search-target';
+
+const allTags = characters.flatMap(({ tags }) => tags);
+const searchTargets = generateSearchTargets(allTags);
+const autocompleteOptions = Object.fromEntries(
+  searchTargets.map((target) => {
+    const key = getKeyOfSearchTarget(target);
+    return [key, generateAutocompleteOptions(characters, target, false)];
+  })
+);
+const words: InputedSearchWords = Object.fromEntries(
+  searchTargets.map((target) => {
+    const key = getKeyOfSearchTarget(target);
+    return [key, []];
+  })
+);
 
 export const initialTestState: State = {
   isReady: true,
@@ -13,10 +32,13 @@ export const initialTestState: State = {
     character: 'テストキャラクター',
   },
   search: {
-    target: SearchTarget.TAG,
-    words: ['あいうえお'],
+    info: {
+      autocompleteOptions,
+      targets: searchTargets,
+    },
+    words,
     showAll: false,
-    results: characters,
+    results: characters.filter(({ showDefault }) => showDefault),
     page: 2,
   },
 };

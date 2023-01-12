@@ -1,10 +1,9 @@
 import { CharactersData } from '../lib/characters-data';
 import { filterCharacters } from '../lib/filter-characters';
 import { Metadata } from '../lib/metadata';
-import { SearchTarget } from '../lib/search-target';
+import { SearchType } from '../lib/search-target';
 import { TaggedCharacter } from '../lib/tagged-character';
 import {
-  onChangeSearchTarget,
   onChangeSearchWords,
   onChangeShowAll,
   onClickTag,
@@ -22,8 +21,11 @@ const baseState: Readonly<State> = {
     character: '',
   },
   search: {
-    target: SearchTarget.TAG,
-    words: [],
+    info: {
+      autocompleteOptions: {},
+      targets: [],
+    },
+    words: {},
     showAll: false,
     results: [],
     page: 1,
@@ -56,6 +58,10 @@ describe('onLoadCharacters', () => {
       {
         category: 'category',
         label: 'label',
+      },
+      {
+        category: 'category2',
+        label: 'hidden',
       },
     ],
     showDefault: false,
@@ -93,66 +99,64 @@ describe('onLoadCharacters', () => {
   });
 });
 
-describe('onChangeSearchTarget', () => {
-  let nextState: State;
-
-  const currentState: State = {
-    ...baseState,
-    search: {
-      ...baseState.search,
-      target: SearchTarget.NAME,
-      words: ['imano', 'tango'],
-      page: 5,
-    },
-  };
-
-  beforeEach(() => {
-    nextState = onChangeSearchTarget(currentState, SearchTarget.TAG);
-  });
-
-  it('検索対象が変更されている', () => {
-    expect(nextState.search.target).toBe(SearchTarget.TAG);
-  });
-
-  it('検索ワードがリセットされている', () => {
-    expect(nextState.search.words).toEqual([]);
-  });
-
-  it('ページがリセットされている', () => {
-    expect(nextState.search.page).toBe(1);
-  });
-
-  it('フィルタ関数が呼び出されている', () => {
-    expect(filterCharacters).toBeCalled();
-  });
-});
-
 describe('onChangeSearchWords', () => {
   const currentState: State = {
     ...baseState,
     search: {
       ...baseState.search,
-      words: ['imano', 'kotoba'],
+      words: {
+        name: ['sample'],
+        test: ['test'],
+      },
       page: 4,
     },
   };
   let nextState: State;
-  const words = ['word'];
 
-  beforeEach(() => {
-    nextState = onChangeSearchWords(currentState, words);
+  describe('名前が対象のとき', () => {
+    const words = ['word', 'sample'];
+    beforeEach(() => {
+      nextState = onChangeSearchWords(
+        currentState,
+        { type: SearchType.NAME },
+        words
+      );
+    });
+
+    it('名前の検索ワードが変更されている', () => {
+      expect(nextState.search.words.name).toEqual(words);
+    });
+
+    it('ページがリセットされている', () => {
+      expect(nextState.search.page).toBe(1);
+    });
+
+    it('フィルタ関数が呼び出されている', () => {
+      expect(filterCharacters).toBeCalled();
+    });
   });
 
-  it('検索ワードが変更されている', () => {
-    expect(nextState.search.words).toEqual(words);
-  });
+  describe('タグカテゴリが対象のとき', () => {
+    const words = ['word', 'sample'];
+    beforeEach(() => {
+      nextState = onChangeSearchWords(
+        currentState,
+        { type: SearchType.TAG, category: 'test' },
+        words
+      );
+    });
 
-  it('ページがリセットされている', () => {
-    expect(nextState.search.page).toBe(1);
-  });
+    it('指定したタグカテゴリの検索ワードが変更されている', () => {
+      expect(nextState.search.words.test).toEqual(words);
+    });
 
-  it('フィルタ関数が呼び出されている', () => {
-    expect(filterCharacters).toBeCalled();
+    it('ページがリセットされている', () => {
+      expect(nextState.search.page).toBe(1);
+    });
+
+    it('フィルタ関数が呼び出されている', () => {
+      expect(filterCharacters).toBeCalled();
+    });
   });
 });
 
@@ -200,71 +204,41 @@ describe('onClickTag', () => {
   let nextState: State;
   const label = 'label';
 
-  describe('今のstateがタグ検索のとき', () => {
-    const currentState: State = {
-      ...baseState,
-      search: {
-        ...baseState.search,
-        target: SearchTarget.TAG,
-        words: ['imano', 'tag'],
-        page: 2,
+  const currentState: State = {
+    ...baseState,
+    search: {
+      ...baseState.search,
+      info: {
+        ...baseState.search.info,
+        autocompleteOptions: {
+          test: [label],
+        },
       },
-    };
+      words: {
+        name: ['sample'],
+        test: [],
+      },
+      page: 2,
+    },
+  };
 
-    beforeEach(() => {
-      nextState = onClickTag(currentState, label);
-    });
+  beforeEach(() => {
+    nextState = onClickTag(currentState, label);
+  });
 
-    it('検索対象がタグになっている', () => {
-      expect(nextState.search.target).toBe(SearchTarget.TAG);
-    });
-
-    it('既存の検索ワードにクリックしたタグが追加されている', () => {
-      expect(nextState.search.words).toEqual([
-        ...currentState.search.words,
-        label,
-      ]);
-    });
-
-    it('ページがリセットされている', () => {
-      expect(nextState.search.page).toBe(1);
-    });
-
-    it('フィルタ関数が呼び出されている', () => {
-      expect(filterCharacters).toBeCalled();
+  it('既存の検索ワードにクリックしたタグが追加されている', () => {
+    expect(nextState.search.words).toEqual({
+      ...currentState.search.words,
+      test: [label],
     });
   });
 
-  describe('今のstateが名前検索のとき', () => {
-    const currentState: State = {
-      ...baseState,
-      search: {
-        ...baseState.search,
-        target: SearchTarget.NAME,
-        words: ['imano', 'name'],
-        page: 2,
-      },
-    };
+  it('ページがリセットされている', () => {
+    expect(nextState.search.page).toBe(1);
+  });
 
-    beforeEach(() => {
-      nextState = onClickTag(currentState, label);
-    });
-
-    it('検索対象がタグになっている', () => {
-      expect(nextState.search.target).toBe(SearchTarget.TAG);
-    });
-
-    it('検索ワードがクリックしたタグのみになっている', () => {
-      expect(nextState.search.words).toEqual([label]);
-    });
-
-    it('ページがリセットされている', () => {
-      expect(nextState.search.page).toBe(1);
-    });
-
-    it('フィルタ関数が呼び出されている', () => {
-      expect(filterCharacters).toBeCalled();
-    });
+  it('フィルタ関数が呼び出されている', () => {
+    expect(filterCharacters).toBeCalled();
   });
 });
 
