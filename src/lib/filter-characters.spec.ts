@@ -164,6 +164,26 @@ describe('filterCharacters', () => {
         ).toEqual([characterWithNameAndTag]);
       });
     });
+
+    describe('検索対象が設定されていない場合', () => {
+      it('全てのデフォルト表示キャラが返る', () => {
+        expect(
+          filterCharacters(characters, { name: [], tag: [] }, false)
+        ).toEqual(characters.filter(({ showDefault }) => showDefault));
+      });
+    });
+
+    describe('検索にヒットしない場合', () => {
+      it('空配列が返る', () => {
+        expect(
+          filterCharacters(
+            characters,
+            { name: ['not-included-name'], tag: ['not-included-tag'] },
+            false
+          )
+        ).toEqual([]);
+      });
+    });
   });
 
   describe('全キャラが対象の場合', () => {
@@ -196,6 +216,26 @@ describe('filterCharacters', () => {
         expect(
           filterCharacters(characters, { name: ['name'], tag: ['label'] }, true)
         ).toEqual([characterWithNameAndTag, hiddenCharacterWithNameAndTag]);
+      });
+    });
+
+    describe('検索対象が設定されていない場合', () => {
+      it('全キャラが返る', () => {
+        expect(
+          filterCharacters(characters, { name: [], tag: [] }, true)
+        ).toEqual(characters);
+      });
+    });
+
+    describe('検索にヒットしない場合', () => {
+      it('空配列が返る', () => {
+        expect(
+          filterCharacters(
+            characters,
+            { name: ['not-included-name'], tag: ['not-included-tag'] },
+            true
+          )
+        ).toEqual([]);
       });
     });
   });
