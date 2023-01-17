@@ -38,7 +38,7 @@ export const AutocompleteForm: React.FC<Props> = ({
   onChange,
   sx,
 }) => {
-  const placeholder = `${getLabelOfSearchTarget(target)}を入力`;
+  const label = `${getLabelOfSearchTarget(target)}`;
   const onChangeWords = React.useCallback(
     (_, words: string[]) => {
       onChange(words);
@@ -73,13 +73,19 @@ export const AutocompleteForm: React.FC<Props> = ({
         <TextField
           {...params}
           type="search"
-          placeholder={placeholder}
+          label={label}
           variant="standard"
           inputProps={{
             ...params.inputProps,
             sx: {
               fontSize: theme.typography.h6,
               margin: 1,
+            },
+          }}
+          InputLabelProps={{
+            ...params.InputLabelProps,
+            sx: {
+              fontSize: theme.typography.h6,
             },
           }}
         />
