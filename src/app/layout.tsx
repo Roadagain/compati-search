@@ -19,6 +19,7 @@ const RootLayout = ({ children }: Props) => (
   <html lang="ja">
     <head>
       <link rel="icon" href="/favicon.png" />
+      <meta name="viewport" content="width=device-width,initial-scale=1" />
       <title>互艦サーチ</title>
       <meta
         name="description"
