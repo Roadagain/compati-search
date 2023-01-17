@@ -43,10 +43,10 @@ export const SearchTypeAndWords: React.FC<Props> = ({
         <>
           {tagWords.map((word) => {
             return (
-              <>
-                <SearchWord key={word} word={word} />
+              <React.Fragment key={word}>
+                <SearchWord word={word} />
                 &nbsp;
-              </>
+              </React.Fragment>
             );
           })}
         </>

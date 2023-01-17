@@ -8,7 +8,7 @@ import React from 'react';
 
 import { FluxContext } from '../../flux/context';
 import { getKeyOfSearchTarget, SearchTarget } from '../../lib/search-target';
-import { SimpleSearchForm } from '../molecules/SimpleSearchForm';
+import { AutocompleteForm } from '../molecules/AutocompleteForm';
 
 interface Props {
   /**
@@ -40,7 +40,7 @@ export const FullSearchForm: React.FC<Props> = ({ sx }) => {
           const key = getKeyOfSearchTarget(target);
           const onChange = onChangeCurried(target);
           return (
-            <SimpleSearchForm
+            <AutocompleteForm
               key={key}
               target={target}
               words={words[key]}
