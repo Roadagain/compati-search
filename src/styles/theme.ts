@@ -1,8 +1,15 @@
 import { createTheme } from '@mui/material/styles';
 
+import { notoSansJp } from './font';
+
 export const theme = createTheme({
   typography: {
-    fontFamily: ['Noto Sans JP', 'Helvetica', 'Arial', 'sans-serif'].join(','),
+    fontFamily: [
+      notoSansJp.style.fontFamily,
+      'Helvetica',
+      'Arial',
+      'sans-serif',
+    ].join(','),
   },
   components: {
     MuiCardContent: {
