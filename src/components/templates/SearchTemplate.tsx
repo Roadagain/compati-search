@@ -5,7 +5,7 @@ import LinearProgress from '@mui/material/LinearProgress';
 import Typography from '@mui/material/Typography';
 import React from 'react';
 
-import shipsData from '../../../characters-data/ships.json';
+import shipsData from '../../../ships.json';
 import { FluxContext } from '../../flux/context';
 import { FullSearchForm } from '../organisms/FullSearchForm';
 import { SearchConditionSummary } from '../organisms/SearchConditionSummary';
