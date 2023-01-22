@@ -1,6 +1,6 @@
 import React, { useReducer } from 'react';
 
-import { characters } from '../../characters-data/ships.json';
+import { characters } from '../../ships.json';
 import { FluxContext } from '../flux/context';
 import { reducer } from '../flux/reducer';
 import { InputedSearchWords, State } from '../flux/state';
