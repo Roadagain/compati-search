@@ -9,10 +9,6 @@ interface Props {
    */
   checked: boolean;
   /**
-   * キャラクターの呼称
-   */
-  character: string;
-  /**
    * スイッチ時のハンドラ
    */
   onChange: (checked: boolean) => void;
@@ -22,9 +18,8 @@ interface Props {
   sx?: SxProps<Theme>;
 }
 
-export const ShowAllCharactersSwitch: React.FC<Props> = ({
+export const ShowAllModelsSwitch: React.FC<Props> = ({
   checked,
-  character,
   onChange,
   sx,
 }) => {
@@ -39,7 +34,7 @@ export const ShowAllCharactersSwitch: React.FC<Props> = ({
   return (
     <FormControlLabel
       control={<Switch checked={checked} onChange={onChangeSwitch} />}
-      label={`全${character}を表示`}
+      label="全改造段階を表示"
       sx={sx}
     />
   );

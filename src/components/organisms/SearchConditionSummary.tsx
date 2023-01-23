@@ -5,7 +5,7 @@ import React from 'react';
 
 import { FluxContext } from '../../flux/context';
 import { SearchTypeAndWords } from '../molecules/SearchTypeAndWords';
-import { ShowAllCharactersSwitch } from '../molecules/ShowAllCharactersSwitch';
+import { ShowAllModelsSwitch } from '../molecules/ShowAllModelsSwitch';
 
 interface Props {
   /**
@@ -17,7 +17,6 @@ interface Props {
 export const SearchConditionSummary: React.FC<Props> = ({ sx }) => {
   const { state, dispatch } = React.useContext(FluxContext);
   const { words, showAll } = state.search;
-  const { character } = state.metadata;
   const onChangeSwitch = React.useCallback(
     (showAll: boolean) => {
       dispatch({ type: 'change-show-all', showAll });
@@ -43,11 +42,7 @@ export const SearchConditionSummary: React.FC<Props> = ({ sx }) => {
       sx={sx}
     >
       <SearchTypeAndWords nameWords={nameWords} tagWords={tagWords} />
-      <ShowAllCharactersSwitch
-        checked={showAll}
-        character={character}
-        onChange={onChangeSwitch}
-      />
+      <ShowAllModelsSwitch checked={showAll} onChange={onChangeSwitch} />
     </Stack>
   );
 };

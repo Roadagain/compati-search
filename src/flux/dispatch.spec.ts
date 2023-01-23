@@ -1,6 +1,5 @@
 import { CharactersData } from '../lib/characters-data';
 import { filterCharacters } from '../lib/filter-characters';
-import { Metadata } from '../lib/metadata';
 import { SearchType } from '../lib/search-target';
 import { TaggedCharacter } from '../lib/tagged-character';
 import {
@@ -17,9 +16,6 @@ jest.mock('../lib/filter-characters');
 const baseState: Readonly<State> = {
   isReady: false,
   characters: [],
-  metadata: {
-    character: '',
-  },
   search: {
     info: {
       autocompleteOptions: {},
@@ -37,9 +33,6 @@ describe('onLoadCharacters', () => {
     ...baseState,
     isReady: false,
     characters: [],
-    metadata: {
-      character: '',
-    },
   };
   let nextState: State;
   const characterShowDefault: TaggedCharacter = {
@@ -70,12 +63,8 @@ describe('onLoadCharacters', () => {
     characterShowDefault,
     characterHiddenDefault,
   ];
-  const metadata: Metadata = {
-    character: 'きゃらくた',
-  };
   const charactersData: CharactersData = {
     characters,
-    metadata,
   };
 
   beforeEach(() => {
@@ -88,10 +77,6 @@ describe('onLoadCharacters', () => {
 
   it('キャラクターが変更されている', () => {
     expect(nextState.characters).toEqual(characters);
-  });
-
-  it('メタデータが変更されている', () => {
-    expect(nextState.metadata).toEqual(metadata);
   });
 
   it('フィルタ関数が呼び出されている', () => {

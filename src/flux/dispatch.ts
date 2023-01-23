@@ -22,7 +22,7 @@ export const onLoadCharactersData = (
   state: State,
   charactersData: CharactersData
 ): State => {
-  const { characters, metadata } = charactersData;
+  const { characters } = charactersData;
   const { search } = state;
   const { showAll } = search;
   const allTags = characters.flatMap(({ tags }) => tags);
@@ -48,7 +48,6 @@ export const onLoadCharactersData = (
     ...state,
     isReady: true,
     characters,
-    metadata,
     search: {
       ...search,
       info: {
