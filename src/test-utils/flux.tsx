@@ -28,9 +28,6 @@ const words: InputedSearchWords = Object.fromEntries(
 export const initialTestState: State = {
   isReady: true,
   characters,
-  metadata: {
-    character: 'テストキャラクター',
-  },
   search: {
     info: {
       autocompleteOptions,
