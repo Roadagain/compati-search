@@ -8,7 +8,6 @@ const componentMeta: ComponentMeta<typeof ShowAllCharactersSwitch> = {
   component: ShowAllCharactersSwitch,
   argTypes: {
     checked: { control: 'boolean' },
-    character: { control: 'text' },
     sx: { control: 'object' },
   },
 };
@@ -21,20 +20,11 @@ const Template: ComponentStory<typeof ShowAllCharactersSwitch> = (args) => (
 export const Unchecked = Template.bind({});
 Unchecked.args = {
   checked: false,
-  character: 'キャラクター',
   sx: {},
 };
 
 export const Checked = Template.bind({});
 Checked.args = {
   checked: true,
-  character: 'キャラクター',
-  sx: {},
-};
-
-export const Character = Template.bind({});
-Character.args = {
-  checked: false,
-  character: 'きゃらくたあ',
   sx: {},
 };
