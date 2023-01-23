@@ -3,7 +3,6 @@ import {
   isCharactersData,
   WouldBeCharactersData,
 } from './characters-data';
-import { isMetadata, Metadata, WouldBeMetadata } from './metadata';
 import {
   isTaggedCharacter,
   TaggedCharacter,
@@ -24,15 +23,6 @@ export const loadCharactersFromJson = (
   }));
 };
 
-export const loadMetadataFromJson = (json: WouldBeMetadata): Metadata => {
-  if (!isMetadata(json)) {
-    throw new Error('Invalid metadata');
-  }
-  return {
-    character: json.character,
-  };
-};
-
 export const loadCharactersDataFromJson = (
   json: WouldBeCharactersData
 ): CharactersData => {
@@ -41,6 +31,5 @@ export const loadCharactersDataFromJson = (
   }
   return {
     characters: loadCharactersFromJson(json.characters),
-    metadata: loadMetadataFromJson(json.metadata),
   };
 };
