@@ -18,7 +18,7 @@ interface Props {
   sx?: SxProps<Theme>;
 }
 
-export const ShowAllCharactersSwitch: React.FC<Props> = ({
+export const ShowAllModelsSwitch: React.FC<Props> = ({
   checked,
   onChange,
   sx,

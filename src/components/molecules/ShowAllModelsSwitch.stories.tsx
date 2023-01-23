@@ -1,11 +1,11 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React from 'react';
 
-import { ShowAllCharactersSwitch } from './ShowAllCharactersSwitch';
+import { ShowAllModelsSwitch } from './ShowAllModelsSwitch';
 
-const componentMeta: ComponentMeta<typeof ShowAllCharactersSwitch> = {
-  title: 'Molecules/ShowAllCharactersSwitch',
-  component: ShowAllCharactersSwitch,
+const componentMeta: ComponentMeta<typeof ShowAllModelsSwitch> = {
+  title: 'Molecules/ShowAllModelsSwitch',
+  component: ShowAllModelsSwitch,
   argTypes: {
     checked: { control: 'boolean' },
     sx: { control: 'object' },
@@ -13,8 +13,8 @@ const componentMeta: ComponentMeta<typeof ShowAllCharactersSwitch> = {
 };
 export default componentMeta;
 
-const Template: ComponentStory<typeof ShowAllCharactersSwitch> = (args) => (
-  <ShowAllCharactersSwitch {...args} />
+const Template: ComponentStory<typeof ShowAllModelsSwitch> = (args) => (
+  <ShowAllModelsSwitch {...args} />
 );
 
 export const Unchecked = Template.bind({});
