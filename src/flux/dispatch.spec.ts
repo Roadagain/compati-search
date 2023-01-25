@@ -37,6 +37,7 @@ describe('onLoadCharacters', () => {
   let nextState: State;
   const characterShowDefault: TaggedCharacter = {
     name: 'name',
+    kana: 'name',
     tags: [
       {
         category: 'category',
@@ -47,6 +48,7 @@ describe('onLoadCharacters', () => {
   };
   const characterHiddenDefault: TaggedCharacter = {
     name: 'name-hidden',
+    kana: 'name-hidden',
     tags: [
       {
         category: 'category',

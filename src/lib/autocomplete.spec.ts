@@ -23,6 +23,7 @@ describe('generateAutocompleteOptions', () => {
   const characters: TaggedCharacter[] = [
     {
       name: 'Alpha',
+      kana: 'Alpha',
       tags: [
         { category: 'X', label: 'x-ray' },
         { category: 'Y', label: 'yankee' },
@@ -31,11 +32,13 @@ describe('generateAutocompleteOptions', () => {
     },
     {
       name: 'Beta',
+      kana: 'Beta',
       tags: [{ category: 'X', label: 'x-ray' }],
       showDefault: true,
     },
     {
       name: 'Gamma',
+      kana: 'Gamma',
       tags: [
         { category: 'Z', label: 'zulu' },
         { category: 'X', label: 'xanadu' },

@@ -37,6 +37,7 @@ describe('isTaggedCharacter', () => {
     it('trueが返る', () => {
       const obj = {
         name: 'Name',
+        kana: 'Name',
         tags: [
           { category: 'alpha', label: 'test1' },
           { category: 'beta', label: 'test2' },
@@ -51,6 +52,21 @@ describe('isTaggedCharacter', () => {
     it('falseが返る', () => {
       const obj = {
         name: 1,
+        tags: [
+          { category: 'alpha', label: 'test1' },
+          { category: 'beta', label: 'test2' },
+        ],
+        showDefault: true,
+      };
+      expect(isTaggedCharacter(obj)).toBeFalsy();
+    });
+  });
+
+  describe('kanaがstringでない場合', () => {
+    it('falseが返る', () => {
+      const obj = {
+        name: 'Name',
+        kana: 2,
         tags: [
           { category: 'alpha', label: 'test1' },
           { category: 'beta', label: 'test2' },

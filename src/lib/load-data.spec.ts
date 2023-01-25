@@ -8,6 +8,7 @@ describe('loadCharactersFromJson', () => {
     const json = [
       {
         name: 'Alpha',
+        kana: 'Alpha',
         tags: [
           { category: 'number', label: 'one' },
           { category: 'count', label: 'two' },
@@ -16,6 +17,7 @@ describe('loadCharactersFromJson', () => {
       },
       {
         name: 'Beta',
+        kana: 'Beta',
         tags: [],
         showDefault: false,
       },
@@ -30,6 +32,7 @@ describe('loadCharactersFromJson', () => {
     const json = [
       {
         name: 1,
+        kana: '1',
         tags: [
           { category: 'number', label: 'one' },
           { category: 'count', label: 'two' },
@@ -38,6 +41,7 @@ describe('loadCharactersFromJson', () => {
       },
       {
         name: 'Beta',
+        kana: 'Beta',
         tags: [{ category: 'number', label: 'three' }],
         showDefault: true,
       },
@@ -57,6 +61,7 @@ describe('loadCharactersData', () => {
       characters: [
         {
           name: '名前',
+          kana: 'なまえ',
           tags: [
             {
               category: 'カテゴリー',
@@ -73,6 +78,7 @@ describe('loadCharactersData', () => {
         characters: [
           {
             name: '名前',
+            kana: 'なまえ',
             tags: [
               {
                 category: 'カテゴリー',
