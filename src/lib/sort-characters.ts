@@ -18,3 +18,7 @@ export const sortByKana = (
 ): TaggedCharacter[] => {
   return characters.slice().sort((a, b) => compareKana(a.kana, b.kana));
 };
+
+export const sortById = (characters: TaggedCharacter[]): TaggedCharacter[] => {
+  return characters.slice().sort((a, b) => a.id - b.id);
+};

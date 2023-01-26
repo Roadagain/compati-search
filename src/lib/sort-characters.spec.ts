@@ -1,4 +1,4 @@
-import { compareKana, sortByKana } from './sort-characters';
+import { compareKana, sortById, sortByKana } from './sort-characters';
 import { TaggedCharacter } from './tagged-character';
 
 describe('compareKana', () => {
@@ -24,7 +24,7 @@ describe('compareKana', () => {
 });
 
 describe('sortByKana', () => {
-  it('五十音順→アルファベット順でソートされる', () => {
+  it('五十音昇順→アルファベット昇順でソートされる', () => {
     const kanas = ['かきくけこ', 'さしすせそ', 'fghij', 'abcde', 'あいうえお'];
     const characters = kanas.map((kana) => ({ kana } as TaggedCharacter));
 
@@ -34,6 +34,19 @@ describe('sortByKana', () => {
       { kana: 'さしすせそ' },
       { kana: 'abcde' },
       { kana: 'fghij' },
+    ]);
+  });
+});
+
+describe('sortById', () => {
+  it('ID昇順でソートされる', () => {
+    const ids = [333, 22, 4444, 1];
+    const characters = ids.map((id) => ({ id } as TaggedCharacter));
+    expect(sortById(characters)).toEqual([
+      { id: 1 },
+      { id: 22 },
+      { id: 333 },
+      { id: 4444 },
     ]);
   });
 });
