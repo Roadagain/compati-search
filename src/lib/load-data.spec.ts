@@ -7,6 +7,7 @@ describe('loadCharactersFromJson', () => {
   describe('データ形式が正しい場合', () => {
     const json = [
       {
+        id: 1,
         name: 'Alpha',
         kana: 'Alpha',
         tags: [
@@ -16,6 +17,7 @@ describe('loadCharactersFromJson', () => {
         showDefault: true,
       },
       {
+        id: 2,
         name: 'Beta',
         kana: 'Beta',
         tags: [],
@@ -31,6 +33,7 @@ describe('loadCharactersFromJson', () => {
   describe('データ形式が不正な場合', () => {
     const json = [
       {
+        id: 1,
         name: 1,
         kana: '1',
         tags: [
@@ -40,6 +43,7 @@ describe('loadCharactersFromJson', () => {
         showDefault: true,
       },
       {
+        id: 2,
         name: 'Beta',
         kana: 'Beta',
         tags: [{ category: 'number', label: 'three' }],
@@ -60,6 +64,7 @@ describe('loadCharactersData', () => {
     const json = {
       characters: [
         {
+          id: 1,
           name: '名前',
           kana: 'なまえ',
           tags: [
@@ -77,6 +82,7 @@ describe('loadCharactersData', () => {
       expect(loadCharactersDataFromJson(json)).toEqual({
         characters: [
           {
+            id: 1,
             name: '名前',
             kana: 'なまえ',
             tags: [

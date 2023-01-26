@@ -16,7 +16,8 @@ export const loadCharactersFromJson = (
   if (!json.every(isTaggedCharacter)) {
     throw new Error('Invalid characters');
   }
-  return json.map(({ name, kana, tags, showDefault }) => ({
+  return json.map(({ id, name, kana, tags, showDefault }) => ({
+    id,
     name,
     kana,
     tags,

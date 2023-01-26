@@ -22,6 +22,7 @@ describe('uniqueAndSortTags', () => {
 describe('generateAutocompleteOptions', () => {
   const characters: TaggedCharacter[] = [
     {
+      id: 1,
       name: 'Alpha',
       kana: 'Alpha',
       tags: [
@@ -31,12 +32,14 @@ describe('generateAutocompleteOptions', () => {
       showDefault: true,
     },
     {
+      id: 22,
       name: 'Beta',
       kana: 'Beta',
       tags: [{ category: 'X', label: 'x-ray' }],
       showDefault: true,
     },
     {
+      id: 333,
       name: 'Gamma',
       kana: 'Gamma',
       tags: [

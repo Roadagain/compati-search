@@ -36,6 +36,7 @@ describe('isTaggedCharacter', () => {
   describe('データ形式が正しい場合', () => {
     it('trueが返る', () => {
       const obj = {
+        id: 123,
         name: 'Name',
         kana: 'Name',
         tags: [
@@ -48,9 +49,26 @@ describe('isTaggedCharacter', () => {
     });
   });
 
+  describe('idがnumberでない場合', () => {
+    it('falseが返る', () => {
+      const obj = {
+        id: '123',
+        name: 'Name',
+        kana: 'Name',
+        tags: [
+          { category: 'alpha', label: 'test1' },
+          { category: 'beta', label: 'test2' },
+        ],
+        showDefault: true,
+      };
+      expect(isTaggedCharacter(obj)).toBeFalsy();
+    });
+  });
+
   describe('nameがstringでない場合', () => {
     it('falseが返る', () => {
       const obj = {
+        id: 123,
         name: 1,
         tags: [
           { category: 'alpha', label: 'test1' },
@@ -65,6 +83,7 @@ describe('isTaggedCharacter', () => {
   describe('kanaがstringでない場合', () => {
     it('falseが返る', () => {
       const obj = {
+        id: 123,
         name: 'Name',
         kana: 2,
         tags: [
@@ -80,6 +99,7 @@ describe('isTaggedCharacter', () => {
   describe('tagsが配列でない場合', () => {
     it('falseが返る', () => {
       const obj = {
+        id: 123,
         name: 'Name',
         tags: 'aaa',
         showDefault: true,
@@ -91,6 +111,7 @@ describe('isTaggedCharacter', () => {
   describe('tagsが配列かつTagでないオブジェクトを含む場合', () => {
     it('falseが返る', () => {
       const obj = {
+        id: 123,
         name: 'Name',
         tags: [{ category: 'alpha', label: 'test1' }, {}],
         showDefault: false,
@@ -102,6 +123,7 @@ describe('isTaggedCharacter', () => {
   describe('showDefaultがbooleanでない場合', () => {
     it('falseが返る', () => {
       const obj = {
+        id: 123,
         name: 'Name',
         tags: [
           { category: 'alpha', label: 'test1' },
