@@ -1,5 +1,10 @@
 import { TaggedCharacter } from './tagged-character';
 
+export enum SortOrder {
+  ID,
+  KANA,
+}
+
 export const compareKana = (a: string, b: string): number => {
   const isAAlphabet = !!a.match(/^[a-zA-Z]/);
   const isBAlphabet = !!b.match(/^[a-zA-Z]/);
