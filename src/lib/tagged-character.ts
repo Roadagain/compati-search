@@ -10,6 +10,7 @@ export const isTag = (obj: WouldBeTag): obj is Tag => {
 };
 
 export interface TaggedCharacter {
+  id: number;
   name: string;
   kana: string;
   tags: Tag[];
@@ -22,6 +23,7 @@ export const isTaggedCharacter = (
   obj: WouldBeTaggedCharacter
 ): obj is TaggedCharacter => {
   return (
+    typeof obj.id === 'number' &&
     typeof obj.name === 'string' &&
     typeof obj.kana === 'string' &&
     Array.isArray(obj.tags) &&
