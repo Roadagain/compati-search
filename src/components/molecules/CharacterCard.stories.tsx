@@ -1,9 +1,8 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
-import React from 'react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { CharacterCard } from './CharacterCard';
 
-const componentMeta: ComponentMeta<typeof CharacterCard> = {
+const meta: Meta<typeof CharacterCard> = {
   title: 'Molecules/CharacterCard',
   component: CharacterCard,
   argTypes: {
@@ -12,39 +11,38 @@ const componentMeta: ComponentMeta<typeof CharacterCard> = {
     sx: { control: 'object' },
   },
 };
-export default componentMeta;
+export default meta;
 
-const Template: ComponentStory<typeof CharacterCard> = (args) => (
-  <CharacterCard {...args} />
-);
+type Story = StoryObj<typeof CharacterCard>;
 
-export const Card = Template.bind({});
-Card.args = {
-  name: 'なまえ',
-  tags: [
-    { category: 'あいうえお', label: 'タグ1' },
-    { category: 'かきくけこ', label: 'タグ2' },
-  ],
-  sx: {},
+export const Card: Story = {
+  args: {
+    name: 'なまえ',
+    tags: [
+      { category: 'あいうえお', label: 'タグ1' },
+      { category: 'かきくけこ', label: 'タグ2' },
+    ],
+    sx: {},
+  },
 };
-
-export const OverflowTags = Template.bind({});
-OverflowTags.args = {
-  name: 'なまえ',
-  tags: Array.from({ length: 32 }, (_, index) => ({
-    category: `カテゴリー${index + 1}`,
-    label: `タグ${index + 1}`,
-  })),
-  sx: {},
+export const OverflowTags: Story = {
+  args: {
+    name: 'なまえ',
+    tags: Array.from({ length: 32 }, (_, index) => ({
+      category: `カテゴリー${index + 1}`,
+      label: `タグ${index + 1}`,
+    })),
+    sx: {},
+  },
 };
-
-export const DuplicateTagLabels = Template.bind({});
-DuplicateTagLabels.args = {
-  name: 'なまえ',
-  tags: [
-    { category: 'あいうえお', label: 'タグ1' },
-    { category: 'かきくけこ', label: 'タグ2' },
-    { category: 'さしすせそ', label: 'タグ2' },
-  ],
-  sx: {},
+export const DuplicateTagLabels: Story = {
+  args: {
+    name: 'なまえ',
+    tags: [
+      { category: 'あいうえお', label: 'タグ1' },
+      { category: 'かきくけこ', label: 'タグ2' },
+      { category: 'さしすせそ', label: 'タグ2' },
+    ],
+    sx: {},
+  },
 };

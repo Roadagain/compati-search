@@ -1,9 +1,8 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
-import React from 'react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { TagBadge } from './TagBadge';
 
-const componentMeta: ComponentMeta<typeof TagBadge> = {
+const meta: Meta<typeof TagBadge> = {
   title: 'Atoms/TagBadge',
   component: TagBadge,
   argTypes: {
@@ -11,14 +10,13 @@ const componentMeta: ComponentMeta<typeof TagBadge> = {
     sx: { control: 'object' },
   },
 };
-export default componentMeta;
+export default meta;
 
-const Template: ComponentStory<typeof TagBadge> = (args) => (
-  <TagBadge {...args} />
-);
+type Story = StoryObj<typeof TagBadge>;
 
-export const Badge = Template.bind({});
-Badge.args = {
-  children: 'タグ',
-  sx: {},
+export const Badge: Story = {
+  args: {
+    children: 'タグ',
+    sx: {},
+  },
 };

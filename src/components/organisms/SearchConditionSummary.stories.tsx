@@ -1,22 +1,20 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
-import React from 'react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { SearchConditionSummary } from './SearchConditionSummary';
 
-const componentMeta: ComponentMeta<typeof SearchConditionSummary> = {
+const meta: Meta<typeof SearchConditionSummary> = {
   title: 'Organisms/SearchConditionSummary',
   component: SearchConditionSummary,
   argTypes: {
     sx: { control: 'object' },
   },
 };
-export default componentMeta;
+export default meta;
 
-const Template: ComponentStory<typeof SearchConditionSummary> = (args) => (
-  <SearchConditionSummary {...args} />
-);
+type Story = StoryObj<typeof SearchConditionSummary>;
 
-export const Condition = Template.bind({});
-Condition.args = {
-  sx: {},
+export const Condition: Story = {
+  args: {
+    sx: {},
+  },
 };
