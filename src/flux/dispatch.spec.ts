@@ -1,10 +1,12 @@
 import { CharactersData } from '../lib/characters-data';
 import { filterCharacters } from '../lib/filter-characters';
 import { SearchType } from '../lib/search-target';
+import { sortCharacters, SortOrder } from '../lib/sort-characters';
 import { TaggedCharacter } from '../lib/tagged-character';
 import {
   onChangeSearchWords,
   onChangeShowAll,
+  onChangeSortOrder,
   onClickTag,
   onLoadCharactersData,
   onShowNextPage,
@@ -12,6 +14,7 @@ import {
 import { State } from './state';
 
 jest.mock('../lib/filter-characters');
+jest.mock('../lib/sort-characters');
 
 const baseState: Readonly<State> = {
   isReady: false,
@@ -23,6 +26,7 @@ const baseState: Readonly<State> = {
     },
     words: {},
     showAll: false,
+    sortOrder: SortOrder.ID,
     results: [],
     page: 1,
   },
@@ -36,7 +40,9 @@ describe('onLoadCharacters', () => {
   };
   let nextState: State;
   const characterShowDefault: TaggedCharacter = {
+    id: 1,
     name: 'name',
+    kana: 'name',
     tags: [
       {
         category: 'category',
@@ -46,7 +52,9 @@ describe('onLoadCharacters', () => {
     showDefault: true,
   };
   const characterHiddenDefault: TaggedCharacter = {
+    id: 2,
     name: 'name-hidden',
+    kana: 'name-hidden',
     tags: [
       {
         category: 'category',
@@ -183,6 +191,42 @@ describe('onChangeShowAll', () => {
       });
     }
   );
+});
+
+describe('onChangeSortOrder', () => {
+  let nextState: State;
+
+  const currentState: State = {
+    ...baseState,
+    search: {
+      ...baseState.search,
+      sortOrder: SortOrder.ID,
+    },
+  };
+
+  beforeEach(() => {
+    nextState = onChangeSortOrder(currentState, SortOrder.KANA);
+  });
+
+  it('stateのソート順が変わっている', () => {
+    expect(nextState.search.sortOrder).toBe(SortOrder.KANA);
+  });
+
+  it('キャラクターをソートする関数が呼ばれている', () => {
+    expect(sortCharacters).nthCalledWith(
+      1,
+      currentState.characters,
+      SortOrder.KANA
+    );
+  });
+
+  it('検索結果をソートする関数が呼ばれている', () => {
+    expect(sortCharacters).nthCalledWith(
+      2,
+      currentState.search.results,
+      SortOrder.KANA
+    );
+  });
 });
 
 describe('onClickTag', () => {

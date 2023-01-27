@@ -6,6 +6,7 @@ import {
   getKeyOfSearchTarget,
   SearchTarget,
 } from '../lib/search-target';
+import { sortCharacters, SortOrder } from '../lib/sort-characters';
 import { InputedSearchWords, State } from './state';
 
 const adjustToSearchWords = (words: InputedSearchWords): SearchWords => {
@@ -116,6 +117,23 @@ export const onChangeShowAll = (state: State, showAll: boolean): State => {
       showAll,
       results,
       page: 1,
+    },
+  };
+};
+
+export const onChangeSortOrder = (
+  state: State,
+  sortOrder: SortOrder
+): State => {
+  const characters = sortCharacters(state.characters, sortOrder);
+  const results = sortCharacters(state.search.results, sortOrder);
+  return {
+    ...state,
+    characters,
+    search: {
+      ...state.search,
+      sortOrder,
+      results,
     },
   };
 };

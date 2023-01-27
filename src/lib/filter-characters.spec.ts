@@ -95,7 +95,9 @@ describe('matchesTagWords', () => {
 
 describe('filterCharacters', () => {
   const characterWithTag = {
+    id: 1,
     name: '',
+    kana: '',
     tags: [
       {
         category: 'category',
@@ -105,12 +107,16 @@ describe('filterCharacters', () => {
     showDefault: true,
   };
   const characterWithName = {
+    id: 22,
     name: 'name',
+    kana: 'name',
     tags: [],
     showDefault: true,
   };
   const characterWithNameAndTag = {
+    id: 333,
     name: 'name2',
+    kana: 'name2',
     tags: [
       {
         category: 'category',
@@ -120,7 +126,9 @@ describe('filterCharacters', () => {
     showDefault: true,
   };
   const hiddenCharacterWithNameAndTag = {
+    id: 4444,
     name: 'name_hidden',
+    kana: 'name_hidden',
     tags: [
       {
         category: 'category',

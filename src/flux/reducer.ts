@@ -4,6 +4,7 @@ import { Action } from './action';
 import {
   onChangeSearchWords,
   onChangeShowAll,
+  onChangeSortOrder,
   onClickTag,
   onLoadCharactersData,
   onShowNextPage,
@@ -18,6 +19,8 @@ export const reducer: Reducer<State, Action> = (state, action) => {
       return onChangeSearchWords(state, action.target, action.words);
     case 'change-show-all':
       return onChangeShowAll(state, action.showAll);
+    case 'change-sort-order':
+      return onChangeSortOrder(state, action.sortOrder);
     case 'click-tag':
       return onClickTag(state, action.label);
     case 'show-next-page':

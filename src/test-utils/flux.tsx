@@ -9,6 +9,7 @@ import {
   generateSearchTargets,
   getKeyOfSearchTarget,
 } from '../lib/search-target';
+import { SortOrder } from '../lib/sort-characters';
 
 const allTags = characters.flatMap(({ tags }) => tags);
 const searchTargets = generateSearchTargets(allTags);
@@ -35,6 +36,7 @@ export const initialTestState: State = {
     },
     words,
     showAll: false,
+    sortOrder: SortOrder.ID,
     results: characters.filter(({ showDefault }) => showDefault),
     page: 2,
   },
