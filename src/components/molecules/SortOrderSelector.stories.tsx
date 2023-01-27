@@ -8,9 +8,14 @@ const meta: Meta<typeof SortOrderSelector> = {
   component: SortOrderSelector,
   argTypes: {
     value: {
-      options: Object.keys(SortOrder).filter((key) => isNaN(Number(key))),
-      mapping: SortOrder,
-      control: 'radio',
+      control: {
+        type: 'select',
+        labels: Object.fromEntries(
+          Object.entries(SortOrder).filter(
+            ([, value]) => typeof value === 'string'
+          )
+        ),
+      },
     },
     sx: { control: 'object' },
   },
