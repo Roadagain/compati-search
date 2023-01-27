@@ -1,6 +1,7 @@
 import { CharactersData } from '../lib/characters-data';
 import { filterCharacters } from '../lib/filter-characters';
 import { SearchType } from '../lib/search-target';
+import { SortOrder } from '../lib/sort-characters';
 import { TaggedCharacter } from '../lib/tagged-character';
 import {
   onChangeSearchWords,
@@ -23,6 +24,7 @@ const baseState: Readonly<State> = {
     },
     words: {},
     showAll: false,
+    sortOrder: SortOrder.ID,
     results: [],
     page: 1,
   },

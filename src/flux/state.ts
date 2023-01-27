@@ -1,4 +1,5 @@
 import { SearchTarget, SearchType } from '../lib/search-target';
+import { SortOrder } from '../lib/sort-characters';
 import { TaggedCharacter } from '../lib/tagged-character';
 
 export type InputedSearchWords = Record<'name' | string, string[]>;
@@ -13,6 +14,7 @@ interface SearchState {
   info: SearchInfoState;
   words: InputedSearchWords;
   showAll: boolean;
+  sortOrder: SortOrder;
   results: TaggedCharacter[];
   page: number;
 }
@@ -35,6 +37,7 @@ export const initialState: State = {
       name: [],
     },
     showAll: false,
+    sortOrder: SortOrder.ID,
     results: [],
     page: 1,
   },
