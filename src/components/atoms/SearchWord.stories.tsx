@@ -1,9 +1,8 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
-import React from 'react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { SearchWord } from './SearchWord';
 
-const componentMeta: ComponentMeta<typeof SearchWord> = {
+const meta: Meta<typeof SearchWord> = {
   title: 'Atoms/SearchWord',
   component: SearchWord,
   argTypes: {
@@ -11,20 +10,19 @@ const componentMeta: ComponentMeta<typeof SearchWord> = {
     sx: { control: 'object' },
   },
 };
-export default componentMeta;
+export default meta;
 
-const Template: ComponentStory<typeof SearchWord> = (args) => (
-  <SearchWord {...args} />
-);
+type Story = StoryObj<typeof SearchWord>;
 
-export const PlusWord = Template.bind({});
-PlusWord.args = {
-  word: 'あいうえお',
-  sx: {},
+export const PlusWord: Story = {
+  args: {
+    word: 'あいうえお',
+    sx: {},
+  },
 };
-
-export const MinusWord = Template.bind({});
-MinusWord.args = {
-  word: '-かきくけこ',
-  sx: {},
+export const MinusWord: Story = {
+  args: {
+    word: '-かきくけこ',
+    sx: {},
+  },
 };

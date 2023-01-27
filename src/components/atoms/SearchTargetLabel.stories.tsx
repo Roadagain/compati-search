@@ -1,9 +1,8 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
-import React from 'react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { SearchTargetLabel } from './SearchTargetLabel';
 
-const componentMeta: ComponentMeta<typeof SearchTargetLabel> = {
+const meta: Meta<typeof SearchTargetLabel> = {
   title: 'Atoms/SearchTargetLabel',
   component: SearchTargetLabel,
   argTypes: {
@@ -11,14 +10,13 @@ const componentMeta: ComponentMeta<typeof SearchTargetLabel> = {
     sx: { control: 'object' },
   },
 };
-export default componentMeta;
+export default meta;
 
-const Template: ComponentStory<typeof SearchTargetLabel> = (args) => (
-  <SearchTargetLabel {...args} />
-);
+type Story = StoryObj<typeof SearchTargetLabel>;
 
-export const Label = Template.bind({});
-Label.args = {
-  label: '名前',
-  sx: {},
+export const Label: Story = {
+  args: {
+    label: '名前',
+    sx: {},
+  },
 };

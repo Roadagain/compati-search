@@ -1,22 +1,20 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
-import React from 'react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { FullSearchForm } from './FullSearchForm';
 
-const componentMeta: ComponentMeta<typeof FullSearchForm> = {
+const meta: Meta<typeof FullSearchForm> = {
   title: 'Organisms/FullSearchForm',
   component: FullSearchForm,
   argTypes: {
     sx: { control: 'object' },
   },
 };
-export default componentMeta;
+export default meta;
 
-const Template: ComponentStory<typeof FullSearchForm> = (args) => (
-  <FullSearchForm {...args} />
-);
+type Story = StoryObj<typeof FullSearchForm>;
 
-export const Search = Template.bind({});
-Search.args = {
-  sx: {},
+export const Search: Story = {
+  args: {
+    sx: {},
+  },
 };

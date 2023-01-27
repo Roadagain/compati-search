@@ -1,30 +1,32 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
-import React from 'react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { SortOrder } from '../../lib/sort-characters';
 import { SortOrderSelector } from './SortOrderSelector';
 
-const componentMeta: ComponentMeta<typeof SortOrderSelector> = {
+const meta: Meta<typeof SortOrderSelector> = {
   title: 'Molecules/SortOrderSelector',
   component: SortOrderSelector,
   argTypes: {
     value: {
-      options: Object.keys(SortOrder).filter((key) => isNaN(Number(key))),
-      mapping: SortOrder,
-      control: 'radio',
+      control: {
+        type: 'select',
+        labels: Object.fromEntries(
+          Object.entries(SortOrder).filter(
+            ([, value]) => typeof value === 'string'
+          )
+        ),
+      },
     },
     sx: { control: 'object' },
   },
 };
+export default meta;
 
-export default componentMeta;
+type Story = StoryObj<typeof SortOrderSelector>;
 
-const Template: ComponentStory<typeof SortOrderSelector> = (args) => (
-  <SortOrderSelector {...args} />
-);
-
-export const Selector = Template.bind({});
-Selector.args = {
-  value: SortOrder.ID,
-  sx: {},
+export const Selector: Story = {
+  args: {
+    value: SortOrder.ID,
+    sx: {},
+  },
 };

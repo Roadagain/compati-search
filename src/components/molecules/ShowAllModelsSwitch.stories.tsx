@@ -1,9 +1,8 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
-import React from 'react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { ShowAllModelsSwitch } from './ShowAllModelsSwitch';
 
-const componentMeta: ComponentMeta<typeof ShowAllModelsSwitch> = {
+const meta: Meta<typeof ShowAllModelsSwitch> = {
   title: 'Molecules/ShowAllModelsSwitch',
   component: ShowAllModelsSwitch,
   argTypes: {
@@ -11,20 +10,19 @@ const componentMeta: ComponentMeta<typeof ShowAllModelsSwitch> = {
     sx: { control: 'object' },
   },
 };
-export default componentMeta;
+export default meta;
 
-const Template: ComponentStory<typeof ShowAllModelsSwitch> = (args) => (
-  <ShowAllModelsSwitch {...args} />
-);
+type Story = StoryObj<typeof ShowAllModelsSwitch>;
 
-export const Unchecked = Template.bind({});
-Unchecked.args = {
-  checked: false,
-  sx: {},
+export const Unchecked: Story = {
+  args: {
+    checked: false,
+    sx: {},
+  },
 };
-
-export const Checked = Template.bind({});
-Checked.args = {
-  checked: true,
-  sx: {},
+export const Checked: Story = {
+  args: {
+    checked: true,
+    sx: {},
+  },
 };
