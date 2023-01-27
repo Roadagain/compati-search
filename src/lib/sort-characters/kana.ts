@@ -1,16 +1,16 @@
 import { TaggedCharacter } from '../tagged-character';
 
 export const compareKana = (a: string, b: string): number => {
-  const isAAlphabet = !!a.match(/^[a-zA-Z]/);
-  const isBAlphabet = !!b.match(/^[a-zA-Z]/);
+  const isAKana = !!a.match(/^[あ-ん]/);
+  const isBKana = !!b.match(/^[あ-ん]/);
 
-  if ((isAAlphabet && isBAlphabet) || (!isAAlphabet && !isBAlphabet)) {
+  if ((isAKana && isBKana) || (!isAKana && !isBKana)) {
     return a.localeCompare(b);
   }
-  if (isAAlphabet) {
-    return 1;
+  if (isAKana) {
+    return -1;
   }
-  return -1;
+  return 1;
 };
 
 export const sortByKana = (
