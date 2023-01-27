@@ -1,11 +1,10 @@
 import { TaggedCharacter } from '../tagged-character';
 import { sortById } from './id';
 import { sortByKana } from './kana';
+import { SortOrder } from './sort-order';
 
-export enum SortOrder {
-  ID,
-  KANA,
-}
+export { getLabelOfSortOrder } from './label';
+export { SortOrder } from './sort-order';
 
 export const sortCharacters = (
   characters: TaggedCharacter[],

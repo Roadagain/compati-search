@@ -1,6 +1,7 @@
-import { sortCharacters, SortOrder } from '.';
+import { sortCharacters } from '.';
 import { sortById } from './id';
 import { sortByKana } from './kana';
+import { SortOrder } from './sort-order';
 
 jest.mock('./id');
 jest.mock('./kana');
