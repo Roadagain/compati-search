@@ -2,6 +2,7 @@
   "characters": [
     {
       "name": "長門",
+      "kana": "ながと",
       "id": 1,
       "showDefault": false,
       "tags": [
@@ -37,6 +38,7 @@
     },
     {
       "name": "長門改",
+      "kana": "ながとかい",
       "id": 1,
       "showDefault": false,
       "tags": [
@@ -76,6 +78,7 @@
     },
     {
       "name": "陸奥",
+      "kana": "むつ",
       "id": 2,
       "showDefault": false,
       "tags": [
@@ -111,6 +114,7 @@
     },
     {
       "name": "陸奥改",
+      "kana": "むつかい",
       "id": 2,
       "showDefault": false,
       "tags": [
@@ -150,6 +154,7 @@
     },
     {
       "name": "伊勢",
+      "kana": "いせ",
       "id": 3,
       "showDefault": false,
       "tags": [
@@ -185,6 +190,7 @@
     },
     {
       "name": "日向",
+      "kana": "ひゅうが",
       "id": 4,
       "showDefault": false,
       "tags": [
@@ -220,6 +226,7 @@
     },
     {
       "name": "雪風",
+      "kana": "ゆきかぜ",
       "id": 5,
       "showDefault": false,
       "tags": [
@@ -243,6 +250,7 @@
     },
     {
       "name": "雪風改",
+      "kana": "ゆきかぜかい",
       "id": 5,
       "showDefault": false,
       "tags": [
@@ -266,6 +274,7 @@
     },
     {
       "name": "赤城",
+      "kana": "あかぎ",
       "id": 6,
       "showDefault": false,
       "tags": [
@@ -301,6 +310,7 @@
     },
     {
       "name": "赤城改",
+      "kana": "あかぎかい",
       "id": 6,
       "showDefault": false,
       "tags": [
@@ -336,6 +346,7 @@
     },
     {
       "name": "加賀",
+      "kana": "かが",
       "id": 7,
       "showDefault": false,
       "tags": [
@@ -371,6 +382,7 @@
     },
     {
       "name": "加賀改",
+      "kana": "かがかい",
       "id": 7,
       "showDefault": false,
       "tags": [
@@ -406,6 +418,7 @@
     },
     {
       "name": "蒼龍",
+      "kana": "そうりゅう",
       "id": 8,
       "showDefault": false,
       "tags": [
@@ -441,6 +454,7 @@
     },
     {
       "name": "蒼龍改",
+      "kana": "そうりゅうかい",
       "id": 8,
       "showDefault": false,
       "tags": [
@@ -476,6 +490,7 @@
     },
     {
       "name": "飛龍",
+      "kana": "ひりゅう",
       "id": 9,
       "showDefault": false,
       "tags": [
@@ -511,6 +526,7 @@
     },
     {
       "name": "飛龍改",
+      "kana": "ひりゅうかい",
       "id": 9,
       "showDefault": false,
       "tags": [
@@ -546,6 +562,7 @@
     },
     {
       "name": "島風",
+      "kana": "しまかぜ",
       "id": 10,
       "showDefault": false,
       "tags": [
@@ -569,6 +586,7 @@
     },
     {
       "name": "島風改",
+      "kana": "しまかぜかい",
       "id": 10,
       "showDefault": true,
       "tags": [
@@ -592,6 +610,7 @@
     },
     {
       "name": "吹雪",
+      "kana": "ふぶき",
       "id": 11,
       "showDefault": false,
       "tags": [
@@ -615,6 +634,7 @@
     },
     {
       "name": "吹雪改",
+      "kana": "ふぶきかい",
       "id": 11,
       "showDefault": false,
       "tags": [
@@ -638,6 +658,7 @@
     },
     {
       "name": "白雪",
+      "kana": "しらゆき",
       "id": 12,
       "showDefault": false,
       "tags": [
@@ -661,6 +682,7 @@
     },
     {
       "name": "白雪改",
+      "kana": "しらゆきかい",
       "id": 12,
       "showDefault": true,
       "tags": [
@@ -684,6 +706,7 @@
     },
     {
       "name": "初雪",
+      "kana": "はつゆき",
       "id": 13,
       "showDefault": false,
       "tags": [
@@ -707,6 +730,7 @@
     },
     {
       "name": "初雪改",
+      "kana": "はつゆきかい",
       "id": 13,
       "showDefault": true,
       "tags": [
@@ -730,6 +754,7 @@
     },
     {
       "name": "深雪",
+      "kana": "みゆき",
       "id": 14,
       "showDefault": false,
       "tags": [
@@ -753,6 +778,7 @@
     },
     {
       "name": "深雪改",
+      "kana": "みゆきかい",
       "id": 14,
       "showDefault": true,
       "tags": [
@@ -776,6 +802,7 @@
     },
     {
       "name": "叢雲",
+      "kana": "むらくも",
       "id": 15,
       "showDefault": false,
       "tags": [
@@ -799,6 +826,7 @@
     },
     {
       "name": "叢雲改",
+      "kana": "むらくもかい",
       "id": 15,
       "showDefault": false,
       "tags": [
@@ -822,6 +850,7 @@
     },
     {
       "name": "磯波",
+      "kana": "いそなみ",
       "id": 16,
       "showDefault": false,
       "tags": [
@@ -845,6 +874,7 @@
     },
     {
       "name": "磯波改",
+      "kana": "いそなみかい",
       "id": 16,
       "showDefault": false,
       "tags": [
@@ -868,6 +898,7 @@
     },
     {
       "name": "綾波",
+      "kana": "あやなみ",
       "id": 17,
       "showDefault": false,
       "tags": [
@@ -891,6 +922,7 @@
     },
     {
       "name": "綾波改",
+      "kana": "あやなみかい",
       "id": 17,
       "showDefault": false,
       "tags": [
@@ -914,6 +946,7 @@
     },
     {
       "name": "敷波",
+      "kana": "しきなみ",
       "id": 18,
       "showDefault": false,
       "tags": [
@@ -937,6 +970,7 @@
     },
     {
       "name": "敷波改",
+      "kana": "しきなみかい",
       "id": 18,
       "showDefault": false,
       "tags": [
@@ -960,6 +994,7 @@
     },
     {
       "name": "大井",
+      "kana": "おおい",
       "id": 19,
       "showDefault": false,
       "tags": [
@@ -991,6 +1026,7 @@
     },
     {
       "name": "北上",
+      "kana": "きたかみ",
       "id": 20,
       "showDefault": false,
       "tags": [
@@ -1022,6 +1058,7 @@
     },
     {
       "name": "金剛",
+      "kana": "こんごう",
       "id": 21,
       "showDefault": false,
       "tags": [
@@ -1057,6 +1094,7 @@
     },
     {
       "name": "金剛改",
+      "kana": "こんごうかい",
       "id": 21,
       "showDefault": false,
       "tags": [
@@ -1092,6 +1130,7 @@
     },
     {
       "name": "比叡",
+      "kana": "ひえい",
       "id": 22,
       "showDefault": false,
       "tags": [
@@ -1127,6 +1166,7 @@
     },
     {
       "name": "比叡改",
+      "kana": "ひえいかい",
       "id": 22,
       "showDefault": false,
       "tags": [
@@ -1162,6 +1202,7 @@
     },
     {
       "name": "榛名",
+      "kana": "はるな",
       "id": 23,
       "showDefault": false,
       "tags": [
@@ -1197,6 +1238,7 @@
     },
     {
       "name": "榛名改",
+      "kana": "はるなかい",
       "id": 23,
       "showDefault": false,
       "tags": [
@@ -1232,6 +1274,7 @@
     },
     {
       "name": "霧島",
+      "kana": "きりしま",
       "id": 24,
       "showDefault": false,
       "tags": [
@@ -1267,6 +1310,7 @@
     },
     {
       "name": "霧島改",
+      "kana": "きりしまかい",
       "id": 24,
       "showDefault": false,
       "tags": [
@@ -1302,6 +1346,7 @@
     },
     {
       "name": "鳳翔",
+      "kana": "ほうしょう",
       "id": 25,
       "showDefault": false,
       "tags": [
@@ -1349,6 +1394,7 @@
     },
     {
       "name": "鳳翔改",
+      "kana": "ほうしょうかい",
       "id": 25,
       "showDefault": false,
       "tags": [
@@ -1396,6 +1442,7 @@
     },
     {
       "name": "扶桑",
+      "kana": "ふそう",
       "id": 26,
       "showDefault": false,
       "tags": [
@@ -1431,6 +1478,7 @@
     },
     {
       "name": "扶桑改",
+      "kana": "ふそうかい",
       "id": 26,
       "showDefault": false,
       "tags": [
@@ -1478,6 +1526,7 @@
     },
     {
       "name": "山城",
+      "kana": "やましろ",
       "id": 27,
       "showDefault": false,
       "tags": [
@@ -1513,6 +1562,7 @@
     },
     {
       "name": "山城改",
+      "kana": "やましろかい",
       "id": 27,
       "showDefault": false,
       "tags": [
@@ -1560,6 +1610,7 @@
     },
     {
       "name": "天龍",
+      "kana": "てんりゅう",
       "id": 28,
       "showDefault": false,
       "tags": [
@@ -1591,6 +1642,7 @@
     },
     {
       "name": "天龍改",
+      "kana": "てんりゅうかい",
       "id": 28,
       "showDefault": false,
       "tags": [
@@ -1622,6 +1674,7 @@
     },
     {
       "name": "龍田",
+      "kana": "たつた",
       "id": 29,
       "showDefault": false,
       "tags": [
@@ -1653,6 +1706,7 @@
     },
     {
       "name": "龍田改",
+      "kana": "たつたかい",
       "id": 29,
       "showDefault": false,
       "tags": [
@@ -1684,6 +1738,7 @@
     },
     {
       "name": "龍驤",
+      "kana": "りゅうじょう",
       "id": 30,
       "showDefault": false,
       "tags": [
@@ -1731,6 +1786,7 @@
     },
     {
       "name": "龍驤改",
+      "kana": "りゅうじょうかい",
       "id": 30,
       "showDefault": false,
       "tags": [
@@ -1778,6 +1834,7 @@
     },
     {
       "name": "睦月",
+      "kana": "むつき",
       "id": 31,
       "showDefault": false,
       "tags": [
@@ -1801,6 +1858,7 @@
     },
     {
       "name": "睦月改",
+      "kana": "むつきかい",
       "id": 31,
       "showDefault": false,
       "tags": [
@@ -1824,6 +1882,7 @@
     },
     {
       "name": "如月",
+      "kana": "きさらぎ",
       "id": 32,
       "showDefault": false,
       "tags": [
@@ -1847,6 +1906,7 @@
     },
     {
       "name": "如月改",
+      "kana": "きさらぎかい",
       "id": 32,
       "showDefault": false,
       "tags": [
@@ -1870,6 +1930,7 @@
     },
     {
       "name": "皐月",
+      "kana": "さつき",
       "id": 33,
       "showDefault": false,
       "tags": [
@@ -1893,6 +1954,7 @@
     },
     {
       "name": "皐月改",
+      "kana": "さつきかい",
       "id": 33,
       "showDefault": false,
       "tags": [
@@ -1916,6 +1978,7 @@
     },
     {
       "name": "文月",
+      "kana": "ふみづき",
       "id": 34,
       "showDefault": false,
       "tags": [
@@ -1939,6 +2002,7 @@
     },
     {
       "name": "文月改",
+      "kana": "ふみづきかい",
       "id": 34,
       "showDefault": false,
       "tags": [
@@ -1962,6 +2026,7 @@
     },
     {
       "name": "長月",
+      "kana": "ながつき",
       "id": 35,
       "showDefault": false,
       "tags": [
@@ -1985,6 +2050,7 @@
     },
     {
       "name": "長月改",
+      "kana": "ながつきかい",
       "id": 35,
       "showDefault": true,
       "tags": [
@@ -2008,6 +2074,7 @@
     },
     {
       "name": "菊月",
+      "kana": "きくづき",
       "id": 36,
       "showDefault": false,
       "tags": [
@@ -2031,6 +2098,7 @@
     },
     {
       "name": "菊月改",
+      "kana": "きくづきかい",
       "id": 36,
       "showDefault": true,
       "tags": [
@@ -2054,6 +2122,7 @@
     },
     {
       "name": "三日月",
+      "kana": "みかづき",
       "id": 37,
       "showDefault": false,
       "tags": [
@@ -2077,6 +2146,7 @@
     },
     {
       "name": "三日月改",
+      "kana": "みかづきかい",
       "id": 37,
       "showDefault": true,
       "tags": [
@@ -2104,6 +2174,7 @@
     },
     {
       "name": "望月",
+      "kana": "もちづき",
       "id": 38,
       "showDefault": false,
       "tags": [
@@ -2127,6 +2198,7 @@
     },
     {
       "name": "望月改",
+      "kana": "もちづきかい",
       "id": 38,
       "showDefault": true,
       "tags": [
@@ -2150,6 +2222,7 @@
     },
     {
       "name": "球磨",
+      "kana": "くま",
       "id": 39,
       "showDefault": false,
       "tags": [
@@ -2181,6 +2254,7 @@
     },
     {
       "name": "球磨改",
+      "kana": "くまかい",
       "id": 39,
       "showDefault": false,
       "tags": [
@@ -2212,6 +2286,7 @@
     },
     {
       "name": "多摩",
+      "kana": "たま",
       "id": 40,
       "showDefault": false,
       "tags": [
@@ -2243,6 +2318,7 @@
     },
     {
       "name": "多摩改",
+      "kana": "たまかい",
       "id": 40,
       "showDefault": false,
       "tags": [
@@ -2278,6 +2354,7 @@
     },
     {
       "name": "木曾",
+      "kana": "きそ",
       "id": 41,
       "showDefault": false,
       "tags": [
@@ -2309,6 +2386,7 @@
     },
     {
       "name": "木曾改",
+      "kana": "きそかい",
       "id": 41,
       "showDefault": false,
       "tags": [
@@ -2344,6 +2422,7 @@
     },
     {
       "name": "長良",
+      "kana": "ながら",
       "id": 42,
       "showDefault": false,
       "tags": [
@@ -2375,6 +2454,7 @@
     },
     {
       "name": "長良改",
+      "kana": "ながらかい",
       "id": 42,
       "showDefault": true,
       "tags": [
@@ -2406,6 +2486,7 @@
     },
     {
       "name": "五十鈴",
+      "kana": "いすず",
       "id": 43,
       "showDefault": false,
       "tags": [
@@ -2437,6 +2518,7 @@
     },
     {
       "name": "五十鈴改",
+      "kana": "いすずかい",
       "id": 43,
       "showDefault": false,
       "tags": [
@@ -2468,6 +2550,7 @@
     },
     {
       "name": "名取",
+      "kana": "なとり",
       "id": 44,
       "showDefault": false,
       "tags": [
@@ -2499,6 +2582,7 @@
     },
     {
       "name": "名取改",
+      "kana": "なとりかい",
       "id": 44,
       "showDefault": true,
       "tags": [
@@ -2530,6 +2614,7 @@
     },
     {
       "name": "由良",
+      "kana": "ゆら",
       "id": 45,
       "showDefault": false,
       "tags": [
@@ -2561,6 +2646,7 @@
     },
     {
       "name": "由良改",
+      "kana": "ゆらかい",
       "id": 45,
       "showDefault": false,
       "tags": [
@@ -2592,6 +2678,7 @@
     },
     {
       "name": "川内",
+      "kana": "せんだい",
       "id": 46,
       "showDefault": false,
       "tags": [
@@ -2623,6 +2710,7 @@
     },
     {
       "name": "川内改",
+      "kana": "せんだいかい",
       "id": 46,
       "showDefault": false,
       "tags": [
@@ -2654,6 +2742,7 @@
     },
     {
       "name": "神通",
+      "kana": "じんつう",
       "id": 47,
       "showDefault": false,
       "tags": [
@@ -2685,6 +2774,7 @@
     },
     {
       "name": "神通改",
+      "kana": "じんつうかい",
       "id": 47,
       "showDefault": false,
       "tags": [
@@ -2716,6 +2806,7 @@
     },
     {
       "name": "那珂",
+      "kana": "なか",
       "id": 48,
       "showDefault": false,
       "tags": [
@@ -2747,6 +2838,7 @@
     },
     {
       "name": "那珂改",
+      "kana": "なかかい",
       "id": 48,
       "showDefault": false,
       "tags": [
@@ -2778,6 +2870,7 @@
     },
     {
       "name": "千歳",
+      "kana": "ちとせ",
       "id": 49,
       "showDefault": false,
       "tags": [
@@ -2837,6 +2930,7 @@
     },
     {
       "name": "千代田",
+      "kana": "ちよだ",
       "id": 50,
       "showDefault": false,
       "tags": [
@@ -2896,6 +2990,7 @@
     },
     {
       "name": "最上",
+      "kana": "もがみ",
       "id": 51,
       "showDefault": false,
       "tags": [
@@ -2935,6 +3030,7 @@
     },
     {
       "name": "古鷹",
+      "kana": "ふるたか",
       "id": 52,
       "showDefault": false,
       "tags": [
@@ -2974,6 +3070,7 @@
     },
     {
       "name": "古鷹改",
+      "kana": "ふるたかかい",
       "id": 52,
       "showDefault": false,
       "tags": [
@@ -3013,6 +3110,7 @@
     },
     {
       "name": "加古",
+      "kana": "かこ",
       "id": 53,
       "showDefault": false,
       "tags": [
@@ -3052,6 +3150,7 @@
     },
     {
       "name": "加古改",
+      "kana": "かこかい",
       "id": 53,
       "showDefault": false,
       "tags": [
@@ -3091,6 +3190,7 @@
     },
     {
       "name": "青葉",
+      "kana": "あおば",
       "id": 54,
       "showDefault": false,
       "tags": [
@@ -3130,6 +3230,7 @@
     },
     {
       "name": "青葉改",
+      "kana": "あおばかい",
       "id": 54,
       "showDefault": true,
       "tags": [
@@ -3169,6 +3270,7 @@
     },
     {
       "name": "妙高",
+      "kana": "みょうこう",
       "id": 55,
       "showDefault": false,
       "tags": [
@@ -3208,6 +3310,7 @@
     },
     {
       "name": "妙高改",
+      "kana": "みょうこうかい",
       "id": 55,
       "showDefault": false,
       "tags": [
@@ -3247,6 +3350,7 @@
     },
     {
       "name": "那智",
+      "kana": "なち",
       "id": 56,
       "showDefault": false,
       "tags": [
@@ -3286,6 +3390,7 @@
     },
     {
       "name": "那智改",
+      "kana": "なちかい",
       "id": 56,
       "showDefault": false,
       "tags": [
@@ -3325,6 +3430,7 @@
     },
     {
       "name": "足柄",
+      "kana": "あしがら",
       "id": 57,
       "showDefault": false,
       "tags": [
@@ -3364,6 +3470,7 @@
     },
     {
       "name": "足柄改",
+      "kana": "あしがらかい",
       "id": 57,
       "showDefault": false,
       "tags": [
@@ -3403,6 +3510,7 @@
     },
     {
       "name": "羽黒",
+      "kana": "はぐろ",
       "id": 58,
       "showDefault": false,
       "tags": [
@@ -3442,6 +3550,7 @@
     },
     {
       "name": "羽黒改",
+      "kana": "はぐろかい",
       "id": 58,
       "showDefault": false,
       "tags": [
@@ -3481,6 +3590,7 @@
     },
     {
       "name": "高雄",
+      "kana": "たかお",
       "id": 59,
       "showDefault": false,
       "tags": [
@@ -3520,6 +3630,7 @@
     },
     {
       "name": "高雄改",
+      "kana": "たかおかい",
       "id": 59,
       "showDefault": true,
       "tags": [
@@ -3559,6 +3670,7 @@
     },
     {
       "name": "愛宕",
+      "kana": "あたご",
       "id": 60,
       "showDefault": false,
       "tags": [
@@ -3598,6 +3710,7 @@
     },
     {
       "name": "愛宕改",
+      "kana": "あたごかい",
       "id": 60,
       "showDefault": true,
       "tags": [
@@ -3637,6 +3750,7 @@
     },
     {
       "name": "摩耶",
+      "kana": "まや",
       "id": 61,
       "showDefault": false,
       "tags": [
@@ -3676,6 +3790,7 @@
     },
     {
       "name": "摩耶改",
+      "kana": "まやかい",
       "id": 61,
       "showDefault": false,
       "tags": [
@@ -3715,6 +3830,7 @@
     },
     {
       "name": "鳥海",
+      "kana": "ちょうかい",
       "id": 62,
       "showDefault": false,
       "tags": [
@@ -3754,6 +3870,7 @@
     },
     {
       "name": "鳥海改",
+      "kana": "ちょうかいかい",
       "id": 62,
       "showDefault": false,
       "tags": [
@@ -3793,6 +3910,7 @@
     },
     {
       "name": "利根",
+      "kana": "とね",
       "id": 63,
       "showDefault": false,
       "tags": [
@@ -3832,6 +3950,7 @@
     },
     {
       "name": "利根改",
+      "kana": "とねかい",
       "id": 63,
       "showDefault": false,
       "tags": [
@@ -3871,6 +3990,7 @@
     },
     {
       "name": "筑摩",
+      "kana": "ちくま",
       "id": 64,
       "showDefault": false,
       "tags": [
@@ -3910,6 +4030,7 @@
     },
     {
       "name": "筑摩改",
+      "kana": "ちくまかい",
       "id": 64,
       "showDefault": false,
       "tags": [
@@ -3949,6 +4070,7 @@
     },
     {
       "name": "飛鷹",
+      "kana": "ひよう",
       "id": 65,
       "showDefault": false,
       "tags": [
@@ -3996,6 +4118,7 @@
     },
     {
       "name": "飛鷹改",
+      "kana": "ひようかい",
       "id": 65,
       "showDefault": true,
       "tags": [
@@ -4043,6 +4166,7 @@
     },
     {
       "name": "隼鷹",
+      "kana": "じゅんよう",
       "id": 66,
       "showDefault": false,
       "tags": [
@@ -4090,6 +4214,7 @@
     },
     {
       "name": "隼鷹改",
+      "kana": "じゅんようかい",
       "id": 66,
       "showDefault": false,
       "tags": [
@@ -4137,6 +4262,7 @@
     },
     {
       "name": "朧",
+      "kana": "おぼろ",
       "id": 67,
       "showDefault": false,
       "tags": [
@@ -4160,6 +4286,7 @@
     },
     {
       "name": "朧改",
+      "kana": "おぼろかい",
       "id": 67,
       "showDefault": true,
       "tags": [
@@ -4183,6 +4310,7 @@
     },
     {
       "name": "曙",
+      "kana": "あけぼの",
       "id": 68,
       "showDefault": false,
       "tags": [
@@ -4206,6 +4334,7 @@
     },
     {
       "name": "曙改",
+      "kana": "あけぼのかい",
       "id": 68,
       "showDefault": false,
       "tags": [
@@ -4229,6 +4358,7 @@
     },
     {
       "name": "漣",
+      "kana": "さざなみ",
       "id": 69,
       "showDefault": false,
       "tags": [
@@ -4252,6 +4382,7 @@
     },
     {
       "name": "漣改",
+      "kana": "さざなみかい",
       "id": 69,
       "showDefault": true,
       "tags": [
@@ -4275,6 +4406,7 @@
     },
     {
       "name": "潮",
+      "kana": "うしお",
       "id": 70,
       "showDefault": false,
       "tags": [
@@ -4298,6 +4430,7 @@
     },
     {
       "name": "潮改",
+      "kana": "うしおかい",
       "id": 70,
       "showDefault": false,
       "tags": [
@@ -4321,6 +4454,7 @@
     },
     {
       "name": "暁",
+      "kana": "あかつき",
       "id": 71,
       "showDefault": false,
       "tags": [
@@ -4344,6 +4478,7 @@
     },
     {
       "name": "暁改",
+      "kana": "あかつきかい",
       "id": 71,
       "showDefault": false,
       "tags": [
@@ -4367,6 +4502,7 @@
     },
     {
       "name": "響",
+      "kana": "ひびき",
       "id": 72,
       "showDefault": false,
       "tags": [
@@ -4390,6 +4526,7 @@
     },
     {
       "name": "響改",
+      "kana": "ひびきかい",
       "id": 72,
       "showDefault": false,
       "tags": [
@@ -4413,6 +4550,7 @@
     },
     {
       "name": "雷",
+      "kana": "いかずち",
       "id": 73,
       "showDefault": false,
       "tags": [
@@ -4436,6 +4574,7 @@
     },
     {
       "name": "雷改",
+      "kana": "いかずちかい",
       "id": 73,
       "showDefault": true,
       "tags": [
@@ -4459,6 +4598,7 @@
     },
     {
       "name": "電",
+      "kana": "いなづま",
       "id": 74,
       "showDefault": false,
       "tags": [
@@ -4482,6 +4622,7 @@
     },
     {
       "name": "電改",
+      "kana": "いなづまかい",
       "id": 74,
       "showDefault": true,
       "tags": [
@@ -4505,6 +4646,7 @@
     },
     {
       "name": "初春",
+      "kana": "はつはる",
       "id": 75,
       "showDefault": false,
       "tags": [
@@ -4528,6 +4670,7 @@
     },
     {
       "name": "初春改",
+      "kana": "はつはるかい",
       "id": 75,
       "showDefault": false,
       "tags": [
@@ -4551,6 +4694,7 @@
     },
     {
       "name": "子日",
+      "kana": "ねのひ",
       "id": 76,
       "showDefault": false,
       "tags": [
@@ -4574,6 +4718,7 @@
     },
     {
       "name": "子日改",
+      "kana": "ねのひかい",
       "id": 76,
       "showDefault": true,
       "tags": [
@@ -4597,6 +4742,7 @@
     },
     {
       "name": "若葉",
+      "kana": "わかば",
       "id": 77,
       "showDefault": false,
       "tags": [
@@ -4620,6 +4766,7 @@
     },
     {
       "name": "若葉改",
+      "kana": "わかばかい",
       "id": 77,
       "showDefault": true,
       "tags": [
@@ -4643,6 +4790,7 @@
     },
     {
       "name": "初霜",
+      "kana": "はつしも",
       "id": 78,
       "showDefault": false,
       "tags": [
@@ -4666,6 +4814,7 @@
     },
     {
       "name": "初霜改",
+      "kana": "はつしもかい",
       "id": 78,
       "showDefault": false,
       "tags": [
@@ -4689,6 +4838,7 @@
     },
     {
       "name": "白露",
+      "kana": "しらつゆ",
       "id": 79,
       "showDefault": false,
       "tags": [
@@ -4712,6 +4862,7 @@
     },
     {
       "name": "白露改",
+      "kana": "しらつゆかい",
       "id": 79,
       "showDefault": false,
       "tags": [
@@ -4735,6 +4886,7 @@
     },
     {
       "name": "時雨",
+      "kana": "しぐれ",
       "id": 80,
       "showDefault": false,
       "tags": [
@@ -4758,6 +4910,7 @@
     },
     {
       "name": "時雨改",
+      "kana": "しぐれかい",
       "id": 80,
       "showDefault": false,
       "tags": [
@@ -4781,6 +4934,7 @@
     },
     {
       "name": "村雨",
+      "kana": "むらさめ",
       "id": 81,
       "showDefault": false,
       "tags": [
@@ -4804,6 +4958,7 @@
     },
     {
       "name": "村雨改",
+      "kana": "むらさめかい",
       "id": 81,
       "showDefault": false,
       "tags": [
@@ -4827,6 +4982,7 @@
     },
     {
       "name": "夕立",
+      "kana": "ゆうだち",
       "id": 82,
       "showDefault": false,
       "tags": [
@@ -4850,6 +5006,7 @@
     },
     {
       "name": "夕立改",
+      "kana": "ゆうだちかい",
       "id": 82,
       "showDefault": false,
       "tags": [
@@ -4873,6 +5030,7 @@
     },
     {
       "name": "五月雨",
+      "kana": "さみだれ",
       "id": 83,
       "showDefault": false,
       "tags": [
@@ -4896,6 +5054,7 @@
     },
     {
       "name": "五月雨改",
+      "kana": "さみだれかい",
       "id": 83,
       "showDefault": true,
       "tags": [
@@ -4919,6 +5078,7 @@
     },
     {
       "name": "涼風",
+      "kana": "すずかぜ",
       "id": 84,
       "showDefault": false,
       "tags": [
@@ -4942,6 +5102,7 @@
     },
     {
       "name": "涼風改",
+      "kana": "すずかぜかい",
       "id": 84,
       "showDefault": true,
       "tags": [
@@ -4965,6 +5126,7 @@
     },
     {
       "name": "朝潮",
+      "kana": "あさしお",
       "id": 85,
       "showDefault": false,
       "tags": [
@@ -4988,6 +5150,7 @@
     },
     {
       "name": "朝潮改",
+      "kana": "あさしおかい",
       "id": 85,
       "showDefault": false,
       "tags": [
@@ -5011,6 +5174,7 @@
     },
     {
       "name": "大潮",
+      "kana": "おおしお",
       "id": 86,
       "showDefault": false,
       "tags": [
@@ -5034,6 +5198,7 @@
     },
     {
       "name": "大潮改",
+      "kana": "おおしおかい",
       "id": 86,
       "showDefault": false,
       "tags": [
@@ -5057,6 +5222,7 @@
     },
     {
       "name": "満潮",
+      "kana": "みちしお",
       "id": 87,
       "showDefault": false,
       "tags": [
@@ -5080,6 +5246,7 @@
     },
     {
       "name": "満潮改",
+      "kana": "みちしおかい",
       "id": 87,
       "showDefault": false,
       "tags": [
@@ -5103,6 +5270,7 @@
     },
     {
       "name": "荒潮",
+      "kana": "あらしお",
       "id": 88,
       "showDefault": false,
       "tags": [
@@ -5126,6 +5294,7 @@
     },
     {
       "name": "荒潮改",
+      "kana": "あらしおかい",
       "id": 88,
       "showDefault": false,
       "tags": [
@@ -5149,6 +5318,7 @@
     },
     {
       "name": "霰",
+      "kana": "あられ",
       "id": 89,
       "showDefault": false,
       "tags": [
@@ -5172,6 +5342,7 @@
     },
     {
       "name": "霰改",
+      "kana": "あられかい",
       "id": 89,
       "showDefault": false,
       "tags": [
@@ -5195,6 +5366,7 @@
     },
     {
       "name": "霞",
+      "kana": "かすみ",
       "id": 90,
       "showDefault": false,
       "tags": [
@@ -5218,6 +5390,7 @@
     },
     {
       "name": "霞改",
+      "kana": "かすみかい",
       "id": 90,
       "showDefault": false,
       "tags": [
@@ -5241,6 +5414,7 @@
     },
     {
       "name": "陽炎",
+      "kana": "かげろう",
       "id": 91,
       "showDefault": false,
       "tags": [
@@ -5264,6 +5438,7 @@
     },
     {
       "name": "陽炎改",
+      "kana": "かげろうかい",
       "id": 91,
       "showDefault": false,
       "tags": [
@@ -5287,6 +5462,7 @@
     },
     {
       "name": "不知火",
+      "kana": "しらぬい",
       "id": 92,
       "showDefault": false,
       "tags": [
@@ -5310,6 +5486,7 @@
     },
     {
       "name": "不知火改",
+      "kana": "しらぬいかい",
       "id": 92,
       "showDefault": false,
       "tags": [
@@ -5333,6 +5510,7 @@
     },
     {
       "name": "黒潮",
+      "kana": "くろしお",
       "id": 93,
       "showDefault": false,
       "tags": [
@@ -5356,6 +5534,7 @@
     },
     {
       "name": "黒潮改",
+      "kana": "くろしおかい",
       "id": 93,
       "showDefault": false,
       "tags": [
@@ -5379,6 +5558,7 @@
     },
     {
       "name": "祥鳳",
+      "kana": "しょうほう",
       "id": 94,
       "showDefault": false,
       "tags": [
@@ -5426,6 +5606,7 @@
     },
     {
       "name": "祥鳳改",
+      "kana": "しょうほうかい",
       "id": 94,
       "showDefault": true,
       "tags": [
@@ -5473,6 +5654,7 @@
     },
     {
       "name": "千歳改",
+      "kana": "ちとせかい",
       "id": 95,
       "showDefault": false,
       "tags": [
@@ -5532,6 +5714,7 @@
     },
     {
       "name": "千代田改",
+      "kana": "ちよだかい",
       "id": 96,
       "showDefault": false,
       "tags": [
@@ -5591,6 +5774,7 @@
     },
     {
       "name": "大井改",
+      "kana": "おおいかい",
       "id": 97,
       "showDefault": false,
       "tags": [
@@ -5626,6 +5810,7 @@
     },
     {
       "name": "北上改",
+      "kana": "きたかみかい",
       "id": 98,
       "showDefault": false,
       "tags": [
@@ -5661,6 +5846,7 @@
     },
     {
       "name": "千歳甲",
+      "kana": "ちとせこう",
       "id": 99,
       "showDefault": true,
       "tags": [
@@ -5720,6 +5906,7 @@
     },
     {
       "name": "千代田甲",
+      "kana": "ちよだこう",
       "id": 100,
       "showDefault": true,
       "tags": [
@@ -5779,6 +5966,7 @@
     },
     {
       "name": "最上改",
+      "kana": "もがみかい",
       "id": 101,
       "showDefault": false,
       "tags": [
@@ -5830,6 +6018,7 @@
     },
     {
       "name": "伊勢改",
+      "kana": "いせかい",
       "id": 102,
       "showDefault": false,
       "tags": [
@@ -5881,6 +6070,7 @@
     },
     {
       "name": "日向改",
+      "kana": "ひゅうがかい",
       "id": 103,
       "showDefault": false,
       "tags": [
@@ -5932,6 +6122,7 @@
     },
     {
       "name": "千歳航",
+      "kana": "ちとせこう",
       "id": 104,
       "showDefault": false,
       "tags": [
@@ -5979,6 +6170,7 @@
     },
     {
       "name": "千歳航改",
+      "kana": "ちとせこうかい",
       "id": 104,
       "showDefault": false,
       "tags": [
@@ -6026,6 +6218,7 @@
     },
     {
       "name": "千代田航",
+      "kana": "ちよだこう",
       "id": 105,
       "showDefault": false,
       "tags": [
@@ -6073,6 +6266,7 @@
     },
     {
       "name": "千代田航改",
+      "kana": "ちよだこうかい",
       "id": 105,
       "showDefault": false,
       "tags": [
@@ -6120,6 +6314,7 @@
     },
     {
       "name": "翔鶴",
+      "kana": "しょうかく",
       "id": 106,
       "showDefault": false,
       "tags": [
@@ -6155,6 +6350,7 @@
     },
     {
       "name": "翔鶴改",
+      "kana": "しょうかくかい",
       "id": 106,
       "showDefault": false,
       "tags": [
@@ -6190,6 +6386,7 @@
     },
     {
       "name": "瑞鶴",
+      "kana": "ずいかく",
       "id": 107,
       "showDefault": false,
       "tags": [
@@ -6225,6 +6422,7 @@
     },
     {
       "name": "瑞鶴改",
+      "kana": "ずいかくかい",
       "id": 108,
       "showDefault": false,
       "tags": [
@@ -6260,6 +6458,7 @@
     },
     {
       "name": "鬼怒",
+      "kana": "きぬ",
       "id": 109,
       "showDefault": false,
       "tags": [
@@ -6291,6 +6490,7 @@
     },
     {
       "name": "鬼怒改",
+      "kana": "きぬかい",
       "id": 109,
       "showDefault": false,
       "tags": [
@@ -6322,6 +6522,7 @@
     },
     {
       "name": "阿武隈",
+      "kana": "あぶくま",
       "id": 110,
       "showDefault": false,
       "tags": [
@@ -6353,6 +6554,7 @@
     },
     {
       "name": "阿武隈改",
+      "kana": "あぶくまかい",
       "id": 110,
       "showDefault": false,
       "tags": [
@@ -6384,6 +6586,7 @@
     },
     {
       "name": "夕張",
+      "kana": "ゆうばり",
       "id": 111,
       "showDefault": false,
       "tags": [
@@ -6415,6 +6618,7 @@
     },
     {
       "name": "夕張改",
+      "kana": "ゆうばりかい",
       "id": 111,
       "showDefault": false,
       "tags": [
@@ -6446,6 +6650,7 @@
     },
     {
       "name": "瑞鳳",
+      "kana": "ずいほう",
       "id": 112,
       "showDefault": false,
       "tags": [
@@ -6493,6 +6698,7 @@
     },
     {
       "name": "瑞鳳改",
+      "kana": "ずいほうかい",
       "id": 113,
       "showDefault": false,
       "tags": [
@@ -6540,6 +6746,7 @@
     },
     {
       "name": "大井改二",
+      "kana": "おおいかいに",
       "id": 114,
       "showDefault": true,
       "tags": [
@@ -6575,6 +6782,7 @@
     },
     {
       "name": "北上改二",
+      "kana": "きたかみかいに",
       "id": 115,
       "showDefault": true,
       "tags": [
@@ -6610,6 +6818,7 @@
     },
     {
       "name": "三隈",
+      "kana": "みくま",
       "id": 116,
       "showDefault": false,
       "tags": [
@@ -6649,6 +6858,7 @@
     },
     {
       "name": "三隈改",
+      "kana": "みくまかい",
       "id": 117,
       "showDefault": true,
       "tags": [
@@ -6700,6 +6910,7 @@
     },
     {
       "name": "初風",
+      "kana": "はつかぜ",
       "id": 118,
       "showDefault": false,
       "tags": [
@@ -6723,6 +6934,7 @@
     },
     {
       "name": "初風改",
+      "kana": "はつかぜかい",
       "id": 118,
       "showDefault": true,
       "tags": [
@@ -6746,6 +6958,7 @@
     },
     {
       "name": "舞風",
+      "kana": "まいかぜ",
       "id": 119,
       "showDefault": false,
       "tags": [
@@ -6769,6 +6982,7 @@
     },
     {
       "name": "舞風改",
+      "kana": "まいかぜかい",
       "id": 119,
       "showDefault": true,
       "tags": [
@@ -6792,6 +7006,7 @@
     },
     {
       "name": "衣笠",
+      "kana": "きぬがさ",
       "id": 120,
       "showDefault": false,
       "tags": [
@@ -6831,6 +7046,7 @@
     },
     {
       "name": "衣笠改",
+      "kana": "きぬがさかい",
       "id": 120,
       "showDefault": false,
       "tags": [
@@ -6870,6 +7086,7 @@
     },
     {
       "name": "千歳航改二",
+      "kana": "ちとせこうかいに",
       "id": 121,
       "showDefault": true,
       "tags": [
@@ -6917,6 +7134,7 @@
     },
     {
       "name": "千代田航改二",
+      "kana": "ちよだこうかいに",
       "id": 122,
       "showDefault": true,
       "tags": [
@@ -6964,6 +7182,7 @@
     },
     {
       "name": "伊19",
+      "kana": "い19",
       "id": 123,
       "showDefault": false,
       "tags": [
@@ -6995,6 +7214,7 @@
     },
     {
       "name": "伊19改",
+      "kana": "い19かい",
       "id": 123,
       "showDefault": true,
       "tags": [
@@ -7034,6 +7254,7 @@
     },
     {
       "name": "鈴谷",
+      "kana": "すずや",
       "id": 124,
       "showDefault": false,
       "tags": [
@@ -7073,6 +7294,7 @@
     },
     {
       "name": "熊野",
+      "kana": "くまの",
       "id": 125,
       "showDefault": false,
       "tags": [
@@ -7112,6 +7334,7 @@
     },
     {
       "name": "伊168",
+      "kana": "い168",
       "id": 126,
       "showDefault": false,
       "tags": [
@@ -7143,6 +7366,7 @@
     },
     {
       "name": "伊168改",
+      "kana": "い168かい",
       "id": 126,
       "showDefault": true,
       "tags": [
@@ -7174,6 +7398,7 @@
     },
     {
       "name": "伊58",
+      "kana": "い58",
       "id": 127,
       "showDefault": false,
       "tags": [
@@ -7205,6 +7430,7 @@
     },
     {
       "name": "伊58改",
+      "kana": "い58かい",
       "id": 127,
       "showDefault": true,
       "tags": [
@@ -7244,6 +7470,7 @@
     },
     {
       "name": "伊8",
+      "kana": "い8",
       "id": 128,
       "showDefault": false,
       "tags": [
@@ -7275,6 +7502,7 @@
     },
     {
       "name": "伊8改",
+      "kana": "い8かい",
       "id": 128,
       "showDefault": true,
       "tags": [
@@ -7314,6 +7542,7 @@
     },
     {
       "name": "鈴谷改",
+      "kana": "すずやかい",
       "id": 129,
       "showDefault": false,
       "tags": [
@@ -7365,6 +7594,7 @@
     },
     {
       "name": "熊野改",
+      "kana": "くまのかい",
       "id": 130,
       "showDefault": false,
       "tags": [
@@ -7416,6 +7646,7 @@
     },
     {
       "name": "大和",
+      "kana": "やまと",
       "id": 131,
       "showDefault": false,
       "tags": [
@@ -7451,6 +7682,7 @@
     },
     {
       "name": "秋雲",
+      "kana": "あきぐも",
       "id": 132,
       "showDefault": false,
       "tags": [
@@ -7474,6 +7706,7 @@
     },
     {
       "name": "秋雲改",
+      "kana": "あきぐもかい",
       "id": 132,
       "showDefault": false,
       "tags": [
@@ -7497,6 +7730,7 @@
     },
     {
       "name": "夕雲",
+      "kana": "ゆうぐも",
       "id": 133,
       "showDefault": false,
       "tags": [
@@ -7520,6 +7754,7 @@
     },
     {
       "name": "夕雲改",
+      "kana": "ゆうぐもかい",
       "id": 133,
       "showDefault": false,
       "tags": [
@@ -7543,6 +7778,7 @@
     },
     {
       "name": "巻雲",
+      "kana": "まきぐも",
       "id": 134,
       "showDefault": false,
       "tags": [
@@ -7566,6 +7802,7 @@
     },
     {
       "name": "巻雲改",
+      "kana": "まきぐもかい",
       "id": 134,
       "showDefault": false,
       "tags": [
@@ -7589,6 +7826,7 @@
     },
     {
       "name": "長波",
+      "kana": "ながなみ",
       "id": 135,
       "showDefault": false,
       "tags": [
@@ -7612,6 +7850,7 @@
     },
     {
       "name": "長波改",
+      "kana": "ながなみかい",
       "id": 135,
       "showDefault": false,
       "tags": [
@@ -7635,6 +7874,7 @@
     },
     {
       "name": "大和改",
+      "kana": "やまとかい",
       "id": 136,
       "showDefault": false,
       "tags": [
@@ -7678,6 +7918,7 @@
     },
     {
       "name": "阿賀野",
+      "kana": "あがの",
       "id": 137,
       "showDefault": false,
       "tags": [
@@ -7713,6 +7954,7 @@
     },
     {
       "name": "阿賀野改",
+      "kana": "あがのかい",
       "id": 137,
       "showDefault": true,
       "tags": [
@@ -7756,6 +7998,7 @@
     },
     {
       "name": "能代",
+      "kana": "のしろ",
       "id": 138,
       "showDefault": false,
       "tags": [
@@ -7791,6 +8034,7 @@
     },
     {
       "name": "能代改",
+      "kana": "のしろかい",
       "id": 138,
       "showDefault": false,
       "tags": [
@@ -7834,6 +8078,7 @@
     },
     {
       "name": "矢矧",
+      "kana": "やはぎ",
       "id": 139,
       "showDefault": false,
       "tags": [
@@ -7869,6 +8114,7 @@
     },
     {
       "name": "矢矧改",
+      "kana": "やはぎかい",
       "id": 139,
       "showDefault": false,
       "tags": [
@@ -7912,6 +8158,7 @@
     },
     {
       "name": "酒匂",
+      "kana": "さかわ",
       "id": 140,
       "showDefault": false,
       "tags": [
@@ -7947,6 +8194,7 @@
     },
     {
       "name": "酒匂改",
+      "kana": "さかわかい",
       "id": 140,
       "showDefault": true,
       "tags": [
@@ -7990,6 +8238,7 @@
     },
     {
       "name": "五十鈴改二",
+      "kana": "いすずかいに",
       "id": 141,
       "showDefault": true,
       "tags": [
@@ -8029,6 +8278,7 @@
     },
     {
       "name": "衣笠改二",
+      "kana": "きぬがさかいに",
       "id": 142,
       "showDefault": true,
       "tags": [
@@ -8068,6 +8318,7 @@
     },
     {
       "name": "武蔵",
+      "kana": "むさし",
       "id": 143,
       "showDefault": false,
       "tags": [
@@ -8103,6 +8354,7 @@
     },
     {
       "name": "夕立改二",
+      "kana": "ゆうだちかいに",
       "id": 144,
       "showDefault": true,
       "tags": [
@@ -8126,6 +8378,7 @@
     },
     {
       "name": "時雨改二",
+      "kana": "しぐれかいに",
       "id": 145,
       "showDefault": true,
       "tags": [
@@ -8149,6 +8402,7 @@
     },
     {
       "name": "木曾改二",
+      "kana": "きそかいに",
       "id": 146,
       "showDefault": true,
       "tags": [
@@ -8188,6 +8442,7 @@
     },
     {
       "name": "Верный",
+      "kana": "Верный",
       "id": 147,
       "showDefault": true,
       "tags": [
@@ -8223,6 +8478,7 @@
     },
     {
       "name": "武蔵改",
+      "kana": "むさしかい",
       "id": 148,
       "showDefault": false,
       "tags": [
@@ -8270,6 +8526,7 @@
     },
     {
       "name": "金剛改二",
+      "kana": "こんごうかいに",
       "id": 149,
       "showDefault": false,
       "tags": [
@@ -8309,6 +8566,7 @@
     },
     {
       "name": "比叡改二",
+      "kana": "ひえいかいに",
       "id": 150,
       "showDefault": false,
       "tags": [
@@ -8348,6 +8606,7 @@
     },
     {
       "name": "榛名改二",
+      "kana": "はるなかいに",
       "id": 151,
       "showDefault": true,
       "tags": [
@@ -8387,6 +8646,7 @@
     },
     {
       "name": "霧島改二",
+      "kana": "きりしまかいに",
       "id": 152,
       "showDefault": true,
       "tags": [
@@ -8426,6 +8686,7 @@
     },
     {
       "name": "大鳳",
+      "kana": "たいほう",
       "id": 153,
       "showDefault": false,
       "tags": [
@@ -8465,6 +8726,7 @@
     },
     {
       "name": "香取",
+      "kana": "かとり",
       "id": 154,
       "showDefault": false,
       "tags": [
@@ -8500,6 +8762,7 @@
     },
     {
       "name": "香取改",
+      "kana": "かとりかい",
       "id": 154,
       "showDefault": true,
       "tags": [
@@ -8535,6 +8798,7 @@
     },
     {
       "name": "伊401",
+      "kana": "い401",
       "id": 155,
       "showDefault": false,
       "tags": [
@@ -8574,6 +8838,7 @@
     },
     {
       "name": "伊401改",
+      "kana": "い401かい",
       "id": 155,
       "showDefault": true,
       "tags": [
@@ -8613,6 +8878,7 @@
     },
     {
       "name": "大鳳改",
+      "kana": "たいほうかい",
       "id": 156,
       "showDefault": true,
       "tags": [
@@ -8652,6 +8918,7 @@
     },
     {
       "name": "龍驤改二",
+      "kana": "りゅうじょうかいに",
       "id": 157,
       "showDefault": true,
       "tags": [
@@ -8699,6 +8966,7 @@
     },
     {
       "name": "川内改二",
+      "kana": "せんだいかいに",
       "id": 158,
       "showDefault": true,
       "tags": [
@@ -8730,6 +8998,7 @@
     },
     {
       "name": "神通改二",
+      "kana": "じんつうかいに",
       "id": 159,
       "showDefault": true,
       "tags": [
@@ -8761,6 +9030,7 @@
     },
     {
       "name": "那珂改二",
+      "kana": "なかかいに",
       "id": 160,
       "showDefault": true,
       "tags": [
@@ -8792,6 +9062,7 @@
     },
     {
       "name": "あきつ丸",
+      "kana": "あきつまる",
       "id": 161,
       "showDefault": false,
       "tags": [
@@ -8839,6 +9110,7 @@
     },
     {
       "name": "神威",
+      "kana": "かもい",
       "id": 162,
       "showDefault": false,
       "tags": [
@@ -8874,6 +9146,7 @@
     },
     {
       "name": "まるゆ",
+      "kana": "まるゆ",
       "id": 163,
       "showDefault": false,
       "tags": [
@@ -8901,6 +9174,7 @@
     },
     {
       "name": "まるゆ改",
+      "kana": "まるゆかい",
       "id": 163,
       "showDefault": true,
       "tags": [
@@ -8928,6 +9202,7 @@
     },
     {
       "name": "弥生",
+      "kana": "やよい",
       "id": 164,
       "showDefault": false,
       "tags": [
@@ -8951,6 +9226,7 @@
     },
     {
       "name": "弥生改",
+      "kana": "やよいかい",
       "id": 164,
       "showDefault": true,
       "tags": [
@@ -8974,6 +9250,7 @@
     },
     {
       "name": "卯月",
+      "kana": "うづき",
       "id": 165,
       "showDefault": false,
       "tags": [
@@ -8997,6 +9274,7 @@
     },
     {
       "name": "卯月改",
+      "kana": "うづきかい",
       "id": 165,
       "showDefault": true,
       "tags": [
@@ -9020,6 +9298,7 @@
     },
     {
       "name": "あきつ丸改",
+      "kana": "あきつまるかい",
       "id": 166,
       "showDefault": true,
       "tags": [
@@ -9067,6 +9346,7 @@
     },
     {
       "name": "磯風",
+      "kana": "いそかぜ",
       "id": 167,
       "showDefault": false,
       "tags": [
@@ -9090,6 +9370,7 @@
     },
     {
       "name": "磯風改",
+      "kana": "いそかぜかい",
       "id": 167,
       "showDefault": false,
       "tags": [
@@ -9113,6 +9394,7 @@
     },
     {
       "name": "浦風",
+      "kana": "うらかぜ",
       "id": 168,
       "showDefault": false,
       "tags": [
@@ -9136,6 +9418,7 @@
     },
     {
       "name": "浦風改",
+      "kana": "うらかぜかい",
       "id": 168,
       "showDefault": false,
       "tags": [
@@ -9159,6 +9442,7 @@
     },
     {
       "name": "谷風",
+      "kana": "たにかぜ",
       "id": 169,
       "showDefault": false,
       "tags": [
@@ -9182,6 +9466,7 @@
     },
     {
       "name": "谷風改",
+      "kana": "たにかぜかい",
       "id": 169,
       "showDefault": false,
       "tags": [
@@ -9205,6 +9490,7 @@
     },
     {
       "name": "浜風",
+      "kana": "はまかぜ",
       "id": 170,
       "showDefault": false,
       "tags": [
@@ -9228,6 +9514,7 @@
     },
     {
       "name": "浜風改",
+      "kana": "はまかぜかい",
       "id": 170,
       "showDefault": false,
       "tags": [
@@ -9251,6 +9538,7 @@
     },
     {
       "name": "Bismarck",
+      "kana": "Bismarck",
       "id": 171,
       "showDefault": false,
       "tags": [
@@ -9286,6 +9574,7 @@
     },
     {
       "name": "Bismarck改",
+      "kana": "Bismarckかい",
       "id": 172,
       "showDefault": false,
       "tags": [
@@ -9321,6 +9610,7 @@
     },
     {
       "name": "Bismarck zwei",
+      "kana": "Bismarck zwei",
       "id": 173,
       "showDefault": false,
       "tags": [
@@ -9356,6 +9646,7 @@
     },
     {
       "name": "Z1",
+      "kana": "Z1",
       "id": 174,
       "showDefault": false,
       "tags": [
@@ -9379,6 +9670,7 @@
     },
     {
       "name": "Z1改",
+      "kana": "Z1かい",
       "id": 174,
       "showDefault": false,
       "tags": [
@@ -9402,6 +9694,7 @@
     },
     {
       "name": "Z3",
+      "kana": "Z3",
       "id": 175,
       "showDefault": false,
       "tags": [
@@ -9425,6 +9718,7 @@
     },
     {
       "name": "Z3改",
+      "kana": "Z3かい",
       "id": 175,
       "showDefault": false,
       "tags": [
@@ -9448,6 +9742,7 @@
     },
     {
       "name": "Prinz Eugen",
+      "kana": "Prinz Eugen",
       "id": 176,
       "showDefault": false,
       "tags": [
@@ -9487,6 +9782,7 @@
     },
     {
       "name": "Prinz Eugen改",
+      "kana": "Prinz Eugenかい",
       "id": 177,
       "showDefault": true,
       "tags": [
@@ -9526,6 +9822,7 @@
     },
     {
       "name": "Bismarck drei",
+      "kana": "Bismarck drei",
       "id": 178,
       "showDefault": true,
       "tags": [
@@ -9561,6 +9858,7 @@
     },
     {
       "name": "Z1 zwei",
+      "kana": "Z1 zwei",
       "id": 179,
       "showDefault": true,
       "tags": [
@@ -9584,6 +9882,7 @@
     },
     {
       "name": "Z3 zwei",
+      "kana": "Z3 zwei",
       "id": 180,
       "showDefault": true,
       "tags": [
@@ -9607,6 +9906,7 @@
     },
     {
       "name": "天津風",
+      "kana": "あまつかぜ",
       "id": 181,
       "showDefault": false,
       "tags": [
@@ -9630,6 +9930,7 @@
     },
     {
       "name": "天津風改",
+      "kana": "あまつかぜかい",
       "id": 181,
       "showDefault": true,
       "tags": [
@@ -9653,6 +9954,7 @@
     },
     {
       "name": "明石",
+      "kana": "あかし",
       "id": 182,
       "showDefault": false,
       "tags": [
@@ -9688,6 +9990,7 @@
     },
     {
       "name": "大淀",
+      "kana": "おおよど",
       "id": 183,
       "showDefault": false,
       "tags": [
@@ -9723,6 +10026,7 @@
     },
     {
       "name": "大淀改",
+      "kana": "おおよどかい",
       "id": 183,
       "showDefault": true,
       "tags": [
@@ -9758,6 +10062,7 @@
     },
     {
       "name": "大鯨",
+      "kana": "たいげい",
       "id": 184,
       "showDefault": true,
       "tags": [
@@ -9809,6 +10114,7 @@
     },
     {
       "name": "龍鳳",
+      "kana": "りゅうほう",
       "id": 185,
       "showDefault": false,
       "tags": [
@@ -9856,6 +10162,7 @@
     },
     {
       "name": "時津風",
+      "kana": "ときつかぜ",
       "id": 186,
       "showDefault": false,
       "tags": [
@@ -9879,6 +10186,7 @@
     },
     {
       "name": "時津風改",
+      "kana": "ときつかぜかい",
       "id": 186,
       "showDefault": true,
       "tags": [
@@ -9902,6 +10210,7 @@
     },
     {
       "name": "明石改",
+      "kana": "あかしかい",
       "id": 187,
       "showDefault": true,
       "tags": [
@@ -9937,6 +10246,7 @@
     },
     {
       "name": "利根改二",
+      "kana": "とねかいに",
       "id": 188,
       "showDefault": true,
       "tags": [
@@ -9988,6 +10298,7 @@
     },
     {
       "name": "筑摩改二",
+      "kana": "ちくまかいに",
       "id": 189,
       "showDefault": true,
       "tags": [
@@ -10039,6 +10350,7 @@
     },
     {
       "name": "龍鳳改",
+      "kana": "りゅうほうかい",
       "id": 190,
       "showDefault": false,
       "tags": [
@@ -10086,6 +10398,7 @@
     },
     {
       "name": "妙高改二",
+      "kana": "みょうこうかいに",
       "id": 191,
       "showDefault": true,
       "tags": [
@@ -10125,6 +10438,7 @@
     },
     {
       "name": "那智改二",
+      "kana": "なちかいに",
       "id": 192,
       "showDefault": true,
       "tags": [
@@ -10164,6 +10478,7 @@
     },
     {
       "name": "足柄改二",
+      "kana": "あしがらかいに",
       "id": 193,
       "showDefault": true,
       "tags": [
@@ -10203,6 +10518,7 @@
     },
     {
       "name": "羽黒改二",
+      "kana": "はぐろかいに",
       "id": 194,
       "showDefault": true,
       "tags": [
@@ -10242,6 +10558,7 @@
     },
     {
       "name": "綾波改二",
+      "kana": "あやなみかいに",
       "id": 195,
       "showDefault": true,
       "tags": [
@@ -10265,6 +10582,7 @@
     },
     {
       "name": "飛龍改二",
+      "kana": "ひりゅうかいに",
       "id": 196,
       "showDefault": true,
       "tags": [
@@ -10300,6 +10618,7 @@
     },
     {
       "name": "蒼龍改二",
+      "kana": "そうりゅうかいに",
       "id": 197,
       "showDefault": true,
       "tags": [
@@ -10335,6 +10654,7 @@
     },
     {
       "name": "霰改二",
+      "kana": "あられかいに",
       "id": 198,
       "showDefault": true,
       "tags": [
@@ -10366,6 +10686,7 @@
     },
     {
       "name": "大潮改二",
+      "kana": "おおしおかいに",
       "id": 199,
       "showDefault": true,
       "tags": [
@@ -10397,6 +10718,7 @@
     },
     {
       "name": "阿武隈改二",
+      "kana": "あぶくまかいに",
       "id": 200,
       "showDefault": true,
       "tags": [
@@ -10440,6 +10762,7 @@
     },
     {
       "name": "雲龍",
+      "kana": "うんりゅう",
       "id": 201,
       "showDefault": false,
       "tags": [
@@ -10475,6 +10798,7 @@
     },
     {
       "name": "天城",
+      "kana": "あまぎ",
       "id": 202,
       "showDefault": false,
       "tags": [
@@ -10510,6 +10834,7 @@
     },
     {
       "name": "葛城",
+      "kana": "かつらぎ",
       "id": 203,
       "showDefault": false,
       "tags": [
@@ -10545,6 +10870,7 @@
     },
     {
       "name": "初春改二",
+      "kana": "はつはるかいに",
       "id": 204,
       "showDefault": true,
       "tags": [
@@ -10568,6 +10894,7 @@
     },
     {
       "name": "春雨",
+      "kana": "はるさめ",
       "id": 205,
       "showDefault": false,
       "tags": [
@@ -10591,6 +10918,7 @@
     },
     {
       "name": "春雨改",
+      "kana": "はるさめかい",
       "id": 205,
       "showDefault": true,
       "tags": [
@@ -10614,6 +10942,7 @@
     },
     {
       "name": "雲龍改",
+      "kana": "うんりゅうかい",
       "id": 206,
       "showDefault": true,
       "tags": [
@@ -10649,6 +10978,7 @@
     },
     {
       "name": "潮改二",
+      "kana": "うしおかいに",
       "id": 207,
       "showDefault": true,
       "tags": [
@@ -10672,6 +11002,7 @@
     },
     {
       "name": "隼鷹改二",
+      "kana": "じゅんようかいに",
       "id": 208,
       "showDefault": true,
       "tags": [
@@ -10719,6 +11050,7 @@
     },
     {
       "name": "早霜",
+      "kana": "はやしも",
       "id": 209,
       "showDefault": false,
       "tags": [
@@ -10742,6 +11074,7 @@
     },
     {
       "name": "早霜改",
+      "kana": "はやしもかい",
       "id": 209,
       "showDefault": true,
       "tags": [
@@ -10765,6 +11098,7 @@
     },
     {
       "name": "清霜",
+      "kana": "きよしも",
       "id": 210,
       "showDefault": false,
       "tags": [
@@ -10788,6 +11122,7 @@
     },
     {
       "name": "清霜改",
+      "kana": "きよしもかい",
       "id": 210,
       "showDefault": true,
       "tags": [
@@ -10811,6 +11146,7 @@
     },
     {
       "name": "扶桑改二",
+      "kana": "ふそうかいに",
       "id": 211,
       "showDefault": true,
       "tags": [
@@ -10858,6 +11194,7 @@
     },
     {
       "name": "山城改二",
+      "kana": "やましろかいに",
       "id": 212,
       "showDefault": true,
       "tags": [
@@ -10905,6 +11242,7 @@
     },
     {
       "name": "朝雲",
+      "kana": "あさぐも",
       "id": 213,
       "showDefault": false,
       "tags": [
@@ -10928,6 +11266,7 @@
     },
     {
       "name": "朝雲改",
+      "kana": "あさぐもかい",
       "id": 213,
       "showDefault": true,
       "tags": [
@@ -10951,6 +11290,7 @@
     },
     {
       "name": "山雲",
+      "kana": "やまぐも",
       "id": 214,
       "showDefault": false,
       "tags": [
@@ -10974,6 +11314,7 @@
     },
     {
       "name": "山雲改",
+      "kana": "やまぐもかい",
       "id": 214,
       "showDefault": true,
       "tags": [
@@ -10997,6 +11338,7 @@
     },
     {
       "name": "野分",
+      "kana": "のわき",
       "id": 215,
       "showDefault": false,
       "tags": [
@@ -11020,6 +11362,7 @@
     },
     {
       "name": "野分改",
+      "kana": "のわきかい",
       "id": 215,
       "showDefault": true,
       "tags": [
@@ -11043,6 +11386,7 @@
     },
     {
       "name": "古鷹改二",
+      "kana": "ふるたかかいに",
       "id": 216,
       "showDefault": true,
       "tags": [
@@ -11082,6 +11426,7 @@
     },
     {
       "name": "加古改二",
+      "kana": "かこかいに",
       "id": 217,
       "showDefault": true,
       "tags": [
@@ -11121,6 +11466,7 @@
     },
     {
       "name": "皐月改二",
+      "kana": "さつきかいに",
       "id": 218,
       "showDefault": true,
       "tags": [
@@ -11156,6 +11502,7 @@
     },
     {
       "name": "初霜改二",
+      "kana": "はつしもかいに",
       "id": 219,
       "showDefault": true,
       "tags": [
@@ -11191,6 +11538,7 @@
     },
     {
       "name": "叢雲改二",
+      "kana": "むらくもかいに",
       "id": 220,
       "showDefault": true,
       "tags": [
@@ -11214,6 +11562,7 @@
     },
     {
       "name": "秋月",
+      "kana": "あきづき",
       "id": 221,
       "showDefault": false,
       "tags": [
@@ -11253,6 +11602,7 @@
     },
     {
       "name": "秋月改",
+      "kana": "あきづきかい",
       "id": 221,
       "showDefault": true,
       "tags": [
@@ -11296,6 +11646,7 @@
     },
     {
       "name": "照月",
+      "kana": "てるづき",
       "id": 222,
       "showDefault": false,
       "tags": [
@@ -11335,6 +11686,7 @@
     },
     {
       "name": "照月改",
+      "kana": "てるづきかい",
       "id": 222,
       "showDefault": true,
       "tags": [
@@ -11378,6 +11730,7 @@
     },
     {
       "name": "初月",
+      "kana": "はつづき",
       "id": 223,
       "showDefault": false,
       "tags": [
@@ -11417,6 +11770,7 @@
     },
     {
       "name": "初月改",
+      "kana": "はつづきかい",
       "id": 223,
       "showDefault": true,
       "tags": [
@@ -11460,6 +11814,7 @@
     },
     {
       "name": "高波",
+      "kana": "たかなみ",
       "id": 224,
       "showDefault": false,
       "tags": [
@@ -11483,6 +11838,7 @@
     },
     {
       "name": "高波改",
+      "kana": "たかなみかい",
       "id": 224,
       "showDefault": false,
       "tags": [
@@ -11506,6 +11862,7 @@
     },
     {
       "name": "朝霜",
+      "kana": "あさしも",
       "id": 225,
       "showDefault": false,
       "tags": [
@@ -11529,6 +11886,7 @@
     },
     {
       "name": "朝霜改",
+      "kana": "あさしもかい",
       "id": 225,
       "showDefault": false,
       "tags": [
@@ -11552,6 +11910,7 @@
     },
     {
       "name": "吹雪改二",
+      "kana": "ふぶきかいに",
       "id": 226,
       "showDefault": true,
       "tags": [
@@ -11575,6 +11934,7 @@
     },
     {
       "name": "鳥海改二",
+      "kana": "ちょうかいかいに",
       "id": 227,
       "showDefault": true,
       "tags": [
@@ -11614,6 +11974,7 @@
     },
     {
       "name": "摩耶改二",
+      "kana": "まやかいに",
       "id": 228,
       "showDefault": true,
       "tags": [
@@ -11657,6 +12018,7 @@
     },
     {
       "name": "天城改",
+      "kana": "あまぎかい",
       "id": 229,
       "showDefault": true,
       "tags": [
@@ -11692,6 +12054,7 @@
     },
     {
       "name": "葛城改",
+      "kana": "かつらぎかい",
       "id": 230,
       "showDefault": true,
       "tags": [
@@ -11727,6 +12090,7 @@
     },
     {
       "name": "U-511",
+      "kana": "U-511",
       "id": 231,
       "showDefault": false,
       "tags": [
@@ -11758,6 +12122,7 @@
     },
     {
       "name": "U-511改",
+      "kana": "U-511かい",
       "id": 231,
       "showDefault": false,
       "tags": [
@@ -11789,6 +12154,7 @@
     },
     {
       "name": "Graf Zeppelin",
+      "kana": "Graf Zeppelin",
       "id": 232,
       "showDefault": false,
       "tags": [
@@ -11824,6 +12190,7 @@
     },
     {
       "name": "Graf Zeppelin改",
+      "kana": "Graf Zeppelinかい",
       "id": 232,
       "showDefault": true,
       "tags": [
@@ -11859,6 +12226,7 @@
     },
     {
       "name": "Saratoga",
+      "kana": "Saratoga",
       "id": 233,
       "showDefault": false,
       "tags": [
@@ -11894,6 +12262,7 @@
     },
     {
       "name": "睦月改二",
+      "kana": "むつきかいに",
       "id": 234,
       "showDefault": true,
       "tags": [
@@ -11921,6 +12290,7 @@
     },
     {
       "name": "如月改二",
+      "kana": "きさらぎかいに",
       "id": 235,
       "showDefault": true,
       "tags": [
@@ -11948,6 +12318,7 @@
     },
     {
       "name": "呂500",
+      "kana": "ろ500",
       "id": 236,
       "showDefault": true,
       "tags": [
@@ -11979,6 +12350,7 @@
     },
     {
       "name": "暁改二",
+      "kana": "あかつきかいに",
       "id": 237,
       "showDefault": true,
       "tags": [
@@ -12002,6 +12374,7 @@
     },
     {
       "name": "Saratoga改",
+      "kana": "Saratogaかい",
       "id": 238,
       "showDefault": false,
       "tags": [
@@ -12037,6 +12410,7 @@
     },
     {
       "name": "Warspite",
+      "kana": "Warspite",
       "id": 239,
       "showDefault": false,
       "tags": [
@@ -12076,6 +12450,7 @@
     },
     {
       "name": "Warspite改",
+      "kana": "Warspiteかい",
       "id": 239,
       "showDefault": true,
       "tags": [
@@ -12115,6 +12490,7 @@
     },
     {
       "name": "Iowa",
+      "kana": "Iowa",
       "id": 240,
       "showDefault": false,
       "tags": [
@@ -12150,6 +12526,7 @@
     },
     {
       "name": "Iowa改",
+      "kana": "Iowaかい",
       "id": 240,
       "showDefault": true,
       "tags": [
@@ -12185,6 +12562,7 @@
     },
     {
       "name": "Littorio",
+      "kana": "Littorio",
       "id": 241,
       "showDefault": false,
       "tags": [
@@ -12220,6 +12598,7 @@
     },
     {
       "name": "Roma",
+      "kana": "Roma",
       "id": 242,
       "showDefault": false,
       "tags": [
@@ -12255,6 +12634,7 @@
     },
     {
       "name": "Libeccio",
+      "kana": "Libeccio",
       "id": 243,
       "showDefault": false,
       "tags": [
@@ -12278,6 +12658,7 @@
     },
     {
       "name": "Libeccio改",
+      "kana": "Libeccioかい",
       "id": 243,
       "showDefault": true,
       "tags": [
@@ -12301,6 +12682,7 @@
     },
     {
       "name": "Aquila",
+      "kana": "Aquila",
       "id": 244,
       "showDefault": false,
       "tags": [
@@ -12336,6 +12718,7 @@
     },
     {
       "name": "Aquila改",
+      "kana": "Aquilaかい",
       "id": 244,
       "showDefault": true,
       "tags": [
@@ -12371,6 +12754,7 @@
     },
     {
       "name": "秋津洲",
+      "kana": "あきつしま",
       "id": 245,
       "showDefault": false,
       "tags": [
@@ -12418,6 +12802,7 @@
     },
     {
       "name": "Italia",
+      "kana": "Italia",
       "id": 246,
       "showDefault": true,
       "tags": [
@@ -12461,6 +12846,7 @@
     },
     {
       "name": "Roma改",
+      "kana": "Romaかい",
       "id": 247,
       "showDefault": true,
       "tags": [
@@ -12504,6 +12890,7 @@
     },
     {
       "name": "Zara",
+      "kana": "Zara",
       "id": 248,
       "showDefault": false,
       "tags": [
@@ -12543,6 +12930,7 @@
     },
     {
       "name": "Zara改",
+      "kana": "Zaraかい",
       "id": 248,
       "showDefault": false,
       "tags": [
@@ -12590,6 +12978,7 @@
     },
     {
       "name": "Pola",
+      "kana": "Pola",
       "id": 249,
       "showDefault": false,
       "tags": [
@@ -12629,6 +13018,7 @@
     },
     {
       "name": "Pola改",
+      "kana": "Polaかい",
       "id": 249,
       "showDefault": true,
       "tags": [
@@ -12676,6 +13066,7 @@
     },
     {
       "name": "秋津洲改",
+      "kana": "あきつしまかい",
       "id": 250,
       "showDefault": true,
       "tags": [
@@ -12731,6 +13122,7 @@
     },
     {
       "name": "瑞穂",
+      "kana": "みずほ",
       "id": 251,
       "showDefault": false,
       "tags": [
@@ -12790,6 +13182,7 @@
     },
     {
       "name": "瑞穂改",
+      "kana": "みずほかい",
       "id": 251,
       "showDefault": true,
       "tags": [
@@ -12849,6 +13242,7 @@
     },
     {
       "name": "沖波",
+      "kana": "おきなみ",
       "id": 252,
       "showDefault": false,
       "tags": [
@@ -12872,6 +13266,7 @@
     },
     {
       "name": "沖波改",
+      "kana": "おきなみかい",
       "id": 252,
       "showDefault": false,
       "tags": [
@@ -12895,6 +13290,7 @@
     },
     {
       "name": "風雲",
+      "kana": "かざぐも",
       "id": 253,
       "showDefault": false,
       "tags": [
@@ -12918,6 +13314,7 @@
     },
     {
       "name": "風雲改",
+      "kana": "かざぐもかい",
       "id": 253,
       "showDefault": false,
       "tags": [
@@ -12941,6 +13338,7 @@
     },
     {
       "name": "嵐",
+      "kana": "あらし",
       "id": 254,
       "showDefault": false,
       "tags": [
@@ -12964,6 +13362,7 @@
     },
     {
       "name": "嵐改",
+      "kana": "あらしかい",
       "id": 254,
       "showDefault": true,
       "tags": [
@@ -12987,6 +13386,7 @@
     },
     {
       "name": "萩風",
+      "kana": "はぎかぜ",
       "id": 255,
       "showDefault": false,
       "tags": [
@@ -13010,6 +13410,7 @@
     },
     {
       "name": "萩風改",
+      "kana": "はぎかぜかい",
       "id": 255,
       "showDefault": true,
       "tags": [
@@ -13033,6 +13434,7 @@
     },
     {
       "name": "親潮",
+      "kana": "おやしお",
       "id": 256,
       "showDefault": false,
       "tags": [
@@ -13056,6 +13458,7 @@
     },
     {
       "name": "親潮改",
+      "kana": "おやしおかい",
       "id": 256,
       "showDefault": false,
       "tags": [
@@ -13079,6 +13482,7 @@
     },
     {
       "name": "山風",
+      "kana": "やまかぜ",
       "id": 257,
       "showDefault": false,
       "tags": [
@@ -13102,6 +13506,7 @@
     },
     {
       "name": "海風",
+      "kana": "うみかぜ",
       "id": 258,
       "showDefault": false,
       "tags": [
@@ -13125,6 +13530,7 @@
     },
     {
       "name": "海風改",
+      "kana": "うみかぜかい",
       "id": 258,
       "showDefault": false,
       "tags": [
@@ -13148,6 +13554,7 @@
     },
     {
       "name": "江風",
+      "kana": "かわかぜ",
       "id": 259,
       "showDefault": false,
       "tags": [
@@ -13171,6 +13578,7 @@
     },
     {
       "name": "江風改",
+      "kana": "かわかぜかい",
       "id": 259,
       "showDefault": false,
       "tags": [
@@ -13194,6 +13602,7 @@
     },
     {
       "name": "速吸",
+      "kana": "はやすい",
       "id": 260,
       "showDefault": false,
       "tags": [
@@ -13229,6 +13638,7 @@
     },
     {
       "name": "速吸改",
+      "kana": "はやすいかい",
       "id": 260,
       "showDefault": true,
       "tags": [
@@ -13276,6 +13686,7 @@
     },
     {
       "name": "翔鶴改二",
+      "kana": "しょうかくかいに",
       "id": 261,
       "showDefault": true,
       "tags": [
@@ -13311,6 +13722,7 @@
     },
     {
       "name": "瑞鶴改二",
+      "kana": "ずいかくかいに",
       "id": 262,
       "showDefault": true,
       "tags": [
@@ -13346,6 +13758,7 @@
     },
     {
       "name": "朝潮改二",
+      "kana": "あさしおかいに",
       "id": 263,
       "showDefault": true,
       "tags": [
@@ -13369,6 +13782,7 @@
     },
     {
       "name": "霞改二",
+      "kana": "かすみかいに",
       "id": 264,
       "showDefault": true,
       "tags": [
@@ -13404,6 +13818,7 @@
     },
     {
       "name": "鹿島",
+      "kana": "かしま",
       "id": 265,
       "showDefault": false,
       "tags": [
@@ -13439,6 +13854,7 @@
     },
     {
       "name": "鹿島改",
+      "kana": "かしまかい",
       "id": 265,
       "showDefault": true,
       "tags": [
@@ -13474,6 +13890,7 @@
     },
     {
       "name": "翔鶴改二甲",
+      "kana": "しょうかくかいにこう",
       "id": 266,
       "showDefault": true,
       "tags": [
@@ -13509,6 +13926,7 @@
     },
     {
       "name": "瑞鶴改二甲",
+      "kana": "ずいかくかいにこう",
       "id": 267,
       "showDefault": true,
       "tags": [
@@ -13544,6 +13962,7 @@
     },
     {
       "name": "朝潮改二丁",
+      "kana": "あさしおかいにてい",
       "id": 268,
       "showDefault": true,
       "tags": [
@@ -13575,6 +13994,7 @@
     },
     {
       "name": "江風改二",
+      "kana": "かわかぜかいに",
       "id": 269,
       "showDefault": true,
       "tags": [
@@ -13602,6 +14022,7 @@
     },
     {
       "name": "霞改二乙",
+      "kana": "かすみかいにおつ",
       "id": 270,
       "showDefault": true,
       "tags": [
@@ -13641,6 +14062,7 @@
     },
     {
       "name": "神風",
+      "kana": "かみかぜ",
       "id": 271,
       "showDefault": false,
       "tags": [
@@ -13664,6 +14086,7 @@
     },
     {
       "name": "朝風",
+      "kana": "あさかぜ",
       "id": 272,
       "showDefault": false,
       "tags": [
@@ -13687,6 +14110,7 @@
     },
     {
       "name": "朝風改",
+      "kana": "あさかぜかい",
       "id": 272,
       "showDefault": true,
       "tags": [
@@ -13710,6 +14134,7 @@
     },
     {
       "name": "春風",
+      "kana": "はるかぜ",
       "id": 273,
       "showDefault": false,
       "tags": [
@@ -13733,6 +14158,7 @@
     },
     {
       "name": "春風改",
+      "kana": "はるかぜかい",
       "id": 273,
       "showDefault": true,
       "tags": [
@@ -13756,6 +14182,7 @@
     },
     {
       "name": "松風",
+      "kana": "まつかぜ",
       "id": 274,
       "showDefault": false,
       "tags": [
@@ -13779,6 +14206,7 @@
     },
     {
       "name": "松風改",
+      "kana": "まつかぜかい",
       "id": 274,
       "showDefault": true,
       "tags": [
@@ -13802,6 +14230,7 @@
     },
     {
       "name": "旗風",
+      "kana": "はたかぜ",
       "id": 275,
       "showDefault": false,
       "tags": [
@@ -13825,6 +14254,7 @@
     },
     {
       "name": "旗風改",
+      "kana": "はたかぜかい",
       "id": 275,
       "showDefault": true,
       "tags": [
@@ -13848,6 +14278,7 @@
     },
     {
       "name": "神風改",
+      "kana": "かみかぜかい",
       "id": 276,
       "showDefault": true,
       "tags": [
@@ -13871,6 +14302,7 @@
     },
     {
       "name": "天龍改二",
+      "kana": "てんりゅうかいに",
       "id": 277,
       "showDefault": true,
       "tags": [
@@ -13906,6 +14338,7 @@
     },
     {
       "name": "龍田改二",
+      "kana": "たつたかいに",
       "id": 278,
       "showDefault": true,
       "tags": [
@@ -13953,6 +14386,7 @@
     },
     {
       "name": "天霧",
+      "kana": "あまぎり",
       "id": 279,
       "showDefault": false,
       "tags": [
@@ -13976,6 +14410,7 @@
     },
     {
       "name": "天霧改",
+      "kana": "あまぎりかい",
       "id": 279,
       "showDefault": false,
       "tags": [
@@ -13999,6 +14434,7 @@
     },
     {
       "name": "狭霧",
+      "kana": "さぎり",
       "id": 280,
       "showDefault": false,
       "tags": [
@@ -14022,6 +14458,7 @@
     },
     {
       "name": "狭霧改",
+      "kana": "さぎりかい",
       "id": 280,
       "showDefault": true,
       "tags": [
@@ -14045,6 +14482,7 @@
     },
     {
       "name": "水無月",
+      "kana": "みなづき",
       "id": 281,
       "showDefault": false,
       "tags": [
@@ -14068,6 +14506,7 @@
     },
     {
       "name": "水無月改",
+      "kana": "みなづきかい",
       "id": 281,
       "showDefault": true,
       "tags": [
@@ -14091,6 +14530,7 @@
     },
     {
       "name": "伊26",
+      "kana": "い26",
       "id": 283,
       "showDefault": false,
       "tags": [
@@ -14122,6 +14562,7 @@
     },
     {
       "name": "伊26改",
+      "kana": "い26かい",
       "id": 283,
       "showDefault": true,
       "tags": [
@@ -14161,6 +14602,7 @@
     },
     {
       "name": "浜波",
+      "kana": "はまなみ",
       "id": 284,
       "showDefault": false,
       "tags": [
@@ -14184,6 +14626,7 @@
     },
     {
       "name": "浜波改",
+      "kana": "はまなみかい",
       "id": 284,
       "showDefault": true,
       "tags": [
@@ -14207,6 +14650,7 @@
     },
     {
       "name": "藤波",
+      "kana": "ふじなみ",
       "id": 285,
       "showDefault": false,
       "tags": [
@@ -14230,6 +14674,7 @@
     },
     {
       "name": "藤波改",
+      "kana": "ふじなみかい",
       "id": 285,
       "showDefault": true,
       "tags": [
@@ -14253,6 +14698,7 @@
     },
     {
       "name": "浦波",
+      "kana": "うらなみ",
       "id": 286,
       "showDefault": false,
       "tags": [
@@ -14276,6 +14722,7 @@
     },
     {
       "name": "浦波改",
+      "kana": "うらなみかい",
       "id": 286,
       "showDefault": false,
       "tags": [
@@ -14299,6 +14746,7 @@
     },
     {
       "name": "鬼怒改二",
+      "kana": "きぬかいに",
       "id": 287,
       "showDefault": true,
       "tags": [
@@ -14342,6 +14790,7 @@
     },
     {
       "name": "由良改二",
+      "kana": "ゆらかいに",
       "id": 288,
       "showDefault": true,
       "tags": [
@@ -14401,6 +14850,7 @@
     },
     {
       "name": "満潮改二",
+      "kana": "みちしおかいに",
       "id": 289,
       "showDefault": true,
       "tags": [
@@ -14432,6 +14882,7 @@
     },
     {
       "name": "荒潮改二",
+      "kana": "あらしおかいに",
       "id": 290,
       "showDefault": true,
       "tags": [
@@ -14463,6 +14914,7 @@
     },
     {
       "name": "Commandant Teste",
+      "kana": "Commandant Teste",
       "id": 291,
       "showDefault": false,
       "tags": [
@@ -14514,6 +14966,7 @@
     },
     {
       "name": "Commandant Teste改",
+      "kana": "Commandant Testeかい",
       "id": 291,
       "showDefault": true,
       "tags": [
@@ -14573,6 +15026,7 @@
     },
     {
       "name": "Richelieu",
+      "kana": "Richelieu",
       "id": 292,
       "showDefault": false,
       "tags": [
@@ -14608,6 +15062,7 @@
     },
     {
       "name": "Richelieu改",
+      "kana": "Richelieuかい",
       "id": 292,
       "showDefault": true,
       "tags": [
@@ -14643,6 +15098,7 @@
     },
     {
       "name": "伊400",
+      "kana": "い400",
       "id": 293,
       "showDefault": false,
       "tags": [
@@ -14682,6 +15138,7 @@
     },
     {
       "name": "伊400改",
+      "kana": "い400かい",
       "id": 293,
       "showDefault": true,
       "tags": [
@@ -14721,6 +15178,7 @@
     },
     {
       "name": "伊13",
+      "kana": "い13",
       "id": 294,
       "showDefault": false,
       "tags": [
@@ -14760,6 +15218,7 @@
     },
     {
       "name": "伊13改",
+      "kana": "い13かい",
       "id": 294,
       "showDefault": true,
       "tags": [
@@ -14799,6 +15258,7 @@
     },
     {
       "name": "伊14",
+      "kana": "い14",
       "id": 295,
       "showDefault": false,
       "tags": [
@@ -14838,6 +15298,7 @@
     },
     {
       "name": "伊14改",
+      "kana": "い14かい",
       "id": 295,
       "showDefault": true,
       "tags": [
@@ -14877,6 +15338,7 @@
     },
     {
       "name": "Zara due",
+      "kana": "Zara due",
       "id": 296,
       "showDefault": true,
       "tags": [
@@ -14924,6 +15386,7 @@
     },
     {
       "name": "白露改二",
+      "kana": "しらつゆかいに",
       "id": 297,
       "showDefault": true,
       "tags": [
@@ -14955,6 +15418,7 @@
     },
     {
       "name": "村雨改二",
+      "kana": "むらさめかいに",
       "id": 298,
       "showDefault": true,
       "tags": [
@@ -14986,6 +15450,7 @@
     },
     {
       "name": "神威改",
+      "kana": "かもいかい",
       "id": 299,
       "showDefault": false,
       "tags": [
@@ -15045,6 +15510,7 @@
     },
     {
       "name": "神威改母",
+      "kana": "かもいかいぼ",
       "id": 300,
       "showDefault": true,
       "tags": [
@@ -15100,6 +15566,7 @@
     },
     {
       "name": "最上改二",
+      "kana": "もがみかいに",
       "id": 301,
       "showDefault": true,
       "tags": [
@@ -15155,6 +15622,7 @@
     },
     {
       "name": "鈴谷改二",
+      "kana": "すずやかいに",
       "id": 303,
       "showDefault": true,
       "tags": [
@@ -15210,6 +15678,7 @@
     },
     {
       "name": "熊野改二",
+      "kana": "くまのかいに",
       "id": 304,
       "showDefault": true,
       "tags": [
@@ -15265,6 +15734,7 @@
     },
     {
       "name": "最上改二特",
+      "kana": "もがみかいにとく",
       "id": 306,
       "showDefault": true,
       "tags": [
@@ -15332,6 +15802,7 @@
     },
     {
       "name": "鈴谷航改二",
+      "kana": "すずやこうかいに",
       "id": 308,
       "showDefault": true,
       "tags": [
@@ -15383,6 +15854,7 @@
     },
     {
       "name": "熊野航改二",
+      "kana": "くまのこうかいに",
       "id": 309,
       "showDefault": true,
       "tags": [
@@ -15434,6 +15906,7 @@
     },
     {
       "name": "Гангут",
+      "kana": "Гангут",
       "id": 311,
       "showDefault": false,
       "tags": [
@@ -15469,6 +15942,7 @@
     },
     {
       "name": "Октябрьская революция",
+      "kana": "Октябрьская революция",
       "id": 312,
       "showDefault": false,
       "tags": [
@@ -15504,6 +15978,7 @@
     },
     {
       "name": "Ташкент",
+      "kana": "Ташкент",
       "id": 313,
       "showDefault": false,
       "tags": [
@@ -15527,6 +16002,7 @@
     },
     {
       "name": "Ташкент改",
+      "kana": "Ташкентかい",
       "id": 313,
       "showDefault": true,
       "tags": [
@@ -15550,6 +16026,7 @@
     },
     {
       "name": "Sheffireld",
+      "kana": "Sheffireld",
       "id": 314,
       "showDefault": false,
       "tags": [
@@ -15585,6 +16062,7 @@
     },
     {
       "name": "Sheffireld改",
+      "kana": "Sheffireldかい",
       "id": 314,
       "showDefault": true,
       "tags": [
@@ -15620,6 +16098,7 @@
     },
     {
       "name": "Ark Royal",
+      "kana": "Ark Royal",
       "id": 315,
       "showDefault": false,
       "tags": [
@@ -15659,6 +16138,7 @@
     },
     {
       "name": "Ark Royal改",
+      "kana": "Ark Royalかい",
       "id": 315,
       "showDefault": true,
       "tags": [
@@ -15698,6 +16178,7 @@
     },
     {
       "name": "Гангут два",
+      "kana": "Гангут два",
       "id": 316,
       "showDefault": true,
       "tags": [
@@ -15733,6 +16214,7 @@
     },
     {
       "name": "占守",
+      "kana": "しむしゅ",
       "id": 317,
       "showDefault": false,
       "tags": [
@@ -15756,6 +16238,7 @@
     },
     {
       "name": "占守改",
+      "kana": "しむしゅかい",
       "id": 317,
       "showDefault": true,
       "tags": [
@@ -15779,6 +16262,7 @@
     },
     {
       "name": "国後",
+      "kana": "くなしり",
       "id": 318,
       "showDefault": false,
       "tags": [
@@ -15802,6 +16286,7 @@
     },
     {
       "name": "国後改",
+      "kana": "くなしりかい",
       "id": 318,
       "showDefault": true,
       "tags": [
@@ -15825,6 +16310,7 @@
     },
     {
       "name": "Jervis",
+      "kana": "Jervis",
       "id": 319,
       "showDefault": false,
       "tags": [
@@ -15852,6 +16338,7 @@
     },
     {
       "name": "Jervis改",
+      "kana": "Jervisかい",
       "id": 319,
       "showDefault": true,
       "tags": [
@@ -15883,6 +16370,7 @@
     },
     {
       "name": "Janus",
+      "kana": "Janus",
       "id": 320,
       "showDefault": false,
       "tags": [
@@ -15910,6 +16398,7 @@
     },
     {
       "name": "Janus改",
+      "kana": "Janusかい",
       "id": 320,
       "showDefault": true,
       "tags": [
@@ -15941,6 +16430,7 @@
     },
     {
       "name": "春日丸",
+      "kana": "かすがまる",
       "id": 321,
       "showDefault": false,
       "tags": [
@@ -15972,6 +16462,7 @@
     },
     {
       "name": "八幡丸",
+      "kana": "やわたまる",
       "id": 322,
       "showDefault": false,
       "tags": [
@@ -16003,6 +16494,7 @@
     },
     {
       "name": "神鷹",
+      "kana": "しんよう",
       "id": 324,
       "showDefault": false,
       "tags": [
@@ -16038,6 +16530,7 @@
     },
     {
       "name": "神鷹改",
+      "kana": "しんようかい",
       "id": 324,
       "showDefault": false,
       "tags": [
@@ -16077,6 +16570,7 @@
     },
     {
       "name": "Luigi Torelli",
+      "kana": "Luigi Torelli",
       "id": 325,
       "showDefault": false,
       "tags": [
@@ -16108,6 +16602,7 @@
     },
     {
       "name": "Luigi Torelli改",
+      "kana": "Luigi Torelliかい",
       "id": 325,
       "showDefault": false,
       "tags": [
@@ -16135,6 +16630,7 @@
     },
     {
       "name": "大鷹",
+      "kana": "たいよう",
       "id": 326,
       "showDefault": false,
       "tags": [
@@ -16170,6 +16666,7 @@
     },
     {
       "name": "大鷹改",
+      "kana": "たいようかい",
       "id": 326,
       "showDefault": false,
       "tags": [
@@ -16209,6 +16706,7 @@
     },
     {
       "name": "岸波",
+      "kana": "きしなみ",
       "id": 327,
       "showDefault": false,
       "tags": [
@@ -16232,6 +16730,7 @@
     },
     {
       "name": "岸波改",
+      "kana": "きしなみかい",
       "id": 327,
       "showDefault": true,
       "tags": [
@@ -16255,6 +16754,7 @@
     },
     {
       "name": "早波",
+      "kana": "はやなみ",
       "id": 328,
       "showDefault": false,
       "tags": [
@@ -16278,6 +16778,7 @@
     },
     {
       "name": "早波改",
+      "kana": "はやなみかい",
       "id": 328,
       "showDefault": true,
       "tags": [
@@ -16301,6 +16802,7 @@
     },
     {
       "name": "UIT-25",
+      "kana": "UIT-25",
       "id": 329,
       "showDefault": false,
       "tags": [
@@ -16332,6 +16834,7 @@
     },
     {
       "name": "伊504",
+      "kana": "い504",
       "id": 330,
       "showDefault": true,
       "tags": [
@@ -16367,6 +16870,7 @@
     },
     {
       "name": "大鷹改二",
+      "kana": "たいようかいに",
       "id": 331,
       "showDefault": true,
       "tags": [
@@ -16414,6 +16918,7 @@
     },
     {
       "name": "涼月",
+      "kana": "すずつき",
       "id": 332,
       "showDefault": false,
       "tags": [
@@ -16453,6 +16958,7 @@
     },
     {
       "name": "冬月",
+      "kana": "ふゆつき",
       "id": 333,
       "showDefault": false,
       "tags": [
@@ -16492,6 +16998,7 @@
     },
     {
       "name": "択捉",
+      "kana": "えとろふ",
       "id": 334,
       "showDefault": false,
       "tags": [
@@ -16515,6 +17022,7 @@
     },
     {
       "name": "択捉改",
+      "kana": "えとろふかい",
       "id": 334,
       "showDefault": true,
       "tags": [
@@ -16538,6 +17046,7 @@
     },
     {
       "name": "松輪",
+      "kana": "まつわ",
       "id": 335,
       "showDefault": false,
       "tags": [
@@ -16561,6 +17070,7 @@
     },
     {
       "name": "松輪改",
+      "kana": "まつわかい",
       "id": 335,
       "showDefault": true,
       "tags": [
@@ -16584,6 +17094,7 @@
     },
     {
       "name": "神鷹改二",
+      "kana": "しんようかいに",
       "id": 336,
       "showDefault": true,
       "tags": [
@@ -16631,6 +17142,7 @@
     },
     {
       "name": "涼月改",
+      "kana": "すずつきかい",
       "id": 337,
       "showDefault": true,
       "tags": [
@@ -16674,6 +17186,7 @@
     },
     {
       "name": "冬月改",
+      "kana": "ふゆつきかい",
       "id": 338,
       "showDefault": true,
       "tags": [
@@ -16717,6 +17230,7 @@
     },
     {
       "name": "佐渡",
+      "kana": "さど",
       "id": 339,
       "showDefault": false,
       "tags": [
@@ -16740,6 +17254,7 @@
     },
     {
       "name": "佐渡改",
+      "kana": "さどかい",
       "id": 339,
       "showDefault": true,
       "tags": [
@@ -16763,6 +17278,7 @@
     },
     {
       "name": "対馬",
+      "kana": "つしま",
       "id": 340,
       "showDefault": false,
       "tags": [
@@ -16786,6 +17302,7 @@
     },
     {
       "name": "対馬改",
+      "kana": "つしまかい",
       "id": 340,
       "showDefault": true,
       "tags": [
@@ -16809,6 +17326,7 @@
     },
     {
       "name": "長門改二",
+      "kana": "ながとかいに",
       "id": 341,
       "showDefault": true,
       "tags": [
@@ -16860,6 +17378,7 @@
     },
     {
       "name": "夕雲改二",
+      "kana": "ゆうぐもかいに",
       "id": 342,
       "showDefault": true,
       "tags": [
@@ -16891,6 +17410,7 @@
     },
     {
       "name": "長波改二",
+      "kana": "ながなみかいに",
       "id": 343,
       "showDefault": true,
       "tags": [
@@ -16922,6 +17442,7 @@
     },
     {
       "name": "Gambier Bay",
+      "kana": "Gambier Bay",
       "id": 344,
       "showDefault": false,
       "tags": [
@@ -16969,6 +17490,7 @@
     },
     {
       "name": "Gambier Bay改",
+      "kana": "Gambier Bayかい",
       "id": 344,
       "showDefault": false,
       "tags": [
@@ -17016,6 +17538,7 @@
     },
     {
       "name": "Saratoga Mk.II",
+      "kana": "Saratoga Mk.II",
       "id": 345,
       "showDefault": true,
       "tags": [
@@ -17051,6 +17574,7 @@
     },
     {
       "name": "武蔵改二",
+      "kana": "むさしかいに",
       "id": 346,
       "showDefault": true,
       "tags": [
@@ -17106,6 +17630,7 @@
     },
     {
       "name": "多摩改二",
+      "kana": "たまかいに",
       "id": 347,
       "showDefault": true,
       "tags": [
@@ -17161,6 +17686,7 @@
     },
     {
       "name": "文月改二",
+      "kana": "ふみづきかいに",
       "id": 348,
       "showDefault": true,
       "tags": [
@@ -17196,6 +17722,7 @@
     },
     {
       "name": "Intrepid",
+      "kana": "Intrepid",
       "id": 349,
       "showDefault": false,
       "tags": [
@@ -17231,6 +17758,7 @@
     },
     {
       "name": "Intrepid改",
+      "kana": "Intrepidかい",
       "id": 349,
       "showDefault": true,
       "tags": [
@@ -17266,6 +17794,7 @@
     },
     {
       "name": "Saratoga Mk.II Mod.2",
+      "kana": "Saratoga Mk.II Mod.2",
       "id": 350,
       "showDefault": true,
       "tags": [
@@ -17301,6 +17830,7 @@
     },
     {
       "name": "日振",
+      "kana": "ひぶり",
       "id": 351,
       "showDefault": false,
       "tags": [
@@ -17324,6 +17854,7 @@
     },
     {
       "name": "日振改",
+      "kana": "ひぶりかい",
       "id": 351,
       "showDefault": true,
       "tags": [
@@ -17347,6 +17878,7 @@
     },
     {
       "name": "大東",
+      "kana": "だいとう",
       "id": 352,
       "showDefault": false,
       "tags": [
@@ -17370,6 +17902,7 @@
     },
     {
       "name": "大東改",
+      "kana": "だいとうかい",
       "id": 352,
       "showDefault": true,
       "tags": [
@@ -17393,6 +17926,7 @@
     },
     {
       "name": "伊勢改二",
+      "kana": "いせかいに",
       "id": 353,
       "showDefault": true,
       "tags": [
@@ -17448,6 +17982,7 @@
     },
     {
       "name": "日向改二",
+      "kana": "ひゅうがかいに",
       "id": 354,
       "showDefault": true,
       "tags": [
@@ -17503,6 +18038,7 @@
     },
     {
       "name": "瑞鳳改二",
+      "kana": "ずいほうかいに",
       "id": 355,
       "showDefault": true,
       "tags": [
@@ -17550,6 +18086,7 @@
     },
     {
       "name": "浦風丁改",
+      "kana": "うらかぜていかい",
       "id": 356,
       "showDefault": true,
       "tags": [
@@ -17573,6 +18110,7 @@
     },
     {
       "name": "磯風乙改",
+      "kana": "いそかぜおつかい",
       "id": 357,
       "showDefault": true,
       "tags": [
@@ -17600,6 +18138,7 @@
     },
     {
       "name": "浜風乙改",
+      "kana": "はまかぜおつかい",
       "id": 358,
       "showDefault": true,
       "tags": [
@@ -17627,6 +18166,7 @@
     },
     {
       "name": "谷風丁改",
+      "kana": "たにかぜていかい",
       "id": 359,
       "showDefault": true,
       "tags": [
@@ -17650,6 +18190,7 @@
     },
     {
       "name": "瑞鳳改二乙",
+      "kana": "ずいほうかいにおつ",
       "id": 360,
       "showDefault": true,
       "tags": [
@@ -17697,6 +18238,7 @@
     },
     {
       "name": "Samuel B.Roberts",
+      "kana": "Samuel B.Roberts",
       "id": 361,
       "showDefault": false,
       "tags": [
@@ -17720,6 +18262,7 @@
     },
     {
       "name": "Samuel B.Roberts改",
+      "kana": "Samuel B.Robertsかい",
       "id": 361,
       "showDefault": false,
       "tags": [
@@ -17747,6 +18290,7 @@
     },
     {
       "name": "Johnston",
+      "kana": "Johnston",
       "id": 362,
       "showDefault": false,
       "tags": [
@@ -17778,6 +18322,7 @@
     },
     {
       "name": "Johnston改",
+      "kana": "Johnstonかい",
       "id": 362,
       "showDefault": true,
       "tags": [
@@ -17809,6 +18354,7 @@
     },
     {
       "name": "巻雲改二",
+      "kana": "まきぐもかいに",
       "id": 363,
       "showDefault": true,
       "tags": [
@@ -17840,6 +18386,7 @@
     },
     {
       "name": "風雲改二",
+      "kana": "かざぐもかいに",
       "id": 364,
       "showDefault": true,
       "tags": [
@@ -17871,6 +18418,7 @@
     },
     {
       "name": "福江",
+      "kana": "ふかえ",
       "id": 365,
       "showDefault": false,
       "tags": [
@@ -17894,6 +18442,7 @@
     },
     {
       "name": "福江改",
+      "kana": "ふかえかい",
       "id": 365,
       "showDefault": true,
       "tags": [
@@ -17917,6 +18466,7 @@
     },
     {
       "name": "陽炎改二",
+      "kana": "かげろうかいに",
       "id": 366,
       "showDefault": true,
       "tags": [
@@ -17944,6 +18494,7 @@
     },
     {
       "name": "不知火改二",
+      "kana": "しらぬいかいに",
       "id": 367,
       "showDefault": true,
       "tags": [
@@ -17975,6 +18526,7 @@
     },
     {
       "name": "黒潮改二",
+      "kana": "くろしおかいに",
       "id": 368,
       "showDefault": true,
       "tags": [
@@ -18006,6 +18558,7 @@
     },
     {
       "name": "沖波改二",
+      "kana": "おきなみかいに",
       "id": 369,
       "showDefault": true,
       "tags": [
@@ -18037,6 +18590,7 @@
     },
     {
       "name": "平戸",
+      "kana": "ひらと",
       "id": 370,
       "showDefault": false,
       "tags": [
@@ -18060,6 +18614,7 @@
     },
     {
       "name": "平戸改",
+      "kana": "ひらとかい",
       "id": 370,
       "showDefault": true,
       "tags": [
@@ -18083,6 +18638,7 @@
     },
     {
       "name": "Nelson",
+      "kana": "Nelson",
       "id": 371,
       "showDefault": false,
       "tags": [
@@ -18122,6 +18678,7 @@
     },
     {
       "name": "陸奥改二",
+      "kana": "むつかいに",
       "id": 373,
       "showDefault": true,
       "tags": [
@@ -18173,6 +18730,7 @@
     },
     {
       "name": "Gotland",
+      "kana": "Gotland",
       "id": 374,
       "showDefault": false,
       "tags": [
@@ -18208,6 +18766,7 @@
     },
     {
       "name": "Maestrale",
+      "kana": "Maestrale",
       "id": 375,
       "showDefault": false,
       "tags": [
@@ -18231,6 +18790,7 @@
     },
     {
       "name": "Nelson改",
+      "kana": "Nelsonかい",
       "id": 376,
       "showDefault": true,
       "tags": [
@@ -18270,6 +18830,7 @@
     },
     {
       "name": "朝霜改二",
+      "kana": "あさしもかいに",
       "id": 378,
       "showDefault": true,
       "tags": [
@@ -18301,6 +18862,7 @@
     },
     {
       "name": "Gotland改",
+      "kana": "Gotlandかい",
       "id": 379,
       "showDefault": false,
       "tags": [
@@ -18344,6 +18906,7 @@
     },
     {
       "name": "Maestrale改",
+      "kana": "Maestraleかい",
       "id": 380,
       "showDefault": true,
       "tags": [
@@ -18367,6 +18930,7 @@
     },
     {
       "name": "日進",
+      "kana": "にっしん",
       "id": 381,
       "showDefault": false,
       "tags": [
@@ -18414,6 +18978,7 @@
     },
     {
       "name": "日進改",
+      "kana": "にっしんかい",
       "id": 381,
       "showDefault": false,
       "tags": [
@@ -18477,6 +19042,7 @@
     },
     {
       "name": "峯雲",
+      "kana": "みねぐも",
       "id": 383,
       "showDefault": false,
       "tags": [
@@ -18500,6 +19066,7 @@
     },
     {
       "name": "峯雲改",
+      "kana": "みねぐもかい",
       "id": 383,
       "showDefault": true,
       "tags": [
@@ -18523,6 +19090,7 @@
     },
     {
       "name": "八丈",
+      "kana": "はちじょう",
       "id": 384,
       "showDefault": false,
       "tags": [
@@ -18546,6 +19114,7 @@
     },
     {
       "name": "八丈改",
+      "kana": "はちじょうかい",
       "id": 384,
       "showDefault": true,
       "tags": [
@@ -18569,6 +19138,7 @@
     },
     {
       "name": "石垣",
+      "kana": "いしがき",
       "id": 385,
       "showDefault": false,
       "tags": [
@@ -18592,6 +19162,7 @@
     },
     {
       "name": "石垣改",
+      "kana": "いしがきかい",
       "id": 385,
       "showDefault": true,
       "tags": [
@@ -18615,6 +19186,7 @@
     },
     {
       "name": "日進甲",
+      "kana": "にっしんこう",
       "id": 386,
       "showDefault": true,
       "tags": [
@@ -18678,6 +19250,7 @@
     },
     {
       "name": "海風改二",
+      "kana": "うみかぜかいに",
       "id": 387,
       "showDefault": true,
       "tags": [
@@ -18713,6 +19286,7 @@
     },
     {
       "name": "山風改二",
+      "kana": "やまかぜかいに",
       "id": 388,
       "showDefault": true,
       "tags": [
@@ -18740,6 +19314,7 @@
     },
     {
       "name": "L.d.S.D.d.Abruzzi",
+      "kana": "L.d.S.D.d.Abruzzi",
       "id": 389,
       "showDefault": false,
       "tags": [
@@ -18771,6 +19346,7 @@
     },
     {
       "name": "L.d.S.D.d.Abruzzi改",
+      "kana": "L.d.S.D.d.Abruzziかい",
       "id": 389,
       "showDefault": true,
       "tags": [
@@ -18802,6 +19378,7 @@
     },
     {
       "name": "G.Garibaldi",
+      "kana": "G.Garibaldi",
       "id": 390,
       "showDefault": false,
       "tags": [
@@ -18833,6 +19410,7 @@
     },
     {
       "name": "G.Garibaldi改",
+      "kana": "G.Garibaldiかい",
       "id": 390,
       "showDefault": true,
       "tags": [
@@ -18864,6 +19442,7 @@
     },
     {
       "name": "金剛改二丙",
+      "kana": "こんごうかいにへい",
       "id": 391,
       "showDefault": true,
       "tags": [
@@ -18911,6 +19490,7 @@
     },
     {
       "name": "比叡改二丙",
+      "kana": "ひえいかいにへい",
       "id": 392,
       "showDefault": true,
       "tags": [
@@ -18958,6 +19538,7 @@
     },
     {
       "name": "Houston",
+      "kana": "Houston",
       "id": 395,
       "showDefault": false,
       "tags": [
@@ -18997,6 +19578,7 @@
     },
     {
       "name": "Fletcher",
+      "kana": "Fletcher",
       "id": 396,
       "showDefault": false,
       "tags": [
@@ -19028,6 +19610,7 @@
     },
     {
       "name": "Fletcher改",
+      "kana": "Fletcherかい",
       "id": 396,
       "showDefault": false,
       "tags": [
@@ -19059,6 +19642,7 @@
     },
     {
       "name": "Atlanta",
+      "kana": "Atlanta",
       "id": 397,
       "showDefault": false,
       "tags": [
@@ -19094,6 +19678,7 @@
     },
     {
       "name": "Atlanta改",
+      "kana": "Atlantaかい",
       "id": 397,
       "showDefault": true,
       "tags": [
@@ -19129,6 +19714,7 @@
     },
     {
       "name": "Honolulu",
+      "kana": "Honolulu",
       "id": 398,
       "showDefault": false,
       "tags": [
@@ -19160,6 +19746,7 @@
     },
     {
       "name": "Honolulu改",
+      "kana": "Honoluluかい",
       "id": 398,
       "showDefault": true,
       "tags": [
@@ -19191,6 +19778,7 @@
     },
     {
       "name": "De Ruyter",
+      "kana": "De Ruyter",
       "id": 399,
       "showDefault": false,
       "tags": [
@@ -19222,6 +19810,7 @@
     },
     {
       "name": "De Ruyter改",
+      "kana": "De Ruyterかい",
       "id": 399,
       "showDefault": true,
       "tags": [
@@ -19253,6 +19842,7 @@
     },
     {
       "name": "Houston改",
+      "kana": "Houstonかい",
       "id": 400,
       "showDefault": true,
       "tags": [
@@ -19292,6 +19882,7 @@
     },
     {
       "name": "Colorado",
+      "kana": "Colorado",
       "id": 401,
       "showDefault": false,
       "tags": [
@@ -19331,6 +19922,7 @@
     },
     {
       "name": "South Dakota",
+      "kana": "South Dakota",
       "id": 402,
       "showDefault": false,
       "tags": [
@@ -19366,6 +19958,7 @@
     },
     {
       "name": "Hornet",
+      "kana": "Hornet",
       "id": 403,
       "showDefault": false,
       "tags": [
@@ -19401,6 +19994,7 @@
     },
     {
       "name": "Hornet改",
+      "kana": "Hornetかい",
       "id": 403,
       "showDefault": true,
       "tags": [
@@ -19436,6 +20030,7 @@
     },
     {
       "name": "赤城改二",
+      "kana": "あかぎかいに",
       "id": 404,
       "showDefault": true,
       "tags": [
@@ -19471,6 +20066,7 @@
     },
     {
       "name": "加賀改二",
+      "kana": "かがかいに",
       "id": 405,
       "showDefault": true,
       "tags": [
@@ -19506,6 +20102,7 @@
     },
     {
       "name": "Colorado改",
+      "kana": "Coloradoかい",
       "id": 406,
       "showDefault": true,
       "tags": [
@@ -19545,6 +20142,7 @@
     },
     {
       "name": "South Dakota改",
+      "kana": "South Dakotaかい",
       "id": 407,
       "showDefault": true,
       "tags": [
@@ -19580,6 +20178,7 @@
     },
     {
       "name": "宗谷",
+      "kana": "そうや",
       "id": 408,
       "showDefault": true,
       "tags": [
@@ -19619,6 +20218,7 @@
     },
     {
       "name": "赤城改二戊",
+      "kana": "あかぎかいにぼ",
       "id": 409,
       "showDefault": true,
       "tags": [
@@ -19654,6 +20254,7 @@
     },
     {
       "name": "加賀改二戊",
+      "kana": "かがかいにぼ",
       "id": 410,
       "showDefault": true,
       "tags": [
@@ -19689,6 +20290,7 @@
     },
     {
       "name": "御蔵",
+      "kana": "みくら",
       "id": 411,
       "showDefault": false,
       "tags": [
@@ -19712,6 +20314,7 @@
     },
     {
       "name": "屋代",
+      "kana": "やしろ",
       "id": 412,
       "showDefault": false,
       "tags": [
@@ -19735,6 +20338,7 @@
     },
     {
       "name": "Perth",
+      "kana": "Perth",
       "id": 413,
       "showDefault": false,
       "tags": [
@@ -19766,6 +20370,7 @@
     },
     {
       "name": "Grecale",
+      "kana": "Grecale",
       "id": 414,
       "showDefault": false,
       "tags": [
@@ -19789,6 +20394,7 @@
     },
     {
       "name": "Helena",
+      "kana": "Helena",
       "id": 415,
       "showDefault": false,
       "tags": [
@@ -19820,6 +20426,7 @@
     },
     {
       "name": "御蔵改",
+      "kana": "みくらかい",
       "id": 416,
       "showDefault": true,
       "tags": [
@@ -19843,6 +20450,7 @@
     },
     {
       "name": "屋代改",
+      "kana": "やしろかい",
       "id": 417,
       "showDefault": true,
       "tags": [
@@ -19866,6 +20474,7 @@
     },
     {
       "name": "Perth改",
+      "kana": "Perthかい",
       "id": 418,
       "showDefault": true,
       "tags": [
@@ -19897,6 +20506,7 @@
     },
     {
       "name": "Grecale改",
+      "kana": "Grecaleかい",
       "id": 419,
       "showDefault": true,
       "tags": [
@@ -19920,6 +20530,7 @@
     },
     {
       "name": "Helena改",
+      "kana": "Helenaかい",
       "id": 420,
       "showDefault": false,
       "tags": [
@@ -19951,6 +20562,7 @@
     },
     {
       "name": "神州丸",
+      "kana": "しんしゅうまる",
       "id": 421,
       "showDefault": false,
       "tags": [
@@ -19998,6 +20610,7 @@
     },
     {
       "name": "夕張改二",
+      "kana": "ゆうばりかいに",
       "id": 422,
       "showDefault": true,
       "tags": [
@@ -20033,6 +20646,7 @@
     },
     {
       "name": "夕張改二特",
+      "kana": "ゆうばりかいにとく",
       "id": 423,
       "showDefault": true,
       "tags": [
@@ -20072,6 +20686,7 @@
     },
     {
       "name": "夕張改二丁",
+      "kana": "ゆうばりかいにてい",
       "id": 424,
       "showDefault": true,
       "tags": [
@@ -20107,6 +20722,7 @@
     },
     {
       "name": "秋霜",
+      "kana": "あきしも",
       "id": 425,
       "showDefault": false,
       "tags": [
@@ -20130,6 +20746,7 @@
     },
     {
       "name": "秋霜改",
+      "kana": "あきしもかい",
       "id": 425,
       "showDefault": true,
       "tags": [
@@ -20153,6 +20770,7 @@
     },
     {
       "name": "神州丸改",
+      "kana": "しんしゅうまるかい",
       "id": 426,
       "showDefault": true,
       "tags": [
@@ -20212,6 +20830,7 @@
     },
     {
       "name": "敷波改二",
+      "kana": "しきなみかいに",
       "id": 427,
       "showDefault": true,
       "tags": [
@@ -20235,6 +20854,7 @@
     },
     {
       "name": "Fletcher改 Mod.2",
+      "kana": "Fletcherかい Mod.2",
       "id": 428,
       "showDefault": true,
       "tags": [
@@ -20270,6 +20890,7 @@
     },
     {
       "name": "Fletcher Mk.II",
+      "kana": "Fletcher Mk.II",
       "id": 429,
       "showDefault": true,
       "tags": [
@@ -20313,6 +20934,7 @@
     },
     {
       "name": "Gotland andra",
+      "kana": "Gotland andra",
       "id": 430,
       "showDefault": true,
       "tags": [
@@ -20364,6 +20986,7 @@
     },
     {
       "name": "薄雲",
+      "kana": "うすぐも",
       "id": 431,
       "showDefault": false,
       "tags": [
@@ -20387,6 +21010,7 @@
     },
     {
       "name": "薄雲改",
+      "kana": "うすぐもかい",
       "id": 431,
       "showDefault": true,
       "tags": [
@@ -20410,6 +21034,7 @@
     },
     {
       "name": "有明",
+      "kana": "ありあけ",
       "id": 432,
       "showDefault": false,
       "tags": [
@@ -20433,6 +21058,7 @@
     },
     {
       "name": "有明改",
+      "kana": "ありあけかい",
       "id": 432,
       "showDefault": true,
       "tags": [
@@ -20460,6 +21086,7 @@
     },
     {
       "name": "迅鯨",
+      "kana": "じんげい",
       "id": 434,
       "showDefault": false,
       "tags": [
@@ -20507,6 +21134,7 @@
     },
     {
       "name": "長鯨",
+      "kana": "ちょうげい",
       "id": 435,
       "showDefault": false,
       "tags": [
@@ -20554,6 +21182,7 @@
     },
     {
       "name": "伊47",
+      "kana": "い47",
       "id": 436,
       "showDefault": false,
       "tags": [
@@ -20585,6 +21214,7 @@
     },
     {
       "name": "伊47改",
+      "kana": "い47かい",
       "id": 436,
       "showDefault": true,
       "tags": [
@@ -20616,6 +21246,7 @@
     },
     {
       "name": "第四号海防艦",
+      "kana": "だいよんごうかいぼうかん",
       "id": 437,
       "showDefault": false,
       "tags": [
@@ -20639,6 +21270,7 @@
     },
     {
       "name": "第四号海防艦改",
+      "kana": "だいよんごうかいぼうかんかい",
       "id": 437,
       "showDefault": true,
       "tags": [
@@ -20662,6 +21294,7 @@
     },
     {
       "name": "第三〇号海防艦",
+      "kana": "だいさんじゅうごうかいぼうかん",
       "id": 438,
       "showDefault": false,
       "tags": [
@@ -20685,6 +21318,7 @@
     },
     {
       "name": "第三〇号海防艦改",
+      "kana": "だいさんじゅうごうかいぼうかんかい",
       "id": 438,
       "showDefault": true,
       "tags": [
@@ -20708,6 +21342,7 @@
     },
     {
       "name": "迅鯨改",
+      "kana": "じんげいかい",
       "id": 439,
       "showDefault": true,
       "tags": [
@@ -20759,6 +21394,7 @@
     },
     {
       "name": "長鯨改",
+      "kana": "ちょうげいかい",
       "id": 440,
       "showDefault": true,
       "tags": [
@@ -20810,6 +21446,7 @@
     },
     {
       "name": "松",
+      "kana": "まつ",
       "id": 441,
       "showDefault": false,
       "tags": [
@@ -20833,6 +21470,7 @@
     },
     {
       "name": "松改",
+      "kana": "まつかい",
       "id": 441,
       "showDefault": true,
       "tags": [
@@ -20856,6 +21494,7 @@
     },
     {
       "name": "竹",
+      "kana": "たけ",
       "id": 442,
       "showDefault": false,
       "tags": [
@@ -20879,6 +21518,7 @@
     },
     {
       "name": "竹改",
+      "kana": "たけかい",
       "id": 442,
       "showDefault": true,
       "tags": [
@@ -20902,6 +21542,7 @@
     },
     {
       "name": "梅",
+      "kana": "うめ",
       "id": 443,
       "showDefault": false,
       "tags": [
@@ -20925,6 +21566,7 @@
     },
     {
       "name": "梅改",
+      "kana": "うめかい",
       "id": 443,
       "showDefault": true,
       "tags": [
@@ -20952,6 +21594,7 @@
     },
     {
       "name": "桃",
+      "kana": "もも",
       "id": 444,
       "showDefault": false,
       "tags": [
@@ -20975,6 +21618,7 @@
     },
     {
       "name": "桃改",
+      "kana": "ももかい",
       "id": 444,
       "showDefault": true,
       "tags": [
@@ -20998,6 +21642,7 @@
     },
     {
       "name": "宗谷(灯台補給船)",
+      "kana": "そうや",
       "id": 445,
       "showDefault": true,
       "tags": [
@@ -21037,6 +21682,7 @@
     },
     {
       "name": "加賀改二護",
+      "kana": "かがかいにご",
       "id": 446,
       "showDefault": true,
       "tags": [
@@ -21080,6 +21726,7 @@
     },
     {
       "name": "浦波改二",
+      "kana": "うらなみかいに",
       "id": 447,
       "showDefault": true,
       "tags": [
@@ -21111,6 +21758,7 @@
     },
     {
       "name": "秋雲改二",
+      "kana": "あきぐもかいに",
       "id": 448,
       "showDefault": true,
       "tags": [
@@ -21134,6 +21782,7 @@
     },
     {
       "name": "高波改二",
+      "kana": "たかなみかいに",
       "id": 449,
       "showDefault": true,
       "tags": [
@@ -21165,6 +21814,7 @@
     },
     {
       "name": "宗谷(南極観測船)",
+      "kana": "そうや",
       "id": 450,
       "showDefault": true,
       "tags": [
@@ -21208,6 +21858,7 @@
     },
     {
       "name": "丹陽",
+      "kana": "だんやん",
       "id": 451,
       "showDefault": true,
       "tags": [
@@ -21235,6 +21886,7 @@
     },
     {
       "name": "球磨改二",
+      "kana": "くまかいに",
       "id": 452,
       "showDefault": true,
       "tags": [
@@ -21278,6 +21930,7 @@
     },
     {
       "name": "Scirocco",
+      "kana": "Scirocco",
       "id": 453,
       "showDefault": false,
       "tags": [
@@ -21301,6 +21954,7 @@
     },
     {
       "name": "Scirocco改",
+      "kana": "Sciroccoかい",
       "id": 453,
       "showDefault": true,
       "tags": [
@@ -21324,6 +21978,7 @@
     },
     {
       "name": "Washington",
+      "kana": "Washington",
       "id": 454,
       "showDefault": false,
       "tags": [
@@ -21359,6 +22014,7 @@
     },
     {
       "name": "Northampton",
+      "kana": "Northampton",
       "id": 455,
       "showDefault": false,
       "tags": [
@@ -21398,6 +22054,7 @@
     },
     {
       "name": "雪風改二",
+      "kana": "ゆきかぜかいに",
       "id": 456,
       "showDefault": true,
       "tags": [
@@ -21433,6 +22090,7 @@
     },
     {
       "name": "球磨改二丁",
+      "kana": "くまかいにてい",
       "id": 457,
       "showDefault": true,
       "tags": [
@@ -21480,6 +22138,7 @@
     },
     {
       "name": "Gambier Bay Mk.II",
+      "kana": "Gambier Bay Mk.II",
       "id": 458,
       "showDefault": true,
       "tags": [
@@ -21531,6 +22190,7 @@
     },
     {
       "name": "Washington改",
+      "kana": "Washingtonかい",
       "id": 459,
       "showDefault": true,
       "tags": [
@@ -21566,6 +22226,7 @@
     },
     {
       "name": "Northampton改",
+      "kana": "Northamptonかい",
       "id": 460,
       "showDefault": true,
       "tags": [
@@ -21605,6 +22266,7 @@
     },
     {
       "name": "能代改二",
+      "kana": "のしろかいに",
       "id": 462,
       "showDefault": true,
       "tags": [
@@ -21660,6 +22322,7 @@
     },
     {
       "name": "矢矧改二",
+      "kana": "やはぎかいに",
       "id": 463,
       "showDefault": true,
       "tags": [
@@ -21715,6 +22378,7 @@
     },
     {
       "name": "曙改二",
+      "kana": "あけぼのかいに",
       "id": 465,
       "showDefault": true,
       "tags": [
@@ -21738,6 +22402,7 @@
     },
     {
       "name": "磯波改二",
+      "kana": "いそなみかいに",
       "id": 466,
       "showDefault": true,
       "tags": [
@@ -21769,6 +22434,7 @@
     },
     {
       "name": "山風改二丁",
+      "kana": "やまかぜかいにてい",
       "id": 467,
       "showDefault": true,
       "tags": [
@@ -21804,6 +22470,7 @@
     },
     {
       "name": "矢矧改二乙",
+      "kana": "やはぎかいにおつ",
       "id": 468,
       "showDefault": true,
       "tags": [
@@ -21867,6 +22534,7 @@
     },
     {
       "name": "親潮改二",
+      "kana": "おやしおかいに",
       "id": 470,
       "showDefault": true,
       "tags": [
@@ -21898,6 +22566,7 @@
     },
     {
       "name": "巻波",
+      "kana": "まきなみ",
       "id": 471,
       "showDefault": false,
       "tags": [
@@ -21921,6 +22590,7 @@
     },
     {
       "name": "巻波改",
+      "kana": "まきなみかい",
       "id": 471,
       "showDefault": true,
       "tags": [
@@ -21944,6 +22614,7 @@
     },
     {
       "name": "玉波",
+      "kana": "たまなみ",
       "id": 474,
       "showDefault": false,
       "tags": [
@@ -21967,6 +22638,7 @@
     },
     {
       "name": "玉波改",
+      "kana": "たまなみかい",
       "id": 474,
       "showDefault": true,
       "tags": [
@@ -21994,6 +22666,7 @@
     },
     {
       "name": "涼波",
+      "kana": "すずなみ",
       "id": 475,
       "showDefault": false,
       "tags": [
@@ -22017,6 +22690,7 @@
     },
     {
       "name": "涼波改",
+      "kana": "すずなみかい",
       "id": 475,
       "showDefault": true,
       "tags": [
@@ -22040,6 +22714,7 @@
     },
     {
       "name": "Conte di Cavour",
+      "kana": "Conte di Cavour",
       "id": 477,
       "showDefault": false,
       "tags": [
@@ -22071,6 +22746,7 @@
     },
     {
       "name": "Conte di Cavour改",
+      "kana": "Conte di Cavourかい",
       "id": 478,
       "showDefault": false,
       "tags": [
@@ -22106,6 +22782,7 @@
     },
     {
       "name": "Conte di Cavour nuovo",
+      "kana": "Conte di Cavour nuovo",
       "id": 479,
       "showDefault": true,
       "tags": [
@@ -22149,6 +22826,7 @@
     },
     {
       "name": "伊201",
+      "kana": "い201",
       "id": 481,
       "showDefault": false,
       "tags": [
@@ -22180,6 +22858,7 @@
     },
     {
       "name": "伊201改",
+      "kana": "い201かい",
       "id": 481,
       "showDefault": true,
       "tags": [
@@ -22211,6 +22890,7 @@
     },
     {
       "name": "伊203",
+      "kana": "い203",
       "id": 482,
       "showDefault": false,
       "tags": [
@@ -22242,6 +22922,7 @@
     },
     {
       "name": "龍鳳改二戊",
+      "kana": "りゅうほうかいにぼ",
       "id": 483,
       "showDefault": true,
       "tags": [
@@ -22293,6 +22974,7 @@
     },
     {
       "name": "雲鷹",
+      "kana": "うんよう",
       "id": 484,
       "showDefault": false,
       "tags": [
@@ -22328,6 +23010,7 @@
     },
     {
       "name": "雲鷹改",
+      "kana": "うんようかい",
       "id": 484,
       "showDefault": false,
       "tags": [
@@ -22367,6 +23050,7 @@
     },
     {
       "name": "Victorious",
+      "kana": "Victorious",
       "id": 485,
       "showDefault": false,
       "tags": [
@@ -22410,6 +23094,7 @@
     },
     {
       "name": "Victorious改",
+      "kana": "Victoriousかい",
       "id": 485,
       "showDefault": true,
       "tags": [
@@ -22453,6 +23138,7 @@
     },
     {
       "name": "早潮",
+      "kana": "はやしお",
       "id": 486,
       "showDefault": false,
       "tags": [
@@ -22476,6 +23162,7 @@
     },
     {
       "name": "早潮改",
+      "kana": "はやしおかい",
       "id": 486,
       "showDefault": false,
       "tags": [
@@ -22507,6 +23194,7 @@
     },
     {
       "name": "伊203改",
+      "kana": "い203かい",
       "id": 487,
       "showDefault": true,
       "tags": [
@@ -22538,6 +23226,7 @@
     },
     {
       "name": "龍鳳改二",
+      "kana": "りゅうほうかいに",
       "id": 488,
       "showDefault": true,
       "tags": [
@@ -22589,6 +23278,7 @@
     },
     {
       "name": "雲鷹改二",
+      "kana": "うんようかいに",
       "id": 489,
       "showDefault": true,
       "tags": [
@@ -22632,6 +23322,7 @@
     },
     {
       "name": "Scamp",
+      "kana": "Scamp",
       "id": 493,
       "showDefault": false,
       "tags": [
@@ -22663,6 +23354,7 @@
     },
     {
       "name": "Scamp改",
+      "kana": "Scampかい",
       "id": 493,
       "showDefault": true,
       "tags": [
@@ -22694,6 +23386,7 @@
     },
     {
       "name": "鳳翔改二",
+      "kana": "ほうしょうかいに",
       "id": 494,
       "showDefault": true,
       "tags": [
@@ -22733,6 +23426,7 @@
     },
     {
       "name": "昭南",
+      "kana": "しょうなん",
       "id": 495,
       "showDefault": false,
       "tags": [
@@ -22756,6 +23450,7 @@
     },
     {
       "name": "昭南改",
+      "kana": "しょうなんかい",
       "id": 495,
       "showDefault": true,
       "tags": [
@@ -22779,6 +23474,7 @@
     },
     {
       "name": "Brooklyn",
+      "kana": "Brooklyn",
       "id": 497,
       "showDefault": false,
       "tags": [
@@ -22810,6 +23506,7 @@
     },
     {
       "name": "Brooklyn改",
+      "kana": "Brooklynかい",
       "id": 497,
       "showDefault": true,
       "tags": [
@@ -22841,6 +23538,7 @@
     },
     {
       "name": "鳳翔改二戦",
+      "kana": "ほうしょうかいにせん",
       "id": 499,
       "showDefault": true,
       "tags": [
@@ -22896,6 +23594,7 @@
     },
     {
       "name": "山汐丸",
+      "kana": "やましおまる",
       "id": 500,
       "showDefault": false,
       "tags": [
@@ -22931,6 +23630,7 @@
     },
     {
       "name": "山汐丸改",
+      "kana": "やましおまるかい",
       "id": 500,
       "showDefault": true,
       "tags": [
@@ -22970,6 +23670,7 @@
     },
     {
       "name": "天霧改二",
+      "kana": "あまぎりかいに",
       "id": 503,
       "showDefault": true,
       "tags": [
@@ -22993,6 +23694,7 @@
     },
     {
       "name": "倉橋",
+      "kana": "くらはし",
       "id": 505,
       "showDefault": false,
       "tags": [
@@ -23016,6 +23718,7 @@
     },
     {
       "name": "天霧改二丁",
+      "kana": "あまぎりかいにてい",
       "id": 508,
       "showDefault": true,
       "tags": [
@@ -23047,6 +23750,7 @@
     },
     {
       "name": "倉橋改",
+      "kana": "くらはしかい",
       "id": 510,
       "showDefault": true,
       "tags": [
@@ -23070,6 +23774,7 @@
     },
     {
       "name": "大和改二",
+      "kana": "やまとかいに",
       "id": 511,
       "showDefault": true,
       "tags": [
@@ -23129,6 +23834,7 @@
     },
     {
       "name": "Maryland",
+      "kana": "Maryland",
       "id": 513,
       "showDefault": false,
       "tags": [
@@ -23168,6 +23874,7 @@
     },
     {
       "name": "早潮改二",
+      "kana": "はやしおかいに",
       "id": 515,
       "showDefault": true,
       "tags": [
@@ -23207,6 +23914,7 @@
     },
     {
       "name": "大和改二重",
+      "kana": "やまとかいにじゅう",
       "id": 516,
       "showDefault": true,
       "tags": [
@@ -23274,6 +23982,7 @@
     },
     {
       "name": "Maryland改",
+      "kana": "Marylandかい",
       "id": 518,
       "showDefault": true,
       "tags": [
@@ -23313,6 +24022,7 @@
     },
     {
       "name": "Samuel B.Roberts Mk.II",
+      "kana": "Samuel B.Roberts Mk.II",
       "id": 520,
       "showDefault": true,
       "tags": [
@@ -23344,6 +24054,7 @@
     },
     {
       "name": "鵜来",
+      "kana": "うくる",
       "id": 521,
       "showDefault": false,
       "tags": [
@@ -23367,6 +24078,7 @@
     },
     {
       "name": "Langley",
+      "kana": "Langley",
       "id": 525,
       "showDefault": false,
       "tags": [
@@ -23414,6 +24126,7 @@
     },
     {
       "name": "鵜来改",
+      "kana": "うくるかい",
       "id": 526,
       "showDefault": true,
       "tags": [
@@ -23437,6 +24150,7 @@
     },
     {
       "name": "Langley改",
+      "kana": "Langleyかい",
       "id": 530,
       "showDefault": true,
       "tags": [
@@ -23484,6 +24198,7 @@
     },
     {
       "name": "Ranger",
+      "kana": "Ranger",
       "id": 531,
       "showDefault": false,
       "tags": [
@@ -23519,6 +24234,7 @@
     },
     {
       "name": "Ranger改",
+      "kana": "Rangerかい",
       "id": 531,
       "showDefault": true,
       "tags": [
@@ -23554,6 +24270,7 @@
     },
     {
       "name": "Massachusetts",
+      "kana": "Massachusetts",
       "id": 533,
       "showDefault": false,
       "tags": [
@@ -23589,6 +24306,7 @@
     },
     {
       "name": "Jean Bart",
+      "kana": "Jean Bart",
       "id": 535,
       "showDefault": false,
       "tags": [
@@ -23624,6 +24342,7 @@
     },
     {
       "name": "Jean Bart改",
+      "kana": "Jean Bartかい",
       "id": 535,
       "showDefault": true,
       "tags": [
@@ -23659,6 +24378,7 @@
     },
     {
       "name": "Massachusetts改",
+      "kana": "Massachusettsかい",
       "id": 538,
       "showDefault": true,
       "tags": [
