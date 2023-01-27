@@ -3,8 +3,8 @@ import { sortById } from './id';
 import { sortByKana } from './kana';
 import { SortOrder } from './sort-order';
 
-export { getLabelOfSortOrder } from './label';
-export { SortOrder } from './sort-order';
+export * from './label';
+export * from './sort-order';
 
 export const sortCharacters = (
   characters: TaggedCharacter[],
