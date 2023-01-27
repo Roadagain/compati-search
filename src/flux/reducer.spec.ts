@@ -2,6 +2,7 @@ import { Action } from './action';
 import {
   onChangeSearchWords,
   onChangeShowAll,
+  onChangeSortOrder,
   onClickTag,
   onLoadCharactersData,
   onShowNextPage,
@@ -19,6 +20,7 @@ describe('reducer', () => {
     ${'load-characters-data'} | ${onLoadCharactersData}
     ${'change-search-words'}  | ${onChangeSearchWords}
     ${'change-show-all'}      | ${onChangeShowAll}
+    ${'change-sort-order'}    | ${onChangeSortOrder}
     ${'click-tag'}            | ${onClickTag}
     ${'show-next-page'}       | ${onShowNextPage}
   `('action.typeが$typeのとき', ({ type, method }) => {
