@@ -1,6 +1,6 @@
 import { ShipsData } from '../lib/ships-data';
 import { SearchTarget } from '../lib/search-target';
-import { SortOrder } from '../lib/sort-characters';
+import { SortOrder } from '../lib/sort-ships';
 
 interface LoadCharactersData {
   type: 'load-characters-data';

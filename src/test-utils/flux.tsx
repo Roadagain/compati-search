@@ -9,7 +9,7 @@ import {
   generateSearchTargets,
   getKeyOfSearchTarget,
 } from '../lib/search-target';
-import { SortOrder } from '../lib/sort-characters';
+import { SortOrder } from '../lib/sort-ships';
 
 const allTags = ships.flatMap(({ tags }) => tags);
 const searchTargets = generateSearchTargets(allTags);

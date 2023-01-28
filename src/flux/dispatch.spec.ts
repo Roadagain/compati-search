@@ -14,7 +14,7 @@ import {
 import { State } from './state';
 
 jest.mock('../lib/filter-ships');
-jest.mock('../lib/sort-characters');
+jest.mock('../lib/sort-ships');
 
 const baseState: Readonly<State> = {
   isReady: false,
