@@ -1,7 +1,7 @@
-import { ShipsData } from '../lib/ships-data';
-import { filterCharacters } from '../lib/filter-characters';
+import { filterShips } from '../lib/filter-ships';
 import { SearchType } from '../lib/search-target';
 import { Ship } from '../lib/ship';
+import { ShipsData } from '../lib/ships-data';
 import { sortCharacters, SortOrder } from '../lib/sort-characters';
 import {
   onChangeSearchWords,
@@ -13,7 +13,7 @@ import {
 } from './dispatch';
 import { State } from './state';
 
-jest.mock('../lib/filter-characters');
+jest.mock('../lib/filter-ships');
 jest.mock('../lib/sort-characters');
 
 const baseState: Readonly<State> = {
@@ -85,7 +85,7 @@ describe('onLoadCharacters', () => {
   });
 
   it('フィルタ関数が呼び出されている', () => {
-    expect(filterCharacters).toBeCalled();
+    expect(filterShips).toBeCalled();
   });
 });
 
@@ -122,7 +122,7 @@ describe('onChangeSearchWords', () => {
     });
 
     it('フィルタ関数が呼び出されている', () => {
-      expect(filterCharacters).toBeCalled();
+      expect(filterShips).toBeCalled();
     });
   });
 
@@ -145,7 +145,7 @@ describe('onChangeSearchWords', () => {
     });
 
     it('フィルタ関数が呼び出されている', () => {
-      expect(filterCharacters).toBeCalled();
+      expect(filterShips).toBeCalled();
     });
   });
 });
@@ -184,7 +184,7 @@ describe('onChangeShowAll', () => {
       });
 
       it('フィルタ関数が呼び出されている', () => {
-        expect(filterCharacters).toBeCalled();
+        expect(filterShips).toBeCalled();
       });
     }
   );
@@ -264,7 +264,7 @@ describe('onClickTag', () => {
   });
 
   it('フィルタ関数が呼び出されている', () => {
-    expect(filterCharacters).toBeCalled();
+    expect(filterShips).toBeCalled();
   });
 });
 

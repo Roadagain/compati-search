@@ -23,7 +23,7 @@ export interface SearchWords {
   tag: string[];
 }
 
-export const filterCharacters = (
+export const filterShips = (
   characters: Ship[],
   words: SearchWords,
   showAll: boolean
