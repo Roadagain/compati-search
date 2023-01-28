@@ -1,10 +1,10 @@
 import { Meta, StoryObj } from '@storybook/react';
 
-import { CharacterCard } from './CharacterCard';
+import { ShipCard } from './ShipCard';
 
-const meta: Meta<typeof CharacterCard> = {
-  title: 'Molecules/CharacterCard',
-  component: CharacterCard,
+const meta: Meta<typeof ShipCard> = {
+  title: 'Molecules/ShipCard',
+  component: ShipCard,
   argTypes: {
     name: { control: 'text' },
     tags: { control: 'object' },
@@ -13,7 +13,7 @@ const meta: Meta<typeof CharacterCard> = {
 };
 export default meta;
 
-type Story = StoryObj<typeof CharacterCard>;
+type Story = StoryObj<typeof ShipCard>;
 
 export const Card: Story = {
   args: {

@@ -4,7 +4,7 @@ import React from 'react';
 import InfiniteScroller from 'react-infinite-scroller';
 
 import { FluxContext } from '../../flux/context';
-import { CharacterCard } from '../molecules/CharacterCard';
+import { ShipCard } from '../molecules/ShipCard';
 
 interface Props {
   /**
@@ -38,7 +38,7 @@ export const SearchResults: React.FC<Props> = ({ sx }) => {
       <Grid container spacing={2} sx={sx}>
         {shownCharacters.map(({ name, tags }) => (
           <Grid item key={name} xs={12} sm={6} md={4}>
-            <CharacterCard name={name} tags={tags} onClickTag={onClickTag} />
+            <ShipCard name={name} tags={tags} onClickTag={onClickTag} />
           </Grid>
         ))}
       </Grid>

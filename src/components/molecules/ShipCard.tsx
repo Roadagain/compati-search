@@ -29,12 +29,7 @@ interface Props {
   sx?: SxProps<Theme>;
 }
 
-export const CharacterCard: React.FC<Props> = ({
-  name,
-  tags,
-  onClickTag,
-  sx,
-}) => {
+export const ShipCard: React.FC<Props> = ({ name, tags, onClickTag, sx }) => {
   const tagLabels = Array.from(new Set(tags.map(({ label }) => label)));
 
   return (
