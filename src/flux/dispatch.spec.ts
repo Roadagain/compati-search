@@ -2,7 +2,7 @@ import { filterShips } from '../lib/filter-ships';
 import { SearchType } from '../lib/search-target';
 import { Ship } from '../lib/ship';
 import { ShipsData } from '../lib/ships-data';
-import { sortCharacters, SortOrder } from '../lib/sort-characters';
+import { sortShips, SortOrder } from '../lib/sort-ships';
 import {
   onChangeSearchWords,
   onChangeShowAll,
@@ -210,15 +210,11 @@ describe('onChangeSortOrder', () => {
   });
 
   it('キャラクターをソートする関数が呼ばれている', () => {
-    expect(sortCharacters).nthCalledWith(
-      1,
-      currentState.characters,
-      SortOrder.KANA
-    );
+    expect(sortShips).nthCalledWith(1, currentState.characters, SortOrder.KANA);
   });
 
   it('検索結果をソートする関数が呼ばれている', () => {
-    expect(sortCharacters).nthCalledWith(
+    expect(sortShips).nthCalledWith(
       2,
       currentState.search.results,
       SortOrder.KANA

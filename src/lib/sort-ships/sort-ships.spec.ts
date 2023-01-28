@@ -1,4 +1,4 @@
-import { sortCharacters } from '.';
+import { sortShips } from '.';
 import { sortById } from './id';
 import { sortByKana } from './kana';
 import { SortOrder } from './sort-order';
@@ -13,7 +13,7 @@ describe('sortCharacters', () => {
   `('ソート順が$orderStrのとき', ({ order, sortFunction }) => {
     beforeEach(() => {
       (sortFunction as unknown as jest.Mock).mockReturnValue([]);
-      sortCharacters([], order);
+      sortShips([], order);
     });
 
     it(`${sortFunction.name}が呼ばれる`, () => {
@@ -24,7 +24,7 @@ describe('sortCharacters', () => {
   describe('ソート順の指定が既存のものと一致しないとき', () => {
     it('例外を投げる', () => {
       expect(() =>
-        sortCharacters([], 'unknown' as unknown as SortOrder)
+        sortShips([], 'unknown' as unknown as SortOrder)
       ).toThrowError('Invalid sort order');
     });
   });

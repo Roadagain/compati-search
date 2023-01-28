@@ -6,7 +6,7 @@ import {
   SearchTarget,
 } from '../lib/search-target';
 import { ShipsData } from '../lib/ships-data';
-import { sortCharacters, SortOrder } from '../lib/sort-characters';
+import { sortShips, SortOrder } from '../lib/sort-ships';
 import { InputedSearchWords, State } from './state';
 
 const adjustToSearchWords = (words: InputedSearchWords): SearchWords => {
@@ -113,8 +113,8 @@ export const onChangeSortOrder = (
   state: State,
   sortOrder: SortOrder
 ): State => {
-  const characters = sortCharacters(state.characters, sortOrder);
-  const results = sortCharacters(state.search.results, sortOrder);
+  const characters = sortShips(state.characters, sortOrder);
+  const results = sortShips(state.search.results, sortOrder);
   return {
     ...state,
     characters,

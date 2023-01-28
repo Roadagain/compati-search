@@ -6,10 +6,7 @@ import { SortOrder } from './sort-order';
 export * from './label';
 export * from './sort-order';
 
-export const sortCharacters = (
-  characters: Ship[],
-  order: SortOrder
-): Ship[] => {
+export const sortShips = (characters: Ship[], order: SortOrder): Ship[] => {
   switch (order) {
     case SortOrder.ID:
       return sortById(characters);
