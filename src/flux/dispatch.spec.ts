@@ -2,7 +2,7 @@ import { filterShips } from '../lib/filter-ships';
 import { SearchType } from '../lib/search-target';
 import { Ship } from '../lib/ship';
 import { ShipsData } from '../lib/ships-data';
-import { sortShips, SortOrder } from '../lib/sort-ships';
+import { SortOrder,sortShips } from '../lib/sort-ships';
 import {
   onChangeSearchWords,
   onChangeShowAll,
