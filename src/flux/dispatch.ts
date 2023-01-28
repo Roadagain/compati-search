@@ -6,7 +6,7 @@ import {
   SearchTarget,
 } from '../lib/search-target';
 import { ShipsData } from '../lib/ships-data';
-import { sortShips, SortOrder } from '../lib/sort-ships';
+import { SortOrder, sortShips } from '../lib/sort-ships';
 import { InputedSearchWords, State } from './state';
 
 const adjustToSearchWords = (words: InputedSearchWords): SearchWords => {
@@ -23,15 +23,15 @@ export const onLoadCharactersData = (
   state: State,
   charactersData: ShipsData
 ): State => {
-  const { characters } = charactersData;
+  const { ships } = charactersData;
   const { search } = state;
   const { showAll } = search;
-  const allTags = characters.flatMap(({ tags }) => tags);
+  const allTags = ships.flatMap(({ tags }) => tags);
   const searchTargets = generateSearchTargets(allTags);
   const autocompleteOptions = Object.fromEntries(
     searchTargets.map((target) => {
       const key = getKeyOfSearchTarget(target);
-      return [key, generateAutocompleteOptions(characters, target, showAll)];
+      return [key, generateAutocompleteOptions(ships, target, showAll)];
     })
   );
   const words: InputedSearchWords = Object.fromEntries(
@@ -40,11 +40,11 @@ export const onLoadCharactersData = (
       return [key, []];
     })
   );
-  const results = filterShips(characters, adjustToSearchWords(words), showAll);
+  const results = filterShips(ships, adjustToSearchWords(words), showAll);
   return {
     ...state,
     isReady: true,
-    characters,
+    characters: ships,
     search: {
       ...search,
       info: {

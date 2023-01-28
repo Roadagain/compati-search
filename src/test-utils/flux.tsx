@@ -1,6 +1,6 @@
 import React, { useReducer } from 'react';
 
-import { characters } from '../../ships.json';
+import { ships } from '../../ships.json';
 import { FluxContext } from '../flux/context';
 import { reducer } from '../flux/reducer';
 import { InputedSearchWords, State } from '../flux/state';
@@ -11,12 +11,12 @@ import {
 } from '../lib/search-target';
 import { SortOrder } from '../lib/sort-characters';
 
-const allTags = characters.flatMap(({ tags }) => tags);
+const allTags = ships.flatMap(({ tags }) => tags);
 const searchTargets = generateSearchTargets(allTags);
 const autocompleteOptions = Object.fromEntries(
   searchTargets.map((target) => {
     const key = getKeyOfSearchTarget(target);
-    return [key, generateAutocompleteOptions(characters, target, false)];
+    return [key, generateAutocompleteOptions(ships, target, false)];
   })
 );
 const words: InputedSearchWords = Object.fromEntries(
@@ -28,7 +28,7 @@ const words: InputedSearchWords = Object.fromEntries(
 
 export const initialTestState: State = {
   isReady: true,
-  characters,
+  characters: ships,
   search: {
     info: {
       autocompleteOptions,
@@ -37,7 +37,7 @@ export const initialTestState: State = {
     words,
     showAll: false,
     sortOrder: SortOrder.ID,
-    results: characters.filter(({ showDefault }) => showDefault),
+    results: ships.filter(({ showDefault }) => showDefault),
     page: 2,
   },
 };

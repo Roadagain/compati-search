@@ -69,7 +69,7 @@ describe('onLoadCharacters', () => {
   };
   const characters: Ship[] = [characterShowDefault, characterHiddenDefault];
   const charactersData: ShipsData = {
-    characters,
+    ships: characters,
   };
 
   beforeEach(() => {
