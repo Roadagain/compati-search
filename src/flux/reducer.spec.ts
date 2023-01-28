@@ -16,13 +16,13 @@ describe('reducer', () => {
   const state = initialState;
 
   describe.each`
-    type                      | method
-    ${'load-characters-data'} | ${onLoadCharactersData}
-    ${'change-search-words'}  | ${onChangeSearchWords}
-    ${'change-show-all'}      | ${onChangeShowAll}
-    ${'change-sort-order'}    | ${onChangeSortOrder}
-    ${'click-tag'}            | ${onClickTag}
-    ${'show-next-page'}       | ${onShowNextPage}
+    type                     | method
+    ${'load-ships-data'}     | ${onLoadCharactersData}
+    ${'change-search-words'} | ${onChangeSearchWords}
+    ${'change-show-all'}     | ${onChangeShowAll}
+    ${'change-sort-order'}   | ${onChangeSortOrder}
+    ${'click-tag'}           | ${onClickTag}
+    ${'show-next-page'}      | ${onShowNextPage}
   `('action.typeが$typeのとき', ({ type, method }) => {
     beforeEach(() => {
       reducer(state, { type } as unknown as Action);

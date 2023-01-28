@@ -2,9 +2,9 @@ import { SearchTarget } from '../lib/search-target';
 import { ShipsData } from '../lib/ships-data';
 import { SortOrder } from '../lib/sort-ships';
 
-interface LoadCharactersData {
-  type: 'load-characters-data';
-  charactersData: ShipsData;
+interface LoadShipsData {
+  type: 'load-ships-data';
+  shipsData: ShipsData;
 }
 
 interface ChangeSearchWordsAction {
@@ -33,7 +33,7 @@ interface ShowNextPage {
 }
 
 export type Action =
-  | LoadCharactersData
+  | LoadShipsData
   | ChangeSearchWordsAction
   | ChangeShowAllAction
   | ChangeSortOrderAction
