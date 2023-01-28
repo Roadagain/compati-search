@@ -2,13 +2,13 @@ import { filterShips } from '../lib/filter-ships';
 import { SearchType } from '../lib/search-target';
 import { Ship } from '../lib/ship';
 import { ShipsData } from '../lib/ships-data';
-import { SortOrder,sortShips } from '../lib/sort-ships';
+import { SortOrder, sortShips } from '../lib/sort-ships';
 import {
   onChangeSearchWords,
   onChangeShowAll,
   onChangeSortOrder,
   onClickTag,
-  onLoadCharactersData,
+  onLoadShipsData,
   onShowNextPage,
 } from './dispatch';
 import { State } from './state';
@@ -73,7 +73,7 @@ describe('onLoadCharacters', () => {
   };
 
   beforeEach(() => {
-    nextState = onLoadCharactersData(currentState, charactersData);
+    nextState = onLoadShipsData(currentState, charactersData);
   });
 
   it('準備完了フラグが変更されている', () => {

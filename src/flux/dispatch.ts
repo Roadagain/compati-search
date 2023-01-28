@@ -19,11 +19,8 @@ const adjustToSearchWords = (words: InputedSearchWords): SearchWords => {
   };
 };
 
-export const onLoadCharactersData = (
-  state: State,
-  charactersData: ShipsData
-): State => {
-  const { ships } = charactersData;
+export const onLoadShipsData = (state: State, shipsData: ShipsData): State => {
+  const { ships } = shipsData;
   const { search } = state;
   const { showAll } = search;
   const allTags = ships.flatMap(({ tags }) => tags);

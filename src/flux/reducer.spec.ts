@@ -4,7 +4,7 @@ import {
   onChangeShowAll,
   onChangeSortOrder,
   onClickTag,
-  onLoadCharactersData,
+  onLoadShipsData,
   onShowNextPage,
 } from './dispatch';
 import { reducer } from './reducer';
@@ -17,7 +17,7 @@ describe('reducer', () => {
 
   describe.each`
     type                     | method
-    ${'load-ships-data'}     | ${onLoadCharactersData}
+    ${'load-ships-data'}     | ${onLoadShipsData}
     ${'change-search-words'} | ${onChangeSearchWords}
     ${'change-show-all'}     | ${onChangeShowAll}
     ${'change-sort-order'}   | ${onChangeSortOrder}
