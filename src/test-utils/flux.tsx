@@ -28,7 +28,7 @@ const words: InputedSearchWords = Object.fromEntries(
 
 export const initialTestState: State = {
   isReady: true,
-  characters: ships,
+  ships,
   search: {
     info: {
       autocompleteOptions,

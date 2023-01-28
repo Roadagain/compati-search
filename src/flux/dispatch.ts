@@ -44,7 +44,7 @@ export const onLoadCharactersData = (
   return {
     ...state,
     isReady: true,
-    characters: ships,
+    ships,
     search: {
       ...search,
       info: {
@@ -64,7 +64,7 @@ export const onChangeSearchWords = (
   target: SearchTarget,
   newWords: string[]
 ): State => {
-  const { characters, search } = state;
+  const { ships: characters, search } = state;
   const { showAll } = search;
   const key = getKeyOfSearchTarget(target);
   const words = {
@@ -84,7 +84,7 @@ export const onChangeSearchWords = (
 };
 
 export const onChangeShowAll = (state: State, showAll: boolean): State => {
-  const { characters, search } = state;
+  const { ships: characters, search } = state;
   const { words, info } = search;
   const results = filterShips(characters, adjustToSearchWords(words), showAll);
   const searchTargets = info.targets;
@@ -113,11 +113,11 @@ export const onChangeSortOrder = (
   state: State,
   sortOrder: SortOrder
 ): State => {
-  const characters = sortShips(state.characters, sortOrder);
+  const characters = sortShips(state.ships, sortOrder);
   const results = sortShips(state.search.results, sortOrder);
   return {
     ...state,
-    characters,
+    ships: characters,
     search: {
       ...state.search,
       sortOrder,
@@ -127,7 +127,7 @@ export const onChangeSortOrder = (
 };
 
 export const onClickTag = (state: State, label: string): State => {
-  const { characters, search } = state;
+  const { ships: characters, search } = state;
   const { words, showAll } = search;
   const { autocompleteOptions } = search.info;
   const categories = Object.entries(autocompleteOptions)

@@ -18,7 +18,7 @@ jest.mock('../lib/sort-characters');
 
 const baseState: Readonly<State> = {
   isReady: false,
-  characters: [],
+  ships: [],
   search: {
     info: {
       autocompleteOptions: {},
@@ -36,7 +36,7 @@ describe('onLoadCharacters', () => {
   const currentState: State = {
     ...baseState,
     isReady: false,
-    characters: [],
+    ships: [],
   };
   let nextState: State;
   const characterShowDefault: Ship = {
@@ -81,7 +81,7 @@ describe('onLoadCharacters', () => {
   });
 
   it('キャラクターが変更されている', () => {
-    expect(nextState.characters).toEqual(characters);
+    expect(nextState.ships).toEqual(characters);
   });
 
   it('フィルタ関数が呼び出されている', () => {
@@ -210,7 +210,7 @@ describe('onChangeSortOrder', () => {
   });
 
   it('キャラクターをソートする関数が呼ばれている', () => {
-    expect(sortShips).nthCalledWith(1, currentState.characters, SortOrder.KANA);
+    expect(sortShips).nthCalledWith(1, currentState.ships, SortOrder.KANA);
   });
 
   it('検索結果をソートする関数が呼ばれている', () => {

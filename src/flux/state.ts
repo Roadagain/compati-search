@@ -21,13 +21,13 @@ interface SearchState {
 
 export interface State {
   isReady: boolean;
-  characters: Ship[];
+  ships: Ship[];
   search: SearchState;
 }
 
 export const initialState: State = {
   isReady: false,
-  characters: [],
+  ships: [],
   search: {
     info: {
       targets: [{ type: SearchType.NAME }],
