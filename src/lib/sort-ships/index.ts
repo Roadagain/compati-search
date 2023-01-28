@@ -6,12 +6,12 @@ import { SortOrder } from './sort-order';
 export * from './label';
 export * from './sort-order';
 
-export const sortShips = (characters: Ship[], order: SortOrder): Ship[] => {
+export const sortShips = (ships: Ship[], order: SortOrder): Ship[] => {
   switch (order) {
     case SortOrder.ID:
-      return sortById(characters);
+      return sortById(ships);
     case SortOrder.KANA:
-      return sortByKana(characters);
+      return sortByKana(ships);
     default:
       throw new Error('Invalid sort order');
   }

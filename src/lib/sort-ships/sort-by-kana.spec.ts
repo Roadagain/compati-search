@@ -11,9 +11,9 @@ describe('sortByKana', () => {
       'abcde',
       'あいうえお',
     ];
-    const characters = kanas.map((kana) => ({ kana } as Ship));
+    const ships = kanas.map((kana) => ({ kana } as Ship));
 
-    expect(sortByKana(characters)).toEqual([
+    expect(sortByKana(ships)).toEqual([
       { kana: 'あいうえお' },
       { kana: 'かきくけこ' },
       { kana: 'さしすせそ' },

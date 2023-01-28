@@ -61,14 +61,14 @@ export const onChangeSearchWords = (
   target: SearchTarget,
   newWords: string[]
 ): State => {
-  const { ships: characters, search } = state;
+  const { ships, search } = state;
   const { showAll } = search;
   const key = getKeyOfSearchTarget(target);
   const words = {
     ...search.words,
     [key]: newWords,
   };
-  const results = filterShips(characters, adjustToSearchWords(words), showAll);
+  const results = filterShips(ships, adjustToSearchWords(words), showAll);
   return {
     ...state,
     search: {
@@ -81,14 +81,14 @@ export const onChangeSearchWords = (
 };
 
 export const onChangeShowAll = (state: State, showAll: boolean): State => {
-  const { ships: characters, search } = state;
+  const { ships, search } = state;
   const { words, info } = search;
-  const results = filterShips(characters, adjustToSearchWords(words), showAll);
+  const results = filterShips(ships, adjustToSearchWords(words), showAll);
   const searchTargets = info.targets;
   const autocompleteOptions = Object.fromEntries(
     searchTargets.map((target) => {
       const key = getKeyOfSearchTarget(target);
-      return [key, generateAutocompleteOptions(characters, target, showAll)];
+      return [key, generateAutocompleteOptions(ships, target, showAll)];
     })
   );
   return {
@@ -110,11 +110,11 @@ export const onChangeSortOrder = (
   state: State,
   sortOrder: SortOrder
 ): State => {
-  const characters = sortShips(state.ships, sortOrder);
+  const ships = sortShips(state.ships, sortOrder);
   const results = sortShips(state.search.results, sortOrder);
   return {
     ...state,
-    ships: characters,
+    ships,
     search: {
       ...state.search,
       sortOrder,
@@ -124,7 +124,7 @@ export const onChangeSortOrder = (
 };
 
 export const onClickTag = (state: State, label: string): State => {
-  const { ships: characters, search } = state;
+  const { ships, search } = state;
   const { words, showAll } = search;
   const { autocompleteOptions } = search.info;
   const categories = Object.entries(autocompleteOptions)
@@ -139,11 +139,7 @@ export const onClickTag = (state: State, label: string): State => {
     ...words,
     ...overrideWords,
   };
-  const results = filterShips(
-    characters,
-    adjustToSearchWords(newWords),
-    showAll
-  );
+  const results = filterShips(ships, adjustToSearchWords(newWords), showAll);
   return {
     ...state,
     search: {

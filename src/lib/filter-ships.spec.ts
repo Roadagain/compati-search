@@ -90,7 +90,7 @@ describe('matchesTagWords', () => {
 });
 
 describe('filterShips', () => {
-  const characterWithTag = {
+  const shipWithTag = {
     id: 1,
     name: '',
     kana: '',
@@ -102,14 +102,14 @@ describe('filterShips', () => {
     ],
     showDefault: true,
   };
-  const characterWithName = {
+  const shipWithName = {
     id: 22,
     name: 'name',
     kana: 'name',
     tags: [],
     showDefault: true,
   };
-  const characterWithNameAndTag = {
+  const shipWithNameAndTag = {
     id: 333,
     name: 'name2',
     kana: 'name2',
@@ -121,7 +121,7 @@ describe('filterShips', () => {
     ],
     showDefault: true,
   };
-  const hiddenCharacterWithNameAndTag = {
+  const hiddenShipWithNameAndTag = {
     id: 4444,
     name: 'name_hidden',
     kana: 'name_hidden',
@@ -133,42 +133,43 @@ describe('filterShips', () => {
     ],
     showDefault: false,
   };
-  const characters = [
-    characterWithTag,
-    characterWithName,
-    characterWithNameAndTag,
-    hiddenCharacterWithNameAndTag,
+  const ships = [
+    shipWithTag,
+    shipWithName,
+    shipWithNameAndTag,
+    hiddenShipWithNameAndTag,
   ];
 
   describe('デフォルト表示キャラのみが対象の場合', () => {
     describe('検索対象がタグの場合', () => {
       it('タグ検索の結果が返る', () => {
-        expect(
-          filterShips(characters, { name: [], tag: ['label'] }, false)
-        ).toEqual([characterWithTag, characterWithNameAndTag]);
+        expect(filterShips(ships, { name: [], tag: ['label'] }, false)).toEqual(
+          [shipWithTag, shipWithNameAndTag]
+        );
       });
     });
 
     describe('検索対象が名前の場合', () => {
       it('名前検索の結果が返る', () => {
-        expect(
-          filterShips(characters, { name: ['name'], tag: [] }, false)
-        ).toEqual([characterWithName, characterWithNameAndTag]);
+        expect(filterShips(ships, { name: ['name'], tag: [] }, false)).toEqual([
+          shipWithName,
+          shipWithNameAndTag,
+        ]);
       });
     });
 
     describe('検索対象が名前とタグ両方を含む場合', () => {
       it('両方で検索した結果が返る', () => {
         expect(
-          filterShips(characters, { name: ['name'], tag: ['label'] }, false)
-        ).toEqual([characterWithNameAndTag]);
+          filterShips(ships, { name: ['name'], tag: ['label'] }, false)
+        ).toEqual([shipWithNameAndTag]);
       });
     });
 
     describe('検索対象が設定されていない場合', () => {
       it('全てのデフォルト表示キャラが返る', () => {
-        expect(filterShips(characters, { name: [], tag: [] }, false)).toEqual(
-          characters.filter(({ showDefault }) => showDefault)
+        expect(filterShips(ships, { name: [], tag: [] }, false)).toEqual(
+          ships.filter(({ showDefault }) => showDefault)
         );
       });
     });
@@ -177,7 +178,7 @@ describe('filterShips', () => {
       it('空配列が返る', () => {
         expect(
           filterShips(
-            characters,
+            ships,
             { name: ['not-included-name'], tag: ['not-included-tag'] },
             false
           )
@@ -189,24 +190,20 @@ describe('filterShips', () => {
   describe('全キャラが対象の場合', () => {
     describe('検索対象がタグの場合', () => {
       it('タグ検索の結果が返る', () => {
-        expect(
-          filterShips(characters, { name: [], tag: ['label'] }, true)
-        ).toEqual([
-          characterWithTag,
-          characterWithNameAndTag,
-          hiddenCharacterWithNameAndTag,
+        expect(filterShips(ships, { name: [], tag: ['label'] }, true)).toEqual([
+          shipWithTag,
+          shipWithNameAndTag,
+          hiddenShipWithNameAndTag,
         ]);
       });
     });
 
     describe('検索対象が名前の場合', () => {
       it('名前検索の結果が返る', () => {
-        expect(
-          filterShips(characters, { name: ['name'], tag: [] }, true)
-        ).toEqual([
-          characterWithName,
-          characterWithNameAndTag,
-          hiddenCharacterWithNameAndTag,
+        expect(filterShips(ships, { name: ['name'], tag: [] }, true)).toEqual([
+          shipWithName,
+          shipWithNameAndTag,
+          hiddenShipWithNameAndTag,
         ]);
       });
     });
@@ -214,16 +211,14 @@ describe('filterShips', () => {
     describe('検索対象が名前とタグ両方を含む場合', () => {
       it('両方で検索した結果が返る', () => {
         expect(
-          filterShips(characters, { name: ['name'], tag: ['label'] }, true)
-        ).toEqual([characterWithNameAndTag, hiddenCharacterWithNameAndTag]);
+          filterShips(ships, { name: ['name'], tag: ['label'] }, true)
+        ).toEqual([shipWithNameAndTag, hiddenShipWithNameAndTag]);
       });
     });
 
     describe('検索対象が設定されていない場合', () => {
       it('全キャラが返る', () => {
-        expect(filterShips(characters, { name: [], tag: [] }, true)).toEqual(
-          characters
-        );
+        expect(filterShips(ships, { name: [], tag: [] }, true)).toEqual(ships);
       });
     });
 
@@ -231,7 +226,7 @@ describe('filterShips', () => {
       it('空配列が返る', () => {
         expect(
           filterShips(
-            characters,
+            ships,
             { name: ['not-included-name'], tag: ['not-included-tag'] },
             true
           )

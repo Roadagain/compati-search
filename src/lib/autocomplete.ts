@@ -6,23 +6,21 @@ export const uniqueAndSortTagLabels = (tagLabels: string[]): string[] => {
 };
 
 export const generateAutocompleteOptions = (
-  characters: Ship[],
+  ships: Ship[],
   target: SearchTarget,
   showAll: boolean
 ): string[] => {
-  const charactersShown = characters.filter(
-    ({ showDefault }) => showAll || showDefault
-  );
+  const shipsShown = ships.filter(({ showDefault }) => showAll || showDefault);
   switch (target.type) {
     case SearchType.TAG:
       return uniqueAndSortTagLabels(
-        charactersShown
+        shipsShown
           .flatMap(({ tags }) => tags)
           .filter(({ category }) => category === target.category)
           .map(({ label }) => label)
       );
     case SearchType.NAME:
-      return charactersShown.map(({ name }) => name);
+      return shipsShown.map(({ name }) => name);
   }
 };
 

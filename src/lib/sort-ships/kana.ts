@@ -13,6 +13,6 @@ export const compareKana = (a: string, b: string): number => {
   return 1;
 };
 
-export const sortByKana = (characters: Ship[]): Ship[] => {
-  return characters.slice().sort((a, b) => compareKana(a.kana, b.kana));
+export const sortByKana = (ships: Ship[]): Ship[] => {
+  return ships.slice().sort((a, b) => compareKana(a.kana, b.kana));
 };

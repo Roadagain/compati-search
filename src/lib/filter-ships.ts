@@ -24,11 +24,11 @@ export interface SearchWords {
 }
 
 export const filterShips = (
-  characters: Ship[],
+  ships: Ship[],
   words: SearchWords,
   showAll: boolean
 ): Ship[] => {
-  return characters.filter(({ name, tags, showDefault }) => {
+  return ships.filter(({ name, tags, showDefault }) => {
     if (!showAll && !showDefault) {
       return false;
     }

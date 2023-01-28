@@ -39,7 +39,7 @@ describe('onLoadShips', () => {
     ships: [],
   };
   let nextState: State;
-  const characterShowDefault: Ship = {
+  const shipShowDefault: Ship = {
     id: 1,
     name: 'name',
     kana: 'name',
@@ -51,7 +51,7 @@ describe('onLoadShips', () => {
     ],
     showDefault: true,
   };
-  const characterHiddenDefault: Ship = {
+  const shipHiddenDefault: Ship = {
     id: 2,
     name: 'name-hidden',
     kana: 'name-hidden',
@@ -67,13 +67,13 @@ describe('onLoadShips', () => {
     ],
     showDefault: false,
   };
-  const characters: Ship[] = [characterShowDefault, characterHiddenDefault];
-  const charactersData: ShipsData = {
-    ships: characters,
+  const ships: Ship[] = [shipShowDefault, shipHiddenDefault];
+  const shipsData: ShipsData = {
+    ships,
   };
 
   beforeEach(() => {
-    nextState = onLoadShipsData(currentState, charactersData);
+    nextState = onLoadShipsData(currentState, shipsData);
   });
 
   it('準備完了フラグが変更されている', () => {
@@ -81,7 +81,7 @@ describe('onLoadShips', () => {
   });
 
   it('キャラクターが変更されている', () => {
-    expect(nextState.ships).toEqual(characters);
+    expect(nextState.ships).toEqual(ships);
   });
 
   it('フィルタ関数が呼び出されている', () => {
