@@ -1,5 +1,5 @@
-import { TaggedCharacter } from './tagged-character';
+import { Ship } from './ship';
 
 export interface CharactersData {
-  characters: TaggedCharacter[];
+  characters: Ship[];
 }

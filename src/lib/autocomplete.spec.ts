@@ -5,7 +5,7 @@ import {
   wordWithoutFirstMinus,
 } from './autocomplete';
 import { SearchType } from './search-target';
-import { TaggedCharacter } from './tagged-character';
+import { Ship } from './ship';
 
 describe('uniqueAndSortTags', () => {
   const tagLabels: string[] = ['あるは', 'べた', 'あるふあ', 'あるは'];
@@ -20,7 +20,7 @@ describe('uniqueAndSortTags', () => {
 });
 
 describe('generateAutocompleteOptions', () => {
-  const characters: TaggedCharacter[] = [
+  const characters: Ship[] = [
     {
       id: 1,
       name: 'Alpha',

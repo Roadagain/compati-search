@@ -1,4 +1,4 @@
-import { TaggedCharacter } from '../tagged-character';
+import { Ship } from '../ship';
 import { sortByKana } from './kana';
 
 describe('sortByKana', () => {
@@ -11,7 +11,7 @@ describe('sortByKana', () => {
       'abcde',
       'あいうえお',
     ];
-    const characters = kanas.map((kana) => ({ kana } as TaggedCharacter));
+    const characters = kanas.map((kana) => ({ kana } as Ship));
 
     expect(sortByKana(characters)).toEqual([
       { kana: 'あいうえお' },

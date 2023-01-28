@@ -1,8 +1,8 @@
 import { CharactersData } from '../lib/characters-data';
 import { filterCharacters } from '../lib/filter-characters';
 import { SearchType } from '../lib/search-target';
+import { Ship } from '../lib/ship';
 import { sortCharacters, SortOrder } from '../lib/sort-characters';
-import { TaggedCharacter } from '../lib/tagged-character';
 import {
   onChangeSearchWords,
   onChangeShowAll,
@@ -39,7 +39,7 @@ describe('onLoadCharacters', () => {
     characters: [],
   };
   let nextState: State;
-  const characterShowDefault: TaggedCharacter = {
+  const characterShowDefault: Ship = {
     id: 1,
     name: 'name',
     kana: 'name',
@@ -51,7 +51,7 @@ describe('onLoadCharacters', () => {
     ],
     showDefault: true,
   };
-  const characterHiddenDefault: TaggedCharacter = {
+  const characterHiddenDefault: Ship = {
     id: 2,
     name: 'name-hidden',
     kana: 'name-hidden',
@@ -67,10 +67,7 @@ describe('onLoadCharacters', () => {
     ],
     showDefault: false,
   };
-  const characters: TaggedCharacter[] = [
-    characterShowDefault,
-    characterHiddenDefault,
-  ];
+  const characters: Ship[] = [characterShowDefault, characterHiddenDefault];
   const charactersData: CharactersData = {
     characters,
   };

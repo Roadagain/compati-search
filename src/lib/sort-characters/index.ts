@@ -1,4 +1,4 @@
-import { TaggedCharacter } from '../tagged-character';
+import { Ship } from '../ship';
 import { sortById } from './id';
 import { sortByKana } from './kana';
 import { SortOrder } from './sort-order';
@@ -7,9 +7,9 @@ export * from './label';
 export * from './sort-order';
 
 export const sortCharacters = (
-  characters: TaggedCharacter[],
+  characters: Ship[],
   order: SortOrder
-): TaggedCharacter[] => {
+): Ship[] => {
   switch (order) {
     case SortOrder.ID:
       return sortById(characters);

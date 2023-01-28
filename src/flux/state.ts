@@ -1,6 +1,6 @@
 import { SearchTarget, SearchType } from '../lib/search-target';
+import { Ship } from '../lib/ship';
 import { SortOrder } from '../lib/sort-characters';
-import { TaggedCharacter } from '../lib/tagged-character';
 
 export type InputedSearchWords = Record<'name' | string, string[]>;
 export type AutocompleteOptions = Record<'name' | string, string[]>;
@@ -15,13 +15,13 @@ interface SearchState {
   words: InputedSearchWords;
   showAll: boolean;
   sortOrder: SortOrder;
-  results: TaggedCharacter[];
+  results: Ship[];
   page: number;
 }
 
 export interface State {
   isReady: boolean;
-  characters: TaggedCharacter[];
+  characters: Ship[];
   search: SearchState;
 }
 

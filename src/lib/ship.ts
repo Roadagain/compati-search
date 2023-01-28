@@ -3,7 +3,7 @@ export interface Tag {
   label: string;
 }
 
-export interface TaggedCharacter {
+export interface Ship {
   id: number;
   name: string;
   kana: string;

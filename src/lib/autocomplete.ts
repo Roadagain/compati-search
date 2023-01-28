@@ -1,12 +1,12 @@
 import { SearchTarget, SearchType } from './search-target';
-import { TaggedCharacter } from './tagged-character';
+import { Ship } from './ship';
 
 export const uniqueAndSortTagLabels = (tagLabels: string[]): string[] => {
   return Array.from(new Set(tagLabels)).sort();
 };
 
 export const generateAutocompleteOptions = (
-  characters: TaggedCharacter[],
+  characters: Ship[],
   target: SearchTarget,
   showAll: boolean
 ): string[] => {

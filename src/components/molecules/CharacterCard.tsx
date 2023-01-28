@@ -6,7 +6,7 @@ import Stack from '@mui/material/Stack';
 import { SxProps, Theme } from '@mui/material/styles';
 import React from 'react';
 
-import { Tag } from '../../lib/tagged-character';
+import { Tag } from '../../lib/ship';
 import { TagBadge } from '../atoms/TagBadge';
 
 interface Props {
