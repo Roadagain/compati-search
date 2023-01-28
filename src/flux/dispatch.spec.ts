@@ -32,7 +32,7 @@ const baseState: Readonly<State> = {
   },
 };
 
-describe('onLoadCharacters', () => {
+describe('onLoadShips', () => {
   const currentState: State = {
     ...baseState,
     isReady: false,

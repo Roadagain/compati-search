@@ -5,7 +5,7 @@ import { SortOrder } from './sort-order';
 
 jest.mock('./id');
 jest.mock('./kana');
-describe('sortCharacters', () => {
+describe('sortShips', () => {
   describe.each`
     order             | orderStr  | sortFunction
     ${SortOrder.ID}   | ${'ID'}   | ${sortById}
