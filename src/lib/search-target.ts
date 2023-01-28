@@ -1,4 +1,4 @@
-import { Tag } from './tagged-character';
+import { Tag } from './ship';
 
 export enum SearchType {
   TAG,

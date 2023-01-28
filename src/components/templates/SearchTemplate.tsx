@@ -15,8 +15,8 @@ export const SearchTemplate: React.FC = () => {
   const { state, dispatch } = React.useContext(FluxContext);
   React.useEffect(() => {
     dispatch({
-      type: 'load-characters-data',
-      charactersData: shipsData,
+      type: 'load-ships-data',
+      shipsData,
     });
   }, [dispatch]);
 

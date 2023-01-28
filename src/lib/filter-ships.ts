@@ -1,4 +1,4 @@
-import { Tag, TaggedCharacter } from './tagged-character';
+import { Ship, Tag } from './ship';
 
 export const matchesNameWords = (name: string, words: string[]): boolean => {
   return words.every((word) => {
@@ -23,12 +23,12 @@ export interface SearchWords {
   tag: string[];
 }
 
-export const filterCharacters = (
-  characters: TaggedCharacter[],
+export const filterShips = (
+  ships: Ship[],
   words: SearchWords,
   showAll: boolean
-): TaggedCharacter[] => {
-  return characters.filter(({ name, tags, showDefault }) => {
+): Ship[] => {
+  return ships.filter(({ name, tags, showDefault }) => {
     if (!showAll && !showDefault) {
       return false;
     }

@@ -6,15 +6,15 @@ import {
   onChangeShowAll,
   onChangeSortOrder,
   onClickTag,
-  onLoadCharactersData,
+  onLoadShipsData,
   onShowNextPage,
 } from './dispatch';
 import { State } from './state';
 
 export const reducer: Reducer<State, Action> = (state, action) => {
   switch (action.type) {
-    case 'load-characters-data':
-      return onLoadCharactersData(state, action.charactersData);
+    case 'load-ships-data':
+      return onLoadShipsData(state, action.shipsData);
     case 'change-search-words':
       return onChangeSearchWords(state, action.target, action.words);
     case 'change-show-all':

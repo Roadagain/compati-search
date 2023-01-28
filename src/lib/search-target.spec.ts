@@ -4,7 +4,7 @@ import {
   getLabelOfSearchTarget,
   SearchType,
 } from './search-target';
-import { Tag } from './tagged-character';
+import { Tag } from './ship';
 
 describe('getKeyOfSearchTarget', () => {
   describe('検索対象が名前のとき', () => {

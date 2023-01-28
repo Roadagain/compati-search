@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 
-import { SortOrder } from '../../lib/sort-characters';
+import { SortOrder } from '../../lib/sort-ships';
 import { SortOrderSelector } from './SortOrderSelector';
 
 const meta: Meta<typeof SortOrderSelector> = {

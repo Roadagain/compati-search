@@ -1,28 +1,26 @@
 import { SearchTarget, SearchType } from './search-target';
-import { TaggedCharacter } from './tagged-character';
+import { Ship } from './ship';
 
 export const uniqueAndSortTagLabels = (tagLabels: string[]): string[] => {
   return Array.from(new Set(tagLabels)).sort();
 };
 
 export const generateAutocompleteOptions = (
-  characters: TaggedCharacter[],
+  ships: Ship[],
   target: SearchTarget,
   showAll: boolean
 ): string[] => {
-  const charactersShown = characters.filter(
-    ({ showDefault }) => showAll || showDefault
-  );
+  const shipsShown = ships.filter(({ showDefault }) => showAll || showDefault);
   switch (target.type) {
     case SearchType.TAG:
       return uniqueAndSortTagLabels(
-        charactersShown
+        shipsShown
           .flatMap(({ tags }) => tags)
           .filter(({ category }) => category === target.category)
           .map(({ label }) => label)
       );
     case SearchType.NAME:
-      return charactersShown.map(({ name }) => name);
+      return shipsShown.map(({ name }) => name);
   }
 };
 

@@ -6,7 +6,7 @@ import Stack from '@mui/material/Stack';
 import { SxProps, Theme } from '@mui/material/styles';
 import React from 'react';
 
-import { Tag } from '../../lib/tagged-character';
+import { Tag } from '../../lib/ship';
 import { TagBadge } from '../atoms/TagBadge';
 
 interface Props {
@@ -29,12 +29,7 @@ interface Props {
   sx?: SxProps<Theme>;
 }
 
-export const CharacterCard: React.FC<Props> = ({
-  name,
-  tags,
-  onClickTag,
-  sx,
-}) => {
+export const ShipCard: React.FC<Props> = ({ name, tags, onClickTag, sx }) => {
   const tagLabels = Array.from(new Set(tags.map(({ label }) => label)));
 
   return (

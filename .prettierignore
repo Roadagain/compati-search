@@ -6,5 +6,4 @@ package.json
 next-env.d.ts
 README.md
 coverage/
-characters-data/
 .vscode/

@@ -1,24 +1,24 @@
-import { CharactersData } from '../lib/characters-data';
-import { filterCharacters } from '../lib/filter-characters';
+import { filterShips } from '../lib/filter-ships';
 import { SearchType } from '../lib/search-target';
-import { sortCharacters, SortOrder } from '../lib/sort-characters';
-import { TaggedCharacter } from '../lib/tagged-character';
+import { Ship } from '../lib/ship';
+import { ShipsData } from '../lib/ships-data';
+import { SortOrder, sortShips } from '../lib/sort-ships';
 import {
   onChangeSearchWords,
   onChangeShowAll,
   onChangeSortOrder,
   onClickTag,
-  onLoadCharactersData,
+  onLoadShipsData,
   onShowNextPage,
 } from './dispatch';
 import { State } from './state';
 
-jest.mock('../lib/filter-characters');
-jest.mock('../lib/sort-characters');
+jest.mock('../lib/filter-ships');
+jest.mock('../lib/sort-ships');
 
 const baseState: Readonly<State> = {
   isReady: false,
-  characters: [],
+  ships: [],
   search: {
     info: {
       autocompleteOptions: {},
@@ -32,14 +32,14 @@ const baseState: Readonly<State> = {
   },
 };
 
-describe('onLoadCharacters', () => {
+describe('onLoadShips', () => {
   const currentState: State = {
     ...baseState,
     isReady: false,
-    characters: [],
+    ships: [],
   };
   let nextState: State;
-  const characterShowDefault: TaggedCharacter = {
+  const shipShowDefault: Ship = {
     id: 1,
     name: 'name',
     kana: 'name',
@@ -51,7 +51,7 @@ describe('onLoadCharacters', () => {
     ],
     showDefault: true,
   };
-  const characterHiddenDefault: TaggedCharacter = {
+  const shipHiddenDefault: Ship = {
     id: 2,
     name: 'name-hidden',
     kana: 'name-hidden',
@@ -67,28 +67,25 @@ describe('onLoadCharacters', () => {
     ],
     showDefault: false,
   };
-  const characters: TaggedCharacter[] = [
-    characterShowDefault,
-    characterHiddenDefault,
-  ];
-  const charactersData: CharactersData = {
-    characters,
+  const ships: Ship[] = [shipShowDefault, shipHiddenDefault];
+  const shipsData: ShipsData = {
+    ships,
   };
 
   beforeEach(() => {
-    nextState = onLoadCharactersData(currentState, charactersData);
+    nextState = onLoadShipsData(currentState, shipsData);
   });
 
   it('準備完了フラグが変更されている', () => {
     expect(nextState.isReady).toBeTruthy();
   });
 
-  it('キャラクターが変更されている', () => {
-    expect(nextState.characters).toEqual(characters);
+  it('艦船が変更されている', () => {
+    expect(nextState.ships).toEqual(ships);
   });
 
   it('フィルタ関数が呼び出されている', () => {
-    expect(filterCharacters).toBeCalled();
+    expect(filterShips).toBeCalled();
   });
 });
 
@@ -125,7 +122,7 @@ describe('onChangeSearchWords', () => {
     });
 
     it('フィルタ関数が呼び出されている', () => {
-      expect(filterCharacters).toBeCalled();
+      expect(filterShips).toBeCalled();
     });
   });
 
@@ -148,7 +145,7 @@ describe('onChangeSearchWords', () => {
     });
 
     it('フィルタ関数が呼び出されている', () => {
-      expect(filterCharacters).toBeCalled();
+      expect(filterShips).toBeCalled();
     });
   });
 });
@@ -187,7 +184,7 @@ describe('onChangeShowAll', () => {
       });
 
       it('フィルタ関数が呼び出されている', () => {
-        expect(filterCharacters).toBeCalled();
+        expect(filterShips).toBeCalled();
       });
     }
   );
@@ -212,16 +209,12 @@ describe('onChangeSortOrder', () => {
     expect(nextState.search.sortOrder).toBe(SortOrder.KANA);
   });
 
-  it('キャラクターをソートする関数が呼ばれている', () => {
-    expect(sortCharacters).nthCalledWith(
-      1,
-      currentState.characters,
-      SortOrder.KANA
-    );
+  it('艦船をソートする関数が呼ばれている', () => {
+    expect(sortShips).nthCalledWith(1, currentState.ships, SortOrder.KANA);
   });
 
   it('検索結果をソートする関数が呼ばれている', () => {
-    expect(sortCharacters).nthCalledWith(
+    expect(sortShips).nthCalledWith(
       2,
       currentState.search.results,
       SortOrder.KANA
@@ -267,7 +260,7 @@ describe('onClickTag', () => {
   });
 
   it('フィルタ関数が呼び出されている', () => {
-    expect(filterCharacters).toBeCalled();
+    expect(filterShips).toBeCalled();
   });
 });
 

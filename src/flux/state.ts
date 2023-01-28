@@ -1,6 +1,6 @@
 import { SearchTarget, SearchType } from '../lib/search-target';
-import { SortOrder } from '../lib/sort-characters';
-import { TaggedCharacter } from '../lib/tagged-character';
+import { Ship } from '../lib/ship';
+import { SortOrder } from '../lib/sort-ships';
 
 export type InputedSearchWords = Record<'name' | string, string[]>;
 export type AutocompleteOptions = Record<'name' | string, string[]>;
@@ -15,19 +15,19 @@ interface SearchState {
   words: InputedSearchWords;
   showAll: boolean;
   sortOrder: SortOrder;
-  results: TaggedCharacter[];
+  results: Ship[];
   page: number;
 }
 
 export interface State {
   isReady: boolean;
-  characters: TaggedCharacter[];
+  ships: Ship[];
   search: SearchState;
 }
 
 export const initialState: State = {
   isReady: false,
-  characters: [],
+  ships: [],
   search: {
     info: {
       targets: [{ type: SearchType.NAME }],

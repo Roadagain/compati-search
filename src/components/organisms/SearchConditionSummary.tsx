@@ -4,7 +4,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import React from 'react';
 
 import { FluxContext } from '../../flux/context';
-import { SortOrder } from '../../lib/sort-characters';
+import { SortOrder } from '../../lib/sort-ships';
 import { SearchTypeAndWords } from '../molecules/SearchTypeAndWords';
 import { ShowAllModelsSwitch } from '../molecules/ShowAllModelsSwitch';
 import { SortOrderSelector } from '../molecules/SortOrderSelector';

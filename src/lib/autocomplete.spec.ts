@@ -5,7 +5,7 @@ import {
   wordWithoutFirstMinus,
 } from './autocomplete';
 import { SearchType } from './search-target';
-import { TaggedCharacter } from './tagged-character';
+import { Ship } from './ship';
 
 describe('uniqueAndSortTags', () => {
   const tagLabels: string[] = ['あるは', 'べた', 'あるふあ', 'あるは'];
@@ -20,7 +20,7 @@ describe('uniqueAndSortTags', () => {
 });
 
 describe('generateAutocompleteOptions', () => {
-  const characters: TaggedCharacter[] = [
+  const ships: Ship[] = [
     {
       id: 1,
       name: 'Alpha',
@@ -55,7 +55,7 @@ describe('generateAutocompleteOptions', () => {
       it('タグの一覧を重複なく返す', () => {
         expect(
           generateAutocompleteOptions(
-            characters,
+            ships,
             { type: SearchType.TAG, category: 'X' },
             true
           )
@@ -66,11 +66,7 @@ describe('generateAutocompleteOptions', () => {
     describe('検索対象が名前の場合', () => {
       it('名前の一覧を返す', () => {
         expect(
-          generateAutocompleteOptions(
-            characters,
-            { type: SearchType.NAME },
-            true
-          )
+          generateAutocompleteOptions(ships, { type: SearchType.NAME }, true)
         ).toEqual(['Alpha', 'Beta', 'Gamma']);
       });
     });
@@ -79,7 +75,7 @@ describe('generateAutocompleteOptions', () => {
       it('指定されたカテゴリのタグ一覧を重複なく返す', () => {
         expect(
           generateAutocompleteOptions(
-            characters,
+            ships,
             { type: SearchType.TAG, category: 'X' },
             true
           )
@@ -93,7 +89,7 @@ describe('generateAutocompleteOptions', () => {
       it('デフォルト表示キャラのタグの一覧を重複なく返す', () => {
         expect(
           generateAutocompleteOptions(
-            characters,
+            ships,
             { type: SearchType.TAG, category: 'X' },
             false
           )
@@ -104,11 +100,7 @@ describe('generateAutocompleteOptions', () => {
     describe('検索対象が名前の場合', () => {
       it('デフォルト表示キャラの名前の一覧を返す', () => {
         expect(
-          generateAutocompleteOptions(
-            characters,
-            { type: SearchType.NAME },
-            false
-          )
+          generateAutocompleteOptions(ships, { type: SearchType.NAME }, false)
         ).toEqual(['Alpha', 'Beta']);
       });
     });
@@ -117,7 +109,7 @@ describe('generateAutocompleteOptions', () => {
       it('デフォルト表示キャラの指定されたカテゴリのタグ一覧を重複なく返す', () => {
         expect(
           generateAutocompleteOptions(
-            characters,
+            ships,
             { type: SearchType.TAG, category: 'X' },
             false
           )

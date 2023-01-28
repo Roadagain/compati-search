@@ -5,7 +5,7 @@ import Select, { SelectChangeEvent } from '@mui/material/Select';
 import { SxProps, Theme } from '@mui/material/styles';
 import React from 'react';
 
-import { getLabelOfSortOrder, SortOrder } from '../../lib/sort-characters';
+import { getLabelOfSortOrder, SortOrder } from '../../lib/sort-ships';
 
 interface Props {
   /**
