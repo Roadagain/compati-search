@@ -1,4 +1,4 @@
-import { CharactersData } from '../lib/characters-data';
+import { ShipsData } from '../lib/ships-data';
 import { filterCharacters } from '../lib/filter-characters';
 import { SearchType } from '../lib/search-target';
 import { Ship } from '../lib/ship';
@@ -68,7 +68,7 @@ describe('onLoadCharacters', () => {
     showDefault: false,
   };
   const characters: Ship[] = [characterShowDefault, characterHiddenDefault];
-  const charactersData: CharactersData = {
+  const charactersData: ShipsData = {
     characters,
   };
 

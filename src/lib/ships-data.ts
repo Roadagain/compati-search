@@ -1,5 +1,5 @@
 import { Ship } from './ship';
 
-export interface CharactersData {
+export interface ShipsData {
   characters: Ship[];
 }

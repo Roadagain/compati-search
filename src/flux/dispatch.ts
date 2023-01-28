@@ -1,5 +1,5 @@
 import { generateAutocompleteOptions } from '../lib/autocomplete';
-import { CharactersData } from '../lib/characters-data';
+import { ShipsData } from '../lib/ships-data';
 import { filterCharacters, SearchWords } from '../lib/filter-characters';
 import {
   generateSearchTargets,
@@ -21,7 +21,7 @@ const adjustToSearchWords = (words: InputedSearchWords): SearchWords => {
 
 export const onLoadCharactersData = (
   state: State,
-  charactersData: CharactersData
+  charactersData: ShipsData
 ): State => {
   const { characters } = charactersData;
   const { search } = state;
