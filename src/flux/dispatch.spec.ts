@@ -80,7 +80,7 @@ describe('onLoadShips', () => {
     expect(nextState.isReady).toBeTruthy();
   });
 
-  it('キャラクターが変更されている', () => {
+  it('艦船が変更されている', () => {
     expect(nextState.ships).toEqual(ships);
   });
 
@@ -209,7 +209,7 @@ describe('onChangeSortOrder', () => {
     expect(nextState.search.sortOrder).toBe(SortOrder.KANA);
   });
 
-  it('キャラクターをソートする関数が呼ばれている', () => {
+  it('艦船をソートする関数が呼ばれている', () => {
     expect(sortShips).nthCalledWith(1, currentState.ships, SortOrder.KANA);
   });
 
