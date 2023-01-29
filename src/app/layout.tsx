@@ -2,6 +2,7 @@
 
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
+import { Analytics } from '@vercel/analytics/react';
 import React from 'react';
 
 import { FluxProvider } from '../flux/context';
@@ -29,6 +30,7 @@ const RootLayout = ({ children }: Props) => (
           <FluxProvider>{children}</FluxProvider>
         </ThemeProvider>
       </main>
+      <Analytics />
     </body>
   </html>
 );
