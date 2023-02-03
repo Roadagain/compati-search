@@ -1,6 +1,6 @@
 import { Ship, Tag } from './ship';
 
-export const matchesNameWords = (name: string, words: string[]): boolean => {
+const matchesNameWords = (name: string, words: string[]): boolean => {
   return words.every((word) => {
     const isMinus = word.startsWith('-');
     const actualWord = word.slice(isMinus ? 1 : 0);
@@ -9,7 +9,7 @@ export const matchesNameWords = (name: string, words: string[]): boolean => {
   });
 };
 
-export const matchesTagWords = (tags: Tag[], words: string[]): boolean => {
+const matchesTagWords = (tags: Tag[], words: string[]): boolean => {
   return words.every((word) => {
     const isMinus = word.startsWith('-');
     const actualWord = word.slice(isMinus ? 1 : 0);

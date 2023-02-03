@@ -1,99 +1,9 @@
-import { filterShips, matchesNameWords, matchesTagWords } from './filter-ships';
-
-describe('matchesNameWords', () => {
-  describe('ワードが1つの場合', () => {
-    it('プラスワードを含むかどうか返る', () => {
-      const words = ['na'];
-      expect(matchesNameWords('name', words)).toBeTruthy();
-      expect(matchesNameWords('other', words)).toBeFalsy();
-    });
-
-    it('マイナスワードを含まないかどうか返る', () => {
-      const words = ['-na'];
-      expect(matchesNameWords('name', words)).toBeFalsy();
-      expect(matchesNameWords('other', words)).toBeTruthy();
-    });
-  });
-
-  describe('ワードが複数の場合', () => {
-    it('全てのプラスワードを含みマイナスワードを含まないか返る', () => {
-      const words = ['name', 'second', '-first'];
-      expect(matchesNameWords('name_second', words)).toBeTruthy();
-      expect(matchesNameWords('name_first_second', words)).toBeFalsy();
-      expect(matchesNameWords('second', words)).toBeFalsy();
-    });
-  });
-
-  describe('ワードがない場合', () => {
-    it('マッチする扱いになる', () => {
-      expect(matchesNameWords('', [])).toBeTruthy();
-    });
-  });
-});
-
-describe('matchesTagWords', () => {
-  describe('ワードが1つの場合', () => {
-    it('プラスワードに完全一致するかどうか返る', () => {
-      const words = ['tag'];
-      expect(
-        matchesTagWords([{ category: '', label: 'tag' }], words)
-      ).toBeTruthy();
-      expect(
-        matchesTagWords([{ category: '', label: 'taga' }], words)
-      ).toBeFalsy();
-    });
-
-    it('マイナスワードに完全一致しないかどうか返る', () => {
-      const words = ['-tag'];
-      expect(
-        matchesTagWords([{ category: '', label: 'tag' }], words)
-      ).toBeFalsy();
-      expect(
-        matchesTagWords([{ category: '', label: 'taga' }], words)
-      ).toBeTruthy();
-    });
-  });
-
-  describe('ワードが複数の場合', () => {
-    it('全てのプラスワードがタグ一覧に完全一致し全てのマイナスワードがタグ一覧に完全一致しないか返る', () => {
-      const words = ['tag', 'second', '-first'];
-      expect(
-        matchesTagWords(
-          [
-            { category: '', label: 'tag' },
-            { category: '', label: 'second' },
-          ],
-          words
-        )
-      ).toBeTruthy();
-      expect(
-        matchesTagWords(
-          [
-            { category: '', label: 'tag' },
-            { category: '', label: 'second' },
-            { category: '', label: 'first' },
-          ],
-          words
-        )
-      ).toBeFalsy();
-      expect(
-        matchesTagWords([{ category: '', label: 'tag' }], words)
-      ).toBeFalsy();
-    });
-  });
-
-  describe('ワードがない場合', () => {
-    it('マッチしたとして扱われる', () => {
-      expect(matchesTagWords([], [])).toBeTruthy();
-    });
-  });
-});
+import { filterShips } from './filter-ships';
+import { Ship } from './ship';
 
 describe('filterShips', () => {
   const shipWithTag = {
-    id: 1,
     name: '',
-    kana: '',
     tags: [
       {
         category: 'category',
@@ -101,18 +11,14 @@ describe('filterShips', () => {
       },
     ],
     showDefault: true,
-  };
+  } as Ship;
   const shipWithName = {
-    id: 22,
     name: 'name',
-    kana: 'name',
     tags: [],
     showDefault: true,
-  };
+  } as Ship;
   const shipWithNameAndTag = {
-    id: 333,
     name: 'name2',
-    kana: 'name2',
     tags: [
       {
         category: 'category',
@@ -120,11 +26,14 @@ describe('filterShips', () => {
       },
     ],
     showDefault: true,
-  };
-  const hiddenShipWithNameAndTag = {
-    id: 4444,
+  } as Ship;
+  const hiddenShipWithName = {
     name: 'name_hidden',
-    kana: 'name_hidden',
+    tags: [],
+    showDefault: false,
+  } as Ship;
+  const hiddenShipWithTag = {
+    name: '',
     tags: [
       {
         category: 'category',
@@ -132,11 +41,23 @@ describe('filterShips', () => {
       },
     ],
     showDefault: false,
-  };
+  } as Ship;
+  const hiddenShipWithNameAndTag = {
+    name: 'name_hidden2',
+    tags: [
+      {
+        category: 'category',
+        label: 'label',
+      },
+    ],
+    showDefault: false,
+  } as Ship;
   const ships = [
     shipWithTag,
     shipWithName,
     shipWithNameAndTag,
+    hiddenShipWithTag,
+    hiddenShipWithName,
     hiddenShipWithNameAndTag,
   ];
 
@@ -147,6 +68,12 @@ describe('filterShips', () => {
           [shipWithTag, shipWithNameAndTag]
         );
       });
+
+      it('マイナスタグを含まない結果が返る', () => {
+        expect(
+          filterShips(ships, { name: [], tag: ['-label'] }, false)
+        ).toEqual([shipWithName]);
+      });
     });
 
     describe('検索対象が名前の場合', () => {
@@ -155,6 +82,12 @@ describe('filterShips', () => {
           shipWithName,
           shipWithNameAndTag,
         ]);
+      });
+
+      it('マイナスワードを含まない結果が返る', () => {
+        expect(filterShips(ships, { name: ['-name'], tag: [] }, false)).toEqual(
+          [shipWithTag]
+        );
       });
     });
 
@@ -168,9 +101,11 @@ describe('filterShips', () => {
 
     describe('検索対象が設定されていない場合', () => {
       it('全てのデフォルト表示キャラが返る', () => {
-        expect(filterShips(ships, { name: [], tag: [] }, false)).toEqual(
-          ships.filter(({ showDefault }) => showDefault)
-        );
+        expect(filterShips(ships, { name: [], tag: [] }, false)).toEqual([
+          shipWithTag,
+          shipWithName,
+          shipWithNameAndTag,
+        ]);
       });
     });
 
@@ -193,8 +128,15 @@ describe('filterShips', () => {
         expect(filterShips(ships, { name: [], tag: ['label'] }, true)).toEqual([
           shipWithTag,
           shipWithNameAndTag,
+          hiddenShipWithTag,
           hiddenShipWithNameAndTag,
         ]);
+      });
+
+      it('マイナスタグを含まない結果が返る', () => {
+        expect(filterShips(ships, { name: [], tag: ['-label'] }, true)).toEqual(
+          [shipWithName, hiddenShipWithName]
+        );
       });
     });
 
@@ -203,7 +145,15 @@ describe('filterShips', () => {
         expect(filterShips(ships, { name: ['name'], tag: [] }, true)).toEqual([
           shipWithName,
           shipWithNameAndTag,
+          hiddenShipWithName,
           hiddenShipWithNameAndTag,
+        ]);
+      });
+
+      it('マイナスワードを含まない結果が返る', () => {
+        expect(filterShips(ships, { name: ['-name'], tag: [] }, true)).toEqual([
+          shipWithTag,
+          hiddenShipWithTag,
         ]);
       });
     });
