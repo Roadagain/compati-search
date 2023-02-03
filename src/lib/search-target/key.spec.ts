@@ -1,4 +1,5 @@
-import { getKeyOfSearchTarget, SearchType } from '.';
+import { getKeyOfSearchTarget } from './key';
+import { SearchType } from './search-target';
 
 describe('getKeyOfSearchTarget', () => {
   describe('検索対象が名前のとき', () => {

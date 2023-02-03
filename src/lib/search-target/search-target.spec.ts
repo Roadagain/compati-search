@@ -1,5 +1,5 @@
 import { Tag } from '../ship';
-import { generateSearchTargets, SearchType } from '.';
+import { generateSearchTargets, SearchType } from './search-target';
 
 describe('generateSearchTargets', () => {
   describe('タグが1つ以上ある場合', () => {

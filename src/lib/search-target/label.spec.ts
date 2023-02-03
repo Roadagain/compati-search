@@ -1,4 +1,5 @@
-import { getLabelOfSearchTarget, SearchType } from '.';
+import { getLabelOfSearchTarget } from './label';
+import { SearchType } from './search-target';
 
 describe('getLabelOfSearchTarget', () => {
   describe('検索対象が名前のとき', () => {
