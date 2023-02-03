@@ -1,5 +1,5 @@
-import { filterShips } from './filter-ships';
-import { Ship } from './ship';
+import { Ship } from '../ship';
+import { filterShips } from '.';
 
 describe('filterShips', () => {
   const shipWithTag = {

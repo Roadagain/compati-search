@@ -1,4 +1,5 @@
-import { Ship, Tag } from './ship';
+import { Ship, Tag } from '../ship';
+import { SearchWords } from './search-words';
 
 const matchesNameWords = (name: string, words: string[]): boolean => {
   return words.every((word) => {
@@ -17,11 +18,6 @@ const matchesTagWords = (tags: Tag[], words: string[]): boolean => {
     return isMinus ? !hasWord : hasWord;
   });
 };
-
-export interface SearchWords {
-  name: string[];
-  tag: string[];
-}
 
 export const filterShips = (
   ships: Ship[],
