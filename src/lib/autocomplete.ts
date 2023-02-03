@@ -1,7 +1,7 @@
 import { SearchTarget, SearchType } from './search-target';
 import { Ship } from './ship';
 
-export const uniqueAndSortTagLabels = (tagLabels: string[]): string[] => {
+const uniqueAndSortTagLabels = (tagLabels: string[]): string[] => {
   return Array.from(new Set(tagLabels)).sort();
 };
 
@@ -24,7 +24,7 @@ export const generateAutocompleteOptions = (
   }
 };
 
-export const wordWithoutFirstMinus = (word: string): string => {
+const wordWithoutFirstMinus = (word: string): string => {
   return word.match(/-?(.*)/)[1];
 };
 

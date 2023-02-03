@@ -1,23 +1,9 @@
 import {
   generateAutocompleteOptions,
   isOptionEqualToWord,
-  uniqueAndSortTagLabels,
-  wordWithoutFirstMinus,
 } from './autocomplete';
 import { SearchType } from './search-target';
 import { Ship } from './ship';
-
-describe('uniqueAndSortTags', () => {
-  const tagLabels: string[] = ['あるは', 'べた', 'あるふあ', 'あるは'];
-
-  it('重複を除き文字コード順にソートしたタグの一覧が返る', () => {
-    expect(uniqueAndSortTagLabels(tagLabels)).toEqual([
-      'あるは',
-      'あるふあ',
-      'べた',
-    ]);
-  });
-});
 
 describe('generateAutocompleteOptions', () => {
   const ships: Ship[] = [
@@ -115,29 +101,6 @@ describe('generateAutocompleteOptions', () => {
           )
         ).toEqual(['x-ray']);
       });
-    });
-  });
-});
-
-describe('wordWithoutFirstMins', () => {
-  describe('ワードがマイナス(-)から始まる場合', () => {
-    it('最初のマイナスを除いたワードを返す', () => {
-      const word = '-word';
-      expect(wordWithoutFirstMinus(word)).toBe('word');
-    });
-  });
-
-  describe('ワードがマイナス(-)以外から始まる場合', () => {
-    it('ワードをそのまま返す', () => {
-      const word = '+word';
-      expect(wordWithoutFirstMinus(word)).toBe(word);
-    });
-  });
-
-  describe('ワードが空文字列の場合', () => {
-    it('空文字列を返す', () => {
-      const word = '';
-      expect(wordWithoutFirstMinus(word)).toBe('');
     });
   });
 });
