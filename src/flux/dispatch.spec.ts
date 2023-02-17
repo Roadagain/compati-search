@@ -1,3 +1,4 @@
+import { generateNewAutocompleteOptions } from '../lib/autocomplete';
 import { filterShips } from '../lib/filter-ships';
 import { SearchType } from '../lib/search-target';
 import { NewShip, Ship } from '../lib/ship';
@@ -15,6 +16,7 @@ import { State } from './state';
 
 jest.mock('../lib/filter-ships');
 jest.mock('../lib/sort-ships');
+jest.mock('../lib/autocomplete');
 
 const baseState: Readonly<State> = {
   isReady: false,
@@ -24,6 +26,15 @@ const baseState: Readonly<State> = {
     info: {
       autocompleteOptions: {},
       targets: [],
+      newAutocompleteOptions: {
+        names: [],
+        categories: [],
+        types: [],
+        speeds: [],
+        ranges: [],
+        equipments: [],
+        abilities: [],
+      },
     },
     words: {},
     showAll: false,
@@ -85,6 +96,10 @@ describe('onLoadShips', () => {
   it('艦船が変更されている', () => {
     expect(nextState.ships).toEqual(ships);
     expect(nextState.newShips).toEqual(newShips);
+  });
+
+  it('補完候補生成関数が呼び出されている', () => {
+    expect(generateNewAutocompleteOptions).toBeCalled();
   });
 
   it('フィルタ関数が呼び出されている', () => {
@@ -188,6 +203,10 @@ describe('onChangeShowAll', () => {
 
       it('フィルタ関数が呼び出されている', () => {
         expect(filterShips).toBeCalled();
+      });
+
+      it('補完候補生成関数が呼び出されている', () => {
+        expect(generateNewAutocompleteOptions).toBeCalled();
       });
     }
   );

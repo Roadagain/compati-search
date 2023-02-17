@@ -1,4 +1,7 @@
-import { generateAutocompleteOptions } from '../lib/autocomplete';
+import {
+  generateAutocompleteOptions,
+  generateNewAutocompleteOptions,
+} from '../lib/autocomplete';
 import { filterShips, SearchWords } from '../lib/filter-ships';
 import {
   generateSearchTargets,
@@ -36,6 +39,10 @@ export const onLoadShipsData = (
       return [key, generateAutocompleteOptions(ships, target, showAll)];
     })
   );
+  const newAutocompleteOptions = generateNewAutocompleteOptions(
+    newShips,
+    showAll
+  );
   const words: InputedSearchWords = Object.fromEntries(
     searchTargets.map((target) => {
       const key = getKeyOfSearchTarget(target);
@@ -54,6 +61,7 @@ export const onLoadShipsData = (
         ...search.info,
         targets: searchTargets,
         autocompleteOptions,
+        newAutocompleteOptions,
       },
       words,
       results,
@@ -87,7 +95,7 @@ export const onChangeSearchWords = (
 };
 
 export const onChangeShowAll = (state: State, showAll: boolean): State => {
-  const { ships, search } = state;
+  const { ships, newShips, search } = state;
   const { words, info } = search;
   const results = filterShips(ships, adjustToSearchWords(words), showAll);
   const searchTargets = info.targets;
@@ -97,6 +105,10 @@ export const onChangeShowAll = (state: State, showAll: boolean): State => {
       return [key, generateAutocompleteOptions(ships, target, showAll)];
     })
   );
+  const newAutocompleteOptions = generateNewAutocompleteOptions(
+    newShips,
+    showAll
+  );
   return {
     ...state,
     search: {
@@ -104,6 +116,7 @@ export const onChangeShowAll = (state: State, showAll: boolean): State => {
       info: {
         ...info,
         autocompleteOptions,
+        newAutocompleteOptions,
       },
       showAll,
       results,

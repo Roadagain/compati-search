@@ -1,3 +1,4 @@
+import { NewAutocompleteOptions } from '../lib/autocomplete';
 import { SearchTarget, SearchType } from '../lib/search-target';
 import { NewShip, Ship } from '../lib/ship';
 import { SortOrder } from '../lib/sort-ships';
@@ -7,6 +8,7 @@ export type AutocompleteOptions = Record<'name' | string, string[]>;
 
 interface SearchInfoState {
   autocompleteOptions: AutocompleteOptions;
+  newAutocompleteOptions: NewAutocompleteOptions;
   targets: SearchTarget[];
 }
 
@@ -34,6 +36,15 @@ export const initialState: State = {
     info: {
       targets: [{ type: SearchType.NAME }],
       autocompleteOptions: {},
+      newAutocompleteOptions: {
+        names: [],
+        categories: [],
+        types: [],
+        speeds: [],
+        ranges: [],
+        equipments: [],
+        abilities: [],
+      },
     },
     words: {
       name: [],
