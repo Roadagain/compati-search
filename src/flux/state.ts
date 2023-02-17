@@ -1,4 +1,5 @@
 import { NewAutocompleteOptions } from '../lib/autocomplete';
+import { NewSearchWords } from '../lib/filter-ships';
 import { SearchTarget, SearchType } from '../lib/search-target';
 import { NewShip, Ship } from '../lib/ship';
 import { SortOrder } from '../lib/sort-ships';
@@ -15,9 +16,11 @@ interface SearchInfoState {
 interface SearchState {
   info: SearchInfoState;
   words: InputedSearchWords;
+  newWords: NewSearchWords;
   showAll: boolean;
   sortOrder: SortOrder;
   results: Ship[];
+  newResults: NewShip[];
   page: number;
 }
 
@@ -49,9 +52,19 @@ export const initialState: State = {
     words: {
       name: [],
     },
+    newWords: {
+      names: [],
+      categories: [],
+      types: [],
+      speeds: [],
+      ranges: [],
+      equipments: [],
+      abilities: [],
+    },
     showAll: false,
     sortOrder: SortOrder.ID,
     results: [],
+    newResults: [],
     page: 1,
   },
 };

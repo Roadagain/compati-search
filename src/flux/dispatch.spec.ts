@@ -1,5 +1,5 @@
 import { generateNewAutocompleteOptions } from '../lib/autocomplete';
-import { filterShips } from '../lib/filter-ships';
+import { filterNewShips, filterShips } from '../lib/filter-ships';
 import { SearchType } from '../lib/search-target';
 import { NewShip, Ship } from '../lib/ship';
 import { ShipsData } from '../lib/ships-data';
@@ -37,9 +37,19 @@ const baseState: Readonly<State> = {
       },
     },
     words: {},
+    newWords: {
+      names: [],
+      categories: [],
+      types: [],
+      speeds: [],
+      ranges: [],
+      equipments: [],
+      abilities: [],
+    },
     showAll: false,
     sortOrder: SortOrder.ID,
     results: [],
+    newResults: [],
     page: 1,
   },
 };
@@ -104,6 +114,7 @@ describe('onLoadShips', () => {
 
   it('フィルタ関数が呼び出されている', () => {
     expect(filterShips).toBeCalled();
+    expect(filterNewShips).toBeCalled();
   });
 });
 
@@ -203,6 +214,7 @@ describe('onChangeShowAll', () => {
 
       it('フィルタ関数が呼び出されている', () => {
         expect(filterShips).toBeCalled();
+        expect(filterNewShips).toBeCalled();
       });
 
       it('補完候補生成関数が呼び出されている', () => {
