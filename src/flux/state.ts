@@ -1,5 +1,5 @@
 import { SearchTarget, SearchType } from '../lib/search-target';
-import { Ship } from '../lib/ship';
+import { NewShip, Ship } from '../lib/ship';
 import { SortOrder } from '../lib/sort-ships';
 
 export type InputedSearchWords = Record<'name' | string, string[]>;
@@ -22,12 +22,14 @@ interface SearchState {
 export interface State {
   isReady: boolean;
   ships: Ship[];
+  newShips: NewShip[];
   search: SearchState;
 }
 
 export const initialState: State = {
   isReady: false,
   ships: [],
+  newShips: [],
   search: {
     info: {
       targets: [{ type: SearchType.NAME }],

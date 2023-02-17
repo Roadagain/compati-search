@@ -1,6 +1,6 @@
 import { filterShips } from '../lib/filter-ships';
 import { SearchType } from '../lib/search-target';
-import { Ship } from '../lib/ship';
+import { NewShip, Ship } from '../lib/ship';
 import { ShipsData } from '../lib/ships-data';
 import { SortOrder, sortShips } from '../lib/sort-ships';
 import {
@@ -19,6 +19,7 @@ jest.mock('../lib/sort-ships');
 const baseState: Readonly<State> = {
   isReady: false,
   ships: [],
+  newShips: [],
   search: {
     info: {
       autocompleteOptions: {},
@@ -71,9 +72,10 @@ describe('onLoadShips', () => {
   const shipsData: ShipsData = {
     ships,
   };
+  const newShips: NewShip[] = [{} as NewShip];
 
   beforeEach(() => {
-    nextState = onLoadShipsData(currentState, shipsData);
+    nextState = onLoadShipsData(currentState, shipsData, newShips);
   });
 
   it('準備完了フラグが変更されている', () => {
@@ -82,6 +84,7 @@ describe('onLoadShips', () => {
 
   it('艦船が変更されている', () => {
     expect(nextState.ships).toEqual(ships);
+    expect(nextState.newShips).toEqual(newShips);
   });
 
   it('フィルタ関数が呼び出されている', () => {

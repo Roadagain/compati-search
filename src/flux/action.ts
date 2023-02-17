@@ -1,10 +1,12 @@
 import { SearchTarget } from '../lib/search-target';
+import { NewShip } from '../lib/ship';
 import { ShipsData } from '../lib/ships-data';
 import { SortOrder } from '../lib/sort-ships';
 
 interface LoadShipsData {
   type: 'load-ships-data';
   shipsData: ShipsData;
+  newShips: NewShip[];
 }
 
 interface ChangeSearchWordsAction {

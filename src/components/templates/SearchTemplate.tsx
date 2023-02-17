@@ -5,6 +5,7 @@ import LinearProgress from '@mui/material/LinearProgress';
 import Typography from '@mui/material/Typography';
 import React from 'react';
 
+import newShips from '../../../new-ships.json';
 import shipsData from '../../../ships.json';
 import { FluxContext } from '../../flux/context';
 import { FullSearchForm } from '../organisms/FullSearchForm';
@@ -17,6 +18,7 @@ export const SearchTemplate: React.FC = () => {
     dispatch({
       type: 'load-ships-data',
       shipsData,
+      newShips,
     });
   }, [dispatch]);
 

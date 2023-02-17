@@ -5,6 +5,7 @@ import {
   getKeyOfSearchTarget,
   SearchTarget,
 } from '../lib/search-target';
+import { NewShip } from '../lib/ship';
 import { ShipsData } from '../lib/ships-data';
 import { SortOrder, sortShips } from '../lib/sort-ships';
 import { InputedSearchWords, State } from './state';
@@ -19,7 +20,11 @@ const adjustToSearchWords = (words: InputedSearchWords): SearchWords => {
   };
 };
 
-export const onLoadShipsData = (state: State, shipsData: ShipsData): State => {
+export const onLoadShipsData = (
+  state: State,
+  shipsData: ShipsData,
+  newShips: NewShip[]
+): State => {
   const { ships } = shipsData;
   const { search } = state;
   const { showAll } = search;
@@ -42,6 +47,7 @@ export const onLoadShipsData = (state: State, shipsData: ShipsData): State => {
     ...state,
     isReady: true,
     ships,
+    newShips,
     search: {
       ...search,
       info: {
