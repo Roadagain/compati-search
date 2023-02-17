@@ -134,14 +134,18 @@ export const onChangeSortOrder = (
   sortOrder: SortOrder
 ): State => {
   const ships = sortShips(state.ships, sortOrder);
+  const newShips = sortShips(state.newShips, sortOrder);
   const results = sortShips(state.search.results, sortOrder);
+  const newResults = sortShips(state.search.newResults, sortOrder);
   return {
     ...state,
     ships,
+    newShips,
     search: {
       ...state.search,
       sortOrder,
       results,
+      newResults,
     },
   };
 };

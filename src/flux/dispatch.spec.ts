@@ -245,12 +245,18 @@ describe('onChangeSortOrder', () => {
 
   it('艦船をソートする関数が呼ばれている', () => {
     expect(sortShips).nthCalledWith(1, currentState.ships, SortOrder.KANA);
+    expect(sortShips).nthCalledWith(2, currentState.newShips, SortOrder.KANA);
   });
 
   it('検索結果をソートする関数が呼ばれている', () => {
     expect(sortShips).nthCalledWith(
-      2,
+      3,
       currentState.search.results,
+      SortOrder.KANA
+    );
+    expect(sortShips).nthCalledWith(
+      4,
+      currentState.search.newResults,
       SortOrder.KANA
     );
   });

@@ -1,7 +1,7 @@
-import { Ship } from '../ship';
+import { NewShip, Ship } from '../ship';
 import { SortOrder } from './sort-order';
 
-const sortById = (ships: Ship[]): Ship[] => {
+const sortById = <T extends Ship | NewShip>(ships: T[]): T[] => {
   return ships.slice().sort((a, b) => a.id - b.id);
 };
 
@@ -18,11 +18,14 @@ const compareKana = (a: string, b: string): number => {
   return 1;
 };
 
-const sortByKana = (ships: Ship[]): Ship[] => {
+const sortByKana = <T extends Ship | NewShip>(ships: T[]): T[] => {
   return ships.slice().sort((a, b) => compareKana(a.kana, b.kana));
 };
 
-export const sortShips = (ships: Ship[], order: SortOrder): Ship[] => {
+export const sortShips = <T extends Ship | NewShip>(
+  ships: T[],
+  order: SortOrder
+): T[] => {
   switch (order) {
     case SortOrder.ID:
       return sortById(ships);
