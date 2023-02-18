@@ -1,4 +1,4 @@
-import { SearchTarget } from '../lib/search-target';
+import { NewSearchTarget, SearchTarget } from '../lib/search-target';
 import { NewShip } from '../lib/ship';
 import { ShipsData } from '../lib/ships-data';
 import { SortOrder } from '../lib/sort-ships';
@@ -13,6 +13,7 @@ interface ChangeSearchWordsAction {
   type: 'change-search-words';
   target: SearchTarget;
   words: string[];
+  newTarget: NewSearchTarget;
 }
 
 interface ChangeShowAllAction {

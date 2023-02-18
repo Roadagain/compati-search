@@ -6,6 +6,7 @@ import { filterNewShips, filterShips, SearchWords } from '../lib/filter-ships';
 import {
   generateSearchTargets,
   getKeyOfSearchTarget,
+  NewSearchTarget,
   SearchTarget,
 } from '../lib/search-target';
 import { NewShip } from '../lib/ship';
@@ -75,9 +76,10 @@ export const onLoadShipsData = (
 export const onChangeSearchWords = (
   state: State,
   target: SearchTarget,
-  newWords: string[]
+  newWords: string[],
+  newTarget: NewSearchTarget
 ): State => {
-  const { ships, search } = state;
+  const { ships, newShips, search } = state;
   const { showAll } = search;
   const key = getKeyOfSearchTarget(target);
   const words = {
@@ -85,12 +87,19 @@ export const onChangeSearchWords = (
     [key]: newWords,
   };
   const results = filterShips(ships, adjustToSearchWords(words), showAll);
+  const newNewWords = {
+    ...search.newWords,
+    [newTarget]: newWords,
+  };
+  const newResults = filterNewShips(newShips, newNewWords, showAll);
   return {
     ...state,
     search: {
       ...search,
       words,
+      newWords: newNewWords,
       results,
+      newResults,
       page: 1,
     },
   };

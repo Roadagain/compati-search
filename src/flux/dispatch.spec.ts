@@ -127,6 +127,15 @@ describe('onChangeSearchWords', () => {
         name: ['sample'],
         test: ['test'],
       },
+      newWords: {
+        names: ['sample'],
+        categories: ['test'],
+        types: [],
+        speeds: [],
+        ranges: [],
+        equipments: [],
+        abilities: [],
+      },
       page: 4,
     },
   };
@@ -138,12 +147,14 @@ describe('onChangeSearchWords', () => {
       nextState = onChangeSearchWords(
         currentState,
         { type: SearchType.NAME },
-        words
+        words,
+        'names'
       );
     });
 
     it('名前の検索ワードが変更されている', () => {
       expect(nextState.search.words.name).toEqual(words);
+      expect(nextState.search.newWords.names).toEqual(words);
     });
 
     it('ページがリセットされている', () => {
@@ -152,6 +163,7 @@ describe('onChangeSearchWords', () => {
 
     it('フィルタ関数が呼び出されている', () => {
       expect(filterShips).toBeCalled();
+      expect(filterNewShips).toBeCalled();
     });
   });
 
@@ -161,12 +173,14 @@ describe('onChangeSearchWords', () => {
       nextState = onChangeSearchWords(
         currentState,
         { type: SearchType.TAG, category: 'test' },
-        words
+        words,
+        'categories'
       );
     });
 
     it('指定したタグカテゴリの検索ワードが変更されている', () => {
       expect(nextState.search.words.test).toEqual(words);
+      expect(nextState.search.newWords.categories).toEqual(words);
     });
 
     it('ページがリセットされている', () => {
@@ -175,6 +189,7 @@ describe('onChangeSearchWords', () => {
 
     it('フィルタ関数が呼び出されている', () => {
       expect(filterShips).toBeCalled();
+      expect(filterNewShips).toBeCalled();
     });
   });
 });

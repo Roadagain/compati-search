@@ -1,3 +1,4 @@
+import { NewSearchWords } from '../filter-ships';
 import { Tag } from '../ship';
 
 export enum SearchType {
@@ -28,3 +29,5 @@ export const generateSearchTargets = (tags: Tag[]): SearchTarget[] => {
       })),
   ];
 };
+
+export type NewSearchTarget = keyof NewSearchWords;
