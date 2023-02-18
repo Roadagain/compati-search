@@ -6,7 +6,6 @@ import Typography from '@mui/material/Typography';
 import React from 'react';
 
 import newShips from '../../../new-ships.json';
-import shipsData from '../../../ships.json';
 import { FluxContext } from '../../flux/context';
 import { FullSearchForm } from '../organisms/FullSearchForm';
 import { SearchConditionSummary } from '../organisms/SearchConditionSummary';
@@ -17,8 +16,7 @@ export const SearchTemplate: React.FC = () => {
   React.useEffect(() => {
     dispatch({
       type: 'load-ships-data',
-      shipsData,
-      newShips,
+      ships: newShips,
     });
   }, [dispatch]);
 
