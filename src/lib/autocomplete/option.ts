@@ -1,9 +1,3 @@
-export interface NewAutocompleteOptions {
-  names: string[];
-  categories: string[];
-  types: string[];
-  speeds: string[];
-  ranges: string[];
-  equipments: string[];
-  abilities: string[];
-}
+import { NewSearchTarget } from '../search-target';
+
+export type NewAutocompleteOptions = Record<NewSearchTarget, string[]>;
