@@ -14,14 +14,9 @@ import { State } from './state';
 export const reducer: Reducer<State, Action> = (state, action) => {
   switch (action.type) {
     case 'load-ships-data':
-      return onLoadShipsData(state, action.shipsData, action.newShips);
+      return onLoadShipsData(state, action.ships);
     case 'change-search-words':
-      return onChangeSearchWords(
-        state,
-        action.target,
-        action.words,
-        action.newTarget
-      );
+      return onChangeSearchWords(state, action.target, action.words);
     case 'change-show-all':
       return onChangeShowAll(state, action.showAll);
     case 'change-sort-order':

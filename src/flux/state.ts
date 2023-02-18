@@ -1,45 +1,36 @@
 import { NewAutocompleteOptions } from '../lib/autocomplete';
 import { NewSearchWords } from '../lib/filter-ships';
-import { SearchTarget, SearchType } from '../lib/search-target';
-import { NewShip, Ship } from '../lib/ship';
+import { NewShip } from '../lib/ship';
 import { SortOrder } from '../lib/sort-ships';
 
 export type InputedSearchWords = Record<'name' | string, string[]>;
 export type AutocompleteOptions = Record<'name' | string, string[]>;
 
 interface SearchInfoState {
-  autocompleteOptions: AutocompleteOptions;
-  newAutocompleteOptions: NewAutocompleteOptions;
-  targets: SearchTarget[];
+  autocompleteOptions: NewAutocompleteOptions;
 }
 
 interface SearchState {
   info: SearchInfoState;
-  words: InputedSearchWords;
-  newWords: NewSearchWords;
+  words: NewSearchWords;
   showAll: boolean;
   sortOrder: SortOrder;
-  results: Ship[];
-  newResults: NewShip[];
+  results: NewShip[];
   page: number;
 }
 
 export interface State {
   isReady: boolean;
-  ships: Ship[];
-  newShips: NewShip[];
+  ships: NewShip[];
   search: SearchState;
 }
 
 export const initialState: State = {
   isReady: false,
   ships: [],
-  newShips: [],
   search: {
     info: {
-      targets: [{ type: SearchType.NAME }],
-      autocompleteOptions: {},
-      newAutocompleteOptions: {
+      autocompleteOptions: {
         names: [],
         categories: [],
         types: [],
@@ -50,9 +41,6 @@ export const initialState: State = {
       },
     },
     words: {
-      name: [],
-    },
-    newWords: {
       names: [],
       categories: [],
       types: [],
@@ -64,7 +52,6 @@ export const initialState: State = {
     showAll: false,
     sortOrder: SortOrder.ID,
     results: [],
-    newResults: [],
     page: 1,
   },
 };
