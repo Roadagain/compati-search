@@ -31,11 +31,11 @@ export const SearchConditionSummary: React.FC<Props> = ({ sx }) => {
     },
     [dispatch]
   );
-  const nameWords = words.name;
+  const nameWords = words.names;
   const tagWords = Array.from(
     new Set(
       Object.entries(words)
-        .filter(([key]) => key !== 'name')
+        .filter(([key]) => key !== 'names')
         .flatMap(([, words]) => words)
     )
   );

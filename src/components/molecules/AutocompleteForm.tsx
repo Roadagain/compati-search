@@ -5,13 +5,16 @@ import TextField from '@mui/material/TextField';
 import React from 'react';
 
 import { isOptionEqualToWord } from '../../lib/autocomplete';
-import { getLabelOfSearchTarget, SearchTarget } from '../../lib/search-target';
+import {
+  AllSearchTargetLabels,
+  NewSearchTarget,
+} from '../../lib/search-target';
 
 interface Props {
   /**
    * 検索対象
    */
-  target: SearchTarget;
+  target: NewSearchTarget;
   /**
    * 検索ワード
    */
@@ -38,7 +41,7 @@ export const AutocompleteForm: React.FC<Props> = ({
   onChange,
   sx,
 }) => {
-  const label = `${getLabelOfSearchTarget(target)}`;
+  const label = AllSearchTargetLabels[target];
   const onChangeWords = React.useCallback(
     (_, words: string[]) => {
       onChange(words);
