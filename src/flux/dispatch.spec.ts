@@ -83,13 +83,13 @@ describe('onChangeSearchWords', () => {
     search: {
       ...baseState.search,
       words: {
-        names: ['sample'],
         categories: ['test'],
         types: [],
-        speeds: [],
-        ranges: [],
         equipments: [],
         abilities: [],
+        speeds: [],
+        ranges: [],
+        names: ['sample'],
       },
       page: 4,
     },
