@@ -18,31 +18,15 @@ type Story = StoryObj<typeof ShipCard>;
 export const Card: Story = {
   args: {
     name: 'なまえ',
-    tags: [
-      { category: 'あいうえお', label: 'タグ1' },
-      { category: 'かきくけこ', label: 'タグ2' },
-    ],
+    tags: ['タグ1', 'タグ2'],
     sx: {},
   },
 };
+
 export const OverflowTags: Story = {
   args: {
     name: 'なまえ',
-    tags: Array.from({ length: 32 }, (_, index) => ({
-      category: `カテゴリー${index + 1}`,
-      label: `タグ${index + 1}`,
-    })),
-    sx: {},
-  },
-};
-export const DuplicateTagLabels: Story = {
-  args: {
-    name: 'なまえ',
-    tags: [
-      { category: 'あいうえお', label: 'タグ1' },
-      { category: 'かきくけこ', label: 'タグ2' },
-      { category: 'さしすせそ', label: 'タグ2' },
-    ],
+    tags: Array.from({ length: 32 }, (_, index) => `タグ${index + 1}`),
     sx: {},
   },
 };

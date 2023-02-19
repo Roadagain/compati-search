@@ -1,13 +1,13 @@
 import { Meta, StoryObj } from '@storybook/react';
 
-import { SearchType } from '../../lib/search-target';
+import { AllSearchTargets } from '../../lib/search-target';
 import { AutocompleteForm } from './AutocompleteForm';
 
 const meta: Meta<typeof AutocompleteForm> = {
   title: 'Molecules/AutocompleteForm',
   component: AutocompleteForm,
   argTypes: {
-    target: { control: 'object' },
+    target: { control: 'select', options: AllSearchTargets },
     words: { control: 'object' },
     autocompleteOptions: { control: 'object' },
     sx: { control: 'object' },
@@ -19,7 +19,7 @@ type Story = StoryObj<typeof AutocompleteForm>;
 
 export const SearchByTag: Story = {
   args: {
-    target: { type: SearchType.TAG, category: '五十音' },
+    target: 'categories',
     words: [],
     autocompleteOptions: ['あいうえお', 'かきくけこ'],
     sx: {},
@@ -27,7 +27,7 @@ export const SearchByTag: Story = {
 };
 export const SearchByName: Story = {
   args: {
-    target: { type: SearchType.NAME },
+    target: 'names',
     words: [],
     autocompleteOptions: ['さしすせそ', 'たちつてと'],
     sx: {},
@@ -35,7 +35,7 @@ export const SearchByName: Story = {
 };
 export const InputtedWords: Story = {
   args: {
-    target: { type: SearchType.TAG, category: '五十音' },
+    target: 'abilities',
     words: ['あいうえお', 'なにぬねの', '-はひふへほ'],
     autocompleteOptions: ['なにぬねの', 'はひふへほ', 'まみむめも'],
     sx: {},
