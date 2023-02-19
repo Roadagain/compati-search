@@ -1,18 +1,15 @@
-import { SearchTarget, SearchType } from '../lib/search-target';
+import { AutocompleteOptions } from '../lib/autocomplete';
+import { SearchWords } from '../lib/filter-ships';
 import { Ship } from '../lib/ship';
 import { SortOrder } from '../lib/sort-ships';
 
-export type InputedSearchWords = Record<'name' | string, string[]>;
-export type AutocompleteOptions = Record<'name' | string, string[]>;
-
 interface SearchInfoState {
   autocompleteOptions: AutocompleteOptions;
-  targets: SearchTarget[];
 }
 
 interface SearchState {
   info: SearchInfoState;
-  words: InputedSearchWords;
+  words: SearchWords;
   showAll: boolean;
   sortOrder: SortOrder;
   results: Ship[];
@@ -30,11 +27,24 @@ export const initialState: State = {
   ships: [],
   search: {
     info: {
-      targets: [{ type: SearchType.NAME }],
-      autocompleteOptions: {},
+      autocompleteOptions: {
+        categories: [],
+        types: [],
+        equipments: [],
+        abilities: [],
+        speeds: [],
+        ranges: [],
+        names: [],
+      },
     },
     words: {
-      name: [],
+      categories: [],
+      types: [],
+      equipments: [],
+      abilities: [],
+      speeds: [],
+      ranges: [],
+      names: [],
     },
     showAll: false,
     sortOrder: SortOrder.ID,

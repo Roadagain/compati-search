@@ -6,13 +6,13 @@ import { SearchWord } from '../atoms/SearchWord';
 
 interface Props {
   /**
-   * 名前の検索ワード
-   */
-  nameWords: string[];
-  /**
    * タグの検索ワード
    */
   tagWords: string[];
+  /**
+   * 名前の検索ワード
+   */
+  nameWords: string[];
   /**
    * テーマ関連のスタイル指定
    */
@@ -26,19 +26,7 @@ export const SearchTypeAndWords: React.FC<Props> = ({
 }) => {
   return (
     <Typography component="h2" variant="h6" sx={sx}>
-      名前:
-      {nameWords.length ? (
-        <>
-          {nameWords.map((word) => {
-            return <SearchWord key={word} word={word} />;
-          })}
-        </>
-      ) : (
-        <Typography component="span" variant="h6" fontWeight="normal">
-          条件なし
-        </Typography>
-      )}
-      &nbsp; タグ:
+      タグ:
       {tagWords.length ? (
         <>
           {tagWords.map((word) => {
@@ -48,6 +36,18 @@ export const SearchTypeAndWords: React.FC<Props> = ({
                 &nbsp;
               </React.Fragment>
             );
+          })}
+        </>
+      ) : (
+        <Typography component="span" variant="h6" fontWeight="normal">
+          条件なし
+        </Typography>
+      )}
+      &nbsp; 名前:
+      {nameWords.length ? (
+        <>
+          {nameWords.map((word) => {
+            return <SearchWord key={word} word={word} />;
           })}
         </>
       ) : (

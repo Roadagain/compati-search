@@ -1,4 +1,3 @@
-export interface SearchWords {
-  name: string[];
-  tag: string[];
-}
+import { SearchTarget } from '../search-target';
+
+export type SearchWords = Record<SearchTarget, string[]>;

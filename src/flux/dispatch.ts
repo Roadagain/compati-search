@@ -1,43 +1,15 @@
 import { generateAutocompleteOptions } from '../lib/autocomplete';
-import { filterShips, SearchWords } from '../lib/filter-ships';
-import {
-  generateSearchTargets,
-  getKeyOfSearchTarget,
-  SearchTarget,
-} from '../lib/search-target';
-import { ShipsData } from '../lib/ships-data';
+import { filterShips } from '../lib/filter-ships';
+import { AllSearchTargets, SearchTarget } from '../lib/search-target';
+import { Ship } from '../lib/ship';
 import { SortOrder, sortShips } from '../lib/sort-ships';
-import { InputedSearchWords, State } from './state';
+import { State } from './state';
 
-const adjustToSearchWords = (words: InputedSearchWords): SearchWords => {
-  const tagCategories = Object.keys(words).filter((key) => key !== 'name');
-  return {
-    name: words.name,
-    tag: Array.from(
-      new Set(tagCategories.flatMap((category) => words[category]))
-    ),
-  };
-};
-
-export const onLoadShipsData = (state: State, shipsData: ShipsData): State => {
-  const { ships } = shipsData;
+export const onLoadShipsData = (state: State, ships: Ship[]): State => {
   const { search } = state;
-  const { showAll } = search;
-  const allTags = ships.flatMap(({ tags }) => tags);
-  const searchTargets = generateSearchTargets(allTags);
-  const autocompleteOptions = Object.fromEntries(
-    searchTargets.map((target) => {
-      const key = getKeyOfSearchTarget(target);
-      return [key, generateAutocompleteOptions(ships, target, showAll)];
-    })
-  );
-  const words: InputedSearchWords = Object.fromEntries(
-    searchTargets.map((target) => {
-      const key = getKeyOfSearchTarget(target);
-      return [key, []];
-    })
-  );
-  const results = filterShips(ships, adjustToSearchWords(words), showAll);
+  const { showAll, words } = search;
+  const autocompleteOptions = generateAutocompleteOptions(ships, showAll);
+  const results = filterShips(ships, words, showAll);
   return {
     ...state,
     isReady: true,
@@ -46,7 +18,6 @@ export const onLoadShipsData = (state: State, shipsData: ShipsData): State => {
       ...search,
       info: {
         ...search.info,
-        targets: searchTargets,
         autocompleteOptions,
       },
       words,
@@ -63,12 +34,11 @@ export const onChangeSearchWords = (
 ): State => {
   const { ships, search } = state;
   const { showAll } = search;
-  const key = getKeyOfSearchTarget(target);
   const words = {
     ...search.words,
-    [key]: newWords,
+    [target]: newWords,
   };
-  const results = filterShips(ships, adjustToSearchWords(words), showAll);
+  const results = filterShips(ships, words, showAll);
   return {
     ...state,
     search: {
@@ -83,14 +53,8 @@ export const onChangeSearchWords = (
 export const onChangeShowAll = (state: State, showAll: boolean): State => {
   const { ships, search } = state;
   const { words, info } = search;
-  const results = filterShips(ships, adjustToSearchWords(words), showAll);
-  const searchTargets = info.targets;
-  const autocompleteOptions = Object.fromEntries(
-    searchTargets.map((target) => {
-      const key = getKeyOfSearchTarget(target);
-      return [key, generateAutocompleteOptions(ships, target, showAll)];
-    })
-  );
+  const results = filterShips(ships, words, showAll);
+  const autocompleteOptions = generateAutocompleteOptions(ships, showAll);
   return {
     ...state,
     search: {
@@ -127,19 +91,18 @@ export const onClickTag = (state: State, label: string): State => {
   const { ships, search } = state;
   const { words, showAll } = search;
   const { autocompleteOptions } = search.info;
-  const categories = Object.entries(autocompleteOptions)
-    .filter(([key, options]) => key !== 'name' && options.includes(label))
-    .map(([key]) => key);
-  const overrideWords = Object.fromEntries(
-    categories.map((category) => {
-      return [category, Array.from(new Set([...words[category], label]))];
-    })
+  const tagCategories = AllSearchTargets.filter((target) =>
+    autocompleteOptions[target].includes(label)
   );
   const newWords = {
     ...words,
-    ...overrideWords,
+    ...Object.fromEntries(
+      tagCategories.map((target) => {
+        return [target, [...words[target], label]];
+      })
+    ),
   };
-  const results = filterShips(ships, adjustToSearchWords(newWords), showAll);
+  const results = filterShips(ships, newWords, showAll);
   return {
     ...state,
     search: {

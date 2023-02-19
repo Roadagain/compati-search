@@ -1,7 +1,6 @@
+import { generateAutocompleteOptions } from '../lib/autocomplete';
 import { filterShips } from '../lib/filter-ships';
-import { SearchType } from '../lib/search-target';
 import { Ship } from '../lib/ship';
-import { ShipsData } from '../lib/ships-data';
 import { SortOrder, sortShips } from '../lib/sort-ships';
 import {
   onChangeSearchWords,
@@ -15,16 +14,32 @@ import { State } from './state';
 
 jest.mock('../lib/filter-ships');
 jest.mock('../lib/sort-ships');
+jest.mock('../lib/autocomplete');
 
 const baseState: Readonly<State> = {
   isReady: false,
   ships: [],
   search: {
     info: {
-      autocompleteOptions: {},
-      targets: [],
+      autocompleteOptions: {
+        categories: [],
+        types: [],
+        equipments: [],
+        abilities: [],
+        speeds: [],
+        ranges: [],
+        names: [],
+      },
     },
-    words: {},
+    words: {
+      categories: [],
+      types: [],
+      equipments: [],
+      abilities: [],
+      speeds: [],
+      ranges: [],
+      names: [],
+    },
     showAll: false,
     sortOrder: SortOrder.ID,
     results: [],
@@ -39,41 +54,10 @@ describe('onLoadShips', () => {
     ships: [],
   };
   let nextState: State;
-  const shipShowDefault: Ship = {
-    id: 1,
-    name: 'name',
-    kana: 'name',
-    tags: [
-      {
-        category: 'category',
-        label: 'label',
-      },
-    ],
-    showDefault: true,
-  };
-  const shipHiddenDefault: Ship = {
-    id: 2,
-    name: 'name-hidden',
-    kana: 'name-hidden',
-    tags: [
-      {
-        category: 'category',
-        label: 'label',
-      },
-      {
-        category: 'category2',
-        label: 'hidden',
-      },
-    ],
-    showDefault: false,
-  };
-  const ships: Ship[] = [shipShowDefault, shipHiddenDefault];
-  const shipsData: ShipsData = {
-    ships,
-  };
+  const ships: Ship[] = [{} as Ship];
 
   beforeEach(() => {
-    nextState = onLoadShipsData(currentState, shipsData);
+    nextState = onLoadShipsData(currentState, ships);
   });
 
   it('準備完了フラグが変更されている', () => {
@@ -82,6 +66,10 @@ describe('onLoadShips', () => {
 
   it('艦船が変更されている', () => {
     expect(nextState.ships).toEqual(ships);
+  });
+
+  it('補完候補生成関数が呼び出されている', () => {
+    expect(generateAutocompleteOptions).toBeCalled();
   });
 
   it('フィルタ関数が呼び出されている', () => {
@@ -95,58 +83,34 @@ describe('onChangeSearchWords', () => {
     search: {
       ...baseState.search,
       words: {
-        name: ['sample'],
-        test: ['test'],
+        categories: ['test'],
+        types: [],
+        equipments: [],
+        abilities: [],
+        speeds: [],
+        ranges: [],
+        names: ['sample'],
       },
       page: 4,
     },
   };
   let nextState: State;
 
-  describe('名前が対象のとき', () => {
-    const words = ['word', 'sample'];
-    beforeEach(() => {
-      nextState = onChangeSearchWords(
-        currentState,
-        { type: SearchType.NAME },
-        words
-      );
-    });
-
-    it('名前の検索ワードが変更されている', () => {
-      expect(nextState.search.words.name).toEqual(words);
-    });
-
-    it('ページがリセットされている', () => {
-      expect(nextState.search.page).toBe(1);
-    });
-
-    it('フィルタ関数が呼び出されている', () => {
-      expect(filterShips).toBeCalled();
-    });
+  const words = ['word', 'sample'];
+  beforeEach(() => {
+    nextState = onChangeSearchWords(currentState, 'names', words);
   });
 
-  describe('タグカテゴリが対象のとき', () => {
-    const words = ['word', 'sample'];
-    beforeEach(() => {
-      nextState = onChangeSearchWords(
-        currentState,
-        { type: SearchType.TAG, category: 'test' },
-        words
-      );
-    });
+  it('指定された検索対象の検索ワードが変更されている', () => {
+    expect(nextState.search.words.names).toEqual(words);
+  });
 
-    it('指定したタグカテゴリの検索ワードが変更されている', () => {
-      expect(nextState.search.words.test).toEqual(words);
-    });
+  it('ページがリセットされている', () => {
+    expect(nextState.search.page).toBe(1);
+  });
 
-    it('ページがリセットされている', () => {
-      expect(nextState.search.page).toBe(1);
-    });
-
-    it('フィルタ関数が呼び出されている', () => {
-      expect(filterShips).toBeCalled();
-    });
+  it('フィルタ関数が呼び出されている', () => {
+    expect(filterShips).toBeCalled();
   });
 });
 
@@ -185,6 +149,10 @@ describe('onChangeShowAll', () => {
 
       it('フィルタ関数が呼び出されている', () => {
         expect(filterShips).toBeCalled();
+      });
+
+      it('補完候補生成関数が呼び出されている', () => {
+        expect(generateAutocompleteOptions).toBeCalled();
       });
     }
   );
@@ -233,12 +201,14 @@ describe('onClickTag', () => {
       info: {
         ...baseState.search.info,
         autocompleteOptions: {
-          test: [label],
+          ...baseState.search.info.autocompleteOptions,
+          types: [label],
         },
       },
       words: {
-        name: ['sample'],
-        test: [],
+        ...baseState.search.words,
+        categories: ['abc'],
+        types: [],
       },
       page: 2,
     },
@@ -251,7 +221,7 @@ describe('onClickTag', () => {
   it('既存の検索ワードにクリックしたタグが追加されている', () => {
     expect(nextState.search.words).toEqual({
       ...currentState.search.words,
-      test: [label],
+      types: [label],
     });
   });
 

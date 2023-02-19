@@ -31,14 +31,14 @@ export const SearchConditionSummary: React.FC<Props> = ({ sx }) => {
     },
     [dispatch]
   );
-  const nameWords = words.name;
   const tagWords = Array.from(
     new Set(
       Object.entries(words)
-        .filter(([key]) => key !== 'name')
+        .filter(([key]) => key !== 'names')
         .flatMap(([, words]) => words)
     )
   );
+  const nameWords = words.names;
   const theme = useTheme();
   const isTabletOrDesktop = useMediaQuery(theme.breakpoints.up('sm'));
 
@@ -51,8 +51,8 @@ export const SearchConditionSummary: React.FC<Props> = ({ sx }) => {
       sx={sx}
     >
       <SearchTypeAndWords
-        nameWords={nameWords}
         tagWords={tagWords}
+        nameWords={nameWords}
         sx={{ flex: 1 }}
       />
       <SortOrderSelector value={sortOrder} onChange={onChangeSortOrder} />

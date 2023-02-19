@@ -6,7 +6,6 @@ import Stack from '@mui/material/Stack';
 import { SxProps, Theme } from '@mui/material/styles';
 import React from 'react';
 
-import { Tag } from '../../lib/ship';
 import { TagBadge } from '../atoms/TagBadge';
 
 interface Props {
@@ -17,7 +16,7 @@ interface Props {
   /**
    * タグ一覧
    */
-  tags: Tag[];
+  tags: string[];
   /**
    * タグクリック時のハンドラ
    * @param tagLabel - タグ
@@ -30,8 +29,7 @@ interface Props {
 }
 
 export const ShipCard: React.FC<Props> = ({ name, tags, onClickTag, sx }) => {
-  const tagLabels = Array.from(new Set(tags.map(({ label }) => label)));
-
+  const uniqueTags = Array.from(new Set(tags));
   return (
     <Card elevation={2} sx={sx}>
       <CardHeader title={name} />
@@ -43,9 +41,9 @@ export const ShipCard: React.FC<Props> = ({ name, tags, onClickTag, sx }) => {
             spacing={1}
             sx={{ display: 'inline-block', whiteSpace: 'nowrap' }}
           >
-            {tagLabels.map((tagLabel) => (
-              <TagBadge key={tagLabel} onClick={onClickTag}>
-                {tagLabel}
+            {uniqueTags.map((tag) => (
+              <TagBadge key={tag} onClick={onClickTag}>
+                {tag}
               </TagBadge>
             ))}
           </Stack>
