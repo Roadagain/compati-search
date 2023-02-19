@@ -48,13 +48,13 @@ describe('generateAutocompleteOptions', () => {
   describe('デフォルト表示キャラのみが対象の場合', () => {
     it('デフォルト表示キャラの名前とタグの一覧を重複なく返す', () => {
       expect(generateAutocompleteOptions(ships, false)).toEqual({
-        names: ['Alpha', 'Beta'],
         categories: ['category-one', 'category-two'],
         types: ['type-one', 'type-two'],
-        speeds: ['fast', 'slow'],
-        ranges: ['long', 'middle'],
         equipments: ['abc', 'def'],
         abilities: ['あいうえお', 'かきくけこ'],
+        speeds: ['fast', 'slow'],
+        ranges: ['long', 'middle'],
+        names: ['Alpha', 'Beta'],
       });
     });
   });
@@ -62,13 +62,13 @@ describe('generateAutocompleteOptions', () => {
   describe('全キャラのみが対象の場合', () => {
     it('全キャラの名前とタグの一覧を重複なく返す', () => {
       expect(generateAutocompleteOptions(ships, true)).toEqual({
-        names: ['Alpha', 'Beta', 'Gamma', 'Delta'],
         categories: ['category-one', 'category-three', 'category-two'],
         types: ['type-one', 'type-three', 'type-two'],
-        speeds: ['fast', 'slow', 'super-fast'],
-        ranges: ['long', 'middle', 'short'],
         equipments: ['abc', 'def', 'ghi'],
         abilities: ['あいうえお', 'かきくけこ', 'さしすせそ'],
+        speeds: ['fast', 'slow', 'super-fast'],
+        ranges: ['long', 'middle', 'short'],
+        names: ['Alpha', 'Beta', 'Gamma', 'Delta'],
       });
     });
   });

@@ -11,18 +11,18 @@ export const generateAutocompleteOptions = (
 ): AutocompleteOptions => {
   const shipsShown = ships.filter(({ showDefault }) => showAll || showDefault);
   return {
-    names: shipsShown.map(({ name }) => name),
     categories: uniqueAndSortTagLabels(
       shipsShown.map(({ category }) => category)
     ),
     types: uniqueAndSortTagLabels(shipsShown.map(({ type }) => type)),
-    speeds: uniqueAndSortTagLabels(shipsShown.map(({ speed }) => speed)),
-    ranges: uniqueAndSortTagLabels(shipsShown.map(({ range }) => range)),
     equipments: uniqueAndSortTagLabels(
       shipsShown.flatMap(({ equipments }) => equipments)
     ),
     abilities: uniqueAndSortTagLabels(
       shipsShown.flatMap(({ abilities }) => abilities)
     ),
+    speeds: uniqueAndSortTagLabels(shipsShown.map(({ speed }) => speed)),
+    ranges: uniqueAndSortTagLabels(shipsShown.map(({ range }) => range)),
+    names: shipsShown.map(({ name }) => name),
   };
 };
