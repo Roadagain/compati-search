@@ -6,8 +6,8 @@ const meta: Meta<typeof SearchTypeAndWords> = {
   title: 'Molecules/SearchTypeandWords',
   component: SearchTypeAndWords,
   argTypes: {
-    nameWords: { control: 'object' },
     tagWords: { control: 'object' },
+    nameWords: { control: 'object' },
     sx: { control: 'object' },
   },
 };
@@ -17,36 +17,36 @@ type Story = StoryObj<typeof SearchTypeAndWords>;
 
 export const SearchByTag: Story = {
   args: {
-    nameWords: [],
     tagWords: ['ハル'],
+    nameWords: [],
     sx: {},
   },
 };
 export const SearchByName: Story = {
   args: {
-    nameWords: ['ナツ'],
     tagWords: [],
+    nameWords: ['ナツ'],
     sx: {},
   },
 };
 export const SearchByBoth: Story = {
   args: {
-    nameWords: ['ナツ'],
     tagWords: ['きせつ'],
+    nameWords: ['ナツ'],
     sx: {},
   },
 };
 export const MultipleWords: Story = {
   args: {
-    nameWords: [],
     tagWords: ['アキ', 'フユ'],
+    nameWords: [],
     sx: {},
   },
 };
 export const MinusWord: Story = {
   args: {
-    nameWords: ['-梅雨'],
     tagWords: [],
+    nameWords: ['-梅雨'],
     sx: {},
   },
 };
