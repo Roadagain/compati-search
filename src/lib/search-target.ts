@@ -7,7 +7,7 @@ export const AllSearchTargets = [
   'equipments',
   'abilities',
 ] as const;
-export type NewSearchTarget = typeof AllSearchTargets[number];
+export type SearchTarget = typeof AllSearchTargets[number];
 
 export const AllSearchTargetLabels = {
   names: '名前',
@@ -18,4 +18,4 @@ export const AllSearchTargetLabels = {
   equipments: '装備',
   abilities: '特性',
 } as const;
-export type SearchTargetLabel = typeof AllSearchTargetLabels[NewSearchTarget];
+export type SearchTargetLabel = typeof AllSearchTargetLabels[SearchTarget];

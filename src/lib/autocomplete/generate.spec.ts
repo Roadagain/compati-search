@@ -1,8 +1,8 @@
-import { NewShip } from '../ship';
-import { generateNewAutocompleteOptions } from './generate';
+import { Ship } from '../ship';
+import { generateAutocompleteOptions } from './generate';
 
-describe('generateNewAutocompleteOptions', () => {
-  const ships: NewShip[] = [
+describe('generateAutocompleteOptions', () => {
+  const ships: Ship[] = [
     {
       name: 'Alpha',
       category: 'category-one',
@@ -12,7 +12,7 @@ describe('generateNewAutocompleteOptions', () => {
       equipments: ['abc', 'def'],
       abilities: ['あいうえお'],
       showDefault: true,
-    } as NewShip,
+    } as Ship,
     {
       name: 'Beta',
       category: 'category-two',
@@ -22,7 +22,7 @@ describe('generateNewAutocompleteOptions', () => {
       equipments: ['def'],
       abilities: ['かきくけこ'],
       showDefault: true,
-    } as NewShip,
+    } as Ship,
     {
       name: 'Gamma',
       category: 'category-one',
@@ -32,7 +32,7 @@ describe('generateNewAutocompleteOptions', () => {
       equipments: ['def', 'ghi'],
       abilities: ['かきくけこ'],
       showDefault: false,
-    } as NewShip,
+    } as Ship,
     {
       name: 'Delta',
       category: 'category-three',
@@ -42,12 +42,12 @@ describe('generateNewAutocompleteOptions', () => {
       equipments: [],
       abilities: ['さしすせそ'],
       showDefault: false,
-    } as NewShip,
+    } as Ship,
   ];
 
   describe('デフォルト表示キャラのみが対象の場合', () => {
     it('デフォルト表示キャラの名前とタグの一覧を重複なく返す', () => {
-      expect(generateNewAutocompleteOptions(ships, false)).toEqual({
+      expect(generateAutocompleteOptions(ships, false)).toEqual({
         names: ['Alpha', 'Beta'],
         categories: ['category-one', 'category-two'],
         types: ['type-one', 'type-two'],
@@ -61,7 +61,7 @@ describe('generateNewAutocompleteOptions', () => {
 
   describe('全キャラのみが対象の場合', () => {
     it('全キャラの名前とタグの一覧を重複なく返す', () => {
-      expect(generateNewAutocompleteOptions(ships, true)).toEqual({
+      expect(generateAutocompleteOptions(ships, true)).toEqual({
         names: ['Alpha', 'Beta', 'Gamma', 'Delta'],
         categories: ['category-one', 'category-three', 'category-two'],
         types: ['type-one', 'type-three', 'type-two'],

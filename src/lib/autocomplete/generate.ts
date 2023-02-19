@@ -1,14 +1,14 @@
-import { NewShip } from '../ship';
-import { NewAutocompleteOptions } from './option';
+import { Ship } from '../ship';
+import { AutocompleteOptions } from './option';
 
 const uniqueAndSortTagLabels = (tagLabels: string[]): string[] => {
   return Array.from(new Set(tagLabels)).sort();
 };
 
-export const generateNewAutocompleteOptions = (
-  ships: NewShip[],
+export const generateAutocompleteOptions = (
+  ships: Ship[],
   showAll: boolean
-): NewAutocompleteOptions => {
+): AutocompleteOptions => {
   const shipsShown = ships.filter(({ showDefault }) => showAll || showDefault);
   return {
     names: shipsShown.map(({ name }) => name),

@@ -1,6 +1,6 @@
-import { generateNewAutocompleteOptions } from '../lib/autocomplete';
-import { filterNewShips } from '../lib/filter-ships';
-import { NewShip } from '../lib/ship';
+import { generateAutocompleteOptions } from '../lib/autocomplete';
+import { filterShips } from '../lib/filter-ships';
+import { Ship } from '../lib/ship';
 import { SortOrder, sortShips } from '../lib/sort-ships';
 import {
   onChangeSearchWords,
@@ -54,7 +54,7 @@ describe('onLoadShips', () => {
     ships: [],
   };
   let nextState: State;
-  const ships: NewShip[] = [{} as NewShip];
+  const ships: Ship[] = [{} as Ship];
 
   beforeEach(() => {
     nextState = onLoadShipsData(currentState, ships);
@@ -69,11 +69,11 @@ describe('onLoadShips', () => {
   });
 
   it('補完候補生成関数が呼び出されている', () => {
-    expect(generateNewAutocompleteOptions).toBeCalled();
+    expect(generateAutocompleteOptions).toBeCalled();
   });
 
   it('フィルタ関数が呼び出されている', () => {
-    expect(filterNewShips).toBeCalled();
+    expect(filterShips).toBeCalled();
   });
 });
 
@@ -110,7 +110,7 @@ describe('onChangeSearchWords', () => {
   });
 
   it('フィルタ関数が呼び出されている', () => {
-    expect(filterNewShips).toBeCalled();
+    expect(filterShips).toBeCalled();
   });
 });
 
@@ -148,11 +148,11 @@ describe('onChangeShowAll', () => {
       });
 
       it('フィルタ関数が呼び出されている', () => {
-        expect(filterNewShips).toBeCalled();
+        expect(filterShips).toBeCalled();
       });
 
       it('補完候補生成関数が呼び出されている', () => {
-        expect(generateNewAutocompleteOptions).toBeCalled();
+        expect(generateAutocompleteOptions).toBeCalled();
       });
     }
   );
@@ -230,7 +230,7 @@ describe('onClickTag', () => {
   });
 
   it('フィルタ関数が呼び出されている', () => {
-    expect(filterNewShips).toBeCalled();
+    expect(filterShips).toBeCalled();
   });
 });
 

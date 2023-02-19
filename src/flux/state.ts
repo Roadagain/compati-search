@@ -1,24 +1,24 @@
-import { NewAutocompleteOptions } from '../lib/autocomplete';
-import { NewSearchWords } from '../lib/filter-ships';
-import { NewShip } from '../lib/ship';
+import { AutocompleteOptions } from '../lib/autocomplete';
+import { SearchWords } from '../lib/filter-ships';
+import { Ship } from '../lib/ship';
 import { SortOrder } from '../lib/sort-ships';
 
 interface SearchInfoState {
-  autocompleteOptions: NewAutocompleteOptions;
+  autocompleteOptions: AutocompleteOptions;
 }
 
 interface SearchState {
   info: SearchInfoState;
-  words: NewSearchWords;
+  words: SearchWords;
   showAll: boolean;
   sortOrder: SortOrder;
-  results: NewShip[];
+  results: Ship[];
   page: number;
 }
 
 export interface State {
   isReady: boolean;
-  ships: NewShip[];
+  ships: Ship[];
   search: SearchState;
 }
 

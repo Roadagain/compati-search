@@ -1,3 +1,3 @@
-import { NewSearchTarget } from '../search-target';
+import { SearchTarget } from '../search-target';
 
-export type NewAutocompleteOptions = Record<NewSearchTarget, string[]>;
+export type AutocompleteOptions = Record<SearchTarget, string[]>;

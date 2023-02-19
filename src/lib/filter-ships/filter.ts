@@ -1,5 +1,5 @@
-import { NewShip } from '../ship';
-import { NewSearchWords } from './search-words';
+import { Ship } from '../ship';
+import { SearchWords } from './search-words';
 
 const matchesNameWords = (name: string, words: string[]): boolean => {
   return words.every((word) => {
@@ -54,7 +54,7 @@ const matchesEquipmentTypes = (
   return matchesAllWords(equipmentTypes, words);
 };
 
-const matchesSearchWords = (ship: NewShip, words: NewSearchWords): boolean => {
+const matchesSearchWords = (ship: Ship, words: SearchWords): boolean => {
   return (
     matchesNameWords(ship.name, words.names) &&
     matchesShipCategories(ship.category, words.categories) &&
@@ -66,11 +66,11 @@ const matchesSearchWords = (ship: NewShip, words: NewSearchWords): boolean => {
   );
 };
 
-export const filterNewShips = (
-  ships: NewShip[],
-  words: NewSearchWords,
+export const filterShips = (
+  ships: Ship[],
+  words: SearchWords,
   showAll: boolean
-): NewShip[] => {
+): Ship[] => {
   return ships.filter((ship) => {
     if (!showAll && !ship.showDefault) {
       return false;

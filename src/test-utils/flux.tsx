@@ -1,10 +1,10 @@
 import React, { useReducer } from 'react';
 
-import ships from '../../new-ships.json';
+import ships from '../../ships.json';
 import { FluxContext } from '../flux/context';
 import { reducer } from '../flux/reducer';
 import { State } from '../flux/state';
-import { generateNewAutocompleteOptions } from '../lib/autocomplete';
+import { generateAutocompleteOptions } from '../lib/autocomplete';
 import { SortOrder } from '../lib/sort-ships';
 
 export const initialTestState: State = {
@@ -12,7 +12,7 @@ export const initialTestState: State = {
   ships,
   search: {
     info: {
-      autocompleteOptions: generateNewAutocompleteOptions(ships, false),
+      autocompleteOptions: generateAutocompleteOptions(ships, false),
     },
     words: {
       names: [],

@@ -5,16 +5,13 @@ import TextField from '@mui/material/TextField';
 import React from 'react';
 
 import { isOptionEqualToWord } from '../../lib/autocomplete';
-import {
-  AllSearchTargetLabels,
-  NewSearchTarget,
-} from '../../lib/search-target';
+import { AllSearchTargetLabels, SearchTarget } from '../../lib/search-target';
 
 interface Props {
   /**
    * 検索対象
    */
-  target: NewSearchTarget;
+  target: SearchTarget;
   /**
    * 検索ワード
    */

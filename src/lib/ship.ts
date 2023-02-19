@@ -1,4 +1,4 @@
-export interface NewShip {
+export interface Ship {
   id: number;
   name: string;
   kana: string;

@@ -1,15 +1,15 @@
-import { generateNewAutocompleteOptions } from '../lib/autocomplete';
-import { filterNewShips } from '../lib/filter-ships';
-import { AllSearchTargets, NewSearchTarget } from '../lib/search-target';
-import { NewShip } from '../lib/ship';
+import { generateAutocompleteOptions } from '../lib/autocomplete';
+import { filterShips } from '../lib/filter-ships';
+import { AllSearchTargets, SearchTarget } from '../lib/search-target';
+import { Ship } from '../lib/ship';
 import { SortOrder, sortShips } from '../lib/sort-ships';
 import { State } from './state';
 
-export const onLoadShipsData = (state: State, ships: NewShip[]): State => {
+export const onLoadShipsData = (state: State, ships: Ship[]): State => {
   const { search } = state;
   const { showAll, words } = search;
-  const newAutocompleteOptions = generateNewAutocompleteOptions(ships, showAll);
-  const results = filterNewShips(ships, words, showAll);
+  const autocompleteOptions = generateAutocompleteOptions(ships, showAll);
+  const results = filterShips(ships, words, showAll);
   return {
     ...state,
     isReady: true,
@@ -18,7 +18,7 @@ export const onLoadShipsData = (state: State, ships: NewShip[]): State => {
       ...search,
       info: {
         ...search.info,
-        autocompleteOptions: newAutocompleteOptions,
+        autocompleteOptions,
       },
       words,
       results,
@@ -29,7 +29,7 @@ export const onLoadShipsData = (state: State, ships: NewShip[]): State => {
 
 export const onChangeSearchWords = (
   state: State,
-  target: NewSearchTarget,
+  target: SearchTarget,
   newWords: string[]
 ): State => {
   const { ships, search } = state;
@@ -38,7 +38,7 @@ export const onChangeSearchWords = (
     ...search.words,
     [target]: newWords,
   };
-  const results = filterNewShips(ships, words, showAll);
+  const results = filterShips(ships, words, showAll);
   return {
     ...state,
     search: {
@@ -53,15 +53,15 @@ export const onChangeSearchWords = (
 export const onChangeShowAll = (state: State, showAll: boolean): State => {
   const { ships, search } = state;
   const { words, info } = search;
-  const results = filterNewShips(ships, words, showAll);
-  const newAutocompleteOptions = generateNewAutocompleteOptions(ships, showAll);
+  const results = filterShips(ships, words, showAll);
+  const autocompleteOptions = generateAutocompleteOptions(ships, showAll);
   return {
     ...state,
     search: {
       ...search,
       info: {
         ...info,
-        autocompleteOptions: newAutocompleteOptions,
+        autocompleteOptions,
       },
       showAll,
       results,
@@ -102,7 +102,7 @@ export const onClickTag = (state: State, label: string): State => {
       })
     ),
   };
-  const results = filterNewShips(ships, newWords, showAll);
+  const results = filterShips(ships, newWords, showAll);
   return {
     ...state,
     search: {

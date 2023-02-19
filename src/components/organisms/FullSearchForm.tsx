@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography';
 import React from 'react';
 
 import { FluxContext } from '../../flux/context';
-import { AllSearchTargets, NewSearchTarget } from '../../lib/search-target';
+import { AllSearchTargets, SearchTarget } from '../../lib/search-target';
 import { AutocompleteForm } from '../molecules/AutocompleteForm';
 
 interface Props {
@@ -22,7 +22,7 @@ export const FullSearchForm: React.FC<Props> = ({ sx }) => {
   const { info, words } = state.search;
   const { autocompleteOptions } = info;
   const onChangeCurried = React.useCallback(
-    (target: NewSearchTarget) => (words: string[]) => {
+    (target: SearchTarget) => (words: string[]) => {
       dispatch({ type: 'change-search-words', target, words });
     },
     [dispatch]

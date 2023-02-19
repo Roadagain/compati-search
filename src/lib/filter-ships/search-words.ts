@@ -1,3 +1,3 @@
-import { NewSearchTarget } from '../search-target';
+import { SearchTarget } from '../search-target';
 
-export type NewSearchWords = Record<NewSearchTarget, string[]>;
+export type SearchWords = Record<SearchTarget, string[]>;
