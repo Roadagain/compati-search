@@ -29,6 +29,7 @@ interface Props {
 }
 
 export const ShipCard: React.FC<Props> = ({ name, tags, onClickTag, sx }) => {
+  const uniqueTags = Array.from(new Set(tags));
   return (
     <Card elevation={2} sx={sx}>
       <CardHeader title={name} />
@@ -40,7 +41,7 @@ export const ShipCard: React.FC<Props> = ({ name, tags, onClickTag, sx }) => {
             spacing={1}
             sx={{ display: 'inline-block', whiteSpace: 'nowrap' }}
           >
-            {tags.map((tag) => (
+            {uniqueTags.map((tag) => (
               <TagBadge key={tag} onClick={onClickTag}>
                 {tag}
               </TagBadge>
