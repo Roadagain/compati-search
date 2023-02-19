@@ -3,9 +3,6 @@ import { NewSearchWords } from '../lib/filter-ships';
 import { NewShip } from '../lib/ship';
 import { SortOrder } from '../lib/sort-ships';
 
-export type InputedSearchWords = Record<'name' | string, string[]>;
-export type AutocompleteOptions = Record<'name' | string, string[]>;
-
 interface SearchInfoState {
   autocompleteOptions: NewAutocompleteOptions;
 }

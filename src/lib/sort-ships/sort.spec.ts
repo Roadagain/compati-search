@@ -1,4 +1,4 @@
-import { Ship } from '../ship';
+import { NewShip } from '../ship';
 import { sortShips } from './sort';
 import { SortOrder } from './sort-order';
 
@@ -6,7 +6,7 @@ describe('sortShips', () => {
   describe('ID順を指定した場合', () => {
     it('ID昇順でソートされる', () => {
       const ids = [333, 22, 4444, 1];
-      const ships = ids.map((id) => ({ id } as Ship));
+      const ships = ids.map((id) => ({ id } as NewShip));
       expect(sortShips(ships, SortOrder.ID)).toEqual([
         { id: 1 },
         { id: 22 },
@@ -26,7 +26,7 @@ describe('sortShips', () => {
         'abcde',
         'あいうえお',
       ];
-      const ships = kanas.map((kana) => ({ kana } as Ship));
+      const ships = kanas.map((kana) => ({ kana } as NewShip));
 
       expect(sortShips(ships, SortOrder.KANA)).toEqual([
         { kana: 'あいうえお' },
