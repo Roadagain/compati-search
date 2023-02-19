@@ -7,11 +7,7 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "低速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -23,12 +19,7 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "低速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "水上戦闘機",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "水上戦闘機", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -40,11 +31,7 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "低速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -56,12 +43,7 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "低速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "水上戦闘機",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "水上戦闘機", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -73,11 +55,7 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "低速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -89,11 +67,7 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "低速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -129,11 +103,7 @@
     "type": "正規空母",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -145,11 +115,7 @@
     "type": "正規空母",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -161,11 +127,7 @@
     "type": "正規空母",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -177,11 +139,7 @@
     "type": "正規空母",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -193,11 +151,7 @@
     "type": "正規空母",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -209,11 +163,7 @@
     "type": "正規空母",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -225,11 +175,7 @@
     "type": "正規空母",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -241,11 +187,7 @@
     "type": "正規空母",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -473,10 +415,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -488,10 +427,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -503,11 +439,7 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -519,11 +451,7 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -535,11 +463,7 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -551,11 +475,7 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -567,11 +487,7 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -583,11 +499,7 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -599,11 +511,7 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -615,11 +523,7 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -669,11 +573,7 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "低速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -704,11 +604,7 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "低速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -739,10 +635,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -754,10 +647,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -769,10 +659,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -784,10 +671,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -993,9 +877,7 @@
     "type": "駆逐艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大発動艇"
-    ],
+    "equipments": ["大発動艇"],
     "abilities": [],
     "showDefault": true
   },
@@ -1031,10 +913,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -1046,10 +925,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -1061,10 +937,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -1076,11 +949,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "増設バルジ(中型艦)",
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["増設バルジ(中型艦)", "大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -1092,10 +961,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -1107,11 +973,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "増設バルジ(中型艦)",
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["増設バルジ(中型艦)", "大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -1123,10 +985,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -1138,10 +997,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -1153,10 +1009,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -1168,10 +1021,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -1183,10 +1033,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -1198,10 +1045,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -1213,10 +1057,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -1228,10 +1069,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -1243,10 +1081,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -1258,10 +1093,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -1273,10 +1105,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -1288,10 +1117,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -1303,10 +1129,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -1318,10 +1141,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -2642,11 +2462,7 @@
     "type": "重雷装巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "甲標的",
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["甲標的", "大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -2658,11 +2474,7 @@
     "type": "重雷装巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "甲標的",
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["甲標的", "大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -2746,9 +2558,7 @@
       "回転翼機",
       "艦隊司令部施設"
     ],
-    "abilities": [
-      "専用対空カットイン"
-    ],
+    "abilities": ["専用対空カットイン"],
     "showDefault": false
   },
   {
@@ -2767,9 +2577,7 @@
       "回転翼機",
       "艦隊司令部施設"
     ],
-    "abilities": [
-      "専用対空カットイン"
-    ],
+    "abilities": ["専用対空カットイン"],
     "showDefault": false
   },
   {
@@ -2856,11 +2664,7 @@
     "type": "正規空母",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -2872,11 +2676,7 @@
     "type": "正規空母",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -2888,11 +2688,7 @@
     "type": "正規空母",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -2904,11 +2700,7 @@
     "type": "正規空母",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -2920,10 +2712,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -2935,10 +2724,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -2950,10 +2736,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -2965,10 +2748,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -2980,10 +2760,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -2995,10 +2772,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -3048,11 +2822,7 @@
     "type": "重雷装巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "甲標的",
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["甲標的", "大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -3064,11 +2834,7 @@
     "type": "重雷装巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "甲標的",
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["甲標的", "大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -3237,10 +3003,7 @@
     "type": "潜水艦",
     "range": "短射程",
     "speed": "低速",
-    "equipments": [
-      "特二式内火艇",
-      "甲標的"
-    ],
+    "equipments": ["特二式内火艇", "甲標的"],
     "abilities": [],
     "showDefault": false
   },
@@ -3252,12 +3015,7 @@
     "type": "潜水空母",
     "range": "短射程",
     "speed": "低速",
-    "equipments": [
-      "特二式内火艇",
-      "甲標的",
-      "水上戦闘機",
-      "水上爆撃機"
-    ],
+    "equipments": ["特二式内火艇", "甲標的", "水上戦闘機", "水上爆撃機"],
     "abilities": [],
     "showDefault": true
   },
@@ -3303,10 +3061,7 @@
     "type": "潜水艦",
     "range": "短射程",
     "speed": "低速",
-    "equipments": [
-      "特二式内火艇",
-      "甲標的"
-    ],
+    "equipments": ["特二式内火艇", "甲標的"],
     "abilities": [],
     "showDefault": false
   },
@@ -3318,10 +3073,7 @@
     "type": "潜水艦",
     "range": "短射程",
     "speed": "低速",
-    "equipments": [
-      "特二式内火艇",
-      "甲標的"
-    ],
+    "equipments": ["特二式内火艇", "甲標的"],
     "abilities": [],
     "showDefault": true
   },
@@ -3333,10 +3085,7 @@
     "type": "潜水艦",
     "range": "短射程",
     "speed": "低速",
-    "equipments": [
-      "特二式内火艇",
-      "甲標的"
-    ],
+    "equipments": ["特二式内火艇", "甲標的"],
     "abilities": [],
     "showDefault": false
   },
@@ -3348,12 +3097,7 @@
     "type": "潜水空母",
     "range": "短射程",
     "speed": "低速",
-    "equipments": [
-      "特二式内火艇",
-      "甲標的",
-      "水上戦闘機",
-      "水上爆撃機"
-    ],
+    "equipments": ["特二式内火艇", "甲標的", "水上戦闘機", "水上爆撃機"],
     "abilities": [],
     "showDefault": true
   },
@@ -3365,10 +3109,7 @@
     "type": "潜水艦",
     "range": "短射程",
     "speed": "低速",
-    "equipments": [
-      "特二式内火艇",
-      "甲標的"
-    ],
+    "equipments": ["特二式内火艇", "甲標的"],
     "abilities": [],
     "showDefault": false
   },
@@ -3380,12 +3121,7 @@
     "type": "潜水空母",
     "range": "短射程",
     "speed": "低速",
-    "equipments": [
-      "特二式内火艇",
-      "甲標的",
-      "水上戦闘機",
-      "水上爆撃機"
-    ],
+    "equipments": ["特二式内火艇", "甲標的", "水上戦闘機", "水上爆撃機"],
     "abilities": [],
     "showDefault": true
   },
@@ -3437,11 +3173,7 @@
     "type": "戦艦",
     "range": "超長射程",
     "speed": "低速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -3567,11 +3299,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "増設副砲",
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["増設副砲", "大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -3601,11 +3329,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "増設副砲",
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["増設副砲", "大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -3635,11 +3359,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "増設副砲",
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["増設副砲", "大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -3669,11 +3389,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "増設副砲",
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["増設副砲", "大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -3703,14 +3419,8 @@
     "type": "軽巡洋艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
-    "abilities": [
-      "専用対空カットイン",
-      "無条件先制対潜"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
+    "abilities": ["専用対空カットイン", "無条件先制対潜"],
     "showDefault": true
   },
   {
@@ -3738,11 +3448,7 @@
     "type": "戦艦",
     "range": "超長射程",
     "speed": "低速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -3795,11 +3501,7 @@
     "type": "駆逐艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大発動艇",
-      "特二式内火艇",
-      "増設バルジ(中型艦)"
-    ],
+    "equipments": ["大発動艇", "特二式内火艇", "増設バルジ(中型艦)"],
     "abilities": [],
     "showDefault": true
   },
@@ -3818,9 +3520,7 @@
       "水上戦闘機",
       "艦隊司令部施設"
     ],
-    "abilities": [
-      "専用対空カットイン"
-    ],
+    "abilities": ["専用対空カットイン"],
     "showDefault": false
   },
   {
@@ -3831,14 +3531,8 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
-    "abilities": [
-      "専用対空カットイン"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
+    "abilities": ["専用対空カットイン"],
     "showDefault": false
   },
   {
@@ -3849,14 +3543,8 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
-    "abilities": [
-      "専用対空カットイン"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
+    "abilities": ["専用対空カットイン"],
     "showDefault": false
   },
   {
@@ -3867,14 +3555,8 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
-    "abilities": [
-      "専用対空カットイン"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
+    "abilities": ["専用対空カットイン"],
     "showDefault": true
   },
   {
@@ -3885,14 +3567,8 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
-    "abilities": [
-      "専用対空カットイン"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
+    "abilities": ["専用対空カットイン"],
     "showDefault": true
   },
   {
@@ -3903,12 +3579,7 @@
     "type": "装甲空母",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "増設副砲",
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["増設副砲", "大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -3920,11 +3591,7 @@
     "type": "練習巡洋艦",
     "range": "中射程",
     "speed": "低速",
-    "equipments": [
-      "増設副砲",
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["増設副砲", "大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -3936,11 +3603,7 @@
     "type": "練習巡洋艦",
     "range": "中射程",
     "speed": "低速",
-    "equipments": [
-      "増設副砲",
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["増設副砲", "大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -3952,12 +3615,7 @@
     "type": "潜水空母",
     "range": "短射程",
     "speed": "低速",
-    "equipments": [
-      "特二式内火艇",
-      "甲標的",
-      "水上戦闘機",
-      "水上爆撃機"
-    ],
+    "equipments": ["特二式内火艇", "甲標的", "水上戦闘機", "水上爆撃機"],
     "abilities": [],
     "showDefault": false
   },
@@ -3969,12 +3627,7 @@
     "type": "潜水空母",
     "range": "短射程",
     "speed": "低速",
-    "equipments": [
-      "特二式内火艇",
-      "甲標的",
-      "水上戦闘機",
-      "水上爆撃機"
-    ],
+    "equipments": ["特二式内火艇", "甲標的", "水上戦闘機", "水上爆撃機"],
     "abilities": [],
     "showDefault": true
   },
@@ -3986,12 +3639,7 @@
     "type": "装甲空母",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "増設副砲",
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["増設副砲", "大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -4022,10 +3670,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -4037,10 +3682,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -4052,10 +3694,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -4086,11 +3725,7 @@
     "type": "補給艦",
     "range": "中射程",
     "speed": "低速",
-    "equipments": [
-      "水上戦闘機",
-      "水上爆撃機",
-      "回転翼機"
-    ],
+    "equipments": ["水上戦闘機", "水上爆撃機", "回転翼機"],
     "abilities": [],
     "showDefault": false
   },
@@ -4102,9 +3737,7 @@
     "type": "潜水艦",
     "range": "短射程",
     "speed": "低速",
-    "equipments": [
-      "甲標的"
-    ],
+    "equipments": ["甲標的"],
     "abilities": [],
     "showDefault": false
   },
@@ -4116,9 +3749,7 @@
     "type": "潜水艦",
     "range": "短射程",
     "speed": "低速",
-    "equipments": [
-      "甲標的"
-    ],
+    "equipments": ["甲標的"],
     "abilities": [],
     "showDefault": true
   },
@@ -4293,11 +3924,7 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -4309,11 +3936,7 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -4325,11 +3948,7 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -4423,11 +4042,7 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -4487,11 +4102,7 @@
     "type": "工作艦",
     "range": "短射程",
     "speed": "低速",
-    "equipments": [
-      "増設副砲",
-      "増設バルジ(中型艦)",
-      "回転翼機"
-    ],
+    "equipments": ["増設副砲", "増設バルジ(中型艦)", "回転翼機"],
     "abilities": [],
     "showDefault": false
   },
@@ -4503,11 +4114,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "増設副砲",
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["増設副砲", "大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -4519,11 +4126,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "増設副砲",
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["増設副砲", "大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -4543,9 +4146,7 @@
       "回転翼機",
       "艦隊司令部施設"
     ],
-    "abilities": [
-      "特殊攻撃"
-    ],
+    "abilities": ["特殊攻撃"],
     "showDefault": true
   },
   {
@@ -4599,11 +4200,7 @@
     "type": "工作艦",
     "range": "短射程",
     "speed": "低速",
-    "equipments": [
-      "増設副砲",
-      "増設バルジ(中型艦)",
-      "回転翼機"
-    ],
+    "equipments": ["増設副砲", "増設バルジ(中型艦)", "回転翼機"],
     "abilities": [],
     "showDefault": true
   },
@@ -4754,11 +4351,7 @@
     "type": "正規空母",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -4770,11 +4363,7 @@
     "type": "正規空母",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -4786,10 +4375,7 @@
     "type": "駆逐艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大発動艇",
-      "特二式内火艇"
-    ],
+    "equipments": ["大発動艇", "特二式内火艇"],
     "abilities": [],
     "showDefault": true
   },
@@ -4801,10 +4387,7 @@
     "type": "駆逐艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大発動艇",
-      "特二式内火艇"
-    ],
+    "equipments": ["大発動艇", "特二式内火艇"],
     "abilities": [],
     "showDefault": true
   },
@@ -4834,11 +4417,7 @@
     "type": "正規空母",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -4850,11 +4429,7 @@
     "type": "正規空母",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -4866,11 +4441,7 @@
     "type": "正規空母",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -4918,11 +4489,7 @@
     "type": "正規空母",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -5157,13 +4724,8 @@
     "type": "駆逐艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大発動艇",
-      "特二式内火艇"
-    ],
-    "abilities": [
-      "専用対空カットイン"
-    ],
+    "equipments": ["大発動艇", "特二式内火艇"],
+    "abilities": ["専用対空カットイン"],
     "showDefault": true
   },
   {
@@ -5174,11 +4736,7 @@
     "type": "駆逐艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大発動艇",
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大発動艇", "大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -5202,14 +4760,8 @@
     "type": "駆逐艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "増設バルジ(中型艦)",
-      "大型電探",
-      "艦隊司令部施設"
-    ],
-    "abilities": [
-      "専用対空カットイン"
-    ],
+    "equipments": ["増設バルジ(中型艦)", "大型電探", "艦隊司令部施設"],
+    "abilities": ["専用対空カットイン"],
     "showDefault": false
   },
   {
@@ -5226,9 +4778,7 @@
       "大型ソナー",
       "艦隊司令部施設"
     ],
-    "abilities": [
-      "専用対空カットイン"
-    ],
+    "abilities": ["専用対空カットイン"],
     "showDefault": true
   },
   {
@@ -5239,14 +4789,8 @@
     "type": "駆逐艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "増設バルジ(中型艦)",
-      "大型電探",
-      "艦隊司令部施設"
-    ],
-    "abilities": [
-      "専用対空カットイン"
-    ],
+    "equipments": ["増設バルジ(中型艦)", "大型電探", "艦隊司令部施設"],
+    "abilities": ["専用対空カットイン"],
     "showDefault": false
   },
   {
@@ -5263,9 +4807,7 @@
       "大型ソナー",
       "艦隊司令部施設"
     ],
-    "abilities": [
-      "専用対空カットイン"
-    ],
+    "abilities": ["専用対空カットイン"],
     "showDefault": true
   },
   {
@@ -5276,14 +4818,8 @@
     "type": "駆逐艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "増設バルジ(中型艦)",
-      "大型電探",
-      "艦隊司令部施設"
-    ],
-    "abilities": [
-      "専用対空カットイン"
-    ],
+    "equipments": ["増設バルジ(中型艦)", "大型電探", "艦隊司令部施設"],
+    "abilities": ["専用対空カットイン"],
     "showDefault": false
   },
   {
@@ -5300,9 +4836,7 @@
       "大型ソナー",
       "艦隊司令部施設"
     ],
-    "abilities": [
-      "専用対空カットイン"
-    ],
+    "abilities": ["専用対空カットイン"],
     "showDefault": true
   },
   {
@@ -5396,9 +4930,7 @@
       "大型ソナー",
       "艦隊司令部施設"
     ],
-    "abilities": [
-      "専用対空カットイン"
-    ],
+    "abilities": ["専用対空カットイン"],
     "showDefault": true
   },
   {
@@ -5409,11 +4941,7 @@
     "type": "正規空母",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -5425,11 +4953,7 @@
     "type": "正規空母",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -5441,10 +4965,7 @@
     "type": "潜水艦",
     "range": "短射程",
     "speed": "低速",
-    "equipments": [
-      "特二式内火艇",
-      "甲標的"
-    ],
+    "equipments": ["特二式内火艇", "甲標的"],
     "abilities": [],
     "showDefault": false
   },
@@ -5456,10 +4977,7 @@
     "type": "潜水艦",
     "range": "短射程",
     "speed": "低速",
-    "equipments": [
-      "特二式内火艇",
-      "甲標的"
-    ],
+    "equipments": ["特二式内火艇", "甲標的"],
     "abilities": [],
     "showDefault": false
   },
@@ -5471,11 +4989,7 @@
     "type": "正規空母",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -5487,11 +5001,7 @@
     "type": "正規空母",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -5503,11 +5013,7 @@
     "type": "正規空母",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -5519,9 +5025,7 @@
     "type": "駆逐艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大発動艇"
-    ],
+    "equipments": ["大発動艇"],
     "abilities": [],
     "showDefault": true
   },
@@ -5533,9 +5037,7 @@
     "type": "駆逐艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大発動艇"
-    ],
+    "equipments": ["大発動艇"],
     "abilities": [],
     "showDefault": true
   },
@@ -5547,10 +5049,7 @@
     "type": "潜水艦",
     "range": "短射程",
     "speed": "低速",
-    "equipments": [
-      "特二式内火艇",
-      "甲標的"
-    ],
+    "equipments": ["特二式内火艇", "甲標的"],
     "abilities": [],
     "showDefault": true
   },
@@ -5574,11 +5073,7 @@
     "type": "正規空母",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -5590,14 +5085,8 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "低速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
-    "abilities": [
-      "専用対空カットイン"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
+    "abilities": ["専用対空カットイン"],
     "showDefault": false
   },
   {
@@ -5608,14 +5097,8 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "低速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
-    "abilities": [
-      "専用対空カットイン"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
+    "abilities": ["専用対空カットイン"],
     "showDefault": true
   },
   {
@@ -5626,11 +5109,7 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -5642,11 +5121,7 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -5658,11 +5133,7 @@
     "type": "戦艦",
     "range": "超長射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -5674,11 +5145,7 @@
     "type": "戦艦",
     "range": "超長射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -5714,11 +5181,7 @@
     "type": "正規空母",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -5730,11 +5193,7 @@
     "type": "正規空母",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -6118,11 +5577,7 @@
     "type": "補給艦",
     "range": "短射程",
     "speed": "低速",
-    "equipments": [
-      "水上戦闘機",
-      "水上爆撃機",
-      "回転翼機"
-    ],
+    "equipments": ["水上戦闘機", "水上爆撃機", "回転翼機"],
     "abilities": [],
     "showDefault": false
   },
@@ -6153,11 +5608,7 @@
     "type": "正規空母",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -6169,11 +5620,7 @@
     "type": "正規空母",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -6197,11 +5644,7 @@
     "type": "駆逐艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大発動艇",
-      "特二式内火艇",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大発動艇", "特二式内火艇", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -6213,11 +5656,7 @@
     "type": "練習巡洋艦",
     "range": "中射程",
     "speed": "低速",
-    "equipments": [
-      "増設副砲",
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["増設副砲", "大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -6229,11 +5668,7 @@
     "type": "練習巡洋艦",
     "range": "中射程",
     "speed": "低速",
-    "equipments": [
-      "増設副砲",
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["増設副砲", "大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -6245,11 +5680,7 @@
     "type": "装甲空母",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -6261,11 +5692,7 @@
     "type": "装甲空母",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -6277,10 +5704,7 @@
     "type": "駆逐艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大発動艇",
-      "特二式内火艇"
-    ],
+    "equipments": ["大発動艇", "特二式内火艇"],
     "abilities": [],
     "showDefault": true
   },
@@ -6292,9 +5716,7 @@
     "type": "駆逐艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大発動艇"
-    ],
+    "equipments": ["大発動艇"],
     "abilities": [],
     "showDefault": true
   },
@@ -6306,14 +5728,8 @@
     "type": "駆逐艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大発動艇",
-      "特二式内火艇",
-      "大型電探"
-    ],
-    "abilities": [
-      "専用対空カットイン"
-    ],
+    "equipments": ["大発動艇", "特二式内火艇", "大型電探"],
+    "abilities": ["専用対空カットイン"],
     "showDefault": true
   },
   {
@@ -6444,13 +5860,8 @@
     "type": "軽巡洋艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "回転翼機",
-      "艦隊司令部施設"
-    ],
-    "abilities": [
-      "専用対空カットイン"
-    ],
+    "equipments": ["回転翼機", "艦隊司令部施設"],
+    "abilities": ["専用対空カットイン"],
     "showDefault": true
   },
   {
@@ -6461,16 +5872,8 @@
     "type": "軽巡洋艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大発動艇",
-      "特二式内火艇",
-      "回転翼機",
-      "艦隊司令部施設"
-    ],
-    "abilities": [
-      "専用対空カットイン",
-      "無条件先制対潜"
-    ],
+    "equipments": ["大発動艇", "特二式内火艇", "回転翼機", "艦隊司令部施設"],
+    "abilities": ["専用対空カットイン", "無条件先制対潜"],
     "showDefault": true
   },
   {
@@ -6553,10 +5956,7 @@
     "type": "潜水艦",
     "range": "短射程",
     "speed": "低速",
-    "equipments": [
-      "特二式内火艇",
-      "甲標的"
-    ],
+    "equipments": ["特二式内火艇", "甲標的"],
     "abilities": [],
     "showDefault": false
   },
@@ -6568,12 +5968,7 @@
     "type": "潜水空母",
     "range": "短射程",
     "speed": "低速",
-    "equipments": [
-      "特二式内火艇",
-      "甲標的",
-      "水上戦闘機",
-      "水上爆撃機"
-    ],
+    "equipments": ["特二式内火艇", "甲標的", "水上戦闘機", "水上爆撃機"],
     "abilities": [],
     "showDefault": true
   },
@@ -6657,15 +6052,8 @@
     "type": "軽巡洋艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大発動艇",
-      "特二式内火艇",
-      "大型電探",
-      "艦隊司令部施設"
-    ],
-    "abilities": [
-      "専用対空カットイン"
-    ],
+    "equipments": ["大発動艇", "特二式内火艇", "大型電探", "艦隊司令部施設"],
+    "abilities": ["専用対空カットイン"],
     "showDefault": true
   },
   {
@@ -6686,9 +6074,7 @@
       "水上爆撃機",
       "艦隊司令部施設"
     ],
-    "abilities": [
-      "専用対空カットイン"
-    ],
+    "abilities": ["専用対空カットイン"],
     "showDefault": true
   },
   {
@@ -6699,10 +6085,7 @@
     "type": "駆逐艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大発動艇",
-      "特二式内火艇"
-    ],
+    "equipments": ["大発動艇", "特二式内火艇"],
     "abilities": [],
     "showDefault": true
   },
@@ -6714,10 +6097,7 @@
     "type": "駆逐艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大発動艇",
-      "特二式内火艇"
-    ],
+    "equipments": ["大発動艇", "特二式内火艇"],
     "abilities": [],
     "showDefault": true
   },
@@ -6771,11 +6151,7 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -6787,11 +6163,7 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -6803,12 +6175,7 @@
     "type": "潜水空母",
     "range": "短射程",
     "speed": "低速",
-    "equipments": [
-      "特二式内火艇",
-      "甲標的",
-      "水上戦闘機",
-      "水上爆撃機"
-    ],
+    "equipments": ["特二式内火艇", "甲標的", "水上戦闘機", "水上爆撃機"],
     "abilities": [],
     "showDefault": false
   },
@@ -6820,12 +6187,7 @@
     "type": "潜水空母",
     "range": "短射程",
     "speed": "低速",
-    "equipments": [
-      "特二式内火艇",
-      "甲標的",
-      "水上戦闘機",
-      "水上爆撃機"
-    ],
+    "equipments": ["特二式内火艇", "甲標的", "水上戦闘機", "水上爆撃機"],
     "abilities": [],
     "showDefault": true
   },
@@ -6837,12 +6199,7 @@
     "type": "潜水空母",
     "range": "短射程",
     "speed": "低速",
-    "equipments": [
-      "特二式内火艇",
-      "甲標的",
-      "水上戦闘機",
-      "水上爆撃機"
-    ],
+    "equipments": ["特二式内火艇", "甲標的", "水上戦闘機", "水上爆撃機"],
     "abilities": [],
     "showDefault": false
   },
@@ -6854,12 +6211,7 @@
     "type": "潜水空母",
     "range": "短射程",
     "speed": "低速",
-    "equipments": [
-      "特二式内火艇",
-      "甲標的",
-      "水上戦闘機",
-      "水上爆撃機"
-    ],
+    "equipments": ["特二式内火艇", "甲標的", "水上戦闘機", "水上爆撃機"],
     "abilities": [],
     "showDefault": true
   },
@@ -6871,12 +6223,7 @@
     "type": "潜水空母",
     "range": "短射程",
     "speed": "低速",
-    "equipments": [
-      "特二式内火艇",
-      "甲標的",
-      "水上戦闘機",
-      "水上爆撃機"
-    ],
+    "equipments": ["特二式内火艇", "甲標的", "水上戦闘機", "水上爆撃機"],
     "abilities": [],
     "showDefault": false
   },
@@ -6888,12 +6235,7 @@
     "type": "潜水空母",
     "range": "短射程",
     "speed": "低速",
-    "equipments": [
-      "特二式内火艇",
-      "甲標的",
-      "水上戦闘機",
-      "水上爆撃機"
-    ],
+    "equipments": ["特二式内火艇", "甲標的", "水上戦闘機", "水上爆撃機"],
     "abilities": [],
     "showDefault": true
   },
@@ -6924,10 +6266,7 @@
     "type": "駆逐艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "特二式内火艇",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["特二式内火艇", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -6939,10 +6278,7 @@
     "type": "駆逐艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大発動艇",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大発動艇", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -7124,11 +6460,7 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "低速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -7140,11 +6472,7 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "低速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -7180,13 +6508,8 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
-    "abilities": [
-      "専用対空カットイン"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
+    "abilities": ["専用対空カットイン"],
     "showDefault": false
   },
   {
@@ -7197,13 +6520,8 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
-    "abilities": [
-      "専用対空カットイン"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
+    "abilities": ["専用対空カットイン"],
     "showDefault": true
   },
   {
@@ -7214,14 +6532,8 @@
     "type": "正規空母",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
-    "abilities": [
-      "専用対空カットイン"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
+    "abilities": ["専用対空カットイン"],
     "showDefault": false
   },
   {
@@ -7232,14 +6544,8 @@
     "type": "正規空母",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
-    "abilities": [
-      "専用対空カットイン"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
+    "abilities": ["専用対空カットイン"],
     "showDefault": true
   },
   {
@@ -7250,11 +6556,7 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "低速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -7315,9 +6617,7 @@
     "range": "短射程",
     "speed": "高速",
     "equipments": [],
-    "abilities": [
-      "専用対空カットイン"
-    ],
+    "abilities": ["専用対空カットイン"],
     "showDefault": false
   },
   {
@@ -7329,10 +6629,7 @@
     "range": "短射程",
     "speed": "高速",
     "equipments": [],
-    "abilities": [
-      "専用対空カットイン",
-      "無条件先制対潜"
-    ],
+    "abilities": ["専用対空カットイン", "無条件先制対潜"],
     "showDefault": true
   },
   {
@@ -7344,9 +6641,7 @@
     "range": "短射程",
     "speed": "高速",
     "equipments": [],
-    "abilities": [
-      "専用対空カットイン"
-    ],
+    "abilities": ["専用対空カットイン"],
     "showDefault": false
   },
   {
@@ -7358,10 +6653,7 @@
     "range": "短射程",
     "speed": "高速",
     "equipments": [],
-    "abilities": [
-      "専用対空カットイン",
-      "無条件先制対潜"
-    ],
+    "abilities": ["専用対空カットイン", "無条件先制対潜"],
     "showDefault": true
   },
   {
@@ -7372,10 +6664,7 @@
     "type": "軽空母",
     "range": "短射程",
     "speed": "低速",
-    "equipments": [
-      "増設バルジ(中型艦)",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["増設バルジ(中型艦)", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -7387,10 +6676,7 @@
     "type": "軽空母",
     "range": "短射程",
     "speed": "低速",
-    "equipments": [
-      "増設バルジ(中型艦)",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["増設バルジ(中型艦)", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -7402,11 +6688,7 @@
     "type": "軽空母",
     "range": "短射程",
     "speed": "低速",
-    "equipments": [
-      "増設バルジ(中型艦)",
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["増設バルジ(中型艦)", "大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -7435,10 +6717,7 @@
     "type": "潜水艦",
     "range": "短射程",
     "speed": "低速",
-    "equipments": [
-      "特二式内火艇",
-      "甲標的"
-    ],
+    "equipments": ["特二式内火艇", "甲標的"],
     "abilities": [],
     "showDefault": false
   },
@@ -7450,9 +6729,7 @@
     "type": "潜水艦",
     "range": "短射程",
     "speed": "低速",
-    "equipments": [
-      "特二式内火艇"
-    ],
+    "equipments": ["特二式内火艇"],
     "abilities": [],
     "showDefault": false
   },
@@ -7464,11 +6741,7 @@
     "type": "軽空母",
     "range": "短射程",
     "speed": "低速",
-    "equipments": [
-      "増設バルジ(中型艦)",
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["増設バルジ(中型艦)", "大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -7545,12 +6818,8 @@
     "type": "潜水艦",
     "range": "短射程",
     "speed": "低速",
-    "equipments": [
-      "特二式内火艇"
-    ],
-    "abilities": [
-      "専用対空カットイン"
-    ],
+    "equipments": ["特二式内火艇"],
+    "abilities": ["専用対空カットイン"],
     "showDefault": false
   },
   {
@@ -7561,13 +6830,8 @@
     "type": "潜水艦",
     "range": "短射程",
     "speed": "低速",
-    "equipments": [
-      "特二式内火艇",
-      "甲標的"
-    ],
-    "abilities": [
-      "専用対空カットイン"
-    ],
+    "equipments": ["特二式内火艇", "甲標的"],
+    "abilities": ["専用対空カットイン"],
     "showDefault": true
   },
   {
@@ -7597,14 +6861,8 @@
     "type": "駆逐艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "増設バルジ(中型艦)",
-      "大型電探",
-      "艦隊司令部施設"
-    ],
-    "abilities": [
-      "専用対空カットイン"
-    ],
+    "equipments": ["増設バルジ(中型艦)", "大型電探", "艦隊司令部施設"],
+    "abilities": ["専用対空カットイン"],
     "showDefault": false
   },
   {
@@ -7615,14 +6873,8 @@
     "type": "駆逐艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "増設バルジ(中型艦)",
-      "大型電探",
-      "艦隊司令部施設"
-    ],
-    "abilities": [
-      "専用対空カットイン"
-    ],
+    "equipments": ["増設バルジ(中型艦)", "大型電探", "艦隊司令部施設"],
+    "abilities": ["専用対空カットイン"],
     "showDefault": false
   },
   {
@@ -7706,9 +6958,7 @@
       "大型ソナー",
       "艦隊司令部施設"
     ],
-    "abilities": [
-      "専用対空カットイン"
-    ],
+    "abilities": ["専用対空カットイン"],
     "showDefault": true
   },
   {
@@ -7725,9 +6975,7 @@
       "大型ソナー",
       "艦隊司令部施設"
     ],
-    "abilities": [
-      "専用対空カットイン"
-    ],
+    "abilities": ["専用対空カットイン"],
     "showDefault": true
   },
   {
@@ -7794,9 +7042,7 @@
       "水上戦闘機",
       "艦隊司令部施設"
     ],
-    "abilities": [
-      "特殊攻撃"
-    ],
+    "abilities": ["特殊攻撃"],
     "showDefault": true
   },
   {
@@ -7807,10 +7053,7 @@
     "type": "駆逐艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "増設バルジ(中型艦)",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["増設バルジ(中型艦)", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -7822,10 +7065,7 @@
     "type": "駆逐艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "増設バルジ(中型艦)",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["増設バルジ(中型艦)", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -7875,11 +7115,7 @@
     "type": "正規空母",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -7899,10 +7135,7 @@
       "回転翼機",
       "艦隊司令部施設"
     ],
-    "abilities": [
-      "特殊攻撃",
-      "専用対空カットイン"
-    ],
+    "abilities": ["特殊攻撃", "専用対空カットイン"],
     "showDefault": true
   },
   {
@@ -7934,13 +7167,8 @@
     "type": "駆逐艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大発動艇",
-      "特二式内火艇"
-    ],
-    "abilities": [
-      "専用対空カットイン"
-    ],
+    "equipments": ["大発動艇", "特二式内火艇"],
+    "abilities": ["専用対空カットイン"],
     "showDefault": true
   },
   {
@@ -7951,11 +7179,7 @@
     "type": "正規空母",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -7967,11 +7191,7 @@
     "type": "正規空母",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -7983,11 +7203,7 @@
     "type": "装甲空母",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -8056,9 +7272,7 @@
       "対潜哨戒機",
       "艦隊司令部施設"
     ],
-    "abilities": [
-      "専用対空カットイン"
-    ],
+    "abilities": ["専用対空カットイン"],
     "showDefault": true
   },
   {
@@ -8078,9 +7292,7 @@
       "対潜哨戒機",
       "艦隊司令部施設"
     ],
-    "abilities": [
-      "専用対空カットイン"
-    ],
+    "abilities": ["専用対空カットイン"],
     "showDefault": true
   },
   {
@@ -8123,9 +7335,7 @@
     "range": "短射程",
     "speed": "高速",
     "equipments": [],
-    "abilities": [
-      "専用対空カットイン"
-    ],
+    "abilities": ["専用対空カットイン"],
     "showDefault": true
   },
   {
@@ -8137,9 +7347,7 @@
     "range": "短射程",
     "speed": "高速",
     "equipments": [],
-    "abilities": [
-      "専用対空カットイン"
-    ],
+    "abilities": ["専用対空カットイン"],
     "showDefault": true
   },
   {
@@ -8194,9 +7402,7 @@
     "range": "短射程",
     "speed": "低速",
     "equipments": [],
-    "abilities": [
-      "無条件先制対潜"
-    ],
+    "abilities": ["無条件先制対潜"],
     "showDefault": false
   },
   {
@@ -8208,10 +7414,7 @@
     "range": "短射程",
     "speed": "高速",
     "equipments": [],
-    "abilities": [
-      "専用対空カットイン",
-      "無条件先制対潜"
-    ],
+    "abilities": ["専用対空カットイン", "無条件先制対潜"],
     "showDefault": false
   },
   {
@@ -8223,10 +7426,7 @@
     "range": "短射程",
     "speed": "高速",
     "equipments": [],
-    "abilities": [
-      "専用対空カットイン",
-      "無条件先制対潜"
-    ],
+    "abilities": ["専用対空カットイン", "無条件先制対潜"],
     "showDefault": true
   },
   {
@@ -8237,10 +7437,7 @@
     "type": "駆逐艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大発動艇",
-      "増設バルジ(中型艦)"
-    ],
+    "equipments": ["大発動艇", "増設バルジ(中型艦)"],
     "abilities": [],
     "showDefault": true
   },
@@ -8252,10 +7449,7 @@
     "type": "駆逐艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "特二式内火艇",
-      "増設バルジ(中型艦)"
-    ],
+    "equipments": ["特二式内火艇", "増設バルジ(中型艦)"],
     "abilities": [],
     "showDefault": true
   },
@@ -8291,9 +7485,7 @@
     "type": "駆逐艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "増設バルジ(中型艦)"
-    ],
+    "equipments": ["増設バルジ(中型艦)"],
     "abilities": [],
     "showDefault": true
   },
@@ -8305,10 +7497,7 @@
     "type": "駆逐艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "増設バルジ(中型艦)",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["増設バルジ(中型艦)", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -8320,10 +7509,7 @@
     "type": "駆逐艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "特二式内火艇",
-      "増設バルジ(中型艦)"
-    ],
+    "equipments": ["特二式内火艇", "増設バルジ(中型艦)"],
     "abilities": [],
     "showDefault": true
   },
@@ -8335,10 +7521,7 @@
     "type": "駆逐艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "特二式内火艇",
-      "増設バルジ(中型艦)"
-    ],
+    "equipments": ["特二式内火艇", "増設バルジ(中型艦)"],
     "abilities": [],
     "showDefault": true
   },
@@ -8374,14 +7557,8 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "低速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
-    "abilities": [
-      "特殊攻撃"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
+    "abilities": ["特殊攻撃"],
     "showDefault": false
   },
   {
@@ -8400,9 +7577,7 @@
       "回転翼機",
       "艦隊司令部施設"
     ],
-    "abilities": [
-      "特殊攻撃"
-    ],
+    "abilities": ["特殊攻撃"],
     "showDefault": true
   },
   {
@@ -8413,11 +7588,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "水上爆撃機",
-      "回転翼機",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["水上爆撃機", "回転翼機", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -8441,14 +7612,8 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "低速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
-    "abilities": [
-      "特殊攻撃"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
+    "abilities": ["特殊攻撃"],
     "showDefault": true
   },
   {
@@ -8459,10 +7624,7 @@
     "type": "駆逐艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "特二式内火艇",
-      "増設バルジ(中型艦)"
-    ],
+    "equipments": ["特二式内火艇", "増設バルジ(中型艦)"],
     "abilities": [],
     "showDefault": true
   },
@@ -8480,9 +7642,7 @@
       "水上爆撃機",
       "艦隊司令部施設"
     ],
-    "abilities": [
-      "専用対空カットイン"
-    ],
+    "abilities": ["専用対空カットイン"],
     "showDefault": false
   },
   {
@@ -8642,11 +7802,7 @@
     "type": "駆逐艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大発動艇",
-      "特二式内火艇",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大発動艇", "特二式内火艇", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -8658,9 +7814,7 @@
     "type": "駆逐艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "特二式内火艇"
-    ],
+    "equipments": ["特二式内火艇"],
     "abilities": [],
     "showDefault": true
   },
@@ -8672,10 +7826,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -8687,10 +7838,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -8702,10 +7850,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -8717,10 +7862,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -8732,16 +7874,8 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "水上爆撃機",
-      "艦隊司令部施設"
-    ],
-    "abilities": [
-      "特殊攻撃",
-      "専用対空カットイン"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "水上爆撃機", "艦隊司令部施設"],
+    "abilities": ["特殊攻撃", "専用対空カットイン"],
     "showDefault": true
   },
   {
@@ -8752,16 +7886,8 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "水上戦闘機",
-      "艦隊司令部施設"
-    ],
-    "abilities": [
-      "特殊攻撃",
-      "専用対空カットイン"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "水上戦闘機", "艦隊司令部施設"],
+    "abilities": ["特殊攻撃", "専用対空カットイン"],
     "showDefault": true
   },
   {
@@ -8790,10 +7916,7 @@
     "range": "短射程",
     "speed": "高速",
     "equipments": [],
-    "abilities": [
-      "専用対空カットイン",
-      "無条件先制対潜"
-    ],
+    "abilities": ["専用対空カットイン", "無条件先制対潜"],
     "showDefault": false
   },
   {
@@ -8805,10 +7928,7 @@
     "range": "短射程",
     "speed": "高速",
     "equipments": [],
-    "abilities": [
-      "専用対空カットイン",
-      "無条件先制対潜"
-    ],
+    "abilities": ["専用対空カットイン", "無条件先制対潜"],
     "showDefault": false
   },
   {
@@ -8819,13 +7939,8 @@
     "type": "軽巡洋艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
-    "abilities": [
-      "専用対空カットイン"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
+    "abilities": ["専用対空カットイン"],
     "showDefault": false
   },
   {
@@ -8836,13 +7951,8 @@
     "type": "軽巡洋艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
-    "abilities": [
-      "専用対空カットイン"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
+    "abilities": ["専用対空カットイン"],
     "showDefault": true
   },
   {
@@ -8853,10 +7963,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -8868,10 +7975,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -8883,10 +7987,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -8898,10 +7999,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -8930,14 +8028,8 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "低速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
-    "abilities": [
-      "特殊攻撃"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
+    "abilities": ["特殊攻撃"],
     "showDefault": false
   },
   {
@@ -8948,11 +8040,7 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -8964,11 +8052,7 @@
     "type": "正規空母",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -8980,11 +8064,7 @@
     "type": "正規空母",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -8996,11 +8076,7 @@
     "type": "正規空母",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -9012,11 +8088,7 @@
     "type": "正規空母",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -9028,14 +8100,8 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "低速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
-    "abilities": [
-      "特殊攻撃"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
+    "abilities": ["特殊攻撃"],
     "showDefault": true
   },
   {
@@ -9046,11 +8112,7 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -9079,11 +8141,7 @@
     "type": "正規空母",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -9095,11 +8153,7 @@
     "type": "正規空母",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -9135,10 +8189,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -9162,10 +8213,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -9201,10 +8249,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -9228,10 +8273,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -9262,13 +8304,8 @@
     "type": "軽巡洋艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
-    "abilities": [
-      "専用対空カットイン"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
+    "abilities": ["専用対空カットイン"],
     "showDefault": true
   },
   {
@@ -9279,12 +8316,7 @@
     "type": "軽巡洋艦",
     "range": "短射程",
     "speed": "低速",
-    "equipments": [
-      "大発動艇",
-      "特二式内火艇",
-      "甲標的",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大発動艇", "特二式内火艇", "甲標的", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -9296,13 +8328,8 @@
     "type": "軽巡洋艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
-    "abilities": [
-      "無条件先制対潜"
-    ],
+    "equipments": ["大型ソナー", "艦隊司令部施設"],
+    "abilities": ["無条件先制対潜"],
     "showDefault": true
   },
   {
@@ -9371,13 +8398,8 @@
     "type": "駆逐艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "艦隊司令部施設"
-    ],
-    "abilities": [
-      "専用対空カットイン",
-      "無条件先制対潜"
-    ],
+    "equipments": ["艦隊司令部施設"],
+    "abilities": ["専用対空カットイン", "無条件先制対潜"],
     "showDefault": true
   },
   {
@@ -9388,15 +8410,8 @@
     "type": "駆逐艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "増設バルジ(中型艦)",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
-    "abilities": [
-      "専用対空カットイン",
-      "無条件先制対潜"
-    ],
+    "equipments": ["増設バルジ(中型艦)", "大型ソナー", "艦隊司令部施設"],
+    "abilities": ["専用対空カットイン", "無条件先制対潜"],
     "showDefault": true
   },
   {
@@ -9415,9 +8430,7 @@
       "回転翼機",
       "艦隊司令部施設"
     ],
-    "abilities": [
-      "専用対空カットイン"
-    ],
+    "abilities": ["専用対空カットイン"],
     "showDefault": true
   },
   {
@@ -9464,9 +8477,7 @@
     "type": "駆逐艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大発動艇"
-    ],
+    "equipments": ["大発動艇"],
     "abilities": [],
     "showDefault": true
   },
@@ -9485,9 +8496,7 @@
       "回転翼機",
       "艦隊司令部施設"
     ],
-    "abilities": [
-      "特殊攻撃"
-    ],
+    "abilities": ["特殊攻撃"],
     "showDefault": false
   },
   {
@@ -9505,9 +8514,7 @@
       "回転翼機",
       "艦隊司令部施設"
     ],
-    "abilities": [
-      "特殊攻撃"
-    ],
+    "abilities": ["特殊攻撃"],
     "showDefault": false
   },
   {
@@ -9518,10 +8525,7 @@
     "type": "潜水艦",
     "range": "短射程",
     "speed": "低速",
-    "equipments": [
-      "特二式内火艇",
-      "甲標的"
-    ],
+    "equipments": ["特二式内火艇", "甲標的"],
     "abilities": [],
     "showDefault": false
   },
@@ -9533,10 +8537,7 @@
     "type": "潜水艦",
     "range": "短射程",
     "speed": "低速",
-    "equipments": [
-      "特二式内火艇",
-      "甲標的"
-    ],
+    "equipments": ["特二式内火艇", "甲標的"],
     "abilities": [],
     "showDefault": true
   },
@@ -9604,9 +8605,7 @@
       "回転翼機",
       "艦隊司令部施設"
     ],
-    "abilities": [
-      "特殊攻撃"
-    ],
+    "abilities": ["特殊攻撃"],
     "showDefault": true
   },
   {
@@ -9625,9 +8624,7 @@
       "回転翼機",
       "艦隊司令部施設"
     ],
-    "abilities": [
-      "特殊攻撃"
-    ],
+    "abilities": ["特殊攻撃"],
     "showDefault": true
   },
   {
@@ -9698,9 +8695,7 @@
     "type": "駆逐艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大発動艇"
-    ],
+    "equipments": ["大発動艇"],
     "abilities": [],
     "showDefault": true
   },
@@ -9771,10 +8766,7 @@
     "type": "駆逐艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大発動艇",
-      "特二式内火艇"
-    ],
+    "equipments": ["大発動艇", "特二式内火艇"],
     "abilities": [],
     "showDefault": true
   },
@@ -9798,10 +8790,7 @@
     "type": "駆逐艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "増設バルジ(中型艦)",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["増設バルジ(中型艦)", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -9831,9 +8820,7 @@
     "type": "駆逐艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "艦隊司令部施設"
-    ],
+    "equipments": ["艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -9887,11 +8874,7 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -9920,11 +8903,7 @@
     "type": "駆逐艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "特二式内火艇",
-      "増設バルジ(中型艦)",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["特二式内火艇", "増設バルジ(中型艦)", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -9975,11 +8954,7 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -10062,10 +9037,7 @@
     "type": "駆逐艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大発動艇",
-      "特二式内火艇"
-    ],
+    "equipments": ["大発動艇", "特二式内火艇"],
     "abilities": [],
     "showDefault": true
   },
@@ -10077,11 +9049,7 @@
     "type": "駆逐艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大発動艇",
-      "特二式内火艇",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大発動艇", "特二式内火艇", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -10116,10 +9084,7 @@
     "type": "駆逐艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "特二式内火艇",
-      "増設バルジ(中型艦)"
-    ],
+    "equipments": ["特二式内火艇", "増設バルジ(中型艦)"],
     "abilities": [],
     "showDefault": true
   },
@@ -10167,9 +9132,7 @@
     "type": "駆逐艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大発動艇"
-    ],
+    "equipments": ["大発動艇"],
     "abilities": [],
     "showDefault": true
   },
@@ -10205,10 +9168,7 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "低速",
-    "equipments": [
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -10220,11 +9180,7 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -10254,10 +9210,7 @@
     "type": "潜水艦",
     "range": "短射程",
     "speed": "低速",
-    "equipments": [
-      "特二式内火艇",
-      "甲標的"
-    ],
+    "equipments": ["特二式内火艇", "甲標的"],
     "abilities": [],
     "showDefault": false
   },
@@ -10269,10 +9222,7 @@
     "type": "潜水艦",
     "range": "短射程",
     "speed": "低速",
-    "equipments": [
-      "特二式内火艇",
-      "甲標的"
-    ],
+    "equipments": ["特二式内火艇", "甲標的"],
     "abilities": [],
     "showDefault": true
   },
@@ -10284,10 +9234,7 @@
     "type": "潜水艦",
     "range": "短射程",
     "speed": "低速",
-    "equipments": [
-      "特二式内火艇",
-      "甲標的"
-    ],
+    "equipments": ["特二式内火艇", "甲標的"],
     "abilities": [],
     "showDefault": false
   },
@@ -10319,11 +9266,7 @@
     "type": "軽空母",
     "range": "短射程",
     "speed": "低速",
-    "equipments": [
-      "増設バルジ(中型艦)",
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["増設バルジ(中型艦)", "大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -10352,15 +9295,8 @@
     "type": "装甲空母",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "回転翼機",
-      "艦隊司令部施設"
-    ],
-    "abilities": [
-      "専用対空カットイン"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "回転翼機", "艦隊司令部施設"],
+    "abilities": ["専用対空カットイン"],
     "showDefault": false
   },
   {
@@ -10371,15 +9307,8 @@
     "type": "装甲空母",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "回転翼機",
-      "艦隊司令部施設"
-    ],
-    "abilities": [
-      "専用対空カットイン"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "回転翼機", "艦隊司令部施設"],
+    "abilities": ["専用対空カットイン"],
     "showDefault": true
   },
   {
@@ -10402,10 +9331,7 @@
     "type": "駆逐艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大発動艇",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大発動艇", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -10417,10 +9343,7 @@
     "type": "潜水艦",
     "range": "短射程",
     "speed": "低速",
-    "equipments": [
-      "特二式内火艇",
-      "甲標的"
-    ],
+    "equipments": ["特二式内火艇", "甲標的"],
     "abilities": [],
     "showDefault": true
   },
@@ -10470,10 +9393,7 @@
     "type": "潜水艦",
     "range": "短射程",
     "speed": "低速",
-    "equipments": [
-      "特二式内火艇",
-      "甲標的"
-    ],
+    "equipments": ["特二式内火艇", "甲標的"],
     "abilities": [],
     "showDefault": false
   },
@@ -10485,10 +9405,7 @@
     "type": "潜水艦",
     "range": "短射程",
     "speed": "低速",
-    "equipments": [
-      "特二式内火艇",
-      "甲標的"
-    ],
+    "equipments": ["特二式内火艇", "甲標的"],
     "abilities": [],
     "showDefault": true
   },
@@ -10541,10 +9458,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -10556,10 +9470,7 @@
     "type": "軽巡洋艦",
     "range": "中射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -10592,11 +9503,7 @@
     "type": "特設護衛空母",
     "range": "短射程",
     "speed": "低速",
-    "equipments": [
-      "増設バルジ(中型艦)",
-      "大型電探",
-      "対潜哨戒機"
-    ],
+    "equipments": ["増設バルジ(中型艦)", "大型電探", "対潜哨戒機"],
     "abilities": [],
     "showDefault": false
   },
@@ -10608,12 +9515,7 @@
     "type": "特設護衛空母",
     "range": "短射程",
     "speed": "低速",
-    "equipments": [
-      "増設バルジ(中型艦)",
-      "大型電探",
-      "回転翼機",
-      "対潜哨戒機"
-    ],
+    "equipments": ["増設バルジ(中型艦)", "大型電探", "回転翼機", "対潜哨戒機"],
     "abilities": [],
     "showDefault": true
   },
@@ -10649,10 +9551,7 @@
     "type": "駆逐艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大発動艇",
-      "特二式内火艇"
-    ],
+    "equipments": ["大発動艇", "特二式内火艇"],
     "abilities": [],
     "showDefault": true
   },
@@ -10685,10 +9584,7 @@
       "回転翼機",
       "艦隊司令部施設"
     ],
-    "abilities": [
-      "特殊攻撃",
-      "専用対空カットイン"
-    ],
+    "abilities": ["特殊攻撃", "専用対空カットイン"],
     "showDefault": true
   },
   {
@@ -10699,14 +9595,8 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "低速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
-    "abilities": [
-      "特殊攻撃"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
+    "abilities": ["特殊攻撃"],
     "showDefault": false
   },
   {
@@ -10745,10 +9635,7 @@
       "回転翼機",
       "艦隊司令部施設"
     ],
-    "abilities": [
-      "特殊攻撃",
-      "専用対空カットイン"
-    ],
+    "abilities": ["特殊攻撃", "専用対空カットイン"],
     "showDefault": true
   },
   {
@@ -10759,14 +9646,8 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "低速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
-    "abilities": [
-      "特殊攻撃"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
+    "abilities": ["特殊攻撃"],
     "showDefault": true
   },
   {
@@ -10777,12 +9658,8 @@
     "type": "駆逐艦",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "回転翼機"
-    ],
-    "abilities": [
-      "無条件先制対潜"
-    ],
+    "equipments": ["回転翼機"],
+    "abilities": ["無条件先制対潜"],
     "showDefault": true
   },
   {
@@ -10855,11 +9732,7 @@
     "type": "正規空母",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -10871,11 +9744,7 @@
     "type": "正規空母",
     "range": "短射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -10887,11 +9756,7 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -10903,11 +9768,7 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": false
   },
@@ -10919,11 +9780,7 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   },
@@ -10935,11 +9792,7 @@
     "type": "戦艦",
     "range": "長射程",
     "speed": "高速",
-    "equipments": [
-      "大型電探",
-      "大型ソナー",
-      "艦隊司令部施設"
-    ],
+    "equipments": ["大型電探", "大型ソナー", "艦隊司令部施設"],
     "abilities": [],
     "showDefault": true
   }
