@@ -32,7 +32,13 @@ export const CategorizedTags: React.FC<Props> = ({
   sx,
 }) => {
   return (
-    <Stack direction="row" spacing={1} alignItems="center" sx={sx}>
+    <Stack
+      direction="row"
+      spacing={1}
+      alignItems="center"
+      minHeight="2rem"
+      sx={sx}
+    >
       <Typography flexShrink={0}>{label}</Typography>
       <Stack
         direction="row"
