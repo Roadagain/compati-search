@@ -1,9 +1,9 @@
-import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import CardHeader from '@mui/material/CardHeader';
+import Divider from '@mui/material/Divider';
 import Stack from '@mui/material/Stack';
 import { SxProps, Theme } from '@mui/material/styles';
+import Typography from '@mui/material/Typography';
 import React from 'react';
 
 import { Ship } from '../../lib/ship';
@@ -26,27 +26,79 @@ interface Props {
 }
 
 export const ShipCard: React.FC<Props> = ({ ship, onClickTag, sx }) => {
-  const { category, type, speed, range, equipments, abilities } = ship;
-  const tags = [category, type, speed, range, ...equipments, ...abilities];
-  const uniqueTags = Array.from(new Set(tags));
+  const { name, category, type, speed, range, equipments, abilities } = ship;
   return (
     <Card elevation={2} sx={sx}>
-      <CardHeader title={ship.name} />
       <CardContent>
+        <Typography
+          variant="h5"
+          component="span"
+          flex={1}
+          textOverflow="ellipsis"
+          overflow="hidden"
+          whiteSpace="nowrap"
+        >
+          {name}
+        </Typography>
+        <Divider sx={{ mt: 1 }} />
+        <Stack direction="row" spacing={1} mt={1} alignItems="center">
+          <Typography>艦種</Typography>
+          <TagBadge onClick={onClickTag}>{category}</TagBadge>
+          <TagBadge onClick={onClickTag}>{type}</TagBadge>
+        </Stack>
+        <Stack direction="row" spacing={1} mt={1} alignItems="center">
+          <Typography>速力</Typography>
+          <TagBadge onClick={onClickTag}>{speed}</TagBadge>
+        </Stack>
+        <Stack direction="row" spacing={1} mt={1} alignItems="center">
+          <Typography>射程</Typography>
+          <TagBadge onClick={onClickTag}>{range}</TagBadge>
+        </Stack>
         {/* スクロールバーがタグと被らないように下部余白を確保する */}
-        <Box pb={1} sx={{ overflowX: 'scroll' }}>
+        <Stack direction="row" spacing={1} mt={1} alignItems="center">
+          <Typography flexShrink={0}>装備</Typography>
           <Stack
             direction="row"
             spacing={1}
-            sx={{ display: 'inline-block', whiteSpace: 'nowrap' }}
+            sx={{
+              display: 'inline-block',
+              whiteSpace: 'nowrap',
+              overflowX: 'scroll',
+            }}
           >
-            {uniqueTags.map((tag) => (
-              <TagBadge key={tag} onClick={onClickTag}>
-                {tag}
-              </TagBadge>
-            ))}
+            {equipments.length > 0 ? (
+              equipments.map((tag) => (
+                <TagBadge key={tag} onClick={onClickTag}>
+                  {tag}
+                </TagBadge>
+              ))
+            ) : (
+              <Typography>なし</Typography>
+            )}
           </Stack>
-        </Box>
+        </Stack>
+        <Stack direction="row" spacing={1} mt={1} alignItems="center">
+          <Typography flexShrink={0}>特性</Typography>
+          <Stack
+            direction="row"
+            spacing={1}
+            sx={{
+              display: 'inline-block',
+              whiteSpace: 'nowrap',
+              overflowX: 'scroll',
+            }}
+          >
+            {abilities.length > 0 ? (
+              abilities.map((tag) => (
+                <TagBadge key={tag} onClick={onClickTag}>
+                  {tag}
+                </TagBadge>
+              ))
+            ) : (
+              <Typography>なし</Typography>
+            )}
+          </Stack>
+        </Stack>
       </CardContent>
     </Card>
   );
