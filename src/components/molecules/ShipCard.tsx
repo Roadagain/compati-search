@@ -1,11 +1,13 @@
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Divider from '@mui/material/Divider';
+import Stack from '@mui/material/Stack';
 import { SxProps, Theme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import React from 'react';
 
 import { Ship } from '../../lib/ship';
+import { TagBadge } from '../atoms/TagBadge';
 import { CategorizedTags } from './CategorizedTags';
 
 interface Props {
@@ -29,23 +31,22 @@ export const ShipCard: React.FC<Props> = ({ ship, onClickTag, sx }) => {
   return (
     <Card elevation={2} sx={sx}>
       <CardContent>
-        <Typography
-          variant="h5"
-          component="span"
-          flex={1}
-          textOverflow="ellipsis"
-          overflow="hidden"
-          whiteSpace="nowrap"
-        >
-          {name}
-        </Typography>
+        <Stack direction="column" spacing={1}>
+          <Typography
+            variant="h5"
+            component="span"
+            textOverflow="ellipsis"
+            overflow="hidden"
+            whiteSpace="nowrap"
+          >
+            {name}
+          </Typography>
+          <Stack direction="row" spacing={1}>
+            <TagBadge onClick={onClickTag}>{category}</TagBadge>
+            <TagBadge onClick={onClickTag}>{type}</TagBadge>
+          </Stack>
+        </Stack>
         <Divider sx={{ mt: 1 }} />
-        <CategorizedTags
-          label="艦種"
-          tags={[category, type]}
-          onClickTag={onClickTag}
-          sx={{ mt: 1 }}
-        />
         <CategorizedTags
           label="速力"
           tags={[speed]}
