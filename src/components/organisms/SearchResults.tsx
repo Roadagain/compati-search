@@ -36,23 +36,11 @@ export const SearchResults: React.FC<Props> = ({ sx }) => {
   return (
     <InfiniteScroller loadMore={loadMore} hasMore={hasMore}>
       <Grid container spacing={2} sx={sx}>
-        {shownShips.map(
-          ({ name, category, type, speed, range, equipments, abilities }) => {
-            const tags = [
-              category,
-              type,
-              speed,
-              range,
-              ...equipments,
-              ...abilities,
-            ];
-            return (
-              <Grid item key={name} xs={12} sm={6} md={4}>
-                <ShipCard name={name} tags={tags} onClickTag={onClickTag} />
-              </Grid>
-            );
-          }
-        )}
+        {shownShips.map((ship) => (
+          <Grid item key={ship.name} xs={12} sm={6} md={4}>
+            <ShipCard ship={ship} onClickTag={onClickTag} />
+          </Grid>
+        ))}
       </Grid>
     </InfiniteScroller>
   );
