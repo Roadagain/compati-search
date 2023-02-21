@@ -24,7 +24,11 @@ export const TagBadge: React.FC<Props> = ({
   sx,
 }) => {
   const onClickButton = React.useCallback(
-    () => onClick(children),
+    (e: React.MouseEvent) => {
+      // organisms/ShipCard のアコーディオンが反応しないよう伝播を止める
+      e.stopPropagation();
+      onClick(children);
+    },
     [onClick, children]
   );
   return (
