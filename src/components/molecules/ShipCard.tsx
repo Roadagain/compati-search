@@ -1,8 +1,9 @@
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import Divider from '@mui/material/Divider';
+import ExpandMore from '@mui/icons-material/ExpandMore';
+import Accordion from '@mui/material/Accordion';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import AccordionSummary from '@mui/material/AccordionSummary';
 import Stack from '@mui/material/Stack';
-import { SxProps, Theme } from '@mui/material/styles';
+import { SxProps, Theme, useTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import React from 'react';
 
@@ -28,9 +29,10 @@ interface Props {
 
 export const ShipCard: React.FC<Props> = ({ ship, onClickTag, sx }) => {
   const { name, category, type, speed, range, equipments, abilities } = ship;
+  const theme = useTheme();
   return (
-    <Card elevation={2} sx={sx}>
-      <CardContent>
+    <Accordion elevation={2} disableGutters sx={sx}>
+      <AccordionSummary expandIcon={<ExpandMore />}>
         <Stack direction="column" spacing={1}>
           <Typography
             variant="h5"
@@ -46,7 +48,10 @@ export const ShipCard: React.FC<Props> = ({ ship, onClickTag, sx }) => {
             <TagBadge onClick={onClickTag}>{type}</TagBadge>
           </Stack>
         </Stack>
-        <Divider sx={{ mt: 1 }} />
+      </AccordionSummary>
+      <AccordionDetails
+        sx={{ borderTop: '1px solid', borderColor: theme.palette.divider }}
+      >
         <CategorizedTags
           label="速力"
           tags={[speed]}
@@ -71,7 +76,7 @@ export const ShipCard: React.FC<Props> = ({ ship, onClickTag, sx }) => {
           onClickTag={onClickTag}
           sx={{ mt: 1 }}
         />
-      </CardContent>
-    </Card>
+      </AccordionDetails>
+    </Accordion>
   );
 };
