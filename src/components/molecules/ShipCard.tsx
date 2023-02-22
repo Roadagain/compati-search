@@ -33,7 +33,7 @@ export const ShipCard: React.FC<Props> = ({ ship, onClickTag, sx }) => {
   return (
     <Accordion elevation={2} disableGutters sx={sx}>
       <AccordionSummary expandIcon={<ExpandMore />}>
-        <Stack direction="column" spacing={1}>
+        <Stack direction="column" spacing={1} minWidth={0}>
           <Typography variant="h5" component="p" noWrap>
             {name}
           </Typography>

@@ -21,5 +21,12 @@ export const theme = createTheme({
         },
       },
     },
+    MuiAccordionSummary: {
+      styleOverrides: {
+        content: {
+          minWidth: 0,
+        },
+      },
+    },
   },
 });
