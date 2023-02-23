@@ -1,22 +1,21 @@
-import Box from '@mui/material/Box';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardHeader from '@mui/material/CardHeader';
+import ExpandMore from '@mui/icons-material/ExpandMore';
+import Accordion from '@mui/material/Accordion';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import AccordionSummary from '@mui/material/AccordionSummary';
 import Stack from '@mui/material/Stack';
-import { SxProps, Theme } from '@mui/material/styles';
+import { SxProps, Theme, useTheme } from '@mui/material/styles';
+import Typography from '@mui/material/Typography';
 import React from 'react';
 
+import { Ship } from '../../lib/ship';
 import { TagBadge } from '../atoms/TagBadge';
+import { CategorizedTags } from './CategorizedTags';
 
 interface Props {
   /**
-   * キャラ名
+   * 艦船データ
    */
-  name: string;
-  /**
-   * タグ一覧
-   */
-  tags: string[];
+  ship: Ship;
   /**
    * タグクリック時のハンドラ
    * @param tagLabel - タグ
@@ -28,27 +27,50 @@ interface Props {
   sx?: SxProps<Theme>;
 }
 
-export const ShipCard: React.FC<Props> = ({ name, tags, onClickTag, sx }) => {
-  const uniqueTags = Array.from(new Set(tags));
+export const ShipCard: React.FC<Props> = ({ ship, onClickTag, sx }) => {
+  const { name, category, type, speed, range, equipments, abilities } = ship;
+  const theme = useTheme();
   return (
-    <Card elevation={2} sx={sx}>
-      <CardHeader title={name} />
-      <CardContent>
-        {/* スクロールバーがタグと被らないように下部余白を確保する */}
-        <Box pb={1} sx={{ overflowX: 'scroll' }}>
-          <Stack
-            direction="row"
-            spacing={1}
-            sx={{ display: 'inline-block', whiteSpace: 'nowrap' }}
-          >
-            {uniqueTags.map((tag) => (
-              <TagBadge key={tag} onClick={onClickTag}>
-                {tag}
-              </TagBadge>
-            ))}
+    <Accordion elevation={2} disableGutters sx={sx}>
+      <AccordionSummary expandIcon={<ExpandMore />}>
+        <Stack direction="column" spacing={1} minWidth={0}>
+          <Typography variant="h5" component="p" noWrap>
+            {name}
+          </Typography>
+          <Stack direction="row" spacing={1}>
+            <TagBadge onClick={onClickTag}>{category}</TagBadge>
+            <TagBadge onClick={onClickTag}>{type}</TagBadge>
           </Stack>
-        </Box>
-      </CardContent>
-    </Card>
+        </Stack>
+      </AccordionSummary>
+      <AccordionDetails
+        sx={{ borderTop: '1px solid', borderColor: theme.palette.divider }}
+      >
+        <CategorizedTags
+          label="速力"
+          tags={[speed]}
+          onClickTag={onClickTag}
+          sx={{ mt: 1 }}
+        />
+        <CategorizedTags
+          label="射程"
+          tags={[range]}
+          onClickTag={onClickTag}
+          sx={{ mt: 1 }}
+        />
+        <CategorizedTags
+          label="装備"
+          tags={equipments}
+          onClickTag={onClickTag}
+          sx={{ mt: 1 }}
+        />
+        <CategorizedTags
+          label="特性"
+          tags={abilities}
+          onClickTag={onClickTag}
+          sx={{ mt: 1 }}
+        />
+      </AccordionDetails>
+    </Accordion>
   );
 };
