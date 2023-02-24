@@ -2,7 +2,13 @@ import Button from '@mui/material/Button';
 import { SxProps, Theme } from '@mui/material/styles';
 import React from 'react';
 
+import { TagCategory } from '../../lib/tag-category';
+
 interface Props {
+  /**
+   * タグの種類
+   */
+  category: TagCategory;
   /**
    * タグ
    */
