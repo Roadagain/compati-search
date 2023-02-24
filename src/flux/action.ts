@@ -1,6 +1,7 @@
 import { SearchTarget } from '../lib/search-target';
 import { Ship } from '../lib/ship';
 import { SortOrder } from '../lib/sort-ships';
+import { TagCategory } from '../lib/tag-category';
 
 interface LoadShipsData {
   type: 'load-ships-data';
@@ -25,7 +26,8 @@ interface ChangeSortOrderAction {
 
 interface ClickTag {
   type: 'click-tag';
-  label: string;
+  category: TagCategory;
+  tag: string;
 }
 
 interface ShowNextPage {

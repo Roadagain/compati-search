@@ -22,7 +22,7 @@ export const reducer: Reducer<State, Action> = (state, action) => {
     case 'change-sort-order':
       return onChangeSortOrder(state, action.sortOrder);
     case 'click-tag':
-      return onClickTag(state, action.label);
+      return onClickTag(state, action.category, action.tag);
     case 'show-next-page':
       return onShowNextPage(state);
     default:

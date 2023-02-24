@@ -2,6 +2,7 @@ import { generateAutocompleteOptions } from '../lib/autocomplete';
 import { filterShips } from '../lib/filter-ships';
 import { Ship } from '../lib/ship';
 import { SortOrder, sortShips } from '../lib/sort-ships';
+import { TagCategory } from '../lib/tag-category';
 import {
   onChangeSearchWords,
   onChangeShowAll,
@@ -192,19 +193,13 @@ describe('onChangeSortOrder', () => {
 
 describe('onClickTag', () => {
   let nextState: State;
-  const label = 'label';
+  const category: TagCategory = 'types';
+  const tag = 'tag';
 
   const currentState: State = {
     ...baseState,
     search: {
       ...baseState.search,
-      info: {
-        ...baseState.search.info,
-        autocompleteOptions: {
-          ...baseState.search.info.autocompleteOptions,
-          types: [label],
-        },
-      },
       words: {
         ...baseState.search.words,
         categories: ['abc'],
@@ -215,14 +210,11 @@ describe('onClickTag', () => {
   };
 
   beforeEach(() => {
-    nextState = onClickTag(currentState, label);
+    nextState = onClickTag(currentState, category, tag);
   });
 
   it('既存の検索ワードにクリックしたタグが追加されている', () => {
-    expect(nextState.search.words).toEqual({
-      ...currentState.search.words,
-      types: [label],
-    });
+    expect(nextState.search.words[category]).toEqual([tag]);
   });
 
   it('ページがリセットされている', () => {
