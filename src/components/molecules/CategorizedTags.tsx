@@ -18,9 +18,10 @@ interface Props {
   tags: string[];
   /**
    * タグクリック時のハンドラ
-   * @param tagLabel - タグ
+   * @param category - タグの種類
+   * @param tag - タグ
    */
-  onClickTag: (tagLabel: string) => void;
+  onClickTag: (category: TagCategory, tag: string) => void;
   /**
    * テーマ関係のスタイル指定
    */

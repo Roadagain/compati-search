@@ -15,23 +15,24 @@ interface Props {
   tag: string;
   /**
    * クリック時の挙動
+   * @param category - クリックされたタグの種類
    * @param tag - クリックされたタグ
    */
-  onClick: (tag: string) => void;
+  onClick: (category: TagCategory, tag: string) => void;
   /**
    * テーマ関係のスタイル指定
    */
   sx?: SxProps<Theme>;
 }
 
-export const TagBadge: React.FC<Props> = ({ tag, onClick, sx }) => {
+export const TagBadge: React.FC<Props> = ({ category, tag, onClick, sx }) => {
   const onClickButton = React.useCallback(
     (e: React.MouseEvent) => {
       // organisms/ShipCard のアコーディオンが反応しないよう伝播を止める
       e.stopPropagation();
-      onClick(tag);
+      onClick(category, tag);
     },
-    [onClick, tag]
+    [onClick, category, tag]
   );
   return (
     <Button
