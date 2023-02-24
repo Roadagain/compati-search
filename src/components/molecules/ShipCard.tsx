@@ -38,8 +38,8 @@ export const ShipCard: React.FC<Props> = ({ ship, onClickTag, sx }) => {
             {name}
           </Typography>
           <Stack direction="row" spacing={1}>
-            <TagBadge onClick={onClickTag}>{category}</TagBadge>
-            <TagBadge onClick={onClickTag}>{type}</TagBadge>
+            <TagBadge onClick={onClickTag} tag={category} />
+            <TagBadge onClick={onClickTag} tag={type} />
           </Stack>
         </Stack>
       </AccordionSummary>

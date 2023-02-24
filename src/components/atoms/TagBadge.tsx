@@ -6,7 +6,7 @@ interface Props {
   /**
    * タグ
    */
-  children: string;
+  tag: string;
   /**
    * クリック時の挙動
    * @param tag - クリックされたタグ
@@ -18,18 +18,14 @@ interface Props {
   sx?: SxProps<Theme>;
 }
 
-export const TagBadge: React.FC<Props> = ({
-  children: children,
-  onClick,
-  sx,
-}) => {
+export const TagBadge: React.FC<Props> = ({ tag, onClick, sx }) => {
   const onClickButton = React.useCallback(
     (e: React.MouseEvent) => {
       // organisms/ShipCard のアコーディオンが反応しないよう伝播を止める
       e.stopPropagation();
-      onClick(children);
+      onClick(tag);
     },
-    [onClick, children]
+    [onClick, tag]
   );
   return (
     <Button
@@ -38,7 +34,7 @@ export const TagBadge: React.FC<Props> = ({
       onClick={onClickButton}
       sx={{ textTransform: 'none', ...sx }}
     >
-      {children}
+      {tag}
     </Button>
   );
 };

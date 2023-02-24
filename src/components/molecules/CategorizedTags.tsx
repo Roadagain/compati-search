@@ -51,9 +51,7 @@ export const CategorizedTags: React.FC<Props> = ({
       >
         {tags.length > 0 ? (
           tags.map((tag) => (
-            <TagBadge key={tag} onClick={onClickTag}>
-              {tag}
-            </TagBadge>
+            <TagBadge key={tag} tag={tag} onClick={onClickTag} />
           ))
         ) : (
           <Typography>なし</Typography>
