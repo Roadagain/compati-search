@@ -1,8 +1,9 @@
 import { generateAutocompleteOptions } from '../lib/autocomplete';
 import { filterShips } from '../lib/filter-ships';
-import { AllSearchTargets, SearchTarget } from '../lib/search-target';
+import { SearchTarget } from '../lib/search-target';
 import { Ship } from '../lib/ship';
 import { SortOrder, sortShips } from '../lib/sort-ships';
+import { TagCategory } from '../lib/tag-category';
 import { State } from './state';
 
 export const onLoadShipsData = (state: State, ships: Ship[]): State => {
@@ -87,20 +88,16 @@ export const onChangeSortOrder = (
   };
 };
 
-export const onClickTag = (state: State, label: string): State => {
+export const onClickTag = (
+  state: State,
+  category: TagCategory,
+  tag: string
+): State => {
   const { ships, search } = state;
   const { words, showAll } = search;
-  const { autocompleteOptions } = search.info;
-  const tagCategories = AllSearchTargets.filter((target) =>
-    autocompleteOptions[target].includes(label)
-  );
   const newWords = {
     ...words,
-    ...Object.fromEntries(
-      tagCategories.map((target) => {
-        return [target, [...words[target], label]];
-      })
-    ),
+    [category]: [...words[category], tag],
   };
   const results = filterShips(ships, newWords, showAll);
   return {

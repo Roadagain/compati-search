@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 import React from 'react';
 
 import { Ship } from '../../lib/ship';
+import { TagCategory } from '../../lib/tag-category';
 import { TagBadge } from '../atoms/TagBadge';
 import { CategorizedTags } from './CategorizedTags';
 
@@ -18,9 +19,10 @@ interface Props {
   ship: Ship;
   /**
    * タグクリック時のハンドラ
-   * @param tagLabel - タグ
+   * @param category - タグの種類
+   * @param tag - タグ
    */
-  onClickTag: (tagLabel: string) => void;
+  onClickTag: (category: TagCategory, tag: string) => void;
   /**
    * テーマ関係のスタイル指定
    */
@@ -38,8 +40,12 @@ export const ShipCard: React.FC<Props> = ({ ship, onClickTag, sx }) => {
             {name}
           </Typography>
           <Stack direction="row" spacing={1}>
-            <TagBadge onClick={onClickTag}>{category}</TagBadge>
-            <TagBadge onClick={onClickTag}>{type}</TagBadge>
+            <TagBadge
+              category="categories"
+              tag={category}
+              onClick={onClickTag}
+            />
+            <TagBadge category="types" tag={type} onClick={onClickTag} />
           </Stack>
         </Stack>
       </AccordionSummary>
@@ -47,25 +53,25 @@ export const ShipCard: React.FC<Props> = ({ ship, onClickTag, sx }) => {
         sx={{ borderTop: '1px solid', borderColor: theme.palette.divider }}
       >
         <CategorizedTags
-          label="速力"
+          category="speeds"
           tags={[speed]}
           onClickTag={onClickTag}
           sx={{ mt: 1 }}
         />
         <CategorizedTags
-          label="射程"
+          category="ranges"
           tags={[range]}
           onClickTag={onClickTag}
           sx={{ mt: 1 }}
         />
         <CategorizedTags
-          label="装備"
+          category="equipments"
           tags={equipments}
           onClickTag={onClickTag}
           sx={{ mt: 1 }}
         />
         <CategorizedTags
-          label="特性"
+          category="abilities"
           tags={abilities}
           onClickTag={onClickTag}
           sx={{ mt: 1 }}

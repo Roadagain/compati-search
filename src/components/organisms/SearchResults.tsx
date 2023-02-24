@@ -4,6 +4,7 @@ import React from 'react';
 import InfiniteScroller from 'react-infinite-scroller';
 
 import { FluxContext } from '../../flux/context';
+import { TagCategory } from '../../lib/tag-category';
 import { ShipCard } from '../molecules/ShipCard';
 
 interface Props {
@@ -17,8 +18,8 @@ export const SearchResults: React.FC<Props> = ({ sx }) => {
   const { state, dispatch } = React.useContext(FluxContext);
   const { results: ships, page } = state.search;
   const onClickTag = React.useCallback(
-    (label: string) => {
-      dispatch({ type: 'click-tag', label });
+    (category: TagCategory, tag: string) => {
+      dispatch({ type: 'click-tag', category, tag });
     },
     [dispatch]
   );

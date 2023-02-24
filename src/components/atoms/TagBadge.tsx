@@ -2,34 +2,37 @@ import Button from '@mui/material/Button';
 import { SxProps, Theme } from '@mui/material/styles';
 import React from 'react';
 
+import { TagCategory } from '../../lib/tag-category';
+
 interface Props {
+  /**
+   * タグの種類
+   */
+  category: TagCategory;
   /**
    * タグ
    */
-  children: string;
+  tag: string;
   /**
    * クリック時の挙動
+   * @param category - クリックされたタグの種類
    * @param tag - クリックされたタグ
    */
-  onClick: (tag: string) => void;
+  onClick: (category: TagCategory, tag: string) => void;
   /**
    * テーマ関係のスタイル指定
    */
   sx?: SxProps<Theme>;
 }
 
-export const TagBadge: React.FC<Props> = ({
-  children: children,
-  onClick,
-  sx,
-}) => {
+export const TagBadge: React.FC<Props> = ({ category, tag, onClick, sx }) => {
   const onClickButton = React.useCallback(
     (e: React.MouseEvent) => {
       // organisms/ShipCard のアコーディオンが反応しないよう伝播を止める
       e.stopPropagation();
-      onClick(children);
+      onClick(category, tag);
     },
-    [onClick, children]
+    [onClick, category, tag]
   );
   return (
     <Button
@@ -38,7 +41,7 @@ export const TagBadge: React.FC<Props> = ({
       onClick={onClickButton}
       sx={{ textTransform: 'none', ...sx }}
     >
-      {children}
+      {tag}
     </Button>
   );
 };

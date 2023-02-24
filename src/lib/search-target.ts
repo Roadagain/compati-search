@@ -1,12 +1,6 @@
-export const AllSearchTargets = [
-  'categories',
-  'types',
-  'equipments',
-  'abilities',
-  'speeds',
-  'ranges',
-  'names',
-] as const;
+import { AllTagCategories } from './tag-category';
+
+export const AllSearchTargets = [...AllTagCategories, 'names'] as const;
 export type SearchTarget = typeof AllSearchTargets[number];
 
 export const AllSearchTargetLabels = {
