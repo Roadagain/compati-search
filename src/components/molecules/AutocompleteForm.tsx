@@ -102,10 +102,10 @@ export const AutocompleteForm: React.FC<Props> = ({
           const color = value.startsWith('-') ? 'error' : 'default';
           return (
             <Chip
-              key={value}
               label={value}
               color={color}
               {...getTagProps({ index })}
+              key={value}
               sx={{ fontSize: theme.typography.h6 }}
             />
           );
