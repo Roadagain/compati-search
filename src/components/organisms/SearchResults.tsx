@@ -29,8 +29,9 @@ export const SearchResults: React.FC<Props> = ({ sx }) => {
       type: 'show-next-page',
     });
   }, [dispatch]);
-  // 追加は24個ずつ
-  const shownShips = ships.slice(0, page * 24);
+  // 追加は12個ずつ
+  // PCやタブレットだとファーストビューで12+α見えるため、初回だけ2ページ分表示する
+  const shownShips = ships.slice(0, (page + 1) * 12);
   const hasMore = shownShips.length < ships.length;
 
   return (
