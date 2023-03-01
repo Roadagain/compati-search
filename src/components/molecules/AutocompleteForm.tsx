@@ -90,6 +90,13 @@ export const AutocompleteForm: React.FC<Props> = ({
           }}
         />
       )}
+      renderOption={(props, option) => {
+        return (
+          <li {...props} key={option}>
+            {option}
+          </li>
+        );
+      }}
       renderTags={(values: string[], getTagProps) =>
         values.map((value, index) => {
           const color = value.startsWith('-') ? 'error' : 'default';
