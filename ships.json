@@ -19238,8 +19238,8 @@
     "name": "球磨改二",
     "kana": "くまかいに",
     "id": 452,
-    "category": "駆逐艦",
-    "type": "駆逐艦",
+    "category": "軽巡級",
+    "type": "軽巡洋艦",
     "range": "短射程",
     "speed": "高速",
     "equipments": [
