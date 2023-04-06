@@ -60,7 +60,7 @@ export const TagSelector: React.FC<Props> = ({
   );
 
   return (
-    <Accordion elevation={2} sx={sx}>
+    <Accordion elevation={2} TransitionProps={{ unmountOnExit: true }} sx={sx}>
       <AccordionSummary expandIcon={<ExpandMore />}>
         <Stack direction="row" spacing={1} alignItems="center">
           <Typography component="p" variant="h6" fontWeight="bold">

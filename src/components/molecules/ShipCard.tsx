@@ -33,7 +33,12 @@ export const ShipCard: React.FC<Props> = ({ ship, onClickTag, sx }) => {
   const { name, category, type, speed, range, equipments, abilities } = ship;
   const theme = useTheme();
   return (
-    <Accordion elevation={2} disableGutters sx={sx}>
+    <Accordion
+      elevation={2}
+      disableGutters
+      TransitionProps={{ unmountOnExit: true }}
+      sx={sx}
+    >
       <AccordionSummary expandIcon={<ExpandMore />}>
         <Stack direction="column" spacing={1} minWidth={0}>
           <Typography variant="h5" component="p" noWrap>
