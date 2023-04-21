@@ -13,6 +13,10 @@ interface Props {
    */
   checked: boolean;
   /**
+   * マイナス指定かどうか
+   */
+  minusChecked?: boolean;
+  /**
    * チェック状態が変わったときの挙動
    */
   onChange: (checked: boolean) => void;
@@ -25,6 +29,7 @@ interface Props {
 export const TagCheckBox: React.FC<Props> = ({
   label,
   checked,
+  minusChecked,
   onChange,
   sx,
 }) => {
@@ -34,7 +39,14 @@ export const TagCheckBox: React.FC<Props> = ({
 
   return (
     <FormControlLabel
-      control={<Checkbox checked={checked} onChange={onChangeCheckbox} />}
+      control={
+        <Checkbox
+          checked={checked || minusChecked}
+          indeterminate={minusChecked}
+          onChange={onChangeCheckbox}
+          color={minusChecked ? 'error' : 'primary'}
+        />
+      }
       label={label}
       sx={sx}
     />
