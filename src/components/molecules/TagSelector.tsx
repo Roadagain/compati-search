@@ -78,9 +78,17 @@ export const TagSelector: React.FC<Props> = ({
           <Typography component="p" variant="h6" fontWeight="bold">
             {categoryLabel}
           </Typography>
-          {selectedTags.map((selectedTag) => (
-            <Chip key={selectedTag} label={selectedTag} />
-          ))}
+          {selectedTags.map((selectedTag) => {
+            const isMinusCheck = selectedTag.startsWith('-');
+            return (
+              <Chip
+                key={selectedTag}
+                label={selectedTag}
+                variant="outlined"
+                color={isMinusCheck ? 'error' : 'default'}
+              />
+            );
+          })}
         </Stack>
       </AccordionSummary>
       <AccordionDetails>
