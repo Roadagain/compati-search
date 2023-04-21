@@ -33,6 +33,14 @@ export const Selected: Story = {
   },
 };
 
+export const MinusChecked: Story = {
+  args: {
+    category: 'equipments',
+    tags: ['装備A', '装備B', '装備C'],
+    selectedTags: ['-装備A', '装備B'],
+  },
+};
+
 export const TooManyTags: Story = {
   args: {
     category: 'equipments',
