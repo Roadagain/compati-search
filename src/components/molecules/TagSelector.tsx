@@ -11,6 +11,7 @@ import React from 'react';
 
 import { AllSearchTargetLabels } from '../../lib/search-target';
 import { TagCategory } from '../../lib/tag-category';
+import { LabelledSwitch } from './LabeledSwitch';
 import { TagCheckBox } from './TagCheckBox';
 
 interface Props {
@@ -45,24 +46,35 @@ export const TagSelector: React.FC<Props> = ({
 }) => {
   const categoryLabel = AllSearchTargetLabels[category];
   const selectedTagMap = new Map(
-    tags.map((tag) => [tag, selectedTags.includes(tag)])
+    tags.map((tag) => [
+      tag,
+      {
+        checked: selectedTags.includes(tag),
+        minusChecked: selectedTags.includes(`-${tag}`),
+      },
+    ])
   );
+  const [isMinus, setIsMinus] = React.useState(false);
   const onChangeCurried = React.useCallback(
     (tag: string) => (checked: boolean) => {
       if (checked) {
-        onChange([...selectedTags, tag]);
+        onChange([...selectedTags, isMinus ? `-${tag}` : tag]);
       }
       if (!checked) {
-        onChange(selectedTags.filter((selectedTag) => selectedTag !== tag));
+        onChange(
+          selectedTags.filter(
+            (selectedTag) => selectedTag !== tag && selectedTag !== `-${tag}`
+          )
+        );
       }
     },
-    [onChange, selectedTags]
+    [onChange, selectedTags, isMinus]
   );
 
   return (
     <Accordion elevation={2} TransitionProps={{ unmountOnExit: true }} sx={sx}>
       <AccordionSummary expandIcon={<ExpandMore />}>
-        <Stack direction="row" spacing={1} alignItems="center">
+        <Stack direction="row" spacing={1} alignItems="center" flexGrow={1}>
           <Typography component="p" variant="h6" fontWeight="bold">
             {categoryLabel}
           </Typography>
@@ -72,15 +84,22 @@ export const TagSelector: React.FC<Props> = ({
         </Stack>
       </AccordionSummary>
       <AccordionDetails>
+        <LabelledSwitch
+          label="マイナス検索に切り替える"
+          checked={isMinus}
+          onChange={setIsMinus}
+          color="error"
+        />
         <FormGroup row>
           {tags.map((tag) => {
             const onChange = onChangeCurried(tag);
-            const checked = selectedTagMap.get(tag);
+            const { checked, minusChecked } = selectedTagMap.get(tag);
             return (
               <TagCheckBox
                 key={tag}
                 label={tag}
                 checked={checked}
+                minusChecked={minusChecked}
                 onChange={onChange}
               />
             );
