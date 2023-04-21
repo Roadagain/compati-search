@@ -38,12 +38,6 @@ export const FullSearchForm: React.FC<Props> = ({ sx }) => {
         </Typography>
       </AccordionSummary>
       <AccordionDetails>
-        <AutocompleteForm
-          target="names"
-          words={words.names}
-          autocompleteOptions={autocompleteOptions.names}
-          onChange={onChangeCurried('names')}
-        />
         {AllTagCategories.map((category) => {
           const onChange = onChangeCurried(category);
           return (
@@ -56,6 +50,12 @@ export const FullSearchForm: React.FC<Props> = ({ sx }) => {
             />
           );
         })}
+        <AutocompleteForm
+          target="names"
+          words={words.names}
+          autocompleteOptions={autocompleteOptions.names}
+          onChange={onChangeCurried('names')}
+        />
       </AccordionDetails>
     </Accordion>
   );
