@@ -7,8 +7,10 @@ import Typography from '@mui/material/Typography';
 import React from 'react';
 
 import { FluxContext } from '../../flux/context';
-import { AllSearchTargets, SearchTarget } from '../../lib/search-target';
+import { SearchTarget } from '../../lib/search-target';
+import { AllTagCategories } from '../../lib/tag-category';
 import { AutocompleteForm } from '../molecules/AutocompleteForm';
+import { TagSelector } from '../molecules/TagSelector';
 
 interface Props {
   /**
@@ -36,18 +38,24 @@ export const FullSearchForm: React.FC<Props> = ({ sx }) => {
         </Typography>
       </AccordionSummary>
       <AccordionDetails>
-        {AllSearchTargets.map((target) => {
-          const onChange = onChangeCurried(target);
+        {AllTagCategories.map((category) => {
+          const onChange = onChangeCurried(category);
           return (
-            <AutocompleteForm
-              key={target}
-              target={target}
-              words={words[target]}
-              autocompleteOptions={autocompleteOptions[target]}
+            <TagSelector
+              key={category}
+              category={category}
+              tags={autocompleteOptions[category]}
+              selectedTags={words[category]}
               onChange={onChange}
             />
           );
         })}
+        <AutocompleteForm
+          target="names"
+          words={words.names}
+          autocompleteOptions={autocompleteOptions.names}
+          onChange={onChangeCurried('names')}
+        />
       </AccordionDetails>
     </Accordion>
   );

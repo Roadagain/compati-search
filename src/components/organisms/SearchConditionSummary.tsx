@@ -5,8 +5,8 @@ import React from 'react';
 
 import { FluxContext } from '../../flux/context';
 import { SortOrder } from '../../lib/sort-ships';
+import { LabelledSwitch } from '../molecules/LabeledSwitch';
 import { SearchTypeAndWords } from '../molecules/SearchTypeAndWords';
-import { ShowAllModelsSwitch } from '../molecules/ShowAllModelsSwitch';
 import { SortOrderSelector } from '../molecules/SortOrderSelector';
 
 interface Props {
@@ -56,7 +56,11 @@ export const SearchConditionSummary: React.FC<Props> = ({ sx }) => {
         sx={{ flex: 1 }}
       />
       <SortOrderSelector value={sortOrder} onChange={onChangeSortOrder} />
-      <ShowAllModelsSwitch checked={showAll} onChange={onChangeSwitch} />
+      <LabelledSwitch
+        label="全改造段階を表示"
+        checked={showAll}
+        onChange={onChangeSwitch}
+      />
     </Stack>
   );
 };

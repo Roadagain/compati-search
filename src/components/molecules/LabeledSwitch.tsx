@@ -5,6 +5,10 @@ import React from 'react';
 
 interface Props {
   /**
+   * ラベル
+   */
+  label: string;
+  /**
    * スイッチONかOFFか
    */
   checked: boolean;
@@ -13,14 +17,20 @@ interface Props {
    */
   onChange: (checked: boolean) => void;
   /**
+   * 色
+   */
+  color?: 'primary' | 'error';
+  /**
    * テーマ関連のスタイル指定
    */
   sx?: SxProps<Theme>;
 }
 
-export const ShowAllModelsSwitch: React.FC<Props> = ({
+export const LabelledSwitch: React.FC<Props> = ({
+  label,
   checked,
   onChange,
+  color,
   sx,
 }) => {
   const onChangeSwitch: React.ChangeEventHandler<HTMLInputElement> =
@@ -33,8 +43,10 @@ export const ShowAllModelsSwitch: React.FC<Props> = ({
 
   return (
     <FormControlLabel
-      control={<Switch checked={checked} onChange={onChangeSwitch} />}
-      label="全改造段階を表示"
+      control={
+        <Switch checked={checked} onChange={onChangeSwitch} color={color} />
+      }
+      label={label}
       sx={sx}
     />
   );
