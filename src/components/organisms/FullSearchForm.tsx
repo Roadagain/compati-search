@@ -12,12 +12,12 @@ import { AllTagCategories } from '../../lib/tag-category';
 import { AutocompleteForm } from '../molecules/AutocompleteForm';
 import { TagSelector } from '../molecules/TagSelector';
 
-interface Props {
+type Props = {
   /**
    * テーマ関係のスタイル指定
    */
   sx?: SxProps<Theme>;
-}
+};
 
 export const FullSearchForm: React.FC<Props> = ({ sx }) => {
   const { state, dispatch } = React.useContext(FluxContext);

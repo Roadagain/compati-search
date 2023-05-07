@@ -9,12 +9,12 @@ import { LabelledSwitch } from '../molecules/LabeledSwitch';
 import { SearchTypeAndWords } from '../molecules/SearchTypeAndWords';
 import { SortOrderSelector } from '../molecules/SortOrderSelector';
 
-interface Props {
+type Props = {
   /**
    * テーマ関係のスタイル指定
    */
   sx?: SxProps<Theme>;
-}
+};
 
 export const SearchConditionSummary: React.FC<Props> = ({ sx }) => {
   const { state, dispatch } = React.useContext(FluxContext);

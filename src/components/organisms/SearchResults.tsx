@@ -7,12 +7,12 @@ import { FluxContext } from '../../flux/context';
 import { TagCategory } from '../../lib/tag-category';
 import { ShipCard } from '../molecules/ShipCard';
 
-interface Props {
+type Props = {
   /**
    * テーマ関連のスタイル指定
    */
   sx: SxProps<Theme>;
-}
+};
 
 export const SearchResults: React.FC<Props> = ({ sx }) => {
   const { state, dispatch } = React.useContext(FluxContext);

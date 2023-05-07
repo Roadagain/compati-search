@@ -7,7 +7,7 @@ import React from 'react';
 import { isOptionEqualToWord } from '../../lib/autocomplete';
 import { AllSearchTargetLabels, SearchTarget } from '../../lib/search-target';
 
-interface Props {
+type Props = {
   /**
    * 検索対象
    */
@@ -29,7 +29,7 @@ interface Props {
    * テーマ関連のスタイル指定
    */
   sx?: SxProps<Theme>;
-}
+};
 
 export const AutocompleteForm: React.FC<Props> = ({
   target,

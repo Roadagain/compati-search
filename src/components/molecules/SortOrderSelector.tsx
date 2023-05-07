@@ -7,7 +7,7 @@ import React from 'react';
 
 import { getLabelOfSortOrder, SortOrder } from '../../lib/sort-ships';
 
-interface Props {
+type Props = {
   /**
    * 今のソート順
    */
@@ -20,7 +20,7 @@ interface Props {
    * テーマ関係のスタイル指定
    */
   sx?: SxProps<Theme>;
-}
+};
 
 export const SortOrderSelector: React.FC<Props> = ({ value, onChange, sx }) => {
   const onChangeValue = (event: SelectChangeEvent<SortOrder>) => {

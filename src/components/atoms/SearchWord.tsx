@@ -2,7 +2,7 @@ import { SxProps, Theme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import React from 'react';
 
-interface Props {
+type Props = {
   /**
    * ワード
    */
@@ -11,7 +11,7 @@ interface Props {
    * テーマ関係のスタイル指定
    */
   sx?: SxProps<Theme>;
-}
+};
 
 export const SearchWord: React.FC<Props> = ({ word, sx }) => {
   const isMinusWord = word.startsWith('-');

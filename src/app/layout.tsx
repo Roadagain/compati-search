@@ -8,9 +8,9 @@ import React from 'react';
 import { FluxProvider } from '../flux/context';
 import { theme } from '../styles/theme';
 
-interface Props {
+type Props = {
   children: React.ReactNode;
-}
+};
 
 const RootLayout = ({ children }: Props) => (
   <html lang="ja">

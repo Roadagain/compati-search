@@ -3,24 +3,24 @@ import { SearchWords } from '../lib/filter-ships';
 import { Ship } from '../lib/ship';
 import { SortOrder } from '../lib/sort-ships';
 
-interface SearchInfoState {
+type SearchInfoState = {
   autocompleteOptions: AutocompleteOptions;
-}
+};
 
-interface SearchState {
+type SearchState = {
   info: SearchInfoState;
   words: SearchWords;
   showAll: boolean;
   sortOrder: SortOrder;
   results: Ship[];
   page: number;
-}
+};
 
-export interface State {
+export type State = {
   isReady: boolean;
   ships: Ship[];
   search: SearchState;
-}
+};
 
 export const initialState: State = {
   isReady: false,

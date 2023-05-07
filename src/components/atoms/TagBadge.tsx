@@ -4,7 +4,7 @@ import React from 'react';
 
 import { TagCategory } from '../../lib/tag-category';
 
-interface Props {
+type Props = {
   /**
    * タグの種類
    */
@@ -23,7 +23,7 @@ interface Props {
    * テーマ関係のスタイル指定
    */
   sx?: SxProps<Theme>;
-}
+};
 
 export const TagBadge: React.FC<Props> = ({ category, tag, onClick, sx }) => {
   const onClickButton = React.useCallback(
