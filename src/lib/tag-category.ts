@@ -6,4 +6,4 @@ export const AllTagCategories = [
   'speeds',
   'ranges',
 ] as const;
-export type TagCategory = typeof AllTagCategories[number];
+export type TagCategory = (typeof AllTagCategories)[number];
