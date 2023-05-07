@@ -4,7 +4,7 @@ import React from 'react';
 
 import { SearchWord } from '../atoms/SearchWord';
 
-interface Props {
+type Props = {
   /**
    * タグの検索ワード
    */
@@ -17,7 +17,7 @@ interface Props {
    * テーマ関連のスタイル指定
    */
   sx?: SxProps<Theme>;
-}
+};
 
 export const SearchTypeAndWords: React.FC<Props> = ({
   nameWords,

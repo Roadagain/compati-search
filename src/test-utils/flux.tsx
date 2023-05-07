@@ -30,9 +30,9 @@ export const initialTestState: State = {
   },
 };
 
-interface Props {
+type Props = {
   children: React.ReactNode;
-}
+};
 
 export const TestFluxProvider: React.FC<Props> = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialTestState);

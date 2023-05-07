@@ -3,7 +3,7 @@ import { SxProps, Theme } from '@mui/material/styles';
 import Switch from '@mui/material/Switch';
 import React from 'react';
 
-interface Props {
+type Props = {
   /**
    * ラベル
    */
@@ -24,7 +24,7 @@ interface Props {
    * テーマ関連のスタイル指定
    */
   sx?: SxProps<Theme>;
-}
+};
 
 export const LabelledSwitch: React.FC<Props> = ({
   label,

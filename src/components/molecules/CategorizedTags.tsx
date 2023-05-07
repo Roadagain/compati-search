@@ -7,7 +7,7 @@ import { AllSearchTargetLabels } from '../../lib/search-target';
 import { TagCategory } from '../../lib/tag-category';
 import { TagBadge } from '../atoms/TagBadge';
 
-interface Props {
+type Props = {
   /**
    * タグの種類
    */
@@ -26,7 +26,7 @@ interface Props {
    * テーマ関係のスタイル指定
    */
   sx?: SxProps<Theme>;
-}
+};
 
 export const CategorizedTags: React.FC<Props> = ({
   category,

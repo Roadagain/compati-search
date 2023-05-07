@@ -12,7 +12,7 @@ import { TagCategory } from '../../lib/tag-category';
 import { TagBadge } from '../atoms/TagBadge';
 import { CategorizedTags } from './CategorizedTags';
 
-interface Props {
+type Props = {
   /**
    * 艦船データ
    */
@@ -27,7 +27,7 @@ interface Props {
    * テーマ関係のスタイル指定
    */
   sx?: SxProps<Theme>;
-}
+};
 
 export const ShipCard: React.FC<Props> = ({ ship, onClickTag, sx }) => {
   const { name, category, type, speed, range, equipments, abilities } = ship;

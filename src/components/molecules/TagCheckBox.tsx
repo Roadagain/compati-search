@@ -3,7 +3,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import { SxProps, Theme } from '@mui/material/styles';
 import React from 'react';
 
-interface Props {
+type Props = {
   /**
    * タグ
    */
@@ -24,7 +24,7 @@ interface Props {
    * テーマ関係のスタイル指定
    */
   sx?: SxProps<Theme>;
-}
+};
 
 export const TagCheckBox: React.FC<Props> = ({
   label,

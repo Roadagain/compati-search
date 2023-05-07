@@ -14,7 +14,7 @@ import { TagCategory } from '../../lib/tag-category';
 import { LabelledSwitch } from './LabeledSwitch';
 import { TagCheckBox } from './TagCheckBox';
 
-interface Props {
+type Props = {
   /**
    * タグの種類
    */
@@ -35,7 +35,7 @@ interface Props {
    * テーマ関連のスタイル指定
    */
   sx?: SxProps<Theme>;
-}
+};
 
 export const TagSelector: React.FC<Props> = ({
   category,

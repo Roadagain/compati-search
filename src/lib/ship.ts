@@ -1,4 +1,4 @@
-export interface Ship {
+export type Ship = {
   id: number;
   name: string;
   kana: string;
@@ -9,4 +9,4 @@ export interface Ship {
   equipments: string[];
   abilities: string[];
   showDefault: boolean;
-}
+};
