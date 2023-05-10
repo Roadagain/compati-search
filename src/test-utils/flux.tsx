@@ -1,6 +1,7 @@
 import React, { useReducer } from 'react';
 
 import ships from '../../ships.json';
+import tags from '../../tags.json';
 import { FluxContext } from '../flux/context';
 import { reducer } from '../flux/reducer';
 import { State } from '../flux/state';
@@ -10,6 +11,7 @@ import { SortOrder } from '../lib/sort-ships';
 export const initialTestState: State = {
   isReady: true,
   ships,
+  tags,
   search: {
     info: {
       autocompleteOptions: generateAutocompleteOptions(ships, false),
