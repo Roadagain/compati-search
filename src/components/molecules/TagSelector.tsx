@@ -110,7 +110,7 @@ export const TagSelector: React.FC<Props> = ({
           direction="column"
           divider={<Divider flexItem />}
           spacing={1}
-          sx={{ mt: 1 }}
+          mt={1}
         >
           {Array.from(subCategorizedTagMap.keys()).map((subCategory) => {
             const subCategorizedTags =
@@ -130,10 +130,10 @@ export const TagSelector: React.FC<Props> = ({
             });
 
             return (
-              <Stack key={subCategory} direction="column" spacing={1}>
+              <React.Fragment key={subCategory}>
                 {subCategory ? <Typography>{subCategory}</Typography> : null}
                 <FormGroup row>{checkboxes}</FormGroup>
-              </Stack>
+              </React.Fragment>
             );
           })}
         </Stack>
