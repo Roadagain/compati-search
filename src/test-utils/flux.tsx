@@ -5,7 +5,6 @@ import tags from '../../tags.json';
 import { FluxContext } from '../flux/context';
 import { reducer } from '../flux/reducer';
 import { State } from '../flux/state';
-import { generateAutocompleteOptions } from '../lib/autocomplete';
 import { SortOrder } from '../lib/sort-ships';
 
 export const initialTestState: State = {
@@ -13,9 +12,9 @@ export const initialTestState: State = {
   ships,
   tags,
   search: {
-    info: {
-      autocompleteOptions: generateAutocompleteOptions(ships, false),
-    },
+    nameAutocompleteOptions: ships
+      .filter(({ showDefault }) => showDefault)
+      .map(({ name }) => name),
     words: {
       categories: [],
       types: [],

@@ -22,8 +22,7 @@ type Props = {
 export const FullSearchForm: React.FC<Props> = ({ sx }) => {
   const { state, dispatch } = React.useContext(FluxContext);
   const { tags } = state;
-  const { info, words } = state.search;
-  const { autocompleteOptions } = info;
+  const { nameAutocompleteOptions, words } = state.search;
   const onChangeCurried = React.useCallback(
     (target: SearchTarget) => (words: string[]) => {
       dispatch({ type: 'change-search-words', target, words });
@@ -55,7 +54,7 @@ export const FullSearchForm: React.FC<Props> = ({ sx }) => {
         <AutocompleteForm
           target="names"
           words={words.names}
-          autocompleteOptions={autocompleteOptions.names}
+          autocompleteOptions={nameAutocompleteOptions}
           onChange={onChangeCurried('names')}
         />
       </AccordionDetails>

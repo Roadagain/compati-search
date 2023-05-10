@@ -1,4 +1,4 @@
-import { generateAutocompleteOptions } from '../lib/autocomplete';
+import { generateNameAutocompleteOptions } from '../lib/autocomplete';
 import { filterShips } from '../lib/filter-ships';
 import { SearchTarget } from '../lib/search-target';
 import { Ship } from '../lib/ship';
@@ -10,7 +10,10 @@ import { State } from './state';
 export const onLoadData = (state: State, ships: Ship[], tags: Tag[]): State => {
   const { search } = state;
   const { showAll, words } = search;
-  const autocompleteOptions = generateAutocompleteOptions(ships, showAll);
+  const nameAutocompleteOptions = generateNameAutocompleteOptions(
+    ships,
+    showAll
+  );
   const results = filterShips(ships, words, showAll);
   return {
     ...state,
@@ -19,11 +22,7 @@ export const onLoadData = (state: State, ships: Ship[], tags: Tag[]): State => {
     tags,
     search: {
       ...search,
-      info: {
-        ...search.info,
-        autocompleteOptions,
-      },
-      words,
+      nameAutocompleteOptions,
       results,
       page: 1,
     },
@@ -55,17 +54,17 @@ export const onChangeSearchWords = (
 
 export const onChangeShowAll = (state: State, showAll: boolean): State => {
   const { ships, search } = state;
-  const { words, info } = search;
+  const { words } = search;
   const results = filterShips(ships, words, showAll);
-  const autocompleteOptions = generateAutocompleteOptions(ships, showAll);
+  const nameAutocompleteOptions = generateNameAutocompleteOptions(
+    ships,
+    showAll
+  );
   return {
     ...state,
     search: {
       ...search,
-      info: {
-        ...info,
-        autocompleteOptions,
-      },
+      nameAutocompleteOptions,
       showAll,
       results,
       page: 1,

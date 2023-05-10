@@ -1,4 +1,4 @@
-import { generateAutocompleteOptions } from '../lib/autocomplete';
+import { generateNameAutocompleteOptions } from '../lib/autocomplete';
 import { filterShips } from '../lib/filter-ships';
 import { Ship } from '../lib/ship';
 import { SortOrder, sortShips } from '../lib/sort-ships';
@@ -23,17 +23,7 @@ const baseState: Readonly<State> = {
   ships: [],
   tags: [],
   search: {
-    info: {
-      autocompleteOptions: {
-        categories: [],
-        types: [],
-        equipments: [],
-        abilities: [],
-        speeds: [],
-        ranges: [],
-        names: [],
-      },
-    },
+    nameAutocompleteOptions: [],
     words: {
       categories: [],
       types: [],
@@ -77,7 +67,7 @@ describe('onLoadShips', () => {
   });
 
   it('補完候補生成関数が呼び出されている', () => {
-    expect(generateAutocompleteOptions).toBeCalled();
+    expect(generateNameAutocompleteOptions).toBeCalled();
   });
 
   it('フィルタ関数が呼び出されている', () => {
@@ -160,7 +150,7 @@ describe('onChangeShowAll', () => {
       });
 
       it('補完候補生成関数が呼び出されている', () => {
-        expect(generateAutocompleteOptions).toBeCalled();
+        expect(generateNameAutocompleteOptions).toBeCalled();
       });
     }
   );
