@@ -1,11 +1,13 @@
 import { SearchTarget } from '../lib/search-target';
 import { Ship } from '../lib/ship';
 import { SortOrder } from '../lib/sort-ships';
+import { Tag } from '../lib/tag';
 import { TagCategory } from '../lib/tag-category';
 
 type LoadShipsData = {
-  type: 'load-ships-data';
+  type: 'load-data';
   ships: Ship[];
+  tags: Tag[];
 };
 
 type ChangeSearchWordsAction = {

@@ -3,10 +3,11 @@ import { filterShips } from '../lib/filter-ships';
 import { SearchTarget } from '../lib/search-target';
 import { Ship } from '../lib/ship';
 import { SortOrder, sortShips } from '../lib/sort-ships';
+import { Tag } from '../lib/tag';
 import { TagCategory } from '../lib/tag-category';
 import { State } from './state';
 
-export const onLoadShipsData = (state: State, ships: Ship[]): State => {
+export const onLoadData = (state: State, ships: Ship[], tags: Tag[]): State => {
   const { search } = state;
   const { showAll, words } = search;
   const autocompleteOptions = generateAutocompleteOptions(ships, showAll);
@@ -15,6 +16,7 @@ export const onLoadShipsData = (state: State, ships: Ship[]): State => {
     ...state,
     isReady: true,
     ships,
+    tags,
     search: {
       ...search,
       info: {

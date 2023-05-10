@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import React from 'react';
 
 import ships from '../../../ships.json';
+import tags from '../../../tags.json';
 import { FluxContext } from '../../flux/context';
 import { FullSearchForm } from '../organisms/FullSearchForm';
 import { SearchConditionSummary } from '../organisms/SearchConditionSummary';
@@ -15,8 +16,9 @@ export const SearchTemplate: React.FC = () => {
   const { state, dispatch } = React.useContext(FluxContext);
   React.useEffect(() => {
     dispatch({
-      type: 'load-ships-data',
-      ships: ships,
+      type: 'load-data',
+      ships,
+      tags,
     });
   }, [dispatch]);
 

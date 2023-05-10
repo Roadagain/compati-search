@@ -2,13 +2,14 @@ import { generateAutocompleteOptions } from '../lib/autocomplete';
 import { filterShips } from '../lib/filter-ships';
 import { Ship } from '../lib/ship';
 import { SortOrder, sortShips } from '../lib/sort-ships';
+import { Tag } from '../lib/tag';
 import { TagCategory } from '../lib/tag-category';
 import {
   onChangeSearchWords,
   onChangeShowAll,
   onChangeSortOrder,
   onClickTag,
-  onLoadShipsData,
+  onLoadData,
   onShowNextPage,
 } from './dispatch';
 import { State } from './state';
@@ -20,6 +21,7 @@ jest.mock('../lib/autocomplete');
 const baseState: Readonly<State> = {
   isReady: false,
   ships: [],
+  tags: [],
   search: {
     info: {
       autocompleteOptions: {
@@ -56,9 +58,10 @@ describe('onLoadShips', () => {
   };
   let nextState: State;
   const ships: Ship[] = [{} as Ship];
+  const tags: Tag[] = [{} as Tag];
 
   beforeEach(() => {
-    nextState = onLoadShipsData(currentState, ships);
+    nextState = onLoadData(currentState, ships, tags);
   });
 
   it('準備完了フラグが変更されている', () => {
@@ -67,6 +70,10 @@ describe('onLoadShips', () => {
 
   it('艦船が変更されている', () => {
     expect(nextState.ships).toEqual(ships);
+  });
+
+  it('タグ一覧が変更されている', () => {
+    expect(nextState.tags).toEqual(tags);
   });
 
   it('補完候補生成関数が呼び出されている', () => {
