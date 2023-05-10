@@ -21,6 +21,7 @@ type Props = {
 
 export const FullSearchForm: React.FC<Props> = ({ sx }) => {
   const { state, dispatch } = React.useContext(FluxContext);
+  const { tags } = state;
   const { info, words } = state.search;
   const { autocompleteOptions } = info;
   const onChangeCurried = React.useCallback(
@@ -40,11 +41,12 @@ export const FullSearchForm: React.FC<Props> = ({ sx }) => {
       <AccordionDetails>
         {AllTagCategories.map((category) => {
           const onChange = onChangeCurried(category);
+          const categoryTags = tags.filter((tag) => tag.category === category);
           return (
             <TagSelector
               key={category}
               category={category}
-              tags={autocompleteOptions[category]}
+              tags={categoryTags}
               selectedTags={words[category]}
               onChange={onChange}
             />

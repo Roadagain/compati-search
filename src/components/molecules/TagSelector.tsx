@@ -3,6 +3,7 @@ import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import Chip from '@mui/material/Chip';
+import Divider from '@mui/material/Divider';
 import FormGroup from '@mui/material/FormGroup';
 import Stack from '@mui/material/Stack';
 import { SxProps, Theme } from '@mui/material/styles';
@@ -10,6 +11,7 @@ import Typography from '@mui/material/Typography';
 import React from 'react';
 
 import { AllSearchTargetLabels } from '../../lib/search-target';
+import { Tag } from '../../lib/tag';
 import { TagCategory } from '../../lib/tag-category';
 import { LabelledSwitch } from './LabeledSwitch';
 import { TagCheckBox } from './TagCheckBox';
@@ -22,7 +24,7 @@ type Props = {
   /**
    * タグ一覧
    */
-  tags: string[];
+  tags: Tag[];
   /**
    * 選択済みタグ一覧
    */
@@ -47,13 +49,19 @@ export const TagSelector: React.FC<Props> = ({
   const categoryLabel = AllSearchTargetLabels[category];
   const selectedTagMap = new Map(
     tags.map((tag) => [
-      tag,
+      tag.label,
       {
-        checked: selectedTags.includes(tag),
-        minusChecked: selectedTags.includes(`-${tag}`),
+        checked: selectedTags.includes(tag.label),
+        minusChecked: selectedTags.includes(`-${tag.label}`),
       },
     ])
   );
+  const subCategorizedTagMap = tags.reduce((map, tag) => {
+    const subCategory = tag.subCategory ?? '';
+    const subCategoryTags = map.get(subCategory) ?? [];
+    return map.set(subCategory, [...subCategoryTags, tag]);
+  }, new Map<string, Tag[]>());
+
   const [isMinus, setIsMinus] = React.useState(false);
   const onChangeCurried = React.useCallback(
     (tag: string) => (checked: boolean) => {
@@ -98,21 +106,37 @@ export const TagSelector: React.FC<Props> = ({
           onChange={setIsMinus}
           color="error"
         />
-        <FormGroup row>
-          {tags.map((tag) => {
-            const onChange = onChangeCurried(tag);
-            const { checked, minusChecked } = selectedTagMap.get(tag);
+        <Stack
+          direction="column"
+          divider={<Divider flexItem />}
+          spacing={1}
+          sx={{ mt: 1 }}
+        >
+          {Array.from(subCategorizedTagMap.keys()).map((subCategory) => {
+            const subCategorizedTags =
+              subCategorizedTagMap.get(subCategory) ?? [];
+            const checkboxes = subCategorizedTags.map(({ label }) => {
+              const onChange = onChangeCurried(label);
+              const { checked, minusChecked } = selectedTagMap.get(label);
+              return (
+                <TagCheckBox
+                  key={label}
+                  label={label}
+                  checked={checked}
+                  minusChecked={minusChecked}
+                  onChange={onChange}
+                />
+              );
+            });
+
             return (
-              <TagCheckBox
-                key={tag}
-                label={tag}
-                checked={checked}
-                minusChecked={minusChecked}
-                onChange={onChange}
-              />
+              <Stack key={subCategory} direction="column" spacing={1}>
+                {subCategory ? <Typography>{subCategory}</Typography> : null}
+                <FormGroup row>{checkboxes}</FormGroup>
+              </Stack>
             );
           })}
-        </FormGroup>
+        </Stack>
       </AccordionDetails>
     </Accordion>
   );
