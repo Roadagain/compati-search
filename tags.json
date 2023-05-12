@@ -1,0 +1,439 @@
+[
+  {
+    "label": "戦艦級",
+    "category": "categories"
+  },
+  {
+    "label": "航空母艦",
+    "category": "categories"
+  },
+  {
+    "label": "重巡級",
+    "category": "categories"
+  },
+  {
+    "label": "軽巡級",
+    "category": "categories"
+  },
+  {
+    "label": "駆逐艦",
+    "category": "categories"
+  },
+  {
+    "label": "海防艦",
+    "category": "categories"
+  },
+  {
+    "label": "潜水艦",
+    "category": "categories"
+  },
+  {
+    "label": "補助艦艇",
+    "category": "categories"
+  },
+  {
+    "label": "戦艦",
+    "category": "types",
+    "subCategory": "戦艦級"
+  },
+  {
+    "label": "航空戦艦",
+    "category": "types",
+    "subCategory": "戦艦級"
+  },
+  {
+    "label": "正規空母",
+    "category": "types",
+    "subCategory": "航空母艦"
+  },
+  {
+    "label": "軽空母",
+    "category": "types",
+    "subCategory": "航空母艦"
+  },
+  {
+    "label": "装甲空母",
+    "category": "types",
+    "subCategory": "航空母艦"
+  },
+  {
+    "label": "重巡洋艦",
+    "category": "types",
+    "subCategory": "重巡級"
+  },
+  {
+    "label": "航空巡洋艦",
+    "category": "types",
+    "subCategory": "重巡級"
+  },
+  {
+    "label": "軽巡洋艦",
+    "category": "types",
+    "subCategory": "軽巡級"
+  },
+  {
+    "label": "重雷装巡洋艦",
+    "category": "types",
+    "subCategory": "軽巡級"
+  },
+  {
+    "label": "練習巡洋艦",
+    "category": "types",
+    "subCategory": "軽巡級"
+  },
+  {
+    "label": "駆逐艦",
+    "category": "types",
+    "subCategory": "駆逐艦"
+  },
+  {
+    "label": "海防艦",
+    "category": "types",
+    "subCategory": "海防艦"
+  },
+  {
+    "label": "潜水艦",
+    "category": "types",
+    "subCategory": "潜水艦"
+  },
+  {
+    "label": "潜水空母",
+    "category": "types",
+    "subCategory": "潜水艦"
+  },
+  {
+    "label": "水上機母艦",
+    "category": "types",
+    "subCategory": "補助艦艇"
+  },
+  {
+    "label": "補給艦",
+    "category": "types",
+    "subCategory": "補助艦艇"
+  },
+  {
+    "label": "特務艦",
+    "category": "types",
+    "subCategory": "補助艦艇"
+  },
+  {
+    "label": "灯台補給船",
+    "category": "types",
+    "subCategory": "補助艦艇"
+  },
+  {
+    "label": "南極観測船",
+    "category": "types",
+    "subCategory": "補助艦艇"
+  },
+  {
+    "label": "特設護衛空母",
+    "category": "types",
+    "subCategory": "補助艦艇"
+  },
+  {
+    "label": "揚陸艦",
+    "category": "types",
+    "subCategory": "補助艦艇"
+  },
+  {
+    "label": "潜水母艦",
+    "category": "types",
+    "subCategory": "補助艦艇"
+  },
+  {
+    "label": "工作艦",
+    "category": "types",
+    "subCategory": "補助艦艇"
+  },
+  {
+    "label": "艦上戦闘機",
+    "category": "equipments",
+    "subCategory": "艦上機"
+  },
+  {
+    "label": "艦上攻撃機",
+    "category": "equipments",
+    "subCategory": "艦上機"
+  },
+  {
+    "label": "艦上爆撃機",
+    "category": "equipments",
+    "subCategory": "艦上機"
+  },
+  {
+    "label": "噴式爆撃機",
+    "category": "equipments",
+    "subCategory": "艦上機"
+  },
+  {
+    "label": "艦上偵察機",
+    "category": "equipments",
+    "subCategory": "水上機"
+  },
+  {
+    "label": "水上偵察機",
+    "category": "equipments",
+    "subCategory": "水上機"
+  },
+  {
+    "label": "水上戦闘機",
+    "category": "equipments",
+    "subCategory": "水上機"
+  },
+  {
+    "label": "水上爆撃機",
+    "category": "equipments",
+    "subCategory": "水上機"
+  },
+  {
+    "label": "回転翼機",
+    "category": "equipments",
+    "subCategory": "水上機"
+  },
+  {
+    "label": "対潜哨戒機",
+    "category": "equipments",
+    "subCategory": "水上機"
+  },
+  {
+    "label": "大型飛行艇",
+    "category": "equipments",
+    "subCategory": "水上機"
+  },
+  {
+    "label": "小口径主砲",
+    "category": "equipments",
+    "subCategory": "主砲"
+  },
+  {
+    "label": "中口径主砲",
+    "category": "equipments",
+    "subCategory": "主砲"
+  },
+  {
+    "label": "大口径主砲",
+    "category": "equipments",
+    "subCategory": "主砲"
+  },
+  {
+    "label": "副砲",
+    "category": "equipments",
+    "subCategory": "副砲・機銃"
+  },
+  {
+    "label": "対空機銃",
+    "category": "equipments",
+    "subCategory": "副砲・機銃"
+  },
+  {
+    "label": "増設副砲",
+    "category": "equipments",
+    "subCategory": "副砲・機銃"
+  },
+  {
+    "label": "魚雷",
+    "category": "equipments",
+    "subCategory": "魚雷"
+  },
+  {
+    "label": "甲標的",
+    "category": "equipments",
+    "subCategory": "魚雷"
+  },
+  {
+    "label": "潜水艦魚雷",
+    "category": "equipments",
+    "subCategory": "魚雷"
+  },
+  {
+    "label": "小型ソナー",
+    "category": "equipments",
+    "subCategory": "対潜装備"
+  },
+  {
+    "label": "大型ソナー",
+    "category": "equipments",
+    "subCategory": "対潜装備"
+  },
+  {
+    "label": "爆雷",
+    "category": "equipments",
+    "subCategory": "対潜装備"
+  },
+  {
+    "label": "爆雷投射機",
+    "category": "equipments",
+    "subCategory": "対潜装備"
+  },
+  {
+    "label": "小型電探",
+    "category": "equipments",
+    "subCategory": "電探"
+  },
+  {
+    "label": "大型電探",
+    "category": "equipments",
+    "subCategory": "電探"
+  },
+  {
+    "label": "増設電探",
+    "category": "equipments",
+    "subCategory": "電探"
+  },
+  {
+    "label": "ドラム缶",
+    "category": "equipments",
+    "subCategory": "輸送"
+  },
+  {
+    "label": "大発動艇",
+    "category": "equipments",
+    "subCategory": "輸送"
+  },
+  {
+    "label": "特二式内火艇",
+    "category": "equipments",
+    "subCategory": "輸送"
+  },
+  {
+    "label": "洋上補給",
+    "category": "equipments",
+    "subCategory": "輸送"
+  },
+  {
+    "label": "三式弾",
+    "category": "equipments",
+    "subCategory": "強化弾"
+  },
+  {
+    "label": "徹甲弾",
+    "category": "equipments",
+    "subCategory": "強化弾"
+  },
+  {
+    "label": "増設バルジ(中型艦)",
+    "category": "equipments",
+    "subCategory": "増設バルジ"
+  },
+  {
+    "label": "増設バルジ(大型艦)",
+    "category": "equipments",
+    "subCategory": "増設バルジ"
+  },
+  {
+    "label": "探照灯",
+    "category": "equipments",
+    "subCategory": "夜戦装備"
+  },
+  {
+    "label": "大型探照灯",
+    "category": "equipments",
+    "subCategory": "夜戦装備"
+  },
+  {
+    "label": "照明弾",
+    "category": "equipments",
+    "subCategory": "夜戦装備"
+  },
+  {
+    "label": "機関部強化",
+    "category": "equipments",
+    "subCategory": "その他"
+  },
+  {
+    "label": "応急修理要員",
+    "category": "equipments",
+    "subCategory": "その他"
+  },
+  {
+    "label": "艦艇修理施設",
+    "category": "equipments",
+    "subCategory": "その他"
+  },
+  {
+    "label": "艦隊司令部施設",
+    "category": "equipments",
+    "subCategory": "その他"
+  },
+  {
+    "label": "航空要員",
+    "category": "equipments",
+    "subCategory": "その他"
+  },
+  {
+    "label": "甲板要員",
+    "category": "equipments",
+    "subCategory": "その他"
+  },
+  {
+    "label": "高射装置",
+    "category": "equipments",
+    "subCategory": "その他"
+  },
+  {
+    "label": "対地装備",
+    "category": "equipments",
+    "subCategory": "その他"
+  },
+  {
+    "label": "陸戦部隊",
+    "category": "equipments",
+    "subCategory": "その他"
+  },
+  {
+    "label": "熟練見張員",
+    "category": "equipments",
+    "subCategory": "その他"
+  },
+  {
+    "label": "発煙装置",
+    "category": "equipments",
+    "subCategory": "その他"
+  },
+  {
+    "label": "潜水艦搭載電探",
+    "category": "equipments",
+    "subCategory": "その他"
+  },
+  {
+    "label": "特殊攻撃",
+    "category": "abilities"
+  },
+  {
+    "label": "無条件先制対潜",
+    "category": "abilities"
+  },
+  {
+    "label": "夜間作戦空母",
+    "category": "abilities"
+  },
+  {
+    "label": "専用対空カットイン",
+    "category": "abilities"
+  },
+  {
+    "label": "高速",
+    "category": "speeds"
+  },
+  {
+    "label": "低速",
+    "category": "speeds"
+  },
+  {
+    "label": "短射程",
+    "category": "ranges"
+  },
+  {
+    "label": "中射程",
+    "category": "ranges"
+  },
+  {
+    "label": "長射程",
+    "category": "ranges"
+  },
+  {
+    "label": "超長射程",
+    "category": "ranges"
+  }
+]

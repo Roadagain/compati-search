@@ -8,6 +8,7 @@ import React from 'react';
 
 import { FluxContext } from '../../flux/context';
 import { SearchTarget } from '../../lib/search-target';
+import { Tag } from '../../lib/tag';
 import { AllTagCategories } from '../../lib/tag-category';
 import { AutocompleteForm } from '../molecules/AutocompleteForm';
 import { TagSelector } from '../molecules/TagSelector';
@@ -21,14 +22,22 @@ type Props = {
 
 export const FullSearchForm: React.FC<Props> = ({ sx }) => {
   const { state, dispatch } = React.useContext(FluxContext);
-  const { info, words } = state.search;
-  const { autocompleteOptions } = info;
+  const { tags } = state;
+  const { nameAutocompleteOptions, words } = state.search;
   const onChangeCurried = React.useCallback(
     (target: SearchTarget) => (words: string[]) => {
       dispatch({ type: 'change-search-words', target, words });
     },
     [dispatch]
   );
+  const categoryToTags = React.useMemo(() => {
+    return tags.reduce((currentMap, tag) => {
+      const { category } = tag;
+      const tags = currentMap.get(category) || [];
+      currentMap.set(category, [...tags, tag]);
+      return currentMap;
+    }, new Map<string, Tag[]>());
+  }, [tags]);
 
   return (
     <Accordion elevation={2} sx={sx}>
@@ -40,11 +49,13 @@ export const FullSearchForm: React.FC<Props> = ({ sx }) => {
       <AccordionDetails>
         {AllTagCategories.map((category) => {
           const onChange = onChangeCurried(category);
+          // 型的にnullableだけど、実際は常にnon-null
+          const categoryTags = categoryToTags.get(category) || [];
           return (
             <TagSelector
               key={category}
               category={category}
-              tags={autocompleteOptions[category]}
+              tags={categoryTags}
               selectedTags={words[category]}
               onChange={onChange}
             />
@@ -53,7 +64,7 @@ export const FullSearchForm: React.FC<Props> = ({ sx }) => {
         <AutocompleteForm
           target="names"
           words={words.names}
-          autocompleteOptions={autocompleteOptions.names}
+          autocompleteOptions={nameAutocompleteOptions}
           onChange={onChangeCurried('names')}
         />
       </AccordionDetails>

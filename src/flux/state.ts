@@ -1,14 +1,10 @@
-import { AutocompleteOptions } from '../lib/autocomplete';
 import { SearchWords } from '../lib/filter-ships';
 import { Ship } from '../lib/ship';
 import { SortOrder } from '../lib/sort-ships';
-
-type SearchInfoState = {
-  autocompleteOptions: AutocompleteOptions;
-};
+import { Tag } from '../lib/tag';
 
 type SearchState = {
-  info: SearchInfoState;
+  nameAutocompleteOptions: string[];
   words: SearchWords;
   showAll: boolean;
   sortOrder: SortOrder;
@@ -19,24 +15,16 @@ type SearchState = {
 export type State = {
   isReady: boolean;
   ships: Ship[];
+  tags: Tag[];
   search: SearchState;
 };
 
 export const initialState: State = {
   isReady: false,
   ships: [],
+  tags: [],
   search: {
-    info: {
-      autocompleteOptions: {
-        categories: [],
-        types: [],
-        equipments: [],
-        abilities: [],
-        speeds: [],
-        ranges: [],
-        names: [],
-      },
-    },
+    nameAutocompleteOptions: [],
     words: {
       categories: [],
       types: [],
