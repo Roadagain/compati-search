@@ -8,6 +8,7 @@ import React from 'react';
 
 import { FluxContext } from '../../flux/context';
 import { SearchTarget } from '../../lib/search-target';
+import { Tag } from '../../lib/tag';
 import { AllTagCategories } from '../../lib/tag-category';
 import { AutocompleteForm } from '../molecules/AutocompleteForm';
 import { TagSelector } from '../molecules/TagSelector';
@@ -29,6 +30,14 @@ export const FullSearchForm: React.FC<Props> = ({ sx }) => {
     },
     [dispatch]
   );
+  const categoryToTags = React.useMemo(() => {
+    return tags.reduce((currentMap, tag) => {
+      const { category } = tag;
+      const tags = currentMap.get(category) || [];
+      currentMap.set(category, [...tags, tag]);
+      return currentMap;
+    }, new Map<string, Tag[]>());
+  }, [tags]);
 
   return (
     <Accordion elevation={2} sx={sx}>
@@ -40,7 +49,8 @@ export const FullSearchForm: React.FC<Props> = ({ sx }) => {
       <AccordionDetails>
         {AllTagCategories.map((category) => {
           const onChange = onChangeCurried(category);
-          const categoryTags = tags.filter((tag) => tag.category === category);
+          // 型的にnullableだけど、実際は常にnon-null
+          const categoryTags = categoryToTags.get(category) || [];
           return (
             <TagSelector
               key={category}
