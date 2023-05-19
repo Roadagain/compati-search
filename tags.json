@@ -42,6 +42,11 @@
     "subCategory": "戦艦級"
   },
   {
+    "label": "改装航空戦艦",
+    "category": "types",
+    "subCategory": "戦艦級"
+  },
+  {
     "label": "正規空母",
     "category": "types",
     "subCategory": "航空母艦"
@@ -67,6 +72,11 @@
     "subCategory": "重巡級"
   },
   {
+    "label": "改装航空巡洋艦",
+    "category": "types",
+    "subCategory": "重巡級"
+  },
+  {
     "label": "軽巡洋艦",
     "category": "types",
     "subCategory": "軽巡級"
@@ -78,6 +88,21 @@
   },
   {
     "label": "練習巡洋艦",
+    "category": "types",
+    "subCategory": "軽巡級"
+  },
+  {
+    "label": "軽(航空)巡洋艦",
+    "category": "types",
+    "subCategory": "軽巡級"
+  },
+  {
+    "label": "防空巡洋艦",
+    "category": "types",
+    "subCategory": "軽巡級"
+  },
+  {
+    "label": "兵装実験軽巡",
     "category": "types",
     "subCategory": "軽巡級"
   },
@@ -112,6 +137,21 @@
     "subCategory": "補助艦艇"
   },
   {
+    "label": "揚陸艦",
+    "category": "types",
+    "subCategory": "補助艦艇"
+  },
+  {
+    "label": "潜水母艦",
+    "category": "types",
+    "subCategory": "補助艦艇"
+  },
+  {
+    "label": "工作艦",
+    "category": "types",
+    "subCategory": "補助艦艇"
+  },
+  {
     "label": "特務艦",
     "category": "types",
     "subCategory": "補助艦艇"
@@ -132,17 +172,7 @@
     "subCategory": "補助艦艇"
   },
   {
-    "label": "揚陸艦",
-    "category": "types",
-    "subCategory": "補助艦艇"
-  },
-  {
-    "label": "潜水母艦",
-    "category": "types",
-    "subCategory": "補助艦艇"
-  },
-  {
-    "label": "工作艦",
+    "label": "戦車揚陸艦",
     "category": "types",
     "subCategory": "補助艦艇"
   },
