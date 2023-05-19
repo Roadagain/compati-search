@@ -3,7 +3,7 @@ export type Ship = {
   name: string;
   kana: string;
   category: string;
-  type: string;
+  types: string[];
   speed: string;
   range: string;
   equipments: string[];

@@ -30,7 +30,7 @@ type Props = {
 };
 
 export const ShipCard: React.FC<Props> = ({ ship, onClickTag, sx }) => {
-  const { name, category, type, speed, range, equipments, abilities } = ship;
+  const { name, category, types, speed, range, equipments, abilities } = ship;
   const theme = useTheme();
   return (
     <Accordion
@@ -50,7 +50,14 @@ export const ShipCard: React.FC<Props> = ({ ship, onClickTag, sx }) => {
               tag={category}
               onClick={onClickTag}
             />
-            <TagBadge category="types" tag={type} onClick={onClickTag} />
+            {types.map((type) => (
+              <TagBadge
+                key={type}
+                category="types"
+                tag={type}
+                onClick={onClickTag}
+              />
+            ))}
           </Stack>
         </Stack>
       </AccordionSummary>
