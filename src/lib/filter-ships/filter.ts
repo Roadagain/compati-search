@@ -28,8 +28,8 @@ const matchesShipCategories = (
   return matchesAllWords([shipCategory], words);
 };
 
-const matchesShipTypes = (shipType: string, words: string[]): boolean => {
-  return matchesAllWords([shipType], words);
+const matchesShipTypes = (shipTypes: string[], words: string[]): boolean => {
+  return matchesAllWords(shipTypes, words);
 };
 
 const matchesShipSpeeds = (shipSpeed: string, words: string[]): boolean => {
@@ -58,7 +58,7 @@ const matchesSearchWords = (ship: Ship, words: SearchWords): boolean => {
   return (
     matchesNameWords(ship.name, words.names) &&
     matchesShipCategories(ship.category, words.categories) &&
-    matchesShipTypes(ship.type, words.types) &&
+    matchesShipTypes(ship.types, words.types) &&
     matchesShipSpeeds(ship.speed, words.speeds) &&
     matchesShipRanges(ship.range, words.ranges) &&
     matchesEquipmentTypes(ship.equipments, words.equipments) &&
