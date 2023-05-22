@@ -54,6 +54,10 @@ const matchesEquipmentTypes = (
   return matchesAllWords(equipmentTypes, words);
 };
 
+const matchesShipCountry = (country: string, words: string[]): boolean => {
+  return matchesAllWords([country], words);
+};
+
 const matchesSearchWords = (ship: Ship, words: SearchWords): boolean => {
   return (
     matchesNameWords(ship.name, words.names) &&
@@ -62,7 +66,8 @@ const matchesSearchWords = (ship: Ship, words: SearchWords): boolean => {
     matchesShipSpeeds(ship.speed, words.speeds) &&
     matchesShipRanges(ship.range, words.ranges) &&
     matchesEquipmentTypes(ship.equipments, words.equipments) &&
-    matchesShipAbilities(ship.abilities, words.abilities)
+    matchesShipAbilities(ship.abilities, words.abilities) &&
+    matchesShipCountry(ship.country, words.countries)
   );
 };
 

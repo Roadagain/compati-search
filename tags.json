@@ -465,5 +465,49 @@
   {
     "label": "超長射程",
     "category": "ranges"
+  },
+  {
+    "label": "日本",
+    "category": "countries"
+  },
+  {
+    "label": "アメリカ",
+    "category": "countries"
+  },
+  {
+    "label": "イギリス",
+    "category": "countries"
+  },
+  {
+    "label": "イタリア",
+    "category": "countries"
+  },
+  {
+    "label": "オーストラリア",
+    "category": "countries"
+  },
+  {
+    "label": "オランダ",
+    "category": "countries"
+  },
+  {
+    "label": "スウェーデン",
+    "category": "countries"
+  },
+  {
+    "label": "ドイツ",
+    "category": "countries"
+  },
+  {
+    "label": "フランス",
+    "category": "countries"
+  },
+  {
+    "label": "ロシア",
+    "category": "countries"
+  },
+  {
+    "label": "中華民国",
+    "category": "countries"
   }
 ]

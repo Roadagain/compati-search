@@ -5,5 +5,6 @@ export const AllTagCategories = [
   'abilities',
   'speeds',
   'ranges',
+  'countries',
 ] as const;
 export type TagCategory = (typeof AllTagCategories)[number];

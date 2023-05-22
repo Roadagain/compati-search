@@ -13,6 +13,7 @@ describe('filterShips', () => {
     range: '長射程',
     equipments: ['艦隊司令部施設', '水上戦闘機'],
     abilities: ['特殊攻撃'],
+    country: '日本',
     showDefault: true,
   };
   const hiddenFirst: Ship = {
@@ -29,6 +30,7 @@ describe('filterShips', () => {
     range: '短射程',
     equipments: [],
     abilities: ['無条件先制対潜'],
+    country: 'アメリカ',
     showDefault: true,
   };
   const hiddenSecond: Ship = {
@@ -45,6 +47,7 @@ describe('filterShips', () => {
     range: '中射程',
     equipments: ['水上爆撃機', '水上戦闘機'],
     abilities: [],
+    country: 'イギリス',
     showDefault: true,
   };
   const hiddenThird: Ship = {
@@ -67,6 +70,7 @@ describe('filterShips', () => {
     ranges: [],
     equipments: [],
     abilities: [],
+    countries: [],
   };
 
   describe('デフォルト表示キャラのみが対象の場合', () => {
@@ -203,6 +207,24 @@ describe('filterShips', () => {
           abilities: ['-無条件先制対潜'],
         };
         expect(filterShips(ships, words, false)).toEqual([first, third]);
+      });
+    });
+
+    describe('国籍の指定がある場合', () => {
+      it('指定された国籍の艦船が返る', () => {
+        const words: SearchWords = {
+          ...emptyWords,
+          countries: ['日本'],
+        };
+        expect(filterShips(ships, words, false)).toEqual([first]);
+      });
+
+      it('マイナス指定された国籍以外の艦船が返る', () => {
+        const words: SearchWords = {
+          ...emptyWords,
+          countries: ['-日本'],
+        };
+        expect(filterShips(ships, words, false)).toEqual([second, third]);
       });
     });
 
@@ -387,6 +409,29 @@ describe('filterShips', () => {
         expect(filterShips(ships, words, true)).toEqual([
           first,
           hiddenFirst,
+          third,
+          hiddenThird,
+        ]);
+      });
+    });
+
+    describe('国籍の指定がある場合', () => {
+      it('指定された国籍の艦船が返る', () => {
+        const words: SearchWords = {
+          ...emptyWords,
+          countries: ['日本'],
+        };
+        expect(filterShips(ships, words, true)).toEqual([first, hiddenFirst]);
+      });
+
+      it('マイナス指定された国籍以外の艦船が返る', () => {
+        const words: SearchWords = {
+          ...emptyWords,
+          countries: ['-日本'],
+        };
+        expect(filterShips(ships, words, true)).toEqual([
+          second,
+          hiddenSecond,
           third,
           hiddenThird,
         ]);

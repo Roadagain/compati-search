@@ -8,5 +8,6 @@ export type Ship = {
   range: string;
   equipments: string[];
   abilities: string[];
+  country: string;
   showDefault: boolean;
 };
