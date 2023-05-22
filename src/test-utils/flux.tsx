@@ -21,6 +21,7 @@ export const initialTestState: State = {
       abilities: [],
       speeds: [],
       ranges: [],
+      countries: [],
       names: [],
     },
     showAll: false,
