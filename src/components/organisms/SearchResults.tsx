@@ -1,3 +1,5 @@
+import { Typography } from '@mui/material';
+import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import { SxProps, Theme } from '@mui/material/styles';
 import React from 'react';
@@ -35,14 +37,30 @@ export const SearchResults: React.FC<Props> = ({ sx }) => {
   const hasMore = shownShips.length < ships.length;
 
   return (
-    <InfiniteScroller loadMore={loadMore} hasMore={hasMore}>
-      <Grid container spacing={2} sx={sx}>
-        {shownShips.map((ship) => (
-          <Grid item key={ship.name} xs={12} sm={6} md={4}>
-            <ShipCard ship={ship} onClickTag={onClickTag} />
+    <Box sx={sx}>
+      <Typography variant="h6" fontWeight="normal" mb={2}>
+        検索結果: {ships.length}隻
+      </Typography>
+      <InfiniteScroller loadMore={loadMore} hasMore={hasMore}>
+        {shownShips.length > 0 ? (
+          <Grid container spacing={2}>
+            {shownShips.map((ship) => (
+              <Grid item key={ship.name} xs={12} sm={6} md={4}>
+                <ShipCard ship={ship} onClickTag={onClickTag} />
+              </Grid>
+            ))}
           </Grid>
-        ))}
-      </Grid>
-    </InfiniteScroller>
+        ) : (
+          <Typography
+            variant="h6"
+            component="p"
+            color="GrayText"
+            sx={{ textAlign: 'center' }}
+          >
+            検索結果がありません
+          </Typography>
+        )}
+      </InfiniteScroller>
+    </Box>
   );
 };
