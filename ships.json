@@ -29,7 +29,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "日本"
   },
   {
     "name": "長門改",
@@ -62,7 +63,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "日本"
   },
   {
     "name": "陸奥",
@@ -94,7 +96,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "日本"
   },
   {
     "name": "陸奥改",
@@ -127,7 +130,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "日本"
   },
   {
     "name": "伊勢",
@@ -159,7 +163,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "日本"
   },
   {
     "name": "日向",
@@ -191,7 +196,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "日本"
   },
   {
     "name": "雪風",
@@ -220,7 +226,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "雪風改",
@@ -249,7 +256,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "赤城",
@@ -277,7 +285,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["正規空母"]
+    "types": ["正規空母"],
+    "country": "日本"
   },
   {
     "name": "赤城改",
@@ -305,7 +314,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["正規空母"]
+    "types": ["正規空母"],
+    "country": "日本"
   },
   {
     "name": "加賀",
@@ -333,7 +343,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["正規空母"]
+    "types": ["正規空母"],
+    "country": "日本"
   },
   {
     "name": "加賀改",
@@ -361,7 +372,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["正規空母"]
+    "types": ["正規空母"],
+    "country": "日本"
   },
   {
     "name": "蒼龍",
@@ -389,7 +401,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["正規空母"]
+    "types": ["正規空母"],
+    "country": "日本"
   },
   {
     "name": "蒼龍改",
@@ -417,7 +430,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["正規空母"]
+    "types": ["正規空母"],
+    "country": "日本"
   },
   {
     "name": "飛龍",
@@ -445,7 +459,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["正規空母"]
+    "types": ["正規空母"],
+    "country": "日本"
   },
   {
     "name": "飛龍改",
@@ -473,7 +488,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["正規空母"]
+    "types": ["正規空母"],
+    "country": "日本"
   },
   {
     "name": "島風",
@@ -502,7 +518,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "島風改",
@@ -531,7 +548,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "吹雪",
@@ -560,7 +578,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "吹雪改",
@@ -589,7 +608,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "白雪",
@@ -618,7 +638,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "白雪改",
@@ -647,7 +668,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "初雪",
@@ -676,7 +698,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "初雪改",
@@ -705,7 +728,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "深雪",
@@ -734,7 +758,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "深雪改",
@@ -763,7 +788,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "叢雲",
@@ -792,7 +818,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "叢雲改",
@@ -821,7 +848,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "磯波",
@@ -850,7 +878,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "磯波改",
@@ -879,7 +908,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "綾波",
@@ -908,7 +938,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "綾波改",
@@ -937,7 +968,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "敷波",
@@ -966,7 +998,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "敷波改",
@@ -995,7 +1028,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "大井",
@@ -1029,7 +1063,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "北上",
@@ -1063,7 +1098,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "金剛",
@@ -1094,7 +1130,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "日本"
   },
   {
     "name": "金剛改",
@@ -1125,7 +1162,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "日本"
   },
   {
     "name": "比叡",
@@ -1156,7 +1194,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "日本"
   },
   {
     "name": "比叡改",
@@ -1187,7 +1226,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "日本"
   },
   {
     "name": "榛名",
@@ -1218,7 +1258,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "日本"
   },
   {
     "name": "榛名改",
@@ -1249,7 +1290,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "日本"
   },
   {
     "name": "霧島",
@@ -1280,7 +1322,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "日本"
   },
   {
     "name": "霧島改",
@@ -1311,7 +1354,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "日本"
   },
   {
     "name": "鳳翔",
@@ -1341,7 +1385,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽空母"]
+    "types": ["軽空母"],
+    "country": "日本"
   },
   {
     "name": "鳳翔改",
@@ -1371,7 +1416,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽空母"]
+    "types": ["軽空母"],
+    "country": "日本"
   },
   {
     "name": "扶桑",
@@ -1403,7 +1449,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "日本"
   },
   {
     "name": "扶桑改",
@@ -1440,7 +1487,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["航空戦艦"]
+    "types": ["航空戦艦"],
+    "country": "日本"
   },
   {
     "name": "山城",
@@ -1472,7 +1520,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "日本"
   },
   {
     "name": "山城改",
@@ -1509,7 +1558,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["航空戦艦"]
+    "types": ["航空戦艦"],
+    "country": "日本"
   },
   {
     "name": "天龍",
@@ -1543,7 +1593,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "天龍改",
@@ -1577,7 +1628,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "龍田",
@@ -1611,7 +1663,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "龍田改",
@@ -1645,7 +1698,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "龍驤",
@@ -1675,7 +1729,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽空母"]
+    "types": ["軽空母"],
+    "country": "日本"
   },
   {
     "name": "龍驤改",
@@ -1705,7 +1760,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽空母"]
+    "types": ["軽空母"],
+    "country": "日本"
   },
   {
     "name": "睦月",
@@ -1734,7 +1790,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "睦月改",
@@ -1763,7 +1820,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "如月",
@@ -1792,7 +1850,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "如月改",
@@ -1821,7 +1880,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "皐月",
@@ -1850,7 +1910,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "皐月改",
@@ -1879,7 +1940,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "文月",
@@ -1908,7 +1970,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "文月改",
@@ -1937,7 +2000,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "長月",
@@ -1966,7 +2030,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "長月改",
@@ -1995,7 +2060,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "菊月",
@@ -2024,7 +2090,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "菊月改",
@@ -2053,7 +2120,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "三日月",
@@ -2082,7 +2150,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "三日月改",
@@ -2112,7 +2181,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "望月",
@@ -2141,7 +2211,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "望月改",
@@ -2170,7 +2241,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "球磨",
@@ -2204,7 +2276,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "球磨改",
@@ -2238,7 +2311,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "多摩",
@@ -2272,7 +2346,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "多摩改",
@@ -2307,7 +2382,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "木曾",
@@ -2341,7 +2417,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "木曾改",
@@ -2376,7 +2453,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "長良",
@@ -2410,7 +2488,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "長良改",
@@ -2444,7 +2523,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "五十鈴",
@@ -2478,7 +2558,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "五十鈴改",
@@ -2512,7 +2593,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "名取",
@@ -2546,7 +2628,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "名取改",
@@ -2580,7 +2663,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "由良",
@@ -2614,7 +2698,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "由良改",
@@ -2648,7 +2733,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "川内",
@@ -2682,7 +2768,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "川内改",
@@ -2716,7 +2803,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "神通",
@@ -2750,7 +2838,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "神通改",
@@ -2784,7 +2873,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "那珂",
@@ -2818,7 +2908,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "那珂改",
@@ -2852,7 +2943,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "千歳",
@@ -2889,7 +2981,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["水上機母艦"]
+    "types": ["水上機母艦"],
+    "country": "日本"
   },
   {
     "name": "千代田",
@@ -2926,7 +3019,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["水上機母艦"]
+    "types": ["水上機母艦"],
+    "country": "日本"
   },
   {
     "name": "最上",
@@ -2957,7 +3051,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "古鷹",
@@ -2988,7 +3083,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "古鷹改",
@@ -3019,7 +3115,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "加古",
@@ -3050,7 +3147,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "加古改",
@@ -3081,7 +3179,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "青葉",
@@ -3112,7 +3211,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "青葉改",
@@ -3143,7 +3243,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "妙高",
@@ -3174,7 +3275,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "妙高改",
@@ -3205,7 +3307,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "那智",
@@ -3236,7 +3339,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "那智改",
@@ -3267,7 +3371,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "足柄",
@@ -3298,7 +3403,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "足柄改",
@@ -3329,7 +3435,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "羽黒",
@@ -3360,7 +3467,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "羽黒改",
@@ -3391,7 +3499,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "高雄",
@@ -3422,7 +3531,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "高雄改",
@@ -3453,7 +3563,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "愛宕",
@@ -3484,7 +3595,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "愛宕改",
@@ -3515,7 +3627,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "摩耶",
@@ -3546,7 +3659,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "摩耶改",
@@ -3577,7 +3691,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "鳥海",
@@ -3608,7 +3723,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "鳥海改",
@@ -3639,7 +3755,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "利根",
@@ -3670,7 +3787,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "利根改",
@@ -3701,7 +3819,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "筑摩",
@@ -3732,7 +3851,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "筑摩改",
@@ -3763,7 +3883,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "飛鷹",
@@ -3793,7 +3914,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽空母"]
+    "types": ["軽空母"],
+    "country": "日本"
   },
   {
     "name": "飛鷹改",
@@ -3823,7 +3945,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["軽空母"]
+    "types": ["軽空母"],
+    "country": "日本"
   },
   {
     "name": "隼鷹",
@@ -3853,7 +3976,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽空母"]
+    "types": ["軽空母"],
+    "country": "日本"
   },
   {
     "name": "隼鷹改",
@@ -3883,7 +4007,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽空母"]
+    "types": ["軽空母"],
+    "country": "日本"
   },
   {
     "name": "朧",
@@ -3912,7 +4037,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "朧改",
@@ -3941,7 +4067,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "曙",
@@ -3970,7 +4097,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "曙改",
@@ -3999,7 +4127,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "漣",
@@ -4028,7 +4157,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "漣改",
@@ -4057,7 +4187,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "潮",
@@ -4086,7 +4217,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "潮改",
@@ -4115,7 +4247,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "暁",
@@ -4144,7 +4277,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "暁改",
@@ -4173,7 +4307,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "響",
@@ -4202,7 +4337,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "響改",
@@ -4231,7 +4367,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "雷",
@@ -4260,7 +4397,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "雷改",
@@ -4289,7 +4427,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "電",
@@ -4318,7 +4457,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "電改",
@@ -4347,7 +4487,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "初春",
@@ -4376,7 +4517,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "初春改",
@@ -4405,7 +4547,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "子日",
@@ -4434,7 +4577,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "子日改",
@@ -4463,7 +4607,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "若葉",
@@ -4492,7 +4637,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "若葉改",
@@ -4521,7 +4667,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "初霜",
@@ -4550,7 +4697,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "初霜改",
@@ -4579,7 +4727,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "白露",
@@ -4608,7 +4757,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "白露改",
@@ -4637,7 +4787,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "時雨",
@@ -4666,7 +4817,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "時雨改",
@@ -4695,7 +4847,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "村雨",
@@ -4724,7 +4877,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "村雨改",
@@ -4753,7 +4907,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "夕立",
@@ -4782,7 +4937,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "夕立改",
@@ -4811,7 +4967,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "五月雨",
@@ -4840,7 +4997,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "五月雨改",
@@ -4869,7 +5027,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "涼風",
@@ -4898,7 +5057,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "涼風改",
@@ -4927,7 +5087,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "朝潮",
@@ -4956,7 +5117,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "朝潮改",
@@ -4985,7 +5147,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "大潮",
@@ -5014,7 +5177,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "大潮改",
@@ -5043,7 +5207,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "満潮",
@@ -5072,7 +5237,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "満潮改",
@@ -5101,7 +5267,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "荒潮",
@@ -5130,7 +5297,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "荒潮改",
@@ -5159,7 +5327,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "霰",
@@ -5188,7 +5357,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "霰改",
@@ -5217,7 +5387,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "霞",
@@ -5246,7 +5417,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "霞改",
@@ -5275,7 +5447,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "陽炎",
@@ -5304,7 +5477,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "陽炎改",
@@ -5333,7 +5507,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "不知火",
@@ -5362,7 +5537,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "不知火改",
@@ -5391,7 +5567,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "黒潮",
@@ -5420,7 +5597,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "黒潮改",
@@ -5449,7 +5627,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "祥鳳",
@@ -5479,7 +5658,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽空母"]
+    "types": ["軽空母"],
+    "country": "日本"
   },
   {
     "name": "祥鳳改",
@@ -5509,7 +5689,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["軽空母"]
+    "types": ["軽空母"],
+    "country": "日本"
   },
   {
     "name": "千歳改",
@@ -5546,7 +5727,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["水上機母艦"]
+    "types": ["水上機母艦"],
+    "country": "日本"
   },
   {
     "name": "千代田改",
@@ -5583,7 +5765,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["水上機母艦"]
+    "types": ["水上機母艦"],
+    "country": "日本"
   },
   {
     "name": "大井改",
@@ -5614,7 +5797,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["重雷装巡洋艦"]
+    "types": ["重雷装巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "北上改",
@@ -5645,7 +5829,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["重雷装巡洋艦"]
+    "types": ["重雷装巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "千歳甲",
@@ -5682,7 +5867,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["水上機母艦"]
+    "types": ["水上機母艦"],
+    "country": "日本"
   },
   {
     "name": "千代田甲",
@@ -5719,7 +5905,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["水上機母艦"]
+    "types": ["水上機母艦"],
+    "country": "日本"
   },
   {
     "name": "最上改",
@@ -5756,7 +5943,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["航空巡洋艦"]
+    "types": ["航空巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "伊勢改",
@@ -5793,7 +5981,8 @@
     ],
     "abilities": ["専用対空カットイン"],
     "showDefault": false,
-    "types": ["航空戦艦"]
+    "types": ["航空戦艦"],
+    "country": "日本"
   },
   {
     "name": "日向改",
@@ -5830,7 +6019,8 @@
     ],
     "abilities": ["専用対空カットイン"],
     "showDefault": false,
-    "types": ["航空戦艦"]
+    "types": ["航空戦艦"],
+    "country": "日本"
   },
   {
     "name": "千歳航",
@@ -5860,7 +6050,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽空母"]
+    "types": ["軽空母"],
+    "country": "日本"
   },
   {
     "name": "千歳航改",
@@ -5890,7 +6081,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽空母"]
+    "types": ["軽空母"],
+    "country": "日本"
   },
   {
     "name": "千代田航",
@@ -5920,7 +6112,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽空母"]
+    "types": ["軽空母"],
+    "country": "日本"
   },
   {
     "name": "千代田航改",
@@ -5950,7 +6143,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽空母"]
+    "types": ["軽空母"],
+    "country": "日本"
   },
   {
     "name": "翔鶴",
@@ -5978,7 +6172,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["正規空母"]
+    "types": ["正規空母"],
+    "country": "日本"
   },
   {
     "name": "翔鶴改",
@@ -6006,7 +6201,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["正規空母"]
+    "types": ["正規空母"],
+    "country": "日本"
   },
   {
     "name": "瑞鶴",
@@ -6034,7 +6230,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["正規空母"]
+    "types": ["正規空母"],
+    "country": "日本"
   },
   {
     "name": "瑞鶴改",
@@ -6062,7 +6259,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["正規空母"]
+    "types": ["正規空母"],
+    "country": "日本"
   },
   {
     "name": "鬼怒",
@@ -6096,7 +6294,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "鬼怒改",
@@ -6130,7 +6329,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "阿武隈",
@@ -6164,7 +6364,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "阿武隈改",
@@ -6198,7 +6399,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "夕張",
@@ -6232,7 +6434,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "夕張改",
@@ -6266,7 +6469,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "瑞鳳",
@@ -6296,7 +6500,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽空母"]
+    "types": ["軽空母"],
+    "country": "日本"
   },
   {
     "name": "瑞鳳改",
@@ -6326,7 +6531,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽空母"]
+    "types": ["軽空母"],
+    "country": "日本"
   },
   {
     "name": "大井改二",
@@ -6357,7 +6563,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["重雷装巡洋艦"]
+    "types": ["重雷装巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "北上改二",
@@ -6388,7 +6595,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["重雷装巡洋艦"]
+    "types": ["重雷装巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "三隈",
@@ -6419,7 +6627,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "三隈改",
@@ -6456,7 +6665,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["航空巡洋艦"]
+    "types": ["航空巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "初風",
@@ -6485,7 +6695,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "初風改",
@@ -6514,7 +6725,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "舞風",
@@ -6543,7 +6755,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "舞風改",
@@ -6572,7 +6785,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "衣笠",
@@ -6603,7 +6817,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "衣笠改",
@@ -6634,7 +6849,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "千歳航改二",
@@ -6664,7 +6880,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["軽空母"]
+    "types": ["軽空母"],
+    "country": "日本"
   },
   {
     "name": "千代田航改二",
@@ -6694,7 +6911,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["軽空母"]
+    "types": ["軽空母"],
+    "country": "日本"
   },
   {
     "name": "伊19",
@@ -6716,7 +6934,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["潜水艦"]
+    "types": ["潜水艦"],
+    "country": "日本"
   },
   {
     "name": "伊19改",
@@ -6741,7 +6960,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["潜水空母"]
+    "types": ["潜水空母"],
+    "country": "日本"
   },
   {
     "name": "鈴谷",
@@ -6772,7 +6992,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "熊野",
@@ -6803,7 +7024,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "伊168",
@@ -6825,7 +7047,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["潜水艦"]
+    "types": ["潜水艦"],
+    "country": "日本"
   },
   {
     "name": "伊168改",
@@ -6847,7 +7070,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["潜水艦"]
+    "types": ["潜水艦"],
+    "country": "日本"
   },
   {
     "name": "伊58",
@@ -6869,7 +7093,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["潜水艦"]
+    "types": ["潜水艦"],
+    "country": "日本"
   },
   {
     "name": "伊58改",
@@ -6894,7 +7119,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["潜水空母"]
+    "types": ["潜水空母"],
+    "country": "日本"
   },
   {
     "name": "伊8",
@@ -6916,7 +7142,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["潜水艦"]
+    "types": ["潜水艦"],
+    "country": "日本"
   },
   {
     "name": "伊8改",
@@ -6941,7 +7168,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["潜水空母"]
+    "types": ["潜水空母"],
+    "country": "日本"
   },
   {
     "name": "鈴谷改",
@@ -6978,7 +7206,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["航空巡洋艦"]
+    "types": ["航空巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "熊野改",
@@ -7015,7 +7244,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["航空巡洋艦"]
+    "types": ["航空巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "大和",
@@ -7047,7 +7277,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "日本"
   },
   {
     "name": "秋雲",
@@ -7076,7 +7307,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "秋雲改",
@@ -7105,7 +7337,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "夕雲",
@@ -7134,7 +7367,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "夕雲改",
@@ -7163,7 +7397,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "巻雲",
@@ -7192,7 +7427,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "巻雲改",
@@ -7221,7 +7457,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "長波",
@@ -7250,7 +7487,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "長波改",
@@ -7279,7 +7517,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "大和改",
@@ -7313,7 +7552,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "日本"
   },
   {
     "name": "阿賀野",
@@ -7348,7 +7588,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "阿賀野改",
@@ -7385,7 +7626,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "能代",
@@ -7420,7 +7662,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "能代改",
@@ -7457,7 +7700,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "矢矧",
@@ -7492,7 +7736,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "矢矧改",
@@ -7529,7 +7774,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "酒匂",
@@ -7564,7 +7810,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "酒匂改",
@@ -7601,7 +7848,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "五十鈴改二",
@@ -7635,7 +7883,8 @@
     ],
     "abilities": ["専用対空カットイン", "無条件先制対潜"],
     "showDefault": true,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "衣笠改二",
@@ -7666,7 +7915,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "武蔵",
@@ -7698,7 +7948,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "日本"
   },
   {
     "name": "夕立改二",
@@ -7727,7 +7978,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "時雨改二",
@@ -7756,7 +8008,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "木曾改二",
@@ -7788,7 +8041,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["重雷装巡洋艦"]
+    "types": ["重雷装巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "Верный",
@@ -7820,7 +8074,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "ロシア"
   },
   {
     "name": "武蔵改",
@@ -7854,7 +8109,8 @@
     ],
     "abilities": ["専用対空カットイン"],
     "showDefault": false,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "日本"
   },
   {
     "name": "金剛改二",
@@ -7885,7 +8141,8 @@
     ],
     "abilities": ["専用対空カットイン"],
     "showDefault": false,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "日本"
   },
   {
     "name": "比叡改二",
@@ -7916,7 +8173,8 @@
     ],
     "abilities": ["専用対空カットイン"],
     "showDefault": false,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "日本"
   },
   {
     "name": "榛名改二",
@@ -7947,7 +8205,8 @@
     ],
     "abilities": ["専用対空カットイン"],
     "showDefault": false,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "日本"
   },
   {
     "name": "霧島改二",
@@ -7978,7 +8237,8 @@
     ],
     "abilities": ["専用対空カットイン"],
     "showDefault": true,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "日本"
   },
   {
     "name": "大鳳",
@@ -8007,7 +8267,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["装甲空母"]
+    "types": ["装甲空母"],
+    "country": "日本"
   },
   {
     "name": "香取",
@@ -8038,7 +8299,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["練習巡洋艦"]
+    "types": ["練習巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "香取改",
@@ -8070,7 +8332,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["練習巡洋艦"]
+    "types": ["練習巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "伊401",
@@ -8095,7 +8358,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["潜水空母"]
+    "types": ["潜水空母"],
+    "country": "日本"
   },
   {
     "name": "伊401改",
@@ -8120,7 +8384,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["潜水空母"]
+    "types": ["潜水空母"],
+    "country": "日本"
   },
   {
     "name": "大鳳改",
@@ -8149,7 +8414,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["装甲空母"]
+    "types": ["装甲空母"],
+    "country": "日本"
   },
   {
     "name": "龍驤改二",
@@ -8179,7 +8445,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["軽空母"]
+    "types": ["軽空母"],
+    "country": "日本"
   },
   {
     "name": "川内改二",
@@ -8213,7 +8480,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "神通改二",
@@ -8247,7 +8515,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "那珂改二",
@@ -8281,7 +8550,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "あきつ丸",
@@ -8312,7 +8582,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["揚陸艦"]
+    "types": ["揚陸艦"],
+    "country": "日本"
   },
   {
     "name": "神威",
@@ -8338,7 +8609,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["補給艦"]
+    "types": ["補給艦"],
+    "country": "日本"
   },
   {
     "name": "まるゆ",
@@ -8350,7 +8622,8 @@
     "equipments": ["応急修理要員", "機関部強化", "潜水艦搭載電探"],
     "abilities": [],
     "showDefault": false,
-    "types": ["潜水艦"]
+    "types": ["潜水艦"],
+    "country": "日本"
   },
   {
     "name": "まるゆ改",
@@ -8372,7 +8645,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["潜水艦"]
+    "types": ["潜水艦"],
+    "country": "日本"
   },
   {
     "name": "弥生",
@@ -8401,7 +8675,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "弥生改",
@@ -8430,7 +8705,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "卯月",
@@ -8459,7 +8735,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "卯月改",
@@ -8488,7 +8765,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "あきつ丸改",
@@ -8520,7 +8798,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["揚陸艦"]
+    "types": ["揚陸艦"],
+    "country": "日本"
   },
   {
     "name": "磯風",
@@ -8549,7 +8828,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "磯風改",
@@ -8578,7 +8858,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "浦風",
@@ -8607,7 +8888,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "浦風改",
@@ -8636,7 +8918,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "谷風",
@@ -8665,7 +8948,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "谷風改",
@@ -8694,7 +8978,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "浜風",
@@ -8723,7 +9008,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "浜風改",
@@ -8752,7 +9038,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "Bismarck",
@@ -8783,7 +9070,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "ドイツ"
   },
   {
     "name": "Bismarck改",
@@ -8814,7 +9102,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "ドイツ"
   },
   {
     "name": "Bismarck zwei",
@@ -8845,7 +9134,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "ドイツ"
   },
   {
     "name": "Z1",
@@ -8874,7 +9164,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "ドイツ"
   },
   {
     "name": "Z1改",
@@ -8903,7 +9194,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "ドイツ"
   },
   {
     "name": "Z3",
@@ -8932,7 +9224,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "ドイツ"
   },
   {
     "name": "Z3改",
@@ -8961,7 +9254,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "ドイツ"
   },
   {
     "name": "Prinz Eugen",
@@ -8992,7 +9286,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "ドイツ"
   },
   {
     "name": "Prinz Eugen改",
@@ -9023,7 +9318,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "ドイツ"
   },
   {
     "name": "Bismarck drei",
@@ -9054,7 +9350,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "ドイツ"
   },
   {
     "name": "Z1 zwei",
@@ -9083,7 +9380,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "ドイツ"
   },
   {
     "name": "Z3 zwei",
@@ -9112,7 +9410,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "ドイツ"
   },
   {
     "name": "天津風",
@@ -9141,7 +9440,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "天津風改",
@@ -9170,7 +9470,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "明石",
@@ -9195,7 +9496,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["工作艦"]
+    "types": ["工作艦"],
+    "country": "日本"
   },
   {
     "name": "大淀",
@@ -9230,7 +9532,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "大淀改",
@@ -9265,7 +9568,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "大鯨",
@@ -9295,7 +9599,8 @@
     ],
     "abilities": ["特殊攻撃"],
     "showDefault": true,
-    "types": ["潜水母艦"]
+    "types": ["潜水母艦"],
+    "country": "日本"
   },
   {
     "name": "龍鳳",
@@ -9325,7 +9630,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽空母"]
+    "types": ["軽空母"],
+    "country": "日本"
   },
   {
     "name": "時津風",
@@ -9354,7 +9660,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "時津風改",
@@ -9383,7 +9690,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "明石改",
@@ -9408,7 +9716,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["工作艦"]
+    "types": ["工作艦"],
+    "country": "日本"
   },
   {
     "name": "利根改二",
@@ -9445,7 +9754,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["航空巡洋艦"]
+    "types": ["航空巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "筑摩改二",
@@ -9482,7 +9792,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["航空巡洋艦"]
+    "types": ["航空巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "龍鳳改",
@@ -9512,7 +9823,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽空母"]
+    "types": ["軽空母"],
+    "country": "日本"
   },
   {
     "name": "妙高改二",
@@ -9543,7 +9855,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "那智改二",
@@ -9574,7 +9887,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "足柄改二",
@@ -9605,7 +9919,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "羽黒改二",
@@ -9636,7 +9951,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "綾波改二",
@@ -9665,7 +9981,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "飛龍改二",
@@ -9693,7 +10010,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["正規空母"]
+    "types": ["正規空母"],
+    "country": "日本"
   },
   {
     "name": "蒼龍改二",
@@ -9721,7 +10039,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["正規空母"]
+    "types": ["正規空母"],
+    "country": "日本"
   },
   {
     "name": "霰改二",
@@ -9752,7 +10071,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "大潮改二",
@@ -9783,7 +10103,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "阿武隈改二",
@@ -9820,7 +10141,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "雲龍",
@@ -9848,7 +10170,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["正規空母"]
+    "types": ["正規空母"],
+    "country": "日本"
   },
   {
     "name": "天城",
@@ -9876,7 +10199,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["正規空母"]
+    "types": ["正規空母"],
+    "country": "日本"
   },
   {
     "name": "葛城",
@@ -9904,7 +10228,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["正規空母"]
+    "types": ["正規空母"],
+    "country": "日本"
   },
   {
     "name": "初春改二",
@@ -9933,7 +10258,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "春雨",
@@ -9962,7 +10288,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "春雨改",
@@ -9991,7 +10318,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "雲龍改",
@@ -10019,7 +10347,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["正規空母"]
+    "types": ["正規空母"],
+    "country": "日本"
   },
   {
     "name": "潮改二",
@@ -10048,7 +10377,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "隼鷹改二",
@@ -10078,7 +10408,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["軽空母"]
+    "types": ["軽空母"],
+    "country": "日本"
   },
   {
     "name": "早霜",
@@ -10107,7 +10438,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "早霜改",
@@ -10136,7 +10468,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "清霜",
@@ -10165,7 +10498,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "清霜改",
@@ -10194,7 +10528,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "扶桑改二",
@@ -10234,7 +10569,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["航空戦艦"]
+    "types": ["航空戦艦"],
+    "country": "日本"
   },
   {
     "name": "山城改二",
@@ -10274,7 +10610,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["航空戦艦"]
+    "types": ["航空戦艦"],
+    "country": "日本"
   },
   {
     "name": "朝雲",
@@ -10303,7 +10640,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "朝雲改",
@@ -10332,7 +10670,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "山雲",
@@ -10361,7 +10700,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "山雲改",
@@ -10390,7 +10730,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "野分",
@@ -10419,7 +10760,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "野分改",
@@ -10448,7 +10790,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "古鷹改二",
@@ -10479,7 +10822,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "加古改二",
@@ -10510,7 +10854,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "皐月改二",
@@ -10541,7 +10886,8 @@
     ],
     "abilities": ["専用対空カットイン"],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "初霜改二",
@@ -10573,7 +10919,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "叢雲改二",
@@ -10602,7 +10949,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "秋月",
@@ -10634,7 +10982,8 @@
     ],
     "abilities": ["専用対空カットイン"],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "秋月改",
@@ -10667,7 +11016,8 @@
     ],
     "abilities": ["専用対空カットイン"],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "照月",
@@ -10699,7 +11049,8 @@
     ],
     "abilities": ["専用対空カットイン"],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "照月改",
@@ -10732,7 +11083,8 @@
     ],
     "abilities": ["専用対空カットイン"],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "初月",
@@ -10764,7 +11116,8 @@
     ],
     "abilities": ["専用対空カットイン"],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "初月改",
@@ -10797,7 +11150,8 @@
     ],
     "abilities": ["専用対空カットイン"],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "高波",
@@ -10826,7 +11180,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "高波改",
@@ -10855,7 +11210,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "朝霜",
@@ -10884,7 +11240,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "朝霜改",
@@ -10913,7 +11270,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "吹雪改二",
@@ -10942,7 +11300,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "鳥海改二",
@@ -10973,7 +11332,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "摩耶改二",
@@ -11004,7 +11364,8 @@
     ],
     "abilities": ["専用対空カットイン"],
     "showDefault": true,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "天城改",
@@ -11032,7 +11393,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["正規空母"]
+    "types": ["正規空母"],
+    "country": "日本"
   },
   {
     "name": "葛城改",
@@ -11060,7 +11422,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["正規空母"]
+    "types": ["正規空母"],
+    "country": "日本"
   },
   {
     "name": "U-511",
@@ -11082,7 +11445,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["潜水艦"]
+    "types": ["潜水艦"],
+    "country": "ドイツ"
   },
   {
     "name": "U-511改",
@@ -11104,7 +11468,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["潜水艦"]
+    "types": ["潜水艦"],
+    "country": "日本"
   },
   {
     "name": "Graf Zeppelin",
@@ -11132,7 +11497,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["正規空母"]
+    "types": ["正規空母"],
+    "country": "ドイツ"
   },
   {
     "name": "Graf Zeppelin改",
@@ -11160,7 +11526,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["正規空母"]
+    "types": ["正規空母"],
+    "country": "ドイツ"
   },
   {
     "name": "Saratoga",
@@ -11188,7 +11555,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["正規空母"]
+    "types": ["正規空母"],
+    "country": "アメリカ"
   },
   {
     "name": "睦月改二",
@@ -11218,7 +11586,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "如月改二",
@@ -11248,7 +11617,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "呂500",
@@ -11270,7 +11640,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["潜水艦"]
+    "types": ["潜水艦"],
+    "country": "日本"
   },
   {
     "name": "暁改二",
@@ -11299,7 +11670,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "Saratoga改",
@@ -11327,7 +11699,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["正規空母"]
+    "types": ["正規空母"],
+    "country": "アメリカ"
   },
   {
     "name": "Warspite",
@@ -11359,7 +11732,8 @@
     ],
     "abilities": ["専用対空カットイン"],
     "showDefault": false,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "イギリス"
   },
   {
     "name": "Warspite改",
@@ -11391,7 +11765,8 @@
     ],
     "abilities": ["専用対空カットイン"],
     "showDefault": true,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "イギリス"
   },
   {
     "name": "Iowa",
@@ -11422,7 +11797,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "アメリカ"
   },
   {
     "name": "Iowa改",
@@ -11453,7 +11829,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "アメリカ"
   },
   {
     "name": "Littorio",
@@ -11484,7 +11861,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "イタリア"
   },
   {
     "name": "Roma",
@@ -11515,7 +11893,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "イタリア"
   },
   {
     "name": "Libeccio",
@@ -11544,7 +11923,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "イタリア"
   },
   {
     "name": "Libeccio改",
@@ -11573,7 +11953,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "イタリア"
   },
   {
     "name": "Aquila",
@@ -11601,7 +11982,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["正規空母"]
+    "types": ["正規空母"],
+    "country": "イタリア"
   },
   {
     "name": "Aquila改",
@@ -11629,7 +12011,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["正規空母"]
+    "types": ["正規空母"],
+    "country": "イタリア"
   },
   {
     "name": "秋津洲",
@@ -11663,7 +12046,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["水上機母艦"]
+    "types": ["水上機母艦"],
+    "country": "日本"
   },
   {
     "name": "Italia",
@@ -11696,7 +12080,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "イタリア"
   },
   {
     "name": "Roma改",
@@ -11729,7 +12114,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "イタリア"
   },
   {
     "name": "Zara",
@@ -11760,7 +12146,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "イタリア"
   },
   {
     "name": "Zara改",
@@ -11793,7 +12180,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "イタリア"
   },
   {
     "name": "Pola",
@@ -11824,7 +12212,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "イタリア"
   },
   {
     "name": "Pola改",
@@ -11857,7 +12246,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "イタリア"
   },
   {
     "name": "秋津洲改",
@@ -11897,7 +12287,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["水上機母艦"]
+    "types": ["水上機母艦"],
+    "country": "日本"
   },
   {
     "name": "瑞穂",
@@ -11934,7 +12325,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["水上機母艦"]
+    "types": ["水上機母艦"],
+    "country": "日本"
   },
   {
     "name": "瑞穂改",
@@ -11971,7 +12363,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["水上機母艦"]
+    "types": ["水上機母艦"],
+    "country": "日本"
   },
   {
     "name": "沖波",
@@ -12000,7 +12393,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "沖波改",
@@ -12029,7 +12423,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "風雲",
@@ -12058,7 +12453,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "風雲改",
@@ -12087,7 +12483,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "嵐",
@@ -12116,7 +12513,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "嵐改",
@@ -12145,7 +12543,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "萩風",
@@ -12174,7 +12573,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "萩風改",
@@ -12203,7 +12603,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "親潮",
@@ -12232,7 +12633,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "親潮改",
@@ -12261,7 +12663,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "山風",
@@ -12290,7 +12693,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "海風",
@@ -12319,7 +12723,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "海風改",
@@ -12348,7 +12753,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "江風",
@@ -12377,7 +12783,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "江風改",
@@ -12406,7 +12813,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "速吸",
@@ -12432,7 +12840,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["補給艦"]
+    "types": ["補給艦"],
+    "country": "日本"
   },
   {
     "name": "速吸改",
@@ -12463,7 +12872,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["補給艦"]
+    "types": ["補給艦"],
+    "country": "日本"
   },
   {
     "name": "翔鶴改二",
@@ -12491,7 +12901,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["正規空母"]
+    "types": ["正規空母"],
+    "country": "日本"
   },
   {
     "name": "瑞鶴改二",
@@ -12519,7 +12930,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["正規空母"]
+    "types": ["正規空母"],
+    "country": "日本"
   },
   {
     "name": "朝潮改二",
@@ -12548,7 +12960,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "霞改二",
@@ -12580,7 +12993,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "鹿島",
@@ -12611,7 +13025,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["練習巡洋艦"]
+    "types": ["練習巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "鹿島改",
@@ -12643,7 +13058,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["練習巡洋艦"]
+    "types": ["練習巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "翔鶴改二甲",
@@ -12672,7 +13088,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["装甲空母"]
+    "types": ["装甲空母"],
+    "country": "日本"
   },
   {
     "name": "瑞鶴改二甲",
@@ -12701,7 +13118,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["装甲空母"]
+    "types": ["装甲空母"],
+    "country": "日本"
   },
   {
     "name": "朝潮改二丁",
@@ -12732,7 +13150,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "江風改二",
@@ -12762,7 +13181,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "霞改二乙",
@@ -12794,7 +13214,8 @@
     ],
     "abilities": ["専用対空カットイン"],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "神風",
@@ -12823,7 +13244,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "朝風",
@@ -12852,7 +13274,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "朝風改",
@@ -12881,7 +13304,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "春風",
@@ -12910,7 +13334,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "春風改",
@@ -12939,7 +13364,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "松風",
@@ -12968,7 +13394,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "松風改",
@@ -12997,7 +13424,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "旗風",
@@ -13026,7 +13454,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "旗風改",
@@ -13055,7 +13484,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "神風改",
@@ -13084,7 +13514,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "天龍改二",
@@ -13119,7 +13550,8 @@
     ],
     "abilities": ["専用対空カットイン"],
     "showDefault": true,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "龍田改二",
@@ -13155,7 +13587,8 @@
     ],
     "abilities": ["専用対空カットイン", "無条件先制対潜"],
     "showDefault": true,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "天霧",
@@ -13184,7 +13617,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "天霧改",
@@ -13213,7 +13647,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "狭霧",
@@ -13242,7 +13677,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "狭霧改",
@@ -13271,7 +13707,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "水無月",
@@ -13300,7 +13737,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "水無月改",
@@ -13329,7 +13767,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "伊26",
@@ -13351,7 +13790,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["潜水艦"]
+    "types": ["潜水艦"],
+    "country": "日本"
   },
   {
     "name": "伊26改",
@@ -13376,7 +13816,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["潜水空母"]
+    "types": ["潜水空母"],
+    "country": "日本"
   },
   {
     "name": "浜波",
@@ -13405,7 +13846,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "浜波改",
@@ -13434,7 +13876,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "藤波",
@@ -13463,7 +13906,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "藤波改",
@@ -13492,7 +13936,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "浦波",
@@ -13521,7 +13966,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "浦波改",
@@ -13550,7 +13996,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "鬼怒改二",
@@ -13586,7 +14033,8 @@
     ],
     "abilities": ["専用対空カットイン"],
     "showDefault": true,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "由良改二",
@@ -13627,7 +14075,8 @@
     ],
     "abilities": ["専用対空カットイン"],
     "showDefault": true,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "満潮改二",
@@ -13658,7 +14107,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "荒潮改二",
@@ -13689,7 +14139,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "Commandant Teste",
@@ -13726,7 +14177,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["水上機母艦"]
+    "types": ["水上機母艦"],
+    "country": "フランス"
   },
   {
     "name": "Commandant Teste改",
@@ -13765,7 +14217,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["水上機母艦"]
+    "types": ["水上機母艦"],
+    "country": "フランス"
   },
   {
     "name": "Richelieu",
@@ -13796,7 +14249,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "フランス"
   },
   {
     "name": "Richelieu改",
@@ -13827,7 +14281,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "フランス"
   },
   {
     "name": "伊400",
@@ -13852,7 +14307,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["潜水空母"]
+    "types": ["潜水空母"],
+    "country": "日本"
   },
   {
     "name": "伊400改",
@@ -13877,7 +14333,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["潜水空母"]
+    "types": ["潜水空母"],
+    "country": "日本"
   },
   {
     "name": "伊13",
@@ -13902,7 +14359,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["潜水空母"]
+    "types": ["潜水空母"],
+    "country": "日本"
   },
   {
     "name": "伊13改",
@@ -13927,7 +14385,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["潜水空母"]
+    "types": ["潜水空母"],
+    "country": "日本"
   },
   {
     "name": "伊14",
@@ -13952,7 +14411,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["潜水空母"]
+    "types": ["潜水空母"],
+    "country": "日本"
   },
   {
     "name": "伊14改",
@@ -13977,7 +14437,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["潜水空母"]
+    "types": ["潜水空母"],
+    "country": "日本"
   },
   {
     "name": "Zara due",
@@ -14012,7 +14473,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "イタリア"
   },
   {
     "name": "白露改二",
@@ -14043,7 +14505,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "村雨改二",
@@ -14074,7 +14537,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "神威改",
@@ -14111,7 +14575,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["水上機母艦"]
+    "types": ["水上機母艦"],
+    "country": "日本"
   },
   {
     "name": "神威改母",
@@ -14152,7 +14617,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["補給艦"]
+    "types": ["補給艦"],
+    "country": "日本"
   },
   {
     "name": "最上改二",
@@ -14191,7 +14657,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["航空巡洋艦", "改装航空巡洋艦"]
+    "types": ["航空巡洋艦", "改装航空巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "鈴谷改二",
@@ -14229,7 +14696,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["航空巡洋艦"]
+    "types": ["航空巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "熊野改二",
@@ -14267,7 +14735,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["航空巡洋艦"]
+    "types": ["航空巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "最上改二特",
@@ -14309,7 +14778,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["航空巡洋艦"]
+    "types": ["航空巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "鈴谷航改二",
@@ -14340,7 +14810,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["軽空母"]
+    "types": ["軽空母"],
+    "country": "日本"
   },
   {
     "name": "熊野航改二",
@@ -14371,7 +14842,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["軽空母"]
+    "types": ["軽空母"],
+    "country": "日本"
   },
   {
     "name": "Гангут",
@@ -14403,7 +14875,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "ロシア"
   },
   {
     "name": "Октябрьская революция",
@@ -14435,7 +14908,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "ロシア"
   },
   {
     "name": "Ташкент",
@@ -14464,7 +14938,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "ロシア"
   },
   {
     "name": "Ташкент改",
@@ -14493,11 +14968,12 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "ロシア"
   },
   {
-    "name": "Sheffireld",
-    "kana": "Sheffireld",
+    "name": "Sheffield",
+    "kana": "Sheffield",
     "id": 314,
     "category": "軽巡級",
     "range": "中射程",
@@ -14527,11 +15003,12 @@
     ],
     "abilities": ["専用対空カットイン"],
     "showDefault": false,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "イギリス"
   },
   {
-    "name": "Sheffireld改",
-    "kana": "Sheffireldかい",
+    "name": "Sheffield改",
+    "kana": "Sheffieldかい",
     "id": 314,
     "category": "軽巡級",
     "range": "中射程",
@@ -14561,7 +15038,8 @@
     ],
     "abilities": ["専用対空カットイン"],
     "showDefault": true,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "イギリス"
   },
   {
     "name": "Ark Royal",
@@ -14589,7 +15067,8 @@
     ],
     "abilities": ["専用対空カットイン"],
     "showDefault": false,
-    "types": ["正規空母"]
+    "types": ["正規空母"],
+    "country": "イギリス"
   },
   {
     "name": "Ark Royal改",
@@ -14617,7 +15096,8 @@
     ],
     "abilities": ["専用対空カットイン"],
     "showDefault": true,
-    "types": ["正規空母"]
+    "types": ["正規空母"],
+    "country": "イギリス"
   },
   {
     "name": "Гангут два",
@@ -14649,7 +15129,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "ロシア"
   },
   {
     "name": "占守",
@@ -14673,7 +15154,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["海防艦"]
+    "types": ["海防艦"],
+    "country": "日本"
   },
   {
     "name": "占守改",
@@ -14697,7 +15179,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["海防艦"]
+    "types": ["海防艦"],
+    "country": "日本"
   },
   {
     "name": "国後",
@@ -14721,7 +15204,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["海防艦"]
+    "types": ["海防艦"],
+    "country": "日本"
   },
   {
     "name": "国後改",
@@ -14745,7 +15229,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["海防艦"]
+    "types": ["海防艦"],
+    "country": "日本"
   },
   {
     "name": "Jervis",
@@ -14774,7 +15259,8 @@
     ],
     "abilities": ["専用対空カットイン"],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "イギリス"
   },
   {
     "name": "Jervis改",
@@ -14803,7 +15289,8 @@
     ],
     "abilities": ["専用対空カットイン", "無条件先制対潜"],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "イギリス"
   },
   {
     "name": "Janus",
@@ -14832,7 +15319,8 @@
     ],
     "abilities": ["専用対空カットイン"],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "イギリス"
   },
   {
     "name": "Janus改",
@@ -14861,7 +15349,8 @@
     ],
     "abilities": ["専用対空カットイン", "無条件先制対潜"],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "イギリス"
   },
   {
     "name": "春日丸",
@@ -14885,7 +15374,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽空母"]
+    "types": ["軽空母"],
+    "country": "日本"
   },
   {
     "name": "八幡丸",
@@ -14909,7 +15399,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽空母"]
+    "types": ["軽空母"],
+    "country": "日本"
   },
   {
     "name": "神鷹",
@@ -14935,7 +15426,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽空母"]
+    "types": ["軽空母"],
+    "country": "日本"
   },
   {
     "name": "神鷹改",
@@ -14966,7 +15458,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽空母"]
+    "types": ["軽空母"],
+    "country": "日本"
   },
   {
     "name": "Luigi Torelli",
@@ -14988,7 +15481,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["潜水艦"]
+    "types": ["潜水艦"],
+    "country": "イタリア"
   },
   {
     "name": "Luigi Torelli改",
@@ -15010,7 +15504,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["潜水艦"]
+    "types": ["潜水艦"],
+    "country": "イタリア"
   },
   {
     "name": "大鷹",
@@ -15036,7 +15531,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽空母"]
+    "types": ["軽空母"],
+    "country": "日本"
   },
   {
     "name": "大鷹改",
@@ -15066,7 +15562,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽空母"]
+    "types": ["軽空母"],
+    "country": "日本"
   },
   {
     "name": "岸波",
@@ -15095,7 +15592,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "岸波改",
@@ -15124,7 +15622,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "早波",
@@ -15153,7 +15652,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "早波改",
@@ -15182,7 +15682,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "UIT-25",
@@ -15205,7 +15706,8 @@
     ],
     "abilities": ["専用対空カットイン"],
     "showDefault": false,
-    "types": ["潜水艦"]
+    "types": ["潜水艦"],
+    "country": "ドイツ"
   },
   {
     "name": "伊504",
@@ -15229,7 +15731,8 @@
     ],
     "abilities": ["専用対空カットイン"],
     "showDefault": true,
-    "types": ["潜水艦"]
+    "types": ["潜水艦"],
+    "country": "日本"
   },
   {
     "name": "大鷹改二",
@@ -15263,7 +15766,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["軽空母"]
+    "types": ["軽空母"],
+    "country": "日本"
   },
   {
     "name": "涼月",
@@ -15295,7 +15799,8 @@
     ],
     "abilities": ["専用対空カットイン"],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "冬月",
@@ -15327,7 +15832,8 @@
     ],
     "abilities": ["専用対空カットイン"],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "択捉",
@@ -15351,7 +15857,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["海防艦"]
+    "types": ["海防艦"],
+    "country": "日本"
   },
   {
     "name": "択捉改",
@@ -15375,7 +15882,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["海防艦"]
+    "types": ["海防艦"],
+    "country": "日本"
   },
   {
     "name": "松輪",
@@ -15399,7 +15907,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["海防艦"]
+    "types": ["海防艦"],
+    "country": "日本"
   },
   {
     "name": "松輪改",
@@ -15423,7 +15932,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["海防艦"]
+    "types": ["海防艦"],
+    "country": "日本"
   },
   {
     "name": "神鷹改二",
@@ -15457,7 +15967,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["軽空母"]
+    "types": ["軽空母"],
+    "country": "日本"
   },
   {
     "name": "涼月改",
@@ -15490,7 +16001,8 @@
     ],
     "abilities": ["専用対空カットイン"],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "冬月改",
@@ -15523,7 +16035,8 @@
     ],
     "abilities": ["専用対空カットイン"],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "佐渡",
@@ -15547,7 +16060,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["海防艦"]
+    "types": ["海防艦"],
+    "country": "日本"
   },
   {
     "name": "佐渡改",
@@ -15571,7 +16085,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["海防艦"]
+    "types": ["海防艦"],
+    "country": "日本"
   },
   {
     "name": "対馬",
@@ -15595,7 +16110,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["海防艦"]
+    "types": ["海防艦"],
+    "country": "日本"
   },
   {
     "name": "対馬改",
@@ -15619,7 +16135,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["海防艦"]
+    "types": ["海防艦"],
+    "country": "日本"
   },
   {
     "name": "長門改二",
@@ -15655,7 +16172,8 @@
     ],
     "abilities": ["特殊攻撃"],
     "showDefault": true,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "日本"
   },
   {
     "name": "夕雲改二",
@@ -15686,7 +16204,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "長波改二",
@@ -15717,7 +16236,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "Gambier Bay",
@@ -15747,7 +16267,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽空母"]
+    "types": ["軽空母"],
+    "country": "アメリカ"
   },
   {
     "name": "Gambier Bay改",
@@ -15777,7 +16298,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽空母"]
+    "types": ["軽空母"],
+    "country": "アメリカ"
   },
   {
     "name": "Saratoga Mk.II",
@@ -15805,7 +16327,8 @@
     ],
     "abilities": ["夜間作戦空母"],
     "showDefault": true,
-    "types": ["正規空母"]
+    "types": ["正規空母"],
+    "country": "アメリカ"
   },
   {
     "name": "武蔵改二",
@@ -15842,7 +16365,8 @@
     ],
     "abilities": ["専用対空カットイン", "特殊攻撃"],
     "showDefault": true,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "日本"
   },
   {
     "name": "多摩改二",
@@ -15883,7 +16407,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "文月改二",
@@ -15914,7 +16439,8 @@
     ],
     "abilities": ["専用対空カットイン"],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "Intrepid",
@@ -15942,7 +16468,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["正規空母"]
+    "types": ["正規空母"],
+    "country": "アメリカ"
   },
   {
     "name": "Intrepid改",
@@ -15970,7 +16497,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["正規空母"]
+    "types": ["正規空母"],
+    "country": "アメリカ"
   },
   {
     "name": "Saratoga Mk.II Mod.2",
@@ -15998,7 +16526,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["装甲空母"]
+    "types": ["装甲空母"],
+    "country": "アメリカ"
   },
   {
     "name": "日振",
@@ -16022,7 +16551,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["海防艦"]
+    "types": ["海防艦"],
+    "country": "日本"
   },
   {
     "name": "日振改",
@@ -16046,7 +16576,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["海防艦"]
+    "types": ["海防艦"],
+    "country": "日本"
   },
   {
     "name": "大東",
@@ -16070,7 +16601,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["海防艦"]
+    "types": ["海防艦"],
+    "country": "日本"
   },
   {
     "name": "大東改",
@@ -16094,7 +16626,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["海防艦"]
+    "types": ["海防艦"],
+    "country": "日本"
   },
   {
     "name": "伊勢改二",
@@ -16134,7 +16667,8 @@
     ],
     "abilities": ["専用対空カットイン"],
     "showDefault": true,
-    "types": ["航空戦艦", "改装航空戦艦"]
+    "types": ["航空戦艦", "改装航空戦艦"],
+    "country": "日本"
   },
   {
     "name": "日向改二",
@@ -16175,7 +16709,8 @@
     ],
     "abilities": ["専用対空カットイン"],
     "showDefault": true,
-    "types": ["航空戦艦", "改装航空戦艦"]
+    "types": ["航空戦艦", "改装航空戦艦"],
+    "country": "日本"
   },
   {
     "name": "瑞鳳改二",
@@ -16205,7 +16740,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["軽空母"]
+    "types": ["軽空母"],
+    "country": "日本"
   },
   {
     "name": "浦風丁改",
@@ -16236,7 +16772,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "磯風乙改",
@@ -16265,7 +16802,8 @@
     ],
     "abilities": ["専用対空カットイン"],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "浜風乙改",
@@ -16294,7 +16832,8 @@
     ],
     "abilities": ["専用対空カットイン"],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "谷風丁改",
@@ -16325,7 +16864,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "瑞鳳改二乙",
@@ -16355,7 +16895,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["軽空母"]
+    "types": ["軽空母"],
+    "country": "日本"
   },
   {
     "name": "Samuel B.Roberts",
@@ -16384,7 +16925,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "アメリカ"
   },
   {
     "name": "Samuel B.Roberts改",
@@ -16413,7 +16955,8 @@
     ],
     "abilities": ["無条件先制対潜"],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "アメリカ"
   },
   {
     "name": "Johnston",
@@ -16442,7 +16985,8 @@
     ],
     "abilities": ["専用対空カットイン", "無条件先制対潜"],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "アメリカ"
   },
   {
     "name": "Johnston改",
@@ -16471,7 +17015,8 @@
     ],
     "abilities": ["専用対空カットイン", "無条件先制対潜"],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "アメリカ"
   },
   {
     "name": "巻雲改二",
@@ -16502,7 +17047,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "風雲改二",
@@ -16533,7 +17079,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "福江",
@@ -16557,7 +17104,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["海防艦"]
+    "types": ["海防艦"],
+    "country": "日本"
   },
   {
     "name": "福江改",
@@ -16581,7 +17129,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["海防艦"]
+    "types": ["海防艦"],
+    "country": "日本"
   },
   {
     "name": "陽炎改二",
@@ -16611,7 +17160,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "不知火改二",
@@ -16642,7 +17192,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "黒潮改二",
@@ -16673,7 +17224,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "沖波改二",
@@ -16704,7 +17256,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "平戸",
@@ -16728,7 +17281,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["海防艦"]
+    "types": ["海防艦"],
+    "country": "日本"
   },
   {
     "name": "平戸改",
@@ -16752,7 +17306,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["海防艦"]
+    "types": ["海防艦"],
+    "country": "日本"
   },
   {
     "name": "Nelson",
@@ -16784,7 +17339,8 @@
     ],
     "abilities": ["特殊攻撃"],
     "showDefault": false,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "イギリス"
   },
   {
     "name": "陸奥改二",
@@ -16820,7 +17376,8 @@
     ],
     "abilities": ["特殊攻撃"],
     "showDefault": true,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "日本"
   },
   {
     "name": "Gotland",
@@ -16856,7 +17413,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽巡洋艦", "軽(航空)巡洋艦"]
+    "types": ["軽巡洋艦", "軽(航空)巡洋艦"],
+    "country": "スウェーデン"
   },
   {
     "name": "Maestrale",
@@ -16885,7 +17443,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "イタリア"
   },
   {
     "name": "Nelson改",
@@ -16917,7 +17476,8 @@
     ],
     "abilities": ["特殊攻撃"],
     "showDefault": true,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "イギリス"
   },
   {
     "name": "朝霜改二",
@@ -16948,7 +17508,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "Gotland改",
@@ -16986,7 +17547,8 @@
     ],
     "abilities": ["専用対空カットイン"],
     "showDefault": false,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "スウェーデン"
   },
   {
     "name": "Maestrale改",
@@ -17015,7 +17577,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "イタリア"
   },
   {
     "name": "日進",
@@ -17050,7 +17613,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["水上機母艦"]
+    "types": ["水上機母艦"],
+    "country": "日本"
   },
   {
     "name": "日進改",
@@ -17090,7 +17654,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["水上機母艦"]
+    "types": ["水上機母艦"],
+    "country": "日本"
   },
   {
     "name": "峯雲",
@@ -17119,7 +17684,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "峯雲改",
@@ -17148,7 +17714,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "八丈",
@@ -17172,7 +17739,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["海防艦"]
+    "types": ["海防艦"],
+    "country": "日本"
   },
   {
     "name": "八丈改",
@@ -17196,7 +17764,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["海防艦"]
+    "types": ["海防艦"],
+    "country": "日本"
   },
   {
     "name": "石垣",
@@ -17220,7 +17789,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["海防艦"]
+    "types": ["海防艦"],
+    "country": "日本"
   },
   {
     "name": "石垣改",
@@ -17244,7 +17814,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["海防艦"]
+    "types": ["海防艦"],
+    "country": "日本"
   },
   {
     "name": "日進甲",
@@ -17285,7 +17856,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["水上機母艦"]
+    "types": ["水上機母艦"],
+    "country": "日本"
   },
   {
     "name": "海風改二",
@@ -17317,7 +17889,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "山風改二",
@@ -17347,7 +17920,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "L.d.S.D.d.Abruzzi",
@@ -17381,7 +17955,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "イタリア"
   },
   {
     "name": "L.d.S.D.d.Abruzzi改",
@@ -17415,7 +17990,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "イタリア"
   },
   {
     "name": "G.Garibaldi",
@@ -17449,7 +18025,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "イタリア"
   },
   {
     "name": "G.Garibaldi改",
@@ -17483,7 +18060,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "イタリア"
   },
   {
     "name": "金剛改二丙",
@@ -17518,7 +18096,8 @@
     ],
     "abilities": ["専用対空カットイン", "特殊攻撃"],
     "showDefault": true,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "日本"
   },
   {
     "name": "比叡改二丙",
@@ -17553,7 +18132,8 @@
     ],
     "abilities": ["専用対空カットイン", "特殊攻撃"],
     "showDefault": true,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "日本"
   },
   {
     "name": "榛名改二乙",
@@ -17591,7 +18171,8 @@
     ],
     "abilities": ["専用対空カットイン", "特殊攻撃"],
     "showDefault": true,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "日本"
   },
   {
     "name": "Houston",
@@ -17622,7 +18203,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "アメリカ"
   },
   {
     "name": "Fletcher",
@@ -17651,7 +18233,8 @@
     ],
     "abilities": ["専用対空カットイン", "無条件先制対潜"],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "アメリカ"
   },
   {
     "name": "Fletcher改",
@@ -17680,7 +18263,8 @@
     ],
     "abilities": ["専用対空カットイン", "無条件先制対潜"],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "アメリカ"
   },
   {
     "name": "Atlanta",
@@ -17714,7 +18298,8 @@
     ],
     "abilities": ["専用対空カットイン"],
     "showDefault": false,
-    "types": ["軽巡洋艦", "防空巡洋艦"]
+    "types": ["軽巡洋艦", "防空巡洋艦"],
+    "country": "アメリカ"
   },
   {
     "name": "Atlanta改",
@@ -17748,7 +18333,8 @@
     ],
     "abilities": ["専用対空カットイン"],
     "showDefault": true,
-    "types": ["軽巡洋艦", "防空巡洋艦"]
+    "types": ["軽巡洋艦", "防空巡洋艦"],
+    "country": "アメリカ"
   },
   {
     "name": "Honolulu",
@@ -17782,7 +18368,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "アメリカ"
   },
   {
     "name": "Honolulu改",
@@ -17816,7 +18403,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "アメリカ"
   },
   {
     "name": "De Ruyter",
@@ -17850,7 +18438,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "オランダ"
   },
   {
     "name": "De Ruyter改",
@@ -17884,7 +18473,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "オランダ"
   },
   {
     "name": "Houston改",
@@ -17915,7 +18505,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "アメリカ"
   },
   {
     "name": "Colorado",
@@ -17947,7 +18538,8 @@
     ],
     "abilities": ["特殊攻撃"],
     "showDefault": false,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "アメリカ"
   },
   {
     "name": "South Dakota",
@@ -17978,7 +18570,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "アメリカ"
   },
   {
     "name": "Hornet",
@@ -18006,7 +18599,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["正規空母"]
+    "types": ["正規空母"],
+    "country": "アメリカ"
   },
   {
     "name": "Hornet改",
@@ -18034,7 +18628,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["正規空母"]
+    "types": ["正規空母"],
+    "country": "アメリカ"
   },
   {
     "name": "赤城改二",
@@ -18062,7 +18657,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["正規空母"]
+    "types": ["正規空母"],
+    "country": "日本"
   },
   {
     "name": "加賀改二",
@@ -18090,7 +18686,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["正規空母"]
+    "types": ["正規空母"],
+    "country": "日本"
   },
   {
     "name": "Colorado改",
@@ -18122,7 +18719,8 @@
     ],
     "abilities": ["特殊攻撃"],
     "showDefault": true,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "アメリカ"
   },
   {
     "name": "South Dakota改",
@@ -18153,7 +18751,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "アメリカ"
   },
   {
     "name": "宗谷",
@@ -18185,7 +18784,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["補給艦", "特務艦"]
+    "types": ["補給艦", "特務艦"],
+    "country": "日本"
   },
   {
     "name": "赤城改二戊",
@@ -18213,7 +18813,8 @@
     ],
     "abilities": ["夜間作戦空母"],
     "showDefault": true,
-    "types": ["正規空母"]
+    "types": ["正規空母"],
+    "country": "日本"
   },
   {
     "name": "加賀改二戊",
@@ -18241,7 +18842,8 @@
     ],
     "abilities": ["夜間作戦空母"],
     "showDefault": true,
-    "types": ["正規空母"]
+    "types": ["正規空母"],
+    "country": "日本"
   },
   {
     "name": "御蔵",
@@ -18265,7 +18867,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["海防艦"]
+    "types": ["海防艦"],
+    "country": "日本"
   },
   {
     "name": "屋代",
@@ -18289,7 +18892,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["海防艦"]
+    "types": ["海防艦"],
+    "country": "日本"
   },
   {
     "name": "Perth",
@@ -18323,7 +18927,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "オーストラリア"
   },
   {
     "name": "Grecale",
@@ -18352,7 +18957,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "イタリア"
   },
   {
     "name": "Helena",
@@ -18386,7 +18992,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "アメリカ"
   },
   {
     "name": "御蔵改",
@@ -18410,7 +19017,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["海防艦"]
+    "types": ["海防艦"],
+    "country": "日本"
   },
   {
     "name": "屋代改",
@@ -18434,7 +19042,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["海防艦"]
+    "types": ["海防艦"],
+    "country": "日本"
   },
   {
     "name": "Perth改",
@@ -18468,7 +19077,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "オーストラリア"
   },
   {
     "name": "Grecale改",
@@ -18497,7 +19107,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "イタリア"
   },
   {
     "name": "Helena改",
@@ -18531,7 +19142,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "アメリカ"
   },
   {
     "name": "神州丸",
@@ -18563,7 +19175,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["揚陸艦"]
+    "types": ["揚陸艦"],
+    "country": "日本"
   },
   {
     "name": "夕張改二",
@@ -18598,7 +19211,8 @@
     ],
     "abilities": ["専用対空カットイン"],
     "showDefault": true,
-    "types": ["軽巡洋艦", "兵装実験軽巡"]
+    "types": ["軽巡洋艦", "兵装実験軽巡"],
+    "country": "日本"
   },
   {
     "name": "夕張改二特",
@@ -18635,7 +19249,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["軽巡洋艦", "兵装実験軽巡"]
+    "types": ["軽巡洋艦", "兵装実験軽巡"],
+    "country": "日本"
   },
   {
     "name": "夕張改二丁",
@@ -18670,7 +19285,8 @@
     ],
     "abilities": ["無条件先制対潜"],
     "showDefault": true,
-    "types": ["軽巡洋艦", "兵装実験軽巡"]
+    "types": ["軽巡洋艦", "兵装実験軽巡"],
+    "country": "日本"
   },
   {
     "name": "秋霜",
@@ -18699,7 +19315,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "秋霜改",
@@ -18728,7 +19345,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "神州丸改",
@@ -18767,7 +19385,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["揚陸艦"]
+    "types": ["揚陸艦"],
+    "country": "日本"
   },
   {
     "name": "敷波改二",
@@ -18796,7 +19415,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "Fletcher改 Mod.2",
@@ -18826,7 +19446,8 @@
     ],
     "abilities": ["専用対空カットイン", "無条件先制対潜"],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "アメリカ"
   },
   {
     "name": "Fletcher Mk.II",
@@ -18858,7 +19479,8 @@
     ],
     "abilities": ["専用対空カットイン", "無条件先制対潜"],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "アメリカ"
   },
   {
     "name": "Gotland andra",
@@ -18898,7 +19520,8 @@
     ],
     "abilities": ["専用対空カットイン"],
     "showDefault": true,
-    "types": ["軽巡洋艦", "軽(航空)巡洋艦"]
+    "types": ["軽巡洋艦", "軽(航空)巡洋艦"],
+    "country": "スウェーデン"
   },
   {
     "name": "薄雲",
@@ -18927,7 +19550,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "薄雲改",
@@ -18956,7 +19580,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "有明",
@@ -18985,7 +19610,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "有明改",
@@ -19015,7 +19641,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "id": 433,
@@ -19044,7 +19671,8 @@
       "魚雷",
       "発煙装置"
     ],
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "id": 433,
@@ -19074,7 +19702,8 @@
       "大発動艇",
       "発煙装置"
     ],
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "迅鯨",
@@ -19105,7 +19734,8 @@
     ],
     "abilities": ["特殊攻撃"],
     "showDefault": false,
-    "types": ["潜水母艦"]
+    "types": ["潜水母艦"],
+    "country": "日本"
   },
   {
     "name": "長鯨",
@@ -19136,7 +19766,8 @@
     ],
     "abilities": ["特殊攻撃"],
     "showDefault": false,
-    "types": ["潜水母艦"]
+    "types": ["潜水母艦"],
+    "country": "日本"
   },
   {
     "name": "伊47",
@@ -19158,7 +19789,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["潜水艦"]
+    "types": ["潜水艦"],
+    "country": "日本"
   },
   {
     "name": "伊47改",
@@ -19180,7 +19812,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["潜水艦"]
+    "types": ["潜水艦"],
+    "country": "日本"
   },
   {
     "name": "第四号海防艦",
@@ -19204,7 +19837,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["海防艦"]
+    "types": ["海防艦"],
+    "country": "日本"
   },
   {
     "name": "第四号海防艦改",
@@ -19228,7 +19862,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["海防艦"]
+    "types": ["海防艦"],
+    "country": "日本"
   },
   {
     "name": "第三〇号海防艦",
@@ -19252,7 +19887,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["海防艦"]
+    "types": ["海防艦"],
+    "country": "日本"
   },
   {
     "name": "第三〇号海防艦改",
@@ -19276,7 +19912,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["海防艦"]
+    "types": ["海防艦"],
+    "country": "日本"
   },
   {
     "name": "迅鯨改",
@@ -19308,7 +19945,8 @@
     ],
     "abilities": ["特殊攻撃"],
     "showDefault": true,
-    "types": ["潜水母艦"]
+    "types": ["潜水母艦"],
+    "country": "日本"
   },
   {
     "name": "長鯨改",
@@ -19340,7 +19978,8 @@
     ],
     "abilities": ["特殊攻撃"],
     "showDefault": true,
-    "types": ["潜水母艦"]
+    "types": ["潜水母艦"],
+    "country": "日本"
   },
   {
     "name": "松",
@@ -19369,7 +20008,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "松改",
@@ -19398,7 +20038,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "竹",
@@ -19427,7 +20068,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "竹改",
@@ -19456,7 +20098,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "梅",
@@ -19485,7 +20128,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "梅改",
@@ -19515,7 +20159,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "桃",
@@ -19544,7 +20189,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "桃改",
@@ -19573,7 +20219,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "宗谷(灯台補給船)",
@@ -19599,7 +20246,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["補給艦", "灯台補給船"]
+    "types": ["補給艦", "灯台補給船"],
+    "country": "日本"
   },
   {
     "name": "加賀改二護",
@@ -19630,7 +20278,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["正規空母"]
+    "types": ["正規空母"],
+    "country": "日本"
   },
   {
     "name": "浦波改二",
@@ -19661,7 +20310,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "秋雲改二",
@@ -19690,7 +20340,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "高波改二",
@@ -19721,7 +20372,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "宗谷(南極観測船)",
@@ -19749,7 +20401,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["補給艦", "南極観測船"]
+    "types": ["補給艦", "南極観測船"],
+    "country": "日本"
   },
   {
     "name": "丹陽",
@@ -19779,7 +20432,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "中華民国"
   },
   {
     "name": "球磨改二",
@@ -19815,7 +20469,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "Scirocco",
@@ -19844,7 +20499,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "イタリア"
   },
   {
     "name": "Scirocco改",
@@ -19873,7 +20529,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "イタリア"
   },
   {
     "name": "Washington",
@@ -19904,7 +20561,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "アメリカ"
   },
   {
     "name": "Northampton",
@@ -19935,7 +20593,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "アメリカ"
   },
   {
     "name": "雪風改二",
@@ -19967,7 +20626,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "球磨改二丁",
@@ -20005,7 +20665,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "Gambier Bay Mk.II",
@@ -20038,7 +20699,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["軽空母"]
+    "types": ["軽空母"],
+    "country": "アメリカ"
   },
   {
     "name": "Washington改",
@@ -20069,7 +20731,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "アメリカ"
   },
   {
     "name": "Northampton改",
@@ -20100,7 +20763,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "アメリカ"
   },
   {
     "name": "能代改二",
@@ -20141,7 +20805,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "矢矧改二",
@@ -20182,7 +20847,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "曙改二",
@@ -20211,7 +20877,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "磯波改二",
@@ -20242,7 +20909,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "山風改二丁",
@@ -20274,7 +20942,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "矢矧改二乙",
@@ -20317,7 +20986,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "日本"
   },
   {
     "name": "親潮改二",
@@ -20348,7 +21018,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "巻波",
@@ -20377,7 +21048,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "巻波改",
@@ -20406,7 +21078,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "玉波",
@@ -20435,7 +21108,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "玉波改",
@@ -20465,7 +21139,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "涼波",
@@ -20494,7 +21169,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "涼波改",
@@ -20523,7 +21199,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "Conte di Cavour",
@@ -20550,7 +21227,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "イタリア"
   },
   {
     "name": "Conte di Cavour改",
@@ -20582,7 +21260,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "イタリア"
   },
   {
     "name": "Conte di Cavour nuovo",
@@ -20618,7 +21297,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "イタリア"
   },
   {
     "name": "伊201",
@@ -20640,7 +21320,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["潜水艦"]
+    "types": ["潜水艦"],
+    "country": "日本"
   },
   {
     "name": "伊201改",
@@ -20662,7 +21343,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["潜水艦"]
+    "types": ["潜水艦"],
+    "country": "日本"
   },
   {
     "name": "伊203",
@@ -20684,7 +21366,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["潜水艦"]
+    "types": ["潜水艦"],
+    "country": "日本"
   },
   {
     "name": "龍鳳改二戊",
@@ -20715,7 +21398,8 @@
     ],
     "abilities": ["夜間作戦空母"],
     "showDefault": true,
-    "types": ["軽空母"]
+    "types": ["軽空母"],
+    "country": "日本"
   },
   {
     "name": "雲鷹",
@@ -20741,7 +21425,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽空母"]
+    "types": ["軽空母"],
+    "country": "日本"
   },
   {
     "name": "雲鷹改",
@@ -20772,7 +21457,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽空母"]
+    "types": ["軽空母"],
+    "country": "日本"
   },
   {
     "name": "Victorious",
@@ -20802,7 +21488,8 @@
     ],
     "abilities": ["専用対空カットイン"],
     "showDefault": false,
-    "types": ["装甲空母"]
+    "types": ["装甲空母"],
+    "country": "イギリス"
   },
   {
     "name": "Victorious改",
@@ -20833,7 +21520,8 @@
     ],
     "abilities": ["専用対空カットイン"],
     "showDefault": true,
-    "types": ["装甲空母"]
+    "types": ["装甲空母"],
+    "country": "イギリス"
   },
   {
     "name": "早潮",
@@ -20862,7 +21550,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "早潮改",
@@ -20893,7 +21582,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "伊203改",
@@ -20915,7 +21605,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["潜水艦"]
+    "types": ["潜水艦"],
+    "country": "日本"
   },
   {
     "name": "龍鳳改二",
@@ -20946,7 +21637,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["軽空母"]
+    "types": ["軽空母"],
+    "country": "日本"
   },
   {
     "name": "雲鷹改二",
@@ -20980,7 +21672,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["軽空母"]
+    "types": ["軽空母"],
+    "country": "日本"
   },
   {
     "name": "Scamp",
@@ -21002,7 +21695,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["潜水艦"]
+    "types": ["潜水艦"],
+    "country": "アメリカ"
   },
   {
     "name": "Scamp改",
@@ -21024,7 +21718,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["潜水艦"]
+    "types": ["潜水艦"],
+    "country": "アメリカ"
   },
   {
     "name": "鳳翔改二",
@@ -21056,7 +21751,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["軽空母"]
+    "types": ["軽空母"],
+    "country": "日本"
   },
   {
     "name": "昭南",
@@ -21080,7 +21776,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["海防艦"]
+    "types": ["海防艦"],
+    "country": "日本"
   },
   {
     "name": "昭南改",
@@ -21104,7 +21801,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["海防艦"]
+    "types": ["海防艦"],
+    "country": "日本"
   },
   {
     "name": "Brooklyn",
@@ -21138,7 +21836,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "アメリカ"
   },
   {
     "name": "Brooklyn改",
@@ -21172,7 +21871,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["軽巡洋艦"]
+    "types": ["軽巡洋艦"],
+    "country": "アメリカ"
   },
   {
     "name": "鳳翔改二戦",
@@ -21208,7 +21908,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["軽空母"]
+    "types": ["軽空母"],
+    "country": "日本"
   },
   {
     "name": "山汐丸",
@@ -21233,7 +21934,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["補給艦", "特設護衛空母"]
+    "types": ["補給艦", "特設護衛空母"],
+    "country": "日本"
   },
   {
     "name": "山汐丸改",
@@ -21264,7 +21966,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["補給艦", "特設護衛空母"]
+    "types": ["補給艦", "特設護衛空母"],
+    "country": "日本"
   },
   {
     "name": "天霧改二",
@@ -21293,7 +21996,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "id": 504,
@@ -21317,7 +22021,8 @@
       "高射装置",
       "発煙装置"
     ],
-    "types": ["海防艦"]
+    "types": ["海防艦"],
+    "country": "日本"
   },
   {
     "name": "倉橋",
@@ -21341,7 +22046,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["海防艦"]
+    "types": ["海防艦"],
+    "country": "日本"
   },
   {
     "name": "天霧改二丁",
@@ -21372,7 +22078,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "id": 509,
@@ -21396,7 +22103,8 @@
       "高射装置",
       "発煙装置"
     ],
-    "types": ["海防艦"]
+    "types": ["海防艦"],
+    "country": "日本"
   },
   {
     "name": "倉橋改",
@@ -21420,7 +22128,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["海防艦"]
+    "types": ["海防艦"],
+    "country": "日本"
   },
   {
     "name": "大和改二",
@@ -21458,7 +22167,8 @@
     ],
     "abilities": ["専用対空カットイン", "特殊攻撃"],
     "showDefault": true,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "日本"
   },
   {
     "name": "Maryland",
@@ -21490,7 +22200,8 @@
     ],
     "abilities": ["特殊攻撃"],
     "showDefault": false,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "アメリカ"
   },
   {
     "name": "早潮改二",
@@ -21523,7 +22234,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   },
   {
     "name": "大和改二重",
@@ -21565,7 +22277,8 @@
     ],
     "abilities": ["専用対空カットイン", "特殊攻撃"],
     "showDefault": true,
-    "types": ["航空戦艦"]
+    "types": ["航空戦艦"],
+    "country": "日本"
   },
   {
     "name": "Maryland改",
@@ -21597,7 +22310,8 @@
     ],
     "abilities": ["特殊攻撃"],
     "showDefault": true,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "アメリカ"
   },
   {
     "name": "Samuel B.Roberts Mk.II",
@@ -21627,7 +22341,8 @@
     ],
     "abilities": ["無条件先制対潜"],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "アメリカ"
   },
   {
     "name": "鵜来",
@@ -21651,7 +22366,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["海防艦"]
+    "types": ["海防艦"],
+    "country": "日本"
   },
   {
     "id": 523,
@@ -21682,7 +22398,8 @@
       "魚雷",
       "発煙装置"
     ],
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "アメリカ"
   },
   {
     "name": "Langley",
@@ -21712,7 +22429,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["軽空母"]
+    "types": ["軽空母"],
+    "country": "アメリカ"
   },
   {
     "name": "鵜来改",
@@ -21736,7 +22454,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["海防艦"]
+    "types": ["海防艦"],
+    "country": "日本"
   },
   {
     "id": 528,
@@ -21767,7 +22486,8 @@
       "魚雷",
       "発煙装置"
     ],
-    "types": ["重巡洋艦"]
+    "types": ["重巡洋艦"],
+    "country": "アメリカ"
   },
   {
     "name": "Langley改",
@@ -21797,7 +22517,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["軽空母"]
+    "types": ["軽空母"],
+    "country": "アメリカ"
   },
   {
     "name": "Ranger",
@@ -21825,7 +22546,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["正規空母"]
+    "types": ["正規空母"],
+    "country": "アメリカ"
   },
   {
     "name": "Ranger改",
@@ -21853,7 +22575,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["正規空母"]
+    "types": ["正規空母"],
+    "country": "アメリカ"
   },
   {
     "name": "Massachusetts",
@@ -21884,7 +22607,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "アメリカ"
   },
   {
     "name": "Jean Bart",
@@ -21915,7 +22639,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "フランス"
   },
   {
     "name": "Jean Bart改",
@@ -21946,7 +22671,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "フランス"
   },
   {
     "name": "Massachusetts改",
@@ -21977,7 +22703,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "アメリカ"
   },
   {
     "id": 541,
@@ -22006,7 +22733,8 @@
       "発煙装置"
     ],
     "abilities": ["専用対空カットイン"],
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "アメリカ"
   },
   {
     "id": 541,
@@ -22035,7 +22763,8 @@
       "発煙装置"
     ],
     "abilities": ["専用対空カットイン", "無条件先制対潜"],
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "アメリカ"
   },
   {
     "id": 543,
@@ -22062,7 +22791,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["揚陸艦"]
+    "types": ["揚陸艦"],
+    "country": "日本"
   },
   {
     "id": 545,
@@ -22085,7 +22815,8 @@
     ],
     "abilities": [],
     "showDefault": false,
-    "types": ["揚陸艦", "戦車揚陸艦"]
+    "types": ["揚陸艦", "戦車揚陸艦"],
+    "country": "日本"
   },
   {
     "id": 545,
@@ -22113,7 +22844,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["揚陸艦", "戦車揚陸艦"]
+    "types": ["揚陸艦", "戦車揚陸艦"],
+    "country": "日本"
   },
   {
     "id": 548,
@@ -22146,7 +22878,8 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["揚陸艦"]
+    "types": ["揚陸艦"],
+    "country": "日本"
   },
   {
     "name": "榛名改二丙",
@@ -22184,7 +22917,8 @@
     ],
     "abilities": ["専用対空カットイン", "特殊攻撃"],
     "showDefault": true,
-    "types": ["戦艦"]
+    "types": ["戦艦"],
+    "country": "日本"
   },
   {
     "name": "深雪改二",
@@ -22214,6 +22948,7 @@
     ],
     "abilities": [],
     "showDefault": true,
-    "types": ["駆逐艦"]
+    "types": ["駆逐艦"],
+    "country": "日本"
   }
 ]
