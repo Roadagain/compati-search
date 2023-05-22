@@ -10,6 +10,7 @@ export const AllSearchTargetLabels = {
   abilities: '特性',
   speeds: '速力',
   ranges: '射程',
+  countries: '国籍',
   names: '名前',
 } as const;
 export type SearchTargetLabel = (typeof AllSearchTargetLabels)[SearchTarget];

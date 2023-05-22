@@ -32,6 +32,7 @@ export const initialState: State = {
       abilities: [],
       speeds: [],
       ranges: [],
+      countries: [],
       names: [],
     },
     showAll: false,
