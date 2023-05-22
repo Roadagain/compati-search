@@ -39,7 +39,7 @@ export const SearchResults: React.FC<Props> = ({ sx }) => {
   return (
     <Box sx={sx}>
       <Typography variant="h6" fontWeight="normal" mb={2}>
-        検索結果: {shownShips.length}隻
+        検索結果: {ships.length}隻
       </Typography>
       <InfiniteScroller loadMore={loadMore} hasMore={hasMore}>
         {shownShips.length > 0 ? (
