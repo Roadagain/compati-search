@@ -31,6 +31,9 @@ type Props = {
 
 export const ShipCard: React.FC<Props> = ({ ship, onClickTag, sx }) => {
   const { name, category, types, speed, range, equipments, abilities } = ship;
+  const onClickText = React.useCallback((event: React.MouseEvent) => {
+    event.stopPropagation();
+  }, []);
   const theme = useTheme();
   return (
     <Accordion
@@ -41,7 +44,13 @@ export const ShipCard: React.FC<Props> = ({ ship, onClickTag, sx }) => {
     >
       <AccordionSummary expandIcon={<ExpandMore />}>
         <Stack direction="column" spacing={1} minWidth={0}>
-          <Typography variant="h5" component="p" noWrap>
+          <Typography
+            variant="h5"
+            component="p"
+            noWrap
+            sx={{ userSelect: 'text' }}
+            onClick={onClickText}
+          >
             {name}
           </Typography>
           <Stack direction="row" spacing={1}>
