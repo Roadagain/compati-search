@@ -97,6 +97,12 @@ export const ShipCard: React.FC<Props> = ({ ship, onClickTag, sx }) => {
           onClickTag={onClickTag}
           sx={{ mt: 1 }}
         />
+        <CategorizedTags
+          category="countries"
+          tags={[ship.country]}
+          onClickTag={onClickTag}
+          sx={{ mt: 1 }}
+        />
       </AccordionDetails>
     </Accordion>
   );
